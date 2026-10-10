@@ -22,12 +22,13 @@ git config user.email anonymous
 git config core.hooksPath .githooks
 ```
 
-Work directly on `main`. GitHub rules prevent creation of additional code branches, and `main` rejects deletion, force pushes and merge commits. Secret scanning and push protection are enabled. Never merge, mirror-push or force-push an old private checkout into this repository. Such a push could reintroduce the private history. Install Gitleaks and run:
+Work directly on `main`. GitHub rules prevent creation of additional code branches, and `main` rejects deletion, force pushes and merge commits. Secret scanning and push protection are enabled. Never merge, mirror-push or force-push an old private checkout into this repository. Such a push could reintroduce the private history. Install Gitleaks and scan staged changes before routine publication:
 
 ```sh
-gitleaks dir --config .gitleaks.toml --redact=100 --max-archive-depth 3 .
-gitleaks git --config .gitleaks.toml --redact=100 --log-opts=--all .
+gitleaks git --pre-commit --staged --config .gitleaks.toml --redact=100 --max-decode-depth 1
 ```
+
+The pre-commit hook runs this check automatically. Complete-history scans are reserved for an explicit user request or investigation of a confirmed historical leak; they are not part of routine updates. Review only changed documents, notebook outputs, and archives during an ordinary publication.
 
 The scan configuration retains default credential rules. Its narrow exceptions cover reviewed benchmark case hashes, JSON field names, and documented public identifiers. A credential must be removed, and an actual exposed credential must also be rotated or revoked. Never solve a credential finding by adding an exception.
 

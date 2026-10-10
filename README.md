@@ -3,6 +3,10 @@
 Start with the [experiment index](EXPERIMENTS.md) for all preserved SkillRet studies,
 their separate code/results folders, evaluation scope, and publication audit.
 
+The [SkillRet EDA report](https://speccy88.github.io/mia5150/) presents the dataset
+and golden-skill counts per query. Its [source and reproduction guide](EDA/README.md)
+are maintained on `main` and published automatically to GitHub Pages.
+
 ## Proposal PDF
 
 Edit [project_proposal.tex](project_proposal.tex) and push to `main` to generate a

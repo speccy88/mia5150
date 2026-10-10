@@ -1,0 +1,74 @@
+{
+  "combined": {
+    "distinct_golden_pairs": 134377,
+    "distribution": {
+      "1": 22919,
+      "2": 22738,
+      "3": 21994
+    },
+    "queries": 67651
+  },
+  "dataset": "ThakiCloud/SKILLRET",
+  "definition": "Distinct skill_id values with relevance > 0 per query_id; all queries included",
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "source_files": {
+    "data/qrels/test.jsonl": {
+      "rows": 7187,
+      "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+    },
+    "data/qrels/train.jsonl": {
+      "rows": 127190,
+      "sha256": "7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1"
+    },
+    "data/queries/test.jsonl": {
+      "rows": 4392,
+      "sha256": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220"
+    },
+    "data/queries/train.jsonl": {
+      "rows": 63259,
+      "sha256": "9b23d11e7c0654f3969718a54511c30b679b0f0b92a7357c7679a56ff42478f6"
+    }
+  },
+  "splits": {
+    "test": {
+      "distinct_golden_pairs": 7187,
+      "distribution": {
+        "1": 2143,
+        "2": 1703,
+        "3": 546
+      },
+      "duplicate_positive_qrel_rows": 0,
+      "max_golden_skills": 3,
+      "mean_golden_skills": 1.636384335154827,
+      "positive_qrel_rows": 7187,
+      "qrel_rows": 7187,
+      "queries": 4392,
+      "validation": {
+        "k_matches_qrels": true,
+        "no_orphan_qrels": true,
+        "skill_ids_match_qrels": true,
+        "unique_query_ids": true
+      }
+    },
+    "train": {
+      "distinct_golden_pairs": 127190,
+      "distribution": {
+        "1": 20776,
+        "2": 21035,
+        "3": 21448
+      },
+      "duplicate_positive_qrel_rows": 0,
+      "max_golden_skills": 3,
+      "mean_golden_skills": 2.010622994356534,
+      "positive_qrel_rows": 127190,
+      "qrel_rows": 127190,
+      "queries": 63259,
+      "validation": {
+        "k_matches_qrels": true,
+        "no_orphan_qrels": true,
+        "skill_ids_match_qrels": true,
+        "unique_query_ids": true
+      }
+    }
+  }
+}

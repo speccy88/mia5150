@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SKILLRET Dataset - Exploratory Data Analysis</title>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-4.1.1.min.js"></script>
 <style>
   :root { --bg: #f8f9fa; --card: #ffffff; --accent: #2c3e50; --accent2: #3498db; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -47,6 +47,12 @@
   table.stats tr:nth-child(even) { background: #f5f5f5; }
   .footer { text-align: center; padding: 2rem; color: #999; font-size: 0.85rem; }
   code { background: #eee; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+/* Golden skill report layout */
+  [id] { scroll-margin-top: 9rem; }
+  @media (max-width: 768px) {
+    .nav { position: static; }
+    [id] { scroll-margin-top: 1rem; }
+  }
 </style>
 </head>
 <body>
@@ -59,7 +65,7 @@
   </p>
 </div>
 
-<div class="nav"><a href="#dataset-overview">Dataset Overview</a><a href="#major-categories">Major Categories</a><a href="#taxonomy-sunburst">Taxonomy Sunburst</a><a href="#sub-categories">Sub-Categories</a><a href="#skill-structure">Skill Structure</a><a href="#sub-folder-types">Sub-Folder Types</a><a href="#folder-combos">Folder Combos</a><a href="#structure-by-category">Structure by Category</a><a href="#primary-actions">Primary Actions</a><a href="#primary-objects">Primary Objects</a><a href="#domains">Domains</a><a href="#licenses">Licenses</a><a href="#stars-distribution">Stars Distribution</a><a href="#installs-distribution">Installs Distribution</a><a href="#top-authors">Top Authors</a><a href="#skill.md-length">SKILL.md Length</a><a href="#desc-length">Desc Length</a><a href="#query-lengths">Query Lengths</a><a href="#skills-per-query">Skills per Query</a><a href="#qrels-per-query">Qrels per Query</a><a href="#train/test-split">Train/Test Split</a></div>
+<div class="nav"><a href="#golden-skills">Golden Skills per Query</a><a href="#dataset-overview">Dataset Overview</a><a href="#major-categories">Major Categories</a><a href="#taxonomy-sunburst">Taxonomy Sunburst</a><a href="#sub-categories">Sub-Categories</a><a href="#skill-structure">Skill Structure</a><a href="#sub-folder-types">Sub-Folder Types</a><a href="#folder-combos">Folder Combos</a><a href="#structure-by-category">Structure by Category</a><a href="#primary-actions">Primary Actions</a><a href="#primary-objects">Primary Objects</a><a href="#domains">Domains</a><a href="#licenses">Licenses</a><a href="#stars-distribution">Stars Distribution</a><a href="#installs-distribution">Installs Distribution</a><a href="#top-authors">Top Authors</a><a href="#skill.md-length">SKILL.md Length</a><a href="#desc-length">Desc Length</a><a href="#query-lengths">Query Lengths</a><a href="#skills-per-query">Skills per Query</a><a href="#qrels-per-query">Qrels per Query</a><a href="#train/test-split">Train/Test Split</a></div>
 
 <div class="container">
 
@@ -356,6 +362,102 @@
 </div>
 
 
+<!-- GOLDEN SKILLS START -->
+<section class="section" id="golden-skills">
+  <h2>Golden Skills per Query</h2>
+  <p>A <strong>golden skill</strong> is a distinct <code>skill_id</code> with a positive relevance label
+     (<code>relevance &gt; 0</code>) for that query. We count all queries in each split, including queries
+     with zero golden skills. Duplicate positive qrel rows count only once.</p>
+  <div class="highlight">Test: 2,143 of 4,392 queries (48.79%) have exactly one golden skill; 2,249 (51.21%) have multiple. Train: 42,483 of 63,259 (67.16%) have multiple golden skills.</div>
+  <div style="overflow-x:auto;">
+    <table class="stats" id="golden-skills-table" style="min-width:620px;">
+      <caption>Query counts and percentages within each split (all 67,651 queries)</caption>
+      <thead><tr><th scope="col">Golden skills</th><th scope="col">Train queries</th>
+        <th scope="col">Test queries</th><th scope="col">All queries</th></tr></thead>
+      <tbody><tr><th scope="row">0</th><td>0 (0.00%)</td><td>0 (0.00%)</td><td>0 (0.00%)</td></tr><tr><th scope="row">1</th><td>20,776 (32.84%)</td><td>2,143 (48.79%)</td><td>22,919 (33.88%)</td></tr><tr><th scope="row">2</th><td>21,035 (33.25%)</td><td>1,703 (38.78%)</td><td>22,738 (33.61%)</td></tr><tr><th scope="row">3</th><td>21,448 (33.91%)</td><td>546 (12.43%)</td><td>21,994 (32.51%)</td></tr></tbody>
+      <tfoot><tr><th scope="row">Total</th><td>63,259 (100.00%)</td><td>4,392 (100.00%)</td><td>67,651 (100.00%)</td></tr></tfoot>
+    </table>
+  </div>
+  <div class="two-col">
+    <div><svg viewBox="0 0 480 320" role="img" aria-label="Train golden skill distribution" style="width:100%;height:auto;font-family:system-ui,sans-serif">
+<title>Train queries: share by number of golden skills</title>
+<text x="240" y="22" text-anchor="middle" font-size="18" font-weight="600">Train (63,259 queries)</text>
+<line x1="52" y1="250.0" x2="464" y2="250.0" stroke="#dce2e6"/>
+<text x="44" y="255.0" text-anchor="end" font-size="14">0%</text>
+<line x1="52" y1="212.0" x2="464" y2="212.0" stroke="#dce2e6"/>
+<text x="44" y="217.0" text-anchor="end" font-size="14">20%</text>
+<line x1="52" y1="174.0" x2="464" y2="174.0" stroke="#dce2e6"/>
+<text x="44" y="179.0" text-anchor="end" font-size="14">40%</text>
+<line x1="52" y1="136.0" x2="464" y2="136.0" stroke="#dce2e6"/>
+<text x="44" y="141.0" text-anchor="end" font-size="14">60%</text>
+<line x1="52" y1="98.0" x2="464" y2="98.0" stroke="#dce2e6"/>
+<text x="44" y="103.0" text-anchor="end" font-size="14">80%</text>
+<line x1="52" y1="60.0" x2="464" y2="60.0" stroke="#dce2e6"/>
+<text x="44" y="65.0" text-anchor="end" font-size="14">100%</text>
+<rect x="72.60" y="250.00" width="61.80" height="0.00" fill="#e67e22"><title>0 golden skills: 0 queries (0.00%)</title></rect>
+<text x="103.50" y="240.00" text-anchor="middle" font-size="14">0</text>
+<text x="103.50" y="274" text-anchor="middle" font-size="15">0</text>
+<rect x="175.60" y="187.60" width="61.80" height="62.40" fill="#e67e22"><title>1 golden skills: 20,776 queries (32.84%)</title></rect>
+<text x="206.50" y="177.60" text-anchor="middle" font-size="14">20,776</text>
+<text x="206.50" y="274" text-anchor="middle" font-size="15">1</text>
+<rect x="278.60" y="186.82" width="61.80" height="63.18" fill="#e67e22"><title>2 golden skills: 21,035 queries (33.25%)</title></rect>
+<text x="309.50" y="176.82" text-anchor="middle" font-size="14">21,035</text>
+<text x="309.50" y="274" text-anchor="middle" font-size="15">2</text>
+<rect x="381.60" y="185.58" width="61.80" height="64.42" fill="#e67e22"><title>3 golden skills: 21,448 queries (33.91%)</title></rect>
+<text x="412.50" y="175.58" text-anchor="middle" font-size="14">21,448</text>
+<text x="412.50" y="274" text-anchor="middle" font-size="15">3</text>
+<text x="258" y="307" text-anchor="middle" font-size="15">Golden skills per query</text>
+</svg></div>
+    <div><svg viewBox="0 0 480 320" role="img" aria-label="Test golden skill distribution" style="width:100%;height:auto;font-family:system-ui,sans-serif">
+<title>Test queries: share by number of golden skills</title>
+<text x="240" y="22" text-anchor="middle" font-size="18" font-weight="600">Test (4,392 queries)</text>
+<line x1="52" y1="250.0" x2="464" y2="250.0" stroke="#dce2e6"/>
+<text x="44" y="255.0" text-anchor="end" font-size="14">0%</text>
+<line x1="52" y1="212.0" x2="464" y2="212.0" stroke="#dce2e6"/>
+<text x="44" y="217.0" text-anchor="end" font-size="14">20%</text>
+<line x1="52" y1="174.0" x2="464" y2="174.0" stroke="#dce2e6"/>
+<text x="44" y="179.0" text-anchor="end" font-size="14">40%</text>
+<line x1="52" y1="136.0" x2="464" y2="136.0" stroke="#dce2e6"/>
+<text x="44" y="141.0" text-anchor="end" font-size="14">60%</text>
+<line x1="52" y1="98.0" x2="464" y2="98.0" stroke="#dce2e6"/>
+<text x="44" y="103.0" text-anchor="end" font-size="14">80%</text>
+<line x1="52" y1="60.0" x2="464" y2="60.0" stroke="#dce2e6"/>
+<text x="44" y="65.0" text-anchor="end" font-size="14">100%</text>
+<rect x="72.60" y="250.00" width="61.80" height="0.00" fill="#3498db"><title>0 golden skills: 0 queries (0.00%)</title></rect>
+<text x="103.50" y="240.00" text-anchor="middle" font-size="14">0</text>
+<text x="103.50" y="274" text-anchor="middle" font-size="15">0</text>
+<rect x="175.60" y="157.29" width="61.80" height="92.71" fill="#3498db"><title>1 golden skills: 2,143 queries (48.79%)</title></rect>
+<text x="206.50" y="147.29" text-anchor="middle" font-size="14">2,143</text>
+<text x="206.50" y="274" text-anchor="middle" font-size="15">1</text>
+<rect x="278.60" y="176.33" width="61.80" height="73.67" fill="#3498db"><title>2 golden skills: 1,703 queries (38.78%)</title></rect>
+<text x="309.50" y="166.33" text-anchor="middle" font-size="14">1,703</text>
+<text x="309.50" y="274" text-anchor="middle" font-size="15">2</text>
+<rect x="381.60" y="226.38" width="61.80" height="23.62" fill="#3498db"><title>3 golden skills: 546 queries (12.43%)</title></rect>
+<text x="412.50" y="216.38" text-anchor="middle" font-size="14">546</text>
+<text x="412.50" y="274" text-anchor="middle" font-size="15">3</text>
+<text x="258" y="307" text-anchor="middle" font-size="15">Golden skills per query</text>
+</svg></div>
+  </div>
+  <p>Mean golden skills per query: <strong>2.011</strong> in train;
+     <strong>1.636</strong> in test.
+     The maximum is 3 in train and 3 in test.</p>
+  <p><strong>Validation:</strong> query IDs are unique; no qrels refer to unknown queries;
+     every query's <code>skill_ids</code> and <code>k</code> agree with the positive-qrel set.
+     Duplicate positive qrel rows: 0. The histogram totals match every query,
+     and its weighted totals match 127,190 train and
+     7,187 test distinct golden pairs.</p>
+  <p><strong>Sources:</strong> <a href="https://github.com/speccy88/mia5150/blob/main/skillret-local-metadata-20261005/data/queries">query splits</a>,
+     <a href="https://github.com/speccy88/mia5150/blob/main/skillret-local-metadata-20261005/data/qrels">qrel splits</a>, and the
+     <a href="https://github.com/speccy88/mia5150/blob/main/skillret-local-metadata-20261005/evidence/data-manifest.json">dataset manifest</a> for
+     <a href="https://huggingface.co/datasets/ThakiCloud/SKILLRET/tree/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12">revision
+     <code>6583d7d2ed07644d0fb8938ed8178f3a7dc42a12</code></a>.
+     <a href="https://github.com/speccy88/mia5150/blob/main/EDA/golden_skills_summary.json">Download verified counts and input hashes</a>.</p>
+  <p><strong>Scope:</strong> these are the dataset's labeled targets, not an exhaustive inventory of
+     every skill that could satisfy a real request. Public query text was privacy-redacted;
+     the query IDs, golden skill IDs, and relevance labels were preserved.</p>
+</section>
+<!-- GOLDEN SKILLS END -->
+
 <!-- Section 6: Qrels -->
 <div class="section">
   <h2>6. Qrels (Relevance Judgments)</h2>
@@ -437,8 +539,7 @@
     Both tend to be detailed, multi-sentence requests rather than simple keyword searches.
   </div>
   <div class="highlight">
-    <strong>6. Mostly single-skill queries:</strong> The vast majority of queries map to just 1-2 relevant skills,
-    making this a precision-focused retrieval benchmark.
+    <strong>6. Golden skill counts differ by split:</strong> Test: 2,143 of 4,392 queries (48.79%) have exactly one golden skill; 2,249 (51.21%) have multiple. Train: 42,483 of 63,259 (67.16%) have multiple golden skills.
   </div>
   <div class="highlight">
     <strong>7. Dataset limitation &mdash; no sub-file content:</strong> The dataset provides <code>body</code> and

@@ -10,7 +10,7 @@
 - Use the generic commit author `Research Team` with `user.email=anonymous`.
 - Keep team names, personal email addresses, student identifiers, personal home paths, credentials and passwords out of repository files, notebook outputs, PDFs, archives, and commit messages.
 - Use a fresh clone of the public repository. Never merge or force-push history from an older private clone.
-- Run `gitleaks git --config .gitleaks.toml --redact=100 --log-opts=--all` before publication. Reviewed exceptions cover benchmark hashes and public identifiers only; do not add exceptions for credentials.
+- For routine publication, scan only staged changes with `gitleaks git --pre-commit --staged --config .gitleaks.toml --redact=100 --max-decode-depth 1`. Do not run a complete-history scan unless the user explicitly requests one or a confirmed historical leak requires investigation. Reviewed exceptions cover benchmark hashes and public identifiers only; do not add exceptions for credentials.
 - Load credentials from local environment variables. Keep `.env`, key files and private backups outside this repository.
 - Privacy redaction changes archived text and file hashes. Preserve measured metrics and model parameters; describe redactions and refresh current publication checksums.
 

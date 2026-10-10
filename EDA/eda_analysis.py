@@ -4,19 +4,28 @@ SKILLRET Dataset - Exploratory Data Analysis
 Generates a self-contained HTML report with embedded charts.
 """
 
+import argparse
 import json
 import re
 import textwrap
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from golden_skills import DEFAULT_DATA, PLOTLY_URL, analyze_dataset, analyze_rows, update_report
+
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-DATA = Path("dataset/data")
-OUT = Path("eda_report.html")
+HERE = Path(__file__).resolve().parent
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--data-dir", type=Path, default=HERE.parent / "dataset/data")
+parser.add_argument("--label-data-dir", type=Path, default=DEFAULT_DATA)
+parser.add_argument("--output", type=Path, default=HERE / "eda_report.html")
+args = parser.parse_args()
+DATA = args.data_dir
+OUT = args.output
 
 # ── 1. Load all data ──────────────────────────────────────────────────────────
 
@@ -38,6 +47,13 @@ print("Loading qrels ...")
 qrels_train = [json.loads(l) for l in open(DATA / "qrels/train.jsonl")]
 qrels_test  = [json.loads(l) for l in open(DATA / "qrels/test.jsonl")]
 print(f"  -> train: {len(qrels_train):,}  test: {len(qrels_test):,}")
+
+# Validate the golden labels independently of the text/body analyses below.
+golden_stats = analyze_dataset(args.label_data_dir)
+for split, queries, qrels in (("train", queries_train, qrels_train),
+                              ("test", queries_test, qrels_test)):
+    if analyze_rows(queries, qrels) != golden_stats["splits"][split]:
+        raise ValueError("Full-report inputs disagree with the verified golden-label splits")
 
 print("Loading taxonomy ...")
 taxonomy = json.load(open(DATA / "taxonomy.json"))
@@ -626,7 +642,7 @@ html = f"""<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SKILLRET Dataset - Exploratory Data Analysis</title>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{PLOTLY_URL}"></script>
 <style>
   :root {{ --bg: #f8f9fa; --card: #ffffff; --accent: #2c3e50; --accent2: #3498db; }}
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -981,5 +997,8 @@ html = f"""<!DOCTYPE html>
 </body>
 </html>"""
 
-OUT.write_text(html)
+html = update_report(html, golden_stats)
+OUT.write_text(html, encoding="utf-8")
+(OUT.parent / "golden_skills_summary.json").write_text(
+    json.dumps(golden_stats, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 print(f"\nReport written to {OUT} ({len(html):,} chars)")

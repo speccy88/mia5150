@@ -6,6 +6,7 @@
 /.cache/
 /build/
 /output/
+/_site/
 /tmp/
 /*.aux
 /*.bbl
