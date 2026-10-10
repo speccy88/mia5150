@@ -1,0 +1,18 @@
+{
+  "finalized_utc": "2026-10-02T10:54:23.342638+00:00",
+  "primary_quality_queries": 32,
+  "timing_queries": 32,
+  "timing_repeats": 2,
+  "inference_stopped": true,
+  "reason": "The 48-query extension was stopped after an execution safety restriction involving a Microsoft telemetry connection blocked Verdict48. No inference retry was made.",
+  "completed_extension_supplements": [
+    "julia",
+    "gliner"
+  ],
+  "incomplete_extension_models": [
+    "verdict",
+    "laya"
+  ],
+  "interpretation": "The complete independently audited common32 quality and matched32x2 timings form the final primary evidence. Completed Julia48 and GLiNER48 results are supplements only.",
+  "privacy_note": "Any prospective privacy change is documented separately; it was not used to alter or rerun the recorded measurements."
+}

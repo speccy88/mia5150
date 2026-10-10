@@ -1,0 +1,8 @@
+{
+  "dimension": 4096,
+  "finite": true,
+  "same_text_max_abs_difference": 0.0,
+  "different_text_l2": 0.35404606059637633,
+  "first_seconds": 0.10106733627617359,
+  "warm_seconds": 0.05217198748141527
+}

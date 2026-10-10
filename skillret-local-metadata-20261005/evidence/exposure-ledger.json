@@ -1,0 +1,51 @@
+{
+  "historical_jev": {
+    "queries": 200,
+    "catalog": 6006,
+    "status": "Pinned private-fork README and200 query IDs read. Original recorded200-query result not rerun. HistoricalRecall5.7092 vs BM25.6058 on BM25top20, not comparable to newdense pools.",
+    "source_commit": "041f2ceccd3f43e9f841289541b68083c795df73",
+    "overlap_with_new128": [
+      "q-01223",
+      "q-01955",
+      "q-02898",
+      "q-03923",
+      "q-04599",
+      "q-04767"
+    ]
+  },
+  "historical_lora": {
+    "catalog": 10123,
+    "validation_queries": 256,
+    "status": "Pinned fork README read. Differentdatasetrevision a050ad233a504a43135bafe8cdf45574052b5729; already-selected256val. Recall5.473307->.509766 atstep100. A40BF16 peak9.956GB not reproduced on8GBGPU. Never merged with this adaptation."
+  },
+  "routing_pilot": {
+    "path": "/home/user/code/routing-pilot",
+    "queries": 80,
+    "status": "Different custom benchmark; not SkillRet. Only pinned model/runtime reused."
+  },
+  "new_public_development": {
+    "queries": 128,
+    "manifest": "manifests/public-development.json",
+    "status": "Public benchmark tuning, no unseen-test claim."
+  },
+  "new_adaptation": {
+    "manifest": "manifests/training-partitions.json",
+    "status": "Disjoint query/repository/name groups for new adaptation; released task-trained models already saw public training data."
+  },
+  "final_test": {
+    "status": "No pristine independent final set certified. SRA frozen transfer protocol remains an external diagnostic because checkpoint exposure cannot be proven absent."
+  },
+  "superseded": {
+    "files": "results/adaptation-*.json without clean prefix, except anchoring",
+    "reason": "Initial negative mining allowed development-group documents as negatives. Kept for audit, excluded from valid comparison. Initial replay label actually meant label smoothing; corrected in clean run."
+  },
+  "historical_full_public": {
+    "source": "evidence/historical-cpu.md",
+    "status": "Historical retained observations consumed full4392query aggregates; raw runs not on this executor. Newly completed full-query comparison is explicitly public, not blind."
+  },
+  "superseded_lora_replay": {
+    "files": "results/lora-replay-*.json",
+    "reason": "Original384example random cap omitted8 of91 unique labelled positivepairs. Preserved but excluded from supported gain claims. replay-clean preserves allpositives before sampling negatives.",
+    "audit": "evidence/lora-positive-coverage.json"
+  }
+}

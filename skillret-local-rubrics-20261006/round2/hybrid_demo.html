@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkillRet evidence explorer</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,sans-serif;background:light-dark(#f7f8fa,#14171c);color:light-dark(#18212d,#e4eaf3)}body{max-width:1200px;margin:auto;padding:24px}h1{font-size:28px;margin-bottom:8px}p{line-height:1.6}header{border-bottom:1px solid #7b849455;padding-bottom:16px}label{display:inline-block;margin:8px 20px 8px 0}select,button{font:inherit;padding:8px;max-width:100%}button{margin-left:10px}#task{white-space:pre-wrap;line-height:1.6}#summary{font-weight:600;padding:12px 0}.columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}ol{padding-left:28px}li{padding:8px 4px;border-bottom:1px solid #7b849444;overflow-wrap:anywhere}.gold{border-left:4px solid #468e77;padding-left:8px}.label{font-size:13px;display:block;font-weight:600}small{line-height:1.5}details{margin:18px 0}footer{border-top:1px solid #7b849455;padding-top:14px}#evidence{white-space:pre-wrap}a{color:light-dark(#24549c,#a8c8ff)}@media(max-width:760px){.columns{grid-template-columns:1fr}body{padding:14px}}@media print{button,select{display:none}}
+</style></head><body>
+<header><h1>SkillRet evidence explorer</h1><p>Cached baseline → Jev Score → fixed RRF60. Explore improvements, regressions and failure handling without API calls.</p><small>All panels are historically exposed public development data. The original 12-query fusion was posthoc; subsequent protocols were frozen before new predictions. This viewer does not claim a globally best method.</small></header>
+<main><label for="cohort">Panel <select id="cohort"></select></label><label for="query">Query <select id="query"></select></label><button id="failure" type="button" aria-pressed="false">Demonstrate API failure</button>
+<div id="summary" aria-live="polite"></div><details><summary>Public benchmark task</summary><p id="task"></p></details>
+<div class="columns"><section><h2>SkillRet baseline</h2><ol id="dense"></ol></section><section><h2>Jev Score ranking</h2><ol id="jev"></ol></section><section><h2>Fixed RRF60 served result</h2><ol id="fusion"></ol></section></div>
+<p><span class="gold">Labeled relevant skill</span> — labels are shown for explanation only; they never enter the retriever or Jev request.</p>
+<details><summary>Budget and evidence</summary><p id="evidence"></p></details></main>
+<footer>Offline snapshot. No external assets, credentials, live controls or network requests. “API failure” is a simulation: production serves dense results; strict benchmark rerank output is empty. It does not change historical measurements.</footer>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent);
+const byId=id=>document.getElementById(id);
+let simulatedFailure=false;
+function option(value,label){const o=document.createElement('option');o.value=value;o.textContent=label;return o;}
+function fillList(id,ranking,row){const target=byId(id);target.replaceChildren();if(!ranking.length){const p=document.createElement('p');p.textContent='No valid cached reranking output.';target.appendChild(p);return;}
+ranking.slice(0,10).forEach(skillId=>{const li=document.createElement('li');const skill=data.skills[skillId];li.textContent=skill?skill.name:skillId;if(row.gold.includes(skillId)){li.className='gold';const label=document.createElement('span');label.className='label';label.textContent='Relevant';li.appendChild(label);}const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Evidence';const p=document.createElement('p');p.textContent=skill?skill.description:'Header unavailable';details.append(summary,p);li.appendChild(details);target.appendChild(li);});}
+function render(){const panel=data.panels[Number(byId('cohort').value)];const row=panel.rows[Number(byId('query').value)];const failed=simulatedFailure||row.status!=='ok';byId('task').textContent=row.query;
+fillList('dense',row.baseline,row);fillList('jev',failed?[]:row.reranked,row);fillList('fusion',failed?row.baseline:row.fused,row);
+byId('summary').textContent=failed?'Fallback active: serve cached dense ranking. Strict benchmark rerank output is empty. '+(simulatedFailure?'Simulated only.':'No successful rerank for this case.'):'Cached NDCG@10: baseline '+row.ndcg_baseline.toFixed(4)+' → Jev '+row.ndcg_jev.toFixed(4)+' → fusion '+row.ndcg_fusion.toFixed(4)+'. '+panel.note;
+byId('evidence').textContent=data.evidence+'\nQuery '+row.id+'; status '+row.status+'; candidate count '+row.baseline.length+'.';}
+function setPanel(){const panel=data.panels[Number(byId('cohort').value)];byId('query').replaceChildren(...panel.rows.map((r,i)=>option(String(i),r.id+' · '+r.outcome)));render();}
+data.panels.forEach((p,i)=>byId('cohort').appendChild(option(String(i),p.title)));
+byId('cohort').addEventListener('change',setPanel);byId('query').addEventListener('change',render);byId('failure').addEventListener('click',()=>{simulatedFailure=!simulatedFailure;byId('failure').setAttribute('aria-pressed',String(simulatedFailure));byId('failure').textContent=simulatedFailure?'Restore cached success':'Demonstrate API failure';render();});setPanel();
+</script></body></html>

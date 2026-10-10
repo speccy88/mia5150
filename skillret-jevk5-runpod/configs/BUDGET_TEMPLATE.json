@@ -1,0 +1,17 @@
+{
+  "approved_by_user": false,
+  "approval_record": null,
+  "target_cad": null,
+  "hard_cap_cad": null,
+  "provider_hourly_quote": null,
+  "provider_quote_currency": null,
+  "cad_conversion_rate": null,
+  "quote_date_utc": null,
+  "storage_cost": null,
+  "max_pod_billing_seconds": null,
+  "pod_id": null,
+  "controller_deadline_utc": null,
+  "off_pod_export_location": null,
+  "independent_cleanup_supervisor": null,
+  "warning": "Planning template only. Training process exit is not Pod termination. Old budgets are not new permission."
+}

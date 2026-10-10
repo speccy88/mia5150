@@ -1,0 +1,1 @@
+["/home/user/code/frognano-benchmark/tools/uv", "pip", "install", "--python", ".venv/bin/python", "bm25s", "pytrec-eval-terrier", "numpy", "scipy", "transformers==4.57.1", "accelerate", "peft", "safetensors", "pypdf", "torch==2.8.0", "--extra-index-url", "https://download.pytorch.org/whl/cu128", "--index-strategy", "unsafe-best-match"]

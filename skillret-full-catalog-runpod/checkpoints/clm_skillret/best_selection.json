@@ -1,0 +1,9 @@
+{
+  "epoch": 10,
+  "loss_mean": 3.8382275382499524,
+  "train_seconds": 22.532514180988073,
+  "recall_at_5": 0.2977756643947799,
+  "mrr": 0.3548890055357126,
+  "validation_queries": 6309,
+  "catalog_size": 10123
+}

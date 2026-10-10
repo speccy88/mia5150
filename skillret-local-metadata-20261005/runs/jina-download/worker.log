@@ -1,0 +1,11 @@
+download jina_rerank_35 README.md
+download jina_rerank_35 added_tokens.json
+download jina_rerank_35 config.json
+download jina_rerank_35 generation_config.json
+download jina_rerank_35 merges.txt
+download jina_rerank_35 model.safetensors
+download jina_rerank_35 special_tokens_map.json
+download jina_rerank_35 tokenizer.json
+download jina_rerank_35 tokenizer_config.json
+download jina_rerank_35 vocab.json
+complete jina_rerank_35

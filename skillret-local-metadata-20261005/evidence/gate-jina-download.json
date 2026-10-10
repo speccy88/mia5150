@@ -1,0 +1,120 @@
+{
+  "startup_host_gib": 4.5,
+  "startup_guest_gib": 4,
+  "continuous_limits_unchanged": true,
+  "ready": true,
+  "samples": [
+    {
+      "time": 1791239625.6425147,
+      "host": {
+        "utc": 1791239624.803,
+        "available_bytes": 3036401664,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4964458496,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 52,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239627.7345965,
+      "host": {
+        "utc": 1791239626.885,
+        "available_bytes": 3250995200,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4958310400,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 50,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239629.8278923,
+      "host": {
+        "utc": 1791239628.97,
+        "available_bytes": 3534180352,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4930441216,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 49,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239631.9224637,
+      "host": {
+        "utc": 1791239631.055,
+        "available_bytes": 3769257984,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4930441216,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 48,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239634.018721,
+      "host": {
+        "utc": 1791239633.144,
+        "available_bytes": 4867559424,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4930449408,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 48,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239636.1286523,
+      "host": {
+        "utc": 1791239635.228,
+        "available_bytes": 5090897920,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4956930048,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 47,
+      "gpu_utilization": 0
+    },
+    {
+      "time": 1791239638.2300065,
+      "host": {
+        "utc": 1791239637.305,
+        "available_bytes": 5100789760,
+        "total_bytes": 16943194112
+      },
+      "guest_available": 4932415488,
+      "swap": {
+        "pswpin": 101,
+        "pswpout": 2400
+      },
+      "gpu_free_mib": 8006,
+      "gpu_temp": 47,
+      "gpu_utilization": 0
+    }
+  ]
+}

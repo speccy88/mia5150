@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/typesafe-ai/skills/main/skills/typesafe-ai/SKILL.md",
+    "path": "evidence/jev/docs/typesafe_skill.md",
+    "sha256": "71ea90d7906c6554c4f4c460ef7361b2d26f59116ccdae986dc6d997b9389f52",
+    "retrieved_at": "2026-09-27T02:57:51.907719+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/llms.txt",
+    "path": "evidence/jev/docs/index.md",
+    "sha256": "3bad966207794ce900ebc81759fd48185cd2d1f287df13a08ae4d601e96450fd",
+    "retrieved_at": "2026-09-27T02:57:52.012010+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/api.md",
+    "path": "evidence/jev/docs/api.md",
+    "sha256": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5",
+    "retrieved_at": "2026-09-27T02:57:52.146340+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/models.md",
+    "path": "evidence/jev/docs/models.md",
+    "sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "retrieved_at": "2026-09-27T02:57:52.310606+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/primitives/noul.md",
+    "path": "evidence/jev/docs/noul.md",
+    "sha256": "aa7bff0d04bd42614e0e851a9ad4917ccc6287c882bc5dece7689b085ef789e6",
+    "retrieved_at": "2026-09-27T02:57:52.462722+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/cookbooks/rerank_typesafe.md",
+    "path": "evidence/jev/docs/reranking.md",
+    "sha256": "5397e56dcdcff36dcba9f2200c0c494baed957eada0364db96075053af7eaa5c",
+    "retrieved_at": "2026-09-27T02:57:52.718987+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/patterns/fan-out.md",
+    "path": "evidence/jev/docs/batching.md",
+    "sha256": "8d7a251ea6b735cb4994c1e0a95166cc0b3febce7d18189c3aa5e1673f182c91",
+    "retrieved_at": "2026-09-27T02:57:52.841332+00:00"
+  }
+]

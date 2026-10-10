@@ -1,0 +1,9 @@
+# Install the pinned repository's local package only after download_models.py.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.8.0+cpu
+numpy==2.3.5
+scipy==1.17.0
+transformers==5.0.0
+tokenizers==0.22.2
+huggingface_hub==1.33.0
+safetensors==0.8.0

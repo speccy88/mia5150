@@ -1,0 +1,19 @@
+{
+  "base_repo": "Qwen/Qwen3.5-0.8B",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "base_safetensors_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+  "initial_adapter_repo": "SearchJev/SearchJev-0.8B",
+  "initial_adapter_revision": "03c5b638c8fdc570a1d4bf998cebac22c0b53384",
+  "initial_adapter_sha256": "5e3d00afba46dba0715b3a1aed4c82f082678f2992f7912e0d473ccfa966b1f9",
+  "optimizer_updates": 20,
+  "configuration_only_portability_change": {
+    "original_config_sha256": "825f526d8b345352682d0636696ea25c19f38fb0288f08d5f906b5b1cb0014ec",
+    "fields": [
+      "base_model_name_or_path",
+      "revision"
+    ]
+  },
+  "weights_modified_after_save": false,
+  "result": "../result.json",
+  "adapted_safetensors_sha256": "b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300"
+}

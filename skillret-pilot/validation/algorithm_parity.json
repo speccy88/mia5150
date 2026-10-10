@@ -1,0 +1,12 @@
+{
+  "method": "Compare Python AST after stripping docstrings; formatting and comments excluded",
+  "same_executable_ast": {
+    "pilot.py": true,
+    "agent_runner.py": true,
+    "trial.py": true,
+    "local_runner.py": true,
+    "reference_metrics.py": true,
+    "setup_local_key.py": true,
+    "scripts/benchmark_openrouter.py": true
+  }
+}

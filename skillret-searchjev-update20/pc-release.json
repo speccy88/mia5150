@@ -1,0 +1,32 @@
+{
+  "system_settings_changed": false,
+  "utc": 1791330612.348,
+  "pc_released": true,
+  "unrelated_processes_stopped": false,
+  "bounded_checkpoint": 20,
+  "guest": {
+    "utc": 1791330612.3158576,
+    "owned_workload_processes": [],
+    "gpu": "NVIDIA GeForce RTX 2060 SUPER, 0, 53, 0",
+    "guest_available_bytes": 5670301696,
+    "guest_total_bytes": 6217748480,
+    "guest_swap_used_bytes": 0,
+    "guest_swap_counters": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "guest_cpu_count": 2
+  },
+  "host": {
+    "wsl_config": "[wsl2]\nmemory=6GB\nprocessors=2\nswap=2GB\n\n[experimental]\nautoMemoryReclaim=dropCache\r\n",
+    "utc": 1791330608.634,
+    "available_bytes": 7989460992,
+    "monitor_running": false,
+    "wsl_config_sha256": "0B8E5365B4292335C7CB3A1F6E26A98CCEB69B0E5C6BE80AE8903B02D4A39448",
+    "cpu_load_percent": 9,
+    "cpu_name": "Intel(R) Core(TM) i5-9500T CPU @ 2.20GHz",
+    "monitor_pid": 9832,
+    "total_bytes": 16943194112
+  },
+  "training_run": "runs/pilot20-dynamic"
+}

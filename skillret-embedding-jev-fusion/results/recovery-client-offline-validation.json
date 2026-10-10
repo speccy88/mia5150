@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "offline_test_record_not_authorization_or_live_provider_verification",
+  "recorded_at_utc": "2026-10-07 03:03:01 UTC",
+  "status": "passed_with_explicit_post_suite_test_change_note",
+  "recovery_policy": "reviewed-wsl-reboot-recovery-v1",
+  "environment": {
+    "execution": "Existing Ubuntu-26.04 WSL Python environment against shared Windows workspace source",
+    "python_executable": "/home/user/code/mia5150-local/.venv/bin/python",
+    "provider_transport": "mocked",
+    "credential_source_in_tests": "synthetic mocked environment only",
+    "real_provider_calls_by_tests": 0,
+    "real_credentials_accessed_by_tests": false,
+    "real_ledger_or_lock_files_modified_by_tests": false,
+    "test_ledger_and_receipt_files": "temporary synthetic fixtures",
+    "deliverable_archive_created": false
+  },
+  "test_executions": [
+    {
+      "name": "recovery_client_full_offline_suite",
+      "command": "python -m unittest test_hosted_jev_client -q",
+      "tests_run": 50,
+      "elapsed_seconds": 45.594,
+      "exit_code": 0,
+      "result": "OK",
+      "tool_session_id": 77707,
+      "completion_output_chunk_id": "48ddfb",
+      "source_state": "Final hosted_jev_client.py implementation; test file preceded the additional USD-cap assertions described below",
+      "client_sha256": "b8a324198a692c8a6ced32abe851270ba78297fc7a0eadede071e9be533a733a",
+      "test_file_sha256_at_this_execution": null
+    },
+    {
+      "name": "later_targeted_cad_and_usd_double_reservation_check",
+      "command": "python -m unittest test_hosted_jev_client.HostedClientTests.test_recovery_budget_check_counts_original_and_replacement_reserves -q",
+      "tests_run": 1,
+      "elapsed_seconds": 1.627,
+      "exit_code": 0,
+      "result": "OK",
+      "tool_session_id": 71690,
+      "completion_output_chunk_id": "7c641a",
+      "source_state": "Final current client and test files",
+      "change_after_full_suite": "Added USD consumption-cap assertions to the existing recovery budget test after its CAD-cap assertions. The retained original reservation plus replacement reserve must exceed the deliberately small synthetic cap before any key access or new reservation.",
+      "test_file_sha256": "b16fb03866dd46f82d4646bcc6787fef75d135532f6925fae44be2a8961c0ac0"
+    },
+    {
+      "name": "packaging_and_unique_ledger_accounting",
+      "command": "python -m unittest test_context_packaging -q",
+      "tests_run": 6,
+      "elapsed_seconds": 0.063,
+      "exit_code": 0,
+      "result": "OK",
+      "tool_session_id": 89491,
+      "completion_output_chunk_id": "acfca3",
+      "source_state": "Final packaging code with the reviewed recovery-test source hash pinned",
+      "temporary_synthetic_archives_only": true
+    }
+  ],
+  "current_source_sha256": {
+    "hosted_jev_client.py": "b8a324198a692c8a6ced32abe851270ba78297fc7a0eadede071e9be533a733a",
+    "test_hosted_jev_client.py": "b16fb03866dd46f82d4646bcc6787fef75d135532f6925fae44be2a8961c0ac0",
+    "RECOVERY_POLICY.md": "41575884ab0bee8b656a92fbfb4ac0a3cd7408740a43a56b7248c4bbf60a1d56",
+    "package_results.py": "11ebc46ff27626552318a863ec31b33680e250744216a079c593f0297e662ddc"
+  },
+  "workspace_support_source_sha256": {
+    "verify_context_archive.py": "62a55be5fc8168a7148afd219a2fb39ec80d5247ae4c509563a1a934ee09a3a5",
+    "test_context_packaging.py": "8cdc509e05087bce9633b4dea14a5a321a4bb90569bdff061a6bc6e966607af4"
+  },
+  "coverage": [
+    "Only the exact reviewed original request can receive replacement attempt -2",
+    "Missing, forged, stale, mismatched or changed-proof receipts fail before key access",
+    "Original request bytes, model, plan and reservation event remain bound",
+    "Existing original response evidence prevents replacement",
+    "Successful replacement settles once while the original reservation remains held",
+    "Distinct new requests wait for replacement settlement",
+    "A second ambiguous attempt blocks every further paid request",
+    "Both retained and new reservations count against CAD and USD caps",
+    "Partial ledger states distinguish settled costs from held funds",
+    "Revalidation and alias-cache reuse do not double-count calls, tokens or costs",
+    "Portable query redaction and original baseline preservation remain enforced",
+    "Header-only synthetic fixtures require exact reviewed source hash, basename and location"
+  ],
+  "evidence_limitations": [
+    "This record transcribes actual test-tool completion outputs; no separate raw stdout log was saved for these three executions.",
+    "The full 50-test suite preceded the final USD assertions in one existing test. That changed test was rerun successfully; the full suite was not rerun afterward.",
+    "The pre-USD-change test-file hash was not captured contemporaneously and is deliberately null. Current final file hashes are recorded separately.",
+    "The later targeted test overlaps one of the 50 suite tests; these are not 57 distinct tests.",
+    "Tests use synthetic evidence and mocks. They do not independently establish actual reboot facts, truthful operator review, provider execution or billing, current credit, or successful live recovery.",
+    "The original unknown real attempt must remain held in financial reporting. Any eventual 780-reservation, 779-settlement, one-held outcome must be derived from the final actual ledger, not inferred from this offline record.",
+    "No tests were rerun to create this receipt. No client, test, real ledger or lock files were changed while recording it."
+  ]
+}

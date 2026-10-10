@@ -1,0 +1,6 @@
+{
+  "wall_seconds": 7200,
+  "original_config_wall_seconds": 2700,
+  "override_requested": 7200,
+  "checkpoint_contract_changed": false
+}

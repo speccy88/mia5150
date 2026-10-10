@@ -1,0 +1,92 @@
+{
+  "protocol": "metadata-only; BGE-M3 top15; NONE excluded for forced ranking; full qrel denominator",
+  "dataset_revision": "a050ad233a504a43135bafe8cdf45574052b5729",
+  "is_official_paper_full_text_protocol": false,
+  "bge_only": {
+    "recall@1": 0.2799479166666667,
+    "hit@1": 0.484375,
+    "completeness@1": 0.13671875,
+    "ndcg@1": 0.484375,
+    "recall@5": 0.4303385416666667,
+    "hit@5": 0.69921875,
+    "completeness@5": 0.21875,
+    "ndcg@5": 0.41701435067647974,
+    "recall@10": 0.4908854166666667,
+    "hit@10": 0.7578125,
+    "completeness@10": 0.26953125,
+    "ndcg@10": 0.43961459285289434,
+    "mrr@15": 0.5760589020354645,
+    "candidate_recall@15": 0.5149739583333334,
+    "candidate_hit@15": 0.79296875,
+    "oracle_recall@5": 0.5149739583333334,
+    "none_correct": 0.79296875,
+    "decision_correct": 0.484375,
+    "abstained": 0.0,
+    "false_abstention": 0.0
+  },
+  "selected_model": {
+    "recall@1": 0.4036458333333333,
+    "hit@1": 0.6953125,
+    "completeness@1": 0.1953125,
+    "ndcg@1": 0.6953125,
+    "recall@5": 0.509765625,
+    "hit@5": 0.78515625,
+    "completeness@5": 0.2734375,
+    "ndcg@5": 0.5418860657908209,
+    "recall@10": 0.5149739583333334,
+    "hit@10": 0.79296875,
+    "completeness@10": 0.27734375,
+    "ndcg@10": 0.5440297460226128,
+    "mrr@15": 0.7355840773809523,
+    "candidate_recall@15": 0.5149739583333334,
+    "candidate_hit@15": 0.79296875,
+    "oracle_recall@5": 0.5149739583333334,
+    "none_correct": 0.8984375,
+    "decision_correct": 0.80859375,
+    "abstained": 0.22265625,
+    "false_abstention": 0.05859375
+  },
+  "paired_query_bootstrap_vs_bge": {
+    "metric": "recall@5",
+    "mean_difference": 0.07942708333333333,
+    "bootstrap_95_ci": [
+      0.052734375,
+      0.107421875
+    ],
+    "unit": "query",
+    "family_dependence_not_corrected": true
+  },
+  "historical_CLM_comparison": "Separate full-catalog system. Historical score is context, not a controlled head-to-head.",
+  "zero_shot": {
+    "recall@1": 0.3131510416666667,
+    "hit@1": 0.51953125,
+    "completeness@1": 0.16015625,
+    "ndcg@1": 0.51953125,
+    "recall@5": 0.4733072916666667,
+    "hit@5": 0.75,
+    "completeness@5": 0.24609375,
+    "ndcg@5": 0.46505085232806953,
+    "recall@10": 0.5026041666666666,
+    "hit@10": 0.7890625,
+    "completeness@10": 0.26171875,
+    "ndcg@10": 0.47665244289313224,
+    "mrr@15": 0.616339595734127,
+    "candidate_recall@15": 0.5149739583333334,
+    "candidate_hit@15": 0.79296875,
+    "oracle_recall@5": 0.5149739583333334,
+    "none_correct": 0.7890625,
+    "decision_correct": 0.5234375,
+    "abstained": 0.01953125,
+    "false_abstention": 0.01171875
+  },
+  "paired_query_bootstrap_vs_zero": {
+    "metric": "recall@5",
+    "mean_difference": 0.036458333333333336,
+    "bootstrap_95_ci": [
+      0.020833333333333332,
+      0.0546875
+    ],
+    "unit": "query",
+    "family_dependence_not_corrected": true
+  }
+}

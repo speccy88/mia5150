@@ -1,0 +1,128 @@
+{
+  "full_raw_qrels_checked": 127190,
+  "validation_queries": 256,
+  "full_relevance_denominators_match": true,
+  "cached_vector_top15_rankings_match": true,
+  "top100_exact_rankings_match": false,
+  "top100_lower_rank_difference_queries": 14,
+  "lower_rank_differences": [
+    {
+      "query_id": "q-train-003409",
+      "positions": [
+        34,
+        35
+      ],
+      "maximum_score_difference_at_mismatch": 3.5762786865234375e-07
+    },
+    {
+      "query_id": "q-train-003853",
+      "positions": [
+        81,
+        82
+      ],
+      "maximum_score_difference_at_mismatch": 2.384185791015625e-07
+    },
+    {
+      "query_id": "q-train-021493",
+      "positions": [
+        99,
+        100
+      ],
+      "maximum_score_difference_at_mismatch": 5.960464477539062e-07
+    },
+    {
+      "query_id": "q-train-024414",
+      "positions": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "maximum_score_difference_at_mismatch": 8.344650268554688e-07
+    },
+    {
+      "query_id": "q-train-025292",
+      "positions": [
+        95,
+        96
+      ],
+      "maximum_score_difference_at_mismatch": 2.980232238769531e-07
+    },
+    {
+      "query_id": "q-train-025943",
+      "positions": [
+        70,
+        71
+      ],
+      "maximum_score_difference_at_mismatch": 2.384185791015625e-07
+    },
+    {
+      "query_id": "q-train-027891",
+      "positions": [
+        90,
+        91
+      ],
+      "maximum_score_difference_at_mismatch": 5.960464477539063e-08
+    },
+    {
+      "query_id": "q-train-031876",
+      "positions": [
+        77,
+        78
+      ],
+      "maximum_score_difference_at_mismatch": 1.1920928955078125e-07
+    },
+    {
+      "query_id": "q-train-042938",
+      "positions": [
+        92,
+        93
+      ],
+      "maximum_score_difference_at_mismatch": 3.5762786865234375e-07
+    },
+    {
+      "query_id": "q-train-045541",
+      "positions": [
+        56,
+        57
+      ],
+      "maximum_score_difference_at_mismatch": 1.1920928955078125e-07
+    },
+    {
+      "query_id": "q-train-047486",
+      "positions": [
+        64,
+        65
+      ],
+      "maximum_score_difference_at_mismatch": 2.384185791015625e-07
+    },
+    {
+      "query_id": "q-train-057429",
+      "positions": [
+        81,
+        82
+      ],
+      "maximum_score_difference_at_mismatch": 4.172325134277344e-07
+    },
+    {
+      "query_id": "q-train-058188",
+      "positions": [
+        92,
+        93
+      ],
+      "maximum_score_difference_at_mismatch": 4.172325134277344e-07
+    },
+    {
+      "query_id": "q-train-062058",
+      "positions": [
+        72,
+        73
+      ],
+      "maximum_score_difference_at_mismatch": 3.5762786865234375e-07
+    }
+  ],
+  "numpy_version": "2.5.3",
+  "skill_catalog_size": 10123,
+  "query_vector_count": 2256,
+  "encoder_or_model_inference": false
+}

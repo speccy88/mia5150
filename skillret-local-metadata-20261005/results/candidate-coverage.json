@@ -1,0 +1,4373 @@
+{
+  "20": {
+    "per_query": [
+      {
+        "id": "q-02806",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [
+          "2eb04ac2-bc5b-42e7-9b5f-618f911b7c57"
+        ],
+        "fusion_rescued_gold": [
+          "2eb04ac2-bc5b-42e7-9b5f-618f911b7c57"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01679",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03421",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "7bf4d884-7d07-46a6-9dc0-470983344808"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03558",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01254",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02636",
+        "gold_count": 1,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-03650",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [
+          "bdd9d34d-497e-48f5-bd55-41c9863dbbab"
+        ],
+        "fusion_rescued_gold": [
+          "bdd9d34d-497e-48f5-bd55-41c9863dbbab"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02145",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04419",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03802",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "df520945-e83c-42d4-a25d-a9d344ceb89f"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03050",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01972",
+        "gold_count": 3,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "992188cd-76cb-4bc3-8c8a-0580465cac4d"
+        ],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.3333333333333333
+      },
+      {
+        "id": "q-02255",
+        "gold_count": 3,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02590",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04772",
+        "gold_count": 1,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01137",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01223",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00702",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03923",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04775",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01436",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02635",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-01186",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01962",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03481",
+        "gold_count": 2,
+        "overlap_jaccard": 0.48148148148148145,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03666",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04808",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00324",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04330",
+        "gold_count": 1,
+        "overlap_jaccard": 0.02564102564102564,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04960",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-04337",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01627",
+        "gold_count": 3,
+        "overlap_jaccard": 0.02564102564102564,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01883",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03291",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01330",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-03587",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01906",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04868",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04985",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00364",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01955",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00669",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03551",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03443",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "01b20c68-18bf-4f33-9f37-82ea71750dbd"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-02209",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02131",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04299",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03936",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-01482",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00342",
+        "gold_count": 3,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [
+          "55ecb59d-bc52-4007-9685-94cfc146e2ef"
+        ],
+        "fusion_rescued_gold": [
+          "55ecb59d-bc52-4007-9685-94cfc146e2ef"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.3333333333333333,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01329",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00674",
+        "gold_count": 3,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "91f2e3f6-a1d6-4652-8944-67fdd28854fa"
+        ],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.3333333333333333
+      },
+      {
+        "id": "q-02046",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01672",
+        "gold_count": 2,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04599",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03943",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03103",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01465",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00172",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01388",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "87ef5773-1482-4965-901a-e64553b51ed6"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-00408",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03302",
+        "gold_count": 2,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [
+          "bdab6ff2-ac50-41ed-9dcd-01443129e931"
+        ],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-00405",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [
+          "08b6d1fb-4252-4736-86ea-32d6f47b797b"
+        ],
+        "fusion_rescued_gold": [
+          "08b6d1fb-4252-4736-86ea-32d6f47b797b"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01237",
+        "gold_count": 3,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00905",
+        "gold_count": 3,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02192",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04938",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-03632",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "70e429ed-1253-4286-99b1-cdd90af5caac"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-01015",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04320",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [
+          "247da987-f860-4f5a-80b8-04a42803168c"
+        ],
+        "fusion_rescued_gold": [
+          "247da987-f860-4f5a-80b8-04a42803168c"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02030",
+        "gold_count": 3,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-04106",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "82a883e8-c495-409a-90c5-8fee712471c0"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-04767",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02381",
+        "gold_count": 3,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00959",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [
+          "d86f589d-10c3-4bf4-843f-c97985910ff6"
+        ],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-00315",
+        "gold_count": 3,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [
+          "6da57225-0fc6-4125-b715-f9b62468abce"
+        ],
+        "fusion_rescued_gold": [
+          "6da57225-0fc6-4125-b715-f9b62468abce"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04856",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00363",
+        "gold_count": 3,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-02795",
+        "gold_count": 2,
+        "overlap_jaccard": 0.02564102564102564,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00900",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03656",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-00510",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04478",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-02632",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-04230",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04272",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00684",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02004",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03561",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01759",
+        "gold_count": 3,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "fef7476f-e781-4917-a3a8-f5e33f3dca63"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-03114",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04524",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-00476",
+        "gold_count": 3,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [
+          "a5104f1e-f6b1-49f8-9c18-2a6580f537b7"
+        ],
+        "fusion_rescued_gold": [
+          "a5104f1e-f6b1-49f8-9c18-2a6580f537b7"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02898",
+        "gold_count": 2,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [
+          "c2a1ff50-e4f8-4361-9b51-ce7ed001feb8"
+        ],
+        "fusion_rescued_gold": [
+          "c2a1ff50-e4f8-4361-9b51-ce7ed001feb8"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02687",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-02116",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "fc98fae6-09f7-4479-8ff2-d809dc2b05df"
+        ],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-01993",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-04226",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03365",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02850",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02121",
+        "gold_count": 2,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [
+          "6b6ac1cd-9934-4445-9b78-a8497285c7e7"
+        ],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03208",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03097",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03945",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01316",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01243",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03095",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00048",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02580",
+        "gold_count": 2,
+        "overlap_jaccard": 0.42857142857142855,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02944",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02833",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02651",
+        "gold_count": 2,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02592",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "c2184df0-7806-4ca7-ba1b-c17d12cfea5b"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-02348",
+        "gold_count": 3,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.3333333333333333,
+        "union_recall": 0.3333333333333333,
+        "fusion_recall": 0.3333333333333333
+      },
+      {
+        "id": "q-00219",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01832",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00236",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01540",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03471",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03409",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02156",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01616",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04040",
+        "gold_count": 2,
+        "overlap_jaccard": 0.02564102564102564,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "f8c1f284-3cb5-4871-9d45-7c0bbf59f6c1"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03533",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2903225806451613,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03493",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01942",
+        "gold_count": 3,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      }
+    ],
+    "mean_dense_recall": 0.8580729166666666,
+    "mean_union_recall": 0.8984375,
+    "mean_fusion_recall": 0.8294270833333334,
+    "rescued_positive_count": 8,
+    "displaced_positive_count": 12
+  },
+  "50": {
+    "per_query": [
+      {
+        "id": "q-02806",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01679",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03421",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03558",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01254",
+        "gold_count": 1,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02636",
+        "gold_count": 1,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "986ff81a-75a0-41d0-b17b-2c536bbef6f8"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-03650",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02145",
+        "gold_count": 1,
+        "overlap_jaccard": 0.3333333333333333,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04419",
+        "gold_count": 1,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03802",
+        "gold_count": 2,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03050",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01972",
+        "gold_count": 3,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-02255",
+        "gold_count": 3,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02590",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04772",
+        "gold_count": 1,
+        "overlap_jaccard": 0.3157894736842105,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01137",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01223",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00702",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03923",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04775",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01436",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02635",
+        "gold_count": 2,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-01186",
+        "gold_count": 1,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01962",
+        "gold_count": 2,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03481",
+        "gold_count": 2,
+        "overlap_jaccard": 0.35135135135135137,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03666",
+        "gold_count": 1,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04808",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00324",
+        "gold_count": 3,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04330",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04960",
+        "gold_count": 1,
+        "overlap_jaccard": 0.041666666666666664,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "3bb73bde-fe91-4901-b81d-5da450e852cc"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-04337",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01627",
+        "gold_count": 3,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01883",
+        "gold_count": 2,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03291",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01330",
+        "gold_count": 3,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-03587",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01906",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04868",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04985",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00364",
+        "gold_count": 3,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01955",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00669",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03551",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03443",
+        "gold_count": 1,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02209",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02131",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04299",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03936",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-01482",
+        "gold_count": 2,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00342",
+        "gold_count": 3,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01329",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00674",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02046",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01672",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04599",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03943",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03103",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01465",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00172",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2987012987012987,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01388",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00408",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03302",
+        "gold_count": 2,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [
+          "bdab6ff2-ac50-41ed-9dcd-01443129e931"
+        ],
+        "fusion_rescued_gold": [
+          "bdab6ff2-ac50-41ed-9dcd-01443129e931"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00405",
+        "gold_count": 3,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01237",
+        "gold_count": 3,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00905",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02192",
+        "gold_count": 2,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04938",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-03632",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01015",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04320",
+        "gold_count": 2,
+        "overlap_jaccard": 0.26582278481012656,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02030",
+        "gold_count": 3,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [
+          "b38d836f-c1a6-4e23-8eb5-22de72f4d617"
+        ],
+        "fusion_rescued_gold": [
+          "b38d836f-c1a6-4e23-8eb5-22de72f4d617"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04106",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04767",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02381",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00959",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [
+          "d86f589d-10c3-4bf4-843f-c97985910ff6"
+        ],
+        "fusion_rescued_gold": [
+          "d86f589d-10c3-4bf4-843f-c97985910ff6"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00315",
+        "gold_count": 3,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04856",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00363",
+        "gold_count": 3,
+        "overlap_jaccard": 0.3157894736842105,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-02795",
+        "gold_count": 2,
+        "overlap_jaccard": 0.041666666666666664,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00900",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03656",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00510",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04478",
+        "gold_count": 2,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-02632",
+        "gold_count": 2,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-04230",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04272",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00684",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02004",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03561",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01759",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03114",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04524",
+        "gold_count": 1,
+        "overlap_jaccard": 0.26582278481012656,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-00476",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [
+          "a5104f1e-f6b1-49f8-9c18-2a6580f537b7"
+        ],
+        "fusion_rescued_gold": [
+          "a5104f1e-f6b1-49f8-9c18-2a6580f537b7"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02898",
+        "gold_count": 2,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [
+          "c2a1ff50-e4f8-4361-9b51-ce7ed001feb8"
+        ],
+        "fusion_rescued_gold": [
+          "c2a1ff50-e4f8-4361-9b51-ce7ed001feb8"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02687",
+        "gold_count": 2,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [
+          "8e451a65-990a-483a-8201-9a072eb78265"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02116",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [
+          "6bf94682-a67b-4647-bf46-7dfb4574df35"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01993",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "ce6bb53c-2fb2-412b-846d-535fe7a4c736"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-04226",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03365",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02850",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02121",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [
+          "6b6ac1cd-9934-4445-9b78-a8497285c7e7"
+        ],
+        "fusion_rescued_gold": [
+          "6b6ac1cd-9934-4445-9b78-a8497285c7e7"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03208",
+        "gold_count": 1,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03097",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03945",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01316",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01243",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03095",
+        "gold_count": 2,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00048",
+        "gold_count": 1,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02580",
+        "gold_count": 2,
+        "overlap_jaccard": 0.4084507042253521,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02944",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02833",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02651",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02592",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02348",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "92b64ae7-cc35-4274-b2bd-4022dc3f8509"
+        ],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.3333333333333333
+      },
+      {
+        "id": "q-00219",
+        "gold_count": 3,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01832",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00236",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01540",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03471",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03409",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02156",
+        "gold_count": 2,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01616",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04040",
+        "gold_count": 2,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03533",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03493",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01942",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      }
+    ],
+    "mean_dense_recall": 0.9140625,
+    "mean_union_recall": 0.93359375,
+    "mean_fusion_recall": 0.9192708333333333,
+    "rescued_positive_count": 8,
+    "displaced_positive_count": 4
+  },
+  "100": {
+    "per_query": [
+      {
+        "id": "q-02806",
+        "gold_count": 1,
+        "overlap_jaccard": 0.26582278481012656,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01679",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03421",
+        "gold_count": 2,
+        "overlap_jaccard": 0.30718954248366015,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03558",
+        "gold_count": 1,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01254",
+        "gold_count": 1,
+        "overlap_jaccard": 0.11731843575418995,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02636",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03650",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02145",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2422360248447205,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04419",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03802",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03050",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01972",
+        "gold_count": 3,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "1031892a-11d5-440b-ac7a-818f0bba2b15"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-02255",
+        "gold_count": 3,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02590",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04772",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2578616352201258,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01137",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2422360248447205,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01223",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00702",
+        "gold_count": 1,
+        "overlap_jaccard": 0.06951871657754011,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03923",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04775",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01436",
+        "gold_count": 1,
+        "overlap_jaccard": 0.11731843575418995,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02635",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-01186",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01962",
+        "gold_count": 2,
+        "overlap_jaccard": 0.09289617486338798,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03481",
+        "gold_count": 2,
+        "overlap_jaccard": 0.3157894736842105,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03666",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04808",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2345679012345679,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00324",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04330",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04960",
+        "gold_count": 1,
+        "overlap_jaccard": 0.041666666666666664,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04337",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01627",
+        "gold_count": 3,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01883",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1695906432748538,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03291",
+        "gold_count": 1,
+        "overlap_jaccard": 0.06951871657754011,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01330",
+        "gold_count": 3,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [
+          "e4e526fa-38e9-4935-863c-64c33068736f"
+        ],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-03587",
+        "gold_count": 1,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01906",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04868",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04985",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00364",
+        "gold_count": 3,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01955",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1695906432748538,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00669",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03551",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03443",
+        "gold_count": 1,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02209",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02131",
+        "gold_count": 1,
+        "overlap_jaccard": 0.09289617486338798,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04299",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03936",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "c0e2dd78-0440-47ca-a1dc-efbff4d45cf8"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-01482",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00342",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "6cb3b860-5575-4807-a3e4-ca7943c80335"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01329",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0582010582010582,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00674",
+        "gold_count": 3,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02046",
+        "gold_count": 2,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01672",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04599",
+        "gold_count": 2,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03943",
+        "gold_count": 2,
+        "overlap_jaccard": 0.26582278481012656,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-03103",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1834319526627219,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01465",
+        "gold_count": 2,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00172",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2987012987012987,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01388",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00408",
+        "gold_count": 1,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03302",
+        "gold_count": 2,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [
+          "bdab6ff2-ac50-41ed-9dcd-01443129e931"
+        ],
+        "fusion_rescued_gold": [
+          "bdab6ff2-ac50-41ed-9dcd-01443129e931"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00405",
+        "gold_count": 3,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01237",
+        "gold_count": 3,
+        "overlap_jaccard": 0.09289617486338798,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00905",
+        "gold_count": 3,
+        "overlap_jaccard": 0.07526881720430108,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02192",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04938",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1695906432748538,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-03632",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01015",
+        "gold_count": 3,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04320",
+        "gold_count": 2,
+        "overlap_jaccard": 0.2422360248447205,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02030",
+        "gold_count": 3,
+        "overlap_jaccard": 0.15606936416184972,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04106",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04767",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02381",
+        "gold_count": 3,
+        "overlap_jaccard": 0.05263157894736842,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00959",
+        "gold_count": 3,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [
+          "d86f589d-10c3-4bf4-843f-c97985910ff6"
+        ],
+        "fusion_rescued_gold": [
+          "d86f589d-10c3-4bf4-843f-c97985910ff6"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00315",
+        "gold_count": 3,
+        "overlap_jaccard": 0.06951871657754011,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04856",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00363",
+        "gold_count": 3,
+        "overlap_jaccard": 0.3157894736842105,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02795",
+        "gold_count": 2,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00900",
+        "gold_count": 1,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03656",
+        "gold_count": 1,
+        "overlap_jaccard": 0.42857142857142855,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00510",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04478",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-02632",
+        "gold_count": 2,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 0.5,
+        "fusion_recall": 0.5
+      },
+      {
+        "id": "q-04230",
+        "gold_count": 1,
+        "overlap_jaccard": 0.26582278481012656,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04272",
+        "gold_count": 2,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00684",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2578616352201258,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02004",
+        "gold_count": 1,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03561",
+        "gold_count": 1,
+        "overlap_jaccard": 0.1695906432748538,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01759",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03114",
+        "gold_count": 2,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04524",
+        "gold_count": 1,
+        "overlap_jaccard": 0.2987012987012987,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.0,
+        "union_recall": 0.0,
+        "fusion_recall": 0.0
+      },
+      {
+        "id": "q-00476",
+        "gold_count": 3,
+        "overlap_jaccard": 0.2422360248447205,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02898",
+        "gold_count": 2,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02687",
+        "gold_count": 2,
+        "overlap_jaccard": 0.09289617486338798,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02116",
+        "gold_count": 2,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01993",
+        "gold_count": 2,
+        "overlap_jaccard": 0.20481927710843373,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04226",
+        "gold_count": 1,
+        "overlap_jaccard": 0.0582010582010582,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03365",
+        "gold_count": 2,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02850",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02121",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [
+          "6b6ac1cd-9934-4445-9b78-a8497285c7e7"
+        ],
+        "fusion_rescued_gold": [
+          "6b6ac1cd-9934-4445-9b78-a8497285c7e7"
+        ],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.5,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03208",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21212121212121213,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03097",
+        "gold_count": 1,
+        "overlap_jaccard": 0.21951219512195122,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01154",
+        "gold_count": 1,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03945",
+        "gold_count": 2,
+        "overlap_jaccard": 0.17647058823529413,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01316",
+        "gold_count": 3,
+        "overlap_jaccard": 0.16279069767441862,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [
+          "8d3fd635-8b0d-4e40-b862-f5a8a1b4c52b"
+        ],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-01243",
+        "gold_count": 2,
+        "overlap_jaccard": 0.14942528735632185,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03095",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19760479041916168,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00048",
+        "gold_count": 1,
+        "overlap_jaccard": 0.03626943005181347,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02580",
+        "gold_count": 2,
+        "overlap_jaccard": 0.36054421768707484,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02944",
+        "gold_count": 2,
+        "overlap_jaccard": 0.06382978723404255,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02833",
+        "gold_count": 2,
+        "overlap_jaccard": 0.08108108108108109,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02651",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02592",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02348",
+        "gold_count": 3,
+        "overlap_jaccard": 0.12994350282485875,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 0.6666666666666666,
+        "union_recall": 0.6666666666666666,
+        "fusion_recall": 0.6666666666666666
+      },
+      {
+        "id": "q-00219",
+        "gold_count": 3,
+        "overlap_jaccard": 0.1111111111111111,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01832",
+        "gold_count": 1,
+        "overlap_jaccard": 0.08695652173913043,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-00236",
+        "gold_count": 1,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01540",
+        "gold_count": 1,
+        "overlap_jaccard": 0.14285714285714285,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03471",
+        "gold_count": 1,
+        "overlap_jaccard": 0.06951871657754011,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03409",
+        "gold_count": 2,
+        "overlap_jaccard": 0.19047619047619047,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-02156",
+        "gold_count": 2,
+        "overlap_jaccard": 0.0989010989010989,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01616",
+        "gold_count": 2,
+        "overlap_jaccard": 0.25,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-04040",
+        "gold_count": 2,
+        "overlap_jaccard": 0.11731843575418995,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03533",
+        "gold_count": 1,
+        "overlap_jaccard": 0.13636363636363635,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-03493",
+        "gold_count": 2,
+        "overlap_jaccard": 0.10497237569060773,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      },
+      {
+        "id": "q-01942",
+        "gold_count": 3,
+        "overlap_jaccard": 0.12359550561797752,
+        "lexical_unique_gold": [],
+        "fusion_rescued_gold": [],
+        "fusion_displaced_gold": [],
+        "dense_recall": 1.0,
+        "union_recall": 1.0,
+        "fusion_recall": 1.0
+      }
+    ],
+    "mean_dense_recall": 0.94921875,
+    "mean_union_recall": 0.9622395833333333,
+    "mean_fusion_recall": 0.9440104166666667,
+    "rescued_positive_count": 3,
+    "displaced_positive_count": 4
+  }
+}

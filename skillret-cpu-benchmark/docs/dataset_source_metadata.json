@@ -1,0 +1,17 @@
+{
+  "id": "ThakiCloud/SKILLRET",
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "version": "v1.1",
+  "license": "apache-2.0",
+  "gated": false,
+  "test_skills": 6006,
+  "test_queries": 4392,
+  "test_qrels": 7187,
+  "files": [
+    "data/qrels/test.jsonl",
+    "data/queries/test.jsonl",
+    "data/skills/test.jsonl"
+  ],
+  "source_url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET",
+  "note": "Official full-body document format differs from the discovery-header adaptation; no benchmark outputs included."
+}

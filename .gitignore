@@ -1,0 +1,43 @@
+# Local LaTeX tools, build products and review artifacts.
+/.env
+/.env.*
+!/.env.example
+/.tools/
+/.cache/
+/build/
+/output/
+/tmp/
+/*.aux
+/*.bbl
+/*.blg
+/*.fdb_latexmk
+/*.fls
+/*.log
+/*.out
+/*.synctex.gz
+/*.xdv
+/*.pdf
+.DS_Store
+benchmark_bm25/test.jsonl
+
+# Exclude generated runtimes and local credentials throughout experiment folders.
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+**/.venv/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.key
+
+# Private credentials and privacy-audit backups.
+*.pem
+*.p12
+*.pfx
+*.kdbx
+id_rsa
+id_ed25519
+.netrc
+.pypirc
+**/privacy-work/
+**/private-history/

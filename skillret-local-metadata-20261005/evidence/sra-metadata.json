@@ -1,0 +1,95 @@
+{
+  "_id": "69e8a14c09efbb5392fd090a",
+  "id": "WeihangSu/SRA-Bench",
+  "author": "WeihangSu",
+  "sha": "6143f2634eb284955ce312213bac24b582d039f3",
+  "lastModified": "2026-05-14T08:01:48.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:question-answering",
+    "task_categories:text-generation",
+    "language:en",
+    "license:mit",
+    "size_categories:10K<n<100K",
+    "arxiv:2604.24594",
+    "region:us",
+    "skill-retrieval",
+    "skill-retrieval-augmentation",
+    "llm-agents",
+    "agentic-ai",
+    "agent-skills",
+    "tool-use",
+    "retrieval-augmented-generation",
+    "rag",
+    "benchmark",
+    "reasoning",
+    "agent-memory",
+    "skill-learning",
+    "arxiv:2604.24594"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tSRA-Bench: Skill Retrieval Augmentation for Agentic AI\n\t\n\n\n\n\nSRA-Bench is a benchmark for studying Skill Retrieval Augmentation (SRA): how LLM agents retrieve, select, and use external skills to solve capability-intensive tasks.\n\nRAG retrieves knowledge. SRA retrieves capabilities.\n\nModern LLM agents increasingly rely on external resources such as tools, APIs, memory, workflows, executable code, and reusable skills.SRA-Bench provides a large-scale benchmark for evaluating whether\u2026 See the full description on the dataset page: https://huggingface.co/datasets/WeihangSu/SRA-Bench.",
+  "downloads": 392,
+  "likes": 6,
+  "cardData": {
+    "license": "mit",
+    "language": [
+      "en"
+    ],
+    "task_categories": [
+      "question-answering",
+      "text-generation"
+    ],
+    "pretty_name": "SRA-Bench",
+    "size_categories": [
+      "10K<n<100K"
+    ],
+    "tags": [
+      "skill-retrieval",
+      "skill-retrieval-augmentation",
+      "llm-agents",
+      "agentic-ai",
+      "agent-skills",
+      "tool-use",
+      "retrieval-augmented-generation",
+      "rag",
+      "benchmark",
+      "reasoning",
+      "agent-memory",
+      "skill-learning",
+      "arxiv:2604.24594"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "corpus/corpus.json"
+    },
+    {
+      "rfilename": "instances/bigcodebench.json"
+    },
+    {
+      "rfilename": "instances/champ.json"
+    },
+    {
+      "rfilename": "instances/logicbench.json"
+    },
+    {
+      "rfilename": "instances/medcalcbench.json"
+    },
+    {
+      "rfilename": "instances/theoremqa.json"
+    },
+    {
+      "rfilename": "instances/toolqa.json"
+    }
+  ],
+  "createdAt": "2026-04-22T10:22:04.000Z",
+  "usedStorage": 232255987
+}

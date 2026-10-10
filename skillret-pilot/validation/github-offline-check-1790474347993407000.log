@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "native_metadata": true,
+  "native_read": true,
+  "model": "scripted; no OpenRouter request"
+}

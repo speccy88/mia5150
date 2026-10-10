@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/user/code/mia5150-local/fetch_data.py", line 8, in <module>
+    rows=[json.loads(s) for s in p.read_text().splitlines()];manifest[rel]={'rows':len(rows),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()};print(rel,manifest[rel],flush=True)
+          ~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 172 (char 171)

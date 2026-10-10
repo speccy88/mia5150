@@ -1,0 +1,16 @@
+{
+  "cfg": {
+    "model": "Qwen/Qwen3-8B",
+    "hidden_size": 4096,
+    "projection_dim": 512,
+    "width": 1536,
+    "depth": 3,
+    "activation": "gelu",
+    "layernorm": true,
+    "residual": false
+  },
+  "parameters": 18887680,
+  "projection_dim": 512,
+  "input_dim": 4096,
+  "scale": 100.0
+}

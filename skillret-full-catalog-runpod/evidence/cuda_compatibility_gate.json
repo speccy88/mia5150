@@ -1,0 +1,14 @@
+{
+  "pod_id": "6dc2lf0lnjwo6v",
+  "host_cuda_driver_reported": "12.8",
+  "first_environment": {
+    "vllm": "0.30.0",
+    "pytorch": "2.13.0",
+    "outcome": "CUDA initialization rejected driver as too old; no embeddings generated"
+  },
+  "recovery": {
+    "vllm": "0.10.2",
+    "pytorch_target": "2.8.0+cu128",
+    "outcome": "live CUDA BF16 check and 29 remote tests passed; CLM parity still pending"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "baseline_gate": "validated",
+  "baseline_full": {
+    "aggregate": {
+      "NDCG@5": 0.7905233264761343,
+      "Recall@5": 0.8243776563448695,
+      "Completeness@5": 0.7096994535519126,
+      "MAP@5": 0.741269479862376,
+      "Precision@5": 0.2592896174863388,
+      "NDCG@10": 0.8109902409310652,
+      "Recall@10": 0.8764420157862781,
+      "Completeness@10": 0.788023679417122,
+      "MAP@10": 0.7538647408467536,
+      "Precision@10": 0.139867941712204,
+      "NDCG@15": 0.8188483710687994,
+      "Recall@15": 0.9017911353976927,
+      "Completeness@15": 0.8271857923497268,
+      "MAP@15": 0.7572308931370861,
+      "Precision@15": 0.09623557984213722,
+      "MRR@5": 0.8533204310868245,
+      "MRR@10": 0.8563485738861423,
+      "Coverage@20": 0.9175015179113539,
+      "Coverage@50": 0.9538934426229508
+    },
+    "candidate_coverage": {
+      "20": {
+        "relevant_pairs_found": 6476,
+        "relevant_pairs_total": 7187,
+        "queries_with_any_relevant": 4265,
+        "queries_with_all_relevant": 3742,
+        "macro_recall": 0.9175015179113539,
+        "relevant_pair_micro": 0.9010713788785307,
+        "query_any_rate": 0.9710837887067395,
+        "query_all_rate": 0.8520036429872495,
+        "query_count": 4392
+      },
+      "50": {
+        "relevant_pairs_found": 6781,
+        "relevant_pairs_total": 7187,
+        "queries_with_any_relevant": 4328,
+        "queries_with_all_relevant": 4007,
+        "macro_recall": 0.9538934426229508,
+        "relevant_pair_micro": 0.9435091136774733,
+        "query_any_rate": 0.9854280510018215,
+        "query_all_rate": 0.9123406193078324,
+        "query_count": 4392
+      }
+    },
+    "query_count": 4392
+  },
+  "jev": null,
+  "rrf60": null,
+  "scope_note": "Full dense baseline and selected hosted scope are separate; null means unavailable."
+}

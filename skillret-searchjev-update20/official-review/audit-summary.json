@@ -1,0 +1,87 @@
+{
+  "audit_type": "Read-only static source review; no model load, GPU use, installs, or downloaded source execution",
+  "date": "2026-10-06",
+  "pins": {
+    "github_repo": "EvoScientist/SearchJev",
+    "github_revision": "054ea81d43071b93e2d75b7396a729a2598ac6ac",
+    "adapter_repo": "SearchJev/SearchJev-0.8B",
+    "adapter_revision": "03c5b638c8fdc570a1d4bf998cebac22c0b53384",
+    "adapter_subfolder": "adapter",
+    "base_repo": "Qwen/Qwen3.5-0.8B",
+    "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "base_expected_safetensors_sha256_from_parent_hf_metadata": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+    "adapter_expected_safetensors_sha256_from_parent_hf_metadata": "5e3d00afba46dba0715b3a1aed4c82f082678f2992f7912e0d473ccfa966b1f9",
+    "license": "Apache-2.0",
+    "base_safetensors_api_total_parameters": 873438784,
+    "base_safetensors_api_parameters_note": "Includes vision; AutoModelForCausalLM builds the text-only model. Not an observed loaded parameter count."
+  },
+  "prompt_contract": {
+    "source": "training_prompting.py",
+    "style": "auto resolves to chat when tokenizer has chat_template",
+    "release_language": "bilingual",
+    "chat_kwargs": {"tokenize": false, "add_generation_prompt": true, "enable_thinking": false},
+    "structure": "system instructions; user State delimited by <<<STATE / STATE>>>; typed Question; Options as bare label + period + option text; instruction to answer one label",
+    "ending": "generation prompt or plain Answer:\\n; ensure final newline",
+    "untrusted_text": "neutralize added/special token strings with zero-width-space after first character",
+    "truncation": "budget state after fixed prompt with eight-token slack; clip option text to 60 characters only if fixed prompt leaves no state room; raise if still too long",
+    "binary_slot_tokens": {"A": 32, "B": 33},
+    "binary_canonical_orientation": "Caller must define orientation. Paper binary examples use A=True and B=False. Do not confuse displayed permutation with canonical target order.",
+    "padding": "left; last attention-mask column must be all ones"
+  },
+  "readout_and_loss": {
+    "readout": "model(input_ids, attention_mask, logits_to_keep=1, use_cache=False); out.logits[:, -1, :].float(); gather label_token_ids",
+    "normalization": "softmax only across valid option slots, computed FP32",
+    "loss": "mean(w * CE(target, p)) + 0.5 * mean(w * sum((p-target)^2))",
+    "weights_note": "Weighted mean does not divide by sum of weights. For verified hard SkillRet gold, unit weight is the clear starting point.",
+    "training_temperature": 1.0,
+    "original_binary_noul_temperature": 0.8831156856852361,
+    "calibration_caveat": "Original-domain release temperature is not validation-fitted SkillRet calibration. Keep before/after evaluation settings identical."
+  },
+  "adapter": {
+    "type": "LORA",
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "release_peft_version": "0.21.0",
+    "saved_inference_mode": true,
+    "targets": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj", "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj"],
+    "continue_method": "PeftModel.from_pretrained(base_model, adapter_directory, is_trainable=True); official load_lora_for_training calls enable_input_require_grads when checkpointing is on",
+    "avoid": "get_peft_model fresh initialization and merge_and_unload for continued adapter training"
+  },
+  "installed_transformers_audit": {
+    "version": "5.19.0",
+    "root": "/home/user/code/embeddinggemma2-pilot/overlay/transformers",
+    "modeling_qwen3_5_sha256": "aac2a1bcca88829afc6dbdf83f97155ebf64d800ee9d703af3802a9aebcfcd18",
+    "hub_kernels_sha256": "512f13b0506d154fdbe7957f2889f146d6ccb715177a37e2e932651429edd361",
+    "fallback_gate": "Set USE_HUB_KERNELS=NO before imports. hub_kernels reads it once. Local fla and causal_conv1d imports are attempted independently of that flag; verify both absent before model import.",
+    "hub_disabled_assertion": "import transformers.integrations.hub_kernels as hk; assert hk._TRANSFORMERS_USE_HUB_KERNELS == 'NO' and hk._kernels_enabled is False",
+    "static_package_search": "No fla or causal_conv1d package directories found under overlay or mia5150-local/.venv/lib with bounded find; runtime find_spec remains required.",
+    "fallback_compute": "PyTorch F.conv1d, FP32 Q/K/V/beta/decay conversions, default chunk size 64, torch.linalg.solve_triangular, sequential loop across chunks",
+    "mixed_precision_caveat": "Outer autocast can still affect inner eligible matmuls despite explicit FP32 inputs; backward/finite behavior on SM75 must be measured.",
+    "text_model": "AutoModelForCausalLM maps qwen3_5 to Qwen3_5ForCausalLM, auto_factory extracts text_config, conversion mapping removes language_model prefix; class ignores visual and mtp unexpected keys",
+    "avoid_full_multimodal": "Qwen3_5ForConditionalGeneration instantiates the vision model, unnecessary for binary text relevance",
+    "load_memory": "from_pretrained initializes model on meta and uses mmap plus safetensors get_slice lazily in Linux; do not disable mmap or materialize full checkpoint in Python",
+    "device_map": "Single-GPU explicit map can avoid a full CPU-resident model. Loader warms CUDA allocator using approximately model tensor bytes, capped at total device memory minus 1.2 GiB; guard transient memory anyway."
+  },
+  "stock_pipeline_risks": [
+    "training_arguments wires bf16 but no fp16 argument; changing weight dtype alone is not an AMP/GradScaler training implementation",
+    "Saved run report_to is wandb; disable telemetry explicitly",
+    "Saved per-device train batch22, 2048 max tokens, 8 data workers and 16GB free-GPU selection gate are inappropriate here",
+    "Requirements include flash-linear-attention and tilelang; do not install or execute unknown optimized kernels for this pilot"
+  ],
+  "sources": [
+    "https://github.com/EvoScientist/SearchJev/tree/054ea81d43071b93e2d75b7396a729a2598ac6ac",
+    "https://huggingface.co/api/models/SearchJev/SearchJev-0.8B",
+    "https://huggingface.co/api/models/Qwen/Qwen3.5-0.8B",
+    "https://huggingface.co/SearchJev/SearchJev-0.8B/tree/03c5b638c8fdc570a1d4bf998cebac22c0b53384",
+    "https://arxiv.org/html/2610.05107v1"
+  ],
+  "remaining_empirical_checks": [
+    "Runtime package absence, pinned safetensors hashes, exact loaded class and adapter key compatibility",
+    "Two optimizer updates: finite forward/loss/gradients; adapter changes; frozen base unchanged; save/reload equivalence",
+    "Observed memory, swap, CPU, temperature and time under training guard",
+    "Matched baseline/adapted SkillRet quality with exposure-aware split labeling"
+  ]
+}

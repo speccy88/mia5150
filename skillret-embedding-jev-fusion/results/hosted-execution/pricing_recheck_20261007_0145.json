@@ -1,0 +1,17 @@
+{
+  "artifact_kind": "public_price_recheck_not_account_balance_or_paid_response",
+  "verified": true,
+  "checked_at_utc": "2026-10-07T01:45:29Z",
+  "source": "https://docs.typesafe.ai/models",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "input": "0.042",
+  "output": "0",
+  "model": "jev-1.13.0",
+  "aliases": [
+    "jev-latest",
+    "jev-preview"
+  ],
+  "actual_inference_response_seen": false,
+  "live_account_balance_queried": false
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "execution_status_not_authorization_or_provider_gate",
+  "experiment_id": "newskillret-embedding-jev-fusion",
+  "status": "blocked_unverified_account_credit",
+  "source": "Coordinating agent's actual post-baseline observations on 2026-10-07; baseline and run receipts are saved separately.",
+  "baseline": {
+    "status": "validated",
+    "run": "08-resume-query-cache",
+    "exit_code": 0,
+    "completed_document_vectors": 6006,
+    "completed_query_vectors": 4392,
+    "completed_query_rankings": 4392,
+    "qrels_pairs": 7187,
+    "gate_artifact": "baseline_gate.json",
+    "rankings_artifact": "baseline_skillret_06b.json",
+    "ndcg": {
+      "5": 0.7905233264761343,
+      "10": 0.8109902409310652,
+      "15": 0.8188483710687994
+    },
+    "max_absolute_ndcg_deviation": 0.0003233264761343113,
+    "ndcg_gate_tolerance": 0.005
+  },
+  "approved_budget": {
+    "currency": "CAD",
+    "total_all_in_cap": 10,
+    "status": "explicit_human_approval_relayed",
+    "evidence_document": "../BUDGET_STATUS.md",
+    "topups_authorized": false,
+    "runpod_authorized": false
+  },
+  "credential_presence_check": {
+    "performed_after_baseline_validation": true,
+    "environment_variable": "TYPESAFE_API_KEY",
+    "wsl_process_present": false,
+    "windows_process_present": false,
+    "credential_value_read_or_printed": false,
+    "saved_secret_fallback_searched": false
+  },
+  "hosted_execution": {
+    "status": "not_run",
+    "model_list_calls": 1,
+    "paid_calls": 0,
+    "incurred_api_cost": 0,
+    "incurred_api_cost_currency": "CAD",
+    "estimated_api_cost": null,
+    "actual_token_usage": null,
+    "actual_model_version": null,
+    "model_list_status_code": 200,
+    "model_list_receipt": "hosted-execution/model_list_receipt.json"
+  },
+  "remaining_requirements": {
+    "usable_environment_key": "authorized process-only handoff authenticated model listing successfully; no persistent variable",
+    "available_account_credit": "unverified; browser unavailable; user clarification pending",
+    "execution_pricing_fx_fees": "public USD 0.042/M input rate and CAD 1.4226/USD reference verified; actual account charges distinct from planning contingencies",
+    "live_model_pin": "unverified",
+    "public_pricing": "verified public rate receipt; not account-specific billing evidence",
+    "smoke_pilot_usage_and_full_projection": "not_run",
+    "account_pricing_and_refill": "unverified applicable rate, automatic-refill setting and threshold; no top-up/refill authorized"
+  },
+  "post_baseline_gpu_observation": {
+    "used_mib": 0,
+    "utilization_percent": 0,
+    "temperature_c": 50
+  },
+  "key_handoff": {
+    "authorized": true,
+    "performed": true,
+    "human_confirmation_message": "Sentinel_09a08ae0ef8c81919611d9343a8dac45",
+    "human_reply": "Yes you may",
+    "scope": "saved TypeSafe key to child-process TYPESAFE_API_KEY only",
+    "key_value_printed": false,
+    "persistent_environment_modified": false,
+    "process_environment_removed_on_exit": true,
+    "model_list_auth_succeeded": true
+  },
+  "historical_offline_preparation": {
+    "status": "partial_preparation_with_local_context_blocks",
+    "total_context_limit": 64000,
+    "state_plus_question_limit": 32000,
+    "token_estimator": "utf8_bytes_plus_overhead_conservative_estimate_not_native_jev_tokenizer",
+    "full_text_truncated": false,
+    "candidate_or_query_substitution": false,
+    "blocked_query_policy": "Any oversized candidate blocks the whole fixed top20 query.",
+    "interpretation": "Local conservative admission failures, not provider rejections; native tokenization might admit some blocked inputs.",
+    "smoke": {
+      "manifest_path": "jev-plan-smoke/preparation_manifest.json",
+      "plan_sha256": "0662a369214d0679f7906eeca9422b315b9cb53a6702afabbb096072e9436191",
+      "selected_queries": 10,
+      "prepared_queries": 6,
+      "blocked_queries": 4,
+      "context_failure_candidates": 5
+    },
+    "pilot": {
+      "manifest_path": "jev-plan-pilot/preparation_manifest.json",
+      "plan_sha256": "24bd5da86d85687e5694be7aa38c86c9c225feb95835e9975596f6c0230e34ab",
+      "selected_queries": 200,
+      "prepared_queries": 104,
+      "blocked_queries": 96,
+      "context_failure_candidates": 143
+    },
+    "remaining_requirement": "Provider-supported token evidence or another justified full-text handling approach preserving the fixed top20 pool is needed before complete prescribed smoke/pilot execution."
+  },
+  "offline_preparation": {
+    "status": "complete_frozen_with_audited_truncation",
+    "audit_artifact": "context_preparation_audit.json",
+    "scopes": {
+      "smoke": {
+        "selected": 10,
+        "prepared": 10,
+        "blocked": 0,
+        "pair_count": 200,
+        "truncated_pairs": 5,
+        "full_text_pairs": 195,
+        "queries_with_truncation": 4,
+        "unique_truncated_skills": 5,
+        "original_skill_md_utf8_bytes": 1647309,
+        "prepared_skill_md_utf8_bytes": 1607532,
+        "removed_skill_md_utf8_bytes": 39777,
+        "retained_skill_md_utf8_fraction": 0.9758533462756532,
+        "truncated_pair_retained_fraction_min": 0.4966706230260114,
+        "truncated_pair_retained_fraction_median": 0.8478664831383345,
+        "gold_relevant_truncated_pairs_analysis_only": 1,
+        "request_count": 40,
+        "max_total_estimate_with_output": 63971,
+        "max_pair_estimate_with_output": 32000,
+        "manifest_path": "jev-plan-smoke-context-v1/preparation_manifest.json",
+        "plan_sha256": "4202da9d6067127246f25bcc3586f0157d03949cdc176862b1243f00f80d690a"
+      },
+      "pilot": {
+        "selected": 200,
+        "prepared": 200,
+        "blocked": 0,
+        "pair_count": 4000,
+        "truncated_pairs": 143,
+        "full_text_pairs": 3857,
+        "queries_with_truncation": 96,
+        "unique_truncated_skills": 103,
+        "original_skill_md_utf8_bytes": 33276536,
+        "prepared_skill_md_utf8_bytes": 31852541,
+        "removed_skill_md_utf8_bytes": 1423995,
+        "retained_skill_md_utf8_fraction": 0.9572072345510964,
+        "truncated_pair_retained_fraction_min": 0.15780074307658684,
+        "truncated_pair_retained_fraction_median": 0.8020350291909925,
+        "gold_relevant_truncated_pairs_analysis_only": 11,
+        "request_count": 779,
+        "max_total_estimate_with_output": 63976,
+        "max_pair_estimate_with_output": 32000,
+        "manifest_path": "jev-plan-pilot-context-v1/preparation_manifest.json",
+        "plan_sha256": "6da7ec1a2062a4a1d6c38aae6c14ea268188fe05933fc8fd3b5f5bec9cb1f1b8"
+      }
+    },
+    "candidate_or_query_substitution": false,
+    "native_tokenizer_known": false
+  },
+  "offline_validation": {
+    "status": "passed",
+    "test_count": 113,
+    "elapsed_seconds": 33.15,
+    "evidence": "offline-tests-final-context-runner-v1.txt",
+    "evidence_sha256": "67fed5eb1f32319be7d14c7cbf49e25a04be7b808da2b77ad4c1d31e6b9eec0c",
+    "network_or_real_credentials_used_by_tests": false,
+    "source_sha256": {
+      "run_jev_rerank.py": "ed9c4abe34e2c57d16124009c0173fee4378ace956c588bacb49d1edcde69e12",
+      "hosted_jev_client.py": "c36568ce5b0bc12ba5061e22266c24e828fea0790af89c3c591bf4afe3f2e324",
+      "run_hosted_study.py": "2afcbe24a7598b40a993343084ec71a4e93062f481873a0dc9b8120b7432e757",
+      "evaluate.py": "4b03f247d440dac5866b479e98d1d30ed5b88a80cc2820d2d94017457e49768b",
+      "run_skillret_baseline.py": "92e5ec7efd7051cb8506acbea6cd2d596bf738b8a85b29a88c8279a3ecdff105",
+      "test_jev_prepare.py": "a3fd2a86e435cb2e13445c7bc17c0a9c4d316d10ceb597d97f0d1a3475b20e0e",
+      "test_hosted_jev_client.py": "208ff2d4f9a2b8004fcbf7291ea97bf4a92f1ab4be63c65e2d4cdbdcb3c06589",
+      "test_hosted_study.py": "3e8ff21760e1976e355ac6b1dc48ad84442923bd739b9ed66f39ba0418ab2ab6"
+    }
+  },
+  "read_only_runner_status_artifact": "hosted_runner_default_status.json"
+}

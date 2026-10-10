@@ -1,0 +1,83 @@
+{
+  "chosen_at_utc": "2026-10-02T10:25:05.686961+00:00",
+  "query_count": 48,
+  "query_ids": [
+    "q-01246",
+    "q-04462",
+    "q-04925",
+    "q-01084",
+    "q-01337",
+    "q-02634",
+    "q-02197",
+    "q-01341",
+    "q-03848",
+    "q-01966",
+    "q-01708",
+    "q-02523",
+    "q-03318",
+    "q-03789",
+    "q-01167",
+    "q-02698",
+    "q-04954",
+    "q-02809",
+    "q-03193",
+    "q-04405",
+    "q-03095",
+    "q-00921",
+    "q-03030",
+    "q-02225",
+    "q-03291",
+    "q-00302",
+    "q-01659",
+    "q-03729",
+    "q-03659",
+    "q-04010",
+    "q-04149",
+    "q-00118",
+    "q-03117",
+    "q-01062",
+    "q-02813",
+    "q-00719",
+    "q-02593",
+    "q-03263",
+    "q-03277",
+    "q-00604",
+    "q-02732",
+    "q-00492",
+    "q-04547",
+    "q-00311",
+    "q-01826",
+    "q-04295",
+    "q-03707",
+    "q-04908"
+  ],
+  "decision_basis": "Measured run duration and fixed pair counts only. No quality/accuracy outcome enters selection.",
+  "measured_quality32_new_pair_seconds": {
+    "julia": 518.0076528169993,
+    "gliner": 839.8023339890024,
+    "verdict": 1490.3433715389983,
+    "laya": 1460.779667019
+  },
+  "unique_pair_counts": {
+    "32": 1892,
+    "48": 2855,
+    "64": 3797
+  },
+  "forecasts": {
+    "48": {
+      "new_pairs_per_model": 963,
+      "mean_scoring_seconds": 2193.183141345419,
+      "conservative_seconds_including_overhead": 2751.8197696145025
+    },
+    "64": {
+      "new_pairs_per_model": 1905,
+      "mean_scoring_seconds": 4338.539859047791,
+      "conservative_seconds_including_overhead": 5326.247830857349
+    }
+  },
+  "safety_multiplier": 1.2,
+  "fixed_load_checkpoint_allowance_seconds": 120,
+  "preferred_finish_utc": "2026-10-02T11:37:00Z",
+  "hard_inference_stop_utc": "2026-10-02T11:52:00Z",
+  "reason": "At the expected timing completion around10:28, even mean64 runtime leaves less than the required15-minute buffer; conservative48 projection finishes around11:14."
+}

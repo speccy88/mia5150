@@ -1,0 +1,173 @@
+title = "Public benchmark safety scan"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "SHA-256 benchmark case identifiers, not authentication credentials"
+regexTarget = "match"
+regexes = [
+  '''(?i)(?:case_key|route_case_key|source_case_key|e_key)"\s*:\s*"[a-f0-9]{64}'''
+]
+
+[[rules.allowlists]]
+description = "JSON property names following the backend_api representation label"
+regexTarget = "match"
+regexes = [ '''backend_api",\s*"[^"\r\n]+"''' ]
+
+[[rules.allowlists]]
+description = "Reviewed JSON field names and documented public model or skill identifiers"
+regexTarget = "match"
+regexes = [
+  '''API access\.",\n  "aad12a71\-c7af\-4dab\-919f\-8b3414c98b75"''',
+  '''API architecture\.",\n  "ef7f35bc\-f7b8\-45a5\-993f\-034ce16f0a6c"''',
+  '''API behavior\.",\n  "0ed0ab9f\-bfb6\-4620\-a949\-f829c3b4d221"''',
+  '''API call efficiency\.",\n  "bb47fa3b\-d6a4\-4021\-abc1\-ed7a17f2ace5"''',
+  '''API calls",\n  "cffb9947\-ae7e\-4353\-9529\-6a822dffc413"''',
+  '''API capabilities\.",\n  "181563c1\-d149\-4e3d\-9e83\-0b33f75a1085"''',
+  '''API contracts\.",\n  "56c51038\-208d\-4dd7\-88df\-4246d6c42e95"''',
+  '''API costs\.",\n  "33e95e2c\-253d\-45eb\-ad9f\-557b4b8e4f73"''',
+  '''API design questions\.",\n  "f1bf43c4\-5e15\-48a0\-a442\-31cfb73d8365"''',
+  '''API design standards\.",\n  "51088a49\-d5b7\-4eb4\-8e1e\-ac4b35923817"''',
+  '''API development tasks\.",\n  "9052915d\-9c6f\-4295\-8fc5\-c689087ff2b7"''',
+  '''API development\.",\n  "dea138c4\-1707\-4081\-8a14\-ffc3b1e273f2"''',
+  '''API docs",\n  "a0063271\-844e\-4fea\-93fb\-cd573d56f388"''',
+  '''API docs\.",\n  "df520945\-e83c\-42d4\-a25d\-a9d344ceb89f"''',
+  '''API docs\.",\n  "ef6a515e\-0e3f\-46e3\-be02\-d93cc7d2cfb8"''',
+  '''API documentation\.",\n  "f7e0800a\-7fd4\-4f48\-bef7\-0b2388254221"''',
+  '''API endpoints\.",\n  "d237f4ac\-970b\-40fe\-a59a\-009f3dfe260e"''',
+  '''API for their use case\.",\n  "4997620e\-10bf\-499a\-b3ba\-bef64b5d1b9f"''',
+  '''API interaction\.",\n  "53a72666\-44c4\-4d4b\-bd08\-60b2cfb3372b"''',
+  '''API interactions\.",\n  "1e599f3f\-50c3\-47cb\-ae51\-d034816b6da5"''',
+  '''API interactions\.",\n  "f28aa9af\-fa0a\-497e\-b5cd\-c8645ba2bc2b"''',
+  '''API key required\.",\n  "6f9c7183\-edf8\-406f\-adda\-69d57ddaa990"''',
+  '''API key",\n  "9b1c51dd\-c28a\-4bf5\-be2a\-8809fa0bd150"''',
+  '''API layers\.",\n  "5322c053\-7a26\-4986\-8a59\-847d22a6a4b2"''',
+  '''API management\.",\n  "f933e791\-1568\-4c9e\-bf79\-73d2629737f9"''',
+  '''API operations\.",\n  "f3d63a1e\-b75d\-4b69\-aa5d\-e685dd60411e"''',
+  '''API patterns\.",\n  "aaaede50\-f5f5\-4cb0\-89c4\-7e0f2dc190cc"''',
+  '''API responses\.",\n  "200f849c\-d217\-4c52\-b8b2\-7a744cd76374"''',
+  '''API responses\.",\n  "3a523b0b\-11b4\-4695\-84f3\-d27ae4585dc7"''',
+  '''API responses\.",\n  "e62e43ee\-8f64\-4e47\-acd4\-2b92e78061f5"''',
+  '''API specifications\.",\n  "ab2b342e\-9177\-444f\-ae26\-fa19362013fb"''',
+  '''API testing, fuzz/property/integration/chaos ''',
+  '''API with best practices",\n  "af9c09d8\-9a2e\-4f0c\-b9f2\-06d42c165bad"''',
+  '''API",\n  "0a10f2f3\-2bc9\-4132\-93c0\-02f33d61627f"''',
+  '''API",\n  "57ee5191\-979d\-40cb\-b2bf\-8079114c3c36"''',
+  '''API",\n  "831bdaf4\-bf6a\-443b\-8bf5\-862d3f3e6785"''',
+  '''API",\n  "8bb171a1\-efdc\-4db8\-ae83\-93c6b4975bf0"''',
+  '''API",\n  "a42f9723\-4791\-4491\-bb60\-c64cf2bb2dba"''',
+  '''API",\n  "ee0f7f9c\-1d15\-4a40\-9b6a\-e37db61f343a"''',
+  '''API\-specific gotchas\.",\n  "e97532f4\-a558\-49cd\-989e\-0167da902c66"''',
+  '''API\.",\n  "1e03ec73\-cc6c\-4ed6\-b92d\-08d29cb78bf8"''',
+  '''API\.",\n  "316b24ee\-204e\-4257\-880b\-c21713704b2a"''',
+  '''API\.",\n  "3bf12d54\-b0cd\-405e\-9681\-e6d355c176ee"''',
+  '''API\.",\n  "6def1ded\-cd69\-4e9c\-9587\-bbc2c94ad1bf"''',
+  '''API\.",\n  "78593fb1\-8d06\-462b\-81e7\-7edb2e8cf56a"''',
+  '''API\.",\n  "7e25a71e\-337c\-4ca5\-8b9f\-b393981a2ac8"''',
+  '''API\.",\n  "8d9e664b\-7e2b\-48ca\-80f4\-269ef202a59e"''',
+  '''API\.",\n  "e656e2f9\-9abf\-408d\-b5b3\-88bb7eb8aef3"''',
+  '''APIs for development\.",\n  "6d15c326\-2765\-45f0\-bc5e\-80272ddd8721"''',
+  '''APIs for headless CMS\.",\n  "7d3c30a2\-7992\-44cc\-beac\-61b485403c16"''',
+  '''APIs for headless CMS\.",\n  "82d26c43\-7b9e\-4561\-aade\-c109b90aa62b"''',
+  '''APIs for headless CMS\.",\n  "97c63391\-9eae\-4dff\-8c64\-e8ce51c5cbfc"''',
+  '''APIs",\n  "132a1f4b\-a8bb\-4c1c\-a2b9\-19363877c5f2"''',
+  '''APIs",\n  "1b064502\-dedd\-42a4\-a20d\-9af0a3b87386"''',
+  '''APIs",\n  "3ccb679a\-0962\-4bc3\-9619\-a1a1ec8974fd"''',
+  '''APIs",\n  "d36081ee\-138a\-4700\-9967\-809e5708aadf"''',
+  '''APIs\.",\n  "007515de\-4b75\-415c\-a719\-6e4cc4c48c59"''',
+  '''APIs\.",\n  "331fcdd2\-8708\-48e1\-813c\-9bbea4092729"''',
+  '''APIs\.",\n  "550a7ffb\-9d38\-47cb\-b246\-987746aed606"''',
+  '''APIs\.",\n  "69296bf9\-6950\-4421\-afc0\-73be0d1a7447"''',
+  '''APIs\.",\n  "764f3866\-7159\-435a\-aa8a\-7f4256a8c5ea"''',
+  '''APIs\.",\n  "83f642ff\-3d29\-4502\-ac26\-66d91d7c59af"''',
+  '''APIs\.",\n  "8fd1f89b\-1d32\-43a0\-bd90\-a6e92809d149"''',
+  '''APIs\.",\n  "e003c090\-69f6\-4a86\-9b9c\-bcfc6d4d0042"''',
+  '''APIs\.",\n  "f16f9df7\-7e8c\-4f0d\-bb86\-6062d8dddee0"''',
+  '''APIs\.",\n  "f34590cb\-dd59\-4b2a\-9946\-8947ceeda4f7"''',
+  '''Apidog MCP\.",\n  "54b884f1\-c5f9\-4db4\-9535\-eca2cfa72877"''',
+  '''Auth schema generation\.",\n  "38734978\-bdde\-427b\-ad37\-2606f30f17de"''',
+  '''FastAPI\.",\n  "f430b011\-acf7\-4dc0\-a144\-a2dda7290b1a"''',
+  '''KAGI_API_KEY in the environment\.",\n  "f3060ace\-f9f7\-45a8\-8809\-b6ee0bb4ce63"''',
+  '''Keychain\.",\n  "577c1552\-a33c\-4174\-a7da\-c9683f914908"''',
+  '''OAuth setup\.",\n  "eb748828\-749d\-46ff\-9cd6\-1d5882df7730"''',
+  '''OPENROUTER_API_KEY unavailable\.",\n  "72f14722\-41d1\-4f9b\-8726\-f86f5fb83e32"''',
+  '''OpenAPI documentation\.",\n  "1b444225\-9a52\-49d5\-985c\-a8274d8a1764"''',
+  '''OpenAPI specs\.",\n  "7c8673ad\-d309\-4eec\-a393\-eda279355176"''',
+  '''TAVILY_API_KEY\.",\n  "b1daca29\-4d1c\-4e3d\-b2ed\-961cceef9397"''',
+  '''access EA titles",\n  "07522d55\-462c\-4bd3\-8983\-7b844c0a5c33"''',
+  '''access control\.",\n  "813e1f19\-cec5\-474e\-86b2\-a6bf9b2bba68"''',
+  '''access control\.",\n  "e7f4ef7e\-671b\-4ebd\-92fc\-bae31e362366"''',
+  '''access layers\.",\n  "606fec73\-0a44\-4db7\-9da6\-5652b1a13f09"''',
+  '''access",\n  "13809cca\-f0a5\-45f2\-8ceb\-168b10982d42"''',
+  '''access\.",\n  "5303bf7d\-0501\-46fd\-b063\-0a3a69c2934a"''',
+  '''access\.",\n  "6b85d335\-232c\-4db0\-8995\-370d4e23c1f2"''',
+  '''access\.",\n  "72962107\-555b\-47e8\-ae16\-b20bfe6f9516"''',
+  '''access\.",\n  "8de59f65\-4434\-44b8\-807c\-4631ce29de8e"''',
+  '''access\.",\n  "f16fd2b8\-e52a\-4d99\-aac2\-f5b10b28c60a"''',
+  '''accessibly\.",\n  "7c120b42\-f89f\-410b\-8708\-ba540227b1af"''',
+  '''accessing stored assets\.",\n  "d0bac767\-7792\-4d25\-93b8\-7953912a0dca"''',
+  '''api\-review\.",\n  "2053cef7\-8fbd\-4893\-b046\-18303e3427d0"''',
+  '''auth errors\.",\n  "24ea6455\-bc09\-4db8\-b1f7\-3a632842cd3c"''',
+  '''auth flow\.",\n  "5a115502\-0005\-40c0\-8279\-f1435d17a3af"''',
+  '''auth patterns\.",\n  "0c82a513\-58f5\-47c8\-9b75\-a80c37a1b27f"''',
+  '''auth\-required pages\.",\n  "e6f2d216\-a031\-4919\-8111\-5921fbd34dcd"''',
+  '''authentication required\.",\n  "a5d840d1\-2c97\-4e73\-ad7c\-b9941e5be8c0"''',
+  '''authentication systems\.",\n  "a4bed240\-f7f3\-4705\-8485\-d9129ea71902"''',
+  '''authentication", "tailwindcss\-v4"''',
+  '''authentication",\n  "1b12e925\-8f97\-4d43\-98d8\-a0f830b0e609"''',
+  '''authentication\.",\n  "3c26ea7b\-59e7\-4beb\-af57\-80d5753778ff"''',
+  '''authentication\.",\n  "cbfb3994\-399a\-4073\-856e\-ab44b97d70ad"''',
+  '''authentication\.",\n  "d41076e7\-4f66\-4f7c\-8e9e\-91844ccb4400"''',
+  '''authentication\.",\n  "ecd5bdde\-ff85\-45eb\-be53\-20c18a584848"''',
+  '''authenticity",\n  "05e91f62\-740e\-45f2\-b421\-efe8386b805d"''',
+  '''credential retrieval",\n  "dcf0e299\-4bc2\-4ba6\-be65\-42a727d69907"''',
+  '''curl \-X POST \\\n  https://api\.jina\.ai/v1/rerank \\\n  \-H "Content\-Type: application/json" \\\n  \-H "Authorization: Bearer JINA_API_KEY"''',
+  '''erc20\-token\.",\n  "f10cf111\-033c\-4da4\-ba2b\-c1a8d78fda12"''',
+  '''go\-api\-reviewer",\n  "e0481f76\-be96\-4ff4\-b396\-47c39514d10c"''',
+  '''googleapiclient",\n  "d0d90446\-8f5f\-491a\-b310\-9568b3b8396f"''',
+  '''key": "verdict\-151m\-onnx"''',
+  '''key\.",\n  "4c8c5945\-ce69\-4052\-90bc\-becd89057cac"''',
+  '''keynotes\.",\n  "4f83d78f\-51ed\-4ad7\-987f\-b4324829d62d"''',
+  '''keys\.",\n  "a712b403\-e2fa\-4fdd\-bec5\-c998f32021de"''',
+  '''keys\.",\n  "f70d3c29\-5205\-49fc\-821e\-970fe10c3439"''',
+  '''keystores",\n  "a7a157d2\-d72b\-4d25\-943c\-0a6cac34059d"''',
+  '''last\-token embedder with 1,024\-dimensional ''',
+  '''scraping\.",\n  "59300bb5\-ebbd\-4d6f\-9106\-61c45f0eff45"''',
+  '''secrets management\.",\n  "ea8afaf7\-7ae2\-4464\-962d\-e510fb07050a"''',
+  '''secrets protection",\n  "8befa3b6\-d406\-4eba\-947c\-735f03fa862d"''',
+  '''secrets with Doppler\.",\n  "21134466\-6da9\-4a7a\-8da0\-4c31c33d32bd"''',
+  '''secrets\.",\n  "61ee51a7\-4952\-42e4\-8965\-a17a80ac3416"''',
+  '''token budget management",\n  "2f9457dc\-4838\-4287\-98f4\-aac2d5fdd964"''',
+  '''token efficiency\.",\n  "4f363402\-1d83\-4d9d\-b6ef\-a8bbab5628d5"''',
+  '''token exceeded errors\.",\n  "604b39f6\-43fd\-4ea3\-950a\-32fa79e3fc98"''',
+  '''token exchange in Nais",\n  "8df4fb8d\-9644\-4773\-81be\-95e27b6b2a4c"''',
+  '''token position bugs\.",\n  "38e8a3e0\-e88a\-4db6\-a20f\-b44ca36933a6"''',
+  '''token standards\.",\n  "cb50f2d3\-2852\-4e1a\-9458\-cd7abbb82979"''',
+  '''token waste\.",\n  "a4a2862b\-b223\-4928\-89b2\-1bd60a5ef9dc"''',
+  '''token\-driven\.",\n  "019d0b05\-6fd5\-4ecb\-9848\-fbcd598fd164"''',
+  '''tokens in main session\.",\n  "ae2c35c2\-43b6\-4ac6\-a1a5\-c5bba78f5488"''',
+  '''tokens",\n  "f9f9590c\-b28a\-4cef\-abaa\-77ede792ce56"''',
+  '''tokens\.",\n  "02d2dcd0\-53b5\-4d67\-aff6\-6b49358b57f0"''',
+  '''tokens\.",\n  "453a5b6c\-e055\-4846\-940d\-c7343848ddc1"''',
+  '''tokens\.",\n  "5a8d2681\-1f00\-49d4\-b21e\-985f0a101fc4"''',
+  '''tokens\.",\n  "907ad8ed\-d00b\-4493\-aed9\-eaf02427a83f"''',
+  '''tokens\.",\n  "aa2f3d8a\-946a\-452f\-a51b\-fb90d5057c2b"''',
+  '''tokens\.",\n  "c68d3001\-743a\-4189\-9fcc\-93188b67f10c"''',
+]
+
+[[rules.allowlists]]
+description = "Scanner fragment boundaries inside ZIPs truncate validated SHA-256 case identifiers"
+condition = "AND"
+regexTarget = "match"
+paths = [ '''\.zip!.*\.jsonl$''' ]
+regexes = [ '''(?:case_key|route_case_key|source_case_key)"\s*:\s*"[a-f0-9]{16,64}''' ]
+
+[[rules]]
+id = "stripe-test-and-live-credential"
+description = "Reject credential-shaped Stripe test, live, and restricted keys, including documentation samples"
+regex = '''(?:sk|rk)_(?:test|live)_[A-Za-z0-9]{10,}'''
+keywords = ["sk_test_", "sk_live_", "rk_test_", "rk_live_"]

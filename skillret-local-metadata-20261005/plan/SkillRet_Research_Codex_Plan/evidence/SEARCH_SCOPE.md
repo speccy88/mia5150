@@ -1,0 +1,13 @@
+# Search scope and expansion protocol
+
+Cutoff: 2026-10-05. Scope: retrieval/discovery/routing of reusable procedural skills for LLM agents; skill-set selection, interference, structural retrieval, selective invocation and closely transferable tool/IR methods. Excluded as primary targets: employment skills, motor/robotic action retrieval, and generic RAG papers without a plausible experimental role.
+
+Starting seeds: the proposal's five citations (SkillRet, When Single-Agent..., Graph-of-Skills, Skill Shadowing, SRA), the official ThakiCloud sources, and the two agent-skill surveys. Followed backward/related references through these sources and an agent-skills research catalogue, verifying titles and identifiers on primary arXiv/ACL/publisher pages rather than relying on secondary summaries.
+
+Representative searches included: skill retrieval / skill routing / agent skill discovery; field-aware and multi-field skill retrieval; skill retrieval augmentation; skill retrieval reranking benchmark; completeness-oriented tool retrieval; skill retrieval synthetic data forgetting; diversity-aware skill routing; graph-of-skills and skill DAG; Jev skill retrieval / TypeSafe reranking; skill retrieval or routing with October 2026 / 2610; SPLADE v2; ColBERTv2; reciprocal rank fusion; pairwise ranking prompting; RankZephyr; late chunking; reasoning-enhanced skill retrieval and SkillReason. This is a search-method summary, not a fabricated exact export of every query or a PRISMA screening-count log.
+
+Every included record has a primary URL and an explicit inspection depth. Normalized paper titles may remove mathematical formatting (for example Top-k); alternate cached titles were not treated as separate papers. SkillFlow's unusual-looking 2504.06188 identifier was checked at the primary page, rather than silently replaced from intuition. GraphSkillAA and SkillRouter use the inspected primary titles rather than older shortened names.
+
+Before the implementation phase, extend the search using the primary papers' citation links and the current month. Add new candidates to the registry only after title/ID/version verification. Review full methods, availability of code/data, training contamination, licensing, exact benchmark release, metrics/cutoffs, candidate construction, and whether the experiment inserts gold candidates. Keep unavailable/unverified implementations as such; do not replace their method with an unrelated implementation under the same name.
+
+Priorities in the catalogue are project decisions, not an evidence-ranked global leaderboard. No claim is made that all registered methods can be reproduced within a semester or the original budget.

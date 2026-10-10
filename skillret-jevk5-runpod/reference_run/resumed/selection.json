@@ -1,0 +1,60 @@
+{
+  "status": "completed_requested_schedule",
+  "model": {
+    "id": "alibiserikbay/JevK5",
+    "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d"
+  },
+  "selected": {
+    "key": [
+      0.509765625,
+      0.7355840773809523
+    ],
+    "step": 100,
+    "adapter": "selected_adapter",
+    "metrics": {
+      "recall@1": 0.4036458333333333,
+      "hit@1": 0.6953125,
+      "completeness@1": 0.1953125,
+      "ndcg@1": 0.6953125,
+      "recall@5": 0.509765625,
+      "hit@5": 0.78515625,
+      "completeness@5": 0.2734375,
+      "ndcg@5": 0.5418860657908209,
+      "recall@10": 0.5149739583333334,
+      "hit@10": 0.79296875,
+      "completeness@10": 0.27734375,
+      "ndcg@10": 0.5440297460226128,
+      "mrr@15": 0.7355840773809523,
+      "candidate_recall@15": 0.5149739583333334,
+      "candidate_hit@15": 0.79296875,
+      "oracle_recall@5": 0.5149739583333334,
+      "none_correct": 0.8984375,
+      "decision_correct": 0.80859375,
+      "abstained": 0.22265625,
+      "false_abstention": 0.05859375
+    },
+    "source": "validation_selected_lora",
+    "predictions": "selected_validation_predictions.jsonl"
+  },
+  "config_sha256": "dcb13afa31213b6810083e0d805060153fa196219074ed7d07f2c5c7b053000c",
+  "data_sha256": "290592c8c67f3b0a1a4a1f328e074b338222b6aab860e111b4b8998e4d847694",
+  "dataset_revision": "a050ad233a504a43135bafe8cdf45574052b5729",
+  "retriever": {
+    "id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "max_tokens": 512,
+    "batch_size": 16,
+    "representation": "name: description",
+    "normalize_embeddings": true,
+    "implementation": "SentenceTransformer.encode dense only; no query instruction",
+    "precision": "FP32",
+    "device": "cuda"
+  },
+  "test_used_for_selection": false,
+  "adapter_files": {
+    "README.md": "ff6f0acd41ad22d5290d9558147de580db332bf885c100deb74d867396a0dc54",
+    "adapter_model.safetensors": "2d35306c3f18f99fe337d729a95f5af5cf6eb60cce1a4df376a74319d1bb6338",
+    "adapter_config.json": "2959bbc3ae503c7790b9a3acfd08626de8f5234993635516797bd85bc634b642"
+  },
+  "selection_rule": "validation Recall@5, then MRR@15; unadapted baseline may remain selected"
+}

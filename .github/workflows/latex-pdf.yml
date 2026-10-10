@@ -1,0 +1,105 @@
+name: Build LaTeX PDFs
+
+# Edit either document (or an included source), commit, and download the new PDF
+# from this workflow's run page. Documentation-only edits do not spend CI time.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.tex'
+      - '**/*.sty'
+      - '**/*.cls'
+      - '**/*.bib'
+      - 'figures/**'
+      - 'scripts/build_latex.sh'
+      - '.github/workflows/latex-pdf.yml'
+  pull_request:
+    paths:
+      - '**/*.tex'
+      - '**/*.sty'
+      - '**/*.cls'
+      - '**/*.bib'
+      - 'figures/**'
+      - 'scripts/build_latex.sh'
+      - '.github/workflows/latex-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: latex-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pdf:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Measure runner container storage before compilation
+        run: docker system df
+
+      - name: Compile the proposal and the original template
+        uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b # v4
+        with:
+          # Pin the TeX Live 2026 image as well as the action's source revision.
+          docker_image: ghcr.io/xu-cheng/texlive-alpine@sha256:11383430b9a3e48c0b79339f34d8092f942f897d91ab3749d4899d06731fea7f
+          root_file: |
+            project_proposal.tex
+            neurips_2026.tex
+          continue_on_error: true
+          latexmk_shell_escape: false
+          args: -pdf -no-shell-escape -file-line-error -halt-on-error -interaction=nonstopmode -outdir=build
+
+      # v7 can upload a single PDF directly, without wrapping it in a ZIP.
+      - name: Upload proposal PDF
+        id: proposal
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          path: build/project_proposal.pdf
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload original template PDF (including checklist)
+        id: template
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          path: build/neurips_2026.pdf
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Save diagnostic logs even when compilation fails
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: latex-build-logs
+          path: |
+            build/*.log
+            build/*.blg
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Add PDF links to the run summary
+        env:
+          PROPOSAL_URL: ${{ steps.proposal.outputs.artifact-url }}
+          TEMPLATE_URL: ${{ steps.template.outputs.artifact-url }}
+        run: |
+          {
+            echo '## Generated PDFs'
+            echo "- [Project proposal]($PROPOSAL_URL)"
+            echo "- [Original NeurIPS template and checklist]($TEMPLATE_URL)"
+            echo ''
+            echo 'Edit project_proposal.tex or references.bib and push to main to rebuild.'
+            echo 'PDFs are retained for 30 days. Run this workflow manually to regenerate them.'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Measure runner container storage after compilation
+        if: always()
+        run: docker system df

@@ -1,0 +1,108 @@
+{
+  "version": "scaling5150-clause-v1",
+  "query_only": true,
+  "rule": "First3 distinct clauses of at least20characters split on semicolon/newline or sentence punctuation; whole-query BM25 plus each clause BM25 top100, equal RRF60. No query rewriting, qrels or tuning.",
+  "timing": "Current simple implementation rebuilds the same lexical index for each clause; all rebuild/search time included, no optimized serving claim.",
+  "clauses": {
+    "q-03666": [
+      "Our team just finished implementing the \"bulk invoice generation\" feature in `~/repos/billing-service` (Python 3.12, Flask, SQLAlchemy, Celery).",
+      "The feature is marked as Done in our tracker.",
+      "Before we move on, could you review the full implementation across `src/invoicing/`, `src/tasks/`, and `src/api/routes/billing.py` and check it against our coding standards?"
+    ],
+    "q-00674": [
+      "We need to tackle PROJ-847 — it's the fine-tuning experiment for our speech emotion recognition model.",
+      "Pull the acceptance criteria from that ticket so we know which hyperparameter sweeps and eval benchmarks are required, then set up a fresh worktree off `main` so I can run this in isolation without conflicting with the ongoing PROJ-831 feature branch.",
+      "Once the worktree is ready, scaffold the full experiment infrastructure in it — generate all the torchtune fine-tuning configs and the inspect evaluation configs based on the experiment design doc at `docs/experiments/ser_v2_design.yaml`."
+    ],
+    "q-03533": [
+      "Build me a polished, interactive personal finance dashboard as a single-page Svelte app with TypeScript.",
+      "It should have a sidebar navigation with smooth transitions between views: an **Overview** page with animated donut charts (income vs.",
+      "expenses breakdown by category), a **Transactions** page with a virtualized scrollable table supporting inline editing, fuzzy search, and column sorting, and a **Budget** page where users can drag sliders to allocate monthly budget across categories and see a real-time stacked bar chart update."
+    ],
+    "q-04226": [
+      "We have a real-time bidding engine at `~/repos/rtb-engine` written in C that processes ~500k bid requests/second, and our p99 latency has crept from 8ms to 14ms over the last three sprints.",
+      "The hot path is in `src/auction/evaluator.c` — it scores candidate ads against user segments using a scoring matrix allocated per-request.",
+      "I suspect there are unnecessary heap allocations and maybe some buffer reuse issues in the `score_candidates()` function, but I also noticed that under heavy load we occasionally return winning bids with a price of 0.00 CPM, which obviously shouldn't happen and is costing us revenue."
+    ],
+    "q-01436": [
+      "We're preparing to go live with our \"MedVault\" healthcare records platform on a shared Kubernetes cluster and need a robust admission control layer as the last gate before anything hits production.",
+      "Here's what I need: Install Kyverno (latest stable) with high-availability mode across our three clusters (staging, preprod, prod), configure validating and mutating admission webhooks that enforce our baseline policies — every Pod must have resource limits, no containers running as root, only images from our approved registries (gcr.io/medvault-prod, ghcr.io/medvault), and all deployments must carry the `app.medvault.io/reviewed-by` annotation.",
+      "Also set up the Kyverno Policy Reporter with its UI so our compliance team can see violations in a dashboard, and configure background scan mode so existing resources that drift out of compliance get flagged continuously, not just at admission time."
+    ],
+    "q-03558": [
+      "Can you pull my recent X bookmarks and format them as a JSON feed that I can import into our team's Astro-based link aggregator site at `~/repos/curator-feed`?",
+      "I want each bookmark's tweet text, author handle, and URL as fields.",
+      "Also verify which account is active first — I have both my personal and company accounts configured and I need to make sure it's fetching from `@devrel_sarah`."
+    ],
+    "q-04106": [
+      "Can you do a comprehensive investigation into the current state of WebAssembly-based plugin systems for code editors?",
+      "I'm evaluating whether to build our extension runtime at `~/repos/nova-editor` on top of WASM instead of our current V8 isolate approach.",
+      "I need you to research across official WASM docs, the Extism and Wasmtime project pages, blog posts from the Zed/Lapce/Helix editor teams about their plugin architectures, and any relevant benchmarks or post-mortems people have published."
+    ],
+    "q-00172": [
+      "We're migrating our on-premise MySQL 5.7 analytics database (~800GB, 200+ tables with complex stored procedures and triggers) to PostgreSQL 15 on AWS RDS as part of a broader platform modernization.",
+      "I need help with the full migration plan — schema conversion strategy, handling MySQL-specific syntax like `GROUP_CONCAT` and `IFNULL`, data type mappings, a phased cutover approach with rollback procedures, and setting up logical replication for the transition period so we can run both in parallel.",
+      "On top of that, I want to build an MCP server in TypeScript that exposes tools for Claude to directly monitor and manage the migration process — things like a `check_replication_lag` tool that queries both databases and compares row counts per table, a `validate_schema_diff` tool that introspects both schemas and reports incompatibilities, a `run_migration_step` tool that executes individual Flyway migration scripts with dry-run support, and a `rollback_migration` tool that can revert to a specific checkpoint."
+    ],
+    "q-02209": [
+      "Our \"MediQueue\" patient intake system runs as a set of Docker containers orchestrated with Docker Compose — we have services for the API gateway, appointment scheduler, notification worker, and a PostgreSQL database.",
+      "After a recent deployment, the notification worker container keeps restarting in a crash loop.",
+      "I need you to help me pull the container logs to diagnose the issue, check resource usage across all running containers with `docker stats`, and if the fix requires rebuilding the image, walk me through updating the Compose file and redeploying."
+    ],
+    "q-03656": [
+      "We're rebuilding our e-commerce platform's search and recommendation engine at `~/repos/shop-discover` (Python 3.11, FastAPI, Elasticsearch 8, Redis) and before writing any code I need you to do an exhaustive landscape analysis.",
+      "Specifically, I want you to research the current state-of-the-art in hybrid search architectures that combine vector/semantic search with traditional keyword search for product discovery — covering the latest approaches from major players (Algolia, Typesense, Vespa, Meilisearch, etc.), recent academic papers on learned sparse retrieval and late-interaction models like ColBERT for e-commerce, emerging trends in LLM-powered query understanding and re-ranking, and UX research on how search result presentation (facets, visual merchandising, infinite scroll vs pagination, zero-result recovery) impacts conversion rates in online retail.",
+      "I also need competitive intelligence on how Shopify, Amazon, and Etsy have evolved their search stacks in 2024-2025 based on any public engineering blog posts or conference talks."
+    ],
+    "q-01962": [
+      "We're stress-testing our \"MeshRelay\" distributed sensor network platform and I need help with two things.",
+      "First, here's our NetGraph scenario file (`sensor_mesh.yaml`) that models our edge gateway topology — it defines 48 sensor nodes across 6 regional clusters connected via LoRaWAN and LTE backhaul links, with traffic demands simulating periodic telemetry bursts and a failure policy for random link drops.",
+      "The problem is that when I run the scenario, the validator throws `InvalidSelectorRef` errors on my `backhaul-group` selector and the link rules using glob patterns like `lora-*->gateway-*` aren't matching anything."
+    ],
+    "q-01329": [
+      "Our property management company just took over \"Harbourview Tower,\" a 22-story commercial office building in Toronto, and we have two separate issues I need help with.",
+      "First, we've received license agreement proposals from three competing telecom carriers — Bell, Rogers, and Telus — all wanting to install equipment in our main distribution frame room on the ground floor and run fiber through our risers and conduits.",
+      "Bell is proposing an exclusive license for the entire riser system, while Rogers and Telus want non-exclusive co-location arrangements."
+    ],
+    "q-03650": [
+      "We just shipped v2.3 of our Customer Feedback Analyzer tool and before we cut the release I need two things from you.",
+      "First, validate the Excel export file at `~/repos/feedback-analyzer/output/customer_feedback_report_v2.3.xlsx` — it should have 7 view sheets (Overview, Sentiment Analysis, Topic Clusters, Trend Data, Regional Breakdown, Priority Matrix, Raw Data), all 36 columns present with correct headers, proper conditional formatting on sentiment scores, frozen panes, auto-filters, print areas set, and no merged-cell rendering glitches.",
+      "Flag anything that's off — last release we had a bug where the Priority Matrix sheet was missing the \"Escalation Status\" and \"SLA Remaining Hours\" columns and the number formatting on currency fields in Regional Breakdown was showing raw floats instead of USD."
+    ],
+    "q-01330": [
+      "We're migrating our Next.js 14 app \"FieldScope\" (a geospatial crop monitoring dashboard) from Vercel to AWS Amplify for SSR hosting because our agronomics team needs tighter integration with other AWS services.",
+      "The app uses Supabase for auth and the PostGIS-backed database, and we have a separate API service on Render for running ML inference on satellite imagery.",
+      "Here's what I need help with: First, set up the Amplify hosting config with SSR support and configure the CI/CD pipeline so it triggers from our `main` branch on GitHub — we want `amplify.yml` build settings that run our existing test suite and, critically, the deploy must fail-closed if any integration test against the Supabase backend fails (no partial deploys, no \"warn and continue\" — if the health check against our Supabase PostGIS tables or the Render inference endpoint returns anything other than 200, the entire pipeline should halt and roll back)."
+    ],
+    "q-04599": [
+      "We have a custom LLVM-based runtime instrumentation pass at `~/repos/memtracer/lib/Instrumentation/` that injects shadow memory tracking callbacks into target binaries for detecting use-after-free bugs.",
+      "Right now it only instruments heap allocations, but we need to extend it to also track stack-allocated buffers by inserting `__memtracer_stack_enter` and `__memtracer_stack_exit` callbacks around function prologues/epilogues, and wire up the corresponding runtime library at `~/repos/memtracer/runtime/src/shadow_stack.cpp` to maintain a per-thread shadow stack map.",
+      "This is a kiro project so please walk me through the full red-green-refactor TDD cycle for each piece — start with failing tests for the LLVM pass that verify the instrumentation points are correctly inserted into the IR, then the runtime tests that validate the shadow stack tracking catches a known stack-use-after-return scenario, and only then move to the implementation."
+    ],
+    "q-01672": [
+      "Our legacy Rails 7 app \"ClinicBoard\" uses Turbo Frames and Turbo Streams extensively for a multi-step patient appointment scheduling flow — there's a Stimulus controller managing a date picker, a provider selection panel that updates via Turbo Frame, and a confirmation modal rendered as a Turbo Stream append.",
+      "We've never had any E2E test coverage and now need to retrofit Playwright tests across this entire flow.",
+      "Can you help me set up a Page Object structure for the scheduling pages, write tests that properly handle the Turbo Frame replacements and Stream DOM mutations (since there are no full page reloads to wait on), and figure out reliable selector strategies given that our views heavily use `turbo_frame_tag` helpers and partials?"
+    ],
+    "q-04856": [
+      "We have an n8n instance running at our company and I'm trying to build a workflow that monitors a Supabase table for new support tickets, enriches them with sentiment analysis via an HTTP request to our internal ML API, then routes high-priority negative-sentiment tickets to Slack and logs everything to Google Sheets.",
+      "Can you help me find the right nodes for each step using the n8n MCP tools?",
+      "I also want to check if there's an existing community template that does something similar before I build from scratch."
+    ],
+    "q-01955": [
+      "We're launching \"FreightPulse,\" a real-time freight tracking and bidding platform.",
+      "The stack is Go microservices for the core matching engine and rate calculator, a TypeScript/Node.js BFF layer for the shipper and carrier portals, and a React frontend with a live map dashboard showing truck positions via WebSocket.",
+      "Here's what we need done as a coordinated effort: (1) Design and implement a new \"Smart Bid\" UI flow where carriers see animated bid comparisons on a split-screen — left side shows their current bid against market rates in a D3.js chart, right side shows the shipment details with route visualization on Mapbox — this needs proper design specs, accessible color palette, and responsive layout down to tablet"
+    ],
+    "q-01186": [
+      "Hey, I'm starting a Daggerheart campaign this weekend and I want to pre-build a Level 1 character sheet template I can hand to my players during Session Zero.",
+      "The character concept is a Ribbet Bard from the Orderborne community — can you walk me through picking their two domain cards, setting up their initial Experiences (I want exactly three, each with a clear mechanical trigger and a narrative scope so they don't bleed into each other during play), and lay out the full character sheet in a structured format I can reuse as a blank template for other players?",
+      "Also, for the Experiences specifically, I want constraints so that no single Experience can apply to more than roughly a third of all ability checks — how should I word them to keep that boundary firm without making them too narrow to ever trigger?"
+    ],
+    "q-04985": [
+      "We're building an AI-powered game recommendation engine at `~/repos/game-reco/` using Next.js 14, TypeScript, and Python microservices.",
+      "The platform has two tiers: free users get basic recommendations, and \"Pro\" subscribers get access to our deep RL-powered recommendation agent that uses Double DQN with prioritized experience replay to learn optimal game suggestion policies from user interaction sequences (state = user profile + browsing history, discrete actions = recommend from N game categories).",
+      "We want to add a Dueling DQN variant as well and let Pro users toggle between the two architectures in their settings."
+    ]
+  }
+}

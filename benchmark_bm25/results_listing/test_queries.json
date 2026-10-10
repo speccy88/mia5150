@@ -1,0 +1,72 @@
+[
+  {
+    "query": "I need to deploy a infrastructure using skriptoteket devops",
+    "gold_skill": "skriptoteket-devops",
+    "gold_id": "d198610e-4354-4e8d-aa56-b0f9b2f234fc",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "building owner is negotiating with telecom providers, reviewing carrier access rights, structuring equipment room licenses, analyzing riser and conduit rights, evaluating CRTC (Canadian Radio-television and Telecommunications Commission) compliance requirements, negotiating license fees and revenue sharing, or managing multiple competing carriers in one building",
+    "gold_skill": "telecom-licensing-expert",
+    "gold_id": "8531b70c-11c7-44f1-a371-0a007a19fc12",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",
+    "gold_skill": "web3-testing",
+    "gold_id": "e1d9095e-04f6-4068-8d86-488cc7ff96f6",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing async tests, or parameterizing tests.",
+    "gold_skill": "swift-testing",
+    "gold_id": "10ca6c8b-c59e-471e-b940-3ccb396d3c10",
+    "gold_domain": "mobile",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me document agent_skill",
+    "gold_skill": "advanced-features-2025",
+    "gold_id": "a1b528bd-17b5-4c27-95ff-8fa2a4469ba0",
+    "gold_domain": "ai_agents",
+    "gold_major": "AI Agents"
+  },
+  {
+    "query": "adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building conversation dashboards",
+    "gold_skill": "chatbot-analytics",
+    "gold_id": "a5e75fa1-be3d-42fc-b278-a37de3c7c26e",
+    "gold_domain": "ai_agents",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "I need to implement a documentation using ring:writing plans",
+    "gold_skill": "ring:writing-plans",
+    "gold_id": "037c03db-e42a-4c50-a1bd-953df515d6b9",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to configure a pipeline",
+    "gold_skill": "ci-cd",
+    "gold_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "asked to run tests, check code quality, or verify test coverage.",
+    "gold_skill": "run-tests",
+    "gold_id": "9f488149-ebf7-4118-9d61-1acc44e9cb92",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to implement a ui_component",
+    "gold_skill": "svelte-flow",
+    "gold_id": "22d0b096-b677-4f9a-9b18-5c469f693e75",
+    "gold_domain": "web_frontend",
+    "gold_major": "Software Engineering"
+  }
+]

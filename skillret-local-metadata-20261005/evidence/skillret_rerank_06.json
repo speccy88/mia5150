@@ -1,0 +1,107 @@
+{
+  "_id": "6ab235a111f32974121ff951",
+  "id": "ThakiCloud/SKILLRET-Reranker-0.6B",
+  "private": false,
+  "pipeline_tag": "text-ranking",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "qwen3",
+    "text-generation",
+    "reranker",
+    "skill-retrieval",
+    "llm-agents",
+    "cross-encoder",
+    "text-ranking",
+    "en",
+    "dataset:ThakiCloud/SKILLRET",
+    "arxiv:2605.05726",
+    "base_model:Qwen/Qwen3-Reranker-0.6B",
+    "base_model:finetune:Qwen/Qwen3-Reranker-0.6B",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 165,
+  "likes": 1,
+  "modelId": "ThakiCloud/SKILLRET-Reranker-0.6B",
+  "author": "ThakiCloud",
+  "sha": "ce09c883af78affc72a85014e040f3d28a5b1711",
+  "lastModified": "2026-09-24T03:13:18.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "model_type": "qwen3",
+    "tokenizer_config": {
+      "bos_token": null,
+      "eos_token": "<|im_end|>",
+      "pad_token": "<|endoftext|>",
+      "unk_token": null
+    },
+    "chat_template_jinja": "{%- set instruction = messages | selectattr(\"role\", \"eq\", \"system\") | map(attribute=\"content\") | first | default(\"Given a web search query, retrieve relevant passages that answer the query\") -%}\n{%- set query_text = messages | selectattr(\"role\", \"eq\", \"query\") | map(attribute=\"content\") | first -%}\n{%- set document_text = messages | selectattr(\"role\", \"eq\", \"document\") | map(attribute=\"content\") | first -%}\n<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n<Instruct>: {{ instruction }}\n<Query>: {{ query_text }}\n<Document>: {{ document_text }}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n"
+  },
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "license": "apache-2.0",
+    "library_name": "transformers",
+    "tags": [
+      "reranker",
+      "skill-retrieval",
+      "llm-agents",
+      "cross-encoder"
+    ],
+    "base_model": "Qwen/Qwen3-Reranker-0.6B",
+    "pipeline_tag": "text-ranking",
+    "base_model_relation": "finetune",
+    "datasets": [
+      "ThakiCloud/SKILLRET"
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForCausalLM",
+    "pipeline_tag": "text-generation",
+    "processor": "AutoTokenizer"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "chat_template.jinja"
+    },
+    {
+      "rfilename": "config.json"
+    },
+    {
+      "rfilename": "generation_config.json"
+    },
+    {
+      "rfilename": "model.safetensors"
+    },
+    {
+      "rfilename": "tokenizer.json"
+    },
+    {
+      "rfilename": "tokenizer_config.json"
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-09-22T08:00:33.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 595776512
+    },
+    "total": 595776512
+  },
+  "usedStorage": 1203010930
+}

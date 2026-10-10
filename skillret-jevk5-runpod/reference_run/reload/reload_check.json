@@ -1,0 +1,6 @@
+{
+  "max_abs_logit_difference": 0.0,
+  "full_ranking_agreement": 1.0,
+  "passed_tolerance": true,
+  "note": "Any failure needs inspection before the official test; near-ties can move in BF16."
+}

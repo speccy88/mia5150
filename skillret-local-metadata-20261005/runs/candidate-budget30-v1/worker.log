@@ -1,0 +1,219 @@
+{
+  "query_count": 4392,
+  "positive_pairs": 7187,
+  "macro_recall30": {
+    "dense30": 0.8733302975106253,
+    "dense20_lexical10": 0.8749620522161506
+  },
+  "pair_coverage": {
+    "dense30_hits": 6114,
+    "hybrid_hits": 6167,
+    "dense30_recall": 0.8507026575761792,
+    "hybrid_recall": 0.8580770836232086,
+    "gained_pairs": 183,
+    "lost_pairs": 130,
+    "net_pairs": 53
+  },
+  "completeness30": {
+    "dense30": 0.7793715846994536,
+    "dense20_lexical10": 0.7873406193078324
+  },
+  "oracle_ndcg10": {
+    "dense30": 0.892344771934358,
+    "dense20_lexical10": 0.892717764221518
+  },
+  "wins_ties_losses": [
+    175,
+    4094,
+    123
+  ],
+  "protocol_sha256": "c601df43beee7295cd6518c285f93ca4a41f1041f26292d823758799c9ae87b8",
+  "paid_calls": 0,
+  "caveat": "Exactly30 candidates for both methods, full4392 fixed denominator. Oracle uses labels and is not actual reranker quality. Domains overlap in query membership and are diagnostic gold metadata. Historically exposed public data; no tuning."
+}
+{
+  "worst_regressions": [
+    {
+      "id": "q-00285",
+      "gold_count": 1,
+      "dense_hits": 1,
+      "hybrid_hits": 0,
+      "dense_recall30": 1.0,
+      "hybrid_recall30": 0.0,
+      "delta_recall30": -1.0,
+      "gained_ids": [],
+      "lost_ids": [
+        "31dbf77e-b0fc-4d7b-98c4-e6e7b14a0146"
+      ],
+      "domains": [
+        "data_ml"
+      ]
+    },
+    {
+      "id": "q-00923",
+      "gold_count": 1,
+      "dense_hits": 1,
+      "hybrid_hits": 0,
+      "dense_recall30": 1.0,
+      "hybrid_recall30": 0.0,
+      "delta_recall30": -1.0,
+      "gained_ids": [],
+      "lost_ids": [
+        "31dbf77e-b0fc-4d7b-98c4-e6e7b14a0146"
+      ],
+      "domains": [
+        "data_ml"
+      ]
+    },
+    {
+      "id": "q-00925",
+      "gold_count": 1,
+      "dense_hits": 1,
+      "hybrid_hits": 0,
+      "dense_recall30": 1.0,
+      "hybrid_recall30": 0.0,
+      "delta_recall30": -1.0,
+      "gained_ids": [],
+      "lost_ids": [
+        "d99520ab-db1a-42d8-b83e-4b029fe66e0f"
+      ],
+      "domains": [
+        "web_frontend"
+      ]
+    }
+  ],
+  "domains_n_ge100": [
+    {
+      "domain": "business_ops",
+      "pairs": 553,
+      "dense_hits": 507,
+      "hybrid_hits": 503,
+      "gained": 5,
+      "lost": 9,
+      "query_count": 538,
+      "dense_pair_recall": 0.9168173598553345,
+      "hybrid_pair_recall": 0.9095840867992767
+    },
+    {
+      "domain": "mobile",
+      "pairs": 176,
+      "dense_hits": 172,
+      "hybrid_hits": 171,
+      "gained": 0,
+      "lost": 1,
+      "query_count": 170,
+      "dense_pair_recall": 0.9772727272727273,
+      "hybrid_pair_recall": 0.9715909090909091
+    },
+    {
+      "domain": "backend_api",
+      "pairs": 745,
+      "dense_hits": 675,
+      "hybrid_hits": 672,
+      "gained": 9,
+      "lost": 12,
+      "query_count": 711,
+      "dense_pair_recall": 0.9060402684563759,
+      "hybrid_pair_recall": 0.9020134228187919
+    },
+    {
+      "domain": "security",
+      "pairs": 285,
+      "dense_hits": 249,
+      "hybrid_hits": 248,
+      "gained": 4,
+      "lost": 5,
+      "query_count": 278,
+      "dense_pair_recall": 0.8736842105263158,
+      "hybrid_pair_recall": 0.8701754385964913
+    },
+    {
+      "domain": "data_ml",
+      "pairs": 413,
+      "dense_hits": 397,
+      "hybrid_hits": 396,
+      "gained": 3,
+      "lost": 4,
+      "query_count": 405,
+      "dense_pair_recall": 0.9612590799031477,
+      "hybrid_pair_recall": 0.9588377723970944
+    },
+    {
+      "domain": "developer_tools",
+      "pairs": 1320,
+      "dense_hits": 1021,
+      "hybrid_hits": 1020,
+      "gained": 39,
+      "lost": 40,
+      "query_count": 1199,
+      "dense_pair_recall": 0.7734848484848484,
+      "hybrid_pair_recall": 0.7727272727272727
+    },
+    {
+      "domain": "devops_infra",
+      "pairs": 898,
+      "dense_hits": 819,
+      "hybrid_hits": 830,
+      "gained": 22,
+      "lost": 11,
+      "query_count": 846,
+      "dense_pair_recall": 0.9120267260579065,
+      "hybrid_pair_recall": 0.9242761692650334
+    },
+    {
+      "domain": "web_frontend",
+      "pairs": 645,
+      "dense_hits": 575,
+      "hybrid_hits": 583,
+      "gained": 15,
+      "lost": 7,
+      "query_count": 619,
+      "dense_pair_recall": 0.8914728682170543,
+      "hybrid_pair_recall": 0.9038759689922481
+    },
+    {
+      "domain": "product_design",
+      "pairs": 203,
+      "dense_hits": 184,
+      "hybrid_hits": 187,
+      "gained": 7,
+      "lost": 4,
+      "query_count": 202,
+      "dense_pair_recall": 0.9064039408866995,
+      "hybrid_pair_recall": 0.9211822660098522
+    },
+    {
+      "domain": "testing_qa",
+      "pairs": 338,
+      "dense_hits": 278,
+      "hybrid_hits": 284,
+      "gained": 13,
+      "lost": 7,
+      "query_count": 332,
+      "dense_pair_recall": 0.8224852071005917,
+      "hybrid_pair_recall": 0.8402366863905325
+    },
+    {
+      "domain": "ai_agents",
+      "pairs": 1358,
+      "dense_hits": 998,
+      "hybrid_hits": 1029,
+      "gained": 61,
+      "lost": 30,
+      "query_count": 1255,
+      "dense_pair_recall": 0.7349042709867453,
+      "hybrid_pair_recall": 0.7577319587628866
+    },
+    {
+      "domain": "database",
+      "pairs": 161,
+      "dense_hits": 148,
+      "hybrid_hits": 152,
+      "gained": 4,
+      "lost": 0,
+      "query_count": 158,
+      "dense_pair_recall": 0.9192546583850931,
+      "hybrid_pair_recall": 0.9440993788819876
+    }
+  ]
+}

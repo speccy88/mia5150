@@ -1,0 +1,8 @@
+[
+  "../.venv/bin/python",
+  "run_skillret_baseline.py",
+  "--stage",
+  "full",
+  "--forward-cooldown",
+  "0.05"
+]

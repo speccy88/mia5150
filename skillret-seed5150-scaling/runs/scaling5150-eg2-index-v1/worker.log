@@ -1,0 +1,64 @@
+Both `device` and `model_kwargs['device_map']` were provided. `device_map` controls device placement, so the `device` argument is ignored.
+Loading weights:   0%|          | 0/413 [00:00<?, ?it/s]Loading weights:   0%|          | 1/413 [00:00<06:00,  1.14it/s]Loading weights: 100%|██████████| 413/413 [00:00<00:00, 462.92it/s]
+eg2_text270m_fp32 0 6006
+eg2_text270m_fp32 100 6006
+eg2_text270m_fp32 200 6006
+eg2_text270m_fp32 300 6006
+eg2_text270m_fp32 400 6006
+eg2_text270m_fp32 500 6006
+eg2_text270m_fp32 600 6006
+eg2_text270m_fp32 700 6006
+eg2_text270m_fp32 800 6006
+eg2_text270m_fp32 900 6006
+eg2_text270m_fp32 1000 6006
+eg2_text270m_fp32 1100 6006
+eg2_text270m_fp32 1200 6006
+eg2_text270m_fp32 1300 6006
+eg2_text270m_fp32 1400 6006
+eg2_text270m_fp32 1500 6006
+eg2_text270m_fp32 1600 6006
+eg2_text270m_fp32 1700 6006
+eg2_text270m_fp32 1800 6006
+eg2_text270m_fp32 1900 6006
+eg2_text270m_fp32 2000 6006
+eg2_text270m_fp32 2100 6006
+eg2_text270m_fp32 2200 6006
+eg2_text270m_fp32 2300 6006
+eg2_text270m_fp32 2400 6006
+eg2_text270m_fp32 2500 6006
+eg2_text270m_fp32 2600 6006
+eg2_text270m_fp32 2700 6006
+eg2_text270m_fp32 2800 6006
+eg2_text270m_fp32 2900 6006
+eg2_text270m_fp32 3000 6006
+eg2_text270m_fp32 3100 6006
+eg2_text270m_fp32 3200 6006
+eg2_text270m_fp32 3300 6006
+eg2_text270m_fp32 3400 6006
+eg2_text270m_fp32 3500 6006
+eg2_text270m_fp32 3600 6006
+eg2_text270m_fp32 3700 6006
+eg2_text270m_fp32 3800 6006
+eg2_text270m_fp32 3900 6006
+eg2_text270m_fp32 4000 6006
+eg2_text270m_fp32 4100 6006
+eg2_text270m_fp32 4200 6006
+eg2_text270m_fp32 4300 6006
+eg2_text270m_fp32 4400 6006
+eg2_text270m_fp32 4500 6006
+eg2_text270m_fp32 4600 6006
+eg2_text270m_fp32 4700 6006
+eg2_text270m_fp32 4800 6006
+eg2_text270m_fp32 4900 6006
+eg2_text270m_fp32 5000 6006
+eg2_text270m_fp32 5100 6006
+eg2_text270m_fp32 5200 6006
+eg2_text270m_fp32 5300 6006
+eg2_text270m_fp32 5400 6006
+eg2_text270m_fp32 5500 6006
+eg2_text270m_fp32 5600 6006
+eg2_text270m_fp32 5700 6006
+eg2_text270m_fp32 5800 6006
+eg2_text270m_fp32 5900 6006
+eg2_text270m_fp32 6000 6006
+{"role": "eg2_text270m_fp32", "view_sha256": "bbfeb6430462b4e0edafd6a54b17fa362181738f6319285b51db4ec145a5d8b4", "startup_seconds": 14.513641105999994, "document_forward_seconds": 526.8288495230021, "query_seconds": [null, null, 0.09923422200006371, 0.09236541300003864, 0.0869073069999331, 0.06781368300005397, null, 0.07319108999990931, 0.07292959000005794, 0.07370719099992584, 0.09605281799997556, 0.07507569200004127, 0.12476065299995298, 0.15751369300005535, 0.0958783170000288, 0.0708957870000404, 0.07058452299997953, 0.102810704000035, null, 0.11560950400007641], "query_raw_tokens": [null, null, 255, 241, 269, 101, null, 267, 186, 253, 346, 356, 344, 368, 232, 208, 223, 366, null, 397], "reused_document_vectors": 299, "reused_query_vectors": 4, "cache_timing_note": "Reused vectors have no fresh forward latency; null query timings are not zero-cost inference. Full indexing cost is incomplete when prior vectors reused.", "new_forward_calls": 5723, "dtype": "FP32", "attention": "eager", "batch": 1, "max_tokens": 512, "parameters": 271002624, "max_allocated_vram_bytes": 1151911936, "max_reserved_vram_bytes": 1199570944, "truncated_new_inputs": 0, "model_manifest_sha256": "b22fc9c2a19adb67a328005878d5fb3d2f835b8546d847c164b182074675ac03"}

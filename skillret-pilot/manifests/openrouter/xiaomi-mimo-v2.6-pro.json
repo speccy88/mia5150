@@ -1,0 +1,25 @@
+{
+  "model": "xiaomi/mimo-v2.6-pro",
+  "provider_tag": "deepinfra/fp8",
+  "provider_name": "DeepInfra",
+  "context_length": 1048576,
+  "max_prompt_tokens": 1048576,
+  "max_prompt_tokens_source": "combined_context_only_no_separate_limit_advertised",
+  "max_completion_tokens": 943718,
+  "pricing": {
+    "prompt": "0.000000435",
+    "completion": "0.00000087",
+    "input_cache_read": "0.0000000036",
+    "discount": 0
+  },
+  "temperature": 0,
+  "tool_choice": "auto",
+  "reasoning": {
+    "effort": "none"
+  },
+  "reasoning_status": "disable requested; actual reasoning tokens must be checked",
+  "snapshot": "evidence/model_metadata/1790472551003725000.json",
+  "adapter": "langchain_openrouter.ChatOpenRouter",
+  "fallbacks": false,
+  "reserve_pricing_policy": "All input reserved at prompt PLUS advertised cache-write price; discounted reads covered. Other positive surcharges rejected."
+}

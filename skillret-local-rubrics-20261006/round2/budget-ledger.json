@@ -1,0 +1,44 @@
+{
+  "cap_usd": "4.00",
+  "committed_usd": "0.97",
+  "external_spend_usd": "1",
+  "runs": {
+    "jev-typed-12-v1": {
+      "reserved_usd": "0.10",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "0a2c3d1aa6de20d8b350ef68afacdac190eb986a09c989f77a605ff408b3036e"
+    },
+    "openrouter-listwise-12-v1": {
+      "reserved_usd": "0.50",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "0a2c3d1aa6de20d8b350ef68afacdac190eb986a09c989f77a605ff408b3036e"
+    },
+    "selective-jev-8-v1": {
+      "reserved_usd": "0.05",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "429b77b7c086b7bfc9166fe5be0855d00950d68aad421494f10bce3784abeef6"
+    },
+    "fusion-confirmation-8-v1": {
+      "reserved_usd": "0.10",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "e8133175358110f7e96a8cbd52dc6c83378f844d6e83c5f1248641b206e1c261"
+    },
+    "order-sensitivity-2-v1": {
+      "reserved_usd": "0.02",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "2a38f670f91c94ab1fbc29d392b4b400561a87ccd5bf4d55934eacb2ddb30e34"
+    },
+    "varied-screen-v3": {
+      "reserved_usd": "0.10",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "d832c146580a51e466d8e887c6a9901979bbefce844c553f18205189822c407e"
+    },
+    "hybrid-pool-8-v1": {
+      "reserved_usd": "0.10",
+      "status": "finished_or_stopped",
+      "protocol_sha256": "c9124ffa3b926df1c46a025be8d13d6244837050ed9ce763960ffdbc6ab32b6e"
+    }
+  },
+  "paid_tests_paused": true,
+  "pause_reason": "Authorized fixed hybrid-pool screen completed/stopped; other paid work remains paused."
+}

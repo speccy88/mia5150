@@ -1,0 +1,102 @@
+[
+  {
+    "sha256": "8cee81f94bb0f2890e60451bfcbf1ce9a289dfa7928e2d4e77e04abcfd8405e4",
+    "path": "LOCAL_RUBRIC_RESULTS.md",
+    "bytes": 4177
+  },
+  {
+    "sha256": "6722aed53c58ab46d1491a42ca632a1d8e0ee953e637a0a579e2f836ba9e3ab7",
+    "path": "local_rubric_screen.py",
+    "bytes": 6853
+  },
+  {
+    "sha256": "f1c2ed7bf14868f9f2651faceae5e3905948b884e7a314e5164069b64380a2b5",
+    "path": "LOCAL_RUBRIC_SUMMARY.json",
+    "bytes": 15334
+  },
+  {
+    "sha256": "8b222de8cb99609c85a153730d68b2cc3942a509240b703e61052ea50702ad12",
+    "path": "local-qwen-headroom.json",
+    "bytes": 668
+  },
+  {
+    "sha256": "449de432f552375e9a03b869fb980e82b53bcb1efbd078887c2a2a64d25f3527",
+    "path": "local-rubric-plan.json",
+    "bytes": 107103
+  },
+  {
+    "sha256": "9deaa0ae9f631a70728b0cd20a893ae9db3f277feb90910388eb218cb05fa2f6",
+    "path": "report_local_rubrics.py",
+    "bytes": 6607
+  },
+  {
+    "sha256": "022824089b4685c66d6113dfcddf296ca0dd1ba44cf5f6cb65045a362b882e45",
+    "path": "test_local_rubric_screen.py",
+    "bytes": 839
+  },
+  {
+    "sha256": "b0001bb73ea30b90731e2c4e14412d5c8e662c6e2c116fafa6982d285556b260",
+    "path": "guard-jevk5\\command.json",
+    "bytes": 73
+  },
+  {
+    "sha256": "c365161d39236fe0f1d32937fbc549796b8487d8faf65ed3879b96897c78ea5d",
+    "path": "guard-jevk5\\exit.json",
+    "bytes": 17
+  },
+  {
+    "sha256": "519bb549e7e042f524f5b8598fe54ffe31f1a10d40c59b173e0f10382de79a6d",
+    "path": "guard-jevk5\\local-rubric-jevk5-server.json",
+    "bytes": 616
+  },
+  {
+    "sha256": "26b1134e1a718ed50e6aec45ee23040d18e5dc11d52ba8aeca6498440880954c",
+    "path": "guard-jevk5\\telemetry.jsonl",
+    "bytes": 19777
+  },
+  {
+    "sha256": "a8876e0c234df1e76416426534e37d59d33b090548b67682a533405c3a889641",
+    "path": "guard-jevk5\\worker.log",
+    "bytes": 132
+  },
+  {
+    "sha256": "b5f86552eca2580447e188b8bae4431c9fbfc21af5d72b9d51964ff56ebc1063",
+    "path": "guard-plumb\\command.json",
+    "bytes": 73
+  },
+  {
+    "sha256": "c71f4235f4a7b52f9b949c291ee2581361cfe03940e1aa329acad96795f16230",
+    "path": "guard-plumb\\guard-stop.json",
+    "bytes": 89
+  },
+  {
+    "sha256": "eb5c41c1570c89ed4040b45c44a1f577e2baf3a968d3be4110db777eacb2c3ff",
+    "path": "guard-plumb\\local-rubric-plumb-server.json",
+    "bytes": 614
+  },
+  {
+    "sha256": "7bc39a23b032c1bf77d73e1a3547a6e01f92518d285a3306a4595017fa479265",
+    "path": "guard-plumb\\telemetry.jsonl",
+    "bytes": 3951
+  },
+  {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "guard-plumb\\worker.log",
+    "bytes": 0
+  },
+  {
+    "sha256": "6271fe4c49db316c81da7fdfef5dbd35b25c8b3ea0c25616e5d8d9b9806ca3dc",
+    "path": "local-rubric-jevk5-v1\\evaluation.json",
+    "bytes": 13911
+  },
+  {
+    "sha256": "cd252ec6f3c73874ebdf1c63e7088a739b1b26411efe7273211f4e5836dbca24",
+    "path": "local-rubric-jevk5-v1\\progress.json",
+    "bytes": 50917
+  },
+  {
+    "sha256": "51fb4733ecc883092b686fe63dac0b7ac0f251e810ea256953bd9d2f867f2a60",
+    "path": "local-rubric-jevk5-v1\\results.json",
+    "bytes": 51207
+  }
+]

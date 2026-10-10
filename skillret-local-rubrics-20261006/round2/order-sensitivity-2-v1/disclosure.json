@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "2a38f670f91c94ab1fbc29d392b4b400561a87ccd5bf4d55934eacb2ddb30e34",
+  "approved_public_fields": [
+    "query",
+    "candidate.name",
+    "candidate.description"
+  ],
+  "model": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "authorization": "Explicit final overnight two-case one-permutation check, maxUSD0.02 additional, then stop new paid tests.",
+  "price_source": "https://docs.typesafe.ai/models",
+  "rate_per_million": "0.042",
+  "output_free": true,
+  "price_verified_utc_date": "2026-10-06",
+  "usage_bound_usd": "0.005376",
+  "reserved_usd": "0.02"
+}

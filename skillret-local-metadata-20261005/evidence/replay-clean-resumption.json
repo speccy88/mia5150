@@ -1,0 +1,6 @@
+{
+  "source_checkpoint": "/home/user/code/mia5150-local/checkpoints/lora-replay-clean-resume-smoke",
+  "resumed_after_step": 7,
+  "examples_hash": "dba05b7c0dd945ef5d36a318279ed8ff57a2350a34c02d866855f29ab6d6d783",
+  "preserves_interrupted_run": true
+}

@@ -1,0 +1,6 @@
+Output format clarification: every select_skills.skill_ids item must
+be the 36-character original UUID, containing only hexadecimal digits and four
+hyphens. The native skill name starts with s-; omit those first two characters
+when forming a selection ID. A name starting with s- or a file path is invalid
+in skill_ids. For read_file, retain the complete displayed path, including s-.
+This formatting rule does not change which skills to select.

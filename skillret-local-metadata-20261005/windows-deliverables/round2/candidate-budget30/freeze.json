@@ -1,0 +1,34 @@
+{
+  "protocol": {
+    "version": "candidate-budget30-v1",
+    "hypothesis": "At exactly30 candidates, retaining dense top20 and adding10 novel BM25 candidates improves coverage over dense top30.",
+    "population": "All4392 historically exposed public test queries; source dataset revision6583d7d2ed07644d0fb8938ed8178f3a7dc42a12.",
+    "control": "First30 IDs from cached public-full-skillret_embed_06.json ranking.",
+    "treatment": "First20 IDs from the same dense cache, followed by the first10 IDs in cached public-full-bm25.json ranking absent from the first20. Scan at most100 lexical IDs. No score-based reordering, no label-based filtering.",
+    "ties": "Preserve each stored ranking exactly, including its existing ties. Novel lexical IDs retain cached lexical order. No new tie optimization.",
+    "pool_budget": 30,
+    "shortfall_policy": "Fail comparison if either pool cannot produce30 unique IDs. No hidden padding or dropping queries.",
+    "primary_metric": "Macro Recall@30 across all4392 queries, each query equally weighted.",
+    "secondary_metrics": [
+      "positive query-skill pair coverage",
+      "Completeness@30",
+      "label-based pool oracle NDCG@10",
+      "per-domain diagnostic coverage",
+      "query wins/ties/losses and worst losses"
+    ],
+    "no_actual_reranker": true,
+    "label_use": "Only after both pool constructions and this protocol are frozen. Domain labels are gold-skill metadata used diagnostically, never routing features.",
+    "no_sweep": true,
+    "paid_calls": 0,
+    "exposure": "Public historical full-query results and aggregate coverage already observed; diagnostic comparison, not blind confirmation. No parameters will be tuned after this result."
+  },
+  "protocol_sha256": "c601df43beee7295cd6518c285f93ca4a41f1041f26292d823758799c9ae87b8",
+  "source_hashes": {
+    "public-full-skillret_embed_06.json": "b25f30aba1e52f2b0a87d9c78a3f0dc0942ffe4edde4c420b85db56c1097849e",
+    "public-full-bm25.json": "e080c75b3f08a59dda830560621aa2f379ae585803a3e37a8bad5572adfb450a"
+  },
+  "control_pools_sha256": "c7f33b8b8d6b12a9cd82664c68e8367fd31f35198668ce65a5e2a7b242f25e17",
+  "treatment_pools_sha256": "540ded941d9269cfac92be1da60e468eee31de8bd1122d2130a3448341190224",
+  "query_count": 4392,
+  "all_pools_exactly30": true
+}

@@ -1,0 +1,36 @@
+{
+  "library_cases_verified_independently": 120,
+  "qrels_total": 7187,
+  "queries_with_qrels": 4392,
+  "max_gold": 3,
+  "all_known_official_positives_in_every_library": true,
+  "nested_sets": true,
+  "unique_ids": true,
+  "label_independent_display_order": true,
+  "hand_metric_tests_passed": true,
+  "official_hand_metrics": {
+    "NDCG@5": 0.37259,
+    "NDCG@10": 0.46164,
+    "NDCG@15": 0.46164,
+    "MAP@5": 0.3125,
+    "MAP@10": 0.35417,
+    "MAP@15": 0.35417,
+    "Recall@5": 0.375,
+    "Recall@10": 0.625,
+    "Recall@15": 0.625,
+    "Precision@5": 0.15,
+    "Precision@10": 0.1,
+    "Precision@15": 0.06667,
+    "Completeness@5": 0.25,
+    "Completeness@10": 0.5,
+    "Completeness@15": 0.5
+  },
+  "fixed_query_denominator": 4,
+  "gold_semantics": "Completeness means all pinned official positives preserved; does not assert all semantically valid alternatives were exhaustively judged.",
+  "untouched_confirmation_used": false,
+  "source_hash_checks": {
+    "skills/test.jsonl": true,
+    "queries/test.jsonl": true,
+    "qrels/test.jsonl": true
+  }
+}

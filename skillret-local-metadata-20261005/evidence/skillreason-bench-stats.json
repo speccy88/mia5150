@@ -1,0 +1,31 @@
+{
+  "all_queries_single_positive": true,
+  "benchmark": "SkillReason-Bench",
+  "domains": {
+    "biomedical": 314,
+    "data_science": 637,
+    "engineering": 313,
+    "finance": 340,
+    "legal": 353,
+    "media_design": 405,
+    "other": 305,
+    "science": 307,
+    "software": 644,
+    "writing_docs": 111
+  },
+  "num_categories": 122,
+  "num_queries": 3729,
+  "num_skills": 61228,
+  "num_unique_gold_skills": 3729,
+  "query_words": {
+    "max": 55,
+    "mean": 33.200053633681954,
+    "min": 18
+  },
+  "sha256": {
+    "queries.jsonl": "d40ce2d4b710d6ef6d8227c23fb9fca0e80eeaee9d0f3300cca86e2aede59856",
+    "skills.jsonl": "d97a253e69ea00aebc05e00befd7d9d47ba7b650a3024e166a750f60455a7989"
+  },
+  "skills_missing_body": 0,
+  "version": "1.0"
+}

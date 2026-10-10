@@ -1,0 +1,16 @@
+{
+  "which": "selected",
+  "split": "validation",
+  "selected_is_unadapted": false,
+  "model": {
+    "id": "alibiserikbay/JevK5",
+    "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d"
+  },
+  "selection_sha256": "21029dc8d61381f057a79743b2e9e91a172acf0258baf16bb5be19c2e07994a4",
+  "candidate_file_sha256": "1eda88ec773628041109ac67686e1aa23aff86f8766c8dbc9f90d9456a10cfdc",
+  "count": 256,
+  "seconds": 85.79557988792658,
+  "peak_allocated_bytes": 8950610944,
+  "peak_reserved_bytes": 9525264384,
+  "labels_read_by_inference": false
+}

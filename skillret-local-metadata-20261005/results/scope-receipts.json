@@ -1,0 +1,236 @@
+[
+  {
+    "component": "Original plan/data/split and metric audit",
+    "runs": {
+      "contract-root": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "training-audit": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Full4392 public comparison",
+    "runs": {
+      "full-lexical": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "full-skillret-direct": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Native R3 sharded FP16",
+    "runs": {
+      "r3-fp16-cache": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "r3-fp16-rerank": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Native Jina joint reranking",
+    "runs": {
+      "jina-source": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "jina-native": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Full-body1024 retrieval",
+    "runs": {
+      "fullbody-smoke": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "fullbody-skillret": {
+        "status": "resource-blocked",
+        "receipt": {
+          "error": "AssertionError('active swap')"
+        }
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Six-channel field retrieval",
+    "runs": {
+      "field-six": {
+        "status": "resource-blocked",
+        "receipt": {
+          "error": "AssertionError('RAM reserve: host_bytes=2102632448, guest_bytes=4124622848')"
+        }
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Actual hard-negative LoRA",
+    "runs": {
+      "lora-hard-streamed": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Hard-negative LoRA transfer",
+    "runs": {
+      "lora-transfer-base": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      },
+      "lora-transfer-hard": {
+        "status": "completed",
+        "receipt": {
+          "returncode": 0
+        }
+      }
+    },
+    "status": "tested"
+  },
+  {
+    "component": "Corrected replay (interrupted checkpoints only)",
+    "runs": {
+      "lora-replay-clean-lean": {
+        "status": "resource-blocked",
+        "receipt": {
+          "error": "AssertionError('RAM reserve: host_bytes=2108248064, guest_bytes=3814871040')"
+        }
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Quantized8B native reranking",
+    "runs": {
+      "qwen8-download": {
+        "status": "resource-blocked",
+        "receipt": {
+          "error": "AssertionError('active swap')"
+        }
+      },
+      "qwen8-rerank": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Local4B ID ranking and pairwise",
+    "runs": {
+      "llm-candidates": {
+        "status": "resource-blocked",
+        "receipt": {
+          "error": "AssertionError('RAM reserve: host_bytes=2047602688, guest_bytes=4320153600')"
+        }
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Native multipass option choice",
+    "runs": {
+      "large-choice-jev": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      },
+      "large-choice-plumb": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "32K full-catalog prompt diagnostic",
+    "runs": {
+      "prompt-32768": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "SRA frozen24-query full-catalog transfer",
+    "runs": {
+      "sra-transfer": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "SkillReason frozen24-query full-catalog transfer",
+    "runs": {
+      "skillreason-data": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      },
+      "skillreason-schema": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      },
+      "skillreason-external": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  },
+  {
+    "component": "Frozen16-query actual escalation latency",
+    "runs": {
+      "policy-native": {
+        "status": "not-run",
+        "reason": "Dependent download incomplete or further heavyweight work stopped after repeated resource failures; see evidence/remaining-resource-blockers.json"
+      }
+    },
+    "status": "blocked-or-incomplete"
+  }
+]

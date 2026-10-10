@@ -1,0 +1,13 @@
+{
+  "status": "not_run",
+  "calls": 0,
+  "incurred_cost": 0,
+  "incurred_cost_currency": "CAD",
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "estimated_cost": null,
+  "estimate_reason": "Paid Jev not run. Baseline passed, context plans include all10/200 queries with logged truncation, authorized process-only key handoff authenticated GET models. Account credit and fees remain unverified.",
+  "api_latency": null,
+  "scope": "paid evaluation calls in this experiment; authenticated model-list counted separately",
+  "model_list_calls": 1
+}

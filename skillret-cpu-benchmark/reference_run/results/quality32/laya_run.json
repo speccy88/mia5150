@@ -1,0 +1,44 @@
+{
+  "model": "laya",
+  "status": "completed",
+  "mode": "quality",
+  "hardware": {
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "visible_cpus": 9,
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "threads": 4,
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "device": "CPU"
+  },
+  "configuration": {
+    "model": "laya",
+    "max_length": 1024,
+    "truncate_query": true,
+    "threads": 4,
+    "batch_size": 8,
+    "runtime_config": "ORT idle spinning off; Julia encoding/token caches off",
+    "candidate_text": "name plus first1024 description characters",
+    "score": "native binary relevance probability; Verdict abstention retained; stable shortlist tie ordering"
+  },
+  "score_cache_fingerprint": "6d82aef7aeb0e1c2c8e7a627223d7f7e9be863849544f415f0f1f75f440d7174",
+  "load_seconds": 12.181662257000426,
+  "query_count": 32,
+  "catalog_sizes": [
+    10,
+    100,
+    1000,
+    6006
+  ],
+  "peak_rss_mib": 2821.03515625,
+  "completed_utc": "2026-10-02T09:29:59Z",
+  "new_pair_count": 1892,
+  "unique_pair_count": 1892,
+  "new_pair_seconds": 1460.779667019,
+  "latency_intentionally_not_run": true
+}

@@ -1,0 +1,31 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "All bundled files except this manifest; generated 2026-10-05",
+  "files": {
+    "BENCHMARK_CONTRACT.md": "46b8161dac6d8397d5dc1dadcfa42b1aca21bc370ed9a0ca6d30ab8f2f26a9fc",
+    "CODEX/00_AUDIT_AND_FREEZE.md": "6a4e9aa3f62787a23d7ac9105ca05fcb0923fdf92307c6d62519cfcf30f39a0f",
+    "CODEX/01_BASELINES.md": "44e240beafa8819486ad0384be5a546a2c60d0ae1f3dbd31417f217c5cdb0445",
+    "CODEX/02_CANDIDATE_RETRIEVAL.md": "417ffc433f4cd9d2708b1c9cdef43fb3e606d687a67fb13ee02b67fc2e2796f8",
+    "CODEX/03_COMMON_POOL_RERANKERS.md": "09d8f7d05632cb5490cf2b7e23e8525974bfb39b80ac2f69ef0109fe0c68ec63",
+    "CODEX/04_STRUCTURAL_METHODS.md": "cb555c0777394aeeb111baf7ba10e90549a0bfb5653e8baa8bf81d6179769be9",
+    "CODEX/05_HARD_NEGATIVE_ADAPTATION.md": "13c197cf89b60e569e8c5e6570c0882ad439cf65e39465135a69dc1a15dcb251",
+    "CODEX/06_CONFIRMATORY_EVAL.md": "2beceacba5637d5a916189d420cc337876e7e6ee789d5fc543a4fb4412af1592",
+    "CODEX/MASTER_HANDOFF.md": "e820ec6506bf55810cda91734f2d1f3af6f1cc86e44a38402988b63b04d115d4",
+    "EXPERIMENT_PLAN.md": "26ccc356eafe38599bf500c5e1eb2a647e1e118816983cf63c2599f9e318d721",
+    "PROPOSAL_ALIGNMENT.md": "c4eb4d516652ded5f930f2137ff15d07e916aa397c59152464ee0aa28ba826c6",
+    "RESEARCH_CATALOGUE.md": "88352f0d7e2d7a8085f9b7941ada9cdff8a57734de4231fd5e0c3a4abe1aff81",
+    "RESOURCE_PLAN.md": "390c61112f83fd5e9c9c8c060f7d3b6b928ff5b48204fd72ad9973f7baf006d9",
+    "START_HERE.md": "6ec305e120e916487bcd1954d49f471d66a4be40028c0b442e4598e1ff8df1e6",
+    "evidence/PLAN_VALIDATION.json": "4265a3d616f9e3980e183f47cd3c4cca2907368e0b68a6dbf16652a914642c44",
+    "evidence/SEARCH_SCOPE.md": "c26b97abec3f2a2ba2c64d01db89f7f15685b3461d1308055347510383e430d6",
+    "evidence/VERIFICATION_NOTES.md": "10520ff42b7f3934479f3ea5d86d47cd05fa2d20fd172e4a88d5f2b19fc70aa6",
+    "evidence/published_reference_results.json": "e707b03c2c6cab3f36ed8345c31493d5039af7b62dbae1495ba2f53a656c6607",
+    "inputs/proposal_1.pdf": "7fb118f08cbfa36370c9d6dd897d79489d13d1c9545cc5946abb5265d5a263a6",
+    "registries/engineering_sources.json": "a16daddcebe6e197e428f71b6fb54e2c8d2686bd26eba387fcb0a94d880b2065",
+    "registries/experiments.json": "4fb7a5c57725e9f3ca07cc3d8ce3276786b26cc0f5fb158b967f867cc52e9732",
+    "registries/models.json": "09bd3e33761f327eb40c424296fa492b60b5c1d7670116d99e17c17cf49443b0",
+    "registries/papers.json": "4f363810d6a8a30b82e8edf31f71d61f97e1fab98428b556ff7416fc2e87870b",
+    "registries/references.bib": "191c03475288796bf7f23ebd48a6ecdf78c589fa080fe9de371d1590520ea62c",
+    "tools/validate_plan.py": "2984156dce38d30da2b13a5a67b46291d02035bc71f54f70c9a2817e48b552a0"
+  }
+}

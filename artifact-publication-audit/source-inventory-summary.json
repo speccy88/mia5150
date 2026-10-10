@@ -1,0 +1,26 @@
+{
+  "skillret-seed5150-scaling": {
+    "source_files": 1687,
+    "source_bytes": 48795558
+  },
+  "skillret-searchjev-update20": {
+    "source_files": 196,
+    "source_bytes": 47607573
+  },
+  "skillret-local-metadata-20261005": {
+    "source_files": 5588,
+    "source_bytes": 467674310
+  },
+  "skillret-local-rubrics-20261006": {
+    "source_files": 253,
+    "source_bytes": 21311729
+  },
+  "skillret-embeddinggemma2-pilot": {
+    "source_files": 106,
+    "source_bytes": 37536848
+  },
+  "skillret-jina-nano-pilot": {
+    "source_files": 118,
+    "source_bytes": 39574806
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "E01",
+    "title": "SkillRet official repository",
+    "url": "https://github.com/ThakiCloud/SKILLRET",
+    "inspection_note": "Primary code/README; evaluated results and metric contract inspected, code not executed.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E02",
+    "title": "SkillRet dataset card",
+    "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET",
+    "inspection_note": "Corrected release counts and train/test distinction; actual files and full commit must be frozen in Codex.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E03",
+    "title": "SkillRet reranker model card",
+    "url": "https://huggingface.co/ThakiCloud/SKILLRET-Reranker-0.6B",
+    "inspection_note": "Native yes/no scoring, training recipe and current pipeline results inspected.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E04",
+    "title": "JevK5 model card",
+    "url": "https://huggingface.co/alibiserikbay/JevK5",
+    "inspection_note": "Independent open-weight model; not TypeSafe Jev. v0.3 documented; use native decision readout.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E05",
+    "title": "Plumb model card",
+    "url": "https://huggingface.co/crh225/plumb-4b",
+    "inspection_note": "Open-weight hard-decision model. The card also discusses later readout changes; pin weights AND runtime.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E06",
+    "title": "Qwen3-Reranker-8B model card",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B",
+    "inspection_note": "Generic dedicated reranking control; inspect native scoring and max lengths before loading.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E07",
+    "title": "TypeSafe Jev documentation",
+    "url": "https://docs.typesafe.ai/introduction",
+    "inspection_note": "Hosted typed Choice/Score/Noul interface; not an embedding model and not interchangeable with JevK5.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E08",
+    "title": "CLM-v0.1-8B model card",
+    "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
+    "inspection_note": "Preserve the existing CLM project control; inspect its own scoring protocol rather than treating it as a chat LLM.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E09",
+    "title": "Jina-reranker-v3.5 model card",
+    "url": "https://huggingface.co/jinaai/jina-reranker-v3.5",
+    "inspection_note": "0.6B listwise/LBNL model; CC BY-NC 4.0 weights. Controlled-pool vendor scores are not SkillRet scores.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E10",
+    "title": "Cohere reranking documentation",
+    "url": "https://docs.cohere.com/v2/docs/rerank",
+    "inspection_note": "Hosted Rerank v4.0 candidate; confirm exact API model, limits, price and account access at execution time.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E11",
+    "title": "OpenAI live model catalogue",
+    "url": "https://developers.openai.com/api/docs/models",
+    "inspection_note": "Live official page inspected; gpt-6-luna, gpt-6.1-sol and gpt-6-astra listed. Older search caches showed GPT-5.6 names; prefer live source and execution-time verification.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E12",
+    "title": "OpenAI live pricing",
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "inspection_note": "Standard/batch/other service tiers and context bands differ; recheck before allocating any API cost.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E13",
+    "title": "jev-retrieval engineering implementation",
+    "url": "https://github.com/romeromarcelo/jev-retrieval",
+    "inspection_note": "Community implementation of candidate retrieval, pointwise verification and listwise ranking. Author-reported non-SkillRet benchmarks are not independently reproduced here.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E14",
+    "title": "Agent-skills research bibliography",
+    "url": "https://github.com/JayLZhou/Awesome-Agent-Skills",
+    "inspection_note": "Used for citation snowballing; primary papers are the evidence, not catalogue summaries.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E15",
+    "title": "SkillRet paper v3",
+    "url": "https://arxiv.org/html/2605.05726v3",
+    "inspection_note": "Table 3 corrected results, Table 4 oracle-insertion diagnostic, and evaluation discussion inspected.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E16",
+    "title": "SkillRouter released reranker and linked embedder",
+    "url": "https://huggingface.co/pipizhao/SkillRouter-Reranker-0.6B",
+    "inspection_note": "Primary model documentation checked; compare both released 0.6B roles on pinned inputs, not copied scores from another pool.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E17",
+    "title": "R3 released compatibility reranker",
+    "url": "https://huggingface.co/tencent/R3-rerank-0.6b",
+    "inspection_note": "Exact reranker ID verified on primary model card. No R3 embedding ID has been verified; do not guess one.",
+    "access_date": "2026-10-05",
+    "executed": false
+  },
+  {
+    "id": "E18",
+    "title": "SkillReason official toolkit and released models",
+    "url": "https://github.com/donghong1/SkillReason",
+    "inspection_note": "README/model interfaces and selected paper sections inspected. 0.6B and 4B retrievers/rerankers and benchmark adapters exist; code not executed. Published SkillRet paper results use the older pool.",
+    "access_date": "2026-10-05",
+    "executed": false
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "bf16_in_runtime_log": true,
+  "gpu_used_MiB": 36457,
+  "configuration": {
+    "runner": "pooling",
+    "pooling": "LAST",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "cpu_offload_gb": 0
+  },
+  "residency_evidence": "pinned full weights; offload disabled; CUDA startup logs and nvidia-smi"
+}

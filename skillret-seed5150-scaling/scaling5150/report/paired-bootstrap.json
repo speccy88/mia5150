@@ -1,0 +1,185 @@
+{
+  "rows": [
+    {
+      "method": "qwen_embed_06",
+      "metric": "Recall@5",
+      "mean_delta": -0.025,
+      "paired_bootstrap95": [
+        -0.225,
+        0.2
+      ],
+      "wins": 3,
+      "ties": 12,
+      "losses": 5,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "qwen_embed_06",
+      "metric": "NDCG@10",
+      "mean_delta": -0.01729206598797491,
+      "paired_bootstrap95": [
+        -0.17905757121038676,
+        0.14295295737769562
+      ],
+      "wins": 6,
+      "ties": 9,
+      "losses": 5,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "skillret_embed_06",
+      "metric": "Recall@5",
+      "mean_delta": 0.075,
+      "paired_bootstrap95": [
+        -0.125,
+        0.275
+      ],
+      "wins": 4,
+      "ties": 14,
+      "losses": 2,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "skillret_embed_06",
+      "metric": "NDCG@10",
+      "mean_delta": 0.07510674513487059,
+      "paired_bootstrap95": [
+        -0.045103322859809704,
+        0.2037011958005644
+      ],
+      "wins": 6,
+      "ties": 10,
+      "losses": 4,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "eg2_text270m_fp32",
+      "metric": "Recall@5",
+      "mean_delta": 0.025,
+      "paired_bootstrap95": [
+        -0.175,
+        0.25
+      ],
+      "wins": 3,
+      "ties": 13,
+      "losses": 4,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "eg2_text270m_fp32",
+      "metric": "NDCG@10",
+      "mean_delta": -0.02709714101340376,
+      "paired_bootstrap95": [
+        -0.14701335392747553,
+        0.0964810455296335
+      ],
+      "wins": 4,
+      "ties": 8,
+      "losses": 8,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "jina_nano239m_fp32",
+      "metric": "Recall@5",
+      "mean_delta": -0.09166666666666666,
+      "paired_bootstrap95": [
+        -0.325,
+        0.16666666666666669
+      ],
+      "wins": 3,
+      "ties": 9,
+      "losses": 8,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "jina_nano239m_fp32",
+      "metric": "NDCG@10",
+      "mean_delta": -0.09582953223205144,
+      "paired_bootstrap95": [
+        -0.2335946523433214,
+        0.04920084600252543
+      ],
+      "wins": 3,
+      "ties": 9,
+      "losses": 8,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "hybrid_rrf60",
+      "metric": "Recall@5",
+      "mean_delta": 0.175,
+      "paired_bootstrap95": [
+        0.05,
+        0.35
+      ],
+      "wins": 4,
+      "ties": 16,
+      "losses": 0,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "hybrid_rrf60",
+      "metric": "NDCG@10",
+      "mean_delta": 0.10844808185061239,
+      "paired_bootstrap95": [
+        0.037609797856845165,
+        0.1956600539737334
+      ],
+      "wins": 8,
+      "ties": 11,
+      "losses": 1,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "query_clause_bm25",
+      "metric": "Recall@5",
+      "mean_delta": -0.24166666666666664,
+      "paired_bootstrap95": [
+        -0.4,
+        -0.10833333333333332
+      ],
+      "wins": 0,
+      "ties": 12,
+      "losses": 8,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    },
+    {
+      "method": "query_clause_bm25",
+      "metric": "NDCG@10",
+      "mean_delta": -0.20964094125076377,
+      "paired_bootstrap95": [
+        -0.2920393914667733,
+        -0.1300704205193897
+      ],
+      "wins": 0,
+      "ties": 7,
+      "losses": 13,
+      "n": 20,
+      "resamples": 2000,
+      "seed": 5150
+    }
+  ],
+  "caveat": "Descriptive paired intervals on exposed20-query panel, not multiplicity-adjusted; no promotion/tuning from these results."
+}

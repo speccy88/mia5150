@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-02",
+  "offline_tests": {
+    "passed": 39,
+    "versions": {
+      "pytest": "9.1.1",
+      "numpy": "2.5.3",
+      "torch": "2.14.0"
+    },
+    "paid_runs_allowed": false,
+    "hf_hub_offline": true
+  },
+  "new_inference": false,
+  "new_paid_resources": false,
+  "import": {
+    "files": 282,
+    "bytes": 2306729850,
+    "zip_crc_checks": 4
+  },
+  "source_archive_extracted_members_verified": {
+    "original": 103,
+    "resumed": 157
+  },
+  "original_kit_manifest_entries_verified": 46,
+  "repo_destination_tests_passed": 39
+}

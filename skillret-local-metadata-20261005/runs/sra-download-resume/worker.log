@@ -1,0 +1,7 @@
+download corpus/corpus.json
+download instances/bigcodebench.json
+download instances/champ.json
+download instances/logicbench.json
+download instances/medcalcbench.json
+download instances/theoremqa.json
+download instances/toolqa.json

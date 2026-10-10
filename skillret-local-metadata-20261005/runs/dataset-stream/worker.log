@@ -1,0 +1,6 @@
+data/skills/train.jsonl {'rows': 10123, 'bytes': 187920814, 'sha256': 'b4978863f6c36c1d42af4a779f86b8e5809b4709c353aa698ec494e3ed663a2b'}
+data/skills/test.jsonl {'rows': 6006, 'bytes': 117606037, 'sha256': '1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81'}
+data/queries/train.jsonl {'rows': 63259, 'bytes': 54348716, 'sha256': 'e1189e402c74d11ba57af3bbc60308cc4a9b51f29f2de265e541d0599067624c'}
+data/queries/test.jsonl {'rows': 4392, 'bytes': 6053507, 'sha256': '4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d'}
+data/qrels/train.jsonl {'rows': 127190, 'bytes': 12591810, 'sha256': '7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1'}
+data/qrels/test.jsonl {'rows': 7187, 'bytes': 661204, 'sha256': 'edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af'}

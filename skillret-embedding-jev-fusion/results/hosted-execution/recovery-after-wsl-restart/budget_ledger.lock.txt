@@ -1,0 +1,1 @@
+Manual recovery only after confirming no request remains active.

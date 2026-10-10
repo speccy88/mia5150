@@ -1,0 +1,82 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "76d682f3e65dae37650be339405e1d00bebc7ff538b6c9c366eccaa331d068e7",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/README.md"
+  },
+  {
+    "file": "adapters/classification/adapter_config.json",
+    "sha256": "69ba4f0e0f077e9398e47d2aae331c4b119f4eb6a9f48cc656dff2c594154f46",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/classification/adapter_config.json"
+  },
+  {
+    "file": "adapters/clustering/adapter_config.json",
+    "sha256": "1f42aa390cfda1a9f7037947aebccf2762e51c88b1650797acf58491f14f5506",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/clustering/adapter_config.json"
+  },
+  {
+    "file": "adapters/retrieval/adapter_config.json",
+    "sha256": "9385f709d584fb6109c59e0b2489641dc8cde646308f09b2226de7e49b81f395",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/retrieval/adapter_config.json"
+  },
+  {
+    "file": "adapters/text-matching/adapter_config.json",
+    "sha256": "b2210abd91509161ce0e879a86291f09c3a4a43f785059a61303d09f39f877f1",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/text-matching/adapter_config.json"
+  },
+  {
+    "file": "config.json",
+    "sha256": "dfc888722258faaee5b2c93d9886478efa2d90c8d1c4e6ccc3fe03bfa5000034",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/config.json"
+  },
+  {
+    "file": "config_sentence_transformers.json",
+    "sha256": "bc7b60228b61c9a093c816271c620cf34ef42baab67f6e027594e039d7198a0d",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/config_sentence_transformers.json"
+  },
+  {
+    "file": "configuration_eurobert.py",
+    "sha256": "8737378a5cea9e6c7be0e077138d6c725fb5909ad122c979adcdcc1a005a51b3",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/configuration_eurobert.py"
+  },
+  {
+    "file": "configuration_jina_embeddings_v5.py",
+    "sha256": "8472183a99ba9767b1352309c7553b529738e9dcdc9fe703f3a130bb17d347cd",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/configuration_jina_embeddings_v5.py"
+  },
+  {
+    "file": "custom_st.py",
+    "sha256": "620865d4f54a9c45cf64d9ad15dc47825cd0c35686f7118a7d25f908e9fe563a",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/custom_st.py"
+  },
+  {
+    "file": "modeling_eurobert.py",
+    "sha256": "f2430184a068bdfb5171650e8bbbff817aa5e7b2dd2066a52dc84d1f1d967f01",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/modeling_eurobert.py"
+  },
+  {
+    "file": "modeling_jina_embeddings_v5.py",
+    "sha256": "6d250e1abe0216b304b9ca99e49d9aac04e143671d310c112ad3e37b6186cf18",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/modeling_jina_embeddings_v5.py"
+  },
+  {
+    "file": "modules.json",
+    "sha256": "3d90bbb7557479bf0faa7e9a03ec8853eb6aba0f3a1f1f3bc0184890437f1746",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/modules.json"
+  },
+  {
+    "file": "special_tokens_map.json",
+    "sha256": "6d66005b83cd0646e882e57e09c5a3e3e570ef53dd1f6d4315a65943fa81f2f7",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/special_tokens_map.json"
+  },
+  {
+    "file": "tokenizer.json",
+    "sha256": "98d4a1d32152d6cedf85b5e88f3b205106dca1fe72aaab34e0ac13c238421069",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/tokenizer.json"
+  },
+  {
+    "file": "tokenizer_config.json",
+    "sha256": "0a6c6b1edf6b4f71604cf97f47521276e5a1f6c6d6b6243cd727a87e0efdc763",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/tokenizer_config.json"
+  }
+]

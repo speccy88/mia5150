@@ -1,0 +1,4 @@
+{
+  "status": 200,
+  "body": "{\"model\":\"clm-latest\",\"answers\":{\"noul\":{\"type\":\"noul\",\"noul\":0.7696102730634629},\"choice\":{\"type\":\"choice\",\"choice\":\"billing\",\"confidence\":0.9891968722788165,\"probabilities\":{\"billing\":0.9945984361394082,\"shipping\":0.00540156386059179}},\"score\":{\"type\":\"score\",\"score\":1.6370172673672032,\"confidence\":0.6234028138987888,\"legend\":{\"0\":\"Low urgency\",\"1\":\"Moderate urgency\",\"2\":\"High urgency\"},\"probabilities\":{\"0\":0.11191794189865582,\"1\":0.13914684883548484,\"2\":0.7489352092658592}}},\"usage\":{\"billing_units\":3,\"input_tokens\":91,\"output_tokens\":0}}"
+}

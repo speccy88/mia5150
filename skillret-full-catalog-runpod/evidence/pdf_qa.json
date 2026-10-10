@@ -1,0 +1,37 @@
+[
+  {
+    "page": 1,
+    "text_chars": 716,
+    "render_bytes": 55397
+  },
+  {
+    "page": 2,
+    "text_chars": 868,
+    "render_bytes": 43347
+  },
+  {
+    "page": 3,
+    "text_chars": 669,
+    "render_bytes": 44281
+  },
+  {
+    "page": 4,
+    "text_chars": 692,
+    "render_bytes": 52130
+  },
+  {
+    "page": 5,
+    "text_chars": 1065,
+    "render_bytes": 59390
+  },
+  {
+    "page": 6,
+    "text_chars": 1205,
+    "render_bytes": 55429
+  },
+  {
+    "page": 7,
+    "text_chars": 1677,
+    "render_bytes": 77929
+  }
+]

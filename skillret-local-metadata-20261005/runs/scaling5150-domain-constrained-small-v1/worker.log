@@ -1,0 +1,13 @@
+small_qwen06 q-03666/random/10 Software Engineering ok
+small_qwen06 q-03666/random/50 Software Engineering ok
+small_qwen06 q-03666/random/100 Software Engineering ok
+small_qwen06 q-03666/random/250 Software Engineering ok
+small_qwen06 q-03666/random/1000 Software Engineering ok
+small_qwen06 q-03666/random/6006 Software Engineering ok
+small_qwen06 q-00674/random/10 Data & ML ok
+small_qwen06 q-00674/random/50 Data & ML ok
+small_qwen06 q-00674/random/100 Data & ML ok
+small_qwen06 q-00674/random/250 Data & ML ok
+small_qwen06 q-00674/random/1000 Data & ML invalid_selection
+small_qwen06 q-00674/random/6006 Data & ML ok
+{"model": "small_qwen06", "valid": 11, "new_calls": 13}

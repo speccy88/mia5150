@@ -1,0 +1,12 @@
+Resolved 5 packages in 6ms
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Downloading numpy (15.9MiB)
+ Downloaded numpy
+Prepared 5 packages in 2.20s
+Installed 5 packages in 108ms
+ + bm25s==0.3.12
+ + numpy==2.5.3
+ + pypdf==6.19.0
+ + pytrec-eval-terrier==0.5.10
+ + scipy==1.18.1

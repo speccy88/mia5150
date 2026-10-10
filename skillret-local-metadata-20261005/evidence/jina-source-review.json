@@ -1,0 +1,5 @@
+{
+  "repository_revision": "e8a93f33f0b22108f8c2364f8484ce3422552fbc",
+  "source_sha256": "ec6612461b4307eb3bab089e6916c00881b7e6b2e8edfbd56a9ace4560244837",
+  "review": "Read entire 10389-byte module before execution. Standard torch/transformers/numpy imports; native joint-candidate learned-projector architecture. Tokenizer auto-download prevented by prepopulated local tokenizer and offline environment. No subprocess, shell, credential or network operations in reviewed scoring code. Noncommercial academic license."
+}

@@ -1,0 +1,295 @@
+{
+  "_id": "69fab92c62f7a58736733e0d",
+  "id": "ThakiCloud/SKILLRET",
+  "author": "ThakiCloud",
+  "sha": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "lastModified": "2026-09-25T15:16:39.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:sentence-similarity",
+    "task_categories:text-retrieval",
+    "language:en",
+    "license:apache-2.0",
+    "size_categories:100K<n<1M",
+    "format:json",
+    "modality:tabular",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "arxiv:2605.05726",
+    "region:us",
+    "retrieval",
+    "benchmark",
+    "agents",
+    "tool-use",
+    "synthetic-data",
+    "croissant"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tSkillRet Benchmark\n\t\n\n\n\ud83d\udcc4 Technical report: SkillRet: A Large-Scale Benchmark for Skill Retrieval in LLM Agents (arXiv:2605.05726)\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Overview\n\t\n\nSkillRet is a retrieval benchmark for matching natural-language user requests to agent skills. It contains a curated library of public agent skills from GitHub with synthetic training and evaluation queries.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Statistics\n\t\n\n\n\t\n\t\t\nMetric\nValue\n\n\n\t\t\nTotal Records\n218,157\n\n\nTotal File Size\n714 MB\n\n\nTotal\u2026 See the full description on the dataset page: https://huggingface.co/datasets/ThakiCloud/SKILLRET.",
+  "downloads": 1153,
+  "likes": 8,
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "license": "apache-2.0",
+    "size_categories": [
+      "100K<n<1M"
+    ],
+    "task_categories": [
+      "sentence-similarity",
+      "text-retrieval"
+    ],
+    "pretty_name": "SkillRet Benchmark",
+    "tags": [
+      "retrieval",
+      "benchmark",
+      "agents",
+      "tool-use",
+      "synthetic-data",
+      "croissant"
+    ],
+    "configs": [
+      {
+        "config_name": "skills",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "data/skills/train.jsonl"
+          },
+          {
+            "split": "test",
+            "path": "data/skills/test.jsonl"
+          }
+        ]
+      },
+      {
+        "config_name": "queries",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "data/queries/train.jsonl"
+          },
+          {
+            "split": "test",
+            "path": "data/queries/test.jsonl"
+          }
+        ]
+      },
+      {
+        "config_name": "qrels",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "data/qrels/train.jsonl"
+          },
+          {
+            "split": "test",
+            "path": "data/qrels/test.jsonl"
+          }
+        ]
+      }
+    ],
+    "dataset_info": [
+      {
+        "config_name": "skills",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "name",
+            "dtype": "string"
+          },
+          {
+            "name": "namespace",
+            "dtype": "string"
+          },
+          {
+            "name": "description",
+            "dtype": "string"
+          },
+          {
+            "name": "author",
+            "dtype": "string"
+          },
+          {
+            "name": "stars",
+            "dtype": "int64"
+          },
+          {
+            "name": "installs",
+            "dtype": "int64"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          },
+          {
+            "name": "source_url",
+            "dtype": "string"
+          },
+          {
+            "name": "raw_url",
+            "dtype": "string"
+          },
+          {
+            "name": "major",
+            "dtype": "string"
+          },
+          {
+            "name": "sub",
+            "dtype": "string"
+          },
+          {
+            "name": "primary_action",
+            "dtype": "string"
+          },
+          {
+            "name": "primary_object",
+            "dtype": "string"
+          },
+          {
+            "name": "domain",
+            "dtype": "string"
+          },
+          {
+            "name": "body",
+            "dtype": "string"
+          },
+          {
+            "name": "skill_md",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "train",
+            "num_examples": 10123
+          },
+          {
+            "name": "test",
+            "num_examples": 6006
+          }
+        ]
+      },
+      {
+        "config_name": "queries",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "original_id",
+            "dtype": "string"
+          },
+          {
+            "name": "query",
+            "dtype": "string"
+          },
+          {
+            "name": "skill_ids",
+            "sequence": "string"
+          },
+          {
+            "name": "skill_names",
+            "sequence": "string"
+          },
+          {
+            "name": "k",
+            "dtype": "int64"
+          },
+          {
+            "name": "generator_model",
+            "dtype": "string"
+          },
+          {
+            "name": "original_query",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "train",
+            "num_examples": 63259
+          },
+          {
+            "name": "test",
+            "num_examples": 4392
+          }
+        ]
+      },
+      {
+        "config_name": "qrels",
+        "features": [
+          {
+            "name": "query_id",
+            "dtype": "string"
+          },
+          {
+            "name": "skill_id",
+            "dtype": "string"
+          },
+          {
+            "name": "relevance",
+            "dtype": "int64"
+          }
+        ],
+        "splits": [
+          {
+            "name": "train",
+            "num_examples": 127190
+          },
+          {
+            "name": "test",
+            "num_examples": 7187
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/qrels/test.jsonl"
+    },
+    {
+      "rfilename": "data/qrels/train.jsonl"
+    },
+    {
+      "rfilename": "data/queries/test.jsonl"
+    },
+    {
+      "rfilename": "data/queries/train.jsonl"
+    },
+    {
+      "rfilename": "data/skills.jsonl"
+    },
+    {
+      "rfilename": "data/skills/test.jsonl"
+    },
+    {
+      "rfilename": "data/skills/train.jsonl"
+    },
+    {
+      "rfilename": "data/taxonomy.json"
+    }
+  ],
+  "createdAt": "2026-05-06T03:44:44.000Z",
+  "usedStorage": 1017026639
+}

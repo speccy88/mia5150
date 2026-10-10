@@ -1,0 +1,9 @@
+Resolved 5 packages in 324ms
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Prepared 4 packages in 221ms
+Installed 4 packages in 11ms
+ + iniconfig==2.3.0
+ + pluggy==1.6.0
+ + pygments==2.21.0
+ + pytest==8.4.2

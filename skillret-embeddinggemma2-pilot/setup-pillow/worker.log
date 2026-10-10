@@ -1,0 +1,8 @@
+INSTALL [('pillow', '<=15.0,>=10.0.1')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 7ms
+Prepared 1 package in 46ms
+Installed 1 package in 3ms
+ + pillow==12.3.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl)
+DEPENDENCIES_OK 57
+NATIVE_IMPORT_OK 5.19.0

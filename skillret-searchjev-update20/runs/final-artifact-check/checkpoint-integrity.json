@@ -1,0 +1,9 @@
+{
+  "checkpoint": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runs/pilot20-dynamic/checkpoint-update20/adapter_model.safetensors",
+  "sha256": "b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300",
+  "tensors": 372,
+  "parameters": 10822656,
+  "all_float32": true,
+  "all_finite": true,
+  "bytes": 43340856
+}

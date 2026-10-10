@@ -1,0 +1,77 @@
+{
+  "status": "published_reference_only_not_reproduced",
+  "scale": "percent (0-100)",
+  "dataset": "corrected SkillRet evaluation",
+  "skills": 6006,
+  "queries": 4392,
+  "source_urls": [
+    "https://github.com/ThakiCloud/SKILLRET",
+    "https://huggingface.co/ThakiCloud/SKILLRET-Reranker-0.6B"
+  ],
+  "rows": [
+    {
+      "model": "BM25",
+      "ndcg_5": 49.31,
+      "ndcg_10": 51.69,
+      "recall_10": 59.41,
+      "completeness_10": 44.56
+    },
+    {
+      "model": "Qwen3-Embedding-0.6B",
+      "ndcg_5": 59.92,
+      "ndcg_10": 61.94,
+      "recall_10": 67.87,
+      "completeness_10": 51.09
+    },
+    {
+      "model": "Qwen3-Embedding-8B",
+      "ndcg_5": 61.35,
+      "ndcg_10": 63.64,
+      "recall_10": 70.29,
+      "completeness_10": 54.14
+    },
+    {
+      "model": "harrier-oss-v1-0.6b",
+      "ndcg_5": 68.16,
+      "ndcg_10": 70.26,
+      "recall_10": 76.16,
+      "completeness_10": 61.61
+    },
+    {
+      "model": "SKILLRET-Embedding-0.6B",
+      "ndcg_5": 79.02,
+      "ndcg_10": 81.12,
+      "recall_10": 87.74,
+      "completeness_10": 78.94
+    },
+    {
+      "model": "SKILLRET-Embedding-8B",
+      "ndcg_5": 84.58,
+      "ndcg_10": 86.44,
+      "recall_10": 93.25,
+      "completeness_10": 88.11
+    },
+    {
+      "model": "SKILLRET-Embedding-8B -> SKILLRET-Reranker-0.6B (top20)",
+      "ndcg_5": 86.1,
+      "ndcg_10": 87.74,
+      "recall_5": 89.28,
+      "recall_10": 93.57,
+      "completeness_10": 88.96
+    }
+  ],
+  "oracle_diagnostic": {
+    "description": "Insert missing gold into a pool of 20, then use the SAME reranker; not deployable and not a perfect-ranking upper bound",
+    "ndcg_10": 88.89,
+    "source": "https://arxiv.org/html/2605.05726v3",
+    "source_table": 4,
+    "published_gain_using_unrounded_values_pp": 1.14
+  },
+  "proposal_pilot": {
+    "queries": 20,
+    "bm25_recall_5": 54.2,
+    "source": "inputs/proposal_1.pdf p3",
+    "interpretation": "feasibility pilot only; not a full-set performance comparison"
+  },
+  "additional_protocol_warning": "SkillReason (2608.08640v1) Table 1 uses 6,660 SkillRet skills and 4,997 queries, as does the inspected field-aware work. Their scores must not be inserted into the corrected 6,006/4,392 leaderboard without rerunning pinned implementations."
+}

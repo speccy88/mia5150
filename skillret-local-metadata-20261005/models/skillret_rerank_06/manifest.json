@@ -1,0 +1,30 @@
+{
+  "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+  "revision": "ce09c883af78affc72a85014e040f3d28a5b1711",
+  "files": {
+    "README.md": {
+      "bytes": 5936,
+      "sha256": "59a31478c941d31330ccc6a1e91f3188512cab51491bba5e64cb51fb80446348"
+    },
+    "config.json": {
+      "bytes": 1417,
+      "sha256": "ff68f3887259ce4b6edcb6d61eb2d4e6ed3497e99a58accd425702582f7a227e"
+    },
+    "generation_config.json": {
+      "bytes": 187,
+      "sha256": "6143e9b1f072b8717e747386b789b91dd746ad064c09b6b28ffc17f0d7ad185d"
+    },
+    "model.safetensors": {
+      "bytes": 1191588280,
+      "sha256": "ace7f2068c57ab9ecc66419e8675c0625b9c0ac939bd6d153d202eedf2bd09f3"
+    },
+    "tokenizer.json": {
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    "tokenizer_config.json": {
+      "bytes": 375,
+      "sha256": "f79b420da8a87eafa544fe53c8ec9aa7f5ffb0f863eaf7502c575943f4b671c6"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[
+  "../.venv/bin/python",
+  "run_skillret_baseline.py",
+  "--stage",
+  "audit"
+]

@@ -1,0 +1,23 @@
+{
+  "full_train_queries": 56883,
+  "full_validation_queries": 6376,
+  "observed_training_seconds_per_query": 2.281581164186355,
+  "observed_validation_seconds_per_query": 0.33477717997448053,
+  "estimated_one_epoch_train_and_two_validation_hours": 37.236738878179715,
+  "quoted_hourly_cad": 0.697907,
+  "estimated_compute_cad_excluding_setup_and_mining": 25.987780720253774,
+  "conservative_2x_allowance_cad_excluding_setup_and_mining": 51.97556144050755,
+  "NOT_included": [
+    "dataset/model downloads",
+    "BGE embedding generation",
+    "tokenization",
+    "reload verification",
+    "checkpoint export",
+    "final test inference",
+    "storage",
+    "tax",
+    "idle paid time"
+  ],
+  "limitations": "Pilot subset sequence lengths and kernel behavior may differ. This is a planning estimate, not a guarantee or authorization.",
+  "next_gate": "Approve an explicit CAD budget and Pod teardown supervision before the full run."
+}

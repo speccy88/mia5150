@@ -1,0 +1,6 @@
+model,new_returned_generations,new_actual_usd,new_input_tokens,new_output_tokens
+qwen38-27b,0,0,0,0
+qwen38-flash,25,0.07927474999999999,528033,3068
+deepseek41-flash,23,0.016746691,457813,2674
+mimo-v2-6-pro,16,0.2220042894,508993,2220
+glm53-flash,23,0.01989496,470799,2126

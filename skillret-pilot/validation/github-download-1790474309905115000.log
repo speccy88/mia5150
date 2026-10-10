@@ -1,0 +1,32 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/10123 [00:00<?, ? examples/s]Generating train split:  22%|██▏       | 2210/10123 [00:00<00:00, 14320.14 examples/s]Generating train split:  43%|████▎     | 4329/10123 [00:00<00:00, 14270.04 examples/s]Generating train split:  64%|██████▍   | 6508/10123 [00:00<00:00, 13869.00 examples/s]Generating train split:  87%|████████▋ | 8788/10123 [00:00<00:00, 14516.27 examples/s]Generating train split: 100%|██████████| 10123/10123 [00:00<00:00, 14931.80 examples/s]
+Generating test split:   0%|          | 0/6006 [00:00<?, ? examples/s]Generating test split:  34%|███▍      | 2058/6006 [00:00<00:00, 16671.16 examples/s]Generating test split:  69%|██████▉   | 4138/6006 [00:00<00:00, 15880.31 examples/s]Generating test split: 100%|██████████| 6006/6006 [00:00<00:00, 16659.36 examples/s]Generating test split: 100%|██████████| 6006/6006 [00:00<00:00, 16395.15 examples/s]
+Generating train split:   0%|          | 0/63259 [00:00<?, ? examples/s]Generating train split:  77%|███████▋  | 48849/63259 [00:00<00:00, 354183.83 examples/s]Generating train split: 100%|██████████| 63259/63259 [00:00<00:00, 349447.08 examples/s]
+Generating test split:   0%|          | 0/4392 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4392/4392 [00:00<00:00, 235041.57 examples/s]
+Generating train split:   0%|          | 0/127190 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 127190/127190 [00:00<00:00, 1672960.13 examples/s]
+Generating test split:   0%|          | 0/7187 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 7187/7187 [00:00<00:00, 2813820.86 examples/s]
+{
+  "repo_id": "ThakiCloud/SKILLRET",
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "split": "test",
+  "files": {
+    "skills": {
+      "path": "data/skills.jsonl",
+      "sha256": "39ec2b1db1b11371e4a1a3a2a5083e732d23282596355f7faafbb6fdde161571",
+      "bytes": 115700002,
+      "rows": 6006
+    },
+    "queries": {
+      "path": "data/queries.jsonl",
+      "sha256": "23b9b5805d1737597bd18e63cf5c12755de90ebdc6b5fbd9683d43128c2cc2e0",
+      "bytes": 6158915,
+      "rows": 4392
+    },
+    "qrels": {
+      "path": "data/qrels.jsonl",
+      "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+      "bytes": 661204,
+      "rows": 7187
+    }
+  }
+}

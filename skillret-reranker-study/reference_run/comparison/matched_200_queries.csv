@@ -1,0 +1,5 @@
+method,queries,recall_at_5,all_gold_queries
+BM25 -> Jev,200,0.7091666666666666,114
+BM25 alone,200,0.6058333333333333,89
+BGE-small vector retrieval,200,0.4925,67
+BM25 -> CLM,200,0.38166666666666665,51

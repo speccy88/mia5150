@@ -1,0 +1,2 @@
+# Retain the measured CSV bytes, including the original writer's CRLF endings.
+reference_run/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

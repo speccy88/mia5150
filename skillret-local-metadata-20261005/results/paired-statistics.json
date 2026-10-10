@@ -1,0 +1,848 @@
+{
+  "fusion_minus_dense": {
+    "queries": 128,
+    "gold-overlap_clusters": 126,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.015188937327431061,
+        "cluster_bootstrap_ci95": [
+          -0.025250536358798724,
+          0.05461851923813266
+        ],
+        "wins": 36,
+        "losses": 28,
+        "ties": 64
+      },
+      "Recall@10": {
+        "delta": -0.0026041666666666644,
+        "cluster_bootstrap_ci95": [
+          -0.052493438320209966,
+          0.042328042328042326
+        ],
+        "wins": 14,
+        "losses": 12,
+        "ties": 102
+      },
+      "Completeness@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          -0.06976744186046512,
+          0.06299212598425197
+        ],
+        "wins": 10,
+        "losses": 10,
+        "ties": 108
+      },
+      "MRR@5": {
+        "delta": 0.02005208333333333,
+        "cluster_bootstrap_ci95": [
+          -0.032176646523835686,
+          0.070969756155303
+        ],
+        "wins": 18,
+        "losses": 10,
+        "ties": 100
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "skillret_rerank_06_minus_dense": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.08578880255486515,
+        "cluster_bootstrap_ci95": [
+          0.03893131883334305,
+          0.14419161598418426
+        ],
+        "wins": 11,
+        "losses": 0,
+        "ties": 21
+      },
+      "Recall@10": {
+        "delta": 0.041666666666666664,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.09375
+        ],
+        "wins": 3,
+        "losses": 0,
+        "ties": 29
+      },
+      "Completeness@10": {
+        "delta": 0.0625,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.15625
+        ],
+        "wins": 2,
+        "losses": 0,
+        "ties": 30
+      },
+      "MRR@5": {
+        "delta": 0.1109375,
+        "cluster_bootstrap_ci95": [
+          0.0405859375,
+          0.20007812499999958
+        ],
+        "wins": 7,
+        "losses": 0,
+        "ties": 25
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "skillrouter_rerank_06_minus_dense": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.11114908117626182,
+        "cluster_bootstrap_ci95": [
+          0.04895982250938089,
+          0.1832337002959455
+        ],
+        "wins": 11,
+        "losses": 0,
+        "ties": 21
+      },
+      "Recall@10": {
+        "delta": 0.041666666666666664,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.09375
+        ],
+        "wins": 3,
+        "losses": 0,
+        "ties": 29
+      },
+      "Completeness@10": {
+        "delta": 0.0625,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.15625
+        ],
+        "wins": 2,
+        "losses": 0,
+        "ties": 30
+      },
+      "MRR@5": {
+        "delta": 0.1421875,
+        "cluster_bootstrap_ci95": [
+          0.0483984375,
+          0.2515625
+        ],
+        "wins": 7,
+        "losses": 0,
+        "ties": 25
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "skillrouter_rerank_06_minus_skillret_reranker": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.025360278621396667,
+        "cluster_bootstrap_ci95": [
+          0.00047585471339157064,
+          0.0577111260146293
+        ],
+        "wins": 4,
+        "losses": 1,
+        "ties": 27
+      },
+      "Recall@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "Completeness@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "MRR@5": {
+        "delta": 0.03125,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.078125
+        ],
+        "wins": 2,
+        "losses": 0,
+        "ties": 30
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "skillreason_rerank_06_minus_dense": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.11186053074457739,
+        "cluster_bootstrap_ci95": [
+          0.0491590586629102,
+          0.18568338646887164
+        ],
+        "wins": 11,
+        "losses": 0,
+        "ties": 21
+      },
+      "Recall@10": {
+        "delta": 0.041666666666666664,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.09375
+        ],
+        "wins": 3,
+        "losses": 0,
+        "ties": 29
+      },
+      "Completeness@10": {
+        "delta": 0.0625,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.15625
+        ],
+        "wins": 2,
+        "losses": 0,
+        "ties": 30
+      },
+      "MRR@5": {
+        "delta": 0.14479166666666665,
+        "cluster_bootstrap_ci95": [
+          0.05208333333333333,
+          0.25416666666666665
+        ],
+        "wins": 7,
+        "losses": 0,
+        "ties": 25
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "skillreason_rerank_06_minus_skillret_reranker": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.026071728189712234,
+        "cluster_bootstrap_ci95": [
+          0.0014993094066647332,
+          0.0586420931033886
+        ],
+        "wins": 5,
+        "losses": 2,
+        "ties": 25
+      },
+      "Recall@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "Completeness@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "MRR@5": {
+        "delta": 0.033854166666666664,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.08072916666666666
+        ],
+        "wins": 3,
+        "losses": 0,
+        "ties": 29
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "r3_rerank_fp16_local_minus_dense": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.08210905671677071,
+        "cluster_bootstrap_ci95": [
+          0.009086983983981972,
+          0.1671951136686
+        ],
+        "wins": 9,
+        "losses": 3,
+        "ties": 20
+      },
+      "Recall@10": {
+        "delta": 0.010416666666666666,
+        "cluster_bootstrap_ci95": [
+          -0.078125,
+          0.08333333333333333
+        ],
+        "wins": 3,
+        "losses": 1,
+        "ties": 28
+      },
+      "Completeness@10": {
+        "delta": 0.03125,
+        "cluster_bootstrap_ci95": [
+          -0.0625,
+          0.125
+        ],
+        "wins": 2,
+        "losses": 1,
+        "ties": 29
+      },
+      "MRR@5": {
+        "delta": 0.11875,
+        "cluster_bootstrap_ci95": [
+          0.015625,
+          0.23125
+        ],
+        "wins": 6,
+        "losses": 1,
+        "ties": 25
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "r3_rerank_fp16_local_minus_skillret_reranker": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": -0.0036797458380944444,
+        "cluster_bootstrap_ci95": [
+          -0.04978935348590177,
+          0.04371624266795298
+        ],
+        "wins": 4,
+        "losses": 3,
+        "ties": 25
+      },
+      "Recall@10": {
+        "delta": -0.03125,
+        "cluster_bootstrap_ci95": [
+          -0.09375,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 1,
+        "ties": 31
+      },
+      "Completeness@10": {
+        "delta": -0.03125,
+        "cluster_bootstrap_ci95": [
+          -0.09375,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 1,
+        "ties": 31
+      },
+      "MRR@5": {
+        "delta": 0.0078125,
+        "cluster_bootstrap_ci95": [
+          -0.046875,
+          0.0625
+        ],
+        "wins": 2,
+        "losses": 2,
+        "ties": 28
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "jina_minus_dense": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.11118038306390246,
+        "cluster_bootstrap_ci95": [
+          0.04830775408717005,
+          0.18692187537658803
+        ],
+        "wins": 10,
+        "losses": 2,
+        "ties": 20
+      },
+      "Recall@10": {
+        "delta": 0.041666666666666664,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.09375
+        ],
+        "wins": 3,
+        "losses": 0,
+        "ties": 29
+      },
+      "Completeness@10": {
+        "delta": 0.0625,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.15625
+        ],
+        "wins": 2,
+        "losses": 0,
+        "ties": 30
+      },
+      "MRR@5": {
+        "delta": 0.13958333333333334,
+        "cluster_bootstrap_ci95": [
+          0.030208333333333327,
+          0.25835937499999984
+        ],
+        "wins": 8,
+        "losses": 1,
+        "ties": 23
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "jina_minus_skillret_reranker": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.0253915805090373,
+        "cluster_bootstrap_ci95": [
+          -0.01095332739768781,
+          0.06686861624282632
+        ],
+        "wins": 5,
+        "losses": 2,
+        "ties": 25
+      },
+      "Recall@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "Completeness@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "MRR@5": {
+        "delta": 0.02864583333333333,
+        "cluster_bootstrap_ci95": [
+          -0.03906250000000001,
+          0.09635416666666666
+        ],
+        "wins": 4,
+        "losses": 1,
+        "ties": 27
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "lora-hard": {
+    "queries": 32,
+    "gold-overlap_clusters": 31,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.013235693212072387,
+        "cluster_bootstrap_ci95": [
+          -0.009772319196612906,
+          0.044656631487327215
+        ],
+        "wins": 5,
+        "losses": 3,
+        "ties": 24
+      },
+      "Recall@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "Completeness@10": {
+        "delta": 0.0,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 0,
+        "ties": 32
+      },
+      "MRR@5": {
+        "delta": 0.0140625,
+        "cluster_bootstrap_ci95": [
+          -0.03333333333333333,
+          0.06451612903225806
+        ],
+        "wins": 2,
+        "losses": 2,
+        "ties": 28
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "lexical-hard-negative": {
+    "queries": 128,
+    "gold-overlap_clusters": 124,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.008330737218585297,
+        "cluster_bootstrap_ci95": [
+          -0.030987240033459245,
+          0.04802050328839763
+        ],
+        "wins": 26,
+        "losses": 27,
+        "ties": 75
+      },
+      "Recall@10": {
+        "delta": 0.011718750000000002,
+        "cluster_bootstrap_ci95": [
+          -0.021794871794871794,
+          0.04365079365079365
+        ],
+        "wins": 10,
+        "losses": 7,
+        "ties": 111
+      },
+      "Completeness@10": {
+        "delta": 0.0234375,
+        "cluster_bootstrap_ci95": [
+          -0.015748031496062992,
+          0.06300462442194718
+        ],
+        "wins": 5,
+        "losses": 2,
+        "ties": 121
+      },
+      "MRR@5": {
+        "delta": 0.024609375000000003,
+        "cluster_bootstrap_ci95": [
+          -0.04107036175710594,
+          0.08777441149934376
+        ],
+        "wins": 19,
+        "losses": 15,
+        "ties": 94
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "lexical-label-smoothing": {
+    "queries": 128,
+    "gold-overlap_clusters": 124,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.010947289877538425,
+        "cluster_bootstrap_ci95": [
+          -0.028566780225782334,
+          0.05081281913788936
+        ],
+        "wins": 27,
+        "losses": 27,
+        "ties": 74
+      },
+      "Recall@10": {
+        "delta": 0.011718750000000002,
+        "cluster_bootstrap_ci95": [
+          -0.021794871794871794,
+          0.04365079365079365
+        ],
+        "wins": 10,
+        "losses": 7,
+        "ties": 111
+      },
+      "Completeness@10": {
+        "delta": 0.0234375,
+        "cluster_bootstrap_ci95": [
+          -0.015748031496062992,
+          0.06300462442194718
+        ],
+        "wins": 5,
+        "losses": 2,
+        "ties": 121
+      },
+      "MRR@5": {
+        "delta": 0.02890625,
+        "cluster_bootstrap_ci95": [
+          -0.03734173126614987,
+          0.0923209635416666
+        ],
+        "wins": 20,
+        "losses": 15,
+        "ties": 93
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "lexical-anchoring": {
+    "queries": 128,
+    "gold-overlap_clusters": 124,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.027013161103473494,
+        "cluster_bootstrap_ci95": [
+          -0.008617336713422373,
+          0.0645569962484698
+        ],
+        "wins": 29,
+        "losses": 21,
+        "ties": 78
+      },
+      "Recall@10": {
+        "delta": 0.015625,
+        "cluster_bootstrap_ci95": [
+          -0.017948717948717947,
+          0.04651550387596897
+        ],
+        "wins": 10,
+        "losses": 6,
+        "ties": 112
+      },
+      "Completeness@10": {
+        "delta": 0.03125,
+        "cluster_bootstrap_ci95": [
+          0.0,
+          0.0703125
+        ],
+        "wins": 5,
+        "losses": 1,
+        "ties": 122
+      },
+      "MRR@5": {
+        "delta": 0.05182291666666666,
+        "cluster_bootstrap_ci95": [
+          -0.0066208362248438585,
+          0.11071759259259258
+        ],
+        "wins": 21,
+        "losses": 13,
+        "ties": 94
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "public-full-bm25-minus-skillret": {
+    "queries": 4392,
+    "gold-overlap_clusters": 3267,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": -0.1107460585464806,
+        "cluster_bootstrap_ci95": [
+          -0.12059602910593319,
+          -0.10124763039864736
+        ],
+        "wins": 710,
+        "losses": 1769,
+        "ties": 1913
+      },
+      "Recall@10": {
+        "delta": -0.0974878567091682,
+        "cluster_bootstrap_ci95": [
+          -0.10773985338973488,
+          -0.0871389384380176
+        ],
+        "wins": 259,
+        "losses": 855,
+        "ties": 3278
+      },
+      "Completeness@10": {
+        "delta": -0.11179417122040072,
+        "cluster_bootstrap_ci95": [
+          -0.12523080632005226,
+          -0.09850778573576965
+        ],
+        "wins": 183,
+        "losses": 674,
+        "ties": 3535
+      },
+      "MRR@5": {
+        "delta": -0.11400273224043717,
+        "cluster_bootstrap_ci95": [
+          -0.12631121820811658,
+          -0.10167410552917634
+        ],
+        "wins": 390,
+        "losses": 1138,
+        "ties": 2864
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "public-full-qwen_embed_06-minus-skillret": {
+    "queries": 4392,
+    "gold-overlap_clusters": 3267,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": -0.16127585954134085,
+        "cluster_bootstrap_ci95": [
+          -0.1705403306920647,
+          -0.151683549727052
+        ],
+        "wins": 410,
+        "losses": 2115,
+        "ties": 1867
+      },
+      "Recall@10": {
+        "delta": -0.15877352762598665,
+        "cluster_bootstrap_ci95": [
+          -0.1703109278465139,
+          -0.14756477464892032
+        ],
+        "wins": 120,
+        "losses": 1304,
+        "ties": 2968
+      },
+      "Completeness@10": {
+        "delta": -0.20810564663023678,
+        "cluster_bootstrap_ci95": [
+          -0.22305514274308616,
+          -0.19312671159256387
+        ],
+        "wins": 84,
+        "losses": 998,
+        "ties": 3310
+      },
+      "MRR@5": {
+        "delta": -0.14537795992714025,
+        "cluster_bootstrap_ci95": [
+          -0.15752030244399798,
+          -0.1323834946977805
+        ],
+        "wins": 321,
+        "losses": 1273,
+        "ties": 2798
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "public-full-rrf-minus-skillret": {
+    "queries": 4392,
+    "gold-overlap_clusters": 3267,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": 0.00013642986924891626,
+        "cluster_bootstrap_ci95": [
+          -0.0061166324048621355,
+          0.006768749677699603
+        ],
+        "wins": 1077,
+        "losses": 866,
+        "ties": 2449
+      },
+      "Recall@10": {
+        "delta": 0.0031117182756527023,
+        "cluster_bootstrap_ci95": [
+          -0.0045973326772286134,
+          0.00991853699659317
+        ],
+        "wins": 342,
+        "losses": 276,
+        "ties": 3774
+      },
+      "Completeness@10": {
+        "delta": 0.007285974499089253,
+        "cluster_bootstrap_ci95": [
+          -0.0030019294307271948,
+          0.017595928652435627
+        ],
+        "wins": 250,
+        "losses": 218,
+        "ties": 3924
+      },
+      "MRR@5": {
+        "delta": -0.0037416514875531276,
+        "cluster_bootstrap_ci95": [
+          -0.012142786484060215,
+          0.004853173159402595
+        ],
+        "wins": 529,
+        "losses": 485,
+        "ties": 3378
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  },
+  "lora-transfer-hard": {
+    "queries": 32,
+    "gold-overlap_clusters": 32,
+    "contrasts": {
+      "NDCG@10": {
+        "delta": -0.002888018736193281,
+        "cluster_bootstrap_ci95": [
+          -0.03059754802891403,
+          0.025399668962998462
+        ],
+        "wins": 3,
+        "losses": 4,
+        "ties": 25
+      },
+      "Recall@10": {
+        "delta": -0.03125,
+        "cluster_bootstrap_ci95": [
+          -0.09375,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 1,
+        "ties": 31
+      },
+      "Completeness@10": {
+        "delta": -0.03125,
+        "cluster_bootstrap_ci95": [
+          -0.09375,
+          0.0
+        ],
+        "wins": 0,
+        "losses": 1,
+        "ties": 31
+      },
+      "MRR@5": {
+        "delta": 0.020833333333333336,
+        "cluster_bootstrap_ci95": [
+          -0.020833333333333332,
+          0.07291666666666667
+        ],
+        "wins": 2,
+        "losses": 1,
+        "ties": 29
+      }
+    },
+    "interpretation": "Exploratory, not multiplicity-adjusted or independent confirmation."
+  }
+}

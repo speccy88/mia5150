@@ -1,0 +1,44 @@
+{
+  "status": "existing_exact_comparison_verified_not_repeated",
+  "query_count": 4392,
+  "candidate_budget_each": 30,
+  "dense20_prefix_preserved_for_every_query": true,
+  "dense20_positive_pairs_preserved": 5923,
+  "dense20_positive_pairs_lost": 0,
+  "dense30_positive_pairs_lost": 130,
+  "gained_vs_dense30": 183,
+  "aggregate": {
+    "dense30_recall30": 0.8733302975106253,
+    "hybrid30_recall30": 0.8749620522161506,
+    "dense30_oracle_recall5": 0.8733302975106253,
+    "hybrid30_oracle_recall5": 0.8749620522161506,
+    "dense30_oracle_recall10": 0.8733302975106253,
+    "hybrid30_oracle_recall10": 0.8749620522161506
+  },
+  "original_oracle_ndcg10": {
+    "dense30": 0.892344771934358,
+    "dense20_lexical10": 0.892717764221518
+  },
+  "original_query_wins_ties_losses": [
+    175,
+    4094,
+    123
+  ],
+  "source_hashes": {
+    "public-full-skillret_embed_06.json": "b25f30aba1e52f2b0a87d9c78a3f0dc0942ffe4edde4c420b85db56c1097849e",
+    "public-full-bm25.json": "e080c75b3f08a59dda830560621aa2f379ae585803a3e37a8bad5572adfb450a"
+  },
+  "original_protocol_sha256": "c601df43beee7295cd6518c285f93ca4a41f1041f26292d823758799c9ae87b8",
+  "original_artifacts_sha256": {
+    "freeze.json": "e267c4b3d1206c117c2bf8611e47938e18ee647aabafbc3bd8f51b86c0f70b23",
+    "pools.json": "518161d8a363f530b054b2e8ae4e306f997536da429c4e0971be0a354faa6e0f",
+    "evaluation.json": "fb732d1a6a81364c266f6a95befe5dd9563c2242d3206355669b443af168c268",
+    "per-query.json": "5f2f85990912329193fb57074e75bc7b9496608aa2a766ade8462571f79ae429"
+  },
+  "new_inference_calls": 0,
+  "new_api_calls": 0,
+  "new_downloads": 0,
+  "new_gpu_work": false,
+  "exposure": "All4392 are historically exposed public test queries. No untouched confirmation used. No gold-positive insertion or label-aware construction.",
+  "decision": "Do not repeat the exact coverage experiment or run another convenient local reranker panel: mean oracle NDCG10 headroom improves only0.000373 with123 regressing queries. Preserve all evidence. A future comparison needs a separately justified protocol, not a broad sweep."
+}

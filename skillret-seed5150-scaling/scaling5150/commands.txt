@@ -1,0 +1,36 @@
+Run from /home/user/code/mia5150-local using the existing uv-isolated .venv.
+These commands describe the executed stages. Existing result/run directories are
+intentionally immutable; reproduce in an isolated copy with new output directories.
+Start monitor_host.ps1 on Windows and export MIA_HOST_TELEMETRY to its WSL-visible
+JSONL path. Never disable or weaken guard.py. One GPU stage at a time.
+
+.venv/bin/python scaling5150/protocol.py
+.venv/bin/python -m unittest discover -s scaling5150 -p 'test_*.py'
+.venv/bin/python scaling5150/independent_audit.py
+
+python3 guard.py scaling5150-index-skillret-v1 .venv/bin/python scaling5150/prepare_cached_index.py skillret_embed_06
+python3 guard.py scaling5150-retrieval-pilot-v2 .venv/bin/python scaling5150/retrieval.py --pilot
+python3 guard.py scaling5150-eg2-pilot-v1 .venv/bin/python scaling5150/index_new_small.py eg2 --pilot
+python3 guard.py scaling5150-eg2-index-v1 .venv/bin/python scaling5150/index_new_small.py eg2
+python3 guard.py scaling5150-jina-pilot-v1 .venv/bin/python scaling5150/index_new_small.py jina --pilot
+python3 guard.py scaling5150-jina-index-v1 .venv/bin/python scaling5150/index_new_small.py jina
+
+.venv/bin/python scaling5150/run_stages.py indexes
+.venv/bin/python scaling5150/run_stages.py retrieval
+.venv/bin/python scaling5150/run_stages.py integrity
+.venv/bin/python scaling5150/selection.py --freeze-only
+.venv/bin/python scaling5150/rerank_local.py --freeze-only
+.venv/bin/python scaling5150/run_stages.py selectors
+.venv/bin/python scaling5150/run_stages.py rerankers
+
+# Separate output-format ablation after original strict routing failures:
+.venv/bin/python scaling5150/domain_constrained.py --freeze-only
+python3 guard.py scaling5150-domain-constrained-small-v1 .venv/bin/python scaling5150/domain_constrained.py --model small_qwen06
+python3 guard.py scaling5150-domain-constrained-medium-v1 .venv/bin/python scaling5150/domain_constrained.py --model medium_qwen35
+
+.venv/bin/python scaling5150/report.py
+.venv/bin/python scaling5150/package.py
+
+No keys, external inference, purchases, model uploads, new downloads or Git push.
+The cached third-party 8B GGUF receives a local tensor-extent/hash check before load;
+this is not an independent publisher-checksum verification.

@@ -1,0 +1,12 @@
+{
+  "dataset": "donghongjiang/skillreason-bench",
+  "revision": "91e159ea0ee88e6cf8d1f2e4ad46811b64dd281a",
+  "systems": ["BM25 header", "SkillRet0.6B FP16 header", "equal RRF k60"],
+  "query_selection": "First24 query_id values sorted by SHA256 of canonical JSON ID, fixed before query-file download",
+  "catalog": 61228,
+  "query_field": "query",
+  "gold_field_evaluator_only": "positive_ids",
+  "embedding": {"max_tokens":1024,"document_batch":4,"query_batch":1},
+  "license_handling": "README permits research use of queries/annotations; source skill documents retain upstream terms and metadata. Local read-only research, no execution or redistribution of raw source documents.",
+  "claim": "External transfer diagnostic only; checkpoint exposure not certified absent. No tuning on this panel."
+}

@@ -1,0 +1,13 @@
+{
+  "pod_id": "hkc98dv98ojfb5",
+  "terminated": true,
+  "verified_epoch": 1790480912.9214349,
+  "get_status": 404,
+  "events": [
+    {
+      "delete_status": 204,
+      "time": 1790480911.737796
+    }
+  ],
+  "compute_charges_after_termination": "none; actual invoice not measured"
+}

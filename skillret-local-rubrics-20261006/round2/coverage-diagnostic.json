@@ -1,0 +1,176 @@
+{
+  "initial12": {
+    "base_pool_oracle_ndcg10": 0.9804467197490517,
+    "union_pool_oracle_ndcg10": 0.9804467197490517,
+    "new_relevant_candidates": 0,
+    "details": [
+      {
+        "id": "q-04419",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 25
+      },
+      {
+        "id": "q-03802",
+        "gold_count": 2,
+        "base_covered": 2,
+        "union_covered": 2,
+        "new_gold_ids": [],
+        "union_size": 24
+      },
+      {
+        "id": "q-03050",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 25
+      },
+      {
+        "id": "q-03154",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 26
+      },
+      {
+        "id": "q-01972",
+        "gold_count": 3,
+        "base_covered": 2,
+        "union_covered": 2,
+        "new_gold_ids": [],
+        "union_size": 27
+      },
+      {
+        "id": "q-02255",
+        "gold_count": 3,
+        "base_covered": 3,
+        "union_covered": 3,
+        "new_gold_ids": [],
+        "union_size": 28
+      },
+      {
+        "id": "q-02590",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 30
+      },
+      {
+        "id": "q-04772",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 24
+      },
+      {
+        "id": "q-01137",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 24
+      },
+      {
+        "id": "q-01223",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 28
+      },
+      {
+        "id": "q-00702",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 28
+      },
+      {
+        "id": "q-03923",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 27
+      }
+    ]
+  },
+  "selective8": {
+    "base_pool_oracle_ndcg10": 0.92231347871926,
+    "union_pool_oracle_ndcg10": 0.92231347871926,
+    "new_relevant_candidates": 0,
+    "details": [
+      {
+        "id": "q-03502",
+        "gold_count": 2,
+        "base_covered": 2,
+        "union_covered": 2,
+        "new_gold_ids": [],
+        "union_size": 28
+      },
+      {
+        "id": "q-01302",
+        "gold_count": 3,
+        "base_covered": 3,
+        "union_covered": 3,
+        "new_gold_ids": [],
+        "union_size": 24
+      },
+      {
+        "id": "q-00844",
+        "gold_count": 2,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 24
+      },
+      {
+        "id": "q-02230",
+        "gold_count": 2,
+        "base_covered": 2,
+        "union_covered": 2,
+        "new_gold_ids": [],
+        "union_size": 28
+      },
+      {
+        "id": "q-00719",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 25
+      },
+      {
+        "id": "q-00940",
+        "gold_count": 3,
+        "base_covered": 2,
+        "union_covered": 2,
+        "new_gold_ids": [],
+        "union_size": 29
+      },
+      {
+        "id": "q-03891",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 27
+      },
+      {
+        "id": "q-04890",
+        "gold_count": 1,
+        "base_covered": 1,
+        "union_covered": 1,
+        "new_gold_ids": [],
+        "union_size": 25
+      }
+    ]
+  }
+}

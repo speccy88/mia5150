@@ -1,0 +1,10 @@
+{
+  "status": "paid_tests_paused_pending_review",
+  "committed_usd": "1.77",
+  "cap_usd": "4.00",
+  "known_successful_usage_usd": "0.0061592370",
+  "paid_attempts": 31,
+  "unknown_charge": "One failed OpenRouter attempt; reservation retained, no retry.",
+  "reserve_refunds_applied": false,
+  "key_files_included": false
+}

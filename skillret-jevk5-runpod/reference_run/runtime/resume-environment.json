@@ -1,0 +1,15 @@
+{
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A40",
+  "transformers": "5.17.0",
+  "peft": "0.21.2",
+  "jevk5_direct_url": {
+    "url": "https://github.com/allebee/jevk5.git",
+    "vcs_info": {
+      "commit_id": "6c6522fe5462a05fdb82bceeb0e8c624c11f1517",
+      "requested_revision": "6c6522fe5462a05fdb82bceeb0e8c624c11f1517",
+      "vcs": "git"
+    }
+  }
+}

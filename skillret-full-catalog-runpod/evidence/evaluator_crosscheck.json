@@ -1,0 +1,6 @@
+{
+  "method_query_rows_checked": 100,
+  "ranking_permutation": true,
+  "score_order_ties": true,
+  "independent_recall_at_5_and_mrr": true
+}

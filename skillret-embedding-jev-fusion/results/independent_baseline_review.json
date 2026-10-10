@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewer": "baseline_quality_audit",
+  "review_date_utc": "2026-10-07",
+  "status": "no_material_implementation_blocker_found",
+  "scope": [
+    "run_skillret_baseline.py: full-text construction, exact query prefix, source pins, 32768-token limit, effective RoPE, pooling, normalization, dot similarity, cache identity and resume integrity",
+    "evaluate.py: fixed qrels denominator, NDCG, Recall, Completeness, MAP, Precision, MRR, candidate coverage, deterministic subsets and paired bootstrap",
+    "diagnostics.py: truncation evidence and relevant-pair coverage",
+    "run_jev_rerank.py: unchanged dense top20 candidate pools and one-based equal-weight RRF60",
+    "SOURCE_AUDIT.md and pinned local official skillret/eval.py and skillret/config.py"
+  ],
+  "validation": {
+    "command": "../.venv/bin/python -B -m unittest test_evaluate -v",
+    "working_directory": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion",
+    "tests_run": 14,
+    "tests_passed": 14,
+    "reported_test_seconds": 0.030,
+    "randomized_pytrec_eval_parity": {
+      "status": "passed",
+      "query_fixtures": 100,
+      "metrics": ["NDCG", "MAP", "Recall", "Precision"],
+      "cutoffs": [5, 10, 15],
+      "asserted_decimal_places": 13
+    }
+  },
+  "review_actions": {
+    "gpu_or_model_execution": false,
+    "hosted_api_calls": 0,
+    "credential_access": false,
+    "active_baseline_edits": false
+  },
+  "cautions": [
+    "This implementation review is not a claim of benchmark reproduction. The completed full 4392-query result and its actual target deviations must pass the baseline gate before validation is claimed.",
+    "Final-run torch peak-memory fields describe the resumed query process only. Report peak resources across all guarded attempts, including longest-document feasibility, rather than presenting the resumed query process as the full-corpus peak.",
+    "SOURCE_AUDIT.md describes the initial free-only authorization phase. Final authorization status should use the later evidence preserved in BUDGET_STATUS.md."
+  ]
+}

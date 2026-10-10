@@ -1,0 +1,21 @@
+{
+  "time": 1791241626.8366458,
+  "stages": [
+    "large-choice-jev",
+    "large-choice-plumb",
+    "prompt-32768",
+    "sra-transfer",
+    "skillreason-data",
+    "skillreason-schema",
+    "skillreason-external",
+    "policy-native"
+  ],
+  "status": "not_run_after_resource_failures",
+  "reason": "Full-body indexing, field encoding, large download and cached4B diagnostics encountered strict resource guards. Do not force further heavyweight runs under the current host load. Existing code and frozen protocols remain runnable; no completed evaluation claimed.",
+  "related_runs": [
+    "fullbody-skillret",
+    "field-six",
+    "qwen8-download",
+    "llm-candidates"
+  ]
+}

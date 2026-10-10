@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "id": "q-00091",
+      "status": "ok",
+      "score_count": 20,
+      "score_change_epsilon": 1e-09,
+      "changed_scores": 17,
+      "max_absolute_score_change": 0.10000000000000009,
+      "mean_absolute_score_change": 0.0205,
+      "jev_ranking_identical": true,
+      "jev_inverted_pairs": 0,
+      "jev_top5_overlap": 5,
+      "fusion_identical": true,
+      "fusion_inverted_pairs": 0,
+      "fusion_top1_same": true,
+      "fusion_top5_overlap": 5
+    },
+    {
+      "id": "q-03583",
+      "status": "ok",
+      "score_count": 20,
+      "score_change_epsilon": 1e-09,
+      "changed_scores": 10,
+      "max_absolute_score_change": 0.06999999999999984,
+      "mean_absolute_score_change": 0.0125,
+      "jev_ranking_identical": false,
+      "jev_inverted_pairs": 3,
+      "jev_top5_overlap": 5,
+      "fusion_identical": false,
+      "fusion_inverted_pairs": 2,
+      "fusion_top1_same": true,
+      "fusion_top5_overlap": 5
+    }
+  ],
+  "known_usage_usd": "0.000308322",
+  "input_tokens": 7341,
+  "committed_usd": "1.77",
+  "paid_tests_stopped": true,
+  "caveat": "Operational robustness only. No quality labels. A changed answer could reflect temporal/backend nondeterminism as well as order; without a repeated original-order control we cannot isolate cause. Two cases do not establish general invariance.",
+  "protocol_sha256": "2a38f670f91c94ab1fbc29d392b4b400561a87ccd5bf4d55934eacb2ddb30e34",
+  "raw_results_sha256": "53f6155b28df6ad989b7054c0cf25e8b22992774db460962c5d4be4f60627d6d"
+}

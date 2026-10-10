@@ -1,0 +1,19 @@
+# Keep credentials, environments, model caches, and large regenerated arrays local.
+.env
+.env.*
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+*.zip
+model-cache/
+piptmp/
+vectors/
+results/*.npy
+data/train_*.jsonl
+checkpoints/clm_skillret/last_head.pt
+checkpoints/clm_skillret/resume_state.pt
+logs/*
+!logs/pytest_cu128.txt
+!logs/report_revision.log

@@ -1,0 +1,15 @@
+{
+  "ready_for_delivery": true,
+  "checked_at_utc": "2026-10-02T11:14:54.719287+00:00",
+  "primary_queries": 32,
+  "pdf_pages": 4,
+  "pdf_visual_qa": "Every final rendered page inspected; readable tables and caveats, no clipping or orphan overflow. Parent review also approved.",
+  "canonical_html_validation": "passed",
+  "html_browser_qa": "structural_only; no usable headless browser",
+  "numerical_audit": "Independent metric, timing, source-hash, bootstrap point-estimate and CSV reconciliation passed; see independent_final_audit.json",
+  "notebook_code_cells_executed": 15,
+  "notebook_execution": "in-process ordinary Python cells, not Jupyter kernel",
+  "pdf_sha256": "2d8bde9d8408d6c4e2f1e29c817bd0d7a5a8c2bc6b8fa19e6f74adc0b744377c",
+  "artifact_sha256": "1ab42bb6248d0076e3dbc2d7cb79d74f03f06ac8a4d760038a24161057a39ae2",
+  "inference_after_telemetry_stop": false
+}

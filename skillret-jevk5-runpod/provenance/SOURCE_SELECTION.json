@@ -1,0 +1,577 @@
+{
+  "import_date": "2026-10-02",
+  "files": [
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/__init__.py",
+      "destination": "scripts/__init__.py",
+      "sha256": "fd76f697ba33cbb69d8df00d178cd63b9172f22dcdfdf07628918acebf1908fd",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/bootstrap.sh",
+      "destination": "scripts/bootstrap.sh",
+      "sha256": "85ce2df4d4fb96f524f2ac425de705f040b3480140ab8f7ff5cc75c1e7138947",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/build.py",
+      "destination": "scripts/build.py",
+      "sha256": "f7afaf361c449f10b0f14f15582413227fa2c9a84bd95508e1944cf6277c2db1",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/demo.py",
+      "destination": "scripts/demo.py",
+      "sha256": "76e88461a5d65ab38be4315b7ac608260958696a27c9112b8587a7de525eb903",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/export_results.py",
+      "destination": "scripts/export_results.py",
+      "sha256": "bd2af7908b3cfeee7978278a7706abeecb2570a9790f5a48081418d8f0340de6",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/fetch.py",
+      "destination": "scripts/fetch.py",
+      "sha256": "5229ef2c113b6bdeac95b39001d720ade9b08532531dc1bad02d140059343eeb",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/infer.py",
+      "destination": "scripts/infer.py",
+      "sha256": "2e158391747994ed550464e54319d2568075a5e7fb86a71c0f0e61dc0e479770",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/pilot_report.py",
+      "destination": "scripts/pilot_report.py",
+      "sha256": "cf8f9a6e54f61bcea8f0361c7d134f2f50b3ad5fac530d93977e17d7521142ea",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/score.py",
+      "destination": "scripts/score.py",
+      "sha256": "082f0552e8ac4c504e517fc22981e911415e4ea089c0345a09ce99268a0d6480",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/scripts/train.py",
+      "destination": "scripts/train.py",
+      "sha256": "fe262335a9da31a02cbfda79d3a74918b9e9aaa4546ad22d8a0f0bd8d75eccd1",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/skillret_decider/__init__.py",
+      "destination": "skillret_decider/__init__.py",
+      "sha256": "359c0d27730d32d86892d9b9a63cc09f2e2c19f595bba2811dadd3101f5eed17",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/skillret_decider/core.py",
+      "destination": "skillret_decider/core.py",
+      "sha256": "09828f2c85fc77355b603f3f2caabe8d5679bd6b6c7ff8a995893f2dd26fc616",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/skillret_decider/model.py",
+      "destination": "skillret_decider/model.py",
+      "sha256": "2784c323c3a898ec0bec73161034a270f9c00a027907d2e0820daed4574b4e13",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/tests/test_cli.py",
+      "destination": "tests/test_cli.py",
+      "sha256": "420d53c4efacf031a9e505d70d68678458b146efbb39994465fe08eadc96ee33",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/tests/test_core.py",
+      "destination": "tests/test_core.py",
+      "sha256": "bd62c77acecd81206433184b302e7670bdf83d17f1a508245c8d26ec37baf5cb",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/tests/test_runtime_budget.py",
+      "destination": "tests/test_runtime_budget.py",
+      "sha256": "dd3fd3c645b7304c6779c93e26a4a60776cb4bc05e9c43de20ab553491c8a042",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/tests/test_training_math.py",
+      "destination": "tests/test_training_math.py",
+      "sha256": "d6dcdeb87be4dd32c71f3debeefdc27149cfbc06913bb11ba0c7f7fdfc7a958e",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/notebooks/01_data_and_targets.ipynb",
+      "destination": "notebooks/01_data_and_targets.ipynb",
+      "sha256": "583704b52ab0aaa2d61080513a85289bc4a75832a29ee63bf86d00c67dc4615e",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/notebooks/02_training_and_evaluation.ipynb",
+      "destination": "notebooks/02_training_and_evaluation.ipynb",
+      "sha256": "9d0311707c4f5ee65c1c79ec2e8bfce9c29b68d909b3f13f0e0592c56e280910",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/configs/BUDGET_TEMPLATE.json",
+      "destination": "configs/BUDGET_TEMPLATE.json",
+      "sha256": "3e41aec5a43fd9a53955952cd51ff8676cadd9fde02e9fe927ffb037a919a270",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/configs/full.json",
+      "destination": "configs/full.json",
+      "sha256": "23e43db9ccdecee1a1c2465657af2583bdab0384d434e4f2b4f746367268c4d2",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/configs/pilot.json",
+      "destination": "configs/pilot.json",
+      "sha256": "46a86ae91f672fdb34648c9b3b71d0039e26074c9a24f31c20e4a8a08c66ed0b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/configs/plumb_optional.json",
+      "destination": "configs/plumb_optional.json",
+      "sha256": "ce4e6de0efce3135096443b1148ecb8de4674135e18eb0c73d9ea78c51190744",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/docs/CLM_LESSONS.md",
+      "destination": "docs/CLM_LESSONS.md",
+      "sha256": "be95c426db8c1321da9952cfed2eafb41ad1c0f713f1b3420cd90866781606df",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/docs/IMPLEMENTATION_REVIEW.md",
+      "destination": "docs/IMPLEMENTATION_REVIEW.md",
+      "sha256": "0526ab14d3ee75fd1f4a57150b5a5380d7440b0b8c246a4c3b93688391657571",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/docs/PACKAGE_VALIDATION.md",
+      "destination": "docs/PACKAGE_VALIDATION.md",
+      "sha256": "82273f2c8be97036556551bb2750730170b2d4f2308419f2345036496d8fecff",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/docs/RUNPOD_OPERATIONS.md",
+      "destination": "docs/RUNPOD_OPERATIONS.md",
+      "sha256": "72129314b47fd1424fb08f46d9d8e0119f9f54b84ae917001d8cde05d90ab604",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/docs/SOURCES.md",
+      "destination": "docs/SOURCES.md",
+      "sha256": "f3622e5aa40585b6ee523ec2d5a6ac184dc7b96ac5e2461e98609679f0108ef2",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/README.json",
+      "destination": "examples/synthetic/README.json",
+      "sha256": "4b484edff1a60a5df7d6902daffa4d3c45a6ed52f89b9c428729af233696e766",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/converted.synthetic.jsonl",
+      "destination": "examples/synthetic/converted.synthetic.jsonl",
+      "sha256": "8cbb6ae6e67f38a59861a2747ba0f2ad9d7f33a2cf806de9304b209bc6709b59",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/qrels.synthetic.jsonl",
+      "destination": "examples/synthetic/qrels.synthetic.jsonl",
+      "sha256": "f80c62f23f954d9b8c5d6e96fbdfd99ea9942c604a2248d5463f5f5e9d13954e",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/queries.synthetic.jsonl",
+      "destination": "examples/synthetic/queries.synthetic.jsonl",
+      "sha256": "01ce1a2d1a78eaff8e5cd15a7ceef2d737fc4066e504d9dd9b2b7982e7fcfb54",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/skills.synthetic.jsonl",
+      "destination": "examples/synthetic/skills.synthetic.jsonl",
+      "sha256": "dcee8e8b5c4276ddfe567f75ad5922a29eb539ee0f1a9e188ddfc1a904184629",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/examples/synthetic/upstream.synthetic.jsonl",
+      "destination": "examples/synthetic/upstream.synthetic.jsonl",
+      "sha256": "d7119f59a41bb92687210018f1ee62fa4cfe91c8ed4d4156d4ad389478f8ec8d",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/requirements.txt",
+      "destination": "requirements.txt",
+      "sha256": "1b008a6b3c13f23172069b6847eeda8b65a067da387d121d9d3962d7351fb4dd",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/PROTOCOL.md",
+      "destination": "PROTOCOL.md",
+      "sha256": "2be60203938d10e239ef281a9801510622645216a7dff5fad3ce15e11eeb75be",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/START_HERE.md",
+      "destination": "ORIGINAL_START_HERE.md",
+      "sha256": "29de6e193878d7e22f1f18960ae926b28b0d5c64d58d4f6b65914513bcee8a43",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/STATUS.md",
+      "destination": "ORIGINAL_STATUS.md",
+      "sha256": "3c46582f631424a26a1600e0833366e4a7a17af9535577682a2936bdad7fd979",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/HERMES_HANDOFF.md",
+      "destination": "docs/ORIGINAL_HERMES_HANDOFF.md",
+      "sha256": "adf24a3f3976d298110c80968fe26d234afd8c78942a6200f35a52dd691a8a37",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/SHA256SUMS",
+      "destination": "provenance/ORIGINAL_KIT_SHA256SUMS",
+      "sha256": "b9732ab32a3905076eaf02ae52724fed824afe28904c1c15970e73b39475af13",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resume-source.patch",
+      "destination": "provenance/resume-source.patch",
+      "sha256": "c954a12fee2fd690426c3353bd19a3da5370fce00971e2d5bbcaf925ccd0c5fc",
+      "transformation": null
+    },
+    {
+      "source": "preflight/REVIEW.md",
+      "destination": "provenance/PREFLIGHT_REVIEW.md",
+      "sha256": "5fc3689da76fefb895c5dbc38ab5e30de2f3fb4b9eee21906f0fa48e52f0f4ca",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/admission.json",
+      "destination": "reference_run/original/admission.json",
+      "sha256": "b94ed7b6b4ff4aa5052533d75f22013c0996b123c5c9151d5ca96a1dadfdc68d",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/config.json",
+      "destination": "reference_run/original/config.json",
+      "sha256": "46a86ae91f672fdb34648c9b3b71d0039e26074c9a24f31c20e4a8a08c66ed0b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/data_manifest.json",
+      "destination": "reference_run/original/data_manifest.json",
+      "sha256": "9a78c73fd5fff63b077e1b5306e645cfd8a3fa152da495c49f23b485e4c39fe8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/environment.json",
+      "destination": "reference_run/original/environment.json",
+      "sha256": "6bc5b74441c4f306125896e68542b15b32b3eb1a54dbb610646300c2112ad7b7",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/events.jsonl",
+      "destination": "reference_run/original/events.jsonl",
+      "sha256": "3404ab0cafe204f3bab619ab71a8657e855753485a7d17310d0609e653ed36f6",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/failure.json",
+      "destination": "reference_run/original/failure.json",
+      "sha256": "07a11ca61553939560b3e33765d3da64d64c86f0c62175caee72a51c437867ab",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/tokenization_audit.jsonl",
+      "destination": "reference_run/original/tokenization_audit.jsonl",
+      "sha256": "0b693989c668d75ebcd4d8e4dbf61b2150a518a0ddfe91987af4b408bba1c194",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/validation.zero-shot.predictions.jsonl",
+      "destination": "reference_run/original/validation.zero-shot.predictions.jsonl",
+      "sha256": "4e17b33219b46b81af7ce33c4408f61e0165e0bce6da9a1086237ca81c23a916",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/validation.zero-shot.metrics.json",
+      "destination": "reference_run/original/validation.zero-shot.metrics.json",
+      "sha256": "824e3a34f88d62c7953098bbcad404eac0842a97ff0e0966abaa95743edac420",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/validation.step-000050.predictions.jsonl",
+      "destination": "reference_run/original/validation.step-000050.predictions.jsonl",
+      "sha256": "9474da3f77664032df637ebe64f16cdb52fccee807025210e963c2011b133456",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-001/validation.step-000050.metrics.json",
+      "destination": "reference_run/original/validation.step-000050.metrics.json",
+      "sha256": "a365ed5744345f199fdef2a855af0a2a74de7cc47156b0ebe761cef985645983",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/admission.json",
+      "destination": "reference_run/resumed/admission.json",
+      "sha256": "b94ed7b6b4ff4aa5052533d75f22013c0996b123c5c9151d5ca96a1dadfdc68d",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/config.json",
+      "destination": "reference_run/resumed/config.json",
+      "sha256": "46a86ae91f672fdb34648c9b3b71d0039e26074c9a24f31c20e4a8a08c66ed0b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/data_manifest.json",
+      "destination": "reference_run/resumed/data_manifest.json",
+      "sha256": "9a78c73fd5fff63b077e1b5306e645cfd8a3fa152da495c49f23b485e4c39fe8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/environment.json",
+      "destination": "reference_run/resumed/environment.json",
+      "sha256": "75366f1e002c3b252333a8dff89b207a9f7546ffda86b823c453e704950a4092",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/events.jsonl",
+      "destination": "reference_run/resumed/events.jsonl",
+      "sha256": "63a83a66e77e1575584d9a164436fc1c8121186e73a272cceca0916841ce0e51",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/runtime_budget.json",
+      "destination": "reference_run/resumed/runtime_budget.json",
+      "sha256": "28c30a7de861794027bb474db0ffb5d1a1b3532876a2a5b66ed475145469ea4b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/selection.json",
+      "destination": "reference_run/resumed/selection.json",
+      "sha256": "21029dc8d61381f057a79743b2e9e91a172acf0258baf16bb5be19c2e07994a4",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/training_summary.json",
+      "destination": "reference_run/resumed/training_summary.json",
+      "sha256": "46882faba26ddfc6c15e96f0927ff10eb116474bb4af21e5137c7d2ea2c3575b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/tokenization_audit.jsonl",
+      "destination": "reference_run/resumed/tokenization_audit.jsonl",
+      "sha256": "0b693989c668d75ebcd4d8e4dbf61b2150a518a0ddfe91987af4b408bba1c194",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/selected_validation_predictions.jsonl",
+      "destination": "reference_run/resumed/selected_validation_predictions.jsonl",
+      "sha256": "4799925f1bd49e8b8047101dc79eacba1a8f80911f9386f470695801fb0e5dc8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resumed-validation-score/summary.json",
+      "destination": "reference_run/results/summary.json",
+      "sha256": "25cdb1ba4f3a4b101fb6762708c5dbfa9641011afd93f6dd35901786ac92443e",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resumed-validation-score/bge.metrics.json",
+      "destination": "reference_run/results/bge.metrics.json",
+      "sha256": "83f2a2f0bd209767aac75962f743928c485a169ddaac0a40b6d0f88e56e28ae4",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resumed-validation-score/selected.metrics.json",
+      "destination": "reference_run/results/selected.metrics.json",
+      "sha256": "508754d52252342a61c9a0d0e2d3ff091ca57f4ea7f1776d0830172ea2c37d8c",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resumed-validation-score/bge.predictions.jsonl",
+      "destination": "reference_run/results/bge.predictions.jsonl",
+      "sha256": "3f39769fc1c9fa61445d6b0ea9a9f5a4db4551df03461dc792b33231eba94a3b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/reloaded-resumed-selected/reload_check.json",
+      "destination": "reference_run/reload/reload_check.json",
+      "sha256": "4683a8fbb0ff4ff446c50698431d4cad6a9287673b4a63d23c54cf937e9c413e",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/reloaded-resumed-selected/manifest.json",
+      "destination": "reference_run/reload/manifest.json",
+      "sha256": "2c9af5c263eeed0034499ccca134b1e273546120f3c222df9c3a19a39cb345d7",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/reloaded-resumed-selected/predictions.jsonl",
+      "destination": "reference_run/reload/predictions.jsonl",
+      "sha256": "b1ff82ea8bcbc014cfb6497be9f02af12be6f3350581b2a0f5e1be3b65426f0c",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/reloaded-resumed-selected/tokenization_audit.jsonl",
+      "destination": "reference_run/reload/tokenization_audit.jsonl",
+      "sha256": "50ff42e2f4d7f6910583a8178fc06ee2478ae04701b37e835b1a409448d0d9dd",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/split.json",
+      "destination": "reference_run/data/split.json",
+      "sha256": "1599380dd4989ad826ef270c0da11457c63e24d2afa76c401e9bab7b947223cf",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/validation_labels.json",
+      "destination": "reference_run/data/validation_labels.json",
+      "sha256": "cba63fc4e2707391ddc462b934b102f000212e10384ec69b99e3d48d242d5b28",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/manifest.json",
+      "destination": "reference_run/data/manifest.json",
+      "sha256": "9a78c73fd5fff63b077e1b5306e645cfd8a3fa152da495c49f23b485e4c39fe8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/validation.jsonl",
+      "destination": "reference_run/data/validation_candidates.jsonl",
+      "source_sha256": "1eda88ec773628041109ac67686e1aa23aff86f8766c8dbc9f90d9456a10cfdc",
+      "sha256": "b3d4e8dec6be234dd9ed5cd06285119686df9797dc1a6b1472fcf573ce96a761",
+      "transformation": "Keep only IDs, split, option mapping, natural retrieval order and injection flag"
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/train.jsonl",
+      "destination": "reference_run/data/training_ids.json",
+      "source_sha256": "0d112f5303c214b2af77490f33e4dc787cdb1f9ee34f4f6ce1610030d4ad2a11",
+      "sha256": "5457156eda808ee844eaa161bd04c706430bd103f4f4a7082fbff3826a77952e",
+      "transformation": "Retain ordered selected training-query IDs only"
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/data-pilot/retrieved_top100.jsonl",
+      "destination": "reference_run/data/validation_top100.jsonl",
+      "source_sha256": "2aec06297107b768274861cd8f8c452b332f842503173c77d4a13a3b33ec3bc1",
+      "sha256": "74c59272118dc9ba95e95def8e50b45d9e0bd6719ca122be7e2913c89639980e",
+      "transformation": "Keep validation query rows only; ID-only top100"
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/selected_adapter/README.md",
+      "destination": "selected_adapter/README.md",
+      "sha256": "ff6f0acd41ad22d5290d9558147de580db332bf885c100deb74d867396a0dc54",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/selected_adapter/adapter_config.json",
+      "destination": "selected_adapter/adapter_config.json",
+      "sha256": "2959bbc3ae503c7790b9a3acfd08626de8f5234993635516797bd85bc634b642",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/runs/pilot-002-resumed/selected_adapter/adapter_model.safetensors",
+      "destination": "selected_adapter/adapter_model.safetensors",
+      "sha256": "2d35306c3f18f99fe337d729a95f5af5cf6eb60cce1a4df376a74319d1bb6338",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resume-environment.json",
+      "destination": "reference_run/runtime/resume-environment.json",
+      "sha256": "39b43f10df85f7728e54dc511f4f20a6c18499cab2feb1058b9c56c71fea89d8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resume-pinned-requirements.txt",
+      "destination": "reference_run/runtime/resume-pinned-requirements.txt",
+      "sha256": "b308032ee76e69b45e4820e027aa229f3af40754367c1e5b96d6ae49f286db81",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/pip-freeze.txt",
+      "destination": "reference_run/runtime/pip-freeze.txt",
+      "sha256": "224f785fe4d651bebd23dbec28c8fc4f9194e5dfa51396fd129fe2838051d0a7",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resume-tests.xml",
+      "destination": "reference_run/runtime/resume-tests.xml",
+      "sha256": "01b40d9614cc2b11c973c77136ab90597c95ffe01ef5e8aded13efad8280e0be",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/bootstrap-tests.xml",
+      "destination": "reference_run/runtime/bootstrap-tests.xml",
+      "sha256": "8c5a2baa49166d650e482434f7066e3538a5d8fb3d3e7ed7ec551442164f85d8",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/experiment/workspace/resumed-full-workload-estimate.json",
+      "destination": "reference_run/runtime/resumed-full-workload-estimate.json",
+      "sha256": "8bad0b73a46d20ead2ef989b2711dd6471110474f7e253f9a68dfdaf7243d3fe",
+      "transformation": null
+    },
+    {
+      "source": "pilot-20261002/OUTCOME.md",
+      "destination": "reference_run/original/ORIGINAL_OUTCOME.md",
+      "sha256": "565914c138cff81ab71cdb13e56b42d235329e9ce779d08e086ab538a698a03c",
+      "transformation": null
+    },
+    {
+      "source": "pilot-20261002/teardown-receipt.json",
+      "destination": "reference_run/original/teardown-receipt.json",
+      "sha256": "e166a37827c8e78935aa810a10f96711a3ee4682418abae40d74a853db22cd9b",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/OUTCOME.md",
+      "destination": "reference_run/resumed/ORIGINAL_OUTCOME.md",
+      "sha256": "4c5787100004fa75e5b5fc44b8bd6809eaabcea72a1896b427514884ddb1bd91",
+      "transformation": null
+    },
+    {
+      "source": "resumed-pilot-20261002/teardown-receipt.json",
+      "destination": "reference_run/resumed/teardown-receipt.json",
+      "sha256": "085434a8b57dcf5bf7b14fb91e514956d7adeb74542170f382b24a78923d7dc2",
+      "transformation": null
+    }
+  ],
+  "archives": [
+    {
+      "path": "pilot-20261002/SkillRet_JevK5_Pilot_Results.zip",
+      "sha256": "fd042ff7c72a36ae5be003ccb7e083033a68048b974d45ea210919fd69b97dd2",
+      "bytes": 296050532,
+      "all_extracted_members_hash_verified": 103
+    },
+    {
+      "path": "resumed-pilot-20261002/SkillRet_JevK5_Resumed_Pilot_Results.zip",
+      "sha256": "6a470fe563e0ac607e5a4c5931b15652af34f579234db5231913265f39824758",
+      "bytes": 513536172,
+      "all_extracted_members_hash_verified": 157
+    }
+  ],
+  "original_kit": {
+    "sha256": "b2164b02e6e007c6d458182b717f736b42278eb53f86102ff5482665346aa29b",
+    "manifest_entries_verified": 46
+  },
+  "omitted_from_repository": [
+    "original ZIP archives",
+    "raw query and skill text",
+    "training examples containing text",
+    "embedding matrices",
+    "optimizer/RNG pickle states",
+    "intermediate adapters and tokenizer assets",
+    "provisioning controllers and raw install logs"
+  ],
+  "local_backup": "local-experiments/artifacts/skillret-jevk5-runpod-2026-10-02/source-drive",
+  "new_inference_or_paid_runs": false
+}

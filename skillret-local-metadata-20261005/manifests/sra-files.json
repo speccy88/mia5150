@@ -1,0 +1,34 @@
+{
+  "repository": "WeihangSu/SRA-Bench",
+  "revision": "6143f2634eb284955ce312213bac24b582d039f3",
+  "files": {
+    "corpus/corpus.json": {
+      "sha256": "16ee509ae5bea8c2e17167dffecd89100a7d8dfa31256c3742426758c7169b5e",
+      "bytes": 232255987
+    },
+    "instances/bigcodebench.json": {
+      "sha256": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "bytes": 4623115
+    },
+    "instances/champ.json": {
+      "sha256": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "bytes": 72375
+    },
+    "instances/logicbench.json": {
+      "sha256": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "bytes": 531231
+    },
+    "instances/medcalcbench.json": {
+      "sha256": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "bytes": 3693279
+    },
+    "instances/theoremqa.json": {
+      "sha256": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb",
+      "bytes": 320643
+    },
+    "instances/toolqa.json": {
+      "sha256": "e41eb4d4b67c1dd8e1178c88e9e8ff15525b31803694e9459d115c274fb04f0e",
+      "bytes": 413554
+    }
+  }
+}

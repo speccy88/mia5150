@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runtime_check.py", line 10, in <module>
+    r=dict(torch=torch.__version__,transformers=transformers.__version__,peft=peft.__version__,device=torch.cuda.get_device_name(0),capability=torch.cuda.get_device_capability(0),hub_kernels_enabled=hk.USE_HUB_KERNELS,fast_path=q.is_fast_path_available,causal_conv1d=q.causal_conv1d_fn is not None,chunk_gated_delta_rule=q.chunk_gated_delta_rule is not None,modeling_path=q.__file__,modeling_sha256=hashlib.sha256(pathlib.Path(q.__file__).read_bytes()).hexdigest(),threads=torch.get_num_threads(),fla_spec=str(importlib.util.find_spec('fla')),causal_conv_spec=str(importlib.util.find_spec('causal_conv1d')))
+                                                                                                                                                                                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'transformers.integrations.hub_kernels' has no attribute 'USE_HUB_KERNELS'

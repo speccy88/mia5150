@@ -1,0 +1,8 @@
+[
+  "/home/user/code/mia5150-local/.venv/bin/python",
+  "/mnt/c/Users/user/Documents/Codex/2026-10-06/task-3/execute_authorized_jev_study.py",
+  "--plan",
+  "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/preparation_manifest.json",
+  "--gates",
+  "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/results/hosted-execution/actual-smoke-pilot-admission/pilot_gate_config.json"
+]

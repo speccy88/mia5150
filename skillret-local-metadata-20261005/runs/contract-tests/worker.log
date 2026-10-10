@@ -1,0 +1,133 @@
+
+==================================== ERRORS ====================================
+_________ ERROR collecting runs/contract-tests/source/test_contract.py _________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/contract-tests/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting runs/escalation/source/test_contract.py ___________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/escalation/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+__________ ERROR collecting runs/field-tfidf/source/test_contract.py ___________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/field-tfidf/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting runs/full-qwen/source/test_contract.py ____________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/full-qwen/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_________ ERROR collecting runs/full-skillret/source/test_contract.py __________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/full-skillret/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______ ERROR collecting runs/full-skillret-direct/source/test_contract.py ______
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/full-skillret-direct/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+__________ ERROR collecting runs/jev-skillret/source/test_contract.py __________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/jev-skillret/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_________ ERROR collecting runs/plumb-skillret/source/test_contract.py _________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/plumb-skillret/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+__________ ERROR collecting runs/prompt-scale/source/test_contract.py __________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/prompt-scale/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_________ ERROR collecting runs/pytest-install/source/test_contract.py _________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/pytest-install/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting runs/r3-rerank/source/test_contract.py ____________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/r3-rerank/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+__________ ERROR collecting runs/r3-streamed/source/test_contract.py ___________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/r3-streamed/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________ ERROR collecting runs/scale/source/test_contract.py ______________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/scale/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_______ ERROR collecting runs/skillreason-rerank/source/test_contract.py _______
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/skillreason-rerank/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting runs/structures/source/test_contract.py ___________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/runs/structures/source/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________________ ERROR collecting test_contract.py _______________________
+import file mismatch:
+imported module 'test_contract' has this __file__ attribute:
+  /home/user/code/mia5150-local/runs/anchoring/source/test_contract.py
+which is not the same as the test file we want to collect:
+  /home/user/code/mia5150-local/test_contract.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+=========================== short test summary info ============================
+ERROR runs/contract-tests/source/test_contract.py
+ERROR runs/escalation/source/test_contract.py
+ERROR runs/field-tfidf/source/test_contract.py
+ERROR runs/full-qwen/source/test_contract.py
+ERROR runs/full-skillret/source/test_contract.py
+ERROR runs/full-skillret-direct/source/test_contract.py
+ERROR runs/jev-skillret/source/test_contract.py
+ERROR runs/plumb-skillret/source/test_contract.py
+ERROR runs/prompt-scale/source/test_contract.py
+ERROR runs/pytest-install/source/test_contract.py
+ERROR runs/r3-rerank/source/test_contract.py
+ERROR runs/r3-streamed/source/test_contract.py
+ERROR runs/scale/source/test_contract.py
+ERROR runs/skillreason-rerank/source/test_contract.py
+ERROR runs/structures/source/test_contract.py
+ERROR test_contract.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 16 errors during collection !!!!!!!!!!!!!!!!!!!
+16 errors in 0.28s

@@ -1,0 +1,136 @@
+{
+  "scope": "offline planning-package consistency only; no model/API/benchmark execution",
+  "success": true,
+  "checks_passed": 29,
+  "checks_total": 29,
+  "paper_count": 54,
+  "paper_categories": {
+    "direct": 20,
+    "survey": 2,
+    "benchmark": 2,
+    "background": 12,
+    "security": 1,
+    "tool transfer": 5,
+    "IR foundation": 12
+  },
+  "model_method_roles": 25,
+  "jobs": 7,
+  "checks": [
+    {
+      "check": "54 unique paper IDs",
+      "passed": true
+    },
+    {
+      "check": "unique primary paper URLs",
+      "passed": true
+    },
+    {
+      "check": "18 unique engineering sources",
+      "passed": true
+    },
+    {
+      "check": "25 unique model/method roles",
+      "passed": true
+    },
+    {
+      "check": "seven unique work orders",
+      "passed": true
+    },
+    {
+      "check": "primary URLs are HTTPS",
+      "passed": true
+    },
+    {
+      "check": "inspection depth recorded",
+      "passed": true
+    },
+    {
+      "check": "no literature reproduction claim",
+      "passed": true
+    },
+    {
+      "check": "no model test or account-access claim",
+      "passed": true
+    },
+    {
+      "check": "model source references resolve",
+      "passed": true
+    },
+    {
+      "check": "paid calls default disabled",
+      "passed": true
+    },
+    {
+      "check": "pod creation default disabled",
+      "passed": true
+    },
+    {
+      "check": "training default disabled",
+      "passed": true
+    },
+    {
+      "check": "unallocated budgets remain null",
+      "passed": true
+    },
+    {
+      "check": "proposal library sizes preserved",
+      "passed": true
+    },
+    {
+      "check": "official metric cutoffs preserved",
+      "passed": true
+    },
+    {
+      "check": "proposal MRR cutoff preserved",
+      "passed": true
+    },
+    {
+      "check": "corrected test counts recorded",
+      "passed": true
+    },
+    {
+      "check": "phase dependency references resolve",
+      "passed": true
+    },
+    {
+      "check": "phase paper references resolve",
+      "passed": true
+    },
+    {
+      "check": "phase model references resolve",
+      "passed": true
+    },
+    {
+      "check": "phase prompt files exist",
+      "passed": true
+    },
+    {
+      "check": "work-order graph is acyclic",
+      "passed": true
+    },
+    {
+      "check": "published references marked not reproduced",
+      "passed": true
+    },
+    {
+      "check": "reference metrics use valid 0-100 scale",
+      "passed": true
+    },
+    {
+      "check": "main published anchor recorded correctly",
+      "passed": true
+    },
+    {
+      "check": "original proposal is a PDF",
+      "passed": true
+    },
+    {
+      "check": "original proposal byte hash preserved",
+      "passed": true
+    },
+    {
+      "check": "required planning documents exist",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+base {'NDCG@5': 0.6784825804479138, 'MAP@5': 0.603298611111111, 'Recall@5': 0.6666666666666666, 'Precision@5': 0.23750000000000002, 'NDCG@10': 0.6784825804479138, 'MAP@10': 0.603298611111111, 'Recall@10': 0.6666666666666666, 'Precision@10': 0.11875000000000001, 'NDCG@15': 0.6835151687319515, 'MAP@15': 0.6057024572649573, 'Recall@15': 0.6822916666666666, 'Precision@15': 0.08125, 'Completeness@5': 0.4375, 'Completeness@10': 0.4375, 'Completeness@15': 0.46875, 'Completeness@20': 0.46875, 'Recall@20': 0.6822916666666666, 'Completeness@50': 0.46875, 'Recall@50': 0.6822916666666666, 'Completeness@100': 0.46875, 'Recall@100': 0.6822916666666666, 'MRR@5': 0.8515625}
+/home/user/code/mia5150-local/lora_pilot.py:47: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  if step%16==0:print('train',step,float(loss),flush=True)
+train 0 0.07153677940368652
+train 16 0.02569866180419922
+train 32 0.1673039197921753
+train 48 0.06435823440551758
+train 64 0.28115010261535645
+train 80 0.35190677642822266
+train 96 0.01320791244506836
+train 112 0.0019435882568359375
+train 128 0.0035719871520996094
+train 144 0.0006365776062011719
+train 160 0.01362466812133789
+train 176 0.0012750625610351562
+train 192 0.0011886116117238998
+train 208 0.0012751389294862747
+train 224 0.0021345382556319237
+train 240 0.0007152557373046875
+train 256 0.00029468536376953125
+train 272 0.00036144256591796875
+train 288 0.0002492635976523161
+train 304 0.0002422332763671875
+train 320 0.000743865966796875
+train 336 0.0014905929565429688
+train 352 4.720734796137549e-05
+train 368 0.00023746490478515625
+adapted {'NDCG@5': 0.6945926973855171, 'MAP@5': 0.6276041666666666, 'Recall@5': 0.6666666666666666, 'Precision@5': 0.23750000000000002, 'NDCG@10': 0.6945926973855171, 'MAP@10': 0.6276041666666666, 'Recall@10': 0.6666666666666666, 'Precision@10': 0.11875000000000001, 'NDCG@15': 0.6996252856695548, 'MAP@15': 0.6300080128205128, 'Recall@15': 0.6822916666666666, 'Precision@15': 0.08125, 'Completeness@5': 0.4375, 'Completeness@10': 0.4375, 'Completeness@15': 0.46875, 'Completeness@20': 0.46875, 'Recall@20': 0.6822916666666666, 'Completeness@50': 0.46875, 'Recall@50': 0.6822916666666666, 'Completeness@100': 0.46875, 'Recall@100': 0.6822916666666666, 'MRR@5': 0.8671875}

@@ -1,0 +1,7 @@
+{
+  "examples": 347,
+  "changed_parameter_tensors": 112,
+  "seconds": 153.68683957599933,
+  "seed": 5150,
+  "finite_losses": true
+}

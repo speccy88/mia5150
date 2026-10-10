@@ -1,0 +1,70 @@
+{"cache": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/cache/d7b56e8e189a54585ccb77b8afb9d1a60ca3a8137b5e811c2c552996e8eb35c1", "documents": {"min": 117, "median": 1677.5, "p95": 5723.5, "max": 49012, "total": 13247447, "over_8192": 108, "over_32768": 2, "truncated_count": 2, "effective_total": 13227233}, "queries": {"min": 57, "median": 252.0, "p95": 393.0, "max": 862, "total": 1128023, "over_8192": 0, "over_32768": 0, "truncated_count": 0, "effective_total": 1128023}}
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Memory efficient kernel not used because: (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:858.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: For dense input, both fused kernels require query, key and value to have the same num_heads. Query.sizes(): [1, 16, 32768, 128], Key sizes(): [1, 8, 32768, 128], Value sizes(): [1, 8, 32768, 128] instead. To broadcast dense inputs, try using unsqueeze and expand_to before passing them into the kernel. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:418.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Flash attention kernel not used because: (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:860.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Flash attention has been runtime disabled. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:540.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: CuDNN attention kernel not used because: (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:862.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: cuDNN MHA only supports gpu architectures in the range [sm80, sm121]. Attempting to run on a sm 7.5 gpu. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:538.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Traceback (most recent call last):
+  File "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/run_skillret_baseline.py", line 152, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/run_skillret_baseline.py", line 124, in main
+    vectors,doc_done=cached_encode(model,tok,texts,cache,'documents',a.max_length,order,3 if a.stage=='feasibility' else None)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/run_skillret_baseline.py", line 96, in cached_encode
+    v,seconds=encode_one(model,tok,texts[index],max_length);vectors[index]=v;vectors.flush()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/run_skillret_baseline.py", line 75, in encode_one
+    hidden=model(**inputs,use_cache=False).last_hidden_state[:,-1].float()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 260, in forward
+    hidden_states, _ = self.self_attn(
+                       ^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 216, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py", line 96, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: No available kernel. Aborting execution.

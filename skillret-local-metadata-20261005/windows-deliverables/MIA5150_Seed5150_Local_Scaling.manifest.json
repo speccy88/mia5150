@@ -1,0 +1,8 @@
+{
+  "file": "/home/user/code/mia5150-local/deliverables/MIA5150_Seed5150_Local_Scaling.zip",
+  "bytes": 11586173,
+  "sha256": "0cbea2f04adb73eb0d51c7faa2827e84a881fe5d4bffa554d24b1e9e55ac6e3b",
+  "files_verified": 1656,
+  "notebook": "Code cells compile; offline report/CSV reader only. No model execution in notebook.",
+  "excluded": "Model weights, embedding .npy caches (manifests retained), credentials, unrelated historical results. No external upload."
+}

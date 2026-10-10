@@ -1,0 +1,8 @@
+{
+  "status": "validated",
+  "max_abs_ndcg_deviation": 0.0003233264761343113,
+  "threshold": 0.005,
+  "full_query_count": 4392,
+  "full_skill_count": 6006,
+  "contract_sha256": "c364634bcfd07525e074a927760ef2dd0f52ce0b0f92a09debaed13a6f0d683e"
+}

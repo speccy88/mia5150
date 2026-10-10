@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="500" viewBox="0 0 980 500">
+<rect width="980" height="500" fill="white"/>
+<g font-family="sans-serif" font-size="13" fill="#222">
+<text x="65" y="28" font-size="18">Recall@5 vs gold-conditioned library size — 20 fixed public queries</text>
+<path d="M70 400 H720" stroke="#ddd"/>
+<text x="25" y="404">0</text>
+<path d="M70 317.5 H720" stroke="#ddd"/>
+<text x="25" y="321.5">0.25</text>
+<path d="M70 235.0 H720" stroke="#ddd"/>
+<text x="25" y="239.0">0.5</text>
+<path d="M70 152.5 H720" stroke="#ddd"/>
+<text x="25" y="156.5">0.75</text>
+<path d="M70 70 H720" stroke="#ddd"/>
+<text x="25" y="74">1</text>
+<text x="70.0" y="425" text-anchor="middle">10</text>
+<text x="233.51144528926247" y="425" text-anchor="middle">50</text>
+<text x="303.931991752048" y="425" text-anchor="middle">100</text>
+<text x="397.02289057852494" y="425" text-anchor="middle">250</text>
+<text x="537.863983504096" y="425" text-anchor="middle">1000</text>
+<text x="720.0" y="425" text-anchor="middle">6006</text>
+<text x="300" y="455">Library size (log scale)</text>
+<polyline fill="none" stroke="#444444" stroke-width="2" points="70.00,75.50 233.51,75.50 303.93,75.50 397.02,97.50 537.86,127.75 720.00,193.75"/>
+<circle cx="70.0" cy="75.5" r="3" fill="#444444"/>
+<circle cx="233.51144528926247" cy="75.5" r="3" fill="#444444"/>
+<circle cx="303.931991752048" cy="75.5" r="3" fill="#444444"/>
+<circle cx="397.02289057852494" cy="97.5" r="3" fill="#444444"/>
+<circle cx="537.863983504096" cy="127.75" r="3" fill="#444444"/>
+<circle cx="720.0" cy="193.75" r="3" fill="#444444"/>
+<text x="745" y="65" fill="#444444">bm25</text>
+<polyline fill="none" stroke="#cc6677" stroke-width="2" points="70.00,97.50 233.51,103.00 303.93,144.25 397.02,144.25 537.86,160.75 720.00,202.00"/>
+<circle cx="70.0" cy="97.5" r="3" fill="#cc6677"/>
+<circle cx="233.51144528926247" cy="103.0" r="3" fill="#cc6677"/>
+<circle cx="303.931991752048" cy="144.25" r="3" fill="#cc6677"/>
+<circle cx="397.02289057852494" cy="144.25" r="3" fill="#cc6677"/>
+<circle cx="537.863983504096" cy="160.75" r="3" fill="#cc6677"/>
+<circle cx="720.0" cy="202.0" r="3" fill="#cc6677"/>
+<text x="745" y="92" fill="#cc6677">qwen_embed_06</text>
+<polyline fill="none" stroke="#228833" stroke-width="2" points="70.00,70.00 233.51,70.00 303.93,75.50 397.02,75.50 537.86,92.00 720.00,169.00"/>
+<circle cx="70.0" cy="70.0" r="3" fill="#228833"/>
+<circle cx="233.51144528926247" cy="70.0" r="3" fill="#228833"/>
+<circle cx="303.931991752048" cy="75.5" r="3" fill="#228833"/>
+<circle cx="397.02289057852494" cy="75.5" r="3" fill="#228833"/>
+<circle cx="537.863983504096" cy="92.0" r="3" fill="#228833"/>
+<circle cx="720.0" cy="169.00000000000003" r="3" fill="#228833"/>
+<text x="745" y="119" fill="#228833">skillret_embed_06</text>
+<polyline fill="none" stroke="#4477aa" stroke-width="2" points="70.00,70.00 233.51,108.50 303.93,108.50 397.02,114.00 537.86,152.50 720.00,185.50"/>
+<circle cx="70.0" cy="70.0" r="3" fill="#4477aa"/>
+<circle cx="233.51144528926247" cy="108.5" r="3" fill="#4477aa"/>
+<circle cx="303.931991752048" cy="108.5" r="3" fill="#4477aa"/>
+<circle cx="397.02289057852494" cy="114.0" r="3" fill="#4477aa"/>
+<circle cx="537.863983504096" cy="152.5" r="3" fill="#4477aa"/>
+<circle cx="720.0" cy="185.5" r="3" fill="#4477aa"/>
+<text x="745" y="146" fill="#4477aa">eg2_text270m_fp32</text>
+<polyline fill="none" stroke="#aa3377" stroke-width="2" points="70.00,86.50 233.51,97.50 303.93,122.25 397.02,136.00 537.86,158.00 720.00,224.00"/>
+<circle cx="70.0" cy="86.5" r="3" fill="#aa3377"/>
+<circle cx="233.51144528926247" cy="97.5" r="3" fill="#aa3377"/>
+<circle cx="303.931991752048" cy="122.25000000000006" r="3" fill="#aa3377"/>
+<circle cx="397.02289057852494" cy="136.0" r="3" fill="#aa3377"/>
+<circle cx="537.863983504096" cy="158.00000000000003" r="3" fill="#aa3377"/>
+<circle cx="720.0" cy="224.0" r="3" fill="#aa3377"/>
+<text x="745" y="173" fill="#aa3377">jina_nano239m_fp32</text>
+<polyline fill="none" stroke="#ee7733" stroke-width="2" points="70.00,70.00 233.51,75.50 303.93,75.50 397.02,81.00 537.86,81.00 720.00,136.00"/>
+<circle cx="70.0" cy="70.0" r="3" fill="#ee7733"/>
+<circle cx="233.51144528926247" cy="75.5" r="3" fill="#ee7733"/>
+<circle cx="303.931991752048" cy="75.5" r="3" fill="#ee7733"/>
+<circle cx="397.02289057852494" cy="81.00000000000006" r="3" fill="#ee7733"/>
+<circle cx="537.863983504096" cy="81.00000000000006" r="3" fill="#ee7733"/>
+<circle cx="720.0" cy="136.0" r="3" fill="#ee7733"/>
+<text x="745" y="200" fill="#ee7733">hybrid_rrf60</text>
+<polyline fill="none" stroke="#009988" stroke-width="2" points="70.00,97.50 233.51,163.50 303.93,196.50 397.02,213.00 537.86,210.25 720.00,273.50"/>
+<circle cx="70.0" cy="97.5" r="3" fill="#009988"/>
+<circle cx="233.51144528926247" cy="163.5" r="3" fill="#009988"/>
+<circle cx="303.931991752048" cy="196.5" r="3" fill="#009988"/>
+<circle cx="397.02289057852494" cy="213.0" r="3" fill="#009988"/>
+<circle cx="537.863983504096" cy="210.25000000000003" r="3" fill="#009988"/>
+<circle cx="720.0" cy="273.5" r="3" fill="#009988"/>
+<text x="745" y="227" fill="#009988">query_clause_bm25</text>
+<text x="65" y="483">Gold is in each library, never forced into shortlists. No untouched-test or full-discovery claim.</text>
+</g></svg>

@@ -1,0 +1,56 @@
+INSTALL [('sentence-transformers', '==6.1.0'), ('transformers', '==5.19.0')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 7ms
+Prepared 1 package in 26ms
+Installed 1 package in 11ms
+ + sentence-transformers==6.1.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/sentence_transformers-6.1.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 3ms
+Prepared 1 package in 357ms
+Installed 1 package in 188ms
+ + transformers==5.19.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/transformers-5.19.0-py3-none-any.whl)
+INSTALL [('scikit-learn', '>=1.1.0'), ('huggingface-hub', '<2.0,<3.0,>=0.16.4,>=1.3.0,>=1.31.0'), ('tokenizers', '<0.24.0,>=0.19,>=0.23.1'), ('typer', '')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 2ms
+Prepared 1 package in 127ms
+Installed 1 package in 45ms
+ + scikit-learn==1.9.1 (from file:///home/user/code/embeddinggemma2-pilot/wheels/scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 2ms
+Prepared 1 package in 24ms
+Installed 1 package in 8ms
+ + huggingface-hub==1.33.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/huggingface_hub-1.33.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 33ms
+Installed 1 package in 4ms
+ + tokenizers==0.23.2 (from file:///home/user/code/embeddinggemma2-pilot/wheels/tokenizers-0.23.2-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 8ms
+Installed 1 package in 5ms
+ + typer==0.27.3 (from file:///home/user/code/embeddinggemma2-pilot/wheels/typer-0.27.3-py3-none-any.whl)
+INSTALL [('threadpoolctl', '>=3.5.0'), ('narwhals', '>=2.0.1'), ('joblib', '>=1.4.0'), ('httpx', '<1,>=0.23.0'), ('click', '<9.0.0,>=8.4.2'), ('annotated-doc', '>=0.0.2'), ('rich', '>=13.8.0'), ('shellingham', '>=1.3.0')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 4ms
+Installed 1 package in 1ms
+ + threadpoolctl==3.7.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/threadpoolctl-3.7.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 17ms
+Installed 1 package in 7ms
+ + narwhals==2.27.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/narwhals-2.27.0-py3-none-any.whl)
+Traceback (most recent call last):
+  File "/home/user/code/embeddinggemma2-pilot/eg2_setup.py", line 40, in <module>
+    for name,spec in missing:install(name,spec)
+                             ^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/eg2_setup.py", line 10, in install
+    meta=fetch(f'https://pypi.org/pypi/{name}/json');version=max((Version(v) for v in meta['releases'] if not Version(v).is_prerelease and Version(v) in spec),default=None);assert version
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/eg2_setup.py", line 10, in <genexpr>
+    meta=fetch(f'https://pypi.org/pypi/{name}/json');version=max((Version(v) for v in meta['releases'] if not Version(v).is_prerelease and Version(v) in spec),default=None);assert version
+                                                                                                              ^^^^^^^^^^
+  File "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/packaging/version.py", line 452, in __init__
+    raise InvalidVersion(f"Invalid version: {version!r}")
+packaging.version.InvalidVersion: Invalid version: '0.3.2d'

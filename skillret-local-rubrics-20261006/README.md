@@ -1,0 +1,7 @@
+# October 6 retrieval, rubric and hosted exploratory follow-ups
+
+The preserved `round2/` tree includes the small hosted Jev/OpenRouter probes, negative selective/clause tests, request-order checks, local rubric screens, candidate-budget diagnostics, and cached demos. Start with [OVERNIGHT_FINDINGS.md](round2/OVERNIGHT_FINDINGS.md), [CANDIDATE_BUDGET_REPORT.md](round2/CANDIDATE_BUDGET_REPORT.md), [VARIED_SCREEN_RESULTS.md](round2/VARIED_SCREEN_RESULTS.md), and [LOCAL_RUBRIC_RESULTS.md](round2/LOCAL_RUBRIC_RESULTS.md). No rubric arm qualified for its six conditional confirmation calls, which were skipped. The newer 200-query pilot is in a different folder.
+
+Root code is a snapshot of the shared metric harness for import-relative compatibility. Full original local rankings, data and model metadata live in sibling `skillret-local-metadata-20261005`. Preserve recorded fixed candidate IDs and source hashes when adapting paths. Duplicate delivery ZIPs are omitted because their expanded evidence and code are present.
+
+Offline tests: `python -m unittest discover -s round2 -p 'test_*.py'` with pinned Linux dependencies. Credential-store tests use synthetic keys and require a native Linux filesystem; /mnt/c permissions are deliberately rejected. No real credential store is included or accessed by consolidation. The saved budget remains paused; hosted runners and authorization/setup scripts are **not** validation entrypoints.

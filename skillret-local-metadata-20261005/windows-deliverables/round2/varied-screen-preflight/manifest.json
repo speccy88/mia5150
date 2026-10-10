@@ -1,0 +1,62 @@
+[
+  {
+    "bytes": 5922,
+    "sha256": "714aa52a6a7b6cc2f13400ac5cebead884a73aac4c5da83a3a577694e1021816",
+    "name": "finalize_varied_preflight.py"
+  },
+  {
+    "bytes": 4609,
+    "sha256": "bdb978314f82c8f52da0bbbba96abfd44d42439d405e1ecd0cdc066154fa91e2",
+    "name": "prepare_varied_screen.py"
+  },
+  {
+    "bytes": 2073708,
+    "sha256": "ce04b18330142b3712e6d755f5b9c90f629fd546fd81faf587d70e590e8f312d",
+    "name": "prepared-varied-screen.json"
+  },
+  {
+    "bytes": 2780,
+    "sha256": "f5b84fc7945f76f81a9ec4339d29dd39771d31fa49213ced7b42c72c585c48fa",
+    "name": "prompt_rubrics.py"
+  },
+  {
+    "bytes": 31374,
+    "sha256": "6916df938ad4e8d3d130838ce6c35d84b8bc8fc85e312922dc429084cdd8d31c",
+    "name": "prompt-engineering-plan.json"
+  },
+  {
+    "bytes": 2090,
+    "sha256": "95677cbdbcddf39a64622f01efff22de3399cd39b1c86c4e58e0bb2a699db844",
+    "name": "test_varied_prompts.py"
+  },
+  {
+    "bytes": 1011,
+    "sha256": "b76d5bebdf304c3af5df80866cc1ecf959f631aaf0487f4e7fa1fbcdb2a77550",
+    "name": "test_varied_screen.py"
+  },
+  {
+    "bytes": 5057,
+    "sha256": "e67157b041edd3a4e01d1d74de5cf5b69a69ff62e645ca516e1659ea170a3e21",
+    "name": "varied_prompts.py"
+  },
+  {
+    "bytes": 22799,
+    "sha256": "ce208779bfd27fe5aeebf6c460b162dd168ee1c59b36ece8c567f96855eac4fc",
+    "name": "VARIED_SCREEN_PREFLIGHT.json"
+  },
+  {
+    "bytes": 3682,
+    "sha256": "69c2ea4c023c928360f362f583f895b266f35f0495b3c164b2e6d3619c19dc22",
+    "name": "VARIED_SCREEN_PREFLIGHT.md"
+  },
+  {
+    "bytes": 7199,
+    "sha256": "d5ca97dd139f1aad8c46042a0872dcf5857bed1bb33a9b58a80f80910c68fab1",
+    "name": "varied_screen.py"
+  },
+  {
+    "bytes": 33544,
+    "sha256": "1269a0903dce6f23cd8be16d503d8f94e116329c460e70bc9fea2133ccf915e7",
+    "name": "varied-screen-plan.json"
+  }
+]

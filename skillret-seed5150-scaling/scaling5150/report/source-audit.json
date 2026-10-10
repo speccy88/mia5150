@@ -1,0 +1,167 @@
+{
+  "repository_review": "speccy88/mia5150 at041f2ce read after experimental execution; no exact-proposal-reproduction claim",
+  "source_git_blobs": {
+    "project_proposal.tex": "4df0f466cbf6c928e4f653887b47469341a9b72f",
+    "reference_metrics.py": "f3caea1b642dc36d89567830d8e97d2eec859e09"
+  },
+  "source_local_sha256": {
+    "reference_metrics.py": "d966d03bfe0076e61b32911def26bec4f94ee93a91c7db2a667a1bd7646dcc94",
+    "project_proposal.tex": "c8eed41d9e9b1d59905ec515b94a67d0b6d1e713316c27e51c7af333a9cc17de"
+  },
+  "reference_membership_matches": 120,
+  "reference_display_order_differences": 120,
+  "reference_metric_scalar_comparisons": 18360,
+  "models": [
+    {
+      "role": "eg2_text270m_fp32",
+      "repository": "google/embeddinggemma-2",
+      "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "manifest_sha256": "b22fc9c2a19adb67a328005878d5fb3d2f835b8546d847c164b182074675ac03",
+      "weight_sha256": "197a32965d4b1105faf060417baa899e193fb73cd401f42ec9295234d5553d79"
+    },
+    {
+      "role": "jina_nano239m_fp32",
+      "repository": "jinaai/jina-embeddings-v5-text-nano",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "manifest_sha256": "222e65e5dcf9b51a61c6b9199cc98ba6e0372d181a3495ec82c3dd8e92bac8e6",
+      "weight_sha256": "f07de152e254b5d03b1273e0bca0a11dfade686508503500d460813428539651"
+    },
+    {
+      "role": "qwen_embed_06",
+      "repository": "Qwen/Qwen3-Embedding-0.6B",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "manifest_sha256": "ceefe57c176d0fd15f82419d77cb50b49ce2210216c539827f5f74cb55842f65",
+      "weight_sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+    },
+    {
+      "role": "skillreason_embed_06",
+      "repository": "donghongjiang/SkillReason-embedding-0.6b",
+      "revision": "1ef1a664d60c1fb0951a13cceace57a07c877c17",
+      "manifest_sha256": "daca458c39d871fbb946eb92953c8c9cefac809f635cb689831760b4176add2d",
+      "weight_sha256": "d639543800f3587fc62f2bc3c55de09a5f3e404de8548e90e9ab098b98559585"
+    },
+    {
+      "role": "skillret_embed_06",
+      "repository": "ThakiCloud/SKILLRET-Embedding-0.6B",
+      "revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+      "manifest_sha256": "c24e5f15ed591b903836d6697af0cef6d8b3cb6dbac55e58a2d8e55fb32c4444",
+      "weight_sha256": "f73118cac018ffa7ebb5a1ffbdf82034490dfb7f2559558f1e79277f1e8de172"
+    },
+    {
+      "role": "skillrouter_embed_06",
+      "repository": "pipizhao/SkillRouter-Embedding-0.6B",
+      "revision": "c03c9bcee9fce92ab0262bb6dcf54d174a8ba558",
+      "manifest_sha256": "476d81819b71c92bebe7bcaac7881f12c96fa362377e06ae2e83e9795fbc9030",
+      "weight_sha256": "cbab45b8a3c786b8c23aedb24fb22aff74d0e9b62a52369a3090c37f26b00360"
+    }
+  ],
+  "embedding_work": [
+    {
+      "role": "eg2_text270m_fp32",
+      "stage": "pilot",
+      "new_docs": 30,
+      "new_queries": 1,
+      "warmup_forwards": 1,
+      "reused_docs": 2,
+      "reused_queries": 1,
+      "document_seconds": 2.763371300000003,
+      "query_seconds_known": 0.10425610000000063,
+      "startup_seconds": 14.2106609,
+      "truncated": 0
+    },
+    {
+      "role": "eg2_text270m_fp32",
+      "stage": "full",
+      "new_docs": 5707,
+      "new_queries": 16,
+      "warmup_forwards": 1,
+      "reused_docs": 299,
+      "reused_queries": 4,
+      "document_seconds": 526.8288495230021,
+      "query_seconds_known": 1.4753301870001678,
+      "startup_seconds": 14.513641105999994,
+      "truncated": 0
+    },
+    {
+      "role": "jina_nano239m_fp32",
+      "stage": "pilot",
+      "new_docs": 30,
+      "new_queries": 1,
+      "warmup_forwards": 1,
+      "reused_docs": 2,
+      "reused_queries": 1,
+      "document_seconds": 1.8352564899997788,
+      "query_seconds_known": 0.07020402099999501,
+      "startup_seconds": 11.434821142000033,
+      "truncated": 0
+    },
+    {
+      "role": "jina_nano239m_fp32",
+      "stage": "full",
+      "new_docs": 5707,
+      "new_queries": 16,
+      "warmup_forwards": 1,
+      "reused_docs": 299,
+      "reused_queries": 4,
+      "document_seconds": 346.0443474899953,
+      "query_seconds_known": 1.0844627860003584,
+      "startup_seconds": 8.627912674999948,
+      "truncated": 0
+    },
+    {
+      "role": "qwen_embed_06",
+      "stage": "full_cached_refresh",
+      "new_docs": 13,
+      "new_queries": 0,
+      "reused_docs": 5993,
+      "reused_queries": 20,
+      "startup_seconds": 6.762473119000106,
+      "document_seconds": 1.0832019870003933,
+      "truncated": 0
+    },
+    {
+      "role": "skillreason_embed_06",
+      "stage": "full_cached_refresh",
+      "new_docs": 13,
+      "new_queries": 0,
+      "reused_docs": 5993,
+      "reused_queries": 20,
+      "startup_seconds": 7.455161696000005,
+      "document_seconds": 1.0032517040001494,
+      "truncated": 0
+    },
+    {
+      "role": "skillret_embed_06",
+      "stage": "full_cached_refresh",
+      "new_docs": 13,
+      "new_queries": 0,
+      "reused_docs": 5993,
+      "reused_queries": 20,
+      "startup_seconds": 10.244051116999998,
+      "document_seconds": 1.3039519900000158,
+      "truncated": 0
+    },
+    {
+      "role": "skillrouter_embed_06",
+      "stage": "full_cached_refresh",
+      "new_docs": 13,
+      "new_queries": 0,
+      "reused_docs": 5993,
+      "reused_queries": 20,
+      "startup_seconds": 7.126292860000149,
+      "document_seconds": 1.008207395998852,
+      "truncated": 0
+    }
+  ],
+  "total_new_document_forwards": 11526,
+  "total_new_query_forwards": 34,
+  "warmup_note": "One warmup for each of4 cached-model refreshes and4 EG2/Jina pilot/full loads:8 total, separate from new document/query forwards.",
+  "protocol_sha256": "f3e9ccc168475a350296373999427c21740c4ce92c6dc234edf69b7ff7b5ac60",
+  "source_data_sha256": {
+    "skills/test.jsonl": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "queries/test.jsonl": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "qrels/test.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "library_sha256": "90251d1bdb077e6649b5d80fc1293714c02dd8db3ab15b18978da6829ebb5bc3",
+  "text_sha256": "bbfeb6430462b4e0edafd6a54b17fa362181738f6319285b51db4ec145a5d8b4"
+}

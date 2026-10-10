@@ -1,0 +1,1 @@
+{"status": "blocked_dependency", "reason": "Pinned model download was stopped by resource guard; no completed verified weight manifest. No repeated download forced."}

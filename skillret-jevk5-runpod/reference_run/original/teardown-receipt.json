@@ -1,0 +1,22 @@
+{
+  "pod_id": "x2y8qdw44usgdl",
+  "pod_name": "charlie-skillret-jevk5-pilot-20261002",
+  "action": "terminate",
+  "termination_http_status": 204,
+  "get_pod_readback": {
+    "status": 404,
+    "detail": "pod not found"
+  },
+  "list_pods_readback": {
+    "includeClusterPods": true,
+    "pods": [],
+    "hasNextPage": false
+  },
+  "pod_absent_verified": true,
+  "verified_at_utc": "2026-10-02T06:25:37+00:00",
+  "export_verified_before_termination": true,
+  "archive_sha256": "fd042ff7c72a36ae5be003ccb7e083033a68048b974d45ea210919fd69b97dd2",
+  "billing_status": "estimate only; provider billing not confirmed",
+  "training_outcome": "TimeoutError after step 67; complete step-50 checkpoint preserved; requested 100-step schedule not completed",
+  "no_full_training_or_official_test": true
+}

@@ -1,0 +1,7 @@
+[
+  "nice",
+  "-n",
+  "10",
+  "/home/user/code/mia5150-local/.venv/bin/python",
+  "/home/user/code/embeddinggemma2-pilot/eg2_setup.py"
+]

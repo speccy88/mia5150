@@ -1,0 +1,45 @@
+{
+  "pdf": "artifacts/final/SkillRet_CPU_Benchmark.pdf",
+  "pages": 4,
+  "artifact_sha256": "1ab42bb6248d0076e3dbc2d7cb79d74f03f06ac8a4d760038a24161057a39ae2",
+  "primary_queries": 32,
+  "timing_pipelines": 8,
+  "interval_rows": 4,
+  "selectable_text_characters": 8505,
+  "visual_qa": "passed",
+  "visual_review_utc": "2026-10-02T11:13:48.031737+00:00",
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "rendering": "Poppler pdftoppm,130dpi PNG",
+  "footer_clearances": [
+    {
+      "page": 1,
+      "content_to_footer_rule_pt": 154.86
+    },
+    {
+      "page": 2,
+      "content_to_footer_rule_pt": 151.36
+    },
+    {
+      "page": 3,
+      "content_to_footer_rule_pt": 91.36
+    },
+    {
+      "page": 4,
+      "content_to_footer_rule_pt": 38.34
+    }
+  ],
+  "e5_numeric_column_gap_pt": 54.91,
+  "pdf_sha256": "2d8bde9d8408d6c4e2f1e29c817bd0d7a5a8c2bc6b8fa19e6f74adc0b744377c",
+  "checks": [
+    "All four latest page images inspected",
+    "No clipping, merged cells, orphan overflow pages or broken glyphs",
+    "Body/table fonts retained; extra page2/3 clearance from reduced cell padding",
+    "Selectable text, page sequence and numeric cell coordinates verified",
+    "Scopes, source identity, timing units and interpretation caveats preserved"
+  ]
+}

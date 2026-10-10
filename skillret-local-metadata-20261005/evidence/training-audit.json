@@ -1,0 +1,68 @@
+{
+  "split_checks": {
+    "query_ids_disjoint": true,
+    "normalized_query_text_disjoint": true,
+    "positive_skill_ids_disjoint": true,
+    "allowed_training_negatives_disjoint_from_dev_repositories_and_names": true
+  },
+  "lora": {
+    "hard": {
+      "before_cap": 347,
+      "after_cap": 347,
+      "required_positive_pairs": 91,
+      "omitted_positive_pairs": 0,
+      "all_positives_preserved": true,
+      "completed_adaptation_result": true,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    },
+    "replay": {
+      "before_cap": 475,
+      "after_cap": 384,
+      "required_positive_pairs": 91,
+      "omitted_positive_pairs": 8,
+      "all_positives_preserved": false,
+      "completed_adaptation_result": true,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    },
+    "replay-clean": {
+      "all_positive_pairs_retained": true,
+      "required_pairs": 91,
+      "example_count": 384,
+      "negative_positive_collisions": 0,
+      "completed_adaptation_result": false,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    },
+    "replay-clean-resumed": {
+      "status": "Interrupted before example manifest; no completed adaptation",
+      "completed_adaptation_result": false,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    },
+    "replay-clean-sharded": {
+      "all_positive_pairs_retained": true,
+      "required_pairs": 91,
+      "example_count": 384,
+      "negative_positive_collisions": 0,
+      "completed_adaptation_result": false,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    },
+    "replay-clean-lean": {
+      "all_positive_pairs_retained": true,
+      "required_pairs": 91,
+      "example_count": 384,
+      "negative_positive_collisions": 0,
+      "completed_adaptation_result": false,
+      "coverage_note": "Planned example coverage is not completed-training coverage when the run was interrupted."
+    }
+  },
+  "lexical": {
+    "all_positives_retained": true,
+    "examples": 6849,
+    "examples_capped": false,
+    "applies_to": [
+      "hard-negative",
+      "label-smoothing",
+      "L2-anchoring"
+    ],
+    "reason": "Identical uncapped all-positive plus allowed-hard-negative construction, verified count."
+  }
+}

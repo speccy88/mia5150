@@ -1,0 +1,19 @@
+# Private credentials, environments, downloads, and new run state.
+.env
+.env.*
+.venv/
+.cache/
+.tools/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+*.pem
+*.key
+/data/
+/results/
+/reports/
+/output/
+/dist/
+/tmp/

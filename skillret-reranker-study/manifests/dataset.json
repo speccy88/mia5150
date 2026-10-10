@@ -1,0 +1,25 @@
+{
+  "repo_id": "ThakiCloud/SKILLRET",
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "split": "test",
+  "files": {
+    "skills": {
+      "path": "data/skills.jsonl",
+      "sha256": "39ec2b1db1b11371e4a1a3a2a5083e732d23282596355f7faafbb6fdde161571",
+      "bytes": 115700002,
+      "rows": 6006
+    },
+    "queries": {
+      "path": "data/queries.jsonl",
+      "sha256": "23b9b5805d1737597bd18e63cf5c12755de90ebdc6b5fbd9683d43128c2cc2e0",
+      "bytes": 6158915,
+      "rows": 4392
+    },
+    "qrels": {
+      "path": "data/qrels.jsonl",
+      "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+      "bytes": 661204,
+      "rows": 7187
+    }
+  }
+}

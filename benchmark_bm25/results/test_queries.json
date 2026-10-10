@@ -1,0 +1,352 @@
+[
+  {
+    "query": "Can you help with skriptoteket devops?",
+    "gold_skill": "skriptoteket-devops",
+    "gold_id": "d198610e-4354-4e8d-aa56-b0f9b2f234fc",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "building owner is negotiating with telecom providers, reviewing carrier access rights, structuring equipment room licenses, analyzing riser and conduit rights, evaluating CRTC (Canadian Radio-television and Telecommunications Commission) compliance requirements, negotiating license fees and revenue sharing, or managing multiple competing carriers in one building",
+    "gold_skill": "telecom-licensing-expert",
+    "gold_id": "8531b70c-11c7-44f1-a371-0a007a19fc12",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "Can you help with web3 testing?",
+    "gold_skill": "web3-testing",
+    "gold_id": "e1d9095e-04f6-4068-8d86-488cc7ff96f6",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing async tests, or parameterizing tests.",
+    "gold_skill": "swift-testing",
+    "gold_id": "10ca6c8b-c59e-471e-b940-3ccb396d3c10",
+    "gold_domain": "mobile",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to document my agent_skill",
+    "gold_skill": "advanced-features-2025",
+    "gold_id": "a1b528bd-17b5-4c27-95ff-8fa2a4469ba0",
+    "gold_domain": "ai_agents",
+    "gold_major": "AI Agents"
+  },
+  {
+    "query": "I'm looking for a tool to implement a agent_skill",
+    "gold_skill": "chatbot-analytics",
+    "gold_id": "a5e75fa1-be3d-42fc-b278-a37de3c7c26e",
+    "gold_domain": "ai_agents",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "I want to implement my documentation",
+    "gold_skill": "ring:writing-plans",
+    "gold_id": "037c03db-e42a-4c50-a1bd-953df515d6b9",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to configure a pipeline",
+    "gold_skill": "ci-cd",
+    "gold_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "asked to run tests, check code quality, or verify test coverage.",
+    "gold_skill": "run-tests",
+    "gold_id": "9f488149-ebf7-4118-9d61-1acc44e9cb92",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "creating workflow editors, data flow diagrams, organizational charts, mindmaps, process visualizations, DAG editors, or any interactive node-graph UI",
+    "gold_skill": "svelte-flow",
+    "gold_id": "22d0b096-b677-4f9a-9b18-5c469f693e75",
+    "gold_domain": "web_frontend",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to implement my code",
+    "gold_skill": "create-pr",
+    "gold_id": "68dc56d4-9b36-4c75-b552-8a6aa7a172bc",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I need to implement a api using dotnet cqrs api",
+    "gold_skill": "dotnet-cqrs-api",
+    "gold_id": "991eaec7-1aad-45ef-b780-3f3486057ff1",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I need to search a agent_skill using web navigation strategies",
+    "gold_skill": "web-navigation-strategies",
+    "gold_id": "d2b70a83-88ee-48cf-a7b8-f59fe13d78ab",
+    "gold_domain": "ai_agents",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "asked to format, lint, or clean up code before committing or creating a PR.",
+    "gold_skill": "code-formatting",
+    "gold_id": "e2364347-7326-42ca-9c96-3f4d58e00891",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Can you help with schema visualizer?",
+    "gold_skill": "schema-visualizer",
+    "gold_id": "bf5420c0-cf07-4ef6-bd1c-fddac381adaf",
+    "gold_domain": "database",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to configure my infrastructure",
+    "gold_skill": "prometheus-monitoring",
+    "gold_id": "a440e4d2-1450-4936-8983-b232cbdf526b",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me analyze data",
+    "gold_skill": "data-validator",
+    "gold_id": "31dbf77e-b0fc-4d7b-98c4-e6e7b14a0146",
+    "gold_domain": "data_ml",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "implementing email functionality, sending transactional emails, and managing email workflows.",
+    "gold_skill": "email-service-integration",
+    "gold_id": "64f16153-619e-453a-a882-314ab6b0d98e",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "\"artifact publishing\", \"SBOM generation\", \"supply chain security\", or \"build provenance\".",
+    "gold_skill": "artifact-sbom-publisher",
+    "gold_id": "e4ea1900-d33b-4c12-af1d-1489e6afc0b2",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to test my code",
+    "gold_skill": "ts-quality",
+    "gold_id": "3b730112-cd94-4ee3-a60e-9c3edfba97f0",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I need to generate a documentation using research grants",
+    "gold_skill": "research-grants",
+    "gold_id": "dba096c3-6ebc-41b7-85eb-fc8249d540d7",
+    "gold_domain": "business_ops",
+    "gold_major": "Content Creation"
+  },
+  {
+    "query": "Help me deploy pipeline",
+    "gold_skill": "spawn:terminal",
+    "gold_id": "c18b1df0-01e6-4214-8ed0-f07b2ce33df0",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to generate a data",
+    "gold_skill": "url-dump",
+    "gold_id": "73d40b56-b0cb-4f18-b89a-27666aa7e28c",
+    "gold_domain": "ai_agents",
+    "gold_major": "Information Retrieval"
+  },
+  {
+    "query": "Help me implement api",
+    "gold_skill": "slack-skill",
+    "gold_id": "13e5c9a6-010f-4e68-8550-0b9b31d3e310",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "the user wants to query work items, find bugs, list tasks, search by assignee, filter by state, find items in a sprint, or build custom work item queries",
+    "gold_skill": "wiql-queries",
+    "gold_id": "5e972860-d8fc-45ab-bda9-ee6ffd23b389",
+    "gold_domain": "devops_infra",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "Can you help with plan manager?",
+    "gold_skill": "plan-manager",
+    "gold_id": "070c6b5d-296e-40d3-a57e-c06dfdaa53c0",
+    "gold_domain": "developer_tools",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "graph databases, relationship visualization, and openCypher queries.",
+    "gold_skill": "arcgis-knowledge-graphs",
+    "gold_id": "093ac72c-f52a-4eb9-8dc7-b305d7e44a63",
+    "gold_domain": "database",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to deploy a project",
+    "gold_skill": "plan-deployer",
+    "gold_id": "7b0ed1bd-b013-4562-93f5-614e54ab3e76",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me implement ui_component",
+    "gold_skill": "frontend-design-svelte",
+    "gold_id": "76d17055-9445-4dcd-abc7-08d8a9c7e7e2",
+    "gold_domain": "web_frontend",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I need to implement a code using learning localization engineering",
+    "gold_skill": "learning-localization-engineering",
+    "gold_id": "3ec7ff85-0e72-4146-b1c0-431059bc8849",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me implement ui_component",
+    "gold_skill": "tailwindcss-core",
+    "gold_id": "8f325ff0-fb5d-4027-9366-cf7d503ca1a3",
+    "gold_domain": "web_frontend",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to design my content",
+    "gold_skill": "drip-campaigns",
+    "gold_id": "042dad49-78e5-4874-9c3d-d6f597bf217e",
+    "gold_domain": "business_ops",
+    "gold_major": "Content Creation"
+  },
+  {
+    "query": "Can you help with executing marketing campaigns?",
+    "gold_skill": "executing-marketing-campaigns",
+    "gold_id": "89386612-e4ce-4c3a-a54b-3ce42e35733b",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "working with code quality, static analysis, formatting, or when user mentions PHPStan, Pint, quality, static analysis, type safety, code style, linting.",
+    "gold_skill": "laravel-quality",
+    "gold_id": "3bf12d54-b0cd-405e-9681-e6d355c176ee",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "generating mechanical parts, parametric designs, functional prototypes, geometric shapes, or any 3D printable models",
+    "gold_skill": "openscad-3d-modeling",
+    "gold_id": "1f36a343-9111-49f1-8e1a-48a7db23b559",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to search a documentation",
+    "gold_skill": "comment-lister",
+    "gold_id": "52e3f599-dd4d-45e2-a0ff-9a22916ce739",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to analyze my database",
+    "gold_skill": "splynx-mysql",
+    "gold_id": "a0b4e1c4-dc1f-4ffa-a2fb-c505f695115f",
+    "gold_domain": "database",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "Help me configure project",
+    "gold_skill": "pursuit-governance",
+    "gold_id": "a64c7630-0a1c-4cbc-8255-4ad262cf8c8f",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "Can you help with doc analyzer?",
+    "gold_skill": "doc-analyzer",
+    "gold_id": "516db321-45e5-4471-9958-db825b692835",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "CI is failing, build errors occur, tests fail in CI, or pipeline is broken.",
+    "gold_skill": "ci-fixer",
+    "gold_id": "9e76b634-66b0-48b9-8422-199e6dc18171",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Can you help with receive feedback?",
+    "gold_skill": "receive-feedback",
+    "gold_id": "ff3e0bb4-801e-4545-b53f-8268a0f7bce1",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me test ui_component",
+    "gold_skill": "visual-testing",
+    "gold_id": "d9943d4a-b94a-4e77-9222-f778f16d8bca",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "reallocating spend across channels/ad sets or setting guardrails",
+    "gold_skill": "budget-optimization",
+    "gold_id": "d22c60fe-4057-4115-bd2c-e99bc7303c73",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "Help me analyze infrastructure",
+    "gold_skill": "docker-local-doctor",
+    "gold_id": "0b9e8b82-4979-430d-a080-a62c6f6566fc",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to design a data",
+    "gold_skill": "pql-framework",
+    "gold_id": "009c399e-e9af-44f6-9d3b-a308fbfe3832",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "I'm looking for a tool to analyze a code",
+    "gold_skill": "insight",
+    "gold_id": "f175af4a-e7a7-45da-82e9-dff00ca65e4a",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to document my documentation",
+    "gold_skill": "architecture-readiness",
+    "gold_id": "b063bba3-234f-46cd-9d10-ab02f9872153",
+    "gold_domain": "product_design",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "I'm looking for a tool to orchestrate a agent_skill",
+    "gold_skill": "atlas-full",
+    "gold_id": "2da3301b-fa07-4c61-bb49-29a27147b25e",
+    "gold_domain": "ai_agents",
+    "gold_major": "AI Agents"
+  },
+  {
+    "query": "Can you help with initializing memory?",
+    "gold_skill": "initializing-memory",
+    "gold_id": "30a4bb49-4d8e-4003-9a51-e39551f0db2a",
+    "gold_domain": "ai_agents",
+    "gold_major": "AI Agents"
+  },
+  {
+    "query": "Can you help with pytorch lightning?",
+    "gold_skill": "pytorch-lightning",
+    "gold_id": "80eecf20-e544-4898-9c79-c79351901b19",
+    "gold_domain": "data_ml",
+    "gold_major": "Data & ML"
+  }
+]

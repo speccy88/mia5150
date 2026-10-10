@@ -1,0 +1,25 @@
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "provider_tag": "inference-net",
+  "provider_name": "InferenceNet",
+  "context_length": 1040000,
+  "max_prompt_tokens": 1040000,
+  "max_prompt_tokens_source": "combined_context_only_no_separate_limit_advertised",
+  "max_completion_tokens": 384000,
+  "pricing": {
+    "prompt": "0.000000035",
+    "completion": "0.00000029",
+    "input_cache_read": "0.000000001",
+    "discount": 0
+  },
+  "temperature": 0,
+  "tool_choice": "auto",
+  "reasoning": {
+    "effort": "none"
+  },
+  "reasoning_status": "disable requested; actual reasoning tokens must be checked",
+  "snapshot": "evidence/model_metadata/1790472550866352000.json",
+  "adapter": "langchain_openrouter.ChatOpenRouter",
+  "fallbacks": false,
+  "reserve_pricing_policy": "All input reserved at prompt PLUS advertised cache-write price; discounted reads covered. Other positive surcharges rejected."
+}

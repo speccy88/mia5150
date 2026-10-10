@@ -1,0 +1,23 @@
+{
+  "filename": "MIA5150_Hybrid_Cached_Demo.zip",
+  "files": 13,
+  "bytes": 253657,
+  "sha256": "0dc12c8c42d99b603b49f213d4f3535c40b3c98cb049784aabe427485828cf93",
+  "whitelist": [
+    "hybrid-demo.html",
+    "hybrid-demo-data.json",
+    "hybrid-demo-verification.json",
+    "hybrid_retrieval.py",
+    "probe_contract.py",
+    "hybrid_demo_cli.py",
+    "test_hybrid_retrieval.py",
+    "HYBRID_ADAPTER.md",
+    "domain-coverage.json",
+    "request-clause-protocol.json",
+    "jev-typed-12-v1/results.json",
+    "selective-jev-8-v1/results.json",
+    "fusion-confirmation-8-v1/results.json"
+  ],
+  "credential_files_included": false,
+  "network_calls": 0
+}

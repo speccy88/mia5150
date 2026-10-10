@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "test_count": 120,
+  "elapsed_seconds": 42.73,
+  "evidence": "offline-tests-billing-policy-v1.txt",
+  "evidence_sha256": "bf0d8a345a13a42bf457c103de12ff60d5f22fe180927f5ee5c7c9cc449d75c2",
+  "real_credentials_or_api_used": false,
+  "source_sha256": {
+    "hosted_jev_client.py": "2c088210e552ed43364e056532784067d6ab3e75add37bab03326edab41996f8",
+    "test_hosted_jev_client.py": "6c661d2cb088d1597bf4702851018e88499b95f269c627742a93bead46d515cb",
+    "run_jev_rerank.py": "ed9c4abe34e2c57d16124009c0173fee4378ace956c588bacb49d1edcde69e12",
+    "run_hosted_study.py": "2afcbe24a7598b40a993343084ec71a4e93062f481873a0dc9b8120b7432e757",
+    "run_skillret_baseline.py": "92e5ec7efd7051cb8506acbea6cd2d596bf738b8a85b29a88c8279a3ecdff105",
+    "evaluate.py": "4b03f247d440dac5866b479e98d1d30ed5b88a80cc2820d2d94017457e49768b"
+  }
+}

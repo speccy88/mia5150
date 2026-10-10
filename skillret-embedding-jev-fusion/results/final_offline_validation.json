@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "test_count": 113,
+  "elapsed_seconds": 33.15,
+  "evidence": "offline-tests-final-context-runner-v1.txt",
+  "evidence_sha256": "67fed5eb1f32319be7d14c7cbf49e25a04be7b808da2b77ad4c1d31e6b9eec0c",
+  "network_or_real_credentials_used_by_tests": false,
+  "source_sha256": {
+    "run_jev_rerank.py": "ed9c4abe34e2c57d16124009c0173fee4378ace956c588bacb49d1edcde69e12",
+    "hosted_jev_client.py": "c36568ce5b0bc12ba5061e22266c24e828fea0790af89c3c591bf4afe3f2e324",
+    "run_hosted_study.py": "2afcbe24a7598b40a993343084ec71a4e93062f481873a0dc9b8120b7432e757",
+    "evaluate.py": "4b03f247d440dac5866b479e98d1d30ed5b88a80cc2820d2d94017457e49768b",
+    "run_skillret_baseline.py": "92e5ec7efd7051cb8506acbea6cd2d596bf738b8a85b29a88c8279a3ecdff105",
+    "test_jev_prepare.py": "a3fd2a86e435cb2e13445c7bc17c0a9c4d316d10ceb597d97f0d1a3475b20e0e",
+    "test_hosted_jev_client.py": "208ff2d4f9a2b8004fcbf7291ea97bf4a92f1ab4be63c65e2d4cdbdcb3c06589",
+    "test_hosted_study.py": "3e8ff21760e1976e355ac6b1dc48ad84442923bd739b9ed66f39ba0418ab2ab6"
+  }
+}

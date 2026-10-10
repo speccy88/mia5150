@@ -1,0 +1,13 @@
+{
+  "__version__": {
+    "pytorch": "2.8.0+cu128",
+    "sentence_transformers": "5.5.0",
+    "transformers": "4.57.1"
+  },
+  "activation_fn": "torch.nn.modules.linear.Identity",
+  "default_prompt_name": "query",
+  "model_type": "CrossEncoder",
+  "prompts": {
+    "query": "Given a user request, retrieve the agent skill that solves it."
+  }
+}

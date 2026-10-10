@@ -1,0 +1,97 @@
+{
+  "aggregate": {
+    "BM25 original": {
+      "Recall@20": 0.75,
+      "NDCG@10": 0.5792484501850521,
+      "Completeness@20": 0.625
+    },
+    "Original+request view": {
+      "Recall@20": 0.6875,
+      "NDCG@10": 0.5483566009043177,
+      "Completeness@20": 0.625
+    },
+    "SkillRet reference": {
+      "Recall@20": 0.8125,
+      "NDCG@10": 0.7641433990956823,
+      "Completeness@20": 0.625
+    },
+    "BM25 pool oracle": {
+      "Recall@20": 0.75,
+      "NDCG@10": 0.7782867981913646,
+      "Completeness@20": 0.625
+    },
+    "Request-view pool oracle": {
+      "Recall@20": 0.6875,
+      "NDCG@10": 0.7016433990956823,
+      "Completeness@20": 0.625
+    }
+  },
+  "per_query": [
+    {
+      "id": "q-03513",
+      "baseline_recall20": 1.0,
+      "view_recall20": 1.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 1.0,
+      "view_ndcg10": 1.0
+    },
+    {
+      "id": "q-02237",
+      "baseline_recall20": 1.0,
+      "view_recall20": 1.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 0.44130740935663865,
+      "view_ndcg10": 0.38685280723454163
+    },
+    {
+      "id": "q-01417",
+      "baseline_recall20": 1.0,
+      "view_recall20": 1.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 0.31546487678572877,
+      "view_ndcg10": 0.38685280723454163
+    },
+    {
+      "id": "q-04778",
+      "baseline_recall20": 0.0,
+      "view_recall20": 0.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 0.0,
+      "view_ndcg10": 0.0
+    },
+    {
+      "id": "q-02693",
+      "baseline_recall20": 0.5,
+      "view_recall20": 0.0,
+      "delta_recall20": -0.5,
+      "baseline_ndcg10": 0.2640681225725909,
+      "view_ndcg10": 0.0
+    },
+    {
+      "id": "q-00486",
+      "baseline_recall20": 1.0,
+      "view_recall20": 1.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 1.0,
+      "view_ndcg10": 1.0
+    },
+    {
+      "id": "q-00548",
+      "baseline_recall20": 0.5,
+      "view_recall20": 0.5,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 0.6131471927654584,
+      "view_ndcg10": 0.6131471927654584
+    },
+    {
+      "id": "q-00749",
+      "baseline_recall20": 1.0,
+      "view_recall20": 1.0,
+      "delta_recall20": 0.0,
+      "baseline_ndcg10": 1.0,
+      "view_ndcg10": 1.0
+    }
+  ],
+  "baseline_reproduction_exact8": true,
+  "paid_calls": 0
+}

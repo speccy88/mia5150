@@ -1,0 +1,42 @@
+[
+  {
+    "update": 6,
+    "attempt": 1,
+    "old_scale": 128.0,
+    "new_scale": 64.0,
+    "bad_gradients": [
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_qkv.lora_A.default.weight",
+        "nan_elements": 16384,
+        "inf_elements": 0
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_qkv.lora_B.default.weight",
+        "nan_elements": 4112,
+        "inf_elements": 0
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_b.lora_A.default.weight",
+        "nan_elements": 16384,
+        "inf_elements": 0
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_b.lora_B.default.weight",
+        "nan_elements": 16,
+        "inf_elements": 0
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_a.lora_A.default.weight",
+        "nan_elements": 16384,
+        "inf_elements": 0
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.linear_attn.in_proj_a.lora_B.default.weight",
+        "nan_elements": 16,
+        "inf_elements": 0
+      }
+    ],
+    "optimizer_update_skipped": true,
+    "adapter_unchanged": true
+  }
+]

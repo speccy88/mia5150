@@ -1,0 +1,5 @@
+# Keep document/archive bytes intact and normalize readable CSV line endings.
+*.pdf binary
+*.png binary
+*.zip binary
+*.csv text eol=lf

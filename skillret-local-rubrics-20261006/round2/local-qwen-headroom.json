@@ -1,0 +1,23 @@
+{
+  "telemetry": {
+    "time": 1791253393.9338186,
+    "host": {
+      "cpu_percent": 25.128205128205128,
+      "total_bytes": 16943194112,
+      "utc": 1791253393.669,
+      "available_bytes": 4812783616
+    },
+    "guest_available": 5028651008,
+    "swap": {
+      "pswpin": 158,
+      "pswpout": 2400
+    },
+    "gpu_free_mib": 8006,
+    "gpu_temp": 45,
+    "gpu_utilization": 0
+  },
+  "model_bytes": 2740937888,
+  "conservative_host_required_bytes": 5022639264,
+  "fits": false,
+  "reason": "After Plumb loading crossed the 2GiB reserve, require model-size transient staging plus 2GiB reserve and 128MiB overhead before another model load. No policy relaxation."
+}

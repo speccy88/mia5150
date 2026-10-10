@@ -1,0 +1,79 @@
+SearchJev-0.8B continued training on SkillRet
+2026-10-06
+
+Completed a 20-optimizer-update pilot on the RTX 2060 SUPER. This continued the released SearchJev rank-16 adapter; it did not initialize a new LoRA or train the full base model. The trained adapter and raw evidence are saved. The PC has been released.
+
+The pilot establishes that this small training configuration works on SM75 with the stock PyTorch fallback and dynamic FP16 loss scaling. It does not establish a useful quality improvement. Keep the released baseline as the reference; the adapted checkpoint is experimental. The 200-update expansion was not run because the development objective and calibration worsened.
+
+Fixed development comparison (60 balanced query-skill pairs from 16 queries):
+Metric                         Released adapter       After 20 updates
+Accuracy                       76.67% (46/60)          78.33% (47/60)
+ROC AUC                        0.81222                 0.82278
+Cross-entropy, lower better     0.55254                 0.92066
+Two-class Brier, lower better   0.35637                 0.39215
+CE + 0.5 Brier, lower better    0.73072                 1.11674
+
+Four errors became correct; three correct answers became errors. The accuracy gain is only one pair. Query-cluster bootstrap 95% intervals for adapted-minus-baseline differences were -4.35 to +6.76 percentage points for accuracy and +0.0104 to +0.7906 for the combined loss. These intervals condition on this small, exposed sample and do not demonstrate unseen-data generalization.
+
+Data and evaluation limits:
+- Verified the official local SkillRet revision 6583d7d2ed07644d0fb8938ed8178f3a7dc42a12: 63,259 training queries, 10,123 training skills, and 127,190 positive edges. Every query's skill IDs matched its qrels.
+- Selected 32 eligible training queries, preserving all 33 positive edges, plus 33 deterministic non-gold negatives. Twenty updates used 160 presentations of these 66 unique pairs, about 2.42 passes.
+- The evaluation retained all 30 gold edges for 16 development queries plus 30 negatives. Every official gold edge for each selected query was excluded from its negative candidates.
+- Repository/name families were recomputed across both train and test catalogs. This found a bridge in the older split. The new selection has zero family overlap between actual training and evaluation candidates, including negatives.
+- All 4,392 public test queries and existing development panels are already exposed. Exact IDs for an older 256-example development set at another revision were unavailable. No blind holdout claim is made.
+- This is a gold-conditioned binary relevance diagnostic with random negatives, not a full-corpus retrieval benchmark. Skill bodies were not used. At the 256-token limit, 35/66 training query texts and 36/60 evaluation query texts were truncated; 16/66 training and 9/60 evaluation skill headers were truncated.
+
+Training and correctness:
+- Batch 1; maximum 256 tokens; left padding to a multiple of 128; gradient accumulation 8; workers 0; one CPU thread.
+- Unfused AdamW, learning rate 1e-5, weight decay 0.01, gradient clipping 1. Non-reentrant gradient checkpointing; cache disabled.
+- FP16 autocast; FP32 adapter parameters and option loss; GradScaler initially 128. Final-position A/B logits use token IDs 32/33 with A=Relevant, B=Not relevant, temperature 1.
+- Exact released-adapter tensor equality was checked before training. Only 10,822,656 LoRA parameters were trainable.
+- The first two updates had finite, nonzero gradients and changed all 372 adapter tensors. Full frozen-base hashes were unchanged.
+- Saving and loading the same adapter produced identical tensors and zero maximum logit difference on four fixed examples. An independent fresh-process full-base reload also passed.
+- The final run encountered one overflow in six first-layer DeltaNet adapter gradient tensors before update 6. GradScaler skipped the unsafe step; hashes proved the adapter was unchanged. The same batch and RNG state passed at scale 64. All 20 applied updates had finite, nonzero gradients.
+- The final frozen base remained unchanged. An independent saved-file check confirmed 372 finite FP32 tensors in the 43,340,856-byte adapter.
+- Earlier attempts remain in the audit trail: an initial same-process full-base reload stopped on a swap event, a cross-run bitwise training comparison was too strict, and a later attempt stopped on a combined gradient assertion before dynamic overflow recovery was added. These independent attempts are not summed into one training trajectory.
+
+Measured feasibility for the successful run:
+- Twenty optimizer updates: 211.65 seconds including the overflow retry; mean 10.58 seconds/update.
+- Training, validation and final evaluation span: 247.80 seconds. Entire guarded run: 294.77 seconds.
+- A linear 200-update compute-only estimate is 35.3 minutes at these settings. That duration was not tested and excludes setup/evaluation overhead.
+- Peak total GPU memory: 1,885 MiB; peak temperature: 59 C. Torch peak allocated/reserved: 1,704/1,758 MiB.
+- Minimum host/guest available RAM: 3.23/3.63 GiB. Maximum host CPU: 75.90%. No active guest swap in the successful run; host telemetry age stayed below 1.02 seconds.
+- USE_HUB_KERNELS=NO was set before imports; fla and causal_conv1d were absent. No extra kernels, environment upgrades, private uploads, telemetry, paid calls or system-setting changes were used.
+- Host paging activity was not measured by the reused monitor; the no-active-swap assertion uses Linux pswpin/pswpout counters.
+
+Pinned identities:
+Base: Qwen/Qwen3.5-0.8B
+Revision: 2fc06364715b967f1860aea9cf38778875588b17
+Safetensors SHA256: 04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696
+
+Initial adapter: SearchJev/SearchJev-0.8B
+Revision: 03c5b638c8fdc570a1d4bf998cebac22c0b53384
+Safetensors SHA256: 5e3d00afba46dba0715b3a1aed4c82f082678f2992f7912e0d473ccfa966b1f9
+
+Adapted safetensors SHA256:
+b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300
+
+Official code reviewed:
+https://github.com/EvoScientist/SearchJev/tree/054ea81d43071b93e2d75b7396a729a2598ac6ac
+https://huggingface.co/SearchJev/SearchJev-0.8B
+https://huggingface.co/Qwen/Qwen3.5-0.8B
+https://arxiv.org/html/2610.05107v1
+
+Existing runtime reused: Torch 2.8.0+cu128, Transformers 5.19.0 from the isolated overlay, PEFT 0.21.2. WSL remains at 6 GB, 2 CPUs and 2 GB swap.
+
+Deliverables:
+- runs/pilot20-dynamic/checkpoint-update20/adapter_model.safetensors
+- runs/pilot20-dynamic/checkpoint-update20/adapter_config.json (base revision pinned)
+- runs/pilot20-dynamic/checkpoint-update20/provenance.json
+- runs/pilot20-dynamic/result.json, updates.json, baseline.json, adapted-update20.json, overflow-events.json, two-update-proof.json and telemetry.jsonl
+- paired-quality-analysis.json; evidence-summary.json; SearchJev-SkillRet-Report.txt
+- data-audit/ and official-review/ contain source, exposure and independent code reviews.
+- SearchJev-SkillRet-Pilot.zip packages the trained adapter and audit artifacts; it excludes the original 1.75 GB base weights.
+
+The delivered checkpoint contains adapter weights, not optimizer moments. A future training stage must initialize a new optimizer unless separately preserved state is provided.
+
+Release verified: no owned training/guard processes remain, the Windows monitor is stopped, GPU memory and utilization are zero, and guest swap usage is zero. Host/guest available RAM at release was 7.44/5.28 GiB. No unrelated process was stopped.
+
+Recommended next decision: retain the original release as the baseline. Before any larger adaptation, broaden the family-safe training sample, use informative negatives and reduce overconfidence, and evaluate on a newly controlled set. A 200-update run on this same tiny repeated sample is not supported by the observed quality results.

@@ -1,0 +1,7 @@
+{
+  "server_lifetime_seconds": 33.096125537000034,
+  "child_user_cpu_seconds": 25.092172,
+  "child_system_cpu_seconds": 4.652615,
+  "child_peak_rss_bytes": 1222578176,
+  "measurement": "Linux child resource accounting after server wait; separate from guard Python-worker RSS/CPU. Includes server startup and all physical completions in this process; not cache-adjusted end-to-end serving latency."
+}

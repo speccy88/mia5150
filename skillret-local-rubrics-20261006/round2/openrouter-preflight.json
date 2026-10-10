@@ -1,0 +1,18 @@
+{
+  "pricing": {
+    "model": "qwen/qwen3-235b-a22b-2507",
+    "route": "gmicloud/fp8",
+    "prompt_per_million": "0.0875000000",
+    "completion_per_million": "0.35000000",
+    "catalog_url": "https://openrouter.ai/api/v1/models/qwen/qwen3-235b-a22b-2507/endpoints"
+  },
+  "balance": {
+    "http_status": 200,
+    "balance_verified": true,
+    "remaining_credit_usd": "5.623282961",
+    "covers_reservation": true
+  },
+  "inference_calls": 0,
+  "credit_purchases": 0,
+  "ledger_changed": false
+}

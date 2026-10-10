@@ -1,0 +1,12 @@
+{
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "outgoing_fields": [
+    "public canonical task",
+    "candidate name",
+    "candidate description"
+  ],
+  "authorization": "New user-requested BM25+vector candidates then Jev, fixed24calls/0.10reservation within shared4 cap. No topup.",
+  "max_calls": 24,
+  "reserve_usd": "0.10",
+  "usage_bound_usd": "0.064512"
+}

@@ -1,0 +1,29 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+base {'NDCG@5': 0.6784825804479138, 'MAP@5': 0.603298611111111, 'Recall@5': 0.6666666666666666, 'Precision@5': 0.23750000000000002, 'NDCG@10': 0.6784825804479138, 'MAP@10': 0.603298611111111, 'Recall@10': 0.6666666666666666, 'Precision@10': 0.11875000000000001, 'NDCG@15': 0.6835151687319515, 'MAP@15': 0.6057024572649573, 'Recall@15': 0.6822916666666666, 'Precision@15': 0.08125, 'Completeness@5': 0.4375, 'Completeness@10': 0.4375, 'Completeness@15': 0.46875, 'Completeness@20': 0.46875, 'Recall@20': 0.6822916666666666, 'Completeness@50': 0.46875, 'Recall@50': 0.6822916666666666, 'Completeness@100': 0.46875, 'Recall@100': 0.6822916666666666, 'MRR@5': 0.8515625}
+/home/user/code/mia5150-local/lora_pilot.py:47: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  if step%16==0:print('train',step,float(loss),flush=True)
+train 0 0.007606029510498047
+train 16 0.007846832275390625
+train 32 0.004207635298371315
+train 48 0.0026350021362304688
+train 64 0.04641318321228027
+train 80 0.0028937640599906445
+train 96 0.024160385131835938
+train 112 0.00029277801513671875
+train 128 0.0009045600891113281
+train 144 0.0027294158935546875
+train 160 0.0008170718210749328
+train 176 2.26578426361084
+train 192 0.000152587890625
+train 208 0.002594470977783203
+train 224 0.023974578827619553
+train 240 0.0001163482666015625
+train 256 4.100799560546875e-05
+train 272 0.0004820823669433594
+train 288 0.0013575553894042969
+train 304 0.0006852149963378906
+train 320 0.0009551048278808594
+train 336 0.0032024383544921875
+adapted {'NDCG@5': 0.6917182736599862, 'MAP@5': 0.6227430555555555, 'Recall@5': 0.6666666666666666, 'Precision@5': 0.23750000000000002, 'NDCG@10': 0.6917182736599862, 'MAP@10': 0.6227430555555555, 'Recall@10': 0.6666666666666666, 'Precision@10': 0.11875000000000001, 'NDCG@15': 0.6965084861034663, 'MAP@15': 0.6248263888888889, 'Recall@15': 0.6822916666666666, 'Precision@15': 0.08125, 'Completeness@5': 0.4375, 'Completeness@10': 0.4375, 'Completeness@15': 0.46875, 'Completeness@20': 0.46875, 'Recall@20': 0.6822916666666666, 'Completeness@50': 0.46875, 'Recall@50': 0.6822916666666666, 'Completeness@100': 0.46875, 'Recall@100': 0.6822916666666666, 'MRR@5': 0.865625}

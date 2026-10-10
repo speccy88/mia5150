@@ -1,0 +1,25 @@
+{
+  "model": "z-ai/glm-5.3-flash",
+  "provider_tag": "relace",
+  "provider_name": "Relace",
+  "context_length": 1048576,
+  "max_prompt_tokens": 1048576,
+  "max_prompt_tokens_source": "combined_context_only_no_separate_limit_advertised",
+  "max_completion_tokens": 131072,
+  "pricing": {
+    "prompt": "0.00000004",
+    "completion": "0.0000005",
+    "input_cache_read": "0.000000015",
+    "discount": 0
+  },
+  "temperature": 0,
+  "tool_choice": "auto",
+  "reasoning": {
+    "effort": "low"
+  },
+  "reasoning_status": "Explicit model-specific reasoning setting; actual reasoning tokens charged within output limit.",
+  "snapshot": "evidence/model_metadata/1790472551146205000.json",
+  "adapter": "langchain_openrouter.ChatOpenRouter",
+  "fallbacks": false,
+  "reserve_pricing_policy": "All input reserved at prompt PLUS advertised cache-write price; discounted reads covered. Other positive surcharges rejected."
+}

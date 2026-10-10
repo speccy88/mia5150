@@ -1,0 +1,243 @@
+{
+  "recorded_utc": "2026-10-02T07:23:56.643873+00:00",
+  "status": "Recovery evidence only; no raw per-query rows, model outputs, vectors, or original report reconstructed",
+  "interruption": "Original benchmark tree /workspace/shared/skillret-cpu-benchmark became unavailable; active controller exited1. Conversation workspace and small /tmp audit scripts survived. Native file manager confirms original path unavailable. Cause unverified.",
+  "dataset": {
+    "repo": "ThakiCloud/SKILLRET",
+    "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+    "split": "test v1.1",
+    "skills": 6006,
+    "queries": 4392,
+    "qrels": 7187,
+    "view": "name + newline + description[:1024]"
+  },
+  "hardware": {
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "visible_vcpus": 9,
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "threads": 4,
+    "ram_gib_approx": 9.7,
+    "device": "CPU"
+  },
+  "full_catalog_aggregates": [
+    {
+      "model": "bm25",
+      "method": "bm25",
+      "mrr5": 0.5148451730418944,
+      "recall5": 0.4670233758348513,
+      "hit1": 0.45377959927140255,
+      "p50_ms": 6.595786999923803,
+      "p95_ms": 11.373329649745754,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "bge-small",
+      "method": "vector",
+      "mrr5": 0.5802254098360656,
+      "recall5": 0.5114602307225258,
+      "hit1": 0.5154826958105647,
+      "p50_ms": 88.0037550000452,
+      "p95_ms": 156.73841149998677,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "bge-small",
+      "method": "hybrid",
+      "mrr5": 0.646907255616272,
+      "recall5": 0.577830904675167,
+      "hit1": 0.5826502732240437,
+      "p50_ms": 94.07920299963735,
+      "p95_ms": 165.755761650189,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "bge-small",
+      "method": "domain_vector",
+      "mrr5": 0.445920613236187,
+      "recall5": 0.3801229508196721,
+      "hit1": 0.40027322404371585,
+      "p50_ms": 105.46946900012699,
+      "p95_ms": 475.164036999922,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "e5-small",
+      "method": "vector",
+      "mrr5": 0.420328627808136,
+      "recall5": 0.39909684274438373,
+      "hit1": 0.3524590163934426,
+      "p50_ms": 85.34251450009833,
+      "p95_ms": 142.3372600499533,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "e5-small",
+      "method": "hybrid",
+      "mrr5": 0.6361300850030358,
+      "recall5": 0.5759714632665452,
+      "hit1": 0.5710382513661202,
+      "p50_ms": 94.77253799968821,
+      "p95_ms": 174.4911189002777,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "e5-small",
+      "method": "domain_vector",
+      "mrr5": 0.3460078931390407,
+      "recall5": 0.3206967213114754,
+      "hit1": 0.2941712204007286,
+      "p50_ms": 83.7405964998652,
+      "p95_ms": 135.34900015024505,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "embeddinggemma-int8",
+      "method": "vector",
+      "mrr5": 0.6694254705525198,
+      "recall5": 0.598550394656952,
+      "hit1": 0.6035974499089253,
+      "p50_ms": 456.531690500924,
+      "p95_ms": 832.9364997996887,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "embeddinggemma-int8",
+      "method": "hybrid",
+      "mrr5": 0.7008462355798422,
+      "recall5": 0.6408621736490588,
+      "hit1": 0.636384335154827,
+      "p50_ms": 463.68249999977706,
+      "p95_ms": 684.3184206994009,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    },
+    {
+      "model": "embeddinggemma-int8",
+      "method": "domain_vector",
+      "mrr5": 0.5010018214936248,
+      "recall5": 0.43693078324225865,
+      "hit1": 0.4494535519125683,
+      "p50_ms": 449.7495865007295,
+      "p95_ms": 613.1235756008209,
+      "queries": 4392,
+      "catalog_size": 6006,
+      "timing_queries": 64,
+      "timing_repeats": 3,
+      "evidence_status": "Retained aggregate observation; original raw files currently unavailable"
+    }
+  ],
+  "fast_exploratory_common8": [
+    {
+      "model": "bge-small",
+      "mrr5": 0.75,
+      "median_ms_reported_rounded2": 101.39,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "e5-small",
+      "mrr5": 0.75,
+      "median_ms_reported_rounded2": 219.56,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "embeddinggemma-int8",
+      "mrr5": 0.75,
+      "median_ms_reported_rounded2": 1505.89,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "gliner2.5-small",
+      "mrr5": 0.25,
+      "median_ms_reported_rounded2": 3236.46,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "verdict-151m-onnx",
+      "mrr5": 0.19791666666666666,
+      "median_ms_reported_rounded2": 7940.79,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "julia-1",
+      "mrr5": 0.125,
+      "median_ms_reported_rounded2": 2144.96,
+      "queries": 8,
+      "repeats": 1
+    },
+    {
+      "model": "laya-multilingual",
+      "mrr5": 0.125,
+      "median_ms_reported_rounded2": 6262.05,
+      "queries": 8,
+      "repeats": 1
+    }
+  ],
+  "fast_caveats": [
+    "Same frozen first8 queries and BGE+BM25 top10 candidates",
+    "Baseline MRR and candidate-any-hit ceiling both.75, so zero possible MRR improvement",
+    "Laya latency recovered from its flushed log at0.1ms precision after user-directed interruption",
+    "Initial default-ORT spinning timings differ from expanded spinning-off runtime",
+    "Raw fast per-query and per-pair files are currently unavailable"
+  ],
+  "audit_evidence": "Before interruption, independent checks verified full BGE/E5/Gemma each52704 metric rows,474336 metric checks,2304 timing observations; BM2517568 rows. The retained aggregate values above were printed by completed execution readouts and independent audit messages. This file is not a substitute for those unavailable raw artifacts.",
+  "original_deadlines": {
+    "inference_stop": "2026-10-02T11:52:00Z",
+    "delivery": "2026-10-02T12:12:00Z"
+  },
+  "seed_protocol": {
+    "query_subset": "SHA256(UTF8(skillret-cpu-query-subset-v1 + NUL + query_id)), then query_id",
+    "catalog": "All sorted gold IDs + distractors ordered SHA256(UTF8(skillret-cpu-catalog-v1 + NUL + query_id + NUL + skill_id)), tie skill_id; prefixes10/100/1000, full6006; sort candidate IDs before scoring"
+  },
+  "methods": {
+    "BM25": "Unicode word tokens, casefold, k1=1.2,b=.75, nonnegative Lucene IDF per catalog",
+    "vector": "publisher prompts/pooling and normalized exact dot product",
+    "hybrid": "equal RRF k=60, depth100",
+    "domain_vector": "predicted top1 of6major-category normalized document-embedding centroids; existing skill metadata only; no gold query routing"
+  },
+  "no_new_inference": true
+}

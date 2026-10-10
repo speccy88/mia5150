@@ -1,0 +1,11 @@
+{
+  "package": "rank-bm25",
+  "class": "BM25Okapi",
+  "tokenizer": "lowercase Unicode word regex",
+  "k1": 1.5,
+  "b": 0.75,
+  "scoring_seconds": 552.1467961929739,
+  "catalog_size": 6006,
+  "package_version": "0.2.2",
+  "query_term_frequency_policy": "repeated query tokens are scored repeatedly by BM25Okapi.get_scores"
+}

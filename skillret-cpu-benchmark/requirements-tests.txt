@@ -1,0 +1,7 @@
+# Direct versions observed in the existing sandbox for offline integration checks.
+# Analysis/contract tests only; original Linux model pins are in requirements-*.txt.
+pytest==9.1.1
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.6
+nbformat==5.11.1

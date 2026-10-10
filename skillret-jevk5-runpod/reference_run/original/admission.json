@@ -1,0 +1,19 @@
+{
+  "targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "in_proj_qkv",
+    "in_proj_z",
+    "in_proj_b",
+    "in_proj_a",
+    "out_proj"
+  ],
+  "trainable_parameters": 14376960,
+  "total_parameters": 4220128256,
+  "zero_lora_max_logit_difference": 0.0,
+  "cuda_resident": true,
+  "quantized": false,
+  "gradient_checkpointing": true
+}

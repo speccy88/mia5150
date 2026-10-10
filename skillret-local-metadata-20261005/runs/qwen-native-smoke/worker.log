@@ -1,0 +1,4 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+encode 0 1
+encode 0 32
+encode 0 4

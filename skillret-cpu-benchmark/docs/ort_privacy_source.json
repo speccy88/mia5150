@@ -1,0 +1,15 @@
+{
+  "package": "onnxruntime",
+  "version": "1.30.0",
+  "installed_file": "Privacy.md",
+  "bytes": 4696,
+  "sha256": "9703b86132bbe407a7138f9a45689e6996a8ab0ac670529d3699ce753f67538e",
+  "verification": "Static text inspection only; no ONNX Runtime import, session, inference, or network test performed.",
+  "full_optout": "ORT_DISABLE_TELEMETRY=1 before initialization; non-Windows process lifetime",
+  "official_sources": [
+    "https://github.com/microsoft/onnxruntime/blob/v1.30.0/docs/Privacy.md#disabling-telemetry",
+    "https://github.com/microsoft/onnxruntime/releases/tag/v1.29.0"
+  ],
+  "prospective_only": true,
+  "measured_configuration_changed": false
+}

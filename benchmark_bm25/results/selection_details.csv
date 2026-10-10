@@ -1,0 +1,51 @@
+query,gold_skill,selected_skill,candidate_recall,exact_match,fuzzy_match,latency_s
+Can you help with skriptoteket devops?,skriptoteket-devops,skriptoteket-devops,1,1,1,1.13
+"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,1,1.249
+Can you help with web3 testing?,web3-testing,web3-testing,1,1,1,1.165
+"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,1,0.866
+I want to document my agent_skill,advanced-features-2025,mem-save,0,0,0,0.814
+I'm looking for a tool to implement a agent_skill,chatbot-analytics,new-analyzer,0,0,0,1.107
+I want to implement my documentation,ring:writing-plans,implementation,0,0,0,0.932
+I'm looking for a tool to configure a pipeline,ci-cd,verify-training-pipeline,0,0,0,1.308
+"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,1,0.712
+"creating workflow editors, data flow diagrams, organizational charts, mindmaps, process visualizatio",svelte-flow,svelte-flow,1,1,1,1.247
+I want to implement my code,create-pr,vibe-build,0,0,0,0.83
+I need to implement a api using dotnet cqrs api,dotnet-cqrs-api,dotnet-cqrs-api,1,1,1,0.936
+I need to search a agent_skill using web navigation strategies,web-navigation-strategies,web-navigation-strategies,1,1,1,1.034
+"asked to format, lint, or clean up code before committing or creating a PR.",code-formatting,code-formatting,1,1,1,1.206
+Can you help with schema visualizer?,schema-visualizer,schema-visualizer,1,1,1,0.866
+I want to configure my infrastructure,prometheus-monitoring,project-coach-setup-base,0,0,0,1.216
+Help me analyze data,data-validator,csv-parser,0,0,0,0.756
+"implementing email functionality, sending transactional emails, and managing email workflows.",email-service-integration,email-service-integration,1,1,1,1.027
+"""artifact publishing"", ""SBOM generation"", ""supply chain security"", or ""build provenance"".",artifact-sbom-publisher,artifact-sbom-publisher,1,1,1,0.775
+I want to test my code,ts-quality,ghe-transition,0,0,0,1.628
+I need to generate a documentation using research grants,research-grants,research-grants,1,1,1,1.516
+Help me deploy pipeline,spawn:terminal,ado-pipeline-best-practices,0,0,0,0.982
+I'm looking for a tool to generate a data,url-dump,free-tool-strategy,0,0,0,0.946
+Help me implement api,slack-skill,api-designer,0,0,0,1.774
+"the user wants to query work items, find bugs, list tasks, search by assignee, filter by state, find",wiql-queries,wiql-queries,1,1,1,1.807
+Can you help with plan manager?,plan-manager,plan-manager,1,1,1,0.911
+"graph databases, relationship visualization, and openCypher queries.",arcgis-knowledge-graphs,arcgis-knowledge-graphs,1,1,1,1.288
+I'm looking for a tool to deploy a project,plan-deployer,plan-deployer,1,1,1,0.945
+Help me implement ui_component,frontend-design-svelte,**flow-interview**,0,0,0,0.891
+I need to implement a code using learning localization engineering,learning-localization-engineering,learning-localization-engineering,1,1,1,1.834
+Help me implement ui_component,tailwindcss-core,flow-interview,0,0,0,1.309
+I want to design my content,drip-campaigns,content-strategy,0,0,0,1.482
+Can you help with executing marketing campaigns?,executing-marketing-campaigns,executing-marketing-campaigns,1,1,1,0.709
+"working with code quality, static analysis, formatting, or when user mentions PHPStan, Pint, quality",laravel-quality,laravel-quality,1,1,1,1.097
+"generating mechanical parts, parametric designs, functional prototypes, geometric shapes, or any 3D ",openscad-3d-modeling,openscad-3d-modeling,1,1,1,0.803
+I'm looking for a tool to search a documentation,comment-lister,docs-search,0,0,0,1.214
+I want to analyze my database,splynx-mysql,database-analyzer,0,0,0,2.13
+Help me configure project,pursuit-governance,spec-interview,0,0,0,0.862
+Can you help with doc analyzer?,doc-analyzer,doc-analyzer,1,1,1,0.864
+"CI is failing, build errors occur, tests fail in CI, or pipeline is broken.",ci-fixer,ci-fixer,1,1,1,1.619
+Can you help with receive feedback?,receive-feedback,receive-feedback,1,1,1,2.298
+Help me test ui_component,visual-testing,rails-testing,0,0,0,0.715
+reallocating spend across channels/ad sets or setting guardrails,budget-optimization,budget-optimization,1,1,1,1.368
+Help me analyze infrastructure,docker-local-doctor,**flow-interview**,0,0,0,0.743
+I'm looking for a tool to design a data,pql-framework,design-documentation,0,0,0,2.544
+I'm looking for a tool to analyze a code,insight,agent-native-reviewer,0,0,0,0.76
+I want to document my documentation,architecture-readiness,documentation-standards,0,0,0,0.988
+I'm looking for a tool to orchestrate a agent_skill,atlas-full,mcp-mastery,0,0,0,0.867
+Can you help with initializing memory?,initializing-memory,initializing-memory,1,1,1,0.831
+Can you help with pytorch lightning?,pytorch-lightning,pytorch-lightning,1,1,1,1.555

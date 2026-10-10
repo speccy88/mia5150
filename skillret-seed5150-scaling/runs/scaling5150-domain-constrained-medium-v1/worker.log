@@ -1,0 +1,13 @@
+medium_qwen35 q-03666/random/10 Software Engineering ok
+medium_qwen35 q-03666/random/50 Software Engineering ok
+medium_qwen35 q-03666/random/100 Software Engineering ok
+medium_qwen35 q-03666/random/250 Software Engineering ok
+medium_qwen35 q-03666/random/1000 Software Engineering ok
+medium_qwen35 q-03666/random/6006 Software Engineering ok
+medium_qwen35 q-00674/random/10 Software Engineering ok
+medium_qwen35 q-00674/random/50 Software Engineering ok
+medium_qwen35 q-00674/random/100 Software Engineering ok
+medium_qwen35 q-00674/random/250 Software Engineering ok
+medium_qwen35 q-00674/random/1000 Software Engineering ok
+medium_qwen35 q-00674/random/6006 Software Engineering ok
+{"model": "medium_qwen35", "valid": 12, "new_calls": 12}

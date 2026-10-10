@@ -1,0 +1,20 @@
+{
+  "pricing": {
+    "model": "qwen/qwen3-235b-a22b-2507",
+    "route": "gmicloud/fp8",
+    "prompt_per_million": "0.0875000000",
+    "completion_per_million": "0.35000000",
+    "catalog_url": "https://openrouter.ai/api/v1/models/qwen/qwen3-235b-a22b-2507/endpoints"
+  },
+  "credit_verified": true,
+  "approved_public_fields": [
+    "query",
+    "candidate.name",
+    "candidate.description"
+  ],
+  "key_saved_by_probe": false,
+  "max_calls": 12,
+  "reserve_usd": "0.50",
+  "authorization": "User approved OpenRouter experiments under shared USD4 cap; delegated continuation approved fixed12 query probe with saved key and USD0.50 reservation. No additional topup.",
+  "requests_sha256": "c303e186ab86d2b2f22e481dc11d140486b84f33544a21bd08366e0accf2fcc3"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "query_id": "q-00001",
+    "text_to_top1_seconds": 0.13208742812275887
+  },
+  {
+    "query_id": "q-00002",
+    "text_to_top1_seconds": 0.08698991313576698
+  },
+  {
+    "query_id": "q-00003",
+    "text_to_top1_seconds": 0.08336349949240685
+  },
+  {
+    "query_id": "q-00004",
+    "text_to_top1_seconds": 0.07250699028372765
+  },
+  {
+    "query_id": "q-00005",
+    "text_to_top1_seconds": 0.06264408305287361
+  },
+  {
+    "query_id": "q-00006",
+    "text_to_top1_seconds": 0.15819044038653374
+  },
+  {
+    "query_id": "q-00007",
+    "text_to_top1_seconds": 0.17294112592935562
+  },
+  {
+    "query_id": "q-00008",
+    "text_to_top1_seconds": 0.24381264299154282
+  },
+  {
+    "query_id": "q-00009",
+    "text_to_top1_seconds": 0.12164365127682686
+  },
+  {
+    "query_id": "q-00010",
+    "text_to_top1_seconds": 0.18272633850574493
+  },
+  {
+    "query_id": "q-00011",
+    "text_to_top1_seconds": 0.20981177687644958
+  },
+  {
+    "query_id": "q-00012",
+    "text_to_top1_seconds": 0.14396144449710846
+  },
+  {
+    "query_id": "q-00013",
+    "text_to_top1_seconds": 0.21362141892313957
+  },
+  {
+    "query_id": "q-00014",
+    "text_to_top1_seconds": 0.11047888919711113
+  },
+  {
+    "query_id": "q-00015",
+    "text_to_top1_seconds": 0.21859773248434067
+  },
+  {
+    "query_id": "q-00016",
+    "text_to_top1_seconds": 0.14328384026885033
+  },
+  {
+    "query_id": "q-00017",
+    "text_to_top1_seconds": 0.14350979030132294
+  },
+  {
+    "query_id": "q-00018",
+    "text_to_top1_seconds": 0.1476842612028122
+  },
+  {
+    "query_id": "q-00019",
+    "text_to_top1_seconds": 0.12291249260306358
+  },
+  {
+    "query_id": "q-00020",
+    "text_to_top1_seconds": 0.15518390387296677
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "verified": false,
+  "verified_at_unix": 1791336293.16546,
+  "source": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?recent=1",
+  "base": "USD",
+  "quote": "CAD",
+  "rate": "1.4226",
+  "rate_date": "2026-10-06",
+  "rate_source_verified": true,
+  "fees_verified": false,
+  "reason": "FX reference verified, account fee and existing-credit information pending; this is NOT a passed paid-execution gate."
+}

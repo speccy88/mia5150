@@ -1,0 +1,46 @@
+{
+  "review_type": "Static pilot review and read-only generated-prompt QA; no execution or GPU use by reviewer",
+  "source_sha256": "aea54c1b654b5681202ecc07e6e087316ee24acfe250d13688ff2e9d051b5b47",
+  "guard_sha256": "8dd6fe0ae31b94b048878f6bbb8e14a205f962ce78eedeb6e6948d49002109a8",
+  "pairs_sha256": "e122c32c319d3705dfb47797f82596e352330153f7ecb6a49f8214aebb4467d7",
+  "fp16_loop": "FP16 autocast forward; FP32 option logits and CE+Brier; GradScaler(loss/8); unscale; finite/present gradients; nonzero norm; clip1; scaler step/update; verify adapter finite",
+  "original_adapter_proof": "Exact key-set and float32 tensor equality against downloaded original safetensors before optimizer creation",
+  "freeze_proof": "Full SHA256 of every frozen parameter before training, after update2, after reload, after update20; also no frozen gradients",
+  "reload_proof": "Safe serialization checkpoint2, adapter tensor hashes equal after reload, four fixed eval examples max abs logit difference<=1e-4, full frozen base equal, optimizer/scaler/RNG restored",
+  "review_fixes_verified": [
+    "Require unscaled adapter gradient norm >0",
+    "Require five consecutive fresh CPU<=80% samples before worker launch"
+  ],
+  "train_pairs": 66,
+  "train_queries": 32,
+  "eval_pairs": 60,
+  "eval_queries": 16,
+  "optimizer_updates_planned": 20,
+  "microbatches_per_update": 8,
+  "training_presentations": 160,
+  "unique_training_pairs": 66,
+  "prompt_rows": 126,
+  "min_tokens": 195.0,
+  "max_tokens": 248.0,
+  "all_padded_256": true,
+  "query_truncated": 71,
+  "skill_header_truncated": 25,
+  "prompt_verified": [
+    "English schema and nonthinking chat generation suffix",
+    "A Relevant / B Not relevant with positive target0",
+    "Final newline and STATE delimiters",
+    "Header-only skills; body excluded and recorded"
+  ],
+  "scope_caveats": [
+    "Gold-conditioned balanced binary diagnostics, not full-corpus retrieval",
+    "Exposed development evaluation; not blind",
+    "160 presentations cycle66 unique training pairs",
+    "Truncated query/header labels inherit full-data relevance; missing constraints may affect diagnostic validity",
+    "SM75 numerical, backward and memory feasibility remain empirical"
+  ],
+  "observed_worker_at_review": [
+    "model_loaded: total763215680 trainable10822656",
+    "released_adapter_verified passed"
+  ],
+  "remaining_blocker": "No static blocker identified after two fixes; training/update/reload success not yet established by this reviewer"
+}

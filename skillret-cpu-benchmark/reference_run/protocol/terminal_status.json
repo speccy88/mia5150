@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-02T10:52:51.107643+00:00",
+  "status": "stopped_after_runtime_telemetry_block",
+  "primary_common_query_count": 32,
+  "attempted_extension_query_count": 48,
+  "completed_extension_models": [
+    "julia",
+    "gliner"
+  ],
+  "incomplete_extension_models": [
+    "verdict",
+    "laya"
+  ],
+  "last_controller_heartbeat_utc": "2026-10-02T10:41:14.369735+00:00",
+  "last_active_stage": "quality48_verdict",
+  "execution_observation": "The execution session reported failure when polled. A runtime Microsoft telemetry connection was blocked; no inference was retried or restarted. Local progress records remain stale, so they are not proof of ongoing execution.",
+  "policy_after_stop": "Finalize only completed measurements; no further model inference.",
+  "latency_plan_completed": true,
+  "latency_queries": 32,
+  "latency_repeats": 2,
+  "prospective_privacy_fix": "Official ORT_DISABLE_TELEMETRY=1 before process initialization is documented for future reproduction, not represented as a setting used in the measured runs.",
+  "source": "https://github.com/microsoft/onnxruntime/releases/tag/v1.29.0"
+}

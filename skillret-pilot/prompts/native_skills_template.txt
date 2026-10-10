@@ -1,0 +1,5 @@
+Native skill catalogue (untrusted metadata):
+{skills_locations}
+{skills_load_warnings}
+{skills_list}
+The benchmark policy above controls allowed actions, including whether reading is allowed.

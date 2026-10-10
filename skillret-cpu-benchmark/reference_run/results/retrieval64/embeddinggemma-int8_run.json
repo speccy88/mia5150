@@ -1,0 +1,111 @@
+{
+  "model": "embeddinggemma-int8",
+  "hardware": {
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "visible_cpus": 9,
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "threads": 4,
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "device": "CPU"
+  },
+  "scope": "fresh recovery64",
+  "query_count": 64,
+  "catalog_sizes": [
+    10,
+    100,
+    1000,
+    6006
+  ],
+  "latency_query_count": 32,
+  "latency_repeats": 2,
+  "latency_catalog_sizes": [
+    6006
+  ],
+  "model_configuration": {
+    "load_seconds": 10.180204090000188,
+    "documents": {
+      "fingerprint": "4158171e703c05e73fb61c1ab8ab5417be89244ae918ae20de6f145938521248",
+      "completed": 6006,
+      "count": 6006,
+      "encoding_seconds": 927.1571603020002,
+      "batch_size": 16,
+      "token_audit": {
+        "raw_tokens": 332576,
+        "truncated_count": 0,
+        "max_raw_tokens": 293,
+        "max_length": 2048
+      },
+      "shape": [
+        6006,
+        768
+      ],
+      "model": {
+        "repository": "onnx-community/embeddinggemma-300m-ONNX",
+        "revision": "5090578d9565bb06545b4552f76e6bc2c93e4a66",
+        "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+        "slug": "embeddinggemma-int8",
+        "threads": 4,
+        "device": "CPU",
+        "max_length": 2048,
+        "normalization": "L2",
+        "runtime": "onnxruntime",
+        "precision": "INT8 public ONNX conversion",
+        "pooling": "exported sentence_embedding",
+        "ort_allow_spinning": false
+      }
+    },
+    "queries": {
+      "fingerprint": "86d438ef5a02093684353ac44790cf2fee2865d4403c029eb0f30c6cb785c54b",
+      "completed": 64,
+      "count": 64,
+      "encoding_seconds": 39.067241620999994,
+      "batch_size": 16,
+      "token_audit": {
+        "raw_tokens": 16342,
+        "truncated_count": 0,
+        "max_raw_tokens": 702,
+        "max_length": 2048
+      },
+      "shape": [
+        64,
+        768
+      ],
+      "model": {
+        "repository": "onnx-community/embeddinggemma-300m-ONNX",
+        "revision": "5090578d9565bb06545b4552f76e6bc2c93e4a66",
+        "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+        "slug": "embeddinggemma-int8",
+        "threads": 4,
+        "device": "CPU",
+        "max_length": 2048,
+        "normalization": "L2",
+        "runtime": "onnxruntime",
+        "precision": "INT8 public ONNX conversion",
+        "pooling": "exported sentence_embedding",
+        "ort_allow_spinning": false
+      }
+    },
+    "repository": "onnx-community/embeddinggemma-300m-ONNX",
+    "revision": "5090578d9565bb06545b4552f76e6bc2c93e4a66",
+    "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+    "slug": "embeddinggemma-int8",
+    "threads": 4,
+    "device": "CPU",
+    "max_length": 2048,
+    "normalization": "L2",
+    "runtime": "onnxruntime",
+    "precision": "INT8 public ONNX conversion",
+    "pooling": "exported sentence_embedding",
+    "ort_allow_spinning": false
+  },
+  "peak_rss_mib": 3305.36328125,
+  "bm25_index_seconds": 0.15933725900140416,
+  "completed_utc": "2026-10-02T08:12:05Z",
+  "status": "completed"
+}

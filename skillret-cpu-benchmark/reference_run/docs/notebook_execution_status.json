@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-02T10:51:59Z",
+  "status": "finalized_after_inference_stop",
+  "primary_query_count": 32,
+  "attempted_extension_query_count": 48,
+  "completed_extension_models": ["julia-1", "gliner2.5-small"],
+  "stop_reason": "Inference stopped at the Verdict48 extension after a telemetry/privacy restriction; no retry or alternate inference was performed.",
+  "interpretation": "The runtime-only48-query choice remains the attempted plan. Exact all-model completion selects common32; Julia/GLiNER48 are separate supplements. An older controller status may remain stale after the stop."
+}

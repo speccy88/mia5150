@@ -1,0 +1,16 @@
+{
+  "staged_files_scanned": 97,
+  "staged_bytes": 24040217,
+  "archive_members_scanned": 447,
+  "secret_patterns": "passed",
+  "excluded_paths": "passed",
+  "reference_sha256": "871dba2b651449ef0315874c8489b5520b3d85889fb62cdad7bfe3336d4abd58",
+  "new_local_links_checked": 18,
+  "notebooks": 2,
+  "env_file_read": false,
+  "initial_diff_check": {
+    "exit_code": 2,
+    "cause": "PDF was detected as text and historical CSVs used CRLF line endings. Added binary PDF/archive attributes and LF CSV normalization; original ZIP bytes retained."
+  },
+  "final_diff_check_exit_code": 0
+}

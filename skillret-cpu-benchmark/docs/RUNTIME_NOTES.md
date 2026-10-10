@@ -1,0 +1,8 @@
+# Runtime notes
+Fresh recovery runs are CPU-only, serial, with four-thread numerical pools and the first four allowed CPU affinities. Actual hardware is recorded in each run receipt. Numerical model-weight hashes are recorded in download_receipts.json. Process peak RSS is MiB, not model file size or model-only allocation. ORT idle spinning is disabled. Native Julia tokenizer/encoding caches are disabled. Warm latency includes query encoding, retrieval, and decision scoring; index/model preparation is measured separately. Small-catalog quality uses query-specific gold-preserving sampled pools and is not deployment corpus scaling against a single shared small index.
+
+Historical aggregate observations are not mixed into fresh per-query datasets. Their original raw output files became unavailable after the execution workspace disappeared. Fresh recovered inputs have independently verified source hashes and deterministic cohorts; fresh outputs are checkpointed after each stage. No per-query historical values are inferred from aggregates.
+
+Observed requirement lists are provenance, not portable install locks. Follow the README's minimal installation sequence, including local installation of the pinned Julia official model repository.
+
+GLiNER2.5 used the publisher loader’s eager-attention fallback because DeBERTaV2 does not support the requested SDPA path in the pinned Transformers4.57.6 environment; its legacy extra_special_tokens metadata is normalized by the publisher compatibility loader. Both events are preserved in raw logs. Centroid construction is excluded from warm timings and was not separately profiled; document encoding and BM25 construction are captured.

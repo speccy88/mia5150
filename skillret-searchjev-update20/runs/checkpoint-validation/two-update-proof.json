@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "optimizer_updates": 2,
+  "finite_nonzero_gradients": true,
+  "adapter_changes": [
+    372,
+    372
+  ],
+  "frozen_base_identical": true,
+  "save_reload_adapter_identical": true,
+  "save_reload_max_abs_logit_diff": 0.0,
+  "checkpoint": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runs/pilot/checkpoint-update2",
+  "validation": "fresh process after strict swap guard terminated same-process reload; no guard threshold relaxed",
+  "training_run": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runs/pilot"
+}

@@ -1,0 +1,6 @@
+query_id,gold_count,bm25_recall_at_5,bm25_complete_at_5,jev_recall_at_5,jev_complete_at_5,clm_recall_at_5,clm_complete_at_5,jev_minus_clm_recall
+q-04792,1,1.0,1,1.0,1,1.0,1,0.0
+q-03911,1,0.0,0,1.0,1,1.0,1,0.0
+q-04981,2,0.0,0,0.5,0,0.0,0,0.5
+q-00562,2,0.5,0,0.5,0,0.5,0,0.0
+q-00391,1,1.0,1,1.0,1,1.0,1,0.0

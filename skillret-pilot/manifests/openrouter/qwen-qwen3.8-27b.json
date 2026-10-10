@@ -1,0 +1,24 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "provider_tag": "darkbloom/fp4",
+  "provider_name": "Darkbloom",
+  "context_length": 262144,
+  "max_prompt_tokens": 262144,
+  "max_prompt_tokens_source": "combined_context_only_no_separate_limit_advertised",
+  "max_completion_tokens": 32768,
+  "pricing": {
+    "prompt": "0.0000000825",
+    "completion": "0.0000022",
+    "discount": 0
+  },
+  "temperature": 0,
+  "tool_choice": "auto",
+  "reasoning": {
+    "effort": "none"
+  },
+  "reasoning_status": "disable requested; actual reasoning tokens must be checked",
+  "snapshot": "evidence/model_metadata/1790472550568874000.json",
+  "adapter": "langchain_openrouter.ChatOpenRouter",
+  "fallbacks": false,
+  "reserve_pricing_policy": "All input reserved at prompt PLUS advertised cache-write price; discounted reads covered. Other positive surcharges rejected."
+}

@@ -1,0 +1,13 @@
+token audit 0 6006
+Token indices sequence length is longer than the specified maximum sequence length for this model (9221 > 8192). Running this sequence through the model will result in indexing errors
+token audit 1000 6006
+token audit 2000 6006
+token audit 3000 6006
+token audit 4000 6006
+token audit 5000 6006
+token audit 6000 6006
+{"cache": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/cache/c364634bcfd07525e074a927760ef2dd0f52ce0b0f92a09debaed13a6f0d683e", "documents": {"min": 117, "median": 1677.5, "p95": 5723.5, "max": 49012, "total": 13247447, "over_8192": 108, "over_32768": 2, "truncated_count": 2, "effective_total": 13227233}, "queries": {"min": 57, "median": 252.0, "p95": 393.0, "max": 862, "total": 1128023, "over_8192": 0, "over_32768": 0, "truncated_count": 0, "effective_total": 1128023}}
+`torch_dtype` is deprecated! Use `dtype` instead!
+documents cached 1 / 6006 last seconds 9.201
+documents cached 2 / 6006 last seconds 8.866
+documents cached 3 / 6006 last seconds 6.754

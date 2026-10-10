@@ -1,0 +1,12 @@
+{
+  "pod_id": "37rdyis3kwmomk",
+  "pod_name": "charlie-skillret-jevk5-resume-20261002",
+  "created_at_utc": "2026-10-02T10:33:41.67Z",
+  "deletion_http_status": 204,
+  "readback_http_status": 404,
+  "readback_detail": "pod not found",
+  "pod_absent_verified": true,
+  "verified_at_utc": "2026-10-02T11:49:54+00:00",
+  "network_volume_attached": false,
+  "export_verified_before_deletion": true
+}

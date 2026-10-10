@@ -1,0 +1,35 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/310 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 1/310 [00:00<01:51,  2.76it/s]Loading checkpoint shards:   5%|▌         | 16/310 [00:00<00:06, 43.78it/s]Loading checkpoint shards:  12%|█▏        | 37/310 [00:00<00:03, 89.64it/s]Loading checkpoint shards:  18%|█▊        | 56/310 [00:00<00:02, 117.87it/s]Loading checkpoint shards:  24%|██▍       | 75/310 [00:00<00:01, 136.68it/s]Loading checkpoint shards:  30%|███       | 93/310 [00:00<00:01, 144.99it/s]Loading checkpoint shards:  36%|███▋      | 113/310 [00:00<00:01, 158.84it/s]Loading checkpoint shards:  43%|████▎     | 132/310 [00:01<00:01, 165.34it/s]Loading checkpoint shards:  49%|████▊     | 151/310 [00:01<00:00, 171.78it/s]Loading checkpoint shards:  55%|█████▍    | 170/310 [00:01<00:00, 172.10it/s]Loading checkpoint shards:  62%|██████▏   | 191/310 [00:01<00:00, 179.34it/s]Loading checkpoint shards:  68%|██████▊   | 212/310 [00:01<00:00, 186.62it/s]Loading checkpoint shards:  75%|███████▌  | 234/310 [00:01<00:00, 193.60it/s]Loading checkpoint shards:  82%|████████▏ | 254/310 [00:01<00:00, 194.30it/s]Loading checkpoint shards:  89%|████████▊ | 275/310 [00:01<00:00, 194.94it/s]Loading checkpoint shards:  95%|█████████▌| 295/310 [00:01<00:00, 195.46it/s]Loading checkpoint shards: 100%|██████████| 310/310 [00:02<00:00, 154.72it/s]
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+q-02806 ok
+q-01679 ok
+q-03421 ok
+q-03558 ok
+q-01254 ok
+q-02636 ok
+q-03650 ok
+q-02145 ok
+q-04419 ok
+q-03802 ok
+q-03050 ok
+q-03154 ok
+q-01972 ok
+q-02255 ok
+q-02590 ok
+q-04772 ok
+q-01137 ok
+q-01223 ok
+q-00702 ok
+q-03923 ok
+q-04775 ok
+q-01436 ok
+q-02635 ok
+q-01186 ok
+q-01962 ok
+q-03481 ok
+q-03666 ok
+q-04808 ok
+q-00324 ok
+q-04330 ok
+q-04960 ok
+q-04337 ok

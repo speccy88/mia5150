@@ -1,0 +1,73 @@
+{
+  "base_repo": "Qwen/Qwen3.5-0.8B",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "base_safetensors_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+  "initial_adapter_repo": "SearchJev/SearchJev-0.8B",
+  "initial_adapter_revision": "03c5b638c8fdc570a1d4bf998cebac22c0b53384",
+  "initial_adapter_sha256": "5e3d00afba46dba0715b3a1aed4c82f082678f2992f7912e0d473ccfa966b1f9",
+  "optimizer_updates": 20,
+  "configuration_only_portability_change": {
+    "original_config_sha256": "825f526d8b345352682d0636696ea25c19f38fb0288f08d5f906b5b1cb0014ec",
+    "fields": [
+      "base_model_name_or_path",
+      "revision"
+    ]
+  },
+  "weights_modified_after_save": false,
+  "result": "../result.json",
+  "adapted_safetensors_sha256": "b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300"
+}
+{"checkpoint": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runs/pilot20-dynamic/checkpoint-update20/adapter_model.safetensors", "sha256": "b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300", "tensors": 372, "parameters": 10822656, "all_float32": true, "all_finite": true, "bytes": 43340856}
+{
+  "eval_queries": 16,
+  "pairs": 60,
+  "resamples": 4000,
+  "seed": 271828,
+  "intervals": {
+    "loss": {
+      "delta": 0.386010431102477,
+      "query_cluster_bootstrap_percentile_95": [
+        0.010440661365376604,
+        0.7906258024314108
+      ]
+    },
+    "ce": {
+      "delta": 0.36812092404191693,
+      "query_cluster_bootstrap_percentile_95": [
+        0.026679004613210315,
+        0.7399491433382288
+      ]
+    },
+    "brier": {
+      "delta": 0.035778995126353644,
+      "query_cluster_bootstrap_percentile_95": [
+        -0.06218403918288118,
+        0.14314070003012183
+      ]
+    },
+    "accuracy": {
+      "delta": 0.016666666666666666,
+      "query_cluster_bootstrap_percentile_95": [
+        -0.043478260869565216,
+        0.06756756756756757
+      ]
+    }
+  },
+  "before_correct_after_wrong": 3,
+  "before_wrong_after_correct": 4,
+  "caveat": "Small exposed balanced diagnostic. Bootstrap conditions on the chosen16 queries and cannot establish unseen-test or full-corpus retrieval performance.",
+  "prompt_truncation": {
+    "train": {
+      "prompts": 66,
+      "query_truncated": 35,
+      "skill_header_truncated": 16,
+      "max_tokens": 248
+    },
+    "eval": {
+      "prompts": 60,
+      "query_truncated": 36,
+      "skill_header_truncated": 9,
+      "max_tokens": 248
+    }
+  }
+}

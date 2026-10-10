@@ -1,0 +1,16 @@
+{
+  "method": "Actual Codex browser interaction and screenshots of localhost viewers",
+  "retrieval": {
+    "all": 128,
+    "wins": 36,
+    "losses": 28,
+    "next_button": "q-02806 to q-03650 under wins filter"
+  },
+  "lora": {
+    "all": 32,
+    "losses": 3,
+    "case": "q-train-051813"
+  },
+  "visual": "Readable side-by-side cards, clear caveats, green relevant hits; no clipping observed at desktop viewport. Mobile not tested.",
+  "server": "Loopback only, no publication/upload"
+}

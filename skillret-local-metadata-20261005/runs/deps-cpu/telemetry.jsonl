@@ -1,0 +1,3 @@
+{"time": 1791233247.532323, "host": {"utc": 1791233245.616, "available_bytes": 2422300672, "total_bytes": 16943194112}, "guest_available": 5347213312, "swap": {"pswpin": 0, "pswpout": 13}, "gpu_free_mib": 8006, "gpu_temp": 44, "gpu_utilization": 0}
+{"time": 1791233248.658071, "host": {"utc": 1791233247.691, "available_bytes": 2373570560, "total_bytes": 16943194112}, "guest_available": 5332135936, "swap": {"pswpin": 0, "pswpout": 13}, "gpu_free_mib": 8006, "gpu_temp": 44, "gpu_utilization": 0}
+{"time": 1791233249.796699, "host": {"utc": 1791233247.691, "available_bytes": 2373570560, "total_bytes": 16943194112}, "guest_available": 5357875200, "swap": {"pswpin": 0, "pswpout": 13}, "gpu_free_mib": 8006, "gpu_temp": 44, "gpu_utilization": 0}

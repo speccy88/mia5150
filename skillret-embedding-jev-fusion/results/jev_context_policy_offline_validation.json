@@ -1,0 +1,16 @@
+{
+  "schema_version": "jev-context-policy-offline-validation-v1",
+  "checked_at_utc": "2026-10-07T01:18:39.5818442Z",
+  "tests_passed": 24,
+  "test_framework": "unittest",
+  "command": "PYTHONDONTWRITEBYTECODE=1 /home/user/code/mia5150-local/.venv/bin/python -m unittest test_jev_prepare -v",
+  "observed_duration_seconds": 3.302,
+  "real_dataset_plans_generated": false,
+  "network_calls": 0,
+  "credentials_accessed": false,
+  "model_execution": false,
+  "source_sha256": "b0e7b111a834be05fa2ad11bb6e303465dfd4273210887ce89eb30e0cf7abc75",
+  "tests_sha256": "f9452d4083b46f7f7edce6077bab47936d3577e059ced3d5564d7f4a2956f33a",
+  "policy": "truncate_skill_md_right",
+  "policy_version": "skill-md-longest-unicode-prefix-v1"
+}

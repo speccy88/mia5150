@@ -1,0 +1,4 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+encode 0 1
+encode 0 13
+{"role": "qwen_embed_06", "changed_docs": 13, "startup_seconds": 6.762473119000106, "new_forward_seconds": 1.0832019870003933, "query_ids": ["q-03666", "q-00674", "q-03533", "q-04226", "q-01436", "q-03558", "q-04106", "q-00172", "q-02209", "q-03656", "q-01962", "q-01329", "q-03650", "q-01330", "q-04599", "q-01672", "q-04856", "q-01955", "q-01186", "q-04985"]}

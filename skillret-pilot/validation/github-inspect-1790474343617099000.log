@@ -1,0 +1,90 @@
+{
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "counts": {
+    "skills": 6006,
+    "queries": 4392,
+    "qrels": 7187
+  },
+  "schemas": {
+    "skills": {
+      "id": "str",
+      "name": "str",
+      "namespace": "str",
+      "description": "str",
+      "author": "str",
+      "stars": "int",
+      "installs": "int",
+      "license": "str",
+      "repo": "str",
+      "source_url": "str",
+      "raw_url": "str",
+      "major": "str",
+      "sub": "str",
+      "primary_action": "str",
+      "primary_object": "str",
+      "domain": "str",
+      "body": "str",
+      "skill_md": "str"
+    },
+    "queries": {
+      "id": "str",
+      "original_id": "str",
+      "query": "str",
+      "skill_ids": "list",
+      "skill_names": "list",
+      "k": "int",
+      "generator_model": "str",
+      "original_query": "NoneType"
+    },
+    "qrels": {
+      "query_id": "str",
+      "skill_id": "str",
+      "relevance": "int"
+    }
+  },
+  "checks": {
+    "duplicate_skill_ids": 0,
+    "duplicate_query_ids": 0,
+    "duplicate_qrel_pairs": 0,
+    "orphan_qrels": 0,
+    "empty_gold": 0,
+    "query_qrel_disagreement": 0,
+    "k_disagreement": 0
+  },
+  "major": {
+    "Software Engineering": 3723,
+    "Content Creation": 434,
+    "AI Agents": 666,
+    "Business & Planning": 584,
+    "Data & ML": 407,
+    "Information Retrieval": 192
+  },
+  "gold_sizes": {
+    "1": 2143,
+    "3": 546,
+    "2": 1703
+  },
+  "missing_skill_text": {
+    "name": 0,
+    "description": 0,
+    "skill_md": 0
+  },
+  "duplicate_names": 205,
+  "missing_query_text": 0,
+  "body_chars_quantiles": {
+    "min": 334.0,
+    "median": 6657.5,
+    "p95": 22895.0,
+    "max": 183832.0
+  },
+  "license_fields": {
+    "license": {
+      "mit": 5270,
+      "apache-2.0": 736
+    }
+  },
+  "pilot_queries": 200,
+  "live_queries": 20,
+  "final_reserved": 4192,
+  "provenance": "Public GitHub skills; synthetic queries. Metadata/queries Apache-2.0; source skill licenses retained. See pinned card."
+}

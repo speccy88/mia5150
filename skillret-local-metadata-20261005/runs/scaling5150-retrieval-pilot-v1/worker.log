@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/code/mia5150-local/scaling5150/retrieval.py", line 71, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/user/code/mia5150-local/scaling5150/retrieval.py", line 48, in main
+    systems['field_tfidf'],costs['field_tfidf']=field_tfidf(query,ids,texts)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/mia5150-local/scaling5150/retrieval.py", line 26, in field_tfidf
+    from sklearn.feature_extraction.text import TfidfVectorizer
+ModuleNotFoundError: No module named 'sklearn'

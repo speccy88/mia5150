@@ -1,0 +1,7 @@
+{
+  "time": 1791242133.6886904,
+  "gpu": "memory.used [MiB], memory.free [MiB], utilization.gpu [%], temperature.gpu\n904 MiB, 7103 MiB, 82 %, 58\n",
+  "project_gpu_jobs": "No inference/training/llama-server/queue processes found after stopping the external waiter.",
+  "global_idle": false,
+  "note": "GPU remains busy with host activity; no unrelated process stopped. Temporary QA browser and loopback server closed. Host monitor stops after packaging."
+}

@@ -1,0 +1,7 @@
+medium_jevk5 q-03666/random/50 ok
+medium_jevk5 q-03666/random/1000 ok
+medium_jevk5 q-03666/random/6006 ok
+medium_jevk5 q-00674/random/50 ok
+medium_jevk5 q-00674/random/1000 ok
+medium_jevk5 q-00674/random/6006 ok
+{"model": "medium_jevk5", "valid": 6, "forward_calls": 108}

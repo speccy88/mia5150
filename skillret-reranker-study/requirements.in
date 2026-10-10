@@ -1,0 +1,15 @@
+deepagents
+langchain-openrouter
+datasets
+sentence-transformers
+rank-bm25
+python-dotenv
+matplotlib
+pytest
+nbformat
+nbclient
+ipykernel
+bm25s
+pytrec-eval-terrier
+pandas
+langchain-ollama

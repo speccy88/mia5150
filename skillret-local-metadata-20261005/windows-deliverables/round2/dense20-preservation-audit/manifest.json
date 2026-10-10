@@ -1,0 +1,42 @@
+[
+  {
+    "sha256": "a29fca22f931422912f5b6a31977928cde767a3fed3c0ce8949718de5d4d77ec",
+    "bytes": 4086,
+    "path": "audit_dense20_preservation.py"
+  },
+  {
+    "sha256": "26817f2e6e8b9dde64f5d98a338945c77477da98a73a18003bf7411d8e05fa5e",
+    "bytes": 4595,
+    "path": "DENSE20_PRESERVATION_AUDIT.md"
+  },
+  {
+    "sha256": "7896cbe59e23fbfcb553fee1a2c195b919bf48a8c17242ec9d762c6a1cab34c1",
+    "bytes": 2079,
+    "path": "dense20-preservation-audit-v1\\audit.json"
+  },
+  {
+    "sha256": "8a0bf77f607e6a9d4f2110e02ca60df03ec9e9670d6997962cf0d6aeb2eba0b3",
+    "bytes": 233545,
+    "path": "dense20-preservation-audit-v1\\per-query.csv"
+  },
+  {
+    "sha256": "5d86dc6e3136b83244d042ace7dfdc75d0e25b5c4f95a4d91ba127fd7e40946d",
+    "bytes": 60,
+    "path": "guard\\command.json"
+  },
+  {
+    "sha256": "c365161d39236fe0f1d32937fbc549796b8487d8faf65ed3879b96897c78ea5d",
+    "bytes": 17,
+    "path": "guard\\exit.json"
+  },
+  {
+    "sha256": "7409f42c112da0006cd6019b67626fceaab93bda1d3c346738937f5ca8587800",
+    "bytes": 830,
+    "path": "guard\\telemetry.jsonl"
+  },
+  {
+    "sha256": "b3ee9367f7f7e3ad78219100dcecaf5c75fbaa4fa39b98330785241b9e922aa2",
+    "bytes": 2080,
+    "path": "guard\\worker.log"
+  }
+]

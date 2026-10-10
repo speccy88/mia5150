@@ -1,0 +1,82 @@
+[
+  {
+    "path": "exit.json",
+    "sha256": "c365161d39236fe0f1d32937fbc549796b8487d8faf65ed3879b96897c78ea5d",
+    "bytes": 17
+  },
+  {
+    "path": "prepared-varied-screen.json",
+    "sha256": "ce04b18330142b3712e6d755f5b9c90f629fd546fd81faf587d70e590e8f312d",
+    "bytes": 2073708
+  },
+  {
+    "path": "report_varied_screen.py",
+    "sha256": "07794e76d2af020b4b6c1e216a5779f93e0ae65dc7d795a59246abcea8cd7700",
+    "bytes": 10107
+  },
+  {
+    "path": "telemetry.jsonl",
+    "sha256": "a597fbf67570c565a87884d0fcd19e83b3ae4e05ccca9df66f570339971ec78a",
+    "bytes": 3943
+  },
+  {
+    "path": "test_varied_prompts.py",
+    "sha256": "1db0e8deb51fe41659fe6ca045eafad11a1126986f439826816e4efd5e515598",
+    "bytes": 4292
+  },
+  {
+    "path": "test_varied_screen.py",
+    "sha256": "b76d5bebdf304c3af5df80866cc1ecf959f631aaf0487f4e7fa1fbcdb2a77550",
+    "bytes": 1011
+  },
+  {
+    "path": "varied_prompts.py",
+    "sha256": "e67157b041edd3a4e01d1d74de5cf5b69a69ff62e645ca516e1659ea170a3e21",
+    "bytes": 5057
+  },
+  {
+    "path": "VARIED_SCREEN_BUDGET_STATUS.json",
+    "sha256": "e154ab84a0908ae58ff4ce74e9f974a4ed96d7edda974b5e2361d6521b2ba38d",
+    "bytes": 223
+  },
+  {
+    "path": "VARIED_SCREEN_RESULTS.md",
+    "sha256": "bd89a04deabea4e687f8a557e0612cb7027ef42ab1514b83514fb47aca3398aa",
+    "bytes": 5761
+  },
+  {
+    "path": "varied_screen.py",
+    "sha256": "d5ca97dd139f1aad8c46042a0872dcf5857bed1bb33a9b58a80f80910c68fab1",
+    "bytes": 7199
+  },
+  {
+    "path": "varied-screen-plan.json",
+    "sha256": "1269a0903dce6f23cd8be16d503d8f94e116329c460e70bc9fea2133ccf915e7",
+    "bytes": 33544
+  },
+  {
+    "path": "varied-screen-v3\\development.json",
+    "sha256": "7096319b48e1313c1e15e0b90d0bd42f1435b2f150ac4697b11efad766c97419",
+    "bytes": 84918
+  },
+  {
+    "path": "varied-screen-v3\\disclosure.json",
+    "sha256": "da7584e6daa6b996d5a07caeb54d6cbb42a19e7da8eff9b3b243ece27e426473",
+    "bytes": 596
+  },
+  {
+    "path": "varied-screen-v3\\results.json",
+    "sha256": "01fad98bc7bf5907a761b16a0634da3d8bcef1b7253762e2d65eedd99310b1fd",
+    "bytes": 146863
+  },
+  {
+    "path": "varied-screen-v3\\selection.json",
+    "sha256": "ec2d7ac533def7e605827a207f14dbddff0d6b0af441f31c3e9a00efe002aca4",
+    "bytes": 377
+  },
+  {
+    "path": "varied-screen-v3\\verified-summary.json",
+    "sha256": "cda628ded15bdb0d1c96ef10ad528f982c1a221067fa60f3d6dafb809e7be1e5",
+    "bytes": 1712
+  }
+]

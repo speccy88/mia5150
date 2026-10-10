@@ -1,0 +1,6 @@
+{
+  "recall_at_5": 0.04932107571194589,
+  "mrr": 0.05577228220609756,
+  "validation_queries": 6309,
+  "catalog_size": 10123
+}

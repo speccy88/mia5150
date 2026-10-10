@@ -1,0 +1,16 @@
+.............................................................................E
+======================================================================
+ERROR: test_run_hosted_study (unittest.loader._FailedTest.test_run_hosted_study)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_run_hosted_study
+Traceback (most recent call last):
+  File "/home/user/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'test_run_hosted_study'
+
+
+----------------------------------------------------------------------
+Ran 78 tests in 38.488s
+
+FAILED (errors=1)

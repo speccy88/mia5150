@@ -1,0 +1,14 @@
+{
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "model": "jev-1.13.0",
+  "max_calls": 4,
+  "max_input_tokens_total": 256000,
+  "usage_bound_usd": "0.010752",
+  "reserved_all_in_usd": "0.05",
+  "published_rate_usd_per_million": "0.042",
+  "output_price": 0,
+  "price_source": "https://docs.typesafe.ai/models",
+  "price_verified_utc_date": "2026-10-06",
+  "authorization": "Explicit delegated approval of ONE frozen selective probe, four calls, additional USD0.05 within totalUSD4. Public queries/name/description only.",
+  "requests_sha256": "4b1383eba12e2086dcd380579a50e2ee5927fb5555a12a2545a9084e3de9e9e2"
+}

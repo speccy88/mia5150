@@ -1,0 +1,1 @@
+[".venv/bin/python", "scaling5150/selection.py", "--model", "medium_qwen35", "--pilot"]

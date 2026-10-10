@@ -1,0 +1,14 @@
+{
+  "utc": 1791336131.0176208,
+  "process_only_key_handoff_authorized": true,
+  "key_value_logged": false,
+  "persistent_environment_modified": false,
+  "paid_calls": 0,
+  "process_key_nonempty": true,
+  "model_list_status": 200,
+  "model_list_receipt": "model_list_receipt.json",
+  "model_names": [
+    "jev-latest",
+    "jev-preview"
+  ]
+}

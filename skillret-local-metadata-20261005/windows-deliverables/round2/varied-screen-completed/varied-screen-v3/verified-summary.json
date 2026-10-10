@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "calls": 24,
+  "successful_calls": 24,
+  "confirmation_calls": 0,
+  "confirmation_labels_used": false,
+  "known_input_tokens": 168117,
+  "known_usage_usd": "0.007060914",
+  "stage_reservation_usd": "0.10",
+  "shared_committed_plus_external_usd": "1.87",
+  "shared_cap_usd": "4.00",
+  "cash_charge_usd": null,
+  "prior_known_usage_usd": "0.006159237",
+  "cumulative_known_usage_usd": "0.013220151",
+  "known_cost_excludes_earlier_uncertain_OpenRouter_call": true,
+  "median_api_seconds": 0.270093077000638,
+  "total_api_seconds": 6.981611361006799,
+  "batch_timings": {
+    "original_action": {
+      "calls": 6,
+      "tokens": 49949,
+      "median_api_seconds": 0.3181468685015716
+    },
+    "anchored_role": {
+      "calls": 6,
+      "tokens": 65069,
+      "median_api_seconds": 0.28953079050006636
+    },
+    "constraint": {
+      "calls": 6,
+      "tokens": 39755,
+      "median_api_seconds": 0.25756175149945193
+    },
+    "depth10": {
+      "calls": 6,
+      "tokens": 13344,
+      "median_api_seconds": 0.23358883550099563
+    }
+  },
+  "resources": {
+    "host_min_available_gib": 5.304878234863281,
+    "guest_min_available_gib": 4.968441009521484,
+    "gpu_min_free_mib": 8006,
+    "gpu_max_temperature_c": 43,
+    "active_swap_observed": false,
+    "sampled_worker_peak_rss_mib": 44.87890625
+  },
+  "unit_tests_passed": 65,
+  "selected": [],
+  "protocol_sha256": "d832c146580a51e466d8e887c6a9901979bbefce844c553f18205189822c407e",
+  "results_sha256": "01fad98bc7bf5907a761b16a0634da3d8bcef1b7253762e2d65eedd99310b1fd",
+  "result_verification": "All request hashes, skill-ID score ordering, fixed RRF60 output, token accounting and development metrics recomputed offline."
+}

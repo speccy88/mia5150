@@ -1,0 +1,10 @@
+{
+  "analysis.ipynb": {
+    "executed_code_cells": 3,
+    "method": "Sequential Python code-cell smoke, no notebook frontend or kernel launch; no training side effects."
+  },
+  "training_demo.ipynb": {
+    "executed_code_cells": 2,
+    "method": "Sequential Python code-cell smoke, no notebook frontend or kernel launch; no training side effects."
+  }
+}

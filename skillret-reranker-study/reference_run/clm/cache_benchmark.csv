@@ -1,0 +1,4 @@
+candidates,cold_action_seconds,warm_queries,mean_seconds,median_seconds,p95_seconds,input_tokens,caveat
+10,0.5359988482668996,20,0.10522705288603902,0.10204232297837734,0.14778653671965003,not exposed by /v1/rank,CLM caches reset; vLLM prefix cache retained; warm states are different queries
+100,1.032445882447064,20,0.05467615546658635,0.05402153357863426,0.0610580072272569,not exposed by /v1/rank,CLM caches reset; vLLM prefix cache retained; warm states are different queries
+1000,9.527573046274483,20,0.14536985564045607,0.16341906134039164,0.17955912621691825,not exposed by /v1/rank,CLM caches reset; vLLM prefix cache retained; warm states are different queries

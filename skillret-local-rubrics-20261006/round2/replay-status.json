@@ -1,0 +1,5 @@
+{
+  "frozen_examples_sha256": "4a2c40c9542786ee1ee2a2744939de19249ebd8d1a0144e1c08d165a54aab848",
+  "required_positive_pairs": 91,
+  "status": "Corrected protocol retained, lower priority under latest diversity preference; no repeated training started."
+}

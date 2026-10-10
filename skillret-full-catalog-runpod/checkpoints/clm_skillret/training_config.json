@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "batch_unique_queries": 256,
+  "random_negatives": 512,
+  "max_epochs": 10,
+  "patience": 2,
+  "gradient_clip_norm": 1.0,
+  "loss": "uniform-positive bidirectional cross-entropy",
+  "trainable_parameters": 18887681,
+  "cohort_groups": 49862
+}

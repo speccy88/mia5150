@@ -1,0 +1,9 @@
+# October 5 local metadata benchmark and adaptation experiments
+
+Start with [REPORT.md](REPORT.md), [START_HERE.md](START_HERE.md), [IMPLEMENTATION_MAP.md](IMPLEMENTATION_MAP.md), and [EXECUTION_STATUS.md](EXECUTION_STATUS.md). The 4,392-query comparison uses 6,006 metadata/header documents with bounded 1,024-token neural context; it is separate from the later official full-text reproduction. Reranker/LoRA panels are smaller and exposed. Interrupted, superseded, failed, and incomplete evidence is retained.
+
+Code, results, manifests, run snapshots, small trained LoRA adapters, optimizer/scaler/RNG checkpoint state, public queries/qrels, and model configuration pins are archived from the live Linux project. Windows execution scripts and differing delivery snapshots are retained separately under `windows-execution/` and `windows-deliverables/`; they do not supersede the live report. This includes the Windows host monitor. Retrieval/rubric follow-ups have their own sibling folder.
+
+Offline tests: `python -m unittest -q tests` in a Linux environment with the pinned requirements. These tests use synthetic fixtures and no models/network. Saved source and runtime paths often point at `/home/user/code/mia5150-local`; `harness.py` supports MIA5150_ROOT. Review entrypoints before executing because download/inference/training scripts are not offline tests.
+
+Downloaded base weights, tokenizer binary assets, environments, vector caches, and the large upstream skill-body corpora remain local. [evidence/data-manifest.json](evidence/data-manifest.json) pins ThakiCloud/SKILLRET revision `6583d7d2ed07644d0fb8938ed8178f3a7dc42a12`; [manifests/sra-files.json](manifests/sra-files.json) pins SRA-Bench. The root publication audit gives omissions and rebuild guidance. Public query text containing credential-shaped examples was redacted only in the exported copy; original pinned bytes stay local.

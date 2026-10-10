@@ -1,0 +1,209 @@
+{
+  "config": {
+    "dataset": "test.jsonl",
+    "num_queries": 50,
+    "seed": 42,
+    "k_values": [
+      1,
+      3,
+      5,
+      10,
+      20
+    ],
+    "library_sizes": [
+      50,
+      100,
+      500,
+      1000,
+      3000,
+      6006
+    ],
+    "document_repr": "name + description"
+  },
+  "retrieval": [
+    {
+      "library_size": 100,
+      "k": 1,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 100,
+      "k": 3,
+      "recall_at_k": 0.58,
+      "hits": 29,
+      "total": 50
+    },
+    {
+      "library_size": 100,
+      "k": 5,
+      "recall_at_k": 0.58,
+      "hits": 29,
+      "total": 50
+    },
+    {
+      "library_size": 100,
+      "k": 10,
+      "recall_at_k": 0.62,
+      "hits": 31,
+      "total": 50
+    },
+    {
+      "library_size": 100,
+      "k": 20,
+      "recall_at_k": 0.72,
+      "hits": 36,
+      "total": 50
+    },
+    {
+      "library_size": 500,
+      "k": 1,
+      "recall_at_k": 0.52,
+      "hits": 26,
+      "total": 50
+    },
+    {
+      "library_size": 500,
+      "k": 3,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 500,
+      "k": 5,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 500,
+      "k": 10,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 500,
+      "k": 20,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 1000,
+      "k": 1,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 1000,
+      "k": 3,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 1000,
+      "k": 5,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 1000,
+      "k": 10,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 1000,
+      "k": 20,
+      "recall_at_k": 0.56,
+      "hits": 28,
+      "total": 50
+    },
+    {
+      "library_size": 3000,
+      "k": 1,
+      "recall_at_k": 0.5,
+      "hits": 25,
+      "total": 50
+    },
+    {
+      "library_size": 3000,
+      "k": 3,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 3000,
+      "k": 5,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 3000,
+      "k": 10,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 3000,
+      "k": 20,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 6006,
+      "k": 1,
+      "recall_at_k": 0.5,
+      "hits": 25,
+      "total": 50
+    },
+    {
+      "library_size": 6006,
+      "k": 3,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 6006,
+      "k": 5,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 6006,
+      "k": 10,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    },
+    {
+      "library_size": 6006,
+      "k": 20,
+      "recall_at_k": 0.54,
+      "hits": 27,
+      "total": 50
+    }
+  ],
+  "selection": {
+    "model": "gpt-4o-mini",
+    "k": 10,
+    "n_queries": 50,
+    "candidate_recall": 0.54,
+    "exact_match": 0.54,
+    "fuzzy_match": 0.54,
+    "avg_latency_s": 1.169
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "selected": [],
+  "rule": "All24dev calls must be valid. Among action,anchored,role_choice,constraint at depth20, select at most1 with mean Recall5 delta>=0.05 versus original direct Jev, at least2 query wins, and wins>losses. Rank by delta, then fixed variant order. No prompt editing. Depth factor excluded from selection.",
+  "made_after_dev_before_confirmation": true
+}

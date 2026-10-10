@@ -1,0 +1,17 @@
+{
+  "version": "candidate-budget30-v1",
+  "hypothesis": "At exactly30 candidates, retaining dense top20 and adding10 novel BM25 candidates improves coverage over dense top30.",
+  "population": "All4392 historically exposed public test queries; source dataset revision6583d7d2ed07644d0fb8938ed8178f3a7dc42a12.",
+  "control": "First30 IDs from cached public-full-skillret_embed_06.json ranking.",
+  "treatment": "First20 IDs from the same dense cache, followed by the first10 IDs in cached public-full-bm25.json ranking absent from the first20. Scan at most100 lexical IDs. No score-based reordering, no label-based filtering.",
+  "ties": "Preserve each stored ranking exactly, including its existing ties. Novel lexical IDs retain cached lexical order. No new tie optimization.",
+  "pool_budget": 30,
+  "shortfall_policy": "Fail comparison if either pool cannot produce30 unique IDs. No hidden padding or dropping queries.",
+  "primary_metric": "Macro Recall@30 across all4392 queries, each query equally weighted.",
+  "secondary_metrics": ["positive query-skill pair coverage", "Completeness@30", "label-based pool oracle NDCG@10", "per-domain diagnostic coverage", "query wins/ties/losses and worst losses"],
+  "no_actual_reranker": true,
+  "label_use": "Only after both pool constructions and this protocol are frozen. Domain labels are gold-skill metadata used diagnostically, never routing features.",
+  "no_sweep": true,
+  "paid_calls": 0,
+  "exposure": "Public historical full-query results and aggregate coverage already observed; diagnostic comparison, not blind confirmation. No parameters will be tuned after this result."
+}

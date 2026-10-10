@@ -1,0 +1,7 @@
+fit_qwen8 q-03666/random/50 failed
+fit_qwen8 q-03666/random/1000 not_attempted
+fit_qwen8 q-03666/random/6006 not_attempted
+fit_qwen8 q-00674/random/50 not_attempted
+fit_qwen8 q-00674/random/1000 not_attempted
+fit_qwen8 q-00674/random/6006 not_attempted
+{"model": "fit_qwen8", "valid": 0, "forward_calls": 3}

@@ -1,0 +1,65 @@
+INSTALL [('joblib', '>=1.4.0'), ('httpx', '<1,>=0.23.0'), ('click', '<9.0.0,>=8.4.2'), ('annotated-doc', '>=0.0.2'), ('rich', '>=13.8.0'), ('shellingham', '>=1.3.0')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 13ms
+Installed 1 package in 4ms
+ + joblib==1.6.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/joblib-1.6.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 7ms
+Installed 1 package in 3ms
+ + httpx==0.28.1 (from file:///home/user/code/embeddinggemma2-pilot/wheels/httpx-0.28.1-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 5ms
+Installed 1 package in 1ms
+ + click==8.5.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/click-8.5.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 4ms
+Installed 1 package in 1ms
+ + annotated-doc==0.0.5 (from file:///home/user/code/embeddinggemma2-pilot/wheels/annotated_doc-0.0.5-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 15ms
+Installed 1 package in 2ms
+ + rich==15.0.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/rich-15.0.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 6ms
+Installed 1 package in 2ms
+ + shellingham==1.5.4 (from file:///home/user/code/embeddinggemma2-pilot/wheels/shellingham-1.5.4-py2.py3-none-any.whl)
+INSTALL [('cloudpickle', '>=3.0'), ('httpcore', '==1.*'), ('anyio', ''), ('markdown-it-py', '>=2.2.0')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 5ms
+Installed 1 package in 1ms
+ + cloudpickle==3.1.2 (from file:///home/user/code/embeddinggemma2-pilot/wheels/cloudpickle-3.1.2-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 8ms
+Installed 1 package in 3ms
+ + httpcore==1.0.9 (from file:///home/user/code/embeddinggemma2-pilot/wheels/httpcore-1.0.9-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 9ms
+Installed 1 package in 6ms
+ + anyio==4.15.1 (from file:///home/user/code/embeddinggemma2-pilot/wheels/anyio-4.15.1-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 9ms
+Installed 1 package in 6ms
+ + markdown-it-py==4.2.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/markdown_it_py-4.2.0-py3-none-any.whl)
+INSTALL [('h11', '>=0.16'), ('mdurl', '~=0.1')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 5ms
+Installed 1 package in 1ms
+ + h11==0.16.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/h11-0.16.0-py3-none-any.whl)
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 1ms
+Prepared 1 package in 4ms
+Installed 1 package in 1ms
+ + mdurl==0.1.2 (from file:///home/user/code/embeddinggemma2-pilot/wheels/mdurl-0.1.2-py3-none-any.whl)
+DEPENDENCIES_OK 56
+NATIVE_IMPORT_OK 5.19.0

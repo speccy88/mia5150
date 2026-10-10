@@ -1,0 +1,84 @@
+{
+  "purpose": "User-requested five-model comparison: first five existing pilot queries, N=50; fixed UUID clarification v2 shared with Ollama. No output repair.",
+  "dataset": {
+    "repo_id": "ThakiCloud/SKILLRET",
+    "revision_request": "main",
+    "require_resolved_commit": true,
+    "split": "test",
+    "baseline_queries": 200,
+    "live_queries": 20,
+    "mark_pilot_queries_consumed": true
+  },
+  "experiment": {
+    "strategies": [
+      "listing",
+      "bm25",
+      "vector",
+      "domain_vector"
+    ],
+    "library_sizes": [
+      50
+    ],
+    "top_k": 5,
+    "seed": 42,
+    "catalog_protocol": "per_query_nested_gold_preserving",
+    "selector_mode": "metadata_only_native_deepagents",
+    "max_selected_skills": 5,
+    "metadata_max_embedding_tokens": 128,
+    "shuffle_candidates_independently_of_relevance": true
+  },
+  "embedding": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "require_resolved_commit": true,
+    "device": "cpu",
+    "batch_size": 32,
+    "normalize": true,
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "document_prefix": ""
+  },
+  "routing": {
+    "taxonomy_field": "major",
+    "max_domains": 1,
+    "mode": "same_llm_query_only",
+    "empty_domain_policy": "record_failure_no_global_fallback",
+    "count_logical_routing_usage_when_cache_reused": true
+  },
+  "llm": {
+    "default_candidate": "qwen/qwen3-8b",
+    "adapter": "langchain_openrouter.ChatOpenRouter",
+    "require_live_preflight": true,
+    "provider": null,
+    "disable_provider_fallback": true,
+    "temperature": 0,
+    "max_output_tokens": 512,
+    "max_router_output_tokens": 96,
+    "reasoning": "disable_if_supported_and_verify",
+    "timeout_seconds": 90,
+    "sdk_max_retries": 0,
+    "max_selector_calls": 1,
+    "max_activation_calls": 4,
+    "max_activation_reads": 2,
+    "concurrency": 1,
+    "model_override": "xiaomi/mimo-v2.6-pro",
+    "pin_manifest": "manifests/openrouter/xiaomi-mimo-v2.6-pro.json"
+  },
+  "budget": {
+    "allow_paid_by_default": false,
+    "max_spend_cad": 5.0,
+    "max_spend_usd": 3.0,
+    "cad_per_usd": 1.5,
+    "fx_status": "planning_assumption_not_verified_exchange_rate",
+    "request_reserve_multiplier": 1.25,
+    "max_completion_requests": 300,
+    "retain_reserves_for_ambiguous_failures": true,
+    "persistent_ledger": true
+  },
+  "notes": [
+    "Defaults are proposed settings, not measured results.",
+    "240 selector decisions is the maximum planned first sweep before exclusions, plus routing/smoke calls.",
+    "The model/provider and all library versions must be verified and locked on the local machine.",
+    "A complete smaller trial is acceptable when budget/context/time limits prevent the entire sweep."
+  ],
+  "run_label": "mimo-v2-6-pro",
+  "uuid_contract_revision": 2
+}

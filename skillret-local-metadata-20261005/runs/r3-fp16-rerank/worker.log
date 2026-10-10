@@ -1,0 +1,35 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/310 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 1/310 [00:00<01:13,  4.20it/s]Loading checkpoint shards:   7%|▋         | 22/310 [00:00<00:03, 80.85it/s]Loading checkpoint shards:  14%|█▎        | 42/310 [00:00<00:02, 120.30it/s]Loading checkpoint shards:  20%|██        | 62/310 [00:00<00:01, 146.22it/s]Loading checkpoint shards:  26%|██▌       | 81/310 [00:00<00:01, 160.16it/s]Loading checkpoint shards:  33%|███▎      | 102/310 [00:00<00:01, 171.48it/s]Loading checkpoint shards:  39%|███▉      | 121/310 [00:00<00:01, 174.98it/s]Loading checkpoint shards:  45%|████▌     | 140/310 [00:00<00:00, 177.85it/s]Loading checkpoint shards:  51%|█████▏    | 159/310 [00:01<00:00, 174.77it/s]Loading checkpoint shards:  58%|█████▊    | 180/310 [00:01<00:00, 179.39it/s]Loading checkpoint shards:  64%|██████▍   | 199/310 [00:01<00:00, 177.69it/s]Loading checkpoint shards:  70%|███████   | 217/310 [00:01<00:00, 171.06it/s]Loading checkpoint shards:  76%|███████▌  | 235/310 [00:01<00:00, 170.44it/s]Loading checkpoint shards:  82%|████████▏ | 254/310 [00:01<00:00, 174.77it/s]Loading checkpoint shards:  88%|████████▊ | 272/310 [00:01<00:00, 167.85it/s]Loading checkpoint shards:  94%|█████████▎| 290/310 [00:01<00:00, 165.40it/s]Loading checkpoint shards: 100%|██████████| 310/310 [00:01<00:00, 159.26it/s]
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+q-02806 ok 1.8066485620001913
+q-01679 ok 2.0587844120000227
+q-03421 ok 1.6463592029995198
+q-03558 ok 1.7684349170012865
+q-01254 ok 1.7890927940006804
+q-02636 ok 1.8122440970000753
+q-03650 ok 2.088068645000021
+q-02145 ok 2.023622124999747
+q-04419 ok 2.431620469998961
+q-03802 ok 2.155328163999002
+q-03050 ok 1.7764461749993643
+q-03154 ok 1.9108737320002547
+q-01972 ok 2.140796343999682
+q-02255 ok 1.9810587390002183
+q-02590 ok 2.1865664959987043
+q-04772 ok 2.57705265200093
+q-01137 ok 2.2659804739996616
+q-01223 ok 1.9985899189996417
+q-00702 ok 2.1471170160002657
+q-03923 ok 2.413707801999408
+q-04775 ok 1.9695400840009825
+q-01436 ok 2.234132896999654
+q-02635 ok 2.4701878189989657
+q-01186 ok 2.3456010509999032
+q-01962 ok 2.5227547750000667
+q-03481 ok 1.8074252080004953
+q-03666 ok 1.8668896649996896
+q-04808 ok 1.8173550850005995
+q-00324 ok 1.9422382840002683
+q-04330 ok 1.8444775879997906
+q-04960 ok 1.8879866610004683
+q-04337 ok 1.7187141939994035

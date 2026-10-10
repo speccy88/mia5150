@@ -1,0 +1,39 @@
+{
+  "completed_optimizer_updates": 20,
+  "baseline": {
+    "loss": 0.7307249438638489,
+    "ce": 0.5525375290463368,
+    "brier": 0.3563748412920783,
+    "examples": 60,
+    "accuracy": 0.7666666666666667,
+    "auc": 0.8122222222222222,
+    "seconds": 16.315370224
+  },
+  "adapted": {
+    "loss": 1.1167353749663258,
+    "ce": 0.9206584530882538,
+    "brier": 0.39215383641843193,
+    "examples": 60,
+    "accuracy": 0.7833333333333333,
+    "auc": 0.8227777777777778,
+    "seconds": 15.042346516999999
+  },
+  "delta": {
+    "loss": 0.3860104311024769,
+    "ce": 0.368120924041917,
+    "brier": 0.03577899512635363,
+    "accuracy": 0.016666666666666607,
+    "auc": 0.010555555555555651
+  },
+  "training_update_seconds": 211.653500467,
+  "mean_update_seconds": 10.58267502335,
+  "estimated_200_update_seconds": 2116.53500467,
+  "full_training_wall_seconds": 247.80044335399998,
+  "checkpoint": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/runs/pilot20-dynamic/checkpoint-update20",
+  "frozen_base_unchanged": true,
+  "peak_cuda_allocated_mib": 1704.31689453125,
+  "peak_cuda_reserved_mib": 1758.0,
+  "scope": "20-update binary header relevance feasibility pilot; exposed development, no blind test",
+  "overflow_retries": 1,
+  "final_grad_scaler_scale": 64.0
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "execution_status_not_authorization_or_provider_gate",
+  "experiment_id": "newskillret-embedding-jev-fusion",
+  "status": "blocked_missing_environment_key",
+  "source": "Coordinating agent's actual post-baseline observations on 2026-10-07; baseline and run receipts are saved separately.",
+  "baseline": {
+    "status": "validated",
+    "run": "08-resume-query-cache",
+    "exit_code": 0,
+    "completed_document_vectors": 6006,
+    "completed_query_vectors": 4392,
+    "completed_query_rankings": 4392,
+    "qrels_pairs": 7187,
+    "gate_artifact": "baseline_gate.json",
+    "rankings_artifact": "baseline_skillret_06b.json",
+    "ndcg": {
+      "5": 0.7905233264761343,
+      "10": 0.8109902409310652,
+      "15": 0.8188483710687994
+    },
+    "max_absolute_ndcg_deviation": 0.0003233264761343113,
+    "ndcg_gate_tolerance": 0.005
+  },
+  "approved_budget": {
+    "currency": "CAD",
+    "total_all_in_cap": 10,
+    "status": "explicit_human_approval_relayed",
+    "evidence_document": "../BUDGET_STATUS.md",
+    "topups_authorized": false,
+    "runpod_authorized": false
+  },
+  "credential_presence_check": {
+    "performed_after_baseline_validation": true,
+    "environment_variable": "TYPESAFE_API_KEY",
+    "wsl_process_present": false,
+    "windows_process_present": false,
+    "credential_value_read_or_printed": false,
+    "saved_secret_fallback_searched": false
+  },
+  "hosted_execution": {
+    "status": "not_run",
+    "model_list_calls": 0,
+    "paid_calls": 0,
+    "incurred_api_cost": 0,
+    "incurred_api_cost_currency": "CAD",
+    "estimated_api_cost": null,
+    "actual_token_usage": null,
+    "actual_model_version": null
+  },
+  "remaining_requirements": {
+    "usable_environment_key": "absent",
+    "available_account_credit": "unverified",
+    "execution_pricing_fx_fees": "unverified",
+    "live_model_pin": "unverified",
+    "public_pricing": "previously_audited_only_not_account_or_execution_verification",
+    "smoke_pilot_usage_and_full_projection": "not_run"
+  },
+  "offline_preparation": {
+    "status": "partial_preparation_with_local_context_blocks",
+    "total_context_limit": 64000,
+    "state_plus_question_limit": 32000,
+    "token_estimator": "utf8_bytes_plus_overhead_conservative_estimate_not_native_jev_tokenizer",
+    "full_text_truncated": false,
+    "candidate_or_query_substitution": false,
+    "blocked_query_policy": "Any oversized candidate blocks the whole fixed top20 query.",
+    "interpretation": "Local conservative admission failures, not provider rejections; native tokenization might admit some blocked inputs.",
+    "smoke": {
+      "manifest_path": "jev-plan-smoke/preparation_manifest.json",
+      "plan_sha256": "0662a369214d0679f7906eeca9422b315b9cb53a6702afabbb096072e9436191",
+      "selected_queries": 10,
+      "prepared_queries": 6,
+      "blocked_queries": 4,
+      "context_failure_candidates": 5
+    },
+    "pilot": {
+      "manifest_path": "jev-plan-pilot/preparation_manifest.json",
+      "plan_sha256": "24bd5da86d85687e5694be7aa38c86c9c225feb95835e9975596f6c0230e34ab",
+      "selected_queries": 200,
+      "prepared_queries": 104,
+      "blocked_queries": 96,
+      "context_failure_candidates": 143
+    },
+    "remaining_requirement": "Provider-supported token evidence or another justified full-text handling approach preserving the fixed top20 pool is needed before complete prescribed smoke/pilot execution."
+  },
+  "post_baseline_gpu_observation": {
+    "used_mib": 0,
+    "utilization_percent": 0,
+    "temperature_c": 50
+  }
+}

@@ -1,0 +1,1141 @@
+{
+  "llm-candidates": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=2047602688, guest_bytes=4320153600')"
+    },
+    "elapsed_seconds": 2.253716468811035,
+    "min_host_available_gib": 2.4878921508789062,
+    "min_guest_available_gib": 4.725864410400391,
+    "peak_gpu_used_mib": 1062,
+    "peak_gpu_c": 56,
+    "worker_peak_rss_gib": 0.023834228515625,
+    "worker_cpu_seconds": 0.63,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillret-header": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 155.57824635505676,
+    "min_host_available_gib": 2.3216400146484375,
+    "min_guest_available_gib": 3.318347930908203,
+    "peak_gpu_used_mib": 2044,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 2.1331634521484375,
+    "worker_cpu_seconds": 148.53,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillret-rerank": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 69.6536066532135,
+    "min_host_available_gib": 2.5211143493652344,
+    "min_guest_available_gib": 3.1585235595703125,
+    "peak_gpu_used_mib": 1666,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 2.4194869995117188,
+    "worker_cpu_seconds": 64.67,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "adaptation-linear": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 15.4019615650177,
+    "min_host_available_gib": 3.1601638793945312,
+    "min_guest_available_gib": 4.1556396484375,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 43,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "full-skillret-direct": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 426.66043853759766,
+    "min_host_available_gib": 2.3937034606933594,
+    "min_guest_available_gib": 3.8842086791992188,
+    "peak_gpu_used_mib": 1852,
+    "peak_gpu_c": 62,
+    "worker_peak_rss_gib": 1.4771804809570312,
+    "worker_cpu_seconds": 398.37,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "qwen-header": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 8.712949275970459,
+    "min_host_available_gib": 2.2033424377441406,
+    "min_guest_available_gib": 3.3356170654296875,
+    "peak_gpu_used_mib": 1520,
+    "peak_gpu_c": 50,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 985
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "r3-direct-gpu": {
+    "status": {
+      "error": "AssertionError('RAM reserve')"
+    },
+    "elapsed_seconds": 9.899562120437622,
+    "min_host_available_gib": 2.305877685546875,
+    "min_guest_available_gib": 4.1265106201171875,
+    "peak_gpu_used_mib": 1466,
+    "peak_gpu_c": 52,
+    "worker_peak_rss_gib": 2.7799530029296875,
+    "worker_cpu_seconds": 9.02,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "scale": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 7.665331602096558,
+    "min_host_available_gib": 3.342937469482422,
+    "min_guest_available_gib": 4.699527740478516,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.3165092468261719,
+    "worker_cpu_seconds": 7.45,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "full-lexical": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 9.99068832397461,
+    "min_host_available_gib": 3.6111984252929688,
+    "min_guest_available_gib": 4.612480163574219,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 50,
+    "worker_peak_rss_gib": 0.20331192016601562,
+    "worker_cpu_seconds": 9.17,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "r3-streamed": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 8.88477635383606,
+    "min_host_available_gib": 2.1810760498046875,
+    "min_guest_available_gib": 3.471935272216797,
+    "peak_gpu_used_mib": 204,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 3.1491432189941406,
+    "worker_cpu_seconds": 8.13,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 2
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay-clean": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 163.6228837966919,
+    "min_host_available_gib": 2.0071754455566406,
+    "min_guest_available_gib": 3.6685104370117188,
+    "peak_gpu_used_mib": 1618,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 1.6543083190917969,
+    "worker_cpu_seconds": 160.72,
+    "swap_delta": {
+      "pswpin": 4,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "jina-native": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 21.58703374862671,
+    "min_host_available_gib": 2.5367393493652344,
+    "min_guest_available_gib": 3.806774139404297,
+    "peak_gpu_used_mib": 3390,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 1.8217391967773438,
+    "worker_cpu_seconds": 19.94,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay-clean-sharded": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=1997537280, guest_bytes=3873357824')"
+    },
+    "elapsed_seconds": 14.58294415473938,
+    "min_host_available_gib": 2.365184783935547,
+    "min_guest_available_gib": 3.6869773864746094,
+    "peak_gpu_used_mib": 1504,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 1.3469810485839844,
+    "worker_cpu_seconds": 12.51,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "deps-gpu-retry": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 50.477349281311035,
+    "min_host_available_gib": 3.6184425354003906,
+    "min_guest_available_gib": 4.7898712158203125,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "fullbody-skillret": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 557.9766280651093,
+    "min_host_available_gib": 2.4925460815429688,
+    "min_guest_available_gib": 3.5262603759765625,
+    "peak_gpu_used_mib": 2710,
+    "peak_gpu_c": 68,
+    "worker_peak_rss_gib": 2.076343536376953,
+    "worker_cpu_seconds": 556.27,
+    "swap_delta": {
+      "pswpin": 4,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "pytest-install": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 1.118051528930664,
+    "min_host_available_gib": 3.5253639221191406,
+    "min_guest_available_gib": 4.889789581298828,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.025104522705078125,
+    "worker_cpu_seconds": 0.15,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "models-specialists": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 380.03202295303345,
+    "min_host_available_gib": 3.9766845703125,
+    "min_guest_available_gib": 4.534328460693359,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.026020050048828125,
+    "worker_cpu_seconds": 40.25,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillreason-header": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 142.92458510398865,
+    "min_host_available_gib": 2.64825439453125,
+    "min_guest_available_gib": 3.372283935546875,
+    "peak_gpu_used_mib": 1642,
+    "peak_gpu_c": 62,
+    "worker_peak_rss_gib": 2.7779617309570312,
+    "worker_cpu_seconds": 136.6,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "contract-tests": {
+    "status": {
+      "returncode": 2
+    },
+    "elapsed_seconds": 1.1096627712249756,
+    "min_host_available_gib": 3.7324867248535156,
+    "min_guest_available_gib": 4.850261688232422,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.01674652099609375,
+    "worker_cpu_seconds": 0.79,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "deps-cpu": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 2.264376163482666,
+    "min_host_available_gib": 2.210559844970703,
+    "min_guest_available_gib": 4.965938568115234,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillreason-rerank": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 69.6262788772583,
+    "min_host_available_gib": 2.2052764892578125,
+    "min_guest_available_gib": 3.2557907104492188,
+    "peak_gpu_used_mib": 1666,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 3.036579132080078,
+    "worker_cpu_seconds": 64.11,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "full-skillret": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 10.046724319458008,
+    "min_host_available_gib": 2.388072967529297,
+    "min_guest_available_gib": 3.3817291259765625,
+    "peak_gpu_used_mib": 572,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 2.4336776733398438,
+    "worker_cpu_seconds": 9.25,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 818
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "sources-live": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 3.359484910964966,
+    "min_host_available_gib": 3.393280029296875,
+    "min_guest_available_gib": 4.916862487792969,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "baseline-cpu": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 9.829915523529053,
+    "min_host_available_gib": 5.348537445068359,
+    "min_guest_available_gib": 4.174175262451172,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillret-fp16-shards": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 31.436275720596313,
+    "min_host_available_gib": 2.912975311279297,
+    "min_guest_available_gib": 4.443943023681641,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.7853317260742188,
+    "worker_cpu_seconds": 25.03,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "escalation": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 1.0910084247589111,
+    "min_host_available_gib": 3.2804031372070312,
+    "min_guest_available_gib": 4.956489562988281,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.026172637939453125,
+    "worker_cpu_seconds": 0.27,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "field-tfidf": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 9.868126153945923,
+    "min_host_available_gib": 3.3066177368164062,
+    "min_guest_available_gib": 4.3331298828125,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.6679344177246094,
+    "worker_cpu_seconds": 9.82,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "contract-root": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 1.0953168869018555,
+    "min_host_available_gib": 5.350944519042969,
+    "min_guest_available_gib": 4.829246520996094,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 0.02056884765625,
+    "worker_cpu_seconds": 0.36,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillrouter-header": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 158.07782983779907,
+    "min_host_available_gib": 2.8904991149902344,
+    "min_guest_available_gib": 3.296710968017578,
+    "peak_gpu_used_mib": 1968,
+    "peak_gpu_c": 61,
+    "worker_peak_rss_gib": 2.4129371643066406,
+    "worker_cpu_seconds": 150.57,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "deps": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 125.08292317390442,
+    "min_host_available_gib": 2.1863975524902344,
+    "min_guest_available_gib": 4.724689483642578,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 2
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "skillrouter-rerank": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 70.54384708404541,
+    "min_host_available_gib": 2.3037681579589844,
+    "min_guest_available_gib": 3.1506309509277344,
+    "peak_gpu_used_mib": 1782,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 2.658843994140625,
+    "worker_cpu_seconds": 66.21,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "sra-download-resume": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 4.41465425491333,
+    "min_host_available_gib": 5.224506378173828,
+    "min_guest_available_gib": 4.8377685546875,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 0.02521514892578125,
+    "worker_cpu_seconds": 0.93,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "dataset-stream": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 24.438411951065063,
+    "min_host_available_gib": 3.9343032836914062,
+    "min_guest_available_gib": 4.724689483642578,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "full-qwen": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 455.66005516052246,
+    "min_host_available_gib": 2.1661529541015625,
+    "min_guest_available_gib": 3.32720947265625,
+    "peak_gpu_used_mib": 1852,
+    "peak_gpu_c": 62,
+    "worker_peak_rss_gib": 2.1160926818847656,
+    "worker_cpu_seconds": 429.08,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "dataset": {
+    "status": {
+      "returncode": 1
+    },
+    "elapsed_seconds": 12.249687671661377,
+    "min_host_available_gib": 5.232517242431641,
+    "min_guest_available_gib": 3.9972801208496094,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay-clean-lean": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=2108248064, guest_bytes=3814871040')"
+    },
+    "elapsed_seconds": 18.506473302841187,
+    "min_host_available_gib": 2.031047821044922,
+    "min_guest_available_gib": 3.554340362548828,
+    "peak_gpu_used_mib": 1620,
+    "peak_gpu_c": 56,
+    "worker_peak_rss_gib": 1.6091156005859375,
+    "worker_cpu_seconds": 16.11,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-smoke": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 27.412832736968994,
+    "min_host_available_gib": 2.4514732360839844,
+    "min_guest_available_gib": 3.2882041931152344,
+    "peak_gpu_used_mib": 1512,
+    "peak_gpu_c": 51,
+    "worker_peak_rss_gib": 2.2811851501464844,
+    "worker_cpu_seconds": 24.48,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "training-audit": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 3.329843759536743,
+    "min_host_available_gib": 4.752803802490234,
+    "min_guest_available_gib": 4.5647125244140625,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.09352874755859375,
+    "worker_cpu_seconds": 2.44,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "qwen-header-reclaimed": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 158.90017533302307,
+    "min_host_available_gib": 2.9104843139648438,
+    "min_guest_available_gib": 3.324077606201172,
+    "peak_gpu_used_mib": 2044,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "paired-statistics-checkpoint": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 28.433375358581543,
+    "min_host_available_gib": 4.603141784667969,
+    "min_guest_available_gib": 4.402168273925781,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.2655372619628906,
+    "worker_cpu_seconds": 27.74,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "models-streamed": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 112.7880265712738,
+    "min_host_available_gib": 2.1887550354003906,
+    "min_guest_available_gib": 3.448139190673828,
+    "peak_gpu_used_mib": 1542,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "r3-rerank": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 10.052000761032104,
+    "min_host_available_gib": 2.1286163330078125,
+    "min_guest_available_gib": 3.4865951538085938,
+    "peak_gpu_used_mib": 974,
+    "peak_gpu_c": 51,
+    "worker_peak_rss_gib": 3.7470703125,
+    "worker_cpu_seconds": 9.29,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 405
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "fullbody-smoke": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 16.28340721130371,
+    "min_host_available_gib": 2.6297531127929688,
+    "min_guest_available_gib": 3.736419677734375,
+    "peak_gpu_used_mib": 2748,
+    "peak_gpu_c": 61,
+    "worker_peak_rss_gib": 1.5236091613769531,
+    "worker_cpu_seconds": 14.1,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "qwen-native-smoke": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 18.871432542800903,
+    "min_host_available_gib": 2.1887550354003906,
+    "min_guest_available_gib": 3.447185516357422,
+    "peak_gpu_used_mib": 1542,
+    "peak_gpu_c": 49,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-hard-streamed": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 300.5338771343231,
+    "min_host_available_gib": 2.196117401123047,
+    "min_guest_available_gib": 3.3065261840820312,
+    "peak_gpu_used_mib": 1640,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 2.9925613403320312,
+    "worker_cpu_seconds": 287.55,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "prompt-scale": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 182.65010356903076,
+    "min_host_available_gib": 4.044647216796875,
+    "min_guest_available_gib": 3.2919845581054688,
+    "peak_gpu_used_mib": 3308,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 0.2993965148925781,
+    "worker_cpu_seconds": 6.02,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "baseline-locked": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 9.850623846054077,
+    "min_host_available_gib": 2.2170333862304688,
+    "min_guest_available_gib": 4.294921875,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 43,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "adaptation-clean": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 14.254342317581177,
+    "min_host_available_gib": 3.5991859436035156,
+    "min_guest_available_gib": 3.815814971923828,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 46,
+    "worker_peak_rss_gib": 0.823699951171875,
+    "worker_cpu_seconds": 13.68,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "sra-download": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 8.896044492721558,
+    "min_host_available_gib": 4.723480224609375,
+    "min_guest_available_gib": 4.7808685302734375,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 50,
+    "worker_peak_rss_gib": 0.0249176025390625,
+    "worker_cpu_seconds": 0.75,
+    "swap_delta": {
+      "pswpin": 94,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "plumb-skillret": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 53.907458782196045,
+    "min_host_available_gib": 4.336009979248047,
+    "min_guest_available_gib": 3.6770553588867188,
+    "peak_gpu_used_mib": 3276,
+    "peak_gpu_c": 67,
+    "worker_peak_rss_gib": 0.24529647827148438,
+    "worker_cpu_seconds": 1.14,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-hard": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 13.152621746063232,
+    "min_host_available_gib": 2.2322731018066406,
+    "min_guest_available_gib": 2.9485549926757812,
+    "peak_gpu_used_mib": 1522,
+    "peak_gpu_c": 55,
+    "worker_peak_rss_gib": 2.8369102478027344,
+    "worker_cpu_seconds": 12.35,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 128
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "qwen8-download": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 194.5631320476532,
+    "min_host_available_gib": 2.480579376220703,
+    "min_guest_available_gib": 4.8482208251953125,
+    "peak_gpu_used_mib": 480,
+    "peak_gpu_c": 54,
+    "worker_peak_rss_gib": 0.025104522705078125,
+    "worker_cpu_seconds": 14.67,
+    "swap_delta": {
+      "pswpin": 22,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-transfer-base": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 68.5716290473938,
+    "min_host_available_gib": 2.056121826171875,
+    "min_guest_available_gib": 3.6602439880371094,
+    "peak_gpu_used_mib": 1522,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 1.3295021057128906,
+    "worker_cpu_seconds": 65.62,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-transfer-hard": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 80.27588725090027,
+    "min_host_available_gib": 2.500682830810547,
+    "min_guest_available_gib": 3.7305564880371094,
+    "peak_gpu_used_mib": 1524,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 1.3473243713378906,
+    "worker_cpu_seconds": 78.32,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "field-six": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=2102632448, guest_bytes=4124622848')"
+    },
+    "elapsed_seconds": 825.3456995487213,
+    "min_host_available_gib": 2.0426101684570312,
+    "min_guest_available_gib": 3.827281951904297,
+    "peak_gpu_used_mib": 1816,
+    "peak_gpu_c": 60,
+    "worker_peak_rss_gib": 1.6144027709960938,
+    "worker_cpu_seconds": 822.49,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "final-analysis": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 44.81033635139465,
+    "min_host_available_gib": 2.563426971435547,
+    "min_guest_available_gib": 4.257457733154297,
+    "peak_gpu_used_mib": 1089,
+    "peak_gpu_c": 56,
+    "worker_peak_rss_gib": 0.013309478759765625,
+    "worker_cpu_seconds": 0.06,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "structures": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 5.45107102394104,
+    "min_host_available_gib": 3.334819793701172,
+    "min_guest_available_gib": 4.678852081298828,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.2819252014160156,
+    "worker_cpu_seconds": 4.64,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "anchoring": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 4.467416286468506,
+    "min_host_available_gib": 3.3158607482910156,
+    "min_guest_available_gib": 4.501487731933594,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 48,
+    "worker_peak_rss_gib": 0.5303306579589844,
+    "worker_cpu_seconds": 3.57,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 313.7952980995178,
+    "min_host_available_gib": 2.1895065307617188,
+    "min_guest_available_gib": 3.2965431213378906,
+    "peak_gpu_used_mib": 1640,
+    "peak_gpu_c": 63,
+    "worker_peak_rss_gib": 2.3025741577148438,
+    "worker_cpu_seconds": 300.15,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "jev-skillret": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 55.9735381603241,
+    "min_host_available_gib": 4.790042877197266,
+    "min_guest_available_gib": 3.6526641845703125,
+    "peak_gpu_used_mib": 3626,
+    "peak_gpu_c": 67,
+    "worker_peak_rss_gib": 0.25337982177734375,
+    "worker_cpu_seconds": 1.1,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay-clean-gated": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=2113556480, guest_bytes=3709784064')"
+    },
+    "elapsed_seconds": 117.26727104187012,
+    "min_host_available_gib": 2.0173721313476562,
+    "min_guest_available_gib": 3.4779930114746094,
+    "peak_gpu_used_mib": 1620,
+    "peak_gpu_c": 64,
+    "worker_peak_rss_gib": 1.6438026428222656,
+    "worker_cpu_seconds": 114.11,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "lora-replay-clean-resumed": {
+    "status": {
+      "error": "AssertionError('RAM reserve: host_bytes=1897680896, guest_bytes=4231266304')"
+    },
+    "elapsed_seconds": 15.798057317733765,
+    "min_host_available_gib": 2.5448265075683594,
+    "min_guest_available_gib": 4.0677032470703125,
+    "peak_gpu_used_mib": 1414,
+    "peak_gpu_c": 50,
+    "worker_peak_rss_gib": 2.0545501708984375,
+    "worker_cpu_seconds": 13.93,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "r3-fp16-rerank": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 76.73704862594604,
+    "min_host_available_gib": 2.4759178161621094,
+    "min_guest_available_gib": 3.8134384155273438,
+    "peak_gpu_used_mib": 1788,
+    "peak_gpu_c": 62,
+    "worker_peak_rss_gib": 1.3782768249511719,
+    "worker_cpu_seconds": 74.04,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "models-first": {
+    "status": {
+      "error": "AssertionError('active swap')"
+    },
+    "elapsed_seconds": 44.39243149757385,
+    "min_host_available_gib": 2.218761444091797,
+    "min_guest_available_gib": 4.519287109375,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 44,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 1
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "jina-source": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 0.0,
+    "min_host_available_gib": 4.740200042724609,
+    "min_guest_available_gib": 4.613468170166016,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.0,
+    "worker_cpu_seconds": 0.07,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "r3-fp16-cache": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 31.06788396835327,
+    "min_host_available_gib": 3.0841827392578125,
+    "min_guest_available_gib": 4.356315612792969,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.7681541442871094,
+    "worker_cpu_seconds": 23.29,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  },
+  "jina-download": {
+    "status": {
+      "returncode": 0
+    },
+    "elapsed_seconds": 49.933579444885254,
+    "min_host_available_gib": 3.9933433532714844,
+    "min_guest_available_gib": 4.517223358154297,
+    "peak_gpu_used_mib": 186,
+    "peak_gpu_c": 47,
+    "worker_peak_rss_gib": 0.024265289306640625,
+    "worker_cpu_seconds": 6.69,
+    "swap_delta": {
+      "pswpin": 0,
+      "pswpout": 0
+    },
+    "note": "Whole-device GPU includes display baseline; workerCPU/RSS excludes subprocess servers; guestCPUticks retained in raw telemetry. Startup/warm/index timings remain separate."
+  }
+}

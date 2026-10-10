@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+if ! command -v git-lfs >/dev/null 2>&1; then
+  echo "Install Git LFS before publishing the model checkpoints." >&2
+  exit 1
+fi
+git lfs pre-push "$@"

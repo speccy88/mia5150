@@ -1,0 +1,1615 @@
+{
+  "model": {
+    "path": "/home/user/code/mia5150-local/models/skillret_rerank_06_fp16_local",
+    "kind": "fp16_native_yes_no",
+    "parameters": "0.6B"
+  },
+  "protocol_sha256": "50e13e6d025f5377cef0682b6e8ac19deaf005267fdf9a19b873f976002d3597",
+  "rows": [
+    {
+      "case_id": "q-03666/random/50",
+      "query_id": "q-03666",
+      "size": 50,
+      "pool": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "cded1baf-7783-4ee6-b64d-4ea5fa17465b",
+        "a5992b34-552a-4e4f-9dcf-8f056aaae9f8",
+        "6e517b8f-5c45-40e5-8112-6620813abc25",
+        "978d68e3-b56d-4039-9125-46a901c8ff2e",
+        "5437bce9-ec34-4597-8003-8ba748a0dc14",
+        "ba9e3d42-d27e-4fa7-9669-baff555574d4",
+        "a7f5f188-6b2c-4ecd-8805-b4d5f9aed582",
+        "645287ba-e96f-442e-8503-b02d473a850f",
+        "9fe54e25-fbaa-485f-9ef2-56dafcf99bca",
+        "dada5264-fe33-474b-830c-c0c68e85c5e0",
+        "a66fe526-3a95-46fc-a0bb-ca0c14123392",
+        "06a57b43-c6fc-425e-b01f-d14d89e56eec",
+        "a166cc96-c107-49d8-afc1-9e3ce6ec6920",
+        "53a44bcc-f759-4924-bfb0-c5821043045b",
+        "a21add91-a19e-4e40-8f0f-271a25ef1928",
+        "b90c73aa-a359-42c9-bd6c-700a29370160",
+        "24f81db5-76b9-40a6-b304-ebfd2b9fb163",
+        "3064c773-7c18-4dfe-9247-848599f66d8f",
+        "f443dfbb-974c-4e58-88b7-cb0fbee476f0"
+      ],
+      "status": "ok",
+      "ranking": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "5437bce9-ec34-4597-8003-8ba748a0dc14",
+        "3064c773-7c18-4dfe-9247-848599f66d8f",
+        "a21add91-a19e-4e40-8f0f-271a25ef1928",
+        "24f81db5-76b9-40a6-b304-ebfd2b9fb163",
+        "645287ba-e96f-442e-8503-b02d473a850f",
+        "f443dfbb-974c-4e58-88b7-cb0fbee476f0",
+        "cded1baf-7783-4ee6-b64d-4ea5fa17465b",
+        "a7f5f188-6b2c-4ecd-8805-b4d5f9aed582",
+        "a166cc96-c107-49d8-afc1-9e3ce6ec6920",
+        "b90c73aa-a359-42c9-bd6c-700a29370160",
+        "ba9e3d42-d27e-4fa7-9669-baff555574d4",
+        "06a57b43-c6fc-425e-b01f-d14d89e56eec",
+        "dada5264-fe33-474b-830c-c0c68e85c5e0",
+        "978d68e3-b56d-4039-9125-46a901c8ff2e",
+        "a5992b34-552a-4e4f-9dcf-8f056aaae9f8",
+        "a66fe526-3a95-46fc-a0bb-ca0c14123392",
+        "53a44bcc-f759-4924-bfb0-c5821043045b",
+        "6e517b8f-5c45-40e5-8112-6620813abc25",
+        "9fe54e25-fbaa-485f-9ef2-56dafcf99bca"
+      ],
+      "answers": [
+        {
+          "skill_id": "ea500a4c-9522-406c-979a-04d2a5cd882b",
+          "score": 2.1796875,
+          "input_tokens": 350,
+          "seconds": 0.09245432299985623,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "cded1baf-7783-4ee6-b64d-4ea5fa17465b",
+          "score": -1.79296875,
+          "input_tokens": 331,
+          "seconds": 0.07049839399996927,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a5992b34-552a-4e4f-9dcf-8f056aaae9f8",
+          "score": -3.59375,
+          "input_tokens": 343,
+          "seconds": 0.17277343000000656,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "6e517b8f-5c45-40e5-8112-6620813abc25",
+          "score": -4.14453125,
+          "input_tokens": 330,
+          "seconds": 0.09527072700007011,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "978d68e3-b56d-4039-9125-46a901c8ff2e",
+          "score": -3.4296875,
+          "input_tokens": 342,
+          "seconds": 0.0888024180001139,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "5437bce9-ec34-4597-8003-8ba748a0dc14",
+          "score": 1.60546875,
+          "input_tokens": 360,
+          "seconds": 0.11580845400021644,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "ba9e3d42-d27e-4fa7-9669-baff555574d4",
+          "score": -2.3984375,
+          "input_tokens": 328,
+          "seconds": 0.08560981399978118,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a7f5f188-6b2c-4ecd-8805-b4d5f9aed582",
+          "score": -1.9609375,
+          "input_tokens": 363,
+          "seconds": 0.09902063100003033,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "645287ba-e96f-442e-8503-b02d473a850f",
+          "score": -0.91796875,
+          "input_tokens": 344,
+          "seconds": 0.0907862199999272,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "9fe54e25-fbaa-485f-9ef2-56dafcf99bca",
+          "score": -4.453125,
+          "input_tokens": 350,
+          "seconds": 0.10750694300008945,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "dada5264-fe33-474b-830c-c0c68e85c5e0",
+          "score": -3.40234375,
+          "input_tokens": 347,
+          "seconds": 0.1471356959998502,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a66fe526-3a95-46fc-a0bb-ca0c14123392",
+          "score": -3.85546875,
+          "input_tokens": 326,
+          "seconds": 0.20331277100012812,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "06a57b43-c6fc-425e-b01f-d14d89e56eec",
+          "score": -2.96484375,
+          "input_tokens": 333,
+          "seconds": 0.12972237300004963,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a166cc96-c107-49d8-afc1-9e3ce6ec6920",
+          "score": -2.109375,
+          "input_tokens": 321,
+          "seconds": 0.11267054999984794,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "53a44bcc-f759-4924-bfb0-c5821043045b",
+          "score": -4.046875,
+          "input_tokens": 334,
+          "seconds": 0.07583850100013478,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a21add91-a19e-4e40-8f0f-271a25ef1928",
+          "score": -0.0546875,
+          "input_tokens": 324,
+          "seconds": 0.15128400100002182,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b90c73aa-a359-42c9-bd6c-700a29370160",
+          "score": -2.1171875,
+          "input_tokens": 342,
+          "seconds": 0.18878315100005238,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "24f81db5-76b9-40a6-b304-ebfd2b9fb163",
+          "score": -0.390625,
+          "input_tokens": 379,
+          "seconds": 0.12193436200004726,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "3064c773-7c18-4dfe-9247-848599f66d8f",
+          "score": 0.2265625,
+          "input_tokens": 338,
+          "seconds": 0.10105583400013529,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "f443dfbb-974c-4e58-88b7-cb0fbee476f0",
+          "score": -1.6171875,
+          "input_tokens": 337,
+          "seconds": 0.12797447000002649,
+          "raw": null,
+          "cache_hit": false
+        }
+      ],
+      "wall_seconds": 2.3849384709999413,
+      "cpu_seconds": 2.2261992999999993
+    },
+    {
+      "case_id": "q-03666/random/1000",
+      "query_id": "q-03666",
+      "size": 1000,
+      "pool": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+        "912360ee-ce81-4f49-affc-74148a819636",
+        "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+        "daacefd0-3995-4e93-8c53-c56ad575c78c",
+        "d131711f-10af-44ab-a0ae-a301dcc3f129",
+        "307387b1-5323-45aa-aa22-4aafccb90924",
+        "2d42a27f-1105-4799-b251-2bad16896840",
+        "bf570baa-3ccf-47db-8562-7af3ca6b807d",
+        "b928c2e1-3baa-4f8e-b096-e8444b1ac478",
+        "7a97a87a-9f39-48d7-9f68-4c1ed2e46087",
+        "ef692e02-dcca-4d11-b8fd-1741881fef69",
+        "a5ee5da5-6a80-4bad-8edd-fc899c12cf41",
+        "112c85bc-3575-4368-b16a-07b220c1ce5e",
+        "2ce4d7c1-fa46-4942-8b14-989b5db9f94e",
+        "6ffd4631-81f4-44f1-95e7-a46de34bc5e7",
+        "55859054-1217-4862-aa53-12f9df0e6926",
+        "f9f9590c-b28a-4cef-abaa-77ede792ce56",
+        "88f0ace4-af6d-4ec0-8ef1-3b62a100436a",
+        "214265ff-38ed-44f1-a1c8-a3e672bed771"
+      ],
+      "status": "ok",
+      "ranking": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "ef692e02-dcca-4d11-b8fd-1741881fef69",
+        "112c85bc-3575-4368-b16a-07b220c1ce5e",
+        "6ffd4631-81f4-44f1-95e7-a46de34bc5e7",
+        "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+        "912360ee-ce81-4f49-affc-74148a819636",
+        "55859054-1217-4862-aa53-12f9df0e6926",
+        "daacefd0-3995-4e93-8c53-c56ad575c78c",
+        "f9f9590c-b28a-4cef-abaa-77ede792ce56",
+        "a5ee5da5-6a80-4bad-8edd-fc899c12cf41",
+        "214265ff-38ed-44f1-a1c8-a3e672bed771",
+        "bf570baa-3ccf-47db-8562-7af3ca6b807d",
+        "307387b1-5323-45aa-aa22-4aafccb90924",
+        "7a97a87a-9f39-48d7-9f68-4c1ed2e46087",
+        "2d42a27f-1105-4799-b251-2bad16896840",
+        "2ce4d7c1-fa46-4942-8b14-989b5db9f94e",
+        "b928c2e1-3baa-4f8e-b096-e8444b1ac478",
+        "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+        "d131711f-10af-44ab-a0ae-a301dcc3f129",
+        "88f0ace4-af6d-4ec0-8ef1-3b62a100436a"
+      ],
+      "answers": [
+        {
+          "skill_id": "ea500a4c-9522-406c-979a-04d2a5cd882b",
+          "score": 2.1796875,
+          "input_tokens": 350,
+          "seconds": 0.09245432299985623,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+          "score": -2.921875,
+          "input_tokens": 392,
+          "seconds": 0.14886399800002437,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "912360ee-ce81-4f49-affc-74148a819636",
+          "score": -3.3984375,
+          "input_tokens": 333,
+          "seconds": 0.14113908800004538,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+          "score": -4.4140625,
+          "input_tokens": 402,
+          "seconds": 0.10735954300002959,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "daacefd0-3995-4e93-8c53-c56ad575c78c",
+          "score": -3.5546875,
+          "input_tokens": 424,
+          "seconds": 0.07003549299997758,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "d131711f-10af-44ab-a0ae-a301dcc3f129",
+          "score": -4.484375,
+          "input_tokens": 393,
+          "seconds": 0.0680767910000668,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "307387b1-5323-45aa-aa22-4aafccb90924",
+          "score": -4.0859375,
+          "input_tokens": 354,
+          "seconds": 0.0885943179998776,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "2d42a27f-1105-4799-b251-2bad16896840",
+          "score": -4.2734375,
+          "input_tokens": 349,
+          "seconds": 0.1129438499999651,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "bf570baa-3ccf-47db-8562-7af3ca6b807d",
+          "score": -3.7890625,
+          "input_tokens": 357,
+          "seconds": 0.13401037800008453,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b928c2e1-3baa-4f8e-b096-e8444b1ac478",
+          "score": -4.390625,
+          "input_tokens": 384,
+          "seconds": 0.07677520200013532,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "7a97a87a-9f39-48d7-9f68-4c1ed2e46087",
+          "score": -4.1953125,
+          "input_tokens": 368,
+          "seconds": 0.12356436400000348,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "ef692e02-dcca-4d11-b8fd-1741881fef69",
+          "score": -0.3828125,
+          "input_tokens": 326,
+          "seconds": 0.15104820000010477,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a5ee5da5-6a80-4bad-8edd-fc899c12cf41",
+          "score": -3.703125,
+          "input_tokens": 351,
+          "seconds": 0.12039875999994365,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "112c85bc-3575-4368-b16a-07b220c1ce5e",
+          "score": -1.5390625,
+          "input_tokens": 364,
+          "seconds": 0.12739556999986235,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "2ce4d7c1-fa46-4942-8b14-989b5db9f94e",
+          "score": -4.328125,
+          "input_tokens": 376,
+          "seconds": 0.150090500000033,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "6ffd4631-81f4-44f1-95e7-a46de34bc5e7",
+          "score": -2.54296875,
+          "input_tokens": 355,
+          "seconds": 0.11151024900004813,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "55859054-1217-4862-aa53-12f9df0e6926",
+          "score": -3.515625,
+          "input_tokens": 348,
+          "seconds": 0.06900419200019314,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "f9f9590c-b28a-4cef-abaa-77ede792ce56",
+          "score": -3.5546875,
+          "input_tokens": 360,
+          "seconds": 0.15353190400014682,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "88f0ace4-af6d-4ec0-8ef1-3b62a100436a",
+          "score": -4.734375,
+          "input_tokens": 333,
+          "seconds": 0.11641005499996027,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "214265ff-38ed-44f1-a1c8-a3e672bed771",
+          "score": -3.75,
+          "input_tokens": 380,
+          "seconds": 0.10482143900003393,
+          "raw": null,
+          "cache_hit": false
+        }
+      ],
+      "wall_seconds": 2.18537640500017,
+      "cpu_seconds": 2.1608661
+    },
+    {
+      "case_id": "q-03666/random/6006",
+      "query_id": "q-03666",
+      "size": 6006,
+      "pool": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+        "4c4696b2-7f83-4c6c-b151-7d53bd381c50",
+        "b33a0251-7b9a-4530-bc4e-6fe7f8e913e4",
+        "259a6597-6344-44a8-992a-41e03712ea1e",
+        "912360ee-ce81-4f49-affc-74148a819636",
+        "030f7d3e-3b17-41d6-a509-0fc631447d03",
+        "1f74fe3e-8b64-4d51-8ac5-227f0d8579f7",
+        "b69d4248-3ca9-46ef-ae53-e78f6a3ee6fe",
+        "ef6a515e-0e3f-46e3-be02-d93cc7d2cfb8",
+        "fc3205bf-af38-4eb2-a3a7-3e24a1e38f60",
+        "1374d860-36f2-4cee-a46e-72b2136dd73f",
+        "7a798f89-1c64-464d-a3ba-d78667ef05c4",
+        "a92b8fc5-56bf-4a69-a5ce-bc92d5c0e677",
+        "d4cd4c29-c77f-42aa-9efd-a759c185b037",
+        "ea10970b-9af4-4d29-9371-3cdd569c4fe7",
+        "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+        "daacefd0-3995-4e93-8c53-c56ad575c78c",
+        "83b21db1-f266-4ee2-909e-52711cf1332f",
+        "d131711f-10af-44ab-a0ae-a301dcc3f129"
+      ],
+      "status": "ok",
+      "ranking": [
+        "ea500a4c-9522-406c-979a-04d2a5cd882b",
+        "1f74fe3e-8b64-4d51-8ac5-227f0d8579f7",
+        "4c4696b2-7f83-4c6c-b151-7d53bd381c50",
+        "fc3205bf-af38-4eb2-a3a7-3e24a1e38f60",
+        "b69d4248-3ca9-46ef-ae53-e78f6a3ee6fe",
+        "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+        "259a6597-6344-44a8-992a-41e03712ea1e",
+        "1374d860-36f2-4cee-a46e-72b2136dd73f",
+        "912360ee-ce81-4f49-affc-74148a819636",
+        "daacefd0-3995-4e93-8c53-c56ad575c78c",
+        "b33a0251-7b9a-4530-bc4e-6fe7f8e913e4",
+        "7a798f89-1c64-464d-a3ba-d78667ef05c4",
+        "d4cd4c29-c77f-42aa-9efd-a759c185b037",
+        "83b21db1-f266-4ee2-909e-52711cf1332f",
+        "030f7d3e-3b17-41d6-a509-0fc631447d03",
+        "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+        "d131711f-10af-44ab-a0ae-a301dcc3f129",
+        "a92b8fc5-56bf-4a69-a5ce-bc92d5c0e677",
+        "ef6a515e-0e3f-46e3-be02-d93cc7d2cfb8",
+        "ea10970b-9af4-4d29-9371-3cdd569c4fe7"
+      ],
+      "answers": [
+        {
+          "skill_id": "ea500a4c-9522-406c-979a-04d2a5cd882b",
+          "score": 2.1796875,
+          "input_tokens": 350,
+          "seconds": 0.09245432299985623,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "3e183830-911b-49e6-8bf9-97d4b75f7a61",
+          "score": -2.921875,
+          "input_tokens": 392,
+          "seconds": 0.14886399800002437,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "4c4696b2-7f83-4c6c-b151-7d53bd381c50",
+          "score": -2.4375,
+          "input_tokens": 354,
+          "seconds": 0.09307992399999421,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b33a0251-7b9a-4530-bc4e-6fe7f8e913e4",
+          "score": -3.71875,
+          "input_tokens": 367,
+          "seconds": 0.08903451800006223,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "259a6597-6344-44a8-992a-41e03712ea1e",
+          "score": -2.9375,
+          "input_tokens": 359,
+          "seconds": 0.09944013199992696,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "912360ee-ce81-4f49-affc-74148a819636",
+          "score": -3.3984375,
+          "input_tokens": 333,
+          "seconds": 0.14113908800004538,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "030f7d3e-3b17-41d6-a509-0fc631447d03",
+          "score": -4.1953125,
+          "input_tokens": 344,
+          "seconds": 0.11304764999999861,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "1f74fe3e-8b64-4d51-8ac5-227f0d8579f7",
+          "score": -2.296875,
+          "input_tokens": 391,
+          "seconds": 0.07757020300005024,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b69d4248-3ca9-46ef-ae53-e78f6a3ee6fe",
+          "score": -2.4921875,
+          "input_tokens": 374,
+          "seconds": 0.07170419600015521,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "ef6a515e-0e3f-46e3-be02-d93cc7d2cfb8",
+          "score": -4.515625,
+          "input_tokens": 388,
+          "seconds": 0.12813257000016165,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "fc3205bf-af38-4eb2-a3a7-3e24a1e38f60",
+          "score": -2.4765625,
+          "input_tokens": 374,
+          "seconds": 0.08258260900015557,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "1374d860-36f2-4cee-a46e-72b2136dd73f",
+          "score": -3.21875,
+          "input_tokens": 351,
+          "seconds": 0.08872081799995613,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "7a798f89-1c64-464d-a3ba-d78667ef05c4",
+          "score": -3.90625,
+          "input_tokens": 349,
+          "seconds": 0.12683576800009178,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a92b8fc5-56bf-4a69-a5ce-bc92d5c0e677",
+          "score": -4.5,
+          "input_tokens": 368,
+          "seconds": 0.06956919200001721,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "d4cd4c29-c77f-42aa-9efd-a759c185b037",
+          "score": -3.921875,
+          "input_tokens": 353,
+          "seconds": 0.12202776200001608,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "ea10970b-9af4-4d29-9371-3cdd569c4fe7",
+          "score": -4.6171875,
+          "input_tokens": 357,
+          "seconds": 0.07011399299994991,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "11bc602f-7474-4cb3-88d8-3a21f25751f7",
+          "score": -4.4140625,
+          "input_tokens": 402,
+          "seconds": 0.10735954300002959,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "daacefd0-3995-4e93-8c53-c56ad575c78c",
+          "score": -3.5546875,
+          "input_tokens": 424,
+          "seconds": 0.07003549299997758,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "83b21db1-f266-4ee2-909e-52711cf1332f",
+          "score": -4.1015625,
+          "input_tokens": 345,
+          "seconds": 0.06887389199982863,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "d131711f-10af-44ab-a0ae-a301dcc3f129",
+          "score": -4.484375,
+          "input_tokens": 393,
+          "seconds": 0.0680767910000668,
+          "raw": null,
+          "cache_hit": true
+        }
+      ],
+      "wall_seconds": 1.318164152999998,
+      "cpu_seconds": 1.3004650000000009
+    },
+    {
+      "case_id": "q-00674/random/50",
+      "query_id": "q-00674",
+      "size": 50,
+      "pool": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "37659a44-669d-48e5-833e-067008a80e02",
+        "462254fb-609d-4904-ae07-785d2e3ac734",
+        "aeeb55ae-d32a-4825-bfd5-27cefaa6083f",
+        "b59108c6-e8d2-47ef-aab5-4b15791a892e",
+        "775cde4f-6f71-4811-98e9-ace7cf622a48",
+        "1171101f-7f2d-4a73-a294-e6c5316d1337",
+        "14a697d3-ae3a-4c58-a482-8ad00b8fd73c",
+        "98ce8665-a111-48e4-b3b6-be2a0b5f2623",
+        "7101be9b-4db9-48a8-a876-ccaa620103dc",
+        "33e6639f-fa46-4bf4-bf00-56b33b2bf8e0",
+        "379cf984-2070-4bda-9ab5-77ac90451139",
+        "7a5dedab-ced6-446a-8875-80f024b94694",
+        "566b9f79-a709-4c1a-b62d-640a0a4cd1b9",
+        "687dfac0-9a22-47c7-9388-b91b1467a825",
+        "17343d29-a391-4669-86d6-a65fc7e715a5",
+        "29fb7159-3a3d-4720-80ea-1f34dbfc2f57",
+        "17e9ad6a-53b9-4646-a0b0-704024620c6f",
+        "4a90eb49-78eb-4152-8a6e-b14cb8cc375a"
+      ],
+      "status": "ok",
+      "ranking": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "687dfac0-9a22-47c7-9388-b91b1467a825",
+        "14a697d3-ae3a-4c58-a482-8ad00b8fd73c",
+        "379cf984-2070-4bda-9ab5-77ac90451139",
+        "566b9f79-a709-4c1a-b62d-640a0a4cd1b9",
+        "37659a44-669d-48e5-833e-067008a80e02",
+        "775cde4f-6f71-4811-98e9-ace7cf622a48",
+        "aeeb55ae-d32a-4825-bfd5-27cefaa6083f",
+        "7a5dedab-ced6-446a-8875-80f024b94694",
+        "7101be9b-4db9-48a8-a876-ccaa620103dc",
+        "29fb7159-3a3d-4720-80ea-1f34dbfc2f57",
+        "98ce8665-a111-48e4-b3b6-be2a0b5f2623",
+        "1171101f-7f2d-4a73-a294-e6c5316d1337",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "17e9ad6a-53b9-4646-a0b0-704024620c6f",
+        "17343d29-a391-4669-86d6-a65fc7e715a5",
+        "33e6639f-fa46-4bf4-bf00-56b33b2bf8e0",
+        "4a90eb49-78eb-4152-8a6e-b14cb8cc375a",
+        "b59108c6-e8d2-47ef-aab5-4b15791a892e",
+        "462254fb-609d-4904-ae07-785d2e3ac734"
+      ],
+      "answers": [
+        {
+          "skill_id": "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+          "score": 5.3203125,
+          "input_tokens": 272,
+          "seconds": 0.0722607960001369,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+          "score": -3.234375,
+          "input_tokens": 233,
+          "seconds": 0.0661587879999388,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "37659a44-669d-48e5-833e-067008a80e02",
+          "score": -1.265625,
+          "input_tokens": 268,
+          "seconds": 0.07889350499999637,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "462254fb-609d-4904-ae07-785d2e3ac734",
+          "score": -3.515625,
+          "input_tokens": 314,
+          "seconds": 0.10302823699998953,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "aeeb55ae-d32a-4825-bfd5-27cefaa6083f",
+          "score": -1.51953125,
+          "input_tokens": 271,
+          "seconds": 0.07616420099998322,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b59108c6-e8d2-47ef-aab5-4b15791a892e",
+          "score": -3.390625,
+          "input_tokens": 260,
+          "seconds": 0.0730047970000669,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "775cde4f-6f71-4811-98e9-ace7cf622a48",
+          "score": -1.4765625,
+          "input_tokens": 375,
+          "seconds": 0.09679532800009838,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "1171101f-7f2d-4a73-a294-e6c5316d1337",
+          "score": -2.66015625,
+          "input_tokens": 267,
+          "seconds": 0.06405698500020662,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "14a697d3-ae3a-4c58-a482-8ad00b8fd73c",
+          "score": -0.1015625,
+          "input_tokens": 239,
+          "seconds": 0.06856189099994481,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "98ce8665-a111-48e4-b3b6-be2a0b5f2623",
+          "score": -2.15234375,
+          "input_tokens": 242,
+          "seconds": 0.12384546499993121,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "7101be9b-4db9-48a8-a876-ccaa620103dc",
+          "score": -1.97265625,
+          "input_tokens": 226,
+          "seconds": 0.07199499500006823,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "33e6639f-fa46-4bf4-bf00-56b33b2bf8e0",
+          "score": -3.3671875,
+          "input_tokens": 227,
+          "seconds": 0.14410029200007557,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "379cf984-2070-4bda-9ab5-77ac90451139",
+          "score": -0.125,
+          "input_tokens": 375,
+          "seconds": 0.07627769300006548,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "7a5dedab-ced6-446a-8875-80f024b94694",
+          "score": -1.78515625,
+          "input_tokens": 234,
+          "seconds": 0.06563059600011911,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "566b9f79-a709-4c1a-b62d-640a0a4cd1b9",
+          "score": -0.453125,
+          "input_tokens": 232,
+          "seconds": 0.13703119399997377,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "687dfac0-9a22-47c7-9388-b91b1467a825",
+          "score": 0.515625,
+          "input_tokens": 339,
+          "seconds": 0.12148689400009971,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "17343d29-a391-4669-86d6-a65fc7e715a5",
+          "score": -3.3046875,
+          "input_tokens": 259,
+          "seconds": 0.09457509600019876,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "29fb7159-3a3d-4720-80ea-1f34dbfc2f57",
+          "score": -2.09765625,
+          "input_tokens": 254,
+          "seconds": 0.10582849499996883,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "17e9ad6a-53b9-4646-a0b0-704024620c6f",
+          "score": -3.2421875,
+          "input_tokens": 230,
+          "seconds": 0.11046359400006622,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "4a90eb49-78eb-4152-8a6e-b14cb8cc375a",
+          "score": -3.37890625,
+          "input_tokens": 273,
+          "seconds": 0.0651423970000451,
+          "raw": null,
+          "cache_hit": false
+        }
+      ],
+      "wall_seconds": 1.8245121460001883,
+      "cpu_seconds": 1.8213264000000002
+    },
+    {
+      "case_id": "q-00674/random/1000",
+      "query_id": "q-00674",
+      "size": 1000,
+      "pool": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "24381604-39a7-4df6-af93-15a6cb346e60",
+        "37659a44-669d-48e5-833e-067008a80e02",
+        "f5ee803d-f8c7-4b80-8628-2d8c16a437b8",
+        "5e490c43-0edc-457b-b657-6f2d1440d18a",
+        "a8425ac3-3dd7-41b9-a49d-af9e9ed58a53",
+        "1ff27b2a-5a91-495e-826d-aeec47b68e7c",
+        "b13e15a5-07b0-4800-b9e2-4e87109fdbbf",
+        "175e1973-b82a-4d53-83cf-4fee390becfc",
+        "5d504438-29de-4f1c-a7fb-3c09fe7e828f",
+        "444f12fa-59b2-4725-a14d-9acfd3003c29",
+        "80ff63d7-0851-4b7e-9ed5-1bfe6d3555b8",
+        "be3ba608-4421-43cd-abe0-501f64a20c8a",
+        "444fd7e8-4e9d-4ca6-ade7-e8c4d65c4b2e",
+        "8e9517b8-c41d-4147-acae-7a9060a57f2f",
+        "b0842c7e-0909-4dd1-a827-bb60aa6ba770",
+        "02a6b3ab-368f-4b6d-ba18-33eccc5e9367",
+        "25aed3c8-8560-41bb-9813-77c141fbeed8",
+        "49f85969-f1d8-4b78-856c-f1e5958a713e"
+      ],
+      "status": "ok",
+      "ranking": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "37659a44-669d-48e5-833e-067008a80e02",
+        "02a6b3ab-368f-4b6d-ba18-33eccc5e9367",
+        "25aed3c8-8560-41bb-9813-77c141fbeed8",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "be3ba608-4421-43cd-abe0-501f64a20c8a",
+        "175e1973-b82a-4d53-83cf-4fee390becfc",
+        "b0842c7e-0909-4dd1-a827-bb60aa6ba770",
+        "5d504438-29de-4f1c-a7fb-3c09fe7e828f",
+        "8e9517b8-c41d-4147-acae-7a9060a57f2f",
+        "b13e15a5-07b0-4800-b9e2-4e87109fdbbf",
+        "5e490c43-0edc-457b-b657-6f2d1440d18a",
+        "444fd7e8-4e9d-4ca6-ade7-e8c4d65c4b2e",
+        "1ff27b2a-5a91-495e-826d-aeec47b68e7c",
+        "a8425ac3-3dd7-41b9-a49d-af9e9ed58a53",
+        "f5ee803d-f8c7-4b80-8628-2d8c16a437b8",
+        "49f85969-f1d8-4b78-856c-f1e5958a713e",
+        "80ff63d7-0851-4b7e-9ed5-1bfe6d3555b8",
+        "24381604-39a7-4df6-af93-15a6cb346e60",
+        "444f12fa-59b2-4725-a14d-9acfd3003c29"
+      ],
+      "answers": [
+        {
+          "skill_id": "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+          "score": 5.3203125,
+          "input_tokens": 272,
+          "seconds": 0.0722607960001369,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+          "score": -3.234375,
+          "input_tokens": 233,
+          "seconds": 0.0661587879999388,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "24381604-39a7-4df6-af93-15a6cb346e60",
+          "score": -4.7890625,
+          "input_tokens": 331,
+          "seconds": 0.11873639400005231,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "37659a44-669d-48e5-833e-067008a80e02",
+          "score": -1.265625,
+          "input_tokens": 268,
+          "seconds": 0.07889350499999637,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "f5ee803d-f8c7-4b80-8628-2d8c16a437b8",
+          "score": -4.4609375,
+          "input_tokens": 264,
+          "seconds": 0.09205579500007843,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "5e490c43-0edc-457b-b657-6f2d1440d18a",
+          "score": -3.96484375,
+          "input_tokens": 245,
+          "seconds": 0.16784912100001748,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a8425ac3-3dd7-41b9-a49d-af9e9ed58a53",
+          "score": -4.4140625,
+          "input_tokens": 280,
+          "seconds": 0.12636272999998255,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "1ff27b2a-5a91-495e-826d-aeec47b68e7c",
+          "score": -4.2578125,
+          "input_tokens": 262,
+          "seconds": 0.08426511999982722,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b13e15a5-07b0-4800-b9e2-4e87109fdbbf",
+          "score": -3.9453125,
+          "input_tokens": 255,
+          "seconds": 0.12259672899995167,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "175e1973-b82a-4d53-83cf-4fee390becfc",
+          "score": -3.515625,
+          "input_tokens": 304,
+          "seconds": 0.07929871900000762,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "5d504438-29de-4f1c-a7fb-3c09fe7e828f",
+          "score": -3.71484375,
+          "input_tokens": 262,
+          "seconds": 0.06950061699990329,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "444f12fa-59b2-4725-a14d-9acfd3003c29",
+          "score": -5.34765625,
+          "input_tokens": 266,
+          "seconds": 0.06750461599995106,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "80ff63d7-0851-4b7e-9ed5-1bfe6d3555b8",
+          "score": -4.52734375,
+          "input_tokens": 265,
+          "seconds": 0.066097715000069,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "be3ba608-4421-43cd-abe0-501f64a20c8a",
+          "score": -3.30078125,
+          "input_tokens": 275,
+          "seconds": 0.06613371499997811,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "444fd7e8-4e9d-4ca6-ade7-e8c4d65c4b2e",
+          "score": -4.2421875,
+          "input_tokens": 288,
+          "seconds": 0.08450971999991452,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "8e9517b8-c41d-4147-acae-7a9060a57f2f",
+          "score": -3.8046875,
+          "input_tokens": 240,
+          "seconds": 0.0857906210001147,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "b0842c7e-0909-4dd1-a827-bb60aa6ba770",
+          "score": -3.60546875,
+          "input_tokens": 326,
+          "seconds": 0.10731062500008193,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "02a6b3ab-368f-4b6d-ba18-33eccc5e9367",
+          "score": -1.8515625,
+          "input_tokens": 226,
+          "seconds": 0.0753011179999703,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "25aed3c8-8560-41bb-9813-77c141fbeed8",
+          "score": -2.265625,
+          "input_tokens": 239,
+          "seconds": 0.07189621699990312,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "49f85969-f1d8-4b78-856c-f1e5958a713e",
+          "score": -4.5078125,
+          "input_tokens": 253,
+          "seconds": 0.1374324329999581,
+          "raw": null,
+          "cache_hit": false
+        }
+      ],
+      "wall_seconds": 1.6352360060000137,
+      "cpu_seconds": 1.6230174000000002
+    },
+    {
+      "case_id": "q-00674/random/6006",
+      "query_id": "q-00674",
+      "size": 6006,
+      "pool": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "e8c67903-c3f6-4b23-b336-a4cb40780ba0",
+        "60996d99-3c8a-4bac-8cae-3f0a0ba29c9d",
+        "a2df39ef-9f64-4f70-9d6e-80c236bb775b",
+        "f84ac5d4-5689-41c8-bc83-01a74fbf4bf4",
+        "6b7c7bf2-e5c7-4131-93ff-9d12b79c6fb1",
+        "6a217d3f-c5b8-4d3a-afa6-2f3ac8142166",
+        "c0d87198-b80a-4fa6-9740-328d0a12aa7a",
+        "d1107207-a0ac-49d1-acd8-f42d482e66fd",
+        "eb2fd3a2-2f55-4a4c-bb6e-222e0d853681",
+        "77a60856-0ada-4c3e-aa86-cc50178bfaab",
+        "918d5c3b-75fb-4ea7-9c65-74c1f325b829",
+        "6abbe092-e5f8-4df6-8c42-c3c41eccab2b",
+        "9af86c0d-ea4d-4404-a917-59bcba8c8e0c",
+        "afeee55a-cd98-4de6-9a64-a55fb14a7417",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "59a30fbd-8b58-4dcc-8e71-aae4921f7565",
+        "24381604-39a7-4df6-af93-15a6cb346e60",
+        "905595a9-58e6-449f-8c0d-7a7156f14f96",
+        "5cb8e5a0-2c5d-4803-b826-1c7793c3409a"
+      ],
+      "status": "ok",
+      "ranking": [
+        "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+        "6a217d3f-c5b8-4d3a-afa6-2f3ac8142166",
+        "59a30fbd-8b58-4dcc-8e71-aae4921f7565",
+        "77a60856-0ada-4c3e-aa86-cc50178bfaab",
+        "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+        "a2df39ef-9f64-4f70-9d6e-80c236bb775b",
+        "e8c67903-c3f6-4b23-b336-a4cb40780ba0",
+        "c0d87198-b80a-4fa6-9740-328d0a12aa7a",
+        "afeee55a-cd98-4de6-9a64-a55fb14a7417",
+        "6abbe092-e5f8-4df6-8c42-c3c41eccab2b",
+        "60996d99-3c8a-4bac-8cae-3f0a0ba29c9d",
+        "905595a9-58e6-449f-8c0d-7a7156f14f96",
+        "5cb8e5a0-2c5d-4803-b826-1c7793c3409a",
+        "9af86c0d-ea4d-4404-a917-59bcba8c8e0c",
+        "f84ac5d4-5689-41c8-bc83-01a74fbf4bf4",
+        "6b7c7bf2-e5c7-4131-93ff-9d12b79c6fb1",
+        "24381604-39a7-4df6-af93-15a6cb346e60",
+        "d1107207-a0ac-49d1-acd8-f42d482e66fd",
+        "eb2fd3a2-2f55-4a4c-bb6e-222e0d853681",
+        "918d5c3b-75fb-4ea7-9c65-74c1f325b829"
+      ],
+      "answers": [
+        {
+          "skill_id": "0dd3aa7c-1aa9-413a-992a-531bcd957f54",
+          "score": 5.3203125,
+          "input_tokens": 272,
+          "seconds": 0.0722607960001369,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "e8c67903-c3f6-4b23-b336-a4cb40780ba0",
+          "score": -3.390625,
+          "input_tokens": 269,
+          "seconds": 0.18120104200011156,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "60996d99-3c8a-4bac-8cae-3f0a0ba29c9d",
+          "score": -4.0703125,
+          "input_tokens": 276,
+          "seconds": 0.12207852799997454,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "a2df39ef-9f64-4f70-9d6e-80c236bb775b",
+          "score": -3.2421875,
+          "input_tokens": 332,
+          "seconds": 0.15660443799993118,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "f84ac5d4-5689-41c8-bc83-01a74fbf4bf4",
+          "score": -4.671875,
+          "input_tokens": 254,
+          "seconds": 0.06754131599996072,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "6b7c7bf2-e5c7-4131-93ff-9d12b79c6fb1",
+          "score": -4.7734375,
+          "input_tokens": 275,
+          "seconds": 0.0732270169999083,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "6a217d3f-c5b8-4d3a-afa6-2f3ac8142166",
+          "score": -0.8125,
+          "input_tokens": 253,
+          "seconds": 0.07905501899995215,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "c0d87198-b80a-4fa6-9740-328d0a12aa7a",
+          "score": -3.578125,
+          "input_tokens": 269,
+          "seconds": 0.12197032900007798,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "d1107207-a0ac-49d1-acd8-f42d482e66fd",
+          "score": -4.83984375,
+          "input_tokens": 235,
+          "seconds": 0.067428216000053,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "eb2fd3a2-2f55-4a4c-bb6e-222e0d853681",
+          "score": -4.9453125,
+          "input_tokens": 238,
+          "seconds": 0.11685832800003482,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "77a60856-0ada-4c3e-aa86-cc50178bfaab",
+          "score": -2.5859375,
+          "input_tokens": 238,
+          "seconds": 0.1295566300000246,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "918d5c3b-75fb-4ea7-9c65-74c1f325b829",
+          "score": -5.07421875,
+          "input_tokens": 264,
+          "seconds": 0.09084282100002383,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "6abbe092-e5f8-4df6-8c42-c3c41eccab2b",
+          "score": -3.9765625,
+          "input_tokens": 234,
+          "seconds": 0.0691001170000618,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "9af86c0d-ea4d-4404-a917-59bcba8c8e0c",
+          "score": -4.640625,
+          "input_tokens": 269,
+          "seconds": 0.11484752699993805,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "afeee55a-cd98-4de6-9a64-a55fb14a7417",
+          "score": -3.75,
+          "input_tokens": 257,
+          "seconds": 0.0644092150000688,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "91f2e3f6-a1d6-4652-8944-67fdd28854fa",
+          "score": -3.234375,
+          "input_tokens": 233,
+          "seconds": 0.0661587879999388,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "59a30fbd-8b58-4dcc-8e71-aae4921f7565",
+          "score": -2.4609375,
+          "input_tokens": 256,
+          "seconds": 0.16579153899988341,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "24381604-39a7-4df6-af93-15a6cb346e60",
+          "score": -4.7890625,
+          "input_tokens": 331,
+          "seconds": 0.11873639400005231,
+          "raw": null,
+          "cache_hit": true
+        },
+        {
+          "skill_id": "905595a9-58e6-449f-8c0d-7a7156f14f96",
+          "score": -4.234375,
+          "input_tokens": 263,
+          "seconds": 0.11049592600011238,
+          "raw": null,
+          "cache_hit": false
+        },
+        {
+          "skill_id": "5cb8e5a0-2c5d-4803-b826-1c7793c3409a",
+          "score": -4.4765625,
+          "input_tokens": 246,
+          "seconds": 0.06832981699994889,
+          "raw": null,
+          "cache_hit": false
+        }
+      ],
+      "wall_seconds": 1.8130430290000277,
+      "cpu_seconds": 1.8063003999999978
+    }
+  ],
+  "metrics": {
+    "50": {
+      "aggregate": {
+        "NDCG@5": 0.7346393630113782,
+        "MAP@5": 0.6666666666666666,
+        "Recall@5": 0.6666666666666666,
+        "Precision@5": 0.2,
+        "NDCG@10": 0.8182195904944793,
+        "MAP@10": 0.7222222222222222,
+        "Recall@10": 0.8333333333333333,
+        "Precision@10": 0.15000000000000002,
+        "NDCG@15": 0.8782774183935049,
+        "MAP@15": 0.7579365079365079,
+        "Recall@15": 1.0,
+        "Precision@15": 0.13333333333333333,
+        "Completeness@5": 0.5,
+        "Completeness@10": 0.5,
+        "Completeness@15": 1.0,
+        "Completeness@20": 1.0,
+        "Recall@20": 1.0,
+        "Completeness@50": 1.0,
+        "Recall@50": 1.0,
+        "Completeness@100": 1.0,
+        "Recall@100": 1.0,
+        "MRR@5": 1.0
+      },
+      "per_query": {
+        "q-03666": {
+          "NDCG@5": 1.0,
+          "MAP@5": 1.0,
+          "Recall@5": 1.0,
+          "Precision@5": 0.2,
+          "NDCG@10": 1.0,
+          "MAP@10": 1.0,
+          "Recall@10": 1.0,
+          "Precision@10": 0.1,
+          "NDCG@15": 1.0,
+          "MAP@15": 1.0,
+          "Recall@15": 1.0,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@5": 1.0,
+          "Completeness@10": 1.0,
+          "Completeness@15": 1.0,
+          "Completeness@20": 1.0,
+          "Recall@20": 1.0,
+          "Completeness@50": 1.0,
+          "Recall@50": 1.0,
+          "Completeness@100": 1.0,
+          "Recall@100": 1.0,
+          "MRR@5": 1.0
+        },
+        "q-00674": {
+          "NDCG@5": 0.46927872602275644,
+          "MAP@5": 0.3333333333333333,
+          "Recall@5": 0.3333333333333333,
+          "Precision@5": 0.2,
+          "NDCG@10": 0.6364391809889587,
+          "MAP@10": 0.4444444444444444,
+          "Recall@10": 0.6666666666666666,
+          "Precision@10": 0.2,
+          "NDCG@15": 0.75655483678701,
+          "MAP@15": 0.5158730158730158,
+          "Recall@15": 1.0,
+          "Precision@15": 0.2,
+          "Completeness@5": 0.0,
+          "Completeness@10": 0.0,
+          "Completeness@15": 1.0,
+          "Completeness@20": 1.0,
+          "Recall@20": 1.0,
+          "Completeness@50": 1.0,
+          "Recall@50": 1.0,
+          "Completeness@100": 1.0,
+          "Recall@100": 1.0,
+          "MRR@5": 1.0
+        }
+      },
+      "query_count": 2,
+      "empty_rate": 0.0,
+      "planned": 2,
+      "attempted": 2,
+      "valid": 2,
+      "pool_control": {
+        "NDCG@5": 1.0,
+        "MAP@5": 1.0,
+        "Recall@5": 1.0,
+        "Precision@5": 0.4,
+        "NDCG@10": 1.0,
+        "MAP@10": 1.0,
+        "Recall@10": 1.0,
+        "Precision@10": 0.2,
+        "NDCG@15": 1.0,
+        "MAP@15": 1.0,
+        "Recall@15": 1.0,
+        "Precision@15": 0.13333333333333333,
+        "Completeness@5": 1.0,
+        "Completeness@10": 1.0,
+        "Completeness@15": 1.0,
+        "Completeness@20": 1.0,
+        "Recall@20": 1.0,
+        "Completeness@50": 1.0,
+        "Recall@50": 1.0,
+        "Completeness@100": 1.0,
+        "Recall@100": 1.0,
+        "MRR@5": 1.0
+      }
+    },
+    "1000": {
+      "aggregate": {
+        "NDCG@5": 0.9734512147629872,
+        "MAP@5": 0.9333333333333333,
+        "Recall@5": 1.0,
+        "Precision@5": 0.4,
+        "NDCG@10": 0.9734512147629872,
+        "MAP@10": 0.9333333333333333,
+        "Recall@10": 1.0,
+        "Precision@10": 0.2,
+        "NDCG@15": 0.9734512147629872,
+        "MAP@15": 0.9333333333333333,
+        "Recall@15": 1.0,
+        "Precision@15": 0.13333333333333333,
+        "Completeness@5": 1.0,
+        "Completeness@10": 1.0,
+        "Completeness@15": 1.0,
+        "Completeness@20": 1.0,
+        "Recall@20": 1.0,
+        "Completeness@50": 1.0,
+        "Recall@50": 1.0,
+        "Completeness@100": 1.0,
+        "Recall@100": 1.0,
+        "MRR@5": 1.0
+      },
+      "per_query": {
+        "q-03666": {
+          "NDCG@5": 1.0,
+          "MAP@5": 1.0,
+          "Recall@5": 1.0,
+          "Precision@5": 0.2,
+          "NDCG@10": 1.0,
+          "MAP@10": 1.0,
+          "Recall@10": 1.0,
+          "Precision@10": 0.1,
+          "NDCG@15": 1.0,
+          "MAP@15": 1.0,
+          "Recall@15": 1.0,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@5": 1.0,
+          "Completeness@10": 1.0,
+          "Completeness@15": 1.0,
+          "Completeness@20": 1.0,
+          "Recall@20": 1.0,
+          "Completeness@50": 1.0,
+          "Recall@50": 1.0,
+          "Completeness@100": 1.0,
+          "Recall@100": 1.0,
+          "MRR@5": 1.0
+        },
+        "q-00674": {
+          "NDCG@5": 0.9469024295259745,
+          "MAP@5": 0.8666666666666667,
+          "Recall@5": 1.0,
+          "Precision@5": 0.6,
+          "NDCG@10": 0.9469024295259745,
+          "MAP@10": 0.8666666666666667,
+          "Recall@10": 1.0,
+          "Precision@10": 0.3,
+          "NDCG@15": 0.9469024295259745,
+          "MAP@15": 0.8666666666666667,
+          "Recall@15": 1.0,
+          "Precision@15": 0.2,
+          "Completeness@5": 1.0,
+          "Completeness@10": 1.0,
+          "Completeness@15": 1.0,
+          "Completeness@20": 1.0,
+          "Recall@20": 1.0,
+          "Completeness@50": 1.0,
+          "Recall@50": 1.0,
+          "Completeness@100": 1.0,
+          "Recall@100": 1.0,
+          "MRR@5": 1.0
+        }
+      },
+      "query_count": 2,
+      "empty_rate": 0.0,
+      "planned": 2,
+      "attempted": 2,
+      "valid": 2,
+      "pool_control": {
+        "NDCG@5": 0.9837339917445846,
+        "MAP@5": 0.9583333333333333,
+        "Recall@5": 1.0,
+        "Precision@5": 0.4,
+        "NDCG@10": 0.9837339917445846,
+        "MAP@10": 0.9583333333333333,
+        "Recall@10": 1.0,
+        "Precision@10": 0.2,
+        "NDCG@15": 0.9837339917445846,
+        "MAP@15": 0.9583333333333333,
+        "Recall@15": 1.0,
+        "Precision@15": 0.13333333333333333,
+        "Completeness@5": 1.0,
+        "Completeness@10": 1.0,
+        "Completeness@15": 1.0,
+        "Completeness@20": 1.0,
+        "Recall@20": 1.0,
+        "Completeness@50": 1.0,
+        "Recall@50": 1.0,
+        "Completeness@100": 1.0,
+        "Recall@100": 1.0,
+        "MRR@5": 1.0
+      }
+    },
+    "6006": {
+      "aggregate": {
+        "NDCG@5": 0.8254102592800545,
+        "MAP@5": 0.7333333333333333,
+        "Recall@5": 0.8333333333333333,
+        "Precision@5": 0.30000000000000004,
+        "NDCG@10": 0.8254102592800545,
+        "MAP@10": 0.7333333333333333,
+        "Recall@10": 0.8333333333333333,
+        "Precision@10": 0.15000000000000002,
+        "NDCG@15": 0.8254102592800545,
+        "MAP@15": 0.7333333333333333,
+        "Recall@15": 0.8333333333333333,
+        "Precision@15": 0.1,
+        "Completeness@5": 0.5,
+        "Completeness@10": 0.5,
+        "Completeness@15": 0.5,
+        "Completeness@20": 0.5,
+        "Recall@20": 0.8333333333333333,
+        "Completeness@50": 0.5,
+        "Recall@50": 0.8333333333333333,
+        "Completeness@100": 0.5,
+        "Recall@100": 0.8333333333333333,
+        "MRR@5": 1.0
+      },
+      "per_query": {
+        "q-03666": {
+          "NDCG@5": 1.0,
+          "MAP@5": 1.0,
+          "Recall@5": 1.0,
+          "Precision@5": 0.2,
+          "NDCG@10": 1.0,
+          "MAP@10": 1.0,
+          "Recall@10": 1.0,
+          "Precision@10": 0.1,
+          "NDCG@15": 1.0,
+          "MAP@15": 1.0,
+          "Recall@15": 1.0,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@5": 1.0,
+          "Completeness@10": 1.0,
+          "Completeness@15": 1.0,
+          "Completeness@20": 1.0,
+          "Recall@20": 1.0,
+          "Completeness@50": 1.0,
+          "Recall@50": 1.0,
+          "Completeness@100": 1.0,
+          "Recall@100": 1.0,
+          "MRR@5": 1.0
+        },
+        "q-00674": {
+          "NDCG@5": 0.6508205185601091,
+          "MAP@5": 0.4666666666666666,
+          "Recall@5": 0.6666666666666666,
+          "Precision@5": 0.4,
+          "NDCG@10": 0.6508205185601091,
+          "MAP@10": 0.4666666666666666,
+          "Recall@10": 0.6666666666666666,
+          "Precision@10": 0.2,
+          "NDCG@15": 0.6508205185601091,
+          "MAP@15": 0.4666666666666666,
+          "Recall@15": 0.6666666666666666,
+          "Precision@15": 0.13333333333333333,
+          "Completeness@5": 0.0,
+          "Completeness@10": 0.0,
+          "Completeness@15": 0.0,
+          "Completeness@20": 0.0,
+          "Recall@20": 0.6666666666666666,
+          "Completeness@50": 0.0,
+          "Recall@50": 0.6666666666666666,
+          "Completeness@100": 0.0,
+          "Recall@100": 0.6666666666666666,
+          "MRR@5": 1.0
+        }
+      },
+      "query_count": 2,
+      "empty_rate": 0.0,
+      "planned": 2,
+      "attempted": 2,
+      "valid": 2,
+      "pool_control": {
+        "NDCG@5": 0.7346393630113782,
+        "MAP@5": 0.6666666666666666,
+        "Recall@5": 0.6666666666666666,
+        "Precision@5": 0.2,
+        "NDCG@10": 0.7346393630113782,
+        "MAP@10": 0.6666666666666666,
+        "Recall@10": 0.6666666666666666,
+        "Precision@10": 0.1,
+        "NDCG@15": 0.7346393630113782,
+        "MAP@15": 0.6666666666666666,
+        "Recall@15": 0.6666666666666666,
+        "Precision@15": 0.06666666666666667,
+        "Completeness@5": 0.5,
+        "Completeness@10": 0.5,
+        "Completeness@15": 0.5,
+        "Completeness@20": 0.5,
+        "Recall@20": 0.8333333333333333,
+        "Completeness@50": 0.5,
+        "Recall@50": 0.8333333333333333,
+        "Completeness@100": 0.5,
+        "Recall@100": 0.8333333333333333,
+        "MRR@5": 1.0
+      }
+    }
+  },
+  "forward_calls": 108,
+  "startup_seconds": 9.918702611000072,
+  "wall_seconds": 21.70572611900002,
+  "cost_usd": 0
+}

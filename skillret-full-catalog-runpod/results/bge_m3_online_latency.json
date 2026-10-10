@@ -1,0 +1,122 @@
+[
+  {
+    "query_id": "q-00001",
+    "encode_seconds": 0.026854977011680603,
+    "score_top1_seconds": 0.0006872601807117462,
+    "text_to_top1_seconds": 0.02754330262541771
+  },
+  {
+    "query_id": "q-00002",
+    "encode_seconds": 0.08344850689172745,
+    "score_top1_seconds": 0.0911412425339222,
+    "text_to_top1_seconds": 0.17459119483828545
+  },
+  {
+    "query_id": "q-00003",
+    "encode_seconds": 0.021354936063289642,
+    "score_top1_seconds": 0.0063030049204826355,
+    "text_to_top1_seconds": 0.027659103274345398
+  },
+  {
+    "query_id": "q-00004",
+    "encode_seconds": 0.17665179818868637,
+    "score_top1_seconds": 0.0005173906683921814,
+    "text_to_top1_seconds": 0.1771700493991375
+  },
+  {
+    "query_id": "q-00005",
+    "encode_seconds": 0.11039745062589645,
+    "score_top1_seconds": 0.00048092007637023926,
+    "text_to_top1_seconds": 0.11087914556264877
+  },
+  {
+    "query_id": "q-00006",
+    "encode_seconds": 0.1897846832871437,
+    "score_top1_seconds": 0.004240039736032486,
+    "text_to_top1_seconds": 0.1940256468951702
+  },
+  {
+    "query_id": "q-00007",
+    "encode_seconds": 0.1203620694577694,
+    "score_top1_seconds": 0.0004222206771373749,
+    "text_to_top1_seconds": 0.12078521400690079
+  },
+  {
+    "query_id": "q-00008",
+    "encode_seconds": 0.17696509137749672,
+    "score_top1_seconds": 0.00043636932969093323,
+    "text_to_top1_seconds": 0.17740215733647346
+  },
+  {
+    "query_id": "q-00009",
+    "encode_seconds": 0.10846946015954018,
+    "score_top1_seconds": 0.00035910680890083313,
+    "text_to_top1_seconds": 0.10882966965436935
+  },
+  {
+    "query_id": "q-00010",
+    "encode_seconds": 0.1921961009502411,
+    "score_top1_seconds": 0.0005434602499008179,
+    "text_to_top1_seconds": 0.19274062663316727
+  },
+  {
+    "query_id": "q-00011",
+    "encode_seconds": 0.11475912109017372,
+    "score_top1_seconds": 0.00042859092354774475,
+    "text_to_top1_seconds": 0.11518851295113564
+  },
+  {
+    "query_id": "q-00012",
+    "encode_seconds": 0.1863592192530632,
+    "score_top1_seconds": 0.0004289597272872925,
+    "text_to_top1_seconds": 0.18678922206163406
+  },
+  {
+    "query_id": "q-00013",
+    "encode_seconds": 0.108704824000597,
+    "score_top1_seconds": 0.0003486648201942444,
+    "text_to_top1_seconds": 0.10905440151691437
+  },
+  {
+    "query_id": "q-00014",
+    "encode_seconds": 0.19040102884173393,
+    "score_top1_seconds": 0.00048123300075531006,
+    "text_to_top1_seconds": 0.19088316336274147
+  },
+  {
+    "query_id": "q-00015",
+    "encode_seconds": 0.11010368540883064,
+    "score_top1_seconds": 0.0004550442099571228,
+    "text_to_top1_seconds": 0.11055955663323402
+  },
+  {
+    "query_id": "q-00016",
+    "encode_seconds": 0.18833032622933388,
+    "score_top1_seconds": 0.004170611500740051,
+    "text_to_top1_seconds": 0.19250180944800377
+  },
+  {
+    "query_id": "q-00017",
+    "encode_seconds": 0.10249092057347298,
+    "score_top1_seconds": 0.0003872215747833252,
+    "text_to_top1_seconds": 0.1028791144490242
+  },
+  {
+    "query_id": "q-00018",
+    "encode_seconds": 0.18686562404036522,
+    "score_top1_seconds": 0.000541098415851593,
+    "text_to_top1_seconds": 0.18740784749388695
+  },
+  {
+    "query_id": "q-00019",
+    "encode_seconds": 0.11135280877351761,
+    "score_top1_seconds": 0.00040198490023612976,
+    "text_to_top1_seconds": 0.11175552755594254
+  },
+  {
+    "query_id": "q-00020",
+    "encode_seconds": 0.18345695361495018,
+    "score_top1_seconds": 0.00035395845770835876,
+    "text_to_top1_seconds": 0.18381160497665405
+  }
+]

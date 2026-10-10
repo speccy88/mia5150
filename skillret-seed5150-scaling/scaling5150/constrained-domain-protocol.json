@@ -1,0 +1,38 @@
+{
+  "version": "constrained-domain-route-v1",
+  "base_protocol": "f3e9ccc168475a350296373999427c21740c4ce92c6dc234edf69b7ff7b5ac60",
+  "models": {
+    "small_qwen06": {
+      "path": "/home/user/code/category-pilot/routing/models/Qwen3-0.6B-Q8_0.gguf",
+      "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "parameters": "0.6B",
+      "quantization": "Q8_0"
+    },
+    "medium_qwen35": {
+      "path": "/home/user/code/category-pilot/multimodal/models/Qwen3.5-4B-Q4_K_M.gguf",
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+      "parameters": "4B",
+      "quantization": "Q4_K_M"
+    }
+  },
+  "query_ids": [
+    "q-03666",
+    "q-00674"
+  ],
+  "sizes": [
+    10,
+    50,
+    100,
+    250,
+    1000,
+    6006
+  ],
+  "grammar": "root ::= \"\\\"AI Agents\\\"\" | \"\\\"Business & Planning\\\"\" | \"\\\"Content Creation\\\"\" | \"\\\"Data & ML\\\"\" | \"\\\"Information Retrieval\\\"\" | \"\\\"Software Engineering\\\"\"",
+  "reason": "Original model responses violated JSON-string routing schema on both queries. Preserve all original strict failures. This separate infrastructure ablation enforces only the originally requested six-category output domain, not a gold category. No qrels used to design grammar.",
+  "max_new_completions_per_model": 15,
+  "max_seconds_per_model": 600,
+  "context": 8192,
+  "output_cap": 256,
+  "reuse": "Identical selection requests reuse original success/failure cache; no repeat of failed selection. New route request hash includes grammar.",
+  "final_selection": "Same original free-generation selector, no new selection grammar/prompt changes. Empty chosen category is failure, never global fallback."
+}

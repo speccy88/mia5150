@@ -1,0 +1,187 @@
+{
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "files": {
+    "data/skills/train.jsonl": {
+      "rows": 10123,
+      "bytes": 187920814,
+      "sha256": "b4978863f6c36c1d42af4a779f86b8e5809b4709c353aa698ec494e3ed663a2b",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0
+    },
+    "data/queries/train.jsonl": {
+      "rows": 63259,
+      "bytes": 54348716,
+      "sha256": "e1189e402c74d11ba57af3bbc60308cc4a9b51f29f2de265e541d0599067624c",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0
+    },
+    "data/qrels/train.jsonl": {
+      "rows": 127190,
+      "bytes": 12591810,
+      "sha256": "7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0,
+      "relevance_values": {
+        "1": 127190
+      }
+    },
+    "data/skills/test.jsonl": {
+      "rows": 6006,
+      "bytes": 117606037,
+      "sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0
+    },
+    "data/queries/test.jsonl": {
+      "rows": 4392,
+      "bytes": 6053507,
+      "sha256": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0
+    },
+    "data/qrels/test.jsonl": {
+      "rows": 7187,
+      "bytes": 661204,
+      "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+      "matches_recorded_manifest": true,
+      "duplicate_ids_or_edges": 0,
+      "relevance_values": {
+        "1": 7187
+      }
+    }
+  },
+  "schemas": {
+    "data/skills/train.jsonl": {
+      "id": 10123,
+      "name": 10123,
+      "namespace": 10123,
+      "description": 10123,
+      "author": 10123,
+      "stars": 10123,
+      "installs": 10123,
+      "license": 10123,
+      "repo": 10123,
+      "source_url": 10123,
+      "raw_url": 10123,
+      "major": 10123,
+      "sub": 10123,
+      "primary_action": 10123,
+      "primary_object": 10123,
+      "domain": 10123,
+      "body": 10123,
+      "skill_md": 10123
+    },
+    "data/queries/train.jsonl": {
+      "id": 63259,
+      "original_id": 63259,
+      "query": 63259,
+      "skill_ids": 63259,
+      "skill_names": 63259,
+      "k": 63259,
+      "generator_model": 63259,
+      "original_query": 14226
+    },
+    "data/qrels/train.jsonl": {
+      "query_id": 127190,
+      "skill_id": 127190,
+      "relevance": 127190
+    },
+    "data/skills/test.jsonl": {
+      "id": 6006,
+      "name": 6006,
+      "namespace": 6006,
+      "description": 6006,
+      "author": 6006,
+      "stars": 6006,
+      "installs": 6006,
+      "license": 6006,
+      "repo": 6006,
+      "source_url": 6006,
+      "raw_url": 6006,
+      "major": 6006,
+      "sub": 6006,
+      "primary_action": 6006,
+      "primary_object": 6006,
+      "domain": 6006,
+      "body": 6006,
+      "skill_md": 6006
+    },
+    "data/queries/test.jsonl": {
+      "id": 4392,
+      "original_id": 4392,
+      "query": 4392,
+      "skill_ids": 4392,
+      "skill_names": 4392,
+      "k": 4392,
+      "generator_model": 4392
+    },
+    "data/qrels/test.jsonl": {
+      "query_id": 7187,
+      "skill_id": 7187,
+      "relevance": 7187
+    }
+  },
+  "train": {
+    "query_gold_histogram": {
+      "1": 20776,
+      "2": 21035,
+      "3": 21448
+    },
+    "qrels_query_count": 63259,
+    "unique_positive_edges": 127190,
+    "query_gold_qrels_mismatches": [],
+    "k_mismatches": 0,
+    "missing_positive_skill_ids": [],
+    "qrels_ids_without_query": []
+  },
+  "test": {
+    "query_gold_histogram": {
+      "1": 2143,
+      "2": 1703,
+      "3": 546
+    },
+    "qrels_query_count": 4392,
+    "unique_positive_edges": 7187,
+    "query_gold_qrels_mismatches": [],
+    "k_mismatches": 0,
+    "missing_positive_skill_ids": [],
+    "qrels_ids_without_query": []
+  },
+  "existing_partition": {
+    "source": "manifests/training-partitions.json",
+    "train_queries": 512,
+    "dev_queries": 128,
+    "train_positive_edges": 705,
+    "dev_positive_edges": 244,
+    "allowed_train_skills": 3033,
+    "all_train_gold_in_allowed": true,
+    "dev_gold_in_allowed": 0,
+    "train_dev_query_id_overlap": 0,
+    "train_dev_normalized_query_text_overlap": 0,
+    "prior_neural_lora_train_queries": 64,
+    "prior_neural_lora_dev_queries": 32,
+    "prior_neural_lora_train_positive_edges": 91,
+    "prior_neural_lora_dev_positive_edges": 64
+  },
+  "family_exposure": {
+    "definition": "Connected components over union of official train/test skills, exact repository string OR stripped lowercase exact skill name; diagnostic computation, not a new split.",
+    "skill_id_train_test_overlap": 0,
+    "union_component_count": 1869,
+    "existing_train_gold_families": 353,
+    "existing_dev_gold_families": 21,
+    "existing_train_dev_family_overlap_after_union": 1,
+    "existing_dev_gold_families_in_exposed_public_test_gold": 13,
+    "existing_dev_gold_families_in_exposed_public_test_catalog": 14,
+    "existing_train_gold_families_in_exposed_public_test_gold": 180,
+    "all_test_query_labels_historically_exposed": true,
+    "historic_256_dev_ids_available_in_examined_manifest": false,
+    "conclusion": "No certified blind or family-unexposed holdout. Existing grouped train/dev supports a disclosed within-experiment diagnostic only. Historical 256-query dev belongs to different revision and its exact IDs were not supplied by the examined ledger."
+  },
+  "recommendation": {
+    "data": "Reuse existing train512/dev128 grouping; select bounded training query prefix and preserve every qrel edge for every selected query. Include each query only if every gold skill is retained.",
+    "negatives": "Sample only train_allowed_skill_ids minus the complete per-query official gold set. Never truncate a mixed examples list after constructing positives.",
+    "tiny_eval": "Freeze first 4 or 8 existing dev128 IDs before scoring. Include all positives plus a fixed small nonpositive set per query, label as gold-conditioned binary relevance diagnostic; or use first4 existing lora-hard dev_pools unmodified for honest retrieval reranking diagnostic. Evaluate exactly same pairs/pools baseline and adapted. No blind/test/generalization claims.",
+    "metrics": "Pair-level CE+Brier, positive vs negative probability separation, paired score differences; for unmodified frozen pools include candidate recall ceiling and macro MRR/NDCG/Recall with all official gold denominators."
+  },
+  "elapsed_seconds": 4.417403221130371
+}

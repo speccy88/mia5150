@@ -1,0 +1,28 @@
+[project]
+name = "mia5150-proposal-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bm25s>=0.3.11",
+    "datasets>=5.0.1",
+    "deepagents>=0.7.19",
+    "huggingface-hub>=1.33.0",
+    "langchain>=1.4.2",
+    "langchain-core>=1.6.5",
+    "langchain-ollama>=1.1.0",
+    "matplotlib>=3.11.2",
+    "nbformat>=5.11.1",
+    "numpy>=2.4.6",
+    "ollama>=0.6.2",
+    "pandas>=3.0.6",
+    "pyyaml>=6.0.3",
+    "sentence-transformers>=6.1.0",
+    "transformers>=5.17.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]

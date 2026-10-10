@@ -1,0 +1,108 @@
+{
+  "model": "bge-small",
+  "hardware": {
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "visible_cpus": 9,
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "threads": 4,
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "device": "CPU"
+  },
+  "scope": "fresh recovery64",
+  "query_count": 64,
+  "catalog_sizes": [
+    10,
+    100,
+    1000,
+    6006
+  ],
+  "latency_query_count": 32,
+  "latency_repeats": 2,
+  "latency_catalog_sizes": [
+    6006
+  ],
+  "model_configuration": {
+    "load_seconds": 5.372527084999092,
+    "documents": {
+      "fingerprint": "e5eb4d2362740b42a3884967202e4e0b32083319ca2f2f71ce6f88856b35a00f",
+      "completed": 6006,
+      "count": 6006,
+      "encoding_seconds": 183.09560293399954,
+      "batch_size": 16,
+      "token_audit": {
+        "raw_tokens": 319324,
+        "truncated_count": 0,
+        "max_raw_tokens": 370,
+        "max_length": 512
+      },
+      "shape": [
+        6006,
+        384
+      ],
+      "model": {
+        "repository": "BAAI/bge-small-en-v1.5",
+        "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+        "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+        "slug": "bge-small",
+        "threads": 4,
+        "device": "CPU",
+        "max_length": 512,
+        "normalization": "L2",
+        "runtime": "torch",
+        "precision": "float32",
+        "pooling": "CLS"
+      }
+    },
+    "queries": {
+      "fingerprint": "aa1c3a3b0a1818d9b87d081f5377ae18cf5c2ae6bc241eb052c828ab35bf336e",
+      "completed": 64,
+      "count": 64,
+      "encoding_seconds": 8.45707875900007,
+      "batch_size": 16,
+      "token_audit": {
+        "raw_tokens": 17916,
+        "truncated_count": 2,
+        "max_raw_tokens": 727,
+        "max_length": 512
+      },
+      "shape": [
+        64,
+        384
+      ],
+      "model": {
+        "repository": "BAAI/bge-small-en-v1.5",
+        "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+        "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+        "slug": "bge-small",
+        "threads": 4,
+        "device": "CPU",
+        "max_length": 512,
+        "normalization": "L2",
+        "runtime": "torch",
+        "precision": "float32",
+        "pooling": "CLS"
+      }
+    },
+    "repository": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "adapter_sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa",
+    "slug": "bge-small",
+    "threads": 4,
+    "device": "CPU",
+    "max_length": 512,
+    "normalization": "L2",
+    "runtime": "torch",
+    "precision": "float32",
+    "pooling": "CLS"
+  },
+  "peak_rss_mib": 907.26171875,
+  "bm25_index_seconds": 0.16160933100036345,
+  "completed_utc": "2026-10-02T07:47:36Z",
+  "status": "completed"
+}

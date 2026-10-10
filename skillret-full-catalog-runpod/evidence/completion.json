@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "stages": [
+    "data",
+    "bge",
+    "qwen",
+    "train",
+    "evaluate",
+    "report"
+  ]
+}

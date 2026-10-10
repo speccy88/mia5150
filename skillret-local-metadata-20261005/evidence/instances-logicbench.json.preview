@@ -1,0 +1,53 @@
+[
+  {
+    "instance_id": "logicbench_00000",
+    "dataset": "logicbench",
+    "question": "If an individual decides to take a temporary break from their professional responsibilities, it can contribute to their overall sense of rejuvenation. however, if they choose to burden themselves with additional tasks, they may find themselves feeling overwhelmed. in this scenario, we are aware that at least one of the following statements holds true: (1) mike takes a break from work, or (2) he do not experience overwhelming feelings. it is important to note that we lack knowledge regarding which one, or both, of these statements are accurate.\n\nIn light of the context provided, what conclusion can be considered the most appropriate?\n  choice_1: Luke takes a break from work and feels refreshed.\n  choice_2: Mike takes on more tasks and feels overwhelmed.\n  choice_3: Mike takes a break from work and feels overwhelmed.\n  choice_4: he will feel refreshed or he doesn't take on more tasks",
+    "skill_annotations": [
+      "logicbench_006"
+    ],
+    "eval_data": {
+      "answer": "choice_4",
+      "task_type": "MCQA"
+    }
+  },
+  {
+    "instance_id": "logicbench_00001",
+    "dataset": "logicbench",
+    "question": "If an individual frequently uses the internet, they may develop a dependency on it. On the contrary, if they spend more time outdoors, they tend to engage in physical activities. It is established that at least one of the following statements is true: either Aryan spends a significant amount of time on the internet or he will not become more active. It is possible that solely (1) is true, or solely (2) is true, or even both are true simultaneously.\n\nCan we say at least one of the following must always be true? (a) he becomes addicted to it and (b) he doesn't go outdoors more often",
+    "skill_annotations": [
+      "logicbench_006"
+    ],
+    "eval_data": {
+      "answer": "yes",
+      "task_type": "BQA"
+    }
+  },
+  {
+    "instance_id": "logicbench_00002",
+    "dataset": "logicbench",
+    "question": "If an individual dedicates themselves to studying diligently, they will achieve commendable grades. In contrast, spending excessive amounts of time watching television will hinder their performance in school. It is important to note that at least one of the following statements holds true: either Tom is committed to studying diligently or he will excel academically. However, we cannot determine which statement is accurate, as it is plausible that only one of them is true or that both are true simultaneously.\n\nCan we say at least one of the following must always be true? (a) he will get good grades. and (b) he watches too much tv.",
+    "skill_annotations": [
+      "logicbench_006"
+    ],
+    "eval_data": {
+      "answer": "no",
+      "task_type": "BQA"
+    }
+  },
+  {
+    "instance_id": "logicbench_00003",
+    "dataset": "logicbench",
+    "question": "If he drives a car, he will reach his destination, and if he takes public transport, he will be late. we only know that either he drives a car or he won't be late, without knowing which one is true. it could be the case that only he drives a car, or only he won't be late, or both are true.\n\nConsidering the provided context, what conclusion would be deemed most suitable?\n  choice_1: He will definitely take public transport and be late\n  choice_2: She will reach her destination if she takes public transport\n  choice_3: He will reach his destination or he doesn't take public transport\n  choice_4: They won't be late if they drive a car",
+    "skill_annotations": [
+      "logicbench_006"
+    ],
+    "eval_data": {
+      "answer": "choice_3",
+      "task_type": "MCQA"
+    }
+  },
+  {
+    "instance_id": "logicbench_00004",
+    "dataset": "logicbench",
+    "question": "If someone studies regularly, then they will learn new skills. if they stay up late, then they will be tired. There's an uncertainty regarding the truthfulness of two statements: either Amber studies regularly or she won't be tired. It is unknown whether one or both of these statements are accurate.\n\nCan we sa

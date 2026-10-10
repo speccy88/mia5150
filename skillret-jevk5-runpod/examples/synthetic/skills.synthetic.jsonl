@@ -1,0 +1,5 @@
+{"id": "s-review", "name": "staged-review", "description": "Review staged Git changes without committing them."}
+{"id": "s-security", "name": "security-review", "description": "Find security issues in a code diff."}
+{"id": "s-commit", "name": "git-commit", "description": "Create a Git commit from staged changes."}
+{"id": "s-status", "name": "git-status", "description": "Show modified and staged files."}
+{"id": "s-pump", "name": "pump-report", "description": "Analyze pump measurements and produce a report."}

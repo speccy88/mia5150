@@ -1,0 +1,18 @@
+test_ambiguous_response_stops_and_keeps_reserve_without_error_text (test_hosted_study.StudyRunnerTests.test_ambiguous_response_stops_and_keeps_reserve_without_error_text) ... ok
+test_any_blocked_query_prevents_whole_scope_execution (test_hosted_study.StudyRunnerTests.test_any_blocked_query_prevents_whole_scope_execution) ... ok
+test_cli_requires_execute_and_gates (test_hosted_study.StudyRunnerTests.test_cli_requires_execute_and_gates) ... ok
+test_cumulative_deadline_survives_process_resume (test_hosted_study.StudyRunnerTests.test_cumulative_deadline_survives_process_resume) ... ok
+test_deadline_cannot_be_extended_beyond_six_hours (test_hosted_study.StudyRunnerTests.test_deadline_cannot_be_extended_beyond_six_hours) ... ok
+test_deadline_crossed_during_gate_checks_stops_before_transport (test_hosted_study.StudyRunnerTests.test_deadline_crossed_during_gate_checks_stops_before_transport) ... ok
+test_default_status_never_reads_environment_or_transport (test_hosted_study.StudyRunnerTests.test_default_status_never_reads_environment_or_transport) ... ok
+test_existing_study_lock_is_not_removed (test_hosted_study.StudyRunnerTests.test_existing_study_lock_is_not_removed) ... ok
+test_gate_reference_config_does_not_accept_key_fields (test_hosted_study.StudyRunnerTests.test_gate_reference_config_does_not_accept_key_fields) ... ok
+test_later_corrupt_request_is_caught_before_first_paid_call (test_hosted_study.StudyRunnerTests.test_later_corrupt_request_is_caught_before_first_paid_call) ... ok
+test_ledger_reuse_events_do_not_duplicate_charges (test_hosted_study.StudyRunnerTests.test_ledger_reuse_events_do_not_duplicate_charges) ... ok
+test_partial_resume_preserves_denominator_and_never_rebills_cache (test_hosted_study.StudyRunnerTests.test_partial_resume_preserves_denominator_and_never_rebills_cache) ... ok
+test_settled_missing_cache_never_resends (test_hosted_study.StudyRunnerTests.test_settled_missing_cache_never_resends) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 4.162s
+
+OK

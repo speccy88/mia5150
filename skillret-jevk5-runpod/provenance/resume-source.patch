@@ -1,0 +1,31 @@
+--- original/scripts/train.py
++++ resumed/scripts/train.py
+@@ -17,11 +17,16 @@
+         if sha256_file(path/name) != checksum: raise ValueError(f'Data hash mismatch: {name}')
+     return manifest
+ 
++def resolve_wall_seconds(cfg, override):
++    """Administrative time allowance is not a model/data/optimizer contract change."""
++    return cfg['training']['max_wall_seconds'] if override is None else override
++
+ def main():
+     p=argparse.ArgumentParser(description=__doc__)
+     p.add_argument('--data',type=Path,required=True); p.add_argument('--out',type=Path,required=True)
+     p.add_argument('--config',type=Path,required=True); p.add_argument('--resume',type=Path)
+     p.add_argument('--approve-gpu-run',action='store_true')
++    p.add_argument('--wall-seconds',type=int,help='Explicit administrative process allowance; leaves checkpoint contract unchanged')
+     args=p.parse_args()
+     if not args.approve_gpu_run: p.error('Set --approve-gpu-run only after agreeing the Pod budget and external teardown plan.')
+     if args.out.exists(): raise FileExistsError('Use a NEW output directory, even when resuming')
+@@ -31,7 +36,10 @@
+     args.out.mkdir(parents=True)
+     write_json(args.out/'config.json',cfg)
+     write_json(args.out/'data_manifest.json',dm)
+-    started=time.monotonic(); deadline=started+cfg['training']['max_wall_seconds']
++    wall_seconds=resolve_wall_seconds(cfg,args.wall_seconds)
++    if wall_seconds<=0: p.error('--wall-seconds must be positive')
++    write_json(args.out/'runtime_budget.json',{'wall_seconds':wall_seconds,'original_config_wall_seconds':cfg['training']['max_wall_seconds'],'override_requested':args.wall_seconds,'checkpoint_contract_changed':False})
++    started=time.monotonic(); deadline=started+wall_seconds
+     from skillret_decider.model import (torch, load_backbone, attach_lora, LetterReader, encode_example,
+         collate, soft_target_ce, predict, trainable_fingerprint)
+     seed=cfg['seed']; random.seed(seed); np.random.seed(seed); torch.manual_seed(seed); torch.cuda.manual_seed_all(seed)

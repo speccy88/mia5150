@@ -1,0 +1,9 @@
+{
+  "qwen-small-fixtures.json": "617a38bec2634ec1153fec02287e2241995a477894b1791d5734d0c27faa47f4",
+  "skillret_embed_06-pool-scores.npy": "57ad2fa5377e239e9734d53b4de4db49c8d352cfe687081c1f3e858ee32715fc",
+  "qwen-small-command.json": "8dd7e0ccfd99bf27cb86d8198457666c5e0c69c259ea6bca2ec00c5384c73a83",
+  "skillret-pilot.json": "6c8ee9c9d4da85d6caa39b997d878b64a1fd4608467926dfc2ddd88898fa13ee",
+  "qwen-small-summary.json": "e756330c7cdbdb443ad36199092b600ac9646dcdcd6ece70b84a032b3353f2fc",
+  "qwen-small-quality.json": "709f938d0cc1ae397ae63aad681ed879dde10ac268283afd152c194fab096f94",
+  "qwen_embed_06-pool-scores.npy": "bfaf5963545e0200ada5becc027e54c9821f238791fbd92bf5bd70148ef72390"
+}

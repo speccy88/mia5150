@@ -1,0 +1,458 @@
+{
+  "schema_version": "hosted-resource-audit-v1",
+  "generated_utc": "2026-10-07T03:04:57.075259+00:00",
+  "network_calls": 0,
+  "credentials_accessed": false,
+  "read_scope": [
+    "telemetry.jsonl",
+    "exit.json",
+    "guard-stop.json"
+  ],
+  "thresholds_from_resource_guard_py": {
+    "minimum_host_and_guest_available_gib": 2,
+    "maximum_gpu_used_mib": 7168,
+    "maximum_gpu_temperature_c": 80,
+    "host_cpu_threshold_pct": 80,
+    "host_cpu_guard_consecutive_samples": 5,
+    "host_telemetry_age_seconds": "0 <= age < 8 at sampling time",
+    "swap_guard": "Any counter change relative to the unlogged prelaunch sample"
+  },
+  "runs": [
+    {
+      "run_dir": "runs/09-hosted-smoke-20261007",
+      "run_name": "09-hosted-smoke-20261007",
+      "status": "supervisor_finished_with_failed_worker_exit",
+      "exit_receipt": {
+        "utc": 1791338571.498762,
+        "returncode": 2
+      },
+      "guard_stop_receipt": null,
+      "worker_returncode": 2,
+      "study_completion_verified": false,
+      "resource_evidence_status": "no_observed_threshold_violation",
+      "logged_telemetry": {
+        "samples": 4,
+        "threshold_violations": [],
+        "metrics": {
+          "first_sample_utc": 1791338568.103912,
+          "last_sample_utc": 1791338571.4052706,
+          "observed_span_seconds": 3.301358461380005,
+          "maximum_sample_gap_seconds": 1.1078541278839111,
+          "non_increasing_sample_intervals": 0,
+          "minimum_host_available_gib": 6.460178375244141,
+          "minimum_guest_available_gib": 4.8978271484375,
+          "maximum_gpu_used_mib": 0,
+          "maximum_gpu_temperature_c": 41,
+          "maximum_host_cpu_pct": 47,
+          "host_cpu_samples_above_80_pct": 0,
+          "maximum_consecutive_host_cpu_samples_above_80_pct": 0,
+          "host_telemetry_age_seconds_minimum": 0.8657662868499756,
+          "host_telemetry_age_seconds_maximum": 1.9611990451812744,
+          "host_telemetry_age_invalid_samples": 0,
+          "swap_counters": {
+            "pswpin": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            },
+            "pswpout": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            }
+          }
+        }
+      },
+      "embedded_failed_sample": null,
+      "extrema_including_recovered_failed_sample": null,
+      "unterminated_last_telemetry_line": false,
+      "data_quality_errors": [],
+      "artifacts": {
+        "exit.json": {
+          "path": "runs/09-hosted-smoke-20261007/exit.json",
+          "present": true,
+          "captured_bytes": 49,
+          "initial_bytes": 49,
+          "bytes_after_read": 49,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "90f508299915f925536425cf5b15b3b0b1a345151eac3aa4f202ca7eeec134a7"
+        },
+        "guard-stop.json": {
+          "path": "runs/09-hosted-smoke-20261007/guard-stop.json",
+          "present": false
+        },
+        "telemetry.jsonl": {
+          "path": "runs/09-hosted-smoke-20261007/telemetry.jsonl",
+          "present": true,
+          "captured_bytes": 1085,
+          "initial_bytes": 1085,
+          "bytes_after_read": 1085,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "adcbe0797a03fa5706f12d20ae409f184cc142f0be651fd30ad045e6dbd65eb1"
+        }
+      },
+      "interpretation": "Exit code belongs to the supervisor; without a guard-stop receipt it relays the worker code. With a guard stop, the worker's own exit code is unavailable. No study-completion claim is made. Extrema cover captured samples only. Prelaunch swap counters were not saved; observed deltas start at the first logged sample. Host age is measured at sample time, not at audit time. Five consecutive CPU samples are not necessarily five seconds. Missing exit means partial/unknown."
+    },
+    {
+      "run_dir": "runs/10-hosted-smoke-resume-rounded",
+      "run_name": "10-hosted-smoke-resume-rounded",
+      "status": "supervisor_finished_with_failed_worker_exit",
+      "exit_receipt": {
+        "utc": 1791339528.4250803,
+        "returncode": 2
+      },
+      "guard_stop_receipt": null,
+      "worker_returncode": 2,
+      "study_completion_verified": false,
+      "resource_evidence_status": "no_observed_threshold_violation",
+      "logged_telemetry": {
+        "samples": 15,
+        "threshold_violations": [],
+        "metrics": {
+          "first_sample_utc": 1791339512.6970162,
+          "last_sample_utc": 1791339528.3275843,
+          "observed_span_seconds": 15.630568027496338,
+          "maximum_sample_gap_seconds": 1.1700265407562256,
+          "non_increasing_sample_intervals": 0,
+          "minimum_host_available_gib": 5.733425140380859,
+          "minimum_guest_available_gib": 4.833221435546875,
+          "maximum_gpu_used_mib": 0,
+          "maximum_gpu_temperature_c": 41,
+          "maximum_host_cpu_pct": 50,
+          "host_cpu_samples_above_80_pct": 0,
+          "maximum_consecutive_host_cpu_samples_above_80_pct": 0,
+          "host_telemetry_age_seconds_minimum": 0.016309499740600586,
+          "host_telemetry_age_seconds_maximum": 2.068775177001953,
+          "host_telemetry_age_invalid_samples": 0,
+          "swap_counters": {
+            "pswpin": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            },
+            "pswpout": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            }
+          }
+        }
+      },
+      "embedded_failed_sample": null,
+      "extrema_including_recovered_failed_sample": null,
+      "unterminated_last_telemetry_line": false,
+      "data_quality_errors": [],
+      "artifacts": {
+        "exit.json": {
+          "path": "runs/10-hosted-smoke-resume-rounded/exit.json",
+          "present": true,
+          "captured_bytes": 50,
+          "initial_bytes": 50,
+          "bytes_after_read": 50,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "86e093cd2a0716aa57b9378f9265a141f50a00463dfc647c650efc4e7d5a2bba"
+        },
+        "guard-stop.json": {
+          "path": "runs/10-hosted-smoke-resume-rounded/guard-stop.json",
+          "present": false
+        },
+        "telemetry.jsonl": {
+          "path": "runs/10-hosted-smoke-resume-rounded/telemetry.jsonl",
+          "present": true,
+          "captured_bytes": 4075,
+          "initial_bytes": 4075,
+          "bytes_after_read": 4075,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "6295917e27ad18e74e78ff275b67c805ad24703f7ddb3282ba391b98851207f6"
+        }
+      },
+      "interpretation": "Exit code belongs to the supervisor; without a guard-stop receipt it relays the worker code. With a guard stop, the worker's own exit code is unavailable. No study-completion claim is made. Extrema cover captured samples only. Prelaunch swap counters were not saved; observed deltas start at the first logged sample. Host age is measured at sample time, not at audit time. Five consecutive CPU samples are not necessarily five seconds. Missing exit means partial/unknown."
+    },
+    {
+      "run_dir": "runs/11-hosted-smoke-native-fields",
+      "run_name": "11-hosted-smoke-native-fields",
+      "status": "supervisor_finished_with_zero_worker_exit",
+      "exit_receipt": {
+        "utc": 1791340091.8792143,
+        "returncode": 0
+      },
+      "guard_stop_receipt": null,
+      "worker_returncode": 0,
+      "study_completion_verified": false,
+      "resource_evidence_status": "no_observed_threshold_violation",
+      "logged_telemetry": {
+        "samples": 14,
+        "threshold_violations": [],
+        "metrics": {
+          "first_sample_utc": 1791340077.353166,
+          "last_sample_utc": 1791340091.787635,
+          "observed_span_seconds": 14.434468984603882,
+          "maximum_sample_gap_seconds": 1.170900821685791,
+          "non_increasing_sample_intervals": 0,
+          "minimum_host_available_gib": 4.524566650390625,
+          "minimum_guest_available_gib": 4.826435089111328,
+          "maximum_gpu_used_mib": 0,
+          "maximum_gpu_temperature_c": 41,
+          "maximum_host_cpu_pct": 48,
+          "host_cpu_samples_above_80_pct": 0,
+          "maximum_consecutive_host_cpu_samples_above_80_pct": 0,
+          "host_telemetry_age_seconds_minimum": 0.02986431121826172,
+          "host_telemetry_age_seconds_maximum": 2.054922580718994,
+          "host_telemetry_age_invalid_samples": 0,
+          "swap_counters": {
+            "pswpin": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            },
+            "pswpout": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            }
+          }
+        }
+      },
+      "embedded_failed_sample": null,
+      "extrema_including_recovered_failed_sample": null,
+      "unterminated_last_telemetry_line": false,
+      "data_quality_errors": [],
+      "artifacts": {
+        "exit.json": {
+          "path": "runs/11-hosted-smoke-native-fields/exit.json",
+          "present": true,
+          "captured_bytes": 50,
+          "initial_bytes": 50,
+          "bytes_after_read": 50,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "f76ce5dab2dd21f39a86838b8e7ed3a8b8732a95cdd4470ff14be33a03755bec"
+        },
+        "guard-stop.json": {
+          "path": "runs/11-hosted-smoke-native-fields/guard-stop.json",
+          "present": false
+        },
+        "telemetry.jsonl": {
+          "path": "runs/11-hosted-smoke-native-fields/telemetry.jsonl",
+          "present": true,
+          "captured_bytes": 3803,
+          "initial_bytes": 3803,
+          "bytes_after_read": 3803,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "faa551a98d1150212fa0e4cf4aff5616bb6d66bb68a480be8199010e53673398"
+        }
+      },
+      "interpretation": "Exit code belongs to the supervisor; without a guard-stop receipt it relays the worker code. With a guard stop, the worker's own exit code is unavailable. No study-completion claim is made. Extrema cover captured samples only. Prelaunch swap counters were not saved; observed deltas start at the first logged sample. Host age is measured at sample time, not at audit time. Five consecutive CPU samples are not necessarily five seconds. Missing exit means partial/unknown."
+    },
+    {
+      "run_dir": "runs/12-hosted-pilot-native-fields",
+      "run_name": "12-hosted-pilot-native-fields",
+      "status": "partial_or_unknown_no_exit_receipt",
+      "exit_receipt": null,
+      "guard_stop_receipt": null,
+      "worker_returncode": null,
+      "study_completion_verified": false,
+      "resource_evidence_status": "incomplete_evidence",
+      "logged_telemetry": {
+        "samples": 401,
+        "threshold_violations": [],
+        "metrics": {
+          "first_sample_utc": 1791340289.2994833,
+          "last_sample_utc": 1791340728.7767203,
+          "observed_span_seconds": 439.4772369861603,
+          "maximum_sample_gap_seconds": 1.3443551063537598,
+          "non_increasing_sample_intervals": 0,
+          "minimum_host_available_gib": 4.823284149169922,
+          "minimum_guest_available_gib": 4.797050476074219,
+          "maximum_gpu_used_mib": 0,
+          "maximum_gpu_temperature_c": 42,
+          "maximum_host_cpu_pct": 63,
+          "host_cpu_samples_above_80_pct": 0,
+          "maximum_consecutive_host_cpu_samples_above_80_pct": 0,
+          "host_telemetry_age_seconds_minimum": 0.014662981033325195,
+          "host_telemetry_age_seconds_maximum": 2.129159927368164,
+          "host_telemetry_age_invalid_samples": 0,
+          "swap_counters": {
+            "pswpin": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            },
+            "pswpout": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            }
+          }
+        }
+      },
+      "embedded_failed_sample": null,
+      "extrema_including_recovered_failed_sample": null,
+      "unterminated_last_telemetry_line": false,
+      "data_quality_errors": [],
+      "artifacts": {
+        "exit.json": {
+          "path": "runs/12-hosted-pilot-native-fields/exit.json",
+          "present": false
+        },
+        "guard-stop.json": {
+          "path": "runs/12-hosted-pilot-native-fields/guard-stop.json",
+          "present": false
+        },
+        "telemetry.jsonl": {
+          "path": "runs/12-hosted-pilot-native-fields/telemetry.jsonl",
+          "present": true,
+          "captured_bytes": 108914,
+          "initial_bytes": 108914,
+          "bytes_after_read": 108914,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "8fe239ccb0ed2f63aa0992bfb8b4676eb5db5812434a09a01d62483b474e1675"
+        }
+      },
+      "interpretation": "Exit code belongs to the supervisor; without a guard-stop receipt it relays the worker code. With a guard stop, the worker's own exit code is unavailable. No study-completion claim is made. Extrema cover captured samples only. Prelaunch swap counters were not saved; observed deltas start at the first logged sample. Host age is measured at sample time, not at audit time. Five consecutive CPU samples are not necessarily five seconds. Missing exit means partial/unknown."
+    },
+    {
+      "run_dir": "runs/13-hosted-pilot-reviewed-recovery",
+      "run_name": "13-hosted-pilot-reviewed-recovery",
+      "status": "supervisor_finished_with_zero_worker_exit",
+      "exit_receipt": {
+        "utc": 1791342211.4628184,
+        "returncode": 0
+      },
+      "guard_stop_receipt": null,
+      "worker_returncode": 0,
+      "study_completion_verified": false,
+      "resource_evidence_status": "no_observed_threshold_violation",
+      "logged_telemetry": {
+        "samples": 236,
+        "threshold_violations": [],
+        "metrics": {
+          "first_sample_utc": 1791341953.878036,
+          "last_sample_utc": 1791342211.372058,
+          "observed_span_seconds": 257.4940218925476,
+          "maximum_sample_gap_seconds": 1.1478753089904785,
+          "non_increasing_sample_intervals": 0,
+          "minimum_host_available_gib": 5.617076873779297,
+          "minimum_guest_available_gib": 4.811004638671875,
+          "maximum_gpu_used_mib": 0,
+          "maximum_gpu_temperature_c": 44,
+          "maximum_host_cpu_pct": 66,
+          "host_cpu_samples_above_80_pct": 0,
+          "maximum_consecutive_host_cpu_samples_above_80_pct": 0,
+          "host_telemetry_age_seconds_minimum": 0.011028528213500977,
+          "host_telemetry_age_seconds_maximum": 2.1407644748687744,
+          "host_telemetry_age_invalid_samples": 0,
+          "swap_counters": {
+            "pswpin": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            },
+            "pswpout": {
+              "first": 0,
+              "last": 0,
+              "minimum": 0,
+              "maximum": 0,
+              "net_change": 0,
+              "positive_increments": 0,
+              "counter_decreases": 0,
+              "changed_intervals": 0
+            }
+          }
+        }
+      },
+      "embedded_failed_sample": null,
+      "extrema_including_recovered_failed_sample": null,
+      "unterminated_last_telemetry_line": false,
+      "data_quality_errors": [],
+      "artifacts": {
+        "exit.json": {
+          "path": "runs/13-hosted-pilot-reviewed-recovery/exit.json",
+          "present": true,
+          "captured_bytes": 50,
+          "initial_bytes": 50,
+          "bytes_after_read": 50,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "8e5d593d42a7c38b963b404be7e9596d3f49b3867aad58495667fd4a18518af2"
+        },
+        "guard-stop.json": {
+          "path": "runs/13-hosted-pilot-reviewed-recovery/guard-stop.json",
+          "present": false
+        },
+        "telemetry.jsonl": {
+          "path": "runs/13-hosted-pilot-reviewed-recovery/telemetry.jsonl",
+          "present": true,
+          "captured_bytes": 64114,
+          "initial_bytes": 64114,
+          "bytes_after_read": 64114,
+          "changed_size_during_read": false,
+          "sha256_captured_bytes": "4a00ffce7835541a58b15cff0f6c4cdc906ee82458f627cb47d25fedc56a78d3"
+        }
+      },
+      "interpretation": "Exit code belongs to the supervisor; without a guard-stop receipt it relays the worker code. With a guard stop, the worker's own exit code is unavailable. No study-completion claim is made. Extrema cover captured samples only. Prelaunch swap counters were not saved; observed deltas start at the first logged sample. Host age is measured at sample time, not at audit time. Five consecutive CPU samples are not necessarily five seconds. Missing exit means partial/unknown."
+    }
+  ],
+  "summary": {
+    "attempts": 5,
+    "partial_or_unknown_attempts": [
+      "12-hosted-pilot-native-fields"
+    ],
+    "failed_supervisor_exits_preserved": [
+      {
+        "run_name": "09-hosted-smoke-20261007",
+        "returncode": 2
+      },
+      {
+        "run_name": "10-hosted-smoke-resume-rounded",
+        "returncode": 2
+      }
+    ],
+    "guard_stop_attempts": [],
+    "all_attempts_have_exit_receipts": false,
+    "study_completion_verified": false
+  }
+}

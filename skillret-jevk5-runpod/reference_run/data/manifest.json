@@ -1,0 +1,98 @@
+{
+  "dataset": {
+    "repository": "ThakiCloud/SKILLRET",
+    "revision": "a050ad233a504a43135bafe8cdf45574052b5729",
+    "requested_revision": "a050ad2",
+    "split": "train",
+    "counts": {
+      "skills": 10123,
+      "queries": 63259,
+      "qrels": 127190
+    },
+    "files": {
+      "skills": {
+        "upstream_path": "data/skills/train.jsonl",
+        "sha256": "b4978863f6c36c1d42af4a779f86b8e5809b4709c353aa698ec494e3ed663a2b"
+      },
+      "queries": {
+        "upstream_path": "data/queries/train.jsonl",
+        "sha256": "e1189e402c74d11ba57af3bbc60308cc4a9b51f29f2de265e541d0599067624c"
+      },
+      "qrels": {
+        "upstream_path": "data/qrels/train.jsonl",
+        "sha256": "7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1"
+      }
+    }
+  },
+  "config": {
+    "experiment": "skillret-jevk5-natural-top15-plus-none",
+    "seed": 42,
+    "validation_fraction": 0.1,
+    "train_limit": 2000,
+    "validation_limit": 256,
+    "candidates": 15,
+    "mining_top_k": 100,
+    "augmented_training_view": false,
+    "model": {
+      "id": "alibiserikbay/JevK5",
+      "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d"
+    },
+    "retriever": {
+      "id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "max_tokens": 512,
+      "batch_size": 16
+    },
+    "tokenization": {
+      "query_max_tokens": 256,
+      "option_max_tokens": 128,
+      "max_sequence_tokens": 3072
+    },
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05
+    },
+    "training": {
+      "learning_rate": 3e-05,
+      "weight_decay": 0.01,
+      "gradient_clip": 1.0,
+      "gradient_checkpointing": true,
+      "microbatch_size": 1,
+      "accumulation_steps": 16,
+      "epochs": 1,
+      "max_steps": 100,
+      "eval_every_steps": 50,
+      "save_every_steps": 50,
+      "eval_batch_size": 1,
+      "max_wall_seconds": 2700
+    },
+    "notes": "Proposed pilot, NOT GPU-validated. One new LoRA on already merged JevK5. Frozen categorical temperature=1; no public-benchmark score is a training target."
+  },
+  "config_sha256": "46a86ae91f672fdb34648c9b3b71d0039e26074c9a24f31c20e4a8a08c66ed0b",
+  "retriever": {
+    "id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "max_tokens": 512,
+    "batch_size": 16,
+    "representation": "name: description",
+    "normalize_embeddings": true,
+    "implementation": "SentenceTransformer.encode dense only; no query instruction",
+    "precision": "FP32",
+    "device": "cuda"
+  },
+  "groups": {
+    "train": 2000,
+    "validation": 256
+  },
+  "is_test": false,
+  "primary_candidates": "natural top-15; no gold injection",
+  "files": {
+    "validation_labels.json": "cba63fc4e2707391ddc462b934b102f000212e10384ec69b99e3d48d242d5b28",
+    "validation.jsonl": "1eda88ec773628041109ac67686e1aa23aff86f8766c8dbc9f90d9456a10cfdc",
+    "train.upstream.jsonl": "2eb819823f7383ef8d70689ab0d90ecf1c8d7a7178d0d9937b5f14507b487d08",
+    "train.jsonl": "0d112f5303c214b2af77490f33e4dc787cdb1f9ee34f4f6ce1610030d4ad2a11",
+    "retrieved_top100.jsonl": "2aec06297107b768274861cd8f8c452b332f842503173c77d4a13a3b33ec3bc1",
+    "split.json": "1599380dd4989ad826ef270c0da11457c63e24d2afa76c401e9bab7b947223cf"
+  }
+}

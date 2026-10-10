@@ -1,0 +1,16 @@
+{
+  "hard": {
+    "before_cap": 347,
+    "after_cap": 347,
+    "required_positive_pairs": 91,
+    "omitted_positive_pairs": 0,
+    "all_positives_preserved": true
+  },
+  "replay": {
+    "before_cap": 475,
+    "after_cap": 384,
+    "required_positive_pairs": 91,
+    "omitted_positive_pairs": 8,
+    "all_positives_preserved": false
+  }
+}

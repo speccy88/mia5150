@@ -1,0 +1,3 @@
+{"id": "sensitivity/0", "prompt": "SearchQuery", "wall_seconds": 0.5960127980000038, "cpu_seconds": 0.4829245000000011, "raw_tokens": 836, "used_tokens": 836, "truncated": false}
+{"id": "sensitivity/1", "prompt": "SearchQuery", "wall_seconds": 0.10123733399998969, "cpu_seconds": 0.10043229999999959, "raw_tokens": 836, "used_tokens": 836, "truncated": false}
+{"id": "sensitivity/2", "prompt": "SearchQuery", "wall_seconds": 0.0990314330000075, "cpu_seconds": 0.09909709999999983, "raw_tokens": 836, "used_tokens": 836, "truncated": false}

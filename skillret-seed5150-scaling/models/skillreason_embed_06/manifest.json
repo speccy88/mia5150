@@ -1,0 +1,46 @@
+{
+  "repository": "donghongjiang/SkillReason-embedding-0.6b",
+  "revision": "1ef1a664d60c1fb0951a13cceace57a07c877c17",
+  "files": {
+    "README.md": {
+      "bytes": 7965,
+      "sha256": "5c35474febcbffc92f909ff64d806048a74c61fd58576f4d56dbfd6c306cb352"
+    },
+    "added_tokens.json": {
+      "bytes": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    "config.json": {
+      "bytes": 728,
+      "sha256": "0f9290a5261942cb29ae8aea62ca4248bc78498f42d9f6b03cec523eae3dcf43"
+    },
+    "generation_config.json": {
+      "bytes": 117,
+      "sha256": "28396d421a2108acce96383f6a7de78008f7f1b17f807958f3c14c51dbfb65fb"
+    },
+    "merges.txt": {
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    "model.safetensors": {
+      "bytes": 1191588280,
+      "sha256": "d639543800f3587fc62f2bc3c55de09a5f3e404de8548e90e9ab098b98559585"
+    },
+    "special_tokens_map.json": {
+      "bytes": 613,
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+    },
+    "tokenizer.json": {
+      "bytes": 11423705,
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a"
+    },
+    "tokenizer_config.json": {
+      "bytes": 9706,
+      "sha256": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "hosted-client-offline-validation-v1",
+  "completed_at_utc": "2026-10-07T00:28:52.9171628Z",
+  "command": "/home/user/code/mia5150-local/.venv/bin/python -m unittest test_hosted_jev_client",
+  "tests_run": 22,
+  "passed": 22,
+  "failed": 0,
+  "duration_seconds": 14.035,
+  "transport": "mocked only",
+  "credential_access": "mocked environment only; no real environment credential read",
+  "live_network_calls": 0,
+  "actual_hosted_usage": null,
+  "paid_spend": "No paid actions in this validation",
+  "default_enabled": false,
+  "integration": "run_jev_rerank.py execute unchanged and blocked",
+  "source_sha256": {
+    "hosted_jev_client": "063f4713bedbde5c62b9f56d00b7f3775274b0a42879e85438338e39578cff25",
+    "tests": "01b15e67b08128daae43d0333e8ef3f31d9809fb43a92ddd5a55b334bc997a19",
+    "preparation_runner": "0e2133b4255a897e9d574cd019cffda1e452ccb88285982a548054d85f8368da",
+    "documentation": "508b5a8e123b4a7a527e9bdcf44625339e1fdd4828e7364b1da3c72fb81315b8"
+  },
+  "independent_review": {
+    "reviewer": "source_audit",
+    "mode": "offline read-only",
+    "reviewed_scope": [
+      "model-alias cache bridge",
+      "settlement/index ordering",
+      "candidate-question mapping"
+    ],
+    "outcome": "No remaining actionable duplicate-spend or provenance issue found in reviewed scope",
+    "earlier_findings_fixed": [
+      "alias-to-stable overlapping requests avoid duplicate paid calls",
+      "exact candidate/question IDs and dense-top20 partition checked before key access"
+    ],
+    "credentials_accessed": false,
+    "network_calls": 0
+  }
+}

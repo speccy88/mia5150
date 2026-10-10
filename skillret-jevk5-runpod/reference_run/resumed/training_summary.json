@@ -1,0 +1,8 @@
+{
+  "steps": 100,
+  "train_query_exposures": 1600,
+  "seconds": 1971.207598789595,
+  "peak_allocated_bytes": 9956569088,
+  "peak_reserved_bytes": 11133779968,
+  "budget_warning": "THIS PROCESS DOES NOT STOP POD BILLING. Export evidence and terminate the exact experiment Pod."
+}

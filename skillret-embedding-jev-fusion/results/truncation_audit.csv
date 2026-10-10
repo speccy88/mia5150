@@ -1,0 +1,3 @@
+skill_id,name,original_characters,original_tokens,encoded_tokens,discarded_tokens,policy,gold_queries
+0d0a628c-b671-4c4e-a326-a1534e199bbd,pytorch-fsdp,159369,36738,32768,3970,official 32768-token right truncation; raw full text retained,1
+ccf92465-f089-4b57-a3a6-09608a287911,architecture-docs,184363,49012,32768,16244,official 32768-token right truncation; raw full text retained,3

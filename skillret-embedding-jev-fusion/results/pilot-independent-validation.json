@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "pilot",
+  "recorded_at_utc": "2026-10-07T03:06:59.663779+00:00",
+  "receipt_policy": "New immutable record of independent read-only checks of actual completed pilot artifacts; inputs were not rewritten.",
+  "evaluation_path": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/results/hosted-pilot-native-field-evaluation/evaluation.json",
+  "evaluation_sha256": "17869b16ae550f5dde2b1a179155b039da0f297b3efd5426e4ce184f85c3495f",
+  "plan_sha256": "76d9c7bf55140fd9bd7e7bb90d4c9c091f6668e2730ca042f03af503fbcbdded",
+  "snapshot_invocation_id": "190d6ecb565541fe8f5525745a6bedea",
+  "checks": {
+    "selected_queries": 200,
+    "complete_queries_each_system": 200,
+    "same_fixed_candidates_per_query": 20,
+    "deterministic_sha256_query_selection": "passed",
+    "source_file_hashes": "passed",
+    "independently_recomputed_metrics_per_system": 17,
+    "metric_comparison_absolute_tolerance": 1e-12,
+    "native_score_confidence_dense_rank_order": "passed",
+    "exact_rational_equal_rrf60_order": "passed",
+    "independently_recomputed_bootstrap_intervals": 10,
+    "bootstrap_resamples_per_comparison": 10000,
+    "bootstrap_seed": 20261006,
+    "bootstrap_query_denominator": 200,
+    "raw_native_score_confidence_probability_records_verified": 4000,
+    "actual_model_versions": ["jev-1.13.0"],
+    "verified_unique_raw_response_hashes": 779,
+    "ledger_hash_chain_through_snapshot": "passed",
+    "held_allowance_added_once_in_projection": "passed",
+    "interrupted_timing_bounds_and_evidence_hashes": "passed"
+  },
+  "ndcg10": {
+    "A_matched_dense": 0.8301445269323504,
+    "B_jev": 0.6934124663427234,
+    "C_rrf60": 0.8145776036095659
+  },
+  "independently_verified_bootstrap": {
+    "B_minus_A": {
+      "NDCG@10": {"delta": -0.1367320605896271, "paired_percentile_95ci": [-0.17483163553299305, -0.09876835263797765]},
+      "Recall@5": {"delta": -0.08333333333333334, "paired_percentile_95ci": [-0.13, -0.03583333333333333]},
+      "Recall@10": {"delta": -0.015, "paired_percentile_95ci": [-0.045, 0.015833333333333335]},
+      "Completeness@5": {"delta": -0.08, "paired_percentile_95ci": [-0.14, -0.02]},
+      "MRR@5": {"delta": -0.19491666666666668, "paired_percentile_95ci": [-0.25125, -0.13958125000000005]}
+    },
+    "C_minus_A": {
+      "NDCG@10": {"delta": -0.015566923322784696, "paired_percentile_95ci": [-0.03771192965862581, 0.006696566362557088]},
+      "Recall@5": {"delta": 0.0075, "paired_percentile_95ci": [-0.015, 0.030833333333333334]},
+      "Recall@10": {"delta": 0.013333333333333332, "paired_percentile_95ci": [-0.005, 0.03333333333333333]},
+      "Completeness@5": {"delta": 0.02, "paired_percentile_95ci": [-0.015, 0.06]},
+      "MRR@5": {"delta": -0.03883333333333334, "paired_percentile_95ci": [-0.07566874999999999, -0.0020000000000000013]}
+    }
+  },
+  "response_validation": {
+    "policy": "native-fields-arithmetic-diagnostics-v1",
+    "native_values_preserved_in_all_4000_pairs": true,
+    "arithmetic_diagnostic_only_in_all_4000_pairs": true,
+    "pair_mode_counts": {"cent": 3659, "strict": 308, "inconsistent": 33},
+    "query_mode_set_counts": {"cent": 42, "cent+strict": 127, "cent+inconsistent+strict": 23, "cent+inconsistent": 8},
+    "queries_with_any_inconsistent_pair": 31
+  },
+  "truncation_groups": {
+    "queries_with_any_truncated_candidate": 96,
+    "queries_with_all_twenty_candidates_full_text": 104,
+    "truncated_candidate_pairs": 143,
+    "full_text_candidate_pairs": 3857,
+    "group_query_membership_verified_against_frozen_plan": true
+  },
+  "unique_ledger_at_pilot_snapshot": {
+    "head_sha256": "49e2214f29134e404010826d6cf36014ae724885f75b1d4efeda15d66933ee28",
+    "events": 2382,
+    "physical_attempt_reservations": 780,
+    "preserved_http_responses": 779,
+    "unique_settled_responses": 779,
+    "unresolved_attempts": 1,
+    "unresolved_attempt_ids": ["f340d90743f01aac474aed7d9135f15599da30e73aa1f6bb08fed1cf6eb746dd-1"],
+    "alias_cache_reuse_events": 40,
+    "observed_settled_usd": "0.403215288",
+    "observed_settled_cad_with_recorded_allowances": "0.78871934447460000",
+    "unknown_reserved_usd": "0.002752512",
+    "unknown_reserved_cad_with_recorded_allowances": "0.00538411991040000",
+    "observed_input_tokens": 9600364,
+    "observed_output_tokens": 61116,
+    "caveat": "The original attempt may have executed or been billed without a preserved response. Its held allowance is not observed spend or a zero-charge finding. The reviewed identical-request replacement can create one duplicate charge. Smoke and pilot logical totals overlap and must not be added. CAD is recorded valuation including allowances, not an asserted new card payment."
+  },
+  "timing_seconds": {
+    "pilot_invocation_wall_lower_bound": 709.6149024963379,
+    "pilot_invocation_wall_upper_bound": 1511.9616425037384,
+    "pilot_exact_invocation_wall": null,
+    "experiment_elapsed_including_gaps": 3640.502954006195,
+    "new_settled_api_elapsed_in_pilot_invocations": 261.204710483551,
+    "wall_minus_recorded_api_lower_bound": 448.41019201278687,
+    "wall_minus_recorded_api_upper_bound": 1250.7569320201874,
+    "invocations_without_final_receipt": 1,
+    "interrupted_invocation_id": "ad65d43ed3f74704a617d9fbc6843f21",
+    "last_saved_complete_queries_in_interrupted_invocation": 146,
+    "missing_final_verified": true,
+    "caveat": "No final or exit receipt was fabricated for the interrupted invocation. Bounds combine the actual last checkpoint/action with reviewed reboot evidence. Residual time can include unknown in-flight API work, so it is not measured pure local overhead. The original six-hour deadline remains anchored at the first ledger reservation."
+  },
+  "independently_verified_full_projection": {
+    "status": "descriptive_only_not_execution_authorization",
+    "target_queries": 4392,
+    "observed_pilot_queries": 200,
+    "projected_usd_including_unknown_hold_once": "8.85736023648",
+    "projected_cad_with_recorded_allowances_including_unknown_hold_once": "17.32566092457261600",
+    "projected_total_wall_seconds_lower_bound": 18514.031310329436,
+    "projected_total_wall_seconds_upper_bound": 35331.21898088455,
+    "cost_exceeds_existing_usd5_and_cad10_caps": true,
+    "runtime_upper_bound_exceeds_six_hours": true,
+    "caveat": "Linear extrapolation from observed settled pilot usage; the historical unknown hold is added once. These are planning bounds, not confidence intervals, guaranteed full-plan consumption or measured full-study results."
+  },
+  "verified_source_sha256": {
+    "pilot_stable_model_preparation_manifest.json": "daf0ee3b83f16f942a23696e6ab70ea6828607d7278e12960dfa2abfa31b7e6c",
+    "baseline_skillret_06b.json": "06af8037a9a606703cbd4e9dde821fc0375642b82d9032e7aea1c15512710301",
+    "official_test_qrels.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "snapshot_final.json": "9a0a550158c007ef18e533df531bb9264eb2f990693901a9a409c49a144b5a05",
+    "snapshot_dense_top20.json": "3a01e9098fd4b774afb6a741800094fb200d56a83dbd2f46019e881cbc0806e5",
+    "snapshot_jev_rerank.json": "8a7d01d4ef9f274fb695707f34e41fa7260e0fc628564469e134ea8c817ce313",
+    "snapshot_rrf60_fusion.json": "c81f285962827463a1c258c1510365acaeb9fca25cf9d030cf8bf96a3370e060",
+    "interrupted_last_checkpoint.json": "1691d91a7be56de5b87356ca292a24cd7b64060f3997a665b67ce5bc2af24616",
+    "recovery.json": "d7b8c2ddc6c4f619fa43a7294cb065e737bf373e1524ff75c0fe9ade8ff15835",
+    "reboot_proof.json": "0fd39e9914554246af84bdb2e86093ad065d14753fda00dfd41e44e508e8754b"
+  },
+  "caveats": [
+    "Jev NDCG@10 is lower than matched dense retrieval; the paired 95% interval excludes zero for this pilot.",
+    "RRF60 NDCG@10 is lower on average, with an interval that includes zero. Its MRR@5 interval is below zero; these multiple metric comparisons are not multiplicity-adjusted.",
+    "Native arithmetic inconsistencies are recorded rather than used to drop queries or overwrite provider values.",
+    "Truncated/full-text query groups are descriptive, not randomized causal comparisons.",
+    "The pilot completed all 200 selected queries, but one original reservation remains unresolved and no full-study completion is claimed."
+  ],
+  "network_calls_this_audit": 0,
+  "credentials_accessed": false,
+  "existing_results_modified": false
+}

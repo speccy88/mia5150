@@ -1,0 +1,18 @@
+{
+  "unit_tests": {
+    "command": ".venv/bin/python -m unittest discover -s scaling5150 -p test_*.py",
+    "observed_pass_count": 11,
+    "source": "Successful final test command before package creation"
+  },
+  "notebook_code_cells_executed": 2,
+  "notebook_metric_rows": 183,
+  "svg_xml_valid": true,
+  "svg_curves": 7,
+  "visual_browser_review": false,
+  "zip_text_files_secret_pattern_scanned": 1648,
+  "secret_pattern_matches": 0,
+  "library_cases_independently_verified": 120,
+  "full_retrieval_rows_verified": 2040,
+  "final_metric_cells": 183,
+  "scope": "Offline validation. Pattern scanning is not proof of absence of every possible secret; no credential paths were selected for packaging."
+}

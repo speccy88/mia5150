@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "bytes": 117606037,
+      "path": "data/raw/data/skills/test.jsonl",
+      "repository_path": "data/skills/test.jsonl",
+      "sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+      "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET/resolve/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/skills/test.jsonl"
+    },
+    {
+      "bytes": 6053507,
+      "path": "data/raw/data/queries/test.jsonl",
+      "repository_path": "data/queries/test.jsonl",
+      "sha256": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+      "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET/resolve/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/queries/test.jsonl"
+    },
+    {
+      "bytes": 661204,
+      "path": "data/raw/data/qrels/test.jsonl",
+      "repository_path": "data/qrels/test.jsonl",
+      "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+      "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET/resolve/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/qrels/test.jsonl"
+    },
+    {
+      "bytes": 5372,
+      "path": "data/raw/data/taxonomy.json",
+      "repository_path": "data/taxonomy.json",
+      "sha256": "8fb8e8e8eeb22b8781615d455350a1d9d03e7fe10ca26940993fc37b0cdacf48",
+      "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET/resolve/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/taxonomy.json"
+    },
+    {
+      "bytes": 10763,
+      "path": "data/raw/README.md",
+      "repository_path": "README.md",
+      "sha256": "f4a387d14dcfe53a1a2495d36bb5ee47c1208c2a5812d9440c63aa03aa55edb0",
+      "url": "https://huggingface.co/datasets/ThakiCloud/SKILLRET/resolve/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/README.md"
+    }
+  ],
+  "repository": "ThakiCloud/SKILLRET",
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12"
+}

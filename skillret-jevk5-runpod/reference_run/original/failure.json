@@ -1,0 +1,8 @@
+{
+  "type": "TimeoutError",
+  "message": "Training process limit reached; last complete checkpoint retained",
+  "step": 67,
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/SkillRet_JevK5_RunPod/scripts/train.py\", line 135, in main\n    if time.monotonic()>=deadline: raise TimeoutError('Training process limit reached; last complete checkpoint retained')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: Training process limit reached; last complete checkpoint retained\n",
+  "accepted_training": false,
+  "warning": "Pod may still be billing. Controller must export existing evidence then terminate it."
+}

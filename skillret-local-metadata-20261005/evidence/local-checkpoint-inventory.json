@@ -1,0 +1,166 @@
+{
+  "local_root": "/home/user/code/mia5150-local/checkpoints",
+  "files": {
+    "checkpoints/anchoring.json": {
+      "bytes": 408,
+      "sha256": "cc23fb6e10009a6f784e57202e894ace6aba9ee1387382049b59db76ff4bd99b",
+      "in_zip": true
+    },
+    "checkpoints/clean-hard-negative.json": {
+      "bytes": 477,
+      "sha256": "cbc80f6e300b2e11fb05610405e8365c353326a2ffee6f41576bcdb5d72c72fc",
+      "in_zip": true
+    },
+    "checkpoints/clean-label-smoothing.json": {
+      "bytes": 479,
+      "sha256": "e678ee1dcfdca37e7203da2609890127481fe51db515c15c1379b5de2d4eade2",
+      "in_zip": true
+    },
+    "checkpoints/hard-negative.json": {
+      "bytes": 478,
+      "sha256": "b80cfa10b62880862e36873e649be7047df718668cce630d953a01d2f367f0f1",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard/README.md": {
+      "bytes": 5264,
+      "sha256": "2b1052ec18b583ce1d34cbd1314487241a5dc21f43b43200c86482527c5a44b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard/adapter_config.json": {
+      "bytes": 1131,
+      "sha256": "c83ca33f43aed8c791cb0de7f25cbdb135f04c642efcff8b2c5edb853e1af232",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "ae31497552cef16287f859f58d1cb6b208e7e31f984036b0c9a40944c12f6c91",
+      "in_zip": false
+    },
+    "checkpoints/lora-hard/training.json": {
+      "bytes": 131,
+      "sha256": "ccbb599f6f93de4922cde20a9338f6bf3149f6e20ac3b1ecf51b379a67be6c87",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard-resume-smoke/README.md": {
+      "bytes": 5264,
+      "sha256": "2b1052ec18b583ce1d34cbd1314487241a5dc21f43b43200c86482527c5a44b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard-resume-smoke/adapter_config.json": {
+      "bytes": 1131,
+      "sha256": "c83ca33f43aed8c791cb0de7f25cbdb135f04c642efcff8b2c5edb853e1af232",
+      "in_zip": true
+    },
+    "checkpoints/lora-hard-resume-smoke/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "e02894422cd1d656bd8230b8edd8c58235b1c156f10f9aeee8aea566d05a6325",
+      "in_zip": false
+    },
+    "checkpoints/lora-hard-resume-smoke/resume.pt": {
+      "bytes": 4682627,
+      "sha256": "83b5940768c21744b8a7b916aa0e2a3b4d5efcabf711eecf640b4ace046f40fe",
+      "in_zip": false
+    },
+    "checkpoints/lora-hard-resume-smoke/verification.json": {
+      "bytes": 106,
+      "sha256": "143881eb60aff0ee64400126b3616143ed5efe25484fc15dde27d274eb1cd5b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay/README.md": {
+      "bytes": 5264,
+      "sha256": "2b1052ec18b583ce1d34cbd1314487241a5dc21f43b43200c86482527c5a44b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay/adapter_config.json": {
+      "bytes": 1131,
+      "sha256": "7f65c17c8cc64bccb6f5e3d44c462a4fe8620a7eec1dd6ea4afa3c67421af280",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "8865f09d8b207158059a6959f725dac209af502801d1b02d0e072037f35a087f",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay/training.json": {
+      "bytes": 131,
+      "sha256": "24b2f74d99a9dc827b327b3cef356ce0ba1ecc2000a84dc6a9a3be05d1069a0a",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-resume-smoke/README.md": {
+      "bytes": 5264,
+      "sha256": "2b1052ec18b583ce1d34cbd1314487241a5dc21f43b43200c86482527c5a44b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-resume-smoke/adapter_config.json": {
+      "bytes": 1131,
+      "sha256": "7f65c17c8cc64bccb6f5e3d44c462a4fe8620a7eec1dd6ea4afa3c67421af280",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-resume-smoke/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "01e1698888fa5b9fb2343f40a5e6d671bd6a360dcd420e9d810ec115ac2559ed",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-clean-resume-smoke/resume.pt": {
+      "bytes": 4682627,
+      "sha256": "ea97019272a837f98831f62f43f31f33e4e1edf8887ab15c3bd0438411447bc6",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-clean-resume-smoke/verification.json": {
+      "bytes": 106,
+      "sha256": "143881eb60aff0ee64400126b3616143ed5efe25484fc15dde27d274eb1cd5b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-sharded-step-63/README.md": {
+      "bytes": 5286,
+      "sha256": "3b163c383933c0931aa5ad8783fd3b2da0522c0176904b2d69184ea3d5e875f2",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-sharded-step-63/adapter_config.json": {
+      "bytes": 1142,
+      "sha256": "2cb075f9150b046d1da5b7ecd6a7d2d6f4af230ba9217b41a2b67f8219e6384f",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-clean-sharded-step-63/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "7e54417f300f7458adf61c35bb0582ee75bc6180ce9e3dcc2f72be7b299f060b",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-clean-sharded-step-63/resume.pt": {
+      "bytes": 4682627,
+      "sha256": "771d5275777a81cd1b3a5f7704a4815acbe3debf19fd80ec1ed5806b73f3ffde",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-resume-smoke/README.md": {
+      "bytes": 5264,
+      "sha256": "2b1052ec18b583ce1d34cbd1314487241a5dc21f43b43200c86482527c5a44b1",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-resume-smoke/adapter_config.json": {
+      "bytes": 1131,
+      "sha256": "7f65c17c8cc64bccb6f5e3d44c462a4fe8620a7eec1dd6ea4afa3c67421af280",
+      "in_zip": true
+    },
+    "checkpoints/lora-replay-resume-smoke/adapter_model.safetensors": {
+      "bytes": 2308432,
+      "sha256": "75a1299e5929fa97c91ab8d2fe3689ffc4e5ed4aa58ef47817f2599045f71a35",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-resume-smoke/resume.pt": {
+      "bytes": 4682627,
+      "sha256": "14f6c6c884507add2228f4583d5dc488407caf71644497b558f7ea88de038978",
+      "in_zip": false
+    },
+    "checkpoints/lora-replay-resume-smoke/verification.json": {
+      "bytes": 106,
+      "sha256": "143881eb60aff0ee64400126b3616143ed5efe25484fc15dde27d274eb1cd5b1",
+      "in_zip": true
+    },
+    "checkpoints/replay.json": {
+      "bytes": 477,
+      "sha256": "9537c36577067964d4e958763a21817840b75ab821c9631f2d3a91aa039cc628",
+      "in_zip": true
+    }
+  },
+  "weights_remain_local": true
+}

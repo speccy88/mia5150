@@ -1,0 +1,5 @@
+{
+  "status": "SYNTHETIC_SCHEMA_EXAMPLE_ONLY",
+  "real_models_executed": false,
+  "expected": "q-multi has two targets with probability .5; q-miss has target NONE=1; no IDs or answer fields are inserted in state."
+}

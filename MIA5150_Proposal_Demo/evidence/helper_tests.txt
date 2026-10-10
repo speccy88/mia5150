@@ -1,0 +1,37 @@
+test_all_code_cells_compile (test_notebook.NotebookTests.test_all_code_cells_compile) ... ok
+test_bad_args_rejected (test_notebook.NotebookTests.test_bad_args_rejected) ... ok
+test_bad_tool_name_rejected (test_notebook.NotebookTests.test_bad_tool_name_rejected) ... ok
+test_catalogue_bad_size (test_notebook.NotebookTests.test_catalogue_bad_size) ... ok
+test_catalogue_does_not_mutate_input (test_notebook.NotebookTests.test_catalogue_does_not_mutate_input) ... ok
+test_catalogue_reproducible (test_notebook.NotebookTests.test_catalogue_reproducible) ... ok
+test_catalogue_unknown_gold (test_notebook.NotebookTests.test_catalogue_unknown_gold) ... ok
+test_duplicate_aliases_rejected (test_notebook.NotebookTests.test_duplicate_aliases_rejected) ... ok
+test_empty_ranking (test_notebook.NotebookTests.test_empty_ranking) ... ok
+test_extras_penalize_precision (test_notebook.NotebookTests.test_extras_penalize_precision) ... ok
+test_nbformat_valid (test_notebook.NotebookTests.test_nbformat_valid) ... ok
+test_nested_library_membership (test_notebook.NotebookTests.test_nested_library_membership) ... ok
+test_no_custom_classes_in_notebook (test_notebook.NotebookTests.test_no_custom_classes_in_notebook) ... ok
+test_no_fabricated_executed_outputs (test_notebook.NotebookTests.test_no_fabricated_executed_outputs) ... ok
+test_no_selection (test_notebook.NotebookTests.test_no_selection) ... ok
+test_no_tool_and_many_tools_rejected (test_notebook.NotebookTests.test_no_tool_and_many_tools_rejected) ... ok
+test_pilot_ids_preserved (test_notebook.NotebookTests.test_pilot_ids_preserved) ... ok
+test_recall_cutoff (test_notebook.NotebookTests.test_recall_cutoff) ... ok
+test_recall_multiple_gold (test_notebook.NotebookTests.test_recall_multiple_gold) ... ok
+test_recall_rejects_duplicates (test_notebook.NotebookTests.test_recall_rejects_duplicates) ... ok
+test_recall_rejects_empty_gold (test_notebook.NotebookTests.test_recall_rejects_empty_gold) ... ok
+test_recall_rejects_nonpositive_k (test_notebook.NotebookTests.test_recall_rejects_nonpositive_k) ... ok
+test_required_native_prompt_slots (test_notebook.NotebookTests.test_required_native_prompt_slots) ... ok
+test_selection_f1_and_exact (test_notebook.NotebookTests.test_selection_f1_and_exact) ... ok
+test_selector_signature_has_no_gold (test_notebook.NotebookTests.test_selector_signature_has_no_gold) ... ok
+test_unknown_aliases_not_repaired (test_notebook.NotebookTests.test_unknown_aliases_not_repaired) ... ok
+test_unknown_usage_is_not_zero (test_notebook.NotebookTests.test_unknown_usage_is_not_zero) ... ok
+test_usage_includes_routing (test_notebook.NotebookTests.test_usage_includes_routing) ... ok
+test_valid_aliases (test_notebook.NotebookTests.test_valid_aliases) ... ok
+test_vector_empty_pool (test_notebook.NotebookTests.test_vector_empty_pool) ... ok
+test_vector_search_stays_in_library (test_notebook.NotebookTests.test_vector_search_stays_in_library) ... ok
+test_vector_ties_are_stable (test_notebook.NotebookTests.test_vector_ties_are_stable) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.028s
+
+OK

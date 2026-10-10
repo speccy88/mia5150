@@ -1,0 +1,15 @@
+bm25s
+datasets
+deepagents
+huggingface_hub
+langchain
+langchain_core
+langchain_ollama
+matplotlib
+nbformat
+numpy
+ollama
+pandas
+PyYAML
+sentence_transformers
+transformers

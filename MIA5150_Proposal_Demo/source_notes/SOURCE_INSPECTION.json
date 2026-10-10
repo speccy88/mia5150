@@ -1,0 +1,20 @@
+{
+  "source": "User-uploaded mia5150-main.zip",
+  "sha256": "2f228f93e373e75583759ed0788eff0a8d21259c8f47f732a8b9875d2643f05d",
+  "read_only": true,
+  "repository_code_executed": false,
+  "inspected_files": [
+    "mia5150-main/skillret-pilot/pilot.py",
+    "mia5150-main/skillret-pilot/reference_metrics.py",
+    "mia5150-main/skillret-pilot/agent_runner.py",
+    "mia5150-main/skillret-pilot/local_runner.py",
+    "mia5150-main/skillret-pilot/pilot.defaults.json",
+    "mia5150-main/skillret-pilot/requirements.in",
+    "mia5150-main/skillret-pilot/requirements.lock.txt",
+    "mia5150-main/skillret-pilot/prompts/native_skills_template.txt",
+    "mia5150-main/skillret-pilot/manifests/dataset.json",
+    "mia5150-main/skillret-pilot/manifests/pilot_query_ids.json",
+    "mia5150-main/skillret-pilot/manifests/embedding.json"
+  ],
+  "purpose": "Create a separate simplified teaching notebook, not modify or reproduce all of the production harness."
+}

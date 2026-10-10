@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "planning_only": true,
+  "research_date": "2026-10-05",
+  "workspace_path": null,
+  "allow_paid_calls": false,
+  "allow_pod_creation": false,
+  "allow_training": false,
+  "approved_budget_cad": null,
+  "approved_gpu_hours": null,
+  "approved_disk_gb": null,
+  "stop_on_unresolved_revision": true,
+  "development_query_count_proposed": 500,
+  "larger_development_count_proposed": 1500,
+  "expensive_api_test_count_proposed": 2000,
+  "official_expected_counts": {
+    "test_skills": 6006,
+    "test_queries": 4392,
+    "test_qrels": 7187,
+    "train_skills": 10123,
+    "train_queries": 63259,
+    "train_qrels": 127190
+  },
+  "library_sizes": [
+    10,
+    100,
+    1000,
+    6006
+  ],
+  "candidate_k": [
+    20,
+    50,
+    100
+  ],
+  "official_metric_k": [
+    5,
+    10,
+    15
+  ],
+  "proposal_extra_metric": "MRR@5",
+  "primary_metric_proposed": "NDCG@10",
+  "safeguard_metric": "Completeness@10",
+  "phases": [
+    {
+      "id": "J00",
+      "title": "Audit and freeze",
+      "depends_on": [],
+      "prompt": "CODEX/00_AUDIT_AND_FREEZE.md",
+      "priority": "P0",
+      "paper_ids": [
+        "S01",
+        "S20"
+      ],
+      "model_ids": [
+        "bm25"
+      ],
+      "acceptance": "Manifest, exposure policy, metric test plan and measured-preflight request; no paid calls."
+    },
+    {
+      "id": "J01",
+      "title": "Baseline reproduction",
+      "depends_on": [
+        "J00"
+      ],
+      "prompt": "CODEX/01_BASELINES.md",
+      "priority": "P0",
+      "paper_ids": [
+        "S01",
+        "I05"
+      ],
+      "model_ids": [
+        "bm25",
+        "qwen_embed_06",
+        "skillret_embed_06",
+        "qwen_embed_8",
+        "skillret_embed_8",
+        "skillret_rerank_06"
+      ],
+      "acceptance": "Official and proposal baselines reproduced or discrepancies explained."
+    },
+    {
+      "id": "J02",
+      "title": "Candidate complementarity",
+      "depends_on": [
+        "J01"
+      ],
+      "prompt": "CODEX/02_CANDIDATE_RETRIEVAL.md",
+      "priority": "P1",
+      "paper_ids": [
+        "S09",
+        "S10",
+        "S11",
+        "I01",
+        "I02",
+        "I03",
+        "T02",
+        "T05",
+        "S02",
+        "S37"
+      ],
+      "model_ids": [
+        "bm25",
+        "skillret_embed_06",
+        "skillret_embed_8",
+        "harrier_complement",
+        "skillrouter_embed_06",
+        "skillreason_embed_06"
+      ],
+      "acceptance": "At most two candidate generators selected on permitted development data."
+    },
+    {
+      "id": "J03",
+      "title": "Common-pool reranking",
+      "depends_on": [
+        "J01"
+      ],
+      "prompt": "CODEX/03_COMMON_POOL_RERANKERS.md",
+      "priority": "P1",
+      "paper_ids": [
+        "S01",
+        "I06",
+        "I07",
+        "I12",
+        "S02",
+        "S07",
+        "S37"
+      ],
+      "model_ids": [
+        "skillret_rerank_06",
+        "qwen_rerank_8",
+        "jina_rerank_35",
+        "jevk5",
+        "plumb",
+        "jev_api",
+        "luna_selector",
+        "sol_selector",
+        "skillrouter_rerank_06",
+        "r3_rerank_06",
+        "skillreason_rerank_06"
+      ],
+      "acceptance": "At most two rerankers promoted with quality, validity, latency and cost evidence."
+    },
+    {
+      "id": "J04",
+      "title": "Structure and adaptive selection",
+      "depends_on": [
+        "J02",
+        "J03"
+      ],
+      "prompt": "CODEX/04_STRUCTURAL_METHODS.md",
+      "priority": "P1",
+      "paper_ids": [
+        "S04",
+        "S07",
+        "S12",
+        "S16",
+        "S18",
+        "S19"
+      ],
+      "model_ids": [
+        "skillret_rerank_06",
+        "jev_api",
+        "sol_selector"
+      ],
+      "acceptance": "One-at-a-time ablations identify useful diversity/routing/escalation components."
+    },
+    {
+      "id": "J05",
+      "title": "Targeted adaptation",
+      "depends_on": [
+        "J03"
+      ],
+      "prompt": "CODEX/05_HARD_NEGATIVE_ADAPTATION.md",
+      "priority": "P2",
+      "paper_ids": [
+        "S01",
+        "S13",
+        "I08",
+        "S37"
+      ],
+      "model_ids": [
+        "skillret_rerank_06",
+        "jevk5",
+        "plumb",
+        "skillreason_rerank_06"
+      ],
+      "acceptance": "Adaptation decision justified by error analysis; controls and transfer checks retained."
+    },
+    {
+      "id": "J06",
+      "title": "Locked evaluation and reporting",
+      "depends_on": [
+        "J04"
+      ],
+      "prompt": "CODEX/06_CONFIRMATORY_EVAL.md",
+      "priority": "P0",
+      "paper_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S22",
+        "S24",
+        "S37",
+        "S07"
+      ],
+      "model_ids": [
+        "skillret_embed_8",
+        "skillret_rerank_06"
+      ],
+      "acceptance": "Frozen finalists, paired official/public and independent confirmation scores, scaling curves and reproduction archive."
+    }
+  ]
+}

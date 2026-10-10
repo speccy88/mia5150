@@ -1,0 +1,6 @@
+Both `device` and `model_kwargs['device_map']` were provided. `device_map` controls device placement, so the `device` argument is ignored.
+Loading weights:   0%|          | 0/413 [00:00<?, ?it/s]Loading weights:   0%|          | 1/413 [00:00<06:12,  1.11it/s]Loading weights: 100%|██████████| 413/413 [00:00<00:00, 447.41it/s]
+SMOKE_PASS
+SMALL_COMPLETE
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (836 > 512). Running this sequence through the model will result in indexing errors
+PILOT_COMPLETE

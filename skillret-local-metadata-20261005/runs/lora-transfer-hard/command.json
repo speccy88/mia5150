@@ -1,0 +1,1 @@
+["env", "MIA_LORA_BASE_ROLE=skillret_rerank_06_fp16_local", "/home/user/code/mia5150-local/.venv/bin/python", "lora_transfer.py", "hard"]

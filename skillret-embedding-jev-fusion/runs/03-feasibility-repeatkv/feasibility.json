@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "document_indices": [
+    5150,
+    607,
+    3838
+  ],
+  "raw_tokens": [
+    49012,
+    36738,
+    28114
+  ],
+  "max_length": 32768,
+  "startup_seconds": 2.2990409479999983,
+  "documents_cached": 3,
+  "peak_allocated_mib": 1997.24267578125,
+  "peak_reserved_mib": 2442.0
+}

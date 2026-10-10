@@ -1,0 +1,10 @@
+[
+  "/home/user/code/embeddinggemma2-pilot/overlay/torchvision.libs/libcudart.e8e8b82a.so.12",
+  "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/nvidia/cublas/lib/libcublas.so.12",
+  "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+  "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+  "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+  "/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so",
+  "/usr/lib/wsl/drivers/nv_dispig.inf_amd64_cc526ccc3287f5cd/libcuda.so.1.1",
+  "/usr/lib/wsl/lib/libcuda.so.1"
+]

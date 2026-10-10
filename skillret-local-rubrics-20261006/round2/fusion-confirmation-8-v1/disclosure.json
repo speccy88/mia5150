@@ -1,0 +1,18 @@
+{
+  "model": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "approved_public_fields": [
+    "query",
+    "candidate.name",
+    "candidate.description"
+  ],
+  "max_calls": 8,
+  "max_input_tokens": 512000,
+  "rate_usd_per_million": "0.042",
+  "price_source": "https://docs.typesafe.ai/models",
+  "price_verified_utc_date": "2026-10-06",
+  "usage_bound_usd": "0.021504",
+  "reserved_usd": "0.10",
+  "authorization": "User resumed bounded research 2026-10-06 01:01UTC, delegated ONE next small frozen probe with maxUSD0.10 additional. Supersedes previous review pause for this run only. No topup or other provider.",
+  "requests_sha256": "ca69f3e957d41f540a627446388818102dfbda83e2663140c0021706e2bd4160"
+}

@@ -1,0 +1,74 @@
+{
+  "method": "listing",
+  "model": "gpt-4o-mini",
+  "num_queries": 10,
+  "seed": 42,
+  "library_sizes": [
+    25,
+    50,
+    100,
+    200,
+    400,
+    800,
+    1200,
+    1800
+  ],
+  "summary": [
+    {
+      "library_size": 25,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 1.4521000000000002,
+      "errors": 0
+    },
+    {
+      "library_size": 50,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 1.0929,
+      "errors": 0
+    },
+    {
+      "library_size": 100,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 1.3685,
+      "errors": 0
+    },
+    {
+      "library_size": 200,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 1.5129,
+      "errors": 0
+    },
+    {
+      "library_size": 400,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 7.5908,
+      "errors": 0
+    },
+    {
+      "library_size": 800,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 15.569999999999999,
+      "errors": 0
+    },
+    {
+      "library_size": 1200,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 23.1339,
+      "errors": 0
+    },
+    {
+      "library_size": 1800,
+      "exact_match": 0.0,
+      "fuzzy_match": 0.0,
+      "avg_latency": 0.1765,
+      "errors": 10
+    }
+  ]
+}

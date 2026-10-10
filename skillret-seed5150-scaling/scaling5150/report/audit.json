@@ -1,0 +1,103 @@
+{
+  "audits": [
+    {
+      "retrieval_rows_verified": 2040,
+      "shared_library_membership": true,
+      "gold_never_inserted_into_rankings_by_evaluator": true
+    }
+  ],
+  "statuses": [
+    {
+      "role": "small_qwen06",
+      "artifact": "selection-small_qwen06-full",
+      "status_counts": {
+        "ok": 39,
+        "empty_or_invalid_domain": 12,
+        "invalid_selection": 3,
+        "context_overflow": 6
+      }
+    },
+    {
+      "role": "medium_qwen35",
+      "artifact": "selection-medium_qwen35-full",
+      "status_counts": {
+        "ok": 39,
+        "empty_or_invalid_domain": 12,
+        "context_overflow": 6,
+        "invalid_selection": 3
+      }
+    },
+    {
+      "role": "small_qwen06",
+      "artifact": "domain-constrained-small_qwen06",
+      "status_counts": {
+        "ok": 11,
+        "invalid_selection": 1
+      }
+    },
+    {
+      "role": "medium_qwen35",
+      "artifact": "domain-constrained-medium_qwen35",
+      "status_counts": {
+        "ok": 12
+      }
+    },
+    {
+      "role": "small_skillret",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "role": "medium_jevk5",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "role": "fit_qwen8",
+      "status_counts": {
+        "failed": 1,
+        "not_attempted": 5
+      }
+    }
+  ],
+  "independent_library_audit": {
+    "library_cases_verified_independently": 120,
+    "qrels_total": 7187,
+    "queries_with_qrels": 4392,
+    "max_gold": 3,
+    "all_known_official_positives_in_every_library": true,
+    "nested_sets": true,
+    "unique_ids": true,
+    "label_independent_display_order": true,
+    "hand_metric_tests_passed": true,
+    "official_hand_metrics": {
+      "NDCG@5": 0.37259,
+      "NDCG@10": 0.46164,
+      "NDCG@15": 0.46164,
+      "MAP@5": 0.3125,
+      "MAP@10": 0.35417,
+      "MAP@15": 0.35417,
+      "Recall@5": 0.375,
+      "Recall@10": 0.625,
+      "Recall@15": 0.625,
+      "Precision@5": 0.15,
+      "Precision@10": 0.1,
+      "Precision@15": 0.06667,
+      "Completeness@5": 0.25,
+      "Completeness@10": 0.5,
+      "Completeness@15": 0.5
+    },
+    "fixed_query_denominator": 4,
+    "gold_semantics": "Completeness means all pinned official positives preserved; does not assert all semantically valid alternatives were exhaustively judged.",
+    "untouched_confirmation_used": false,
+    "source_hash_checks": {
+      "skills/test.jsonl": true,
+      "queries/test.jsonl": true,
+      "qrels/test.jsonl": true
+    }
+  },
+  "new_paid_calls": 0,
+  "new_downloads": 0
+}

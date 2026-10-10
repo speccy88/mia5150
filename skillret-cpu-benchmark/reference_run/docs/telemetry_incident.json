@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-10-02T10:56:55.876229+00:00",
+  "runtime": "onnxruntime1.30.0",
+  "incident": "An external Microsoft telemetry connection was blocked during the incomplete Verdict48 stage; payload unknown. Model execution was not retried.",
+  "static_evidence": {
+    "installed_privacy_md_sha256": "9703b86132bbe407a7138f9a45689e6996a8ab0ac670529d3699ce753f67538e",
+    "preinitialization_optout_documented": "ORT_DISABLE_TELEMETRY=1",
+    "native_binary_literal_confirmed": true
+  },
+  "important_limit": "This is a statically verified prospective setting. It was not used in the recorded measurements and was not runtime-tested after the block.",
+  "official_source": "https://github.com/microsoft/onnxruntime/releases/tag/v1.29.0"
+}

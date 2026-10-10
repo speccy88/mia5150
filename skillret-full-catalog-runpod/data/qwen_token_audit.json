@@ -1,0 +1,26 @@
+{
+  "train_skills": {
+    "count": 10123,
+    "tokens": 473822,
+    "max": 594,
+    "over_2048": 0
+  },
+  "train_queries": {
+    "count": 63259,
+    "tokens": 5838767,
+    "max": 287,
+    "over_2048": 0
+  },
+  "test_skills": {
+    "count": 6006,
+    "tokens": 282659,
+    "max": 517,
+    "over_2048": 0
+  },
+  "test_queries": {
+    "count": 4392,
+    "tokens": 1040189,
+    "max": 842,
+    "over_2048": 0
+  }
+}

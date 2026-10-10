@@ -1,0 +1,37 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:   0%|          | 1/320 [00:04<24:35,  4.62s/it]Loading weights:  54%|█████▍    | 173/320 [00:04<00:02, 51.59it/s]Loading weights:  83%|████████▎ | 265/320 [00:05<00:00, 60.90it/s]Loading weights: 100%|█████████▉| 319/320 [00:06<00:00, 62.26it/s]Loading weights: 100%|██████████| 320/320 [00:06<00:00, 47.75it/s]
+{"utc": 1791329762.9490476, "event": "model_loaded", "seconds": 8.306048028, "trainable": 10822656, "total": 763215680}
+/home/user/code/mia5150-local/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in Qwen/Qwen3.5-0.8B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{"utc": 1791329763.4360533, "event": "released_adapter_verified"}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{"utc": 1791329773.9957652, "event": "evaluation_progress", "tag": "baseline", "completed": 10, "total": 60}
+{"utc": 1791329776.487374, "event": "evaluation_progress", "tag": "baseline", "completed": 20, "total": 60}
+{"utc": 1791329779.0840197, "event": "evaluation_progress", "tag": "baseline", "completed": 30, "total": 60}
+{"utc": 1791329781.6759439, "event": "evaluation_progress", "tag": "baseline", "completed": 40, "total": 60}
+{"utc": 1791329784.558593, "event": "evaluation_progress", "tag": "baseline", "completed": 50, "total": 60}
+{"utc": 1791329787.2197323, "event": "evaluation_progress", "tag": "baseline", "completed": 60, "total": 60}
+{"utc": 1791329787.227871, "event": "evaluation_complete", "tag": "baseline", "loss": 0.7307249438638489, "ce": 0.5525375290463368, "brier": 0.3563748412920783, "examples": 60, "accuracy": 0.7666666666666667, "auc": 0.8122222222222222, "seconds": 17.648601913}
+{"utc": 1791329789.3201752, "event": "microbatch", "update": 1, "microbatch": 1, "loss": 0.2238379716873169}
+{"utc": 1791329790.7467139, "event": "microbatch", "update": 1, "microbatch": 2, "loss": 0.15044312179088593}
+{"utc": 1791329791.790921, "event": "microbatch", "update": 1, "microbatch": 3, "loss": 0.08739107102155685}
+{"utc": 1791329793.0306432, "event": "microbatch", "update": 1, "microbatch": 4, "loss": 0.06454148143529892}
+{"utc": 1791329794.3902824, "event": "microbatch", "update": 1, "microbatch": 5, "loss": 0.0677018016576767}
+{"utc": 1791329795.586363, "event": "microbatch", "update": 1, "microbatch": 6, "loss": 1.9760468006134033}
+{"utc": 1791329797.02057, "event": "microbatch", "update": 1, "microbatch": 7, "loss": 0.17643769085407257}
+{"utc": 1791329798.4716399, "event": "microbatch", "update": 1, "microbatch": 8, "loss": 0.27460360527038574}
+{"utc": 1791329799.2568223, "event": "optimizer_update", "update": 1, "mean_loss": 0.3776254430413246, "gradient_norm_before_clip": 13.689573287963867, "gradients_finite": true, "scale": 128.0, "seconds": 11.839655012000001, "changed_adapter_tensors": 372}
+{"utc": 1791329800.904956, "event": "microbatch", "update": 2, "microbatch": 1, "loss": 0.11466635018587112}
+{"utc": 1791329802.416196, "event": "microbatch", "update": 2, "microbatch": 2, "loss": 0.4158634543418884}
+{"utc": 1791329803.506654, "event": "microbatch", "update": 2, "microbatch": 3, "loss": 0.057734109461307526}
+{"utc": 1791329804.7271168, "event": "microbatch", "update": 2, "microbatch": 4, "loss": 0.09315666556358337}
+{"utc": 1791329805.8580725, "event": "microbatch", "update": 2, "microbatch": 5, "loss": 0.1324024796485901}
+{"utc": 1791329807.3639064, "event": "microbatch", "update": 2, "microbatch": 6, "loss": 0.4686015546321869}
+{"utc": 1791329808.7134707, "event": "microbatch", "update": 2, "microbatch": 7, "loss": 0.16293129324913025}
+{"utc": 1791329809.75871, "event": "microbatch", "update": 2, "microbatch": 8, "loss": 0.0677018016576767}
+{"utc": 1791329810.3475802, "event": "optimizer_update", "update": 2, "mean_loss": 0.1891322135925293, "gradient_norm_before_clip": 8.18789291381836, "gradients_finite": true, "scale": 128.0, "seconds": 10.897210720999993, "changed_adapter_tensors": 372}
+Traceback (most recent call last):
+  File "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/pilot20.py", line 51, in <module>
+    assert exact_match,'two-update checkpoint differs from independently reloaded smoke checkpoint'
+           ^^^^^^^^^^^
+AssertionError: two-update checkpoint differs from independently reloaded smoke checkpoint

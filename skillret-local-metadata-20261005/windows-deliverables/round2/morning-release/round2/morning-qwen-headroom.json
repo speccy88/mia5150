@@ -1,0 +1,22 @@
+{
+  "sample": {
+    "time": 1791253625.1941657,
+    "host": {
+      "available_bytes": 5380653056,
+      "utc": 1791253624.795,
+      "total_bytes": 16943194112,
+      "cpu_percent": 49.479166666666664
+    },
+    "guest_available": 5192556544,
+    "swap": {
+      "pswpin": 158,
+      "pswpout": 2400
+    },
+    "gpu_free_mib": 8006,
+    "gpu_temp": 45,
+    "gpu_utilization": 0
+  },
+  "threshold_host_bytes": 5368709120,
+  "ready": true,
+  "cache_hint_scope": "Completed/stopped JevK5 and Plumb model files only"
+}

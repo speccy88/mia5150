@@ -1,0 +1,11 @@
+{
+  "compiled_python_files": 6217,
+  "parsed_json_notebook_jsonl_files": 1334,
+  "parsed_jsonl_rows": 248463,
+  "errors": [],
+  "credential_pattern_matches": [],
+  "forbidden_credential_files": [],
+  "manifest_files": 7954,
+  "total_bytes": 662508626,
+  "method": "single-pass offline parsing, syntax compilation, SHA256 and structured credential-pattern scan; no models/network/API calls"
+}

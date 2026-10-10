@@ -1,0 +1,82 @@
+[
+  {
+    "bytes": 52,
+    "sha256": "5674aa2a2adfce0c08ec5371a8cbba0f62af1e13fd7e9e557afb2aa66ad18cfb",
+    "path": "command.json"
+  },
+  {
+    "bytes": 17,
+    "sha256": "c365161d39236fe0f1d32937fbc549796b8487d8faf65ed3879b96897c78ea5d",
+    "path": "exit.json"
+  },
+  {
+    "bytes": 6953,
+    "sha256": "efbb86dbfb3a289541dea4afc817ab845d63c31c6937b0e2ceaf529eb6df63fc",
+    "path": "HYBRID_POOL_RESULTS.md"
+  },
+  {
+    "bytes": 9496,
+    "sha256": "5d0e97ee3ac3cfafb0c41f4df0302c518301fc6a1f3f944da7f2b1a18b1d70ba",
+    "path": "hybrid_pool_screen.py"
+  },
+  {
+    "bytes": 35259,
+    "sha256": "26512cef60784ed84d572e726b3870f8f17c2757774dd3bda9380c9ab0affe5e",
+    "path": "hybrid-pool-plan.json"
+  },
+  {
+    "bytes": 450997,
+    "sha256": "5f92aff01842fb4ba875f69efa342231140f5299765b9ba0cce419314eff2a80",
+    "path": "prepared-hybrid-pool.json"
+  },
+  {
+    "bytes": 7984,
+    "sha256": "be6ea6e2f12c784b805914dcc80891ca312844b0484bfcb7bf579fb9bbcdd4e6",
+    "path": "report_hybrid_pool.py"
+  },
+  {
+    "bytes": 5378,
+    "sha256": "da34ef152deb80d4d10d1b9dd4e3672b7c53f9b095d7d6a95488275fd69a2fff",
+    "path": "score_hybrid_pool.py"
+  },
+  {
+    "bytes": 262,
+    "sha256": "19ef8317777726c84e3bc0e09dea45e6a89f815110147585a6e7e78247ba2118",
+    "path": "secret-scan.json"
+  },
+  {
+    "bytes": 3510,
+    "sha256": "6024be7d96986a116a07697caf3e88b0794225dab30a79dc610e0102f8c72c07",
+    "path": "telemetry.jsonl"
+  },
+  {
+    "bytes": 589,
+    "sha256": "e4e22000c1b44b22a66a14086db4222e261d62acefa348e55b5eea1e4246d3fd",
+    "path": "test_hybrid_pool_screen.py"
+  },
+  {
+    "bytes": 276,
+    "sha256": "8ff83b2ab055c55943e962089a0e6f321765adf183fd4cf02005f599a98c0e16",
+    "path": "worker.log"
+  },
+  {
+    "bytes": 373,
+    "sha256": "0319549103c2c03d4e2d94f52e0dfb19be7ee2462b40698f4fa0a8dc82a0def0",
+    "path": "hybrid-pool-8-v1\\disclosure.json"
+  },
+  {
+    "bytes": 74622,
+    "sha256": "8aa49a30d07c327603216ed25a4f80c6cd87e3a8a9eda349f2a84d16890ac078",
+    "path": "hybrid-pool-8-v1\\evaluation.json"
+  },
+  {
+    "bytes": 2086,
+    "sha256": "01b7300c9a5622ed25cbe1aebfb77e83760abd5bbf24fb36ec7502b66b220691",
+    "path": "hybrid-pool-8-v1\\per-query.csv"
+  },
+  {
+    "bytes": 62452,
+    "sha256": "218fbb18369f8cd6b7638136267059ba0f11e0719323e3b9b5c3d63816a2ec00",
+    "path": "hybrid-pool-8-v1\\results.json"
+  }
+]

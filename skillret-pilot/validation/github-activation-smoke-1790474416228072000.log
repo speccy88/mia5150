@@ -1,0 +1,11 @@
+{
+  "tasks": 5,
+  "native_reads": 5,
+  "statuses": [
+    "valid",
+    "valid",
+    "valid",
+    "valid",
+    "valid"
+  ]
+}

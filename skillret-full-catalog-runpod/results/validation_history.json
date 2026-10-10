@@ -1,0 +1,99 @@
+[
+  {
+    "epoch": 0,
+    "recall_at_5": 0.04932107571194589,
+    "mrr": 0.05577228220609756,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 1,
+    "loss_mean": 5.0508289786197675,
+    "train_seconds": 22.538072790950537,
+    "recall_at_5": 0.17530511967031226,
+    "mrr": 0.20057854801187952,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 2,
+    "loss_mean": 4.479629116742601,
+    "train_seconds": 23.740085173398256,
+    "recall_at_5": 0.2108099540339198,
+    "mrr": 0.2458479984926442,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 3,
+    "loss_mean": 4.313289672269949,
+    "train_seconds": 22.717058293521404,
+    "recall_at_5": 0.23138902097532624,
+    "mrr": 0.2730681687405208,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 4,
+    "loss_mean": 4.20064759575198,
+    "train_seconds": 22.719985377043486,
+    "recall_at_5": 0.2496169493316426,
+    "mrr": 0.2896159296774129,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 5,
+    "loss_mean": 4.113925042173787,
+    "train_seconds": 23.94990150257945,
+    "recall_at_5": 0.26137264225709306,
+    "mrr": 0.30535093652821066,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 6,
+    "loss_mean": 4.043636464217318,
+    "train_seconds": 23.503174114972353,
+    "recall_at_5": 0.269192159349078,
+    "mrr": 0.3174911505162294,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 7,
+    "loss_mean": 3.983669112081485,
+    "train_seconds": 22.523353308439255,
+    "recall_at_5": 0.27917789401384263,
+    "mrr": 0.3286695886927322,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 8,
+    "loss_mean": 3.928995793175804,
+    "train_seconds": 23.87476421520114,
+    "recall_at_5": 0.2863633962064775,
+    "mrr": 0.33930299969249716,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 9,
+    "loss_mean": 3.880637779364137,
+    "train_seconds": 23.308185443282127,
+    "recall_at_5": 0.29011465102763245,
+    "mrr": 0.3473000942212558,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  },
+  {
+    "epoch": 10,
+    "loss_mean": 3.8382275382499524,
+    "train_seconds": 22.532514180988073,
+    "recall_at_5": 0.2977756643947799,
+    "mrr": 0.3548890055357126,
+    "validation_queries": 6309,
+    "catalog_size": 10123
+  }
+]

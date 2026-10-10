@@ -1,0 +1,7 @@
+download qwen_embed_06 1_Pooling/config.json
+download qwen_embed_06 README.md
+download qwen_embed_06 config.json
+download qwen_embed_06 config_sentence_transformers.json
+download qwen_embed_06 generation_config.json
+download qwen_embed_06 merges.txt
+download qwen_embed_06 model.safetensors

@@ -1,0 +1,11 @@
+model,method,mrr5,recall5,hit1,p50_ms,p95_ms,queries,catalog_size,timing_queries,timing_repeats,evidence_status
+bm25,bm25,0.5148451730418944,0.4670233758348513,0.45377959927140255,6.595786999923803,11.373329649745754,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+bge-small,vector,0.5802254098360656,0.5114602307225258,0.5154826958105647,88.0037550000452,156.73841149998677,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+bge-small,hybrid,0.646907255616272,0.577830904675167,0.5826502732240437,94.07920299963735,165.755761650189,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+bge-small,domain_vector,0.445920613236187,0.3801229508196721,0.40027322404371585,105.46946900012699,475.164036999922,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+e5-small,vector,0.420328627808136,0.39909684274438373,0.3524590163934426,85.34251450009833,142.3372600499533,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+e5-small,hybrid,0.6361300850030358,0.5759714632665452,0.5710382513661202,94.77253799968821,174.4911189002777,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+e5-small,domain_vector,0.3460078931390407,0.3206967213114754,0.2941712204007286,83.7405964998652,135.34900015024505,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+embeddinggemma-int8,vector,0.6694254705525198,0.598550394656952,0.6035974499089253,456.531690500924,832.9364997996887,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+embeddinggemma-int8,hybrid,0.7008462355798422,0.6408621736490588,0.636384335154827,463.68249999977706,684.3184206994009,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable
+embeddinggemma-int8,domain_vector,0.5010018214936248,0.43693078324225865,0.4494535519125683,449.7495865007295,613.1235756008209,4392,6006,64,3,Retained aggregate observation; original raw files currently unavailable

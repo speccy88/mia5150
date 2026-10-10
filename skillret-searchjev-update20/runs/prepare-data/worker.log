@@ -1,0 +1,25 @@
+{
+  "pairs_path": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task/data-audit/pairs.json",
+  "pairs_sha256": "e122c32c319d3705dfb47797f82596e352330153f7ecb6a49f8214aebb4467d7",
+  "coverage": {
+    "train": {
+      "queries": 32,
+      "positive_edges_required": 33,
+      "positive_edges_retained": 33,
+      "negative_pairs": 33,
+      "all_positives_preserved": true,
+      "negative_gold_collisions": 0
+    },
+    "eval": {
+      "queries": 16,
+      "positive_edges_required": 30,
+      "positive_edges_retained": 30,
+      "negative_pairs": 30,
+      "all_positives_preserved": true,
+      "negative_gold_collisions": 0
+    }
+  },
+  "family_overlap": 0,
+  "skipped_train_queries": 129,
+  "seconds": 4.866846084594727
+}

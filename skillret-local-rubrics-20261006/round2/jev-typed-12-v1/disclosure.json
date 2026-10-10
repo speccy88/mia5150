@@ -1,0 +1,15 @@
+{
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "model": "jev-1.13.0",
+  "approved_public_fields": [
+    "query",
+    "candidate.name",
+    "candidate.description"
+  ],
+  "key_saved": false,
+  "pricing_usd_per_million_input": "0.042",
+  "output_price": 0,
+  "max_calls": 12,
+  "reserve_usd": "0.10",
+  "user_billing_and_transfer_confirmation": true
+}

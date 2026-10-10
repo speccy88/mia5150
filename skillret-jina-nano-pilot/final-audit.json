@@ -1,0 +1,246 @@
+{
+  "eg2_original_metrics": {
+    "Recall@1": 0.390625,
+    "Completeness@1": 0.25,
+    "Recall@5": 0.5208333333333334,
+    "Completeness@5": 0.34375,
+    "Recall@10": 0.5677083333333334,
+    "Completeness@10": 0.4375,
+    "Recall@20": 0.5677083333333334,
+    "Completeness@20": 0.4375,
+    "MRR": 0.646875
+  },
+  "eg2_1024_sensitivity_metrics": {
+    "Recall@1": 0.390625,
+    "Completeness@1": 0.25,
+    "Recall@5": 0.5208333333333334,
+    "Completeness@5": 0.34375,
+    "Recall@10": 0.5677083333333334,
+    "Completeness@10": 0.4375,
+    "Recall@20": 0.5677083333333334,
+    "Completeness@20": 0.4375,
+    "MRR": 0.646875
+  },
+  "eg2_aggregate_metrics_unchanged": true,
+  "sensitivity": {
+    "query_id": "q-02348",
+    "index": 5,
+    "actual_input_shapes": [
+      [
+        1,
+        836
+      ],
+      [
+        1,
+        836
+      ],
+      [
+        1,
+        836
+      ]
+    ],
+    "before_top20": [
+      "0e74b312-88d6-4e72-8060-7bfb90540142",
+      "775a082e-3148-4ef5-94f9-b78eb2fb57d5",
+      "ba8b3a13-ef56-47bb-8039-da0ecda772c4",
+      "fca4cff7-3737-4d59-aca4-b0b6449f1598",
+      "3f2d886e-226a-471e-a694-215455d93c1e",
+      "ea40a5d5-251d-432f-8fdc-c854c69d828a",
+      "0e120f86-1a24-4f48-a7d5-ac5e3dd28282",
+      "e2722841-7f51-432e-a554-d9bd7e3191e8",
+      "4679da7d-6d41-4abf-a210-9f920950bc90",
+      "754d9026-805e-4605-91cd-61f156bf0456",
+      "9f841e4d-579a-4618-8f87-dde63b36f3b8",
+      "83084785-0f5b-4e93-a866-622e73c87cc5",
+      "0b6c8a79-c9c9-43a9-87ca-5e8ca9a5c159",
+      "91b59785-d526-402b-81ff-aa25f08a2f01",
+      "3c176026-cda1-438d-85ab-108f5de56435",
+      "b29e4462-4988-4da0-910f-49f230d06003",
+      "4561e10a-b5e4-42ce-9d47-cf8bba46f7a5",
+      "34f6f3cd-bb4a-40d1-911d-c68324d5c2c8",
+      "460ae8a8-9c82-450e-99d2-ac1b16d16357",
+      "4b555cc2-fa55-4bb1-8660-ca659cdbd713"
+    ],
+    "after_top20": [
+      "0e74b312-88d6-4e72-8060-7bfb90540142",
+      "775a082e-3148-4ef5-94f9-b78eb2fb57d5",
+      "ba8b3a13-ef56-47bb-8039-da0ecda772c4",
+      "fca4cff7-3737-4d59-aca4-b0b6449f1598",
+      "3f2d886e-226a-471e-a694-215455d93c1e",
+      "4679da7d-6d41-4abf-a210-9f920950bc90",
+      "754d9026-805e-4605-91cd-61f156bf0456",
+      "0e120f86-1a24-4f48-a7d5-ac5e3dd28282",
+      "ea40a5d5-251d-432f-8fdc-c854c69d828a",
+      "3c176026-cda1-438d-85ab-108f5de56435",
+      "4561e10a-b5e4-42ce-9d47-cf8bba46f7a5",
+      "9f841e4d-579a-4618-8f87-dde63b36f3b8",
+      "e2722841-7f51-432e-a554-d9bd7e3191e8",
+      "3eaed0cf-b395-432c-92e8-2c6146ff33e7",
+      "a55c2023-a18f-4a82-ab5d-a8f457a15c48",
+      "460ae8a8-9c82-450e-99d2-ac1b16d16357",
+      "83084785-0f5b-4e93-a866-622e73c87cc5",
+      "91b59785-d526-402b-81ff-aa25f08a2f01",
+      "0b6c8a79-c9c9-43a9-87ca-5e8ca9a5c159",
+      "4b555cc2-fa55-4bb1-8660-ca659cdbd713"
+    ],
+    "before_recall": {
+      "1": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333,
+      "20": 0.3333333333333333
+    },
+    "after_recall": {
+      "1": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333,
+      "20": 0.3333333333333333
+    },
+    "query_cosine_before_after": 0.9768742322921753,
+    "repeat_max_absolute_difference": 0.0,
+    "changed_rows": 1,
+    "original_scores_preserved": true
+  },
+  "vector_checks": {
+    "skillret-docs.npy": {
+      "shape": [
+        270,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "681d8c290c502c936ccf7ad67db94f321044bb971c85f1a6f87f308586ea69f3"
+    },
+    "smoke-2.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "77bc0fd1454c2ed95848434c0491604277b00f564c37369b0784da42f10ef09e"
+    },
+    "small-queries-0.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "84ba6de12362952dca3bce003fe6e820cd1ec94a9fb059ce0ad484831dc17de7"
+    },
+    "skillret-queries-1.npy": {
+      "shape": [
+        32,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "896c002c29b5f9d1237a5b83a9fa6d0e4974c63da3d35fd38713f861830ad61d"
+    },
+    "smoke-1.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "77bc0fd1454c2ed95848434c0491604277b00f564c37369b0784da42f10ef09e"
+    },
+    "small-queries-2.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "84ba6de12362952dca3bce003fe6e820cd1ec94a9fb059ce0ad484831dc17de7"
+    },
+    "smoke-0.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "77bc0fd1454c2ed95848434c0491604277b00f564c37369b0784da42f10ef09e"
+    },
+    "small-docs.npy": {
+      "shape": [
+        28,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "c10f90d5d2da4f1bcac8e235cf57903ad94903964e554401b29eef4bd5f26af4"
+    },
+    "skillret-queries-0.npy": {
+      "shape": [
+        32,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "896c002c29b5f9d1237a5b83a9fa6d0e4974c63da3d35fd38713f861830ad61d"
+    },
+    "small-queries-1.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "84ba6de12362952dca3bce003fe6e820cd1ec94a9fb059ce0ad484831dc17de7"
+    }
+  },
+  "small_repeat_max_abs_difference": 0.0,
+  "skillret_repeat_max_abs_difference": 0.0,
+  "calls": 431,
+  "total_wall_seconds": 24.56851069400008,
+  "total_process_cpu_seconds": 24.367796099999964,
+  "truncated_calls": 0,
+  "sensitivity_resources": {
+    "max_vram_mib": 1329.0,
+    "max_gpu_temp_c": 51.0,
+    "min_host_available_gib": 4.250755310058594,
+    "min_guest_available_gib": 3.8458099365234375,
+    "swap_pages": 0,
+    "guard_stops": []
+  },
+  "model_artifacts": [
+    {
+      "file": "adapters/classification/adapter_model.safetensors",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "bytes": 13587024,
+      "sha256": "c106c3748866900ecd22edbd49ba124c6c50ae898a53f5cd3ce10a5c091f6f28",
+      "official_lfs_sha256": "c106c3748866900ecd22edbd49ba124c6c50ae898a53f5cd3ce10a5c091f6f28",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/classification/adapter_model.safetensors",
+      "seconds": 1.318873467000003
+    },
+    {
+      "file": "adapters/clustering/adapter_model.safetensors",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "bytes": 13587024,
+      "sha256": "80dd657af859b61c286872f15af83cb3bfd3456e9b6201398fee2ef701d06e21",
+      "official_lfs_sha256": "80dd657af859b61c286872f15af83cb3bfd3456e9b6201398fee2ef701d06e21",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/clustering/adapter_model.safetensors",
+      "seconds": 0.8450185399999839
+    },
+    {
+      "file": "adapters/retrieval/adapter_model.safetensors",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "bytes": 13586992,
+      "sha256": "bc1afe96601bbb5198cd5553fa17d74bd77df3e30b515e50139980dd3a933cba",
+      "official_lfs_sha256": "bc1afe96601bbb5198cd5553fa17d74bd77df3e30b515e50139980dd3a933cba",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/retrieval/adapter_model.safetensors",
+      "seconds": 0.8416885400000069
+    },
+    {
+      "file": "adapters/text-matching/adapter_model.safetensors",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "bytes": 13587024,
+      "sha256": "16c3bb35e45cdbfd877988019815f5c9661940beeab90fea186d10a0df9e6cd8",
+      "official_lfs_sha256": "16c3bb35e45cdbfd877988019815f5c9661940beeab90fea186d10a0df9e6cd8",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/adapters/text-matching/adapter_model.safetensors",
+      "seconds": 1.0597022510000045
+    },
+    {
+      "file": "model.safetensors",
+      "revision": "8a7f00aac812071b69403df470f1038ec85f8925",
+      "bytes": 423543680,
+      "sha256": "f07de152e254b5d03b1273e0bca0a11dfade686508503500d460813428539651",
+      "official_lfs_sha256": "f07de152e254b5d03b1273e0bca0a11dfade686508503500d460813428539651",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano/resolve/8a7f00aac812071b69403df470f1038ec85f8925/model.safetensors",
+      "seconds": 32.109136285999995
+    }
+  ]
+}

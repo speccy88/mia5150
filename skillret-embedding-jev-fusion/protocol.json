@@ -1,0 +1,79 @@
+{
+  "model": "ThakiCloud/SKILLRET-Embedding-0.6B",
+  "model_revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+  "dataset": "ThakiCloud/SKILLRET",
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "official_code_revision": "0cc508e6bfcfff1fe6352d90ff5957ba38a64bba",
+  "test_file_sha256": {
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "model_files": {
+    "1_Pooling/config.json": {
+      "bytes": 96,
+      "sha256": "d14d11ecbd53b0fc9e817992a5a7a76f462daf6f080e375f2dceadc8a4eff165"
+    },
+    "README.md": {
+      "bytes": 4179,
+      "sha256": "585dc7bc166f108b8b2ef0987bb93ff58ee86ad8f8f0c069f0db4b4086fc7fc2"
+    },
+    "config.json": {
+      "bytes": 1410,
+      "sha256": "b42224d1a94048f9012c52095a907ef30445deb192acf65bd1cea18e6925838c"
+    },
+    "config_sentence_transformers.json": {
+      "bytes": 374,
+      "sha256": "c30120bb09147a10415b9fc04a7d5bd92f5241de617d910e50d6bf2da80b54aa"
+    },
+    "model.safetensors": {
+      "bytes": 1191586416,
+      "sha256": "f73118cac018ffa7ebb5a1ffbdf82034490dfb7f2559558f1e79277f1e8de172"
+    },
+    "modules.json": {
+      "bytes": 429,
+      "sha256": "fa7d796a215e1b2416773062891923b191fc5a4849bc44e322997433c90f459c"
+    },
+    "sentence_bert_config.json": {
+      "bytes": 241,
+      "sha256": "3084164002c0bca01b0259c5327123803fce32e660a57feb93184ffead186fc8"
+    },
+    "tokenizer.json": {
+      "bytes": 11423968,
+      "sha256": "db74fda9dc5dbe348cb79bda440c969b3ac982a78358d8d884f64ce92098b104"
+    },
+    "tokenizer_config.json": {
+      "bytes": 346,
+      "sha256": "c12b828b810325daa0a1877bfd27c1484c5fd7e0c95a1ddbc99fe8097c7fcbc0"
+    }
+  },
+  "document_format": "stripped name | stripped description | stripped skill_md",
+  "query_prefix": "Instruct: Given a skill search query, retrieve relevant skills that match the query\nQuery: ",
+  "max_seq_length": 32768,
+  "tokenizer_add_special_tokens": true,
+  "truncation_side": "right",
+  "pooling": "lasttoken",
+  "padding_side": "left",
+  "normalize_embeddings": true,
+  "similarity": "dot product of unit float32 vectors",
+  "weight_dtype": "float16",
+  "normalization_dtype": "float32",
+  "attention": "sdpa; explicit repeat_kv; memory-efficient CUDA kernel; math fallback disabled",
+  "use_cache": false,
+  "batch_size": 1,
+  "top_k": 50,
+  "ties": "catalogue source order, stable descending sort",
+  "cpu_threads": 1,
+  "encoder_source_sha256": "596861a00c1dd37e4111694cd36bf11006ed5e11b0901bae08fd29b277bc46bb",
+  "runtime": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "numpy": "2.5.3",
+    "tokenizers": "0.22.2",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  },
+  "document_text_sha256": "08208b7bc5c541a7cc72508e30c7f93a11ea257637072ddfb0aeb3c69575aeb0",
+  "query_text_sha256": "f8e8772d12f31b2af1d7dc926dc44ff07a65d732af5e279c100477b3b323cf9e",
+  "effective_rope_theta": 1000000
+}

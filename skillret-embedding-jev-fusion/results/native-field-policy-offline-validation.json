@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "receipt_type": "observed_offline_validation",
+  "policy": "native-fields-arithmetic-diagnostics-v1",
+  "created_at_utc": "2026-10-07 02:28:24 UTC",
+  "status": "passed",
+  "execution": {
+    "command": "wsl.exe -d Ubuntu-26.04 -- bash -lc 'cd /mnt/c/Users/user/Documents/Codex/2026-10-06/task-3/skillret-embedding-jev-fusion; /home/user/code/mia5150-local/.venv/bin/python -m unittest test_jev_prepare test_hosted_jev_client -v'",
+    "test_count": 80,
+    "reported_runtime_seconds": 42.242,
+    "exit_code": 0,
+    "terminal_summary": "Ran 80 tests in 42.242s; OK",
+    "rerun_for_receipt": false,
+    "environment": {
+      "host_shell": "PowerShell",
+      "execution_environment": "WSL",
+      "distribution_target": "Ubuntu-26.04",
+      "python_executable": "/home/user/code/mia5150-local/.venv/bin/python",
+      "test_working_directory": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task-3/skillret-embedding-jev-fusion",
+      "python_version_captured_with_test_command": false
+    }
+  },
+  "source_sha256": {
+    "run_jev_rerank.py": "04bec093aae3420a06e98534aa7138f038f2c2be970ce325c87a91cbc5902ca4",
+    "test_jev_prepare.py": "39b3a125f1ed4e40fa3cf0a094bd54e572eeed041a5757085dec7f0159c0a7eb",
+    "test_hosted_jev_client.py": "8cb0340871b55f6caa43d410037903a8617669068a9ecdc85a6ae3ae830285d6",
+    "SCORE_RESPONSE_AUDIT.md": "5aa8a00a6926125477b8950b5a11bda71b7446f5bf0beb2c304e7c93d0701dc9"
+  },
+  "source_hashes_rechecked_when_receipt_written": true,
+  "ast_comparison": {
+    "method": "SHA256 of ast.dump(node, include_attributes=False) for each top-level FunctionDef/ClassDef, captured immediately before and after this amendment",
+    "before_named_definitions": 34,
+    "after_named_definitions": 34,
+    "changed_named_definitions": [
+      "validate_score_answer"
+    ],
+    "added_named_definitions": [],
+    "removed_named_definitions": [],
+    "all_other_named_definitions_unchanged": true,
+    "new_constant": "SCORE_RESPONSE_POLICY",
+    "scope_limit": "Named-definition AST comparison does not compare comments, documentation, or every top-level assignment.",
+    "preserved_definitions_include": [
+      "make_request",
+      "build_batches",
+      "canonical",
+      "digest",
+      "prepare",
+      "parse_response",
+      "parse_cache",
+      "ingest",
+      "rank_and_fuse",
+      "_rounded_score_feasible"
+    ]
+  },
+  "verified_regressions": [
+    "Mandatory Score structure, exact legend, five probability keys, numeric types and ranges remain enforced",
+    "Probability sum, weighted-score and MAD-confidence disagreements are diagnostics only",
+    "Observed 21st-response pattern retains score 1.87 and confidence 0.84 with inconsistent diagnostics",
+    "Native score/confidence ranking remains unchanged by diagnostic classification",
+    "Mocked inconsistent arithmetic response settles once and reuses its unmodified cache without another call or charge"
+  ],
+  "isolation": {
+    "applies_to": "This offline validation invocation only; not an experiment-wide API/cost status",
+    "real_network_api_calls": 0,
+    "real_credentials_read": false,
+    "synthetic_transport_and_credential_mocks_used": true,
+    "real_ledger_or_saved_response_files_modified": false
+  },
+  "evidence_limitations": [
+    "The suite output was observed through the execution tool in the conversation; stdout/stderr was not redirected to a persistent log file.",
+    "This receipt records the observed result and was written afterwards; it is not a replacement raw test log.",
+    "Exact test start/end UTC timestamps and interpreter version were not separately captured by the test command.",
+    "This receipt does not independently revalidate live provider responses, reconciliation, account credit, or any hosted-study result."
+  ]
+}

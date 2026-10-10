@@ -1,0 +1,13 @@
+{
+  "peak_vram_mib": 1183.0,
+  "max_gpu_utilization_percent": 36.0,
+  "max_gpu_temperature_c": 54.0,
+  "min_host_available_gib": 4.338432312011719,
+  "min_guest_available_gib": 3.736297607421875,
+  "peak_process_rss_gib": 1.8742637634277344,
+  "max_host_cpu_percent": 44.1025641025641,
+  "swap_pages": 0,
+  "sample_count": 44,
+  "process_sample_count": 37,
+  "guard_stops": []
+}

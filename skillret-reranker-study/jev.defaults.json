@@ -1,0 +1,26 @@
+{
+  "model": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "candidate_k": 20,
+  "final_k": 5,
+  "pilot_queries": 200,
+  "stages": [5, 20, 200],
+  "timeout_seconds": 30,
+  "automatic_retries": 0,
+  "concurrency": 1,
+  "input_usd_per_million": 0.042,
+  "output_usd_per_million": 0.0,
+  "pricing_source": "https://docs.typesafe.ai/models",
+  "context_tokens": 64000,
+  "state_plus_question_tokens": 32000,
+  "reserve_input_tokens_per_call": 65536,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 42,
+  "budget": {
+    "max_spend_usd": 2.0,
+    "max_spend_cad": 3.0,
+    "cad_per_usd": 1.5,
+    "request_reserve_multiplier": 1.25,
+    "max_completion_requests": 200
+  }
+}

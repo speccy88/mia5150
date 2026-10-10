@@ -1,0 +1,23 @@
+download qwen_embed_06 model.safetensors
+download qwen_embed_06 modules.json
+download qwen_embed_06 tokenizer.json
+download qwen_embed_06 tokenizer_config.json
+download qwen_embed_06 vocab.json
+complete qwen_embed_06
+download skillret_embed_06 1_Pooling/config.json
+download skillret_embed_06 README.md
+download skillret_embed_06 config.json
+download skillret_embed_06 config_sentence_transformers.json
+download skillret_embed_06 model.safetensors
+download skillret_embed_06 modules.json
+download skillret_embed_06 sentence_bert_config.json
+download skillret_embed_06 tokenizer.json
+download skillret_embed_06 tokenizer_config.json
+complete skillret_embed_06
+download skillret_rerank_06 README.md
+download skillret_rerank_06 config.json
+download skillret_rerank_06 generation_config.json
+download skillret_rerank_06 model.safetensors
+download skillret_rerank_06 tokenizer.json
+download skillret_rerank_06 tokenizer_config.json
+complete skillret_rerank_06

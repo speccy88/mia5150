@@ -1,0 +1,13 @@
+{
+  "python": "3.12.15",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "numpy": "2.5.3",
+    "tokenizers": "0.22.2",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0",
+    "pytrec-eval-terrier": "0.5.10"
+  }
+}

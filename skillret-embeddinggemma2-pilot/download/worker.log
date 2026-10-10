@@ -1,0 +1,14 @@
+VERIFIED 1_Pooling/config.json 90
+VERIFIED 2_Normalize/config.json 97
+VERIFIED README.md 21730
+VERIFIED chat_template.jinja 1016
+VERIFIED config.json 4455
+VERIFIED config_sentence_transformers.json 1565
+VERIFIED model.safetensors 1488915288
+VERIFIED modules.json 413
+VERIFIED preprocessor_config.json 511
+VERIFIED processor_config.json 1788
+VERIFIED sentence_bert_config.json 747
+VERIFIED tokenizer.json 32170510
+VERIFIED tokenizer.model 4689013
+VERIFIED tokenizer_config.json 1599

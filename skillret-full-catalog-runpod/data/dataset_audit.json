@@ -1,0 +1,27 @@
+{
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "counts": {
+    "train": {
+      "skills": 10123,
+      "queries": 63259,
+      "qrels": 127190,
+      "duplicate_skill_texts": 0,
+      "duplicate_query_texts": 435,
+      "multi_gold_queries": 42483
+    },
+    "test": {
+      "skills": 6006,
+      "queries": 4392,
+      "qrels": 7187,
+      "duplicate_skill_texts": 0,
+      "duplicate_query_texts": 0,
+      "multi_gold_queries": 2249
+    },
+    "train_test_skill_id_overlap": 0,
+    "train_test_exact_skill_text_overlap": 0,
+    "train_test_exact_query_text_overlap": 0,
+    "train_test_original_id_group_overlap": 0
+  },
+  "representation": "query only; skill name + ': ' + description",
+  "data_license": "See pinned upstream dataset card"
+}

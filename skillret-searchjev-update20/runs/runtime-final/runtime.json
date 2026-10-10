@@ -1,0 +1,21 @@
+{
+  "torch": "2.8.0+cu128",
+  "transformers": "5.19.0",
+  "peft": "0.21.2",
+  "device": "NVIDIA GeForce RTX 2060 SUPER",
+  "capability": [
+    7,
+    5
+  ],
+  "hub_kernels_enabled": false,
+  "fallback_functions": {
+    "causal_conv1d_fn": "<function causal_conv1d_fn at 0x7bea9c0b3ec0>",
+    "torch_chunk_gated_delta_rule": "<function torch_chunk_gated_delta_rule at 0x7bea9c44b420>",
+    "torch_recurrent_gated_delta_rule": "<function torch_recurrent_gated_delta_rule at 0x7bea9c0b8180>"
+  },
+  "modeling_path": "/home/user/code/embeddinggemma2-pilot/overlay/transformers/models/qwen3_5/modeling_qwen3_5.py",
+  "modeling_sha256": "aac2a1bcca88829afc6dbdf83f97155ebf64d800ee9d703af3802a9aebcfcd18",
+  "threads": 1,
+  "fla_spec": "None",
+  "causal_conv_spec": "None"
+}

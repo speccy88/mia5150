@@ -1,0 +1,58 @@
+Both `device` and `model_kwargs['device_map']` were provided. `device_map` controls device placement, so the `device` argument is ignored.
+Loading weights:   0%|          | 0/413 [00:00<?, ?it/s]Loading weights:   0%|          | 1/413 [00:00<06:44,  1.02it/s]Loading weights: 100%|██████████| 413/413 [00:00<00:00, 414.78it/s]
+Traceback (most recent call last):
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/util/environment.py", line 36, in suggest_extra_on_exception
+    yield
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/modules/transformer.py", line 869, in __init__
+    self.processor = AutoProcessor.from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/transformers/models/auto/processing_auto.py", line 346, in from_pretrained
+    return processor_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/transformers/utils/import_utils.py", line 2413, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "/home/user/code/embeddinggemma2-pilot/overlay/transformers/utils/import_utils.py", line 2399, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+EmbeddingGemma2Processor requires the PIL library but it was not found in your environment. You can install it with pip:
+`pip install pillow`. Please note that you may need to restart your runtime after installation.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/code/embeddinggemma2-pilot/eg2_eval.py", line 12, in <module>
+    model=SentenceTransformer(str(r/'model'),device='cuda',local_files_only=True,trust_remote_code=False,config_kwargs={'vision_config':None,'audio_config':None},model_kwargs={'dtype':torch.float32,'attn_implementation':'eager','device_map':'cuda'})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/model.py", line 236, in __init__
+    modules, self.module_kwargs = self._load_modules(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/model.py", line 1081, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/model.py", line 1298, in _load_config_modules
+    module = module_class.load(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/modules/transformer.py", line 2635, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/util/decorators.py", line 92, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/base/modules/transformer.py", line 868, in __init__
+    with suggest_extra_on_exception():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/user/code/embeddinggemma2-pilot/overlay/sentence_transformers/util/environment.py", line 41, in suggest_extra_on_exception
+    raise type(e)(f"{str(e).strip()}\n\nTo install the required dependencies, run:\n{hint}") from e
+ImportError: EmbeddingGemma2Processor requires the PIL library but it was not found in your environment. You can install it with pip:
+`pip install pillow`. Please note that you may need to restart your runtime after installation.
+
+To install the required dependencies, run:
+pip install -U "sentence-transformers[image]"

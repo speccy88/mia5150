@@ -1,0 +1,17 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+base {'NDCG@5': 0.6784825804479138, 'MAP@5': 0.603298611111111, 'Recall@5': 0.6666666666666666, 'Precision@5': 0.23750000000000002, 'NDCG@10': 0.6784825804479138, 'MAP@10': 0.603298611111111, 'Recall@10': 0.6666666666666666, 'Precision@10': 0.11875000000000001, 'NDCG@15': 0.6835151687319515, 'MAP@15': 0.6057024572649573, 'Recall@15': 0.6822916666666666, 'Precision@15': 0.08125, 'Completeness@5': 0.4375, 'Completeness@10': 0.4375, 'Completeness@15': 0.46875, 'Completeness@20': 0.46875, 'Recall@20': 0.6822916666666666, 'Completeness@50': 0.46875, 'Recall@50': 0.6822916666666666, 'Completeness@100': 0.46875, 'Recall@100': 0.6822916666666666, 'MRR@5': 0.8515625}
+/home/user/code/mia5150-local/lora_pilot.py:52: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  if step%16==0:print('train',step,float(loss),flush=True)
+train 0 0.19302427768707275
+train 16 2.4782443046569824
+train 32 0.3393512964248657
+train 48 0.0190126895904541
+train 64 0.0016627722652629018
+train 80 0.00968035589903593
+train 96 1.5879607200622559
+train 112 0.0068206787109375
+train 128 0.0601172037422657
+train 144 4.986082421964966e-05
+train 160 0.014053821563720703

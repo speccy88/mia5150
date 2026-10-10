@@ -1,0 +1,35 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/310 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 1/310 [00:00<01:05,  4.74it/s]Loading checkpoint shards:   7%|▋         | 22/310 [00:00<00:03, 86.42it/s]Loading checkpoint shards:  13%|█▎        | 40/310 [00:00<00:02, 120.02it/s]Loading checkpoint shards:  19%|█▉        | 60/310 [00:00<00:01, 145.41it/s]Loading checkpoint shards:  26%|██▌       | 81/310 [00:00<00:01, 162.45it/s]Loading checkpoint shards:  33%|███▎      | 102/310 [00:00<00:01, 173.57it/s]Loading checkpoint shards:  39%|███▉      | 122/310 [00:00<00:01, 179.63it/s]Loading checkpoint shards:  45%|████▌     | 141/310 [00:00<00:00, 182.52it/s]Loading checkpoint shards:  52%|█████▏    | 160/310 [00:01<00:00, 184.18it/s]Loading checkpoint shards:  58%|█████▊    | 180/310 [00:01<00:00, 186.78it/s]Loading checkpoint shards:  65%|██████▍   | 201/310 [00:01<00:00, 190.61it/s]Loading checkpoint shards:  71%|███████▏  | 221/310 [00:01<00:00, 188.25it/s]Loading checkpoint shards:  77%|███████▋  | 240/310 [00:01<00:00, 181.40it/s]Loading checkpoint shards:  84%|████████▎ | 259/310 [00:01<00:00, 175.74it/s]Loading checkpoint shards:  90%|█████████ | 279/310 [00:01<00:00, 177.03it/s]Loading checkpoint shards:  96%|█████████▋| 299/310 [00:01<00:00, 183.37it/s]Loading checkpoint shards: 100%|██████████| 310/310 [00:01<00:00, 166.73it/s]
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+q-02806 ok
+q-01679 ok
+q-03421 ok
+q-03558 ok
+q-01254 ok
+q-02636 ok
+q-03650 ok
+q-02145 ok
+q-04419 ok
+q-03802 ok
+q-03050 ok
+q-03154 ok
+q-01972 ok
+q-02255 ok
+q-02590 ok
+q-04772 ok
+q-01137 ok
+q-01223 ok
+q-00702 ok
+q-03923 ok
+q-04775 ok
+q-01436 ok
+q-02635 ok
+q-01186 ok
+q-01962 ok
+q-03481 ok
+q-03666 ok
+q-04808 ok
+q-00324 ok
+q-04330 ok
+q-04960 ok
+q-04337 ok

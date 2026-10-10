@@ -1,0 +1,31 @@
+{
+  "file": "C:\\Users\\user\\Documents\\Codex\\2026-10-05\\task-2\\deliverables\\MIA5150_Local_Results_2026-10-05.zip",
+  "bytes": 62435989,
+  "sha256": "ce1e0a5727d511f30fec8204acdc31901e8b516d805cf24a56b9996d54781f74",
+  "verified_entries": 3108,
+  "safe_paths": true,
+  "model_optimizer_binaries_excluded": true,
+  "uploaded": false,
+  "largest_entries": [
+    [
+      "mia5150-local/results/public-full-qwen_embed_06.json",
+      23570726
+    ],
+    [
+      "mia5150-local/results/public-full-skillret_embed_06.json",
+      23555476
+    ],
+    [
+      "mia5150-local/results/public-full-bm25.json",
+      23447459
+    ],
+    [
+      "mia5150-local/results/public-full-rrf.json",
+      23262052
+    ],
+    [
+      "mia5150-local/manifests/nested-libraries.json",
+      16640847
+    ]
+  ]
+}

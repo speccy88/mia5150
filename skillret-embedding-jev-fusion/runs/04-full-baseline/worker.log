@@ -1,0 +1,4 @@
+{"cache": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/cache/04df631ea318ebe961ea0e9a3e547e7407e062250019138d671f9852f270506c", "documents": {"min": 117, "median": 1677.5, "p95": 5723.5, "max": 49012, "total": 13247447, "over_8192": 108, "over_32768": 2, "truncated_count": 2, "effective_total": 13227233}, "queries": {"min": 57, "median": 252.0, "p95": 393.0, "max": 862, "total": 1128023, "over_8192": 0, "over_32768": 0, "truncated_count": 0, "effective_total": 1128023}}
+`torch_dtype` is deprecated! Use `dtype` instead!
+documents cached 4 / 6006 last seconds 6.989
+documents cached 50 / 6006 last seconds 1.302

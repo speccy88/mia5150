@@ -1,0 +1,14 @@
+{
+  "torch": "2.8.0+cu128",
+  "transformers": "5.19.0",
+  "peft": "0.21.2",
+  "hub_kernels_enabled": false,
+  "fla_absent": true,
+  "causal_conv1d_absent": true,
+  "gpu": "NVIDIA GeForce RTX 2060 SUPER",
+  "capability": [
+    7,
+    5
+  ],
+  "fallback_sha256": "aac2a1bcca88829afc6dbdf83f97155ebf64d800ee9d703af3802a9aebcfcd18"
+}

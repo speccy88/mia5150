@@ -1,0 +1,10 @@
+{
+  "query_count": 200,
+  "unique_and_exact_pilot_ids": true,
+  "requests_match_approved_payloads": true,
+  "rankings_use_exact_candidate_sets": true,
+  "service_failures": 0,
+  "requests_reserved": 268,
+  "both_experiment_pods_404": true,
+  "raw_sha256": "775eb9635c9930902699b9766cac43d50da4d4bcdb45a5dfc19a36692d63171e"
+}

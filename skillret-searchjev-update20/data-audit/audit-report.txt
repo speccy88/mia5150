@@ -1,0 +1,91 @@
+SkillRet data audit for SearchJev-0.8B adaptation
+Audit date: 2026-10-06
+
+Result
+The official local JSONL artifacts are internally consistent and match all six
+recorded SHA256 hashes at revision 6583d7d2ed07644d0fb8938ed8178f3a7dc42a12.
+No blind holdout is certified. The pilot should be reported as an exposed
+development diagnostic with a family-separated current training/evaluation
+construction, not as unseen pretrained-model generalization.
+
+Verified counts
+Training: 63,259 queries, 10,123 skills, 127,190 distinct positive qrel edges.
+Public test: 4,392 queries, 6,006 skills, 7,187 distinct positive qrel edges.
+All qrel relevance values are 1. No duplicate query/skill IDs or qrel edges,
+missing positive skill IDs, query/qrel mismatches, or query k mismatches found.
+Every query's skill_ids exactly equals its complete official qrel gold set.
+Train queries have 1/2/3 gold skills in counts 20,776/21,035/21,448.
+
+Schemas
+Queries: id, original_id, query, skill_ids, skill_names, k, generator_model;
+14,226 training rows additionally have original_query.
+Qrels: query_id, skill_id, relevance.
+Skills include id, name, description, repo, namespace, body, skill_md and
+metadata. The preparation script retains only selected skill text, capped at
+4,000 characters per name/description/body field. Query text is unchanged.
+
+Earlier partition and exposure
+manifests/training-partitions.json contains train512/dev128 and 3,033 allowed
+training skill IDs. It groups repositories and normalized exact skill names,
+excludes 22,408 cross-partition queries, and has no exact query-ID/text overlap.
+There are 705 train and 244 dev positive edges. All train positives belong to
+allowed IDs; no dev positive belongs to allowed IDs.
+manifests/lora-hard.json previously used first64 train/first32 dev, containing
+91/64 positive edges. The corrected replay retained all91 train gold edges;
+an earlier capped replay omitted eight and was explicitly superseded.
+evidence/exposure-ledger.json states all4,392 public test query aggregates were
+historically exposed. The historical256 dev cohort used another revision,
+a050ad233a504a43135bafe8cdf45574052b5729; exact IDs are not in the examined ledger.
+Round2 manifests explicitly mark their cohorts historically exposed. Scaling5150
+selects20 queries from the earlier128 public development panel; it is not fresh
+blind evidence. No model, GPU, external API, or paid call was used in this audit.
+
+Additional combined-catalog family audit
+Connected components were recomputed across both catalogs using exact repository
+OR stripped lowercase exact skill name. Train/test skill IDs do not intersect,
+but their metadata creates1 shared component between existing train512/dev128.
+The128 dev queries occupy21 gold families;13 appear in exposed public-test gold
+and14 in the public-test catalog. This prevents any unqualified family-unseen
+claim for the old split. The audit did not create a new independent holdout.
+
+Preparation deliverable
+prepare_data.py is a standard-library-only, reviewable script for the parent's
+fresh resource-guarded execution. It does not download or import model code.
+It streams and verifies all six pinned artifacts and scans selected skill text
+in a second verified pass. Default source is /home/user/code/mia5150-local.
+It chooses the first32 eligible train queries in existing512 order and first16
+existing dev queries. Training excludes every family present in ALL128 prior
+dev gold or ALL4,392 public-test gold, plus exact normalized exposed query text.
+117 of512 train queries and884 allowed negative skills remain under the family
+filter before the additional exact-text check. Expected pilot:33 positive and
+33 negative train pairs;30 positive and30 negative eval pairs.
+All official gold edges of each selected query are preserved. Negatives are
+deterministic SHA256-ranked, unique per query, and exclude the complete gold set.
+Training negatives must be in original train_allowed_skill_ids. Eval negatives
+come from excluded training families. The script asserts zero actual candidate
+family overlap across training/eval, covering both positive and negative pairs.
+Train pair order uses seed271828. Eval pairs stay fixed. Skipped query IDs and
+reasons, source paths/hashes, pair record hashes, and all assertions are recorded.
+
+Output contract
+pairs.json: keys schema_version, train, eval, audit.
+Each train/eval row: query_id, skill_id, query, skill_name, skill_description,
+skill_body, y (1 relevant;0 irrelevant).
+preparation-audit.json: standalone receipt including final pairs file SHA256.
+The script writes beside itself unless --output-dir is passed.
+This subagent authored but did not run prepare_data.py; the parent owns its
+guarded execution and the GPU training worker.
+
+Evaluation interpretation
+The paired data deliberately includes every positive and matching negatives.
+Use fixed-pair CE+Brier, positive/negative probability separation, threshold
+accuracy, and paired before/after changes. These gold-conditioned balanced pairs
+are not a retrieved shortlist and cannot support full-corpus retrieval recall.
+All public and previous development exposures remain disclosed despite current
+train/eval family separation. Historical256 exact-family exposure and released
+model training exposure are not certified absent.
+
+Evidence files
+skillret-audit.json: complete six-file streaming validation and family counts.
+audit_skillret.py: read-only audit source; actual scan took about4.4 seconds.
+prepare_data.py: reviewed preparation source; root should execute under guard.

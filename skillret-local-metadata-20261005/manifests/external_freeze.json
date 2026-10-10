@@ -1,0 +1,13 @@
+{
+  "benchmark": "WeihangSu/SRA-Bench",
+  "revision": "6143f2634eb284955ce312213bac24b582d039f3",
+  "frozen_before_instance_labels_download": true,
+  "systems": ["BM25 header", "SkillRet0.6B FP16 header", "equal RRF k60 of these two"],
+  "selection": "First4 instance IDs per each of6 task families sorted by SHA256 of canonical JSON ID. All26262 corpus documents if schema and reserves permit.",
+  "query_input": "Native problem field only; never gold skill IDs, gold answer, reference solution, count or skill name",
+  "view": "Native skill name and description only, preserving available labels; no synthetic descriptions from test labels",
+  "limits": {"query_count":24,"embedding_max_tokens":1024,"batch":1,"gpu_concurrency":1},
+  "metrics": "Native binary Recall/nDCG@1,5,10,50; keep task families separate and equally weight the24 sampled instances",
+  "no_tuning": true,
+  "claim": "External transfer diagnostic; no independent confirmation until checkpoint and benchmark exposure are resolved. No downstream execution."
+}

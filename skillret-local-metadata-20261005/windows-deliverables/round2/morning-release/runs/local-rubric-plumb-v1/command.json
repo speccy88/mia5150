@@ -1,0 +1,1 @@
+[".venv/bin/python", "round2/local_rubric_screen.py", "--model", "plumb"]

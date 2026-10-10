@@ -1,0 +1,22 @@
+{
+  "model": "qwen/qwen3-8b",
+  "provider_tag": "alibaba",
+  "provider_name": "Alibaba",
+  "context_length": 131072,
+  "max_prompt_tokens": 98304,
+  "max_completion_tokens": 8192,
+  "pricing": {
+    "prompt": "0.000000117",
+    "completion": "0.000000455",
+    "discount": 0
+  },
+  "temperature": 0,
+  "tool_choice": "auto",
+  "reasoning": {
+    "effort": "none"
+  },
+  "reasoning_status": "disable requested; actual reasoning tokens must be checked",
+  "snapshot": "evidence/model_metadata/1790466323629342000.json",
+  "adapter": "langchain_openrouter.ChatOpenRouter",
+  "fallbacks": false
+}

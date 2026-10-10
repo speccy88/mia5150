@@ -1,0 +1,53 @@
+{
+  "eval_queries": 16,
+  "pairs": 60,
+  "resamples": 4000,
+  "seed": 271828,
+  "intervals": {
+    "loss": {
+      "delta": 0.386010431102477,
+      "query_cluster_bootstrap_percentile_95": [
+        0.010440661365376604,
+        0.7906258024314108
+      ]
+    },
+    "ce": {
+      "delta": 0.36812092404191693,
+      "query_cluster_bootstrap_percentile_95": [
+        0.026679004613210315,
+        0.7399491433382288
+      ]
+    },
+    "brier": {
+      "delta": 0.035778995126353644,
+      "query_cluster_bootstrap_percentile_95": [
+        -0.06218403918288118,
+        0.14314070003012183
+      ]
+    },
+    "accuracy": {
+      "delta": 0.016666666666666666,
+      "query_cluster_bootstrap_percentile_95": [
+        -0.043478260869565216,
+        0.06756756756756757
+      ]
+    }
+  },
+  "before_correct_after_wrong": 3,
+  "before_wrong_after_correct": 4,
+  "caveat": "Small exposed balanced diagnostic. Bootstrap conditions on the chosen16 queries and cannot establish unseen-test or full-corpus retrieval performance.",
+  "prompt_truncation": {
+    "train": {
+      "prompts": 66,
+      "query_truncated": 35,
+      "skill_header_truncated": 16,
+      "max_tokens": 248
+    },
+    "eval": {
+      "prompts": 60,
+      "query_truncated": 36,
+      "skill_header_truncated": 9,
+      "max_tokens": 248
+    }
+  }
+}

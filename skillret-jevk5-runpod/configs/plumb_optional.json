@@ -1,0 +1,45 @@
+{
+  "experiment": "skillret-plumb-natural-top15-plus-none",
+  "seed": 42,
+  "validation_fraction": 0.1,
+  "train_limit": null,
+  "validation_limit": null,
+  "candidates": 15,
+  "mining_top_k": 100,
+  "augmented_training_view": false,
+  "model": {
+    "id": "crh225/plumb-4b",
+    "revision": "55de037801a8a9b9de3db5c0e16cef86210c2186"
+  },
+  "retriever": {
+    "id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "max_tokens": 512,
+    "batch_size": 16
+  },
+  "tokenization": {
+    "query_max_tokens": 256,
+    "option_max_tokens": 128,
+    "max_sequence_tokens": 3072
+  },
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05
+  },
+  "training": {
+    "learning_rate": 3e-05,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "gradient_checkpointing": true,
+    "microbatch_size": 1,
+    "accumulation_steps": 16,
+    "epochs": 1,
+    "max_steps": null,
+    "eval_every_steps": 0,
+    "save_every_steps": 50,
+    "eval_batch_size": 1,
+    "max_wall_seconds": 14400
+  },
+  "notes": "Full one-epoch proposal. Four-hour process cap is a safety limit, NOT a runtime estimate or spending approval. Set a measured budget before use."
+}

@@ -1,0 +1,235 @@
+{
+  "generated_utc": "2026-10-07T01:51:40Z",
+  "baseline_status": "validated",
+  "dataset_counts_match_requested": true,
+  "baseline_evaluation_recomputed": true,
+  "current_data_hashes_match_protocol": true,
+  "source_sha256": {
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "checkpoint_progress": [
+    {
+      "cache_contract": "04df631ea318ebe961ea0e9a3e547e7407e062250019138d671f9852f270506c",
+      "validity": "invalid_wrong_rope_theta_preserved_do_not_use",
+      "documents": {
+        "journaled_vectors": 84,
+        "recorded_encode_seconds": 160.65931426900013,
+        "last_checkpoint_utc": 1791331734.4674666,
+        "incomplete_lines_ignored": 0
+      },
+      "queries": {
+        "journaled_vectors": 0,
+        "recorded_encode_seconds": 0.0,
+        "last_checkpoint_utc": null,
+        "incomplete_lines_ignored": 0
+      }
+    },
+    {
+      "cache_contract": "c364634bcfd07525e074a927760ef2dd0f52ce0b0f92a09debaed13a6f0d683e",
+      "validity": "current_corrected_protocol",
+      "documents": {
+        "journaled_vectors": 6006,
+        "recorded_encode_seconds": 1289.4507529440073,
+        "last_checkpoint_utc": 1791333534.3116975,
+        "incomplete_lines_ignored": 0
+      },
+      "queries": {
+        "journaled_vectors": 4392,
+        "recorded_encode_seconds": 340.9550109600083,
+        "last_checkpoint_utc": 1791334931.4973297,
+        "incomplete_lines_ignored": 0
+      }
+    },
+    {
+      "cache_contract": "d7b56e8e189a54585ccb77b8afb9d1a60ca3a8137b5e811c2c552996e8eb35c1",
+      "validity": "requires_current_protocol_match",
+      "documents": {
+        "journaled_vectors": 0,
+        "recorded_encode_seconds": 0.0,
+        "last_checkpoint_utc": null,
+        "incomplete_lines_ignored": 0
+      },
+      "queries": {
+        "journaled_vectors": 0,
+        "recorded_encode_seconds": 0.0,
+        "last_checkpoint_utc": null,
+        "incomplete_lines_ignored": 0
+      }
+    }
+  ],
+  "resources": [
+    {
+      "run": "01-audit",
+      "sample_count": 49,
+      "guard_stop": null,
+      "exit": {
+        "returncode": 0,
+        "utc": 1791331346.3137684
+      },
+      "first_sample_utc": 1791331293.6336212,
+      "last_sample_utc": 1791331346.223958,
+      "sampled_span_seconds": 52.59033679962158,
+      "min_host_available_gib": 3.2803306579589844,
+      "min_guest_available_gib": 4.437957763671875,
+      "max_gpu_used_mib": 0,
+      "max_gpu_temperature_c": 47,
+      "max_host_cpu_pct": 73,
+      "max_host_telemetry_age_seconds": 2.1497950553894043,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "02-feasibility",
+      "sample_count": 13,
+      "guard_stop": null,
+      "exit": {
+        "returncode": 1,
+        "utc": 1791331387.6325123
+      },
+      "first_sample_utc": 1791331374.5828772,
+      "last_sample_utc": 1791331387.5209618,
+      "sampled_span_seconds": 12.938084602355957,
+      "min_host_available_gib": 3.0285301208496094,
+      "min_guest_available_gib": 3.906780242919922,
+      "max_gpu_used_mib": 2173,
+      "max_gpu_temperature_c": 49,
+      "max_host_cpu_pct": 44,
+      "max_host_telemetry_age_seconds": 1.4884905815124512,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "03-feasibility-repeatkv",
+      "sample_count": 75,
+      "guard_stop": null,
+      "exit": {
+        "returncode": 0,
+        "utc": 1791331551.2675405
+      },
+      "first_sample_utc": 1791331471.2366745,
+      "last_sample_utc": 1791331551.070322,
+      "sampled_span_seconds": 79.83364748954773,
+      "min_host_available_gib": 2.7806739807128906,
+      "min_guest_available_gib": 3.8509864807128906,
+      "max_gpu_used_mib": 2557,
+      "max_gpu_temperature_c": 64,
+      "max_host_cpu_pct": 73,
+      "max_host_telemetry_age_seconds": 2.1364402770996094,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "04-full-baseline",
+      "sample_count": 143,
+      "guard_stop": null,
+      "exit": {
+        "returncode": -15,
+        "utc": 1791331736.1565034
+      },
+      "first_sample_utc": 1791331586.0448413,
+      "last_sample_utc": 1791331736.0534942,
+      "sampled_span_seconds": 150.00865292549133,
+      "min_host_available_gib": 2.3962440490722656,
+      "min_guest_available_gib": 3.7132644653320312,
+      "max_gpu_used_mib": 2381,
+      "max_gpu_temperature_c": 66,
+      "max_host_cpu_pct": 90,
+      "max_host_telemetry_age_seconds": 2.1268019676208496,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "05-feasibility-correct-rope",
+      "sample_count": 74,
+      "guard_stop": null,
+      "exit": {
+        "returncode": 0,
+        "utc": 1791331897.6746442
+      },
+      "first_sample_utc": 1791331819.0861943,
+      "last_sample_utc": 1791331897.5853598,
+      "sampled_span_seconds": 78.49916553497314,
+      "min_host_available_gib": 2.6934967041015625,
+      "min_guest_available_gib": 3.5678329467773438,
+      "max_gpu_used_mib": 2557,
+      "max_gpu_temperature_c": 65,
+      "max_host_cpu_pct": 52,
+      "max_host_telemetry_age_seconds": 2.1398448944091797,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "06-full-correct-rope",
+      "sample_count": 1262,
+      "guard_stop": {
+        "error": "host CPU above 80% for five samples",
+        "utc": 1791333288.7456439
+      },
+      "exit": {
+        "returncode": 1,
+        "utc": 1791333288.9617424
+      },
+      "first_sample_utc": 1791331954.7618587,
+      "last_sample_utc": 1791333288.6973212,
+      "sampled_span_seconds": 1333.935462474823,
+      "min_host_available_gib": 2.8371353149414062,
+      "min_guest_available_gib": 3.5860748291015625,
+      "max_gpu_used_mib": 2387,
+      "max_gpu_temperature_c": 67,
+      "max_host_cpu_pct": 93,
+      "max_host_telemetry_age_seconds": 2.142061233520508,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": true
+    },
+    {
+      "run": "07-full-cpu-cooldown",
+      "sample_count": 182,
+      "guard_stop": null,
+      "exit": null,
+      "first_sample_utc": 1791333460.18389,
+      "last_sample_utc": 1791333652.5191433,
+      "sampled_span_seconds": 192.33525323867798,
+      "min_host_available_gib": 3.066272735595703,
+      "min_guest_available_gib": 3.707427978515625,
+      "max_gpu_used_mib": 1303,
+      "max_gpu_temperature_c": 60,
+      "max_host_cpu_pct": 77,
+      "max_host_telemetry_age_seconds": 2.1518900394439697,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    },
+    {
+      "run": "08-resume-query-cache",
+      "sample_count": 474,
+      "guard_stop": null,
+      "exit": {
+        "returncode": 0,
+        "utc": 1791334940.8014925
+      },
+      "first_sample_utc": 1791334436.3272567,
+      "last_sample_utc": 1791334940.7018108,
+      "sampled_span_seconds": 504.3745541572571,
+      "min_host_available_gib": 3.0299453735351562,
+      "min_guest_available_gib": 3.51495361328125,
+      "max_gpu_used_mib": 1303,
+      "max_gpu_temperature_c": 61,
+      "max_host_cpu_pct": 83,
+      "max_host_telemetry_age_seconds": 2.046583414077759,
+      "observed_swapin_counter_change": 0,
+      "observed_swapout_counter_change": 0,
+      "five_consecutive_host_cpu_over80": false
+    }
+  ],
+  "baseline_max_absolute_ndcg_deviation": 0.0003233264761343113,
+  "jev_evaluated": false,
+  "rrf_evaluated": false
+}

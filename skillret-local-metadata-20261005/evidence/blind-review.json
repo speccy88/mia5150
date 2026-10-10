@@ -1,0 +1,898 @@
+[
+  {
+    "id": "q-02806",
+    "query": "We've been discussing adding a \"Smart Meal Planner\" feature to our \"NourishKit\" nutrition app \u2014 it should let users input dietary restrictions and weekly calorie goals, then auto-generate a 7-day meal plan using our existing recipe database. Can you break this down into concrete subtasks, add them to docs/PROJECT.md under a new \"Meal Planner\" epic, and make sure each task has acceptance criteria and an estimated complexity (S/M/L)?",
+    "gold_ids": [
+      "2eb04ac2-bc5b-42e7-9b5f-618f911b7c57"
+    ],
+    "system_A": [
+      "db0e7b05-4774-47b1-9e50-04fa90234550",
+      "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+      "9fc35f6d-8651-4c52-a63a-b2af5f0f3b33",
+      "5e2f69d2-a158-4668-9d6c-8c2706203262",
+      "6fa53a48-ecd0-4d8d-b564-c3aca60503e0",
+      "a72df75b-b5dc-40c1-8d4d-ea532ee62140",
+      "80f24de5-9ee7-410b-af66-a252da47ba74",
+      "78593fb1-8d06-462b-81e7-7edb2e8cf56a",
+      "ebd0fcd6-5bbc-4aa7-b017-cc0b98f9cbdb",
+      "6079c63e-6071-4dc1-b0dd-eaf07fdd6590"
+    ],
+    "system_B": [
+      "6fa53a48-ecd0-4d8d-b564-c3aca60503e0",
+      "db0e7b05-4774-47b1-9e50-04fa90234550",
+      "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+      "d7181a7a-c5b2-4935-afec-2cc64882e063",
+      "a72df75b-b5dc-40c1-8d4d-ea532ee62140",
+      "80f24de5-9ee7-410b-af66-a252da47ba74",
+      "259ac6eb-eaec-4b02-81f9-5ede5946ad6e",
+      "33149fdb-a9e2-4e23-af0c-d87cc1da6faa",
+      "2eb04ac2-bc5b-42e7-9b5f-618f911b7c57",
+      "fef7476f-e781-4917-a3a8-f5e33f3dca63"
+    ],
+    "annotations": {
+      "dense_pool_miss": true,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01679",
+    "query": "Last Thursday at 2:47 AM UTC our `checkout-service` in production started returning 502s to roughly 40% of customers, and it wasn't fully resolved until 6:12 AM when we rolled back the canary deployment of PR #381. We've collected the raw timeline from our PagerDuty alerts, Datadog dashboards, Slack threads, and the deploy logs, and I've pasted them below. Can you help us write a thorough blameless post-mortem document from this data? I need a clean timeline of events (detection, escalation, mitigation, resolution), a root cause analysis tracing it back to the connection pool misconfiguration introduced in that PR, a contributing factors section covering our missing integration test coverage and the fact that our canary metric threshold was set too loosely to catch the degradation, an impact summary (estimated revenue loss, number of affected users, SLA breach), and a prioritized list of action items with owners and due dates \u2014 including both immediate fixes and longer-term process improvements to our canary analysis and rollback automation so this class of incident doesn't recur.",
+    "gold_ids": [
+      "e191fce9-7c01-4855-af61-5ac02f2a820b"
+    ],
+    "system_A": [
+      "e191fce9-7c01-4855-af61-5ac02f2a820b",
+      "d8802896-8eaa-451a-88da-fbba19780057",
+      "5a1d658d-6d51-46ad-9fb7-5b372ca7f717",
+      "6be5fbd6-ea94-45b8-ae4d-ee9148ab419a",
+      "84d05555-ccb7-4aee-b19c-63d04bcd49d4",
+      "fcf99fcd-3607-4676-a9ea-fa9290c35c6f",
+      "39373bac-43eb-40f5-a0b0-e8cce5e609f9",
+      "4e91d0e5-459f-498b-947d-aafaf5666747",
+      "26630e91-c6f5-4dcc-abb4-d0eeb29dc86e",
+      "34f6f3cd-bb4a-40d1-911d-c68324d5c2c8"
+    ],
+    "system_B": [
+      "e191fce9-7c01-4855-af61-5ac02f2a820b",
+      "5a1d658d-6d51-46ad-9fb7-5b372ca7f717",
+      "39373bac-43eb-40f5-a0b0-e8cce5e609f9",
+      "fcf99fcd-3607-4676-a9ea-fa9290c35c6f",
+      "4e91d0e5-459f-498b-947d-aafaf5666747",
+      "537d2def-ed37-4761-8fb8-8c1c0925722e",
+      "d8802896-8eaa-451a-88da-fbba19780057",
+      "54fefeba-4522-4936-9614-bf555702376b",
+      "6b01f18a-8a3b-4366-8ea3-5717be7e6ba3",
+      "0073fcca-2de7-432d-8e54-003638e27645"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03421",
+    "query": "We have a TypeScript monorepo for our internal platform that uses a plugin architecture \u2014 each plugin implements a `Plugin<TConfig, TCapabilities>` interface with conditional types that narrow available methods based on the capabilities declared in the config (think `TCapabilities extends { streaming: true } ? StreamingHandler<TConfig> : BatchHandler<TConfig>`). The type inference works great locally but we're running into issues getting it to play nicely with our Kubernetes deployment pipeline. Specifically, each plugin gets deployed as its own Deployment with a sidecar, and we need a Helm chart that can be parameterized per-plugin \u2014 different resource limits, different RBAC ServiceAccounts with least-privilege policies scoped to only the namespaces each plugin needs, and NetworkPolicies that restrict inter-plugin traffic to only declared dependencies. Can you help me (1) refine the generic plugin type system so that the capability config type also encodes the deployment constraints (resource tier, namespace access list, network dependencies) as type-level information that we can extract at build time, and (2) write a Helm chart with appropriate templates, RBAC roles/bindings, and NetworkPolicy resources that consume a generated values file from that type extraction, so adding a new plugin with the right type parameters automatically produces a correctly-scoped secure K8s deployment?",
+    "gold_ids": [
+      "7bf4d884-7d07-46a6-9dc0-470983344808",
+      "f623f9a0-305d-4a7d-9ece-4ef4f0a90082"
+    ],
+    "system_A": [
+      "f623f9a0-305d-4a7d-9ece-4ef4f0a90082",
+      "25aa54da-3d04-4547-855e-c3a6e274e652",
+      "f5695734-d590-4e7b-8cba-b97b78e557f0",
+      "fd145f6d-abb1-4c71-8471-113550533576",
+      "1bb19296-398a-437e-8591-1515109fb526",
+      "08db9783-32ad-4f1c-8558-34a57148fc6b",
+      "e71fa5d6-0649-4dc6-9f23-aec9db86631b",
+      "728b584e-58d2-4b8f-8940-eb119f65e46b",
+      "9bbcac34-8485-4944-a308-fa5dda1cf022",
+      "c96317fc-7a25-4e7a-ade9-4ea3f8647884"
+    ],
+    "system_B": [
+      "728b584e-58d2-4b8f-8940-eb119f65e46b",
+      "f623f9a0-305d-4a7d-9ece-4ef4f0a90082",
+      "08db9783-32ad-4f1c-8558-34a57148fc6b",
+      "57247016-d9e4-49a5-98ef-e8655567636e",
+      "c6c2311c-426b-4a9d-bff7-25f1029d5fce",
+      "5db90888-e3e0-4744-bcfd-bceee0386ddd",
+      "f97f03b9-a7b8-41e6-99d6-a2396ef0cff1",
+      "c9fb04fb-8f85-4e83-992a-1eced287acdb",
+      "e71fa5d6-0649-4dc6-9f23-aec9db86631b",
+      "ea151299-6900-4608-b3cb-9111d6aef81e"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": true,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03558",
+    "query": "Can you pull my recent X bookmarks and format them as a JSON feed that I can import into our team's Astro-based link aggregator site at `~/repos/curator-feed`? I want each bookmark's tweet text, author handle, and URL as fields. Also verify which account is active first \u2014 I have both my personal and company accounts configured and I need to make sure it's fetching from `@devrel_sarah`.",
+    "gold_ids": [
+      "24c52187-4336-41f1-9c44-7fa0fc081559"
+    ],
+    "system_A": [
+      "24c52187-4336-41f1-9c44-7fa0fc081559",
+      "25d24fe5-fb8f-4ef2-9421-bd7ce9044dfd",
+      "7eacf33a-0684-43ae-8351-91878f406d09",
+      "97d31058-20f9-4b87-a1b1-6871e5a03081",
+      "eac28dde-fd1c-4908-bc02-b34b7a3e49a8",
+      "298f14e9-61c5-47a7-a9a9-baab184405f9",
+      "c011280d-3029-428d-b0a1-6bcb647b9d31",
+      "259a6597-6344-44a8-992a-41e03712ea1e",
+      "c5b5d6ed-8375-4325-b462-4b735ea0d513",
+      "61570963-31ab-48af-9550-1a95576e6b5a"
+    ],
+    "system_B": [
+      "24c52187-4336-41f1-9c44-7fa0fc081559",
+      "7eacf33a-0684-43ae-8351-91878f406d09",
+      "25d24fe5-fb8f-4ef2-9421-bd7ce9044dfd",
+      "eac28dde-fd1c-4908-bc02-b34b7a3e49a8",
+      "b87236b0-9d6f-4234-a86c-5be1a187acdf",
+      "94e900d1-3a7c-49da-bb0e-f6b9ebb50023",
+      "1c41a953-5764-481b-b014-7150c35305a7",
+      "765fc5f7-4ded-483e-812c-81abf8fc940c",
+      "3c26ea7b-59e7-4beb-af57-80d5753778ff",
+      "6c36c7f9-9f04-42b7-bcaa-259dd2d694b6"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01254",
+    "query": "Our finance team's Oracle Autonomous Data Warehouse on OCI (23ai) is running into performance issues with a nightly ETL job that merges ~50M rows from staged CSV data into a partitioned fact table `LEDGER_TRANSACTIONS`. The merge statement currently takes over 4 hours and sometimes hits ORA-30036 (unable to extend temp segment). I need help with several things: (1) Rewrite or optimize the existing `MERGE INTO LEDGER_TRANSACTIONS` PL/SQL procedure \u2014 it currently does a full table scan on both source and target and I suspect the join keys aren't leveraging the partition pruning properly since we range-partition by `FISCAL_QUARTER` but the merge joins on `TRANSACTION_ID` alone. (2) The temp tablespace keeps filling up \u2014 should I resize it via the OCI Console/CLI or is there a smarter approach for ADB-S where temp is auto-managed? Show me the relevant `ALTER` or OCI CLI commands. (3) We also need to set up a Data Guard standby for this ADB instance in a different OCI region (Phoenix \u2192 Ashburn) for DR compliance \u2014 walk me through the OCI CLI commands and any gotchas with ADG for Autonomous Database. (4) Our security audit flagged that TDE master key rotation hasn't been done in 14 months \u2014 what's the procedure for rotating the TDE master key on ADB 23ai, and can I automate it with a scheduled OCI CLI script? (5) Finally, I'd like to create a PL/SQL package that logs ETL run metrics (start time, row counts, elapsed time, error counts) into an audit table and sends an OCI Notification Service alert if the merge exceeds a configurable duration threshold \u2014 show me how to integrate `DBMS_CLOUD.SEND_REQUEST` for the ONS webhook call.",
+    "gold_ids": [
+      "a578df0a-3987-4d7a-8bd8-2220b3db62c6"
+    ],
+    "system_A": [
+      "a578df0a-3987-4d7a-8bd8-2220b3db62c6",
+      "e6a8bbc8-f065-45bb-89da-066e867d2113",
+      "8ecb7de1-2b2d-4659-ba73-cea761256cbe",
+      "84f27047-5cf6-4e01-b1ee-86448d72f599",
+      "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+      "ba0d550c-ed79-4965-8ce5-34c5b436db59",
+      "a1044e97-a3c1-4802-bc18-7f65a32a67aa",
+      "fba8991d-a8e2-4f51-9a4a-4129c4862655",
+      "da0447d4-c7d1-4c7c-b476-888727079014",
+      "89e76e48-e75b-404f-b9bd-ccf3837aa472"
+    ],
+    "system_B": [
+      "a578df0a-3987-4d7a-8bd8-2220b3db62c6",
+      "e6a8bbc8-f065-45bb-89da-066e867d2113",
+      "84f27047-5cf6-4e01-b1ee-86448d72f599",
+      "668efec9-60de-46c1-a790-aed6edc9c3a8",
+      "34dd5e48-1007-487f-af77-927066c459fb",
+      "89e76e48-e75b-404f-b9bd-ccf3837aa472",
+      "fba8991d-a8e2-4f51-9a4a-4129c4862655",
+      "da0447d4-c7d1-4c7c-b476-888727079014",
+      "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+      "8ecb7de1-2b2d-4659-ba73-cea761256cbe"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-02636",
+    "query": "Draft me a comprehensive internal runbook for our on-call SRE team covering incident response procedures for \"NovaBridge\" \u2014 our payment gateway service. It should include sections on severity classification (P0\u2013P3 with examples specific to payment processing), escalation paths with contact roles, step-by-step triage checklists for common failure modes (database connection pool exhaustion, third-party processor timeouts, reconciliation drift), rollback procedures for our Kubernetes-based deployments, and a post-incident review template. Use clear markdown formatting with headers, tables, code blocks for any CLI commands, and collapsible sections where it makes sense. I want to be able to review and edit each section before we share it with the team.",
+    "gold_ids": [
+      "986ff81a-75a0-41d0-b17b-2c536bbef6f8"
+    ],
+    "system_A": [
+      "505cc3ed-ed9c-4e85-a31b-c83dad6a2ad2",
+      "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+      "c0e0417d-bab6-43d1-afb6-ffc2e1080ecb",
+      "82575593-05b1-4970-9c3c-52534ab52e2e",
+      "aebeb6c4-ee3a-4c53-b32c-1d33752e66cf",
+      "abccd92c-ae59-4587-bb04-8f203e9e6aae",
+      "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+      "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+      "6127e796-d2c4-4656-96fc-1f3624b9af48",
+      "1776dcd9-2d0b-413c-aec7-e4a3dfeaa746"
+    ],
+    "system_B": [
+      "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+      "c0e0417d-bab6-43d1-afb6-ffc2e1080ecb",
+      "505cc3ed-ed9c-4e85-a31b-c83dad6a2ad2",
+      "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+      "caca78bc-5efe-446a-ace7-45c37fa742ab",
+      "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+      "5ca1c4b3-af2e-4d00-bab1-1fda94fa6c06",
+      "1af2ce9b-f426-4d85-b7bb-b325576561de",
+      "70b26476-9589-4d6f-8f51-fbcc890263ee",
+      "bb49de4d-ee77-46bd-999f-c3d13e87b88f"
+    ],
+    "annotations": {
+      "dense_pool_miss": true,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03650",
+    "query": "We just shipped v2.3 of our Customer Feedback Analyzer tool and before we cut the release I need two things from you. First, validate the Excel export file at `~/repos/feedback-analyzer/output/customer_feedback_report_v2.3.xlsx` \u2014 it should have 7 view sheets (Overview, Sentiment Analysis, Topic Clusters, Trend Data, Regional Breakdown, Priority Matrix, Raw Data), all 36 columns present with correct headers, proper conditional formatting on sentiment scores, frozen panes, auto-filters, print areas set, and no merged-cell rendering glitches. Flag anything that's off \u2014 last release we had a bug where the Priority Matrix sheet was missing the \"Escalation Status\" and \"SLA Remaining Hours\" columns and the number formatting on currency fields in Regional Breakdown was showing raw floats instead of USD. Second, based on whatever issues you find in the validation, draft well-structured GitHub issues for each problem \u2014 each issue should have a clear title, a description of the expected vs actual behavior with the specific sheet/column/row references, reproduction steps pointing to the relevant code in `src/export/excel_generator.py`, acceptance criteria that a developer can verify against (like \"column Q on the Sentiment Analysis sheet must use 3-color scale conditional formatting from red to yellow to green\"), and appropriate labels (bug, export, priority). Group related problems into single issues where it makes sense rather than filing one per cell. I want the issues tight enough that any dev on the team \u2014 or an AI agent \u2014 can pick one up and fix it without asking follow-up questions.",
+    "gold_ids": [
+      "8a5c8b94-0525-409f-84c4-335f6c5325d5",
+      "bdd9d34d-497e-48f5-bd55-41c9863dbbab"
+    ],
+    "system_A": [
+      "8a5c8b94-0525-409f-84c4-335f6c5325d5",
+      "db9d6528-232a-4f83-b00c-624e40f8d97d",
+      "d20d8699-f8a6-4c06-986a-a42f0e9d4ff1",
+      "e253a8fb-c425-46f1-9855-e838a54b1928",
+      "b7b8fcec-8cc4-4bdf-94ce-8a4c01bfed2c",
+      "628cfcea-5730-41ca-91ee-019bf303abd8",
+      "56c51038-208d-4dd7-88df-4246d6c42e95",
+      "792a6294-4989-4ff6-8504-ca9b6a78ebc0",
+      "0a3e382c-d734-486f-b8cc-17900dfe5d2c",
+      "47992d04-680e-4e67-904b-5f37f58e2c40"
+    ],
+    "system_B": [
+      "8a5c8b94-0525-409f-84c4-335f6c5325d5",
+      "db9d6528-232a-4f83-b00c-624e40f8d97d",
+      "e253a8fb-c425-46f1-9855-e838a54b1928",
+      "3a6f05a4-ab5b-4079-bfb1-cbf647c0b2d1",
+      "bdd9d34d-497e-48f5-bd55-41c9863dbbab",
+      "792a6294-4989-4ff6-8504-ca9b6a78ebc0",
+      "5ec4f219-56b2-4571-8dd0-fbe143a5487b",
+      "e4c1b90c-f8d7-4f8d-ab58-cd899b5b2591",
+      "6c7f6695-a773-4b3c-b61a-8b7757410e86",
+      "56c51038-208d-4dd7-88df-4246d6c42e95"
+    ],
+    "annotations": {
+      "dense_pool_miss": true,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-02145",
+    "query": "We have a Next.js 14 app called \"GreenLedger\" (a carbon accounting dashboard) inside a Turborepo monorepo with `apps/web` and `packages/ui`. Deploying to Vercel has been a nightmare \u2014 the build keeps failing with `Module not found: Can't resolve '@greenledger/ui'` even though it works fine locally. I've tried setting the root directory to `apps/web` in the Vercel project settings and added `\"transpilePackages\": [\"@greenledger/ui\"]` in `next.config.js`, but no luck. Also, we have environment variables like `DATABASE_URL` that contain special characters (specifically a password with `$` signs and backslashes), and they seem to get mangled during the build \u2014 our Prisma migrations fail with authentication errors only on Vercel. On top of that, our preview deployments for PRs are pointing to the production database instead of our staging one. Can you help me fix the `vercel.json` and monorepo configuration so internal packages resolve correctly, show me how to properly escape those env vars so they survive the build, and set up the environment variable overrides so preview deployments automatically use `STAGING_DATABASE_URL`?",
+    "gold_ids": [
+      "adff65d5-81fa-4b8d-9137-563c42e7d256"
+    ],
+    "system_A": [
+      "adff65d5-81fa-4b8d-9137-563c42e7d256",
+      "57237061-529c-4e5d-88e5-a5ae2825ab92",
+      "33f7c438-8c16-4644-9a2d-69bf1b142a44",
+      "72bb088e-73b1-495b-9999-55e4890ef5e2",
+      "54fefeba-4522-4936-9614-bf555702376b",
+      "295e35d4-c05d-4acc-ab8f-d6e4449e8552",
+      "91a9ccd2-fe47-42a1-b83c-694651677dfb",
+      "e22d2652-8fef-444e-946e-31f39ca00527",
+      "c07c07e7-8f32-49f9-b7b4-340277688166",
+      "52173b40-fdc5-4f54-b4c8-183ec7d49dfa"
+    ],
+    "system_B": [
+      "adff65d5-81fa-4b8d-9137-563c42e7d256",
+      "57237061-529c-4e5d-88e5-a5ae2825ab92",
+      "54fefeba-4522-4936-9614-bf555702376b",
+      "295e35d4-c05d-4acc-ab8f-d6e4449e8552",
+      "07b416d1-967e-4891-9a83-ad0a11fdfb4a",
+      "72bb088e-73b1-495b-9999-55e4890ef5e2",
+      "09edfc97-2393-4084-b4e6-cb624f79c842",
+      "9e360a2e-f04f-4607-8e94-f2538087d748",
+      "061cf817-1b82-48d7-850b-a7bd1f7fbeea",
+      "12aebc63-9cff-4da4-bba8-18fc5b2be75f"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-04419",
+    "query": "We're rolling out a new multi-region e-commerce platform and I need help writing the Kubernetes manifests for our checkout service at `~/repos/shopstream-platform/k8s/`. The service is a Go application packaged as `shopstream/checkout-svc:1.4.2`. Here's what we need: a Deployment with 3 replicas using a rolling update strategy (maxSurge 1, maxUnavailable 0), resource requests of 256Mi memory / 250m CPU and limits of 512Mi / 500m, readiness and liveness probes hitting `/healthz` on port 8080, a HorizontalPodAutoscaler targeting 70% CPU utilization scaling between 3 and 12 replicas, a PodDisruptionBudget ensuring at least 2 pods are always available, and a Service of type ClusterIP. The pods need to pull config from a ConfigMap called `checkout-config` and secrets from a Secret called `checkout-secrets` mounted as environment variables. We also need pod anti-affinity rules so replicas spread across availability zones (labeled `topology.kubernetes.io/zone`), and the Deployment should have a `topologySpreadConstraints` block to enforce even distribution. Finally, add resource quotas for the `checkout` namespace limiting total CPU to 8 cores and memory to 16Gi. Please generate all the YAML files with comments explaining the production rationale behind each configuration choice.",
+    "gold_ids": [
+      "74cfb329-cc61-4b78-9fe9-9b4686495a51"
+    ],
+    "system_A": [
+      "905b487a-2753-4fa7-94e5-f70e9c292faa",
+      "74cfb329-cc61-4b78-9fe9-9b4686495a51",
+      "b37533c3-9186-4b7a-a1f7-52491e4f89ce",
+      "da7b53ce-8a15-49d8-9942-79da7d8b9e5e",
+      "115b0259-e957-4746-90ce-5248cf9c7503",
+      "f8c02610-741a-4522-93ad-a3ef4e65be94",
+      "62c42919-3634-4ac1-868b-cba342ffbbab",
+      "f5695734-d590-4e7b-8cba-b97b78e557f0",
+      "1f96e3bd-b7ba-4d82-ae10-e1c118934ae5",
+      "aebeb6c4-ee3a-4c53-b32c-1d33752e66cf"
+    ],
+    "system_B": [
+      "905b487a-2753-4fa7-94e5-f70e9c292faa",
+      "74cfb329-cc61-4b78-9fe9-9b4686495a51",
+      "b37533c3-9186-4b7a-a1f7-52491e4f89ce",
+      "da7b53ce-8a15-49d8-9942-79da7d8b9e5e",
+      "115b0259-e957-4746-90ce-5248cf9c7503",
+      "3c8a43fe-d861-482f-9f8d-bf4b06f03a41",
+      "c897ba07-a0b5-4a78-8e23-e2bc0819a732",
+      "1f96e3bd-b7ba-4d82-ae10-e1c118934ae5",
+      "a09e4d91-66d6-493a-9336-cad842a45744",
+      "7cc2d266-3873-428c-8d95-95c383a23d45"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03802",
+    "query": "Our team maintains an internal developer portal at `~/repos/dev-portal-docs` (MkDocs with Material theme, Python 3.11, mike for versioning) that builds API reference docs from OpenAPI specs and architecture decision records written in Markdown. The whole docs pipeline runs inside WSL2 Ubuntu 22.04 \u2014 we have a GitHub Actions self-hosted runner there that triggers `mkdocs build`, runs link checkers, and publishes to our internal static site host. Right now the setup is a mess: the MkDocs plugins (`mkdocs-awesome-pages`, `mkdocs-macros`, `mkdocs-redirects`) were installed ad-hoc with pip instead of through our `pyproject.toml`, the `mike` versioning aliases are broken so `/latest` 404s, and the GitHub Actions runner service isn't set up as a proper systemd unit so it dies after reboot. Also, our team uses a shared profile convention where each developer's WSL environment reads machine-specific config from `/mnt/c/Users/user/.admin/profiles/{hostname}.json` \u2014 that profile includes things like the docs deploy target URL, the GitHub token variable name, and preferred Python version. I need you to: (1) read my machine's profile JSON and use its settings throughout, (2) set up a proper `pyproject.toml` with uv for all MkDocs dependencies and pin versions, (3) fix the `mike` versioning so that `latest` and `stable` aliases work correctly in our `mkdocs.yml`, (4) create a systemd user service for the GitHub Actions runner so it auto-starts on WSL boot, (5) write a `docs-ci.sh` script that the runner calls which does a clean build, runs `htmltest` for broken links, validates the OpenAPI specs with `vacuum`, and deploys the versioned site, and (6) add a pre-commit hook that catches broken cross-references before they hit CI. Can you walk me through all of this and generate the config files?",
+    "gold_ids": [
+      "1e599f3f-50c3-47cb-ae51-d034816b6da5",
+      "df520945-e83c-42d4-a25d-a9d344ceb89f"
+    ],
+    "system_A": [
+      "1e599f3f-50c3-47cb-ae51-d034816b6da5",
+      "5d971e75-5cc0-4cdd-a5ce-ab33ab16f6e0",
+      "a2982238-3ced-4128-82fc-f01eed7b13d2",
+      "cfe5bfa6-5a8e-4217-8549-385aa7b70deb",
+      "9051cf1b-9605-42a5-b393-8078e4b5eaa4",
+      "26504fdf-e9da-40e5-b60a-d143ac4dabb8",
+      "f2e24305-5b56-4bc4-9fe6-4ac34086c2cd",
+      "ede6c7b6-367c-4b0f-87a5-3a20285dd0f0",
+      "4c6fe471-1248-42e7-8a74-fd7f63c446db",
+      "6a74b010-f22b-4d40-bc19-32d57d0fc1be"
+    ],
+    "system_B": [
+      "1e599f3f-50c3-47cb-ae51-d034816b6da5",
+      "5d971e75-5cc0-4cdd-a5ce-ab33ab16f6e0",
+      "a2982238-3ced-4128-82fc-f01eed7b13d2",
+      "26504fdf-e9da-40e5-b60a-d143ac4dabb8",
+      "9051cf1b-9605-42a5-b393-8078e4b5eaa4",
+      "f2e24305-5b56-4bc4-9fe6-4ac34086c2cd",
+      "8039164b-51a7-4ca4-87ab-ec384279e2b3",
+      "fc1ab521-7d39-442f-92ed-f0c06c89d315",
+      "ede658b2-261a-41f3-88a4-16aec0843e9b",
+      "38ec8904-f6b2-4982-ac4f-4c48c1c69efa"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": true,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03050",
+    "query": "Our agency just signed a new client (a pet insurance brand) and I need to get their first campaign live through the AdCP protocol. Can you walk me through the full workflow? Specifically: (1) discover available advertising products from the sales agent at endpoint `https://ads.petmarket.com/adcp/agent`, (2) create a new campaign called \"PawProtect Summer Push\" targeting US pet owners aged 25-54 with a $15,000 monthly budget, (3) sync our three creative assets (two 300x250 display banners and one 15s pre-roll video) to the campaign, and (4) set up delivery tracking so we can monitor impressions and spend daily. Also, if there's a sandbox/test mode on the API I'd like to validate everything there first before going live. Show me the full API calls and expected responses for each step.",
+    "gold_ids": [
+      "4fb221af-a361-4a6d-b94b-2f1bcabf8dcc"
+    ],
+    "system_A": [
+      "4fb221af-a361-4a6d-b94b-2f1bcabf8dcc",
+      "5a8d2681-1f00-49d4-b21e-985f0a101fc4",
+      "5f228401-df25-469f-8b6e-e3b0289c819d",
+      "f16f9df7-7e8c-4f0d-bb86-6062d8dddee0",
+      "bcf0f564-cbd6-4133-b41c-dddeb1f29346",
+      "11fa2d2a-8b7a-441b-9e0c-c457f5d5b584",
+      "678ce4de-bfa7-495b-baff-0b2f1dd59661",
+      "89386612-e4ce-4c3a-a54b-3ce42e35733b",
+      "3b6b6738-a3d7-4b8e-bd75-864c15b448ad",
+      "4b35e258-577b-4e15-91bd-6feae1bcfad4"
+    ],
+    "system_B": [
+      "4fb221af-a361-4a6d-b94b-2f1bcabf8dcc",
+      "5a8d2681-1f00-49d4-b21e-985f0a101fc4",
+      "f16f9df7-7e8c-4f0d-bb86-6062d8dddee0",
+      "11fa2d2a-8b7a-441b-9e0c-c457f5d5b584",
+      "678ce4de-bfa7-495b-baff-0b2f1dd59661",
+      "f20d31b0-b4e7-4abf-89ab-35d6922e0fd8",
+      "3b6b6738-a3d7-4b8e-bd75-864c15b448ad",
+      "0c80b9fc-9fb6-4f97-98c6-41db38f5afb3",
+      "5f228401-df25-469f-8b6e-e3b0289c819d",
+      "4b35e258-577b-4e15-91bd-6feae1bcfad4"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03154",
+    "query": "Can you help me define the data models for our veterinary clinic's appointment scheduling API? We need a `Pet` model with species, breed, name, date_of_birth (optional), and weight in kg (must be positive), a `VetDoctor` model with license_number validated against a regex pattern like `VET-\\d{6}`, list of specializations, and availability windows, and an `Appointment` model that references both with start/end datetimes where end must be after start, an enum status field (scheduled/completed/cancelled/no_show), and an optional notes field max 500 chars. Each model should have proper examples in the JSON schema, and I'd like a `ClinicConfig` model using `model_config` for environment-based settings like db connection string, max daily appointments per vet (default 20), and cancellation window hours. Also add a custom validator on Appointment that raises an error if someone tries to book outside the vet's availability windows.",
+    "gold_ids": [
+      "3662ec84-0ea7-47d8-9f26-01cacc974930"
+    ],
+    "system_A": [
+      "bd244c6d-0678-44de-a2cf-008ffaaa1e80",
+      "e8028922-5777-4e52-ad7b-d53bbbf4636a",
+      "77cc3def-a6f9-4304-8b8b-4470a85a29cc",
+      "c9b057b6-b4e1-4c3c-87d6-c79eddde193a",
+      "5303bf7d-0501-46fd-b063-0a3a69c2934a",
+      "ee0d35f8-47d2-4ef2-9ee6-1ad98f3ea3c2",
+      "52955f6d-3dfe-4948-8ab2-011b9ed63f0d",
+      "8168f986-8425-40f5-9b05-8423fae2635a",
+      "3662ec84-0ea7-47d8-9f26-01cacc974930",
+      "4291656e-352b-43b1-b856-440a822a3a50"
+    ],
+    "system_B": [
+      "bd244c6d-0678-44de-a2cf-008ffaaa1e80",
+      "52955f6d-3dfe-4948-8ab2-011b9ed63f0d",
+      "77cc3def-a6f9-4304-8b8b-4470a85a29cc",
+      "4291656e-352b-43b1-b856-440a822a3a50",
+      "8e350932-0d80-4d01-9b96-6ac9796c21e9",
+      "8755b609-5235-421a-b7a3-49c677552402",
+      "6d212edf-01ee-4b75-9e47-03c312218820",
+      "e203bc7b-6d31-40b1-9efd-28955afb1761",
+      "4f4a8df7-37a5-4eb3-95f1-557be07f489c",
+      "ee0d35f8-47d2-4ef2-9ee6-1ad98f3ea3c2"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": true,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01972",
+    "query": "We're starting a new internal tool called \"HarvestBoard\" \u2014 a crop yield tracking dashboard for our agricultural cooperative. The stack will be a Python/FastAPI backend with a React/TypeScript frontend using TanStack Query. I need three things done: First, set up the Python project from scratch using `uv` for dependency management, with a proper `pyproject.toml`, a shared `utils/` package for database helpers and date/season calculations, and a `scripts/` directory following our team's convention of prefixing scripts with `run_` and including a `if __name__ == \"__main__\"` guard. Second, write a detailed requirements specification for the \"Field Entry Submission\" feature \u2014 this is where farmers submit daily yield data for their assigned fields. I need proper user stories with acceptance criteria, edge cases (offline submissions, duplicate entries, conflicting data from shared fields), and clearly defined system behaviors for validation, conflict resolution, and notification triggers. Make the requirements testable and unambiguous so QA can derive test cases directly. Third, on the React side, when a farmer submits a new yield entry via the form, I want the entry to appear immediately in the daily yields table and update the running season total in the sidebar \u2014 don't wait for the server round-trip. If the mutation fails (network error, validation rejection, conflict detected), roll back the table row and season total to their previous state, show a toast explaining what went wrong, and if it was a conflict, pre-fill the form again with the farmer's original input so they don't lose their data. I want the optimistic state managed through TanStack Query's mutation lifecycle hooks rather than manual state juggling.",
+    "gold_ids": [
+      "1031892a-11d5-440b-ac7a-818f0bba2b15",
+      "78fae8eb-b73c-4e25-a4e6-0fdbadf2e317",
+      "992188cd-76cb-4bc3-8c8a-0580465cac4d"
+    ],
+    "system_A": [
+      "ac4206e0-a528-4584-bd97-139c5704b1aa",
+      "2b9bfc2e-e618-44b4-877d-9f55d36e700c",
+      "83084785-0f5b-4e93-a866-622e73c87cc5",
+      "672d4a8b-6ba6-4e59-be9f-2d4cead7919e",
+      "78fae8eb-b73c-4e25-a4e6-0fdbadf2e317",
+      "4fb75f3c-cdf6-40ad-8249-68c570290a61",
+      "8e451a65-990a-483a-8201-9a072eb78265",
+      "4441d160-09ae-4c8a-a6df-cef31715f035",
+      "4083d5a0-50e0-4a15-a007-8c008458ea55",
+      "dd097c17-9ffe-4766-9a02-3cbde0e2f6c7"
+    ],
+    "system_B": [
+      "83084785-0f5b-4e93-a866-622e73c87cc5",
+      "ac4206e0-a528-4584-bd97-139c5704b1aa",
+      "78fae8eb-b73c-4e25-a4e6-0fdbadf2e317",
+      "1109302b-ca3a-45fe-849c-226773d8a3fe",
+      "2b9bfc2e-e618-44b4-877d-9f55d36e700c",
+      "8e451a65-990a-483a-8201-9a072eb78265",
+      "4083d5a0-50e0-4a15-a007-8c008458ea55",
+      "4441d160-09ae-4c8a-a6df-cef31715f035",
+      "4fb75f3c-cdf6-40ad-8249-68c570290a61",
+      "ea40a5d5-251d-432f-8fdc-c854c69d828a"
+    ],
+    "annotations": {
+      "dense_pool_miss": true,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-02255",
+    "query": "Our \"AquaVault\" water treatment monitoring backend (FastAPI, PostgreSQL, Celery workers) just had a rough deploy \u2014 the `alembic upgrade head` migration is failing with a locked advisory lock error, the Celery beat scheduler can't find the `redis` package even though it's in our Poetry lockfile, and our `/api/v2/sensors/readings` endpoint is throwing 500s because of a missing `pydantic` validator import. I need you to get the service back to a healthy state by running the deploy steps in a loop that detects and auto-fixes these kinds of issues (retry migrations on lock conflicts, install missing deps if they're not resolving, fix broken imports), escalating anything truly unexpected. Once you've stabilized things, write up full documentation for the new `v2/sensors` module following our repo's `DOCUMENTATION_GUIDELINES.md` \u2014 it should include the architecture overview, all endpoint contracts with request/response payloads, a Mermaid sequence diagram showing the flow from sensor ingestion through Celery task processing to database persistence, and the seeding instructions for populating test sensor data. Log everything significant you do during recovery and documentation into our `JOURNAL.md` so the on-call team has a record of what happened and what was fixed.",
+    "gold_ids": [
+      "3b59d12b-82ca-4f25-b8a5-ee47612083e9",
+      "b384a611-30fe-4f14-b86a-64440ecd0e27",
+      "cfdd89a2-1092-4eeb-98b3-e97ff56f9684"
+    ],
+    "system_A": [
+      "b384a611-30fe-4f14-b86a-64440ecd0e27",
+      "cfdd89a2-1092-4eeb-98b3-e97ff56f9684",
+      "49c186ef-cfad-4f7f-a5ce-22849566a400",
+      "e44f7dcf-b7f0-48a6-9d06-e849dea1f751",
+      "4a3b3ff6-8926-4186-8255-52d0d9cda303",
+      "6fe9a65c-064c-4383-b104-043077355a18",
+      "3b59d12b-82ca-4f25-b8a5-ee47612083e9",
+      "49ea6091-0ec0-42c8-b18b-54a5b4d8aa61",
+      "bcf9f1d9-5fa3-4c21-8f4f-e1f24715fcfa",
+      "7563aeba-14cb-4d8c-a58b-e1f45730ae11"
+    ],
+    "system_B": [
+      "b384a611-30fe-4f14-b86a-64440ecd0e27",
+      "3b59d12b-82ca-4f25-b8a5-ee47612083e9",
+      "e44f7dcf-b7f0-48a6-9d06-e849dea1f751",
+      "2b41bd9d-7c8c-4557-b37a-79f657d38552",
+      "b1ce1f41-bbfc-4418-af0f-88530a822e97",
+      "90fcbd2a-47c1-4325-b6bd-4bcd4ab1bc04",
+      "8f2df389-0bfd-43e2-b5c5-8ebd4642f5f9",
+      "9ee71d4a-c576-48d2-bf14-794ee56b7366",
+      "44769a4f-f2e3-4453-a8ea-f20d522536d4",
+      "48c4ee07-0bb1-4487-bbe9-87642fe295a8"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": true,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-02590",
+    "query": "We've been going back and forth for a while now on the architecture for the \"AquaTrace\" water quality monitoring system \u2014 you helped me design the event-driven ingestion pipeline, we settled on TimescaleDB for the sensor readings, worked through the alert routing logic, and just finished sketching out the GraphQL schema for the dashboard. I'm about to head into a two-week vacation with no connectivity, so please save this session as a checkpoint before I go, so I can pick up exactly where we left off when I'm back.",
+    "gold_ids": [
+      "01ce53d1-898e-4428-9814-87aca42de380"
+    ],
+    "system_A": [
+      "668efec9-60de-46c1-a790-aed6edc9c3a8",
+      "25a75e29-de73-44a6-8a42-5b2c778ab217",
+      "00c9d775-97bd-4b13-a0fe-ee3b71263c8c",
+      "0afb552b-2eb1-43a9-98f7-e288b88af3b6",
+      "438bc570-310f-4369-b995-5399c03ce06b",
+      "62ffdbb5-7c0e-4fff-9266-2bbb1789bf74",
+      "d8f61008-819f-45f4-bdea-16b80e7bffef",
+      "01ce53d1-898e-4428-9814-87aca42de380",
+      "a12f1ac0-5296-468f-a739-2cb692e1bf7a",
+      "ba8b3a13-ef56-47bb-8039-da0ecda772c4"
+    ],
+    "system_B": [
+      "01ce53d1-898e-4428-9814-87aca42de380",
+      "0afb552b-2eb1-43a9-98f7-e288b88af3b6",
+      "25a75e29-de73-44a6-8a42-5b2c778ab217",
+      "62ffdbb5-7c0e-4fff-9266-2bbb1789bf74",
+      "ba8b3a13-ef56-47bb-8039-da0ecda772c4",
+      "51884373-5746-498c-a448-fb787968c765",
+      "02037a15-3ff5-4b0e-9a32-51bb8f6f3f70",
+      "cb226530-a09b-403d-b7ef-8fcba5adc244",
+      "0e74b312-88d6-4e72-8060-7bfb90540142",
+      "445a4cce-c416-4090-8830-9c3020f537cd"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": true,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-04772",
+    "query": "Our open-source Python SDK at `~/repos/cloudmesh-sdk/` is tagged at v2.3.0-rc1 and we're planning to cut the stable v2.3.0 release to PyPI tomorrow morning. Before we do, can you run a full pre-release validation? Specifically, check that the version strings are consistent across `pyproject.toml`, `setup.cfg`, `__init__.py`, and the CHANGELOG; verify there are no pinned dev-only dependencies leaking into the install_requires; make sure all public modules have docstrings and type hints; confirm the test suite passes with no skipped or xfail tests that shouldn't be there; validate that the LICENSE and NOTICE files are present and the classifiers in pyproject.toml match our actual supported Python versions (3.9\u20133.12); check for any TODO/FIXME/HACK comments that were supposed to be resolved before release; ensure the Git tag matches the package version; and flag any unreleased breaking changes in the API surface compared to v2.2.0. Give me a clear go/no-go with a summary of every issue found.",
+    "gold_ids": [
+      "ae3e1159-34f5-4873-a6d1-3ecc95758b62"
+    ],
+    "system_A": [
+      "ae3e1159-34f5-4873-a6d1-3ecc95758b62",
+      "9e6cf22c-b53a-478d-8546-2840ce7b6430",
+      "198a0123-2e09-4437-b3e5-d10485460a6a",
+      "f29575ff-2427-4003-9b8c-b59ba4143ad5",
+      "06d0c4c5-e088-48d2-b6db-19a443a6b4f6",
+      "536a4b74-c8b8-475a-ae0d-894caa12cc20",
+      "27f0a730-211c-4bd5-9a19-e4679bae376d",
+      "0d2cca78-c159-40a3-a05e-903b86a6d756",
+      "2078f09e-a816-44e0-947c-c31a0c866f45",
+      "950b557f-b4bb-4e53-a67d-38de6fc26829"
+    ],
+    "system_B": [
+      "ae3e1159-34f5-4873-a6d1-3ecc95758b62",
+      "f78426f5-dd77-42d7-acd1-d4a4137edd80",
+      "9e6cf22c-b53a-478d-8546-2840ce7b6430",
+      "2078f09e-a816-44e0-947c-c31a0c866f45",
+      "2a7bb896-c380-48e9-9f1b-e892b6d28095",
+      "f29575ff-2427-4003-9b8c-b59ba4143ad5",
+      "2b40480a-86b9-40d8-a88b-090af4c977ec",
+      "ee60b32e-7cda-44f2-936c-688d5992d12c",
+      "0d2cca78-c159-40a3-a05e-903b86a6d756",
+      "198a0123-2e09-4437-b3e5-d10485460a6a"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01137",
+    "query": "We're launching a new e-commerce platform called \"ShopHaven\" built on Django/React with a PostgreSQL backend, and before we go live next month I need to set up a fully autonomous AI-driven penetration testing pipeline against our staging environment (https://staging.shophaven.io). Specifically, I want to use PentAGI or a similar AI-orchestrated framework to automate the full pentest lifecycle \u2014 starting with reconnaissance using subfinder and nmap for asset discovery, then feeding discovered endpoints into nuclei for vulnerability scanning, chaining any confirmed SQLi findings into sqlmap for automated exploitation with proof-of-concept dumps, and finally having the AI agent generate a structured pentest report (executive summary + technical findings with CVSS scores + PoC evidence). I'd also like this entire pipeline wired into our GitHub Actions CI/CD so it runs automatically against every staging deployment before promotion to production, with a quality gate that blocks the deploy if any critical or high-severity findings are confirmed. Can you walk me through the architecture for this, provide the configuration files for the AI pentest orchestration agent, the GitHub Actions workflow YAML, and the integration logic that ties the autonomous agent's tool outputs together into the final report?",
+    "gold_ids": [
+      "9d3f0f25-50aa-42ad-ab5c-ff50c3cb8a9f"
+    ],
+    "system_A": [
+      "9d3f0f25-50aa-42ad-ab5c-ff50c3cb8a9f",
+      "45f46155-1074-4fc3-8f39-d7a250bd74fe",
+      "1c36f31a-5ae3-4461-82df-af5706179802",
+      "ef015eb4-a3a3-4e96-ba1a-669ac64fcc59",
+      "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+      "584fd713-d8c7-4a87-a1ee-dc589c5f5a12",
+      "1d1b1471-b9de-4db1-b755-f98eebd1c920",
+      "59756097-c96f-42e9-a824-aa3f3514cff2",
+      "ad4189b9-d13b-40fc-8ac8-e52be667eb57",
+      "da4957cd-68a0-4166-bc57-e217db38b2a7"
+    ],
+    "system_B": [
+      "9d3f0f25-50aa-42ad-ab5c-ff50c3cb8a9f",
+      "45f46155-1074-4fc3-8f39-d7a250bd74fe",
+      "1c36f31a-5ae3-4461-82df-af5706179802",
+      "ad4189b9-d13b-40fc-8ac8-e52be667eb57",
+      "584fd713-d8c7-4a87-a1ee-dc589c5f5a12",
+      "ec515129-dc9e-4f4e-95f6-945419099b1d",
+      "1d1b1471-b9de-4db1-b755-f98eebd1c920",
+      "a0353ce4-4364-40d7-8c3f-0ea009722c9b",
+      "617c4612-d78e-40b3-8000-754eb00c2666",
+      "2983c439-27cd-49da-b8d3-b60a39e49136"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01223",
+    "query": "We just shipped a new summarization feature in our \"InsightFlow\" product that calls GPT-4o to condense customer feedback tickets, and stakeholders are complaining the summaries are too vague. I want to set up a proper evaluation pipeline using Braintrust so we can systematically measure quality. Specifically, I need: (1) a scoring function that checks for factual consistency and specificity against the original ticket text, (2) an eval script I can run from CI that pulls the latest 200 production logs from Braintrust using a SQL query filtering by `project_name = 'feedback-summarizer'` and `created > now() - interval '7 days'`, uses those as test cases, and outputs a pass/fail summary, and (3) updated logging in our Python summarization service so every LLM call is traced in Braintrust with the input ticket, output summary, latency, token count, and the customer's tier as metadata. We're on `braintrust-sdk 0.5.x` and deploying via GitHub Actions. Can you walk me through the implementation for all three pieces?",
+    "gold_ids": [
+      "7e2e7801-5b00-400d-96cb-559d27cb0cd7"
+    ],
+    "system_A": [
+      "7e2e7801-5b00-400d-96cb-559d27cb0cd7",
+      "4e60fefc-0e3a-4d0a-a93a-ada9005a49c7",
+      "2fea5ce0-fbfc-407c-ab1f-a506a11e8dee",
+      "95a11c92-0091-428d-8519-0ce7408a9935",
+      "05d85966-288d-4ef8-941a-9e01f1075226",
+      "f3e80cea-2adf-466e-9da3-03eb1da43507",
+      "7d69895b-5a9f-45b7-a25e-17928b69910a",
+      "3a6f05a4-ab5b-4079-bfb1-cbf647c0b2d1",
+      "1131cf8d-d9cc-48b2-8c83-9e5ca903aa4b",
+      "e738a508-b0a5-435f-abc1-027677ee8ff7"
+    ],
+    "system_B": [
+      "7e2e7801-5b00-400d-96cb-559d27cb0cd7",
+      "4e60fefc-0e3a-4d0a-a93a-ada9005a49c7",
+      "67496237-2915-4e4c-9d0f-afd9c3b81786",
+      "f3525b7c-68e8-46db-b4cc-ded02c5b9022",
+      "95a11c92-0091-428d-8519-0ce7408a9935",
+      "299903f8-a806-470f-bf86-a73c3816f541",
+      "e738a508-b0a5-435f-abc1-027677ee8ff7",
+      "f3e80cea-2adf-466e-9da3-03eb1da43507",
+      "529bde3a-8783-45a1-9cd4-cd3637666616",
+      "43bb5312-7b14-4141-9894-4fd0605a38e8"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-00702",
+    "query": "Design a Python-based \"ClaimPilot\" system for our insurance company that autonomously processes incoming claims emails. When a new claim arrives, the system should: (1) extract structured data from the email (policy number, incident description, date, claimed amount), (2) use a tool to look up the customer's policy details and coverage limits from our internal API, (3) cross-reference the incident against a fraud detection service, (4) if the claim amount is under $5,000 and passes fraud checks, auto-approve it and generate a settlement letter; if it's between $5,000\u2013$25,000, gather comparable past claim outcomes by querying our claims database tool and draft a recommendation memo for a human adjuster; if it's over $25,000, escalate by dispatching parallel tool calls to schedule an in-person inspection, notify the legal team, and request additional documentation from the claimant. I want the architecture to support adding new tools without modifying the core orchestration loop, handle cases where tools return errors or time out (with configurable retry/fallback strategies), and maintain a full audit log of every reasoning step and tool invocation. Please provide the agent architecture diagram, the core orchestrator code, at least three concrete tool implementations, and the prompt templates that guide the LLM's decision-making at each branching point.",
+    "gold_ids": [
+      "57ca9c6b-c2c3-446a-b695-09f824efc80d"
+    ],
+    "system_A": [
+      "17c986a9-70f9-4d94-a2eb-c208cd09ca6f",
+      "57ca9c6b-c2c3-446a-b695-09f824efc80d",
+      "45f46155-1074-4fc3-8f39-d7a250bd74fe",
+      "ad0dd48a-9181-4bcb-b37f-2e74f5894289",
+      "7e0793ae-ad9d-4196-8192-ad4fae8985f8",
+      "7e9020d5-3130-4979-9d00-fe27837522e9",
+      "6b6ac1cd-9934-4445-9b78-a8497285c7e7",
+      "13809cca-f0a5-45f2-8ceb-168b10982d42",
+      "5e9637d9-31a9-4c95-8816-94da924a51e5",
+      "c349d963-e69f-40ba-ba94-64e3302d4d23"
+    ],
+    "system_B": [
+      "163aeefe-7ed5-43d5-9068-19e17802ee8d",
+      "57ca9c6b-c2c3-446a-b695-09f824efc80d",
+      "17c986a9-70f9-4d94-a2eb-c208cd09ca6f",
+      "837de7fb-15d3-4610-982d-07178b03f567",
+      "71a9293b-1cf7-4089-9a0c-32847512e452",
+      "d5f01b57-75db-4a16-bf15-662b5c1adfc3",
+      "48cf91e6-4554-4fdb-b985-0c70581aae2b",
+      "45f46155-1074-4fc3-8f39-d7a250bd74fe",
+      "db0031d4-d2e3-49cf-9d70-b0da71229507",
+      "ad4189b9-d13b-40fc-8ac8-e52be667eb57"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-03923",
+    "query": "I just finished a brainstorming session with my team about our Q3 product roadmap and typed up a bunch of notes in this chat \u2014 can you take everything we discussed about the new referral program feature (the user flow, edge cases, success metrics, and open questions), organize it into a clean structured summary with sections and bullet points, and then save it to a nicely formatted file called `q3-referral-program-notes.md` with a professional theme? I want headers, a table of contents, and maybe a dark-mode friendly color scheme in the styling so I can share it with stakeholders.",
+    "gold_ids": [
+      "138214b6-1eff-4d91-8003-29c7f8c3f21f"
+    ],
+    "system_A": [
+      "30cc10b8-d293-4818-8cb8-301d54fd72af",
+      "138214b6-1eff-4d91-8003-29c7f8c3f21f",
+      "0b66bd0e-561e-4e6d-8e73-c95e2611d6e6",
+      "ae217f6b-0ca4-465f-9030-b3513e7d214d",
+      "84dbd51e-00d1-46aa-9610-836aa5a72369",
+      "d38bc165-8d91-4ca4-853c-1e32168ab596",
+      "405fdccd-d029-41c0-b6ea-16ee28815d54",
+      "58c3d5d9-b1a6-4241-820d-67497f3d3769",
+      "d9d98428-07e5-4172-a402-6a2ab5946752",
+      "318906b5-85dc-4449-9e05-7317539eda84"
+    ],
+    "system_B": [
+      "138214b6-1eff-4d91-8003-29c7f8c3f21f",
+      "30cc10b8-d293-4818-8cb8-301d54fd72af",
+      "9a53cd85-d59a-4852-8b0f-2bbb7821a4be",
+      "f9efc04e-cd0e-43af-8ad1-0265f06cf4be",
+      "dd3ab950-c82f-47e6-98f3-8590df4eb1c7",
+      "0b66bd0e-561e-4e6d-8e73-c95e2611d6e6",
+      "ae217f6b-0ca4-465f-9030-b3513e7d214d",
+      "abccd92c-ae59-4587-bb04-8f203e9e6aae",
+      "572e8838-8d8b-4c0d-bd5d-6d1c0c3b3a7e",
+      "84dbd51e-00d1-46aa-9610-836aa5a72369"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-04775",
+    "query": "PR #312 on `~/repos/fleet-analytics/` just got merged \u2014 it was the big one that refactored our incident classification pipeline after last week's outage where misrouted alerts caused a 47-minute delay in driver dispatch. Can you run through the full post-merge cycle on this? Specifically: sync the Linear tickets (FLT-891 through FLT-897) to \"Done\", make sure all the commits on that branch follow our conventional commit standards and fix any that don't, write up a postmortem document for the dispatch outage since it affected 1,200+ active drivers, and then review the last two weeks of code review comments and Slack threads in #fleet-eng to see if there are recurring patterns or rules we should crystallize into our `CLAUDE.md` so the team stops repeating the same mistakes. The PM also asked me to flag anything from this iteration that should feed back into refining our alerting pipeline requirements for the next sprint.",
+    "gold_ids": [
+      "34f6f3cd-bb4a-40d1-911d-c68324d5c2c8"
+    ],
+    "system_A": [
+      "34f6f3cd-bb4a-40d1-911d-c68324d5c2c8",
+      "96fdcf4a-9f71-4f21-b719-7edd27ba476a",
+      "473319f9-56aa-4e1f-a185-48a515cae448",
+      "d7b3fb0c-72bb-44de-bd4e-d00e1f481f01",
+      "393e4f40-59d3-41ee-b54b-20a50cf4f5a0",
+      "8cd80a4d-f6b8-4deb-bb76-a935100ed1bc",
+      "26630e91-c6f5-4dcc-abb4-d0eeb29dc86e",
+      "84f27047-5cf6-4e01-b1ee-86448d72f599",
+      "02cc5738-c76d-4e25-a44a-3d7b2267389a",
+      "fba8991d-a8e2-4f51-9a4a-4129c4862655"
+    ],
+    "system_B": [
+      "34f6f3cd-bb4a-40d1-911d-c68324d5c2c8",
+      "fba8991d-a8e2-4f51-9a4a-4129c4862655",
+      "e0bc1eee-6aef-43af-9e6b-75a17fe9a95a",
+      "84f27047-5cf6-4e01-b1ee-86448d72f599",
+      "e191fce9-7c01-4855-af61-5ac02f2a820b",
+      "26630e91-c6f5-4dcc-abb4-d0eeb29dc86e",
+      "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+      "04de7a6a-d4f4-4331-a2f6-e1091058f654",
+      "792a6294-4989-4ff6-8504-ca9b6a78ebc0",
+      "96fdcf4a-9f71-4f21-b719-7edd27ba476a"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01436",
+    "query": "We're preparing to go live with our \"MedVault\" healthcare records platform on a shared Kubernetes cluster and need a robust admission control layer as the last gate before anything hits production. Here's what I need: Install Kyverno (latest stable) with high-availability mode across our three clusters (staging, preprod, prod), configure validating and mutating admission webhooks that enforce our baseline policies \u2014 every Pod must have resource limits, no containers running as root, only images from our approved registries (gcr.io/medvault-prod, ghcr.io/medvault), and all deployments must carry the `app.medvault.io/reviewed-by` annotation. Also set up the Kyverno Policy Reporter with its UI so our compliance team can see violations in a dashboard, and configure background scan mode so existing resources that drift out of compliance get flagged continuously, not just at admission time. For the webhook config, I want failure policy set to `Fail` in prod (hard enforcement) but `Ignore` in staging so devs aren't blocked. Include the Helm values files for each environment, the ClusterPolicy YAML manifests, the PolicyReporter Helm config with Grafana integration, and a runbook for what to do if the webhook goes down and starts rejecting everything.",
+    "gold_ids": [
+      "5adb67fc-e28f-418a-9c43-fb777f4128d4"
+    ],
+    "system_A": [
+      "5adb67fc-e28f-418a-9c43-fb777f4128d4",
+      "ea366e7a-9e7a-494b-8cdd-65ffcbfeb3a9",
+      "501c261f-0589-4112-8efd-899847b9c056",
+      "f623f9a0-305d-4a7d-9ece-4ef4f0a90082",
+      "905b487a-2753-4fa7-94e5-f70e9c292faa",
+      "115b0259-e957-4746-90ce-5248cf9c7503",
+      "fd145f6d-abb1-4c71-8471-113550533576",
+      "da7b53ce-8a15-49d8-9942-79da7d8b9e5e",
+      "4ede01fb-7073-4238-889d-aa594ccc250b",
+      "25aa54da-3d04-4547-855e-c3a6e274e652"
+    ],
+    "system_B": [
+      "5adb67fc-e28f-418a-9c43-fb777f4128d4",
+      "ea366e7a-9e7a-494b-8cdd-65ffcbfeb3a9",
+      "f623f9a0-305d-4a7d-9ece-4ef4f0a90082",
+      "501c261f-0589-4112-8efd-899847b9c056",
+      "905b487a-2753-4fa7-94e5-f70e9c292faa",
+      "b37533c3-9186-4b7a-a1f7-52491e4f89ce",
+      "fd145f6d-abb1-4c71-8471-113550533576",
+      "115b0259-e957-4746-90ce-5248cf9c7503",
+      "74cfb329-cc61-4b78-9fe9-9b4686495a51",
+      "2bc96f69-ae6e-446a-8e99-70f9d9d202e6"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-02635",
+    "query": "Our Next.js 14 app \"GuildBoard\" is a community forum for tabletop RPG players. We just integrated Clerk for authentication but need to lock down several areas: the `/api/campaigns/*` endpoints should only be accessible to authenticated users, the `/api/admin/*` routes need a custom \"admin\" role check via Clerk's session claims, and we want subscription-tier gating so only \"premium\" members can access the `/api/homebrew-vault/*` endpoints \u2014 the subscription status is stored as Clerk metadata. Can you help me implement all the middleware and route protection logic? Also, once we've got the auth layer solid, use Gemini to generate comprehensive test files covering each protection layer \u2014 unit tests for the middleware functions, integration tests simulating expired sessions, role mismatches, and subscription downgrades hitting protected routes. I want the tests in Vitest and want them to mock Clerk's `auth()` and `currentUser()` helpers properly.",
+    "gold_ids": [
+      "0f79aa7d-15f7-4b9d-a3f0-e1189b953701",
+      "1244eaa3-e61f-4e95-a231-91d1484e6fdd"
+    ],
+    "system_A": [
+      "1244eaa3-e61f-4e95-a231-91d1484e6fdd",
+      "96954196-4a8b-4174-b928-218b49862fb0",
+      "abc30f6b-d1a7-4ba9-9975-d8a5b520e78c",
+      "e2bdf726-840c-43f3-8006-510c95a0bdd2",
+      "38e8a3e0-e88a-4db6-a20f-b44ca36933a6",
+      "99dd450e-ceeb-4134-b7d1-26182524af3a",
+      "3bb6add7-4900-42b4-8393-ab128e817e41",
+      "4b066638-3268-48af-aa28-7762ae027166",
+      "ef552032-814d-41ee-88c6-b652b772b65e",
+      "73450a1b-2984-4f29-a23d-942ff0013a9c"
+    ],
+    "system_B": [
+      "96954196-4a8b-4174-b928-218b49862fb0",
+      "1244eaa3-e61f-4e95-a231-91d1484e6fdd",
+      "e2bdf726-840c-43f3-8006-510c95a0bdd2",
+      "abc30f6b-d1a7-4ba9-9975-d8a5b520e78c",
+      "38e8a3e0-e88a-4db6-a20f-b44ca36933a6",
+      "790ff2c4-f5d6-42a0-8d2a-9563dc686f96",
+      "5256fb7e-6793-44d5-92e5-b01ce844b6b7",
+      "1c4488f7-0c59-4ce1-8bb8-8af4732ae74f",
+      "3bb6add7-4900-42b4-8393-ab128e817e41",
+      "cedea5c0-6567-4493-b216-369c674bed1d"
+    ],
+    "annotations": {
+      "dense_pool_miss": true,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": true
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  },
+  {
+    "id": "q-01186",
+    "query": "Hey, I'm starting a Daggerheart campaign this weekend and I want to pre-build a Level 1 character sheet template I can hand to my players during Session Zero. The character concept is a Ribbet Bard from the Orderborne community \u2014 can you walk me through picking their two domain cards, setting up their initial Experiences (I want exactly three, each with a clear mechanical trigger and a narrative scope so they don't bleed into each other during play), and lay out the full character sheet in a structured format I can reuse as a blank template for other players? Also, for the Experiences specifically, I want constraints so that no single Experience can apply to more than roughly a third of all ability checks \u2014 how should I word them to keep that boundary firm without making them too narrow to ever trigger? And lastly, stub out what the level 2 through 5 advancement path looks like for this build so I can plan the campaign arc accordingly.",
+    "gold_ids": [
+      "eecc3fd1-56c2-4ce0-afef-ee0933aa838c"
+    ],
+    "system_A": [
+      "eecc3fd1-56c2-4ce0-afef-ee0933aa838c",
+      "81a190e7-082e-4a22-9fa5-5666d2ac791f",
+      "7101be9b-4db9-48a8-a876-ccaa620103dc",
+      "d9ce80d8-0528-4f8b-afa7-d0037ffdee96",
+      "9b300f16-5032-440a-a980-e6d8ac9aa574",
+      "ef8bcadd-0926-4f1d-bef1-929276fd37cb",
+      "3576cc5e-8f0b-4d92-bb7c-f765fa26f893",
+      "0e3395a4-58db-40c7-a4e2-1d872201a9b7",
+      "dd69c959-167f-46de-b697-08ca968a9472",
+      "7a045389-3773-402f-9f36-153560882edb"
+    ],
+    "system_B": [
+      "eecc3fd1-56c2-4ce0-afef-ee0933aa838c",
+      "68c25ac4-526a-4f42-b076-c4a54e95ad4e",
+      "81a190e7-082e-4a22-9fa5-5666d2ac791f",
+      "3576cc5e-8f0b-4d92-bb7c-f765fa26f893",
+      "d9ce80d8-0528-4f8b-afa7-d0037ffdee96",
+      "f0046249-6379-49ab-9aa6-b5d6c4c9af95",
+      "62bbdefd-6c37-491b-821a-05f78271bdb7",
+      "da10cebf-6cda-4125-8d43-f5bf2d2e01c8",
+      "3c98cb2f-57d9-4db6-81c8-ea423383c318",
+      "00216048-a679-484e-ab5a-9008dc07ead7"
+    ],
+    "annotations": {
+      "dense_pool_miss": false,
+      "dense_ranking_miss_within_pool": false,
+      "multi_skill_partial": false
+    },
+    "reviewer_note": "Assign semantic causes after blind review; downstream wrong-use cannot be inferred from retrieval."
+  }
+]

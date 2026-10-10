@@ -1,0 +1,8 @@
+model,platform,library_size,planned,attempted,valid,recall_valid_only,precision_valid_only,exact_sets_valid
+Qwen 3.5 4B MLX,Mac local,50,5,5,4,1.0,0.75,2
+Qwen 3.5 9B MLX,Mac local,50,5,5,5,0.8,0.6,1
+Qwen 3.8 27B,OpenRouter,50,5,1,1,1.0,1.0,1
+Qwen 3.8 Flash,OpenRouter,50,5,5,4,0.875,0.5833333333333334,1
+DeepSeek V4.1 Flash,OpenRouter,50,5,5,5,0.9,0.7,2
+MiMo V2.6 Pro,OpenRouter,50,5,5,4,0.875,0.5625,1
+GLM 5.3 Flash,OpenRouter,50,5,5,5,0.9,0.8666666666666666,4

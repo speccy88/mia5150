@@ -1,0 +1,29 @@
+{
+  "review_type": "Static audit only; active training untouched",
+  "script": "pilot20_dynamic.py",
+  "sha256": "7c15f75581bfb7e2f123b9b09d55281559cb327aa5a866361db163e6d03c8179",
+  "retry_assessment": "Core AMP retry sequence is correct",
+  "retry_checks": [
+    "unscale_ records found_inf before explicit nonfinite check",
+    "scaler.step/update receives bad gradients without prior clipping or clearing, allowing proper skip",
+    "Adapter hashes checked unchanged after skip",
+    "Scale asserted halved",
+    "CPU/CUDA RNG restored and same eight data indices replayed",
+    "Eight attempts and minimum scale1 bound the experiment",
+    "Missing gradients fail rather than being misclassified as overflow"
+  ],
+  "finding": {
+    "severity": "Failure-path checkpoint integrity",
+    "required_interpretation": "If run fails, inspect precise exception point and parameter finiteness before calling this checkpoint safe. Preserve previous checkpoint if changing code later.",
+    "detail": "Broad except writes current model to checkpoint-last-safe even if complete_update failed after scaler.step, such as a poststep nonfinite parameter assertion. This could overwrite a previously known-safe checkpoint."
+  },
+  "autocast_hypothesis": {
+    "comparison_rule": "Use identical wrapper arithmetic for baseline and adapted evaluation and revalidate finite updates/reload.",
+    "possible_bounded_experiment": "Wrap the existing PyTorch chunk DeltaNet function call in torch.autocast(cuda,enabled=False), preserving internal conversion and output dtype. Do not change unknown kernels or underlying installed code.",
+    "status": "Plausible mechanism, not proven cause",
+    "evidence": "Installed Torch2.8 autocast policy downcasts matmul/mm/bmm. DeltaNet explicitly casts inputs to FP32 but executes eligible @ operations inside outer FP16 autocast; later FP32 multiplication does not restore lost precision.",
+    "limits": "FP16 input/output boundary gradients and other model operations may still overflow; extra FP32 compute memory/time must be guarded."
+  },
+  "scale_bound_note": "PyTorch allows GradScaler scales below1; min1 is this experiment limit, not a general feasibility theorem.",
+  "source": "https://docs.pytorch.org/docs/2.8/amp.html"
+}

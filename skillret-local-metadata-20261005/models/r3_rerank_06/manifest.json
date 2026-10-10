@@ -1,0 +1,66 @@
+{
+  "repository": "tencent/R3-rerank-0.6b",
+  "revision": "6d0c3e486b8653578fd3f0e3c8e7871a0ce01953",
+  "files": {
+    "1_LogitScore/config.json": {
+      "bytes": 99,
+      "sha256": "4dd5ca8489d9455997ae6ec12d1276a1c9deef63e43f462202e602180417ef3c"
+    },
+    "README.md": {
+      "bytes": 1693,
+      "sha256": "fe77ba19df8f007fd13dcf214ea905d16a861777ac6f16ed2d443be2ee315c19"
+    },
+    "added_tokens.json": {
+      "bytes": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    "config.json": {
+      "bytes": 1359,
+      "sha256": "c64829b9ad56859ea456e4f8db34dc6cd2221fabe839f57e2a11ed4fbf1a0020"
+    },
+    "config_sentence_transformers.json": {
+      "bytes": 342,
+      "sha256": "3057f692453765f46f888f751bb9925d270ca648a21653472069c6451cf12cee"
+    },
+    "generation_config.json": {
+      "bytes": 214,
+      "sha256": "d3e057bbca66b92f33a8bdc6a1301014e0e4ab69b3b3fd2e442d9fe0c69f3431"
+    },
+    "merges.txt": {
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    "model.safetensors": {
+      "bytes": 2383141336,
+      "sha256": "bd2594bfbffaaff0e5cab6283cc32025cac5d5397262fd73ecd109b69cddeb92"
+    },
+    "modules.json": {
+      "bytes": 280,
+      "sha256": "6f13b6b4a89e577b591b2077bca40c67c26541a6740a8809267cb474f90806a9"
+    },
+    "sentence_bert_config.json": {
+      "bytes": 362,
+      "sha256": "3234ebd224d492cbe8d55d5ec80a3f408451c4db3005bafb64fe1c51c763e01e"
+    },
+    "special_tokens_map.json": {
+      "bytes": 613,
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+    },
+    "tokenizer.json": {
+      "bytes": 11422920,
+      "sha256": "4ea9e138e0805971156081d68100cc439b1ce91024eb7f43ecfbd9b0dda858bd"
+    },
+    "tokenizer_config.json": {
+      "bytes": 5402,
+      "sha256": "e7129212a30f3746879dce310a06f85bc5d414afa2129aa832e8c31eb36e348a"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "chat_template.jinja": {
+      "bytes": 741,
+      "sha256": "6f682162495ec5b39fd9005c01b6aa2a74669379fe967039f1e2cbbe8752369d"
+    }
+  }
+}

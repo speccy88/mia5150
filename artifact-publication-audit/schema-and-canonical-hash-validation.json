@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "check": "scaling canonical manifest with documented export redaction",
+      "files": 1686,
+      "passed": true
+    },
+    {
+      "check": "SearchJev canonical manifest",
+      "files": 195,
+      "passed": true
+    },
+    {
+      "check": "SearchJev final adapter safetensors structure and size",
+      "tensors": 372,
+      "bytes": 43340856,
+      "sha256": "b2afeda364992b40726ff1c7a43e794e968a761ccd7f4fb44a9db32a751f1300",
+      "passed": true
+    },
+    {
+      "check": "metadata full-query saved result schema",
+      "file": "skillret-local-metadata-20261005/results/public-full-bm25.json",
+      "queries": 4392,
+      "passed": true
+    },
+    {
+      "check": "metadata full-query saved result schema",
+      "file": "skillret-local-metadata-20261005/results/public-full-qwen_embed_06.json",
+      "queries": 4392,
+      "passed": true
+    },
+    {
+      "check": "metadata full-query saved result schema",
+      "file": "skillret-local-metadata-20261005/results/public-full-rrf.json",
+      "queries": 4392,
+      "passed": true
+    },
+    {
+      "check": "metadata full-query saved result schema",
+      "file": "skillret-local-metadata-20261005/results/public-full-skillret_embed_06.json",
+      "queries": 4392,
+      "passed": true
+    }
+  ],
+  "no_inference_training_api_calls": true
+}

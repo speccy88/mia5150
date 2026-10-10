@@ -1,0 +1,546 @@
+[
+  {
+    "query_id": "q-02372",
+    "query": "Our \"SkyBridge\" aviation maintenance SaaS has accumulated a messy knowledge base over the past two years — we have around 400 markdown files in `/docs/rag-corpus/` that feed our RAG pipeline (LangChain + Pinecone). The problem is that many files are duplicates or near-duplicates (e.g., three slightly different versions of the Boeing 737 MAX MCAS troubleshooting guide), some reference obsolete FAA Advisory Circulars that were superseded in 2023, at least 40 files have no metadata frontmatter (missing `title`, `category`, `last_verified`, `source_url` fields), and the folder structure is flat with no logical grouping. I need you to: (1) write a Python script that scans the corpus, detects near-duplicate documents using cosine similarity on TF-IDF vectors, and outputs a deduplication report as CSV with recommended keep/merge/delete actions; (2) create a new folder taxonomy proposal (e.g., `/regulations/faa/`, `/oem-manuals/boeing/`, `/maintenance-procedures/engine/`, etc.) and a migration script that moves files into the new structure while updating any internal cross-references; (3) build a metadata validation and enrichment script that checks every markdown file for the required frontmatter fields, flags incomplete ones, and auto-populates `category` based on content classification; (4) generate a `corpus-health-dashboard.md` summary showing total doc count, duplicates found, metadata completeness percentage, documents per category, and a list of stale documents (not updated in 12+ months) that need human review. We want to run this as a recurring monthly maintenance workflow, so structure everything as a CLI tool we can cron.",
+    "gold": [
+      {
+        "id": "fd79f5ec-5b97-469d-95c2-b78df88734a7",
+        "text": "rag-curator: Curador do corpus RAG. Gerencia adiÃ§Ã£o, organizaÃ§Ã£o e manutenÃ§Ã£o do conhecimento do projeto. Garante qualidade e acessibilidade."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "02090996-a4ba-4c33-a27d-82a91c938062",
+        "text": "python-script: Create robust Python automation with full logging and safety checks. Use when tasks need complex data processing, authenticated API work, conditional file operations, or error handling beyond simple shell commands."
+      },
+      {
+        "id": "3d943cac-8ce9-4aaf-9bee-19815a1d176f",
+        "text": "self-contained-python-script: Use uv and PEP 723 to write self-installing autocontained Python scripts"
+      },
+      {
+        "id": "1b95c979-373e-42b7-92d8-050decc1fcf4",
+        "text": "python-code-quality: Python code quality tooling with ruff and pyright. Use when setting up linting, formatting, type checking, configuring ruff or pyright, or establishing code quality standards."
+      },
+      {
+        "id": "52f9b2fe-b1cc-432a-b50b-d1a2bf39a6ad",
+        "text": "posix-shell-pro: Expert in strict POSIX sh scripting for maximum portability across"
+      },
+      {
+        "id": "2a966b07-9889-47ba-b8af-946721a3cf3c",
+        "text": "python-pypi-setup: Set up Python project for PyPI publishing with pyproject.toml, src layout, and build scripts. Use when creating a new Python package, setting up for PyPI distribution, or initializing a Python library project."
+      },
+      {
+        "id": "5e490c43-0edc-457b-b657-6f2d1440d18a",
+        "text": "setup-env: When given a Python project codebase, this skill helps the agent to set up virtual environments, install dependencies, and run scripts."
+      },
+      {
+        "id": "f97f03b9-a7b8-41e6-99d6-a2396ef0cff1",
+        "text": "plugin-manager: This skill should be used when the user asks about Claude Code plugins, including listing installed plugins, checking plugin status (enabled/disabled), verifying if a specific plugin exists, or getting plugin information in different formats (table, JSON, list). Use when queries mention \"list plugins\", \"installed plugins\", \"plugin status\", \"is plugin X installed\", or related plugin management tasks."
+      },
+      {
+        "id": "3674562d-d07c-471e-985d-4917f1ed351d",
+        "text": "python-pipeline: Python data processing pipelines with modular architecture. Use when building content processing workflows, implementing dispatcher patterns, integrating Google Sheets/Drive APIs, or creating batch processing systems. Covers patterns from rosen-scraper, image-analyzer, and social-scraper projects."
+      },
+      {
+        "id": "1d0c1899-50ca-487f-bfd7-a9a631300877",
+        "text": "insightpulse-deepnote-data-lab: Design, organize, and operate Deepnote projects as the InsightPulseAI Data Lab workspace for exploration, jobs, and Superset-ready summary tables."
+      },
+      {
+        "id": "4c6fe471-1248-42e7-8a74-fd7f63c446db",
+        "text": "python-project-setup: Sets up a new Python project with uv, virtual environment, and best practices for Windows 11. Use this when creating a new Python project or helping users set up their Python development environment with modern tooling."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.00017988846914912754
+  },
+  {
+    "query_id": "q-02057",
+    "query": "Can you go through this function and flag any spots where I've crammed too much logic into a single expression? I want a report that identifies each overly nested or chained inline expression, explains what it's doing, and suggests how to break it into well-named intermediate variables for readability. Here's the function from our billing engine:\n```python\ndef calculate_invoice_total(customer, line_items, promo_code=None):\n    tax_rate = (0.0 if customer.tax_exempt else (0.085 if customer.state in ['CA', 'NY', 'WA'] else (0.065 if customer.state in ['TX', 'FL'] else 0.05)))\n    \n    subtotal = sum(item.quantity * (item.unit_price if not item.override_price else item.override_price) * (1 - (item.discount_pct / 100 if item.discount_pct and item.discount_pct <= 100 else 0)) for item in line_items if item.is_active and not item.is_voided)\n    \n    promo_discount = (promo_code.flat_amount if promo_code and promo_code.type == 'flat' else (subtotal * (promo_code.percentage / 100) if promo_code and promo_code.type == 'percentage' and promo_code.percentage <= 50 else 0))\n    \n    total = round(max(0, (subtotal - promo_discount) * (1 + tax_rate) + (0 if customer.shipping_method == 'digital' else (5.99 if (subtotal - promo_discount) < 50 else (2.99 if (subtotal - promo_discount) < 100 else 0)))), 2)\n    \n    return {\n        'customer_id': customer.id,\n        'subtotal': subtotal,\n        'tax': round((subtotal - promo_discount) * tax_rate, 2),\n        'shipping': (0 if customer.shipping_method == 'digital' else (5.99 if (subtotal - promo_discount) < 50 else (2.99 if (subtotal - promo_discount) < 100 else 0))),\n        'promo_discount': promo_discount,\n        'total': total,\n        'line_item_count': len([item for item in line_items if item.is_",
+    "gold": [
+      {
+        "id": "e498bb14-8742-4685-9754-f22fc225b82d",
+        "text": "refactor-inline-complexity: Audit inline complexity and recommend variable extraction.\nProduces a report with flattening suggestions for nested expressions."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "08de85ab-57cd-4cb2-ad03-85add8991a10",
+        "text": "commercial-lease-expert: Expert in commercial real estate lease agreements for industrial and office properties. Use when reviewing lease terms, negotiating base rent/operating expenses, analyzing tenant improvements and free rent, structuring net lease vs gross lease deals, evaluating renewal options, or advising on landlord/tenant rights. Key terms include base rent, operating expenses, proportionate share, TI allowance, net lease, triple net, lease economics, rent escalation, use clause, assignment restrictions, default remedies, Schedule G"
+      },
+      {
+        "id": "39f956e0-5156-4049-9684-c6baf43b9e64",
+        "text": "legal-advisor: Draft privacy policies, terms of service, disclaimers, and legal"
+      },
+      {
+        "id": "4000c322-e316-4c6a-b1fe-8027e09833d7",
+        "text": "startup-business-analyst-business-case: Generate comprehensive investor-ready business case document with market, solution, financials, and strategy"
+      },
+      {
+        "id": "4b1f14fc-35c8-4910-880c-8ec672f16513",
+        "text": "opentrons-absorbance-reader: Opentrons Absorbance Plate Reader Module for Flex - on-deck microplate spectrophotometry with single/multi-wavelength reading (450, 562, 600, 650nm), automated lid control, and CSV data export for ELISA, cell growth, and colorimetric assays"
+      },
+      {
+        "id": "fcaf0b92-7cf6-4534-ab50-60cdbb8a9538",
+        "text": "opentrons-heater-shaker: Opentrons Heater-Shaker Module - temperature control (37-95Â°C) with orbital mixing (200-3000 rpm) for cell culture, enzymatic reactions, and sample preparation requiring simultaneous heating and agitation"
+      },
+      {
+        "id": "f285abe5-bf6d-41ce-99e0-81ab7a8321c6",
+        "text": "lease-surrender-expert: Expert in lease surrender agreements where landlord and tenant mutually agree to terminate the lease before expiry. Use when tenant wants to exit early and negotiate buyout, landlord needs vacant space for redevelopment or new tenant, negotiating surrender consideration (who pays whom), analyzing partial surrender to reduce space, structuring mutual releases, evaluating surrender vs assignment or sublease, or handling distressed tenant situations. Key terms include lease surrender, early termination, buyout, surrender fee, mutual release, partial surrender, space reduction, unamortized TI, consideration, lease termination agreement"
+      },
+      {
+        "id": "53afc5f9-0e6a-4755-b240-a14500c2a07b",
+        "text": "co-branding: Use to enforce visual, messaging, and legal standards across partner"
+      },
+      {
+        "id": "0c8307e5-424b-4826-b6b8-07245661f704",
+        "text": "grocery-shopping: Use when user needs to create grocery list from recipes - consolidates ingredients across recipes, checks pantry inventory, converts to purchasable quantities, and provides automation options for Costco/Instacart"
+      },
+      {
+        "id": "83c09c8d-85be-49af-a0ea-ed93878133c4",
+        "text": "policyengine-user-guide: Using PolicyEngine web apps to analyze tax and benefit policy impacts - for users of policyengine.org"
+      },
+      {
+        "id": "185bdd62-cf41-474b-8daf-2c070c0e5c83",
+        "text": "aico-frontend-plan: Create or enhance frontend tasks with detailed implementation steps. Supports TWO modes:\n\nMODE A: Enhance existing task (add detailed steps to task in file)\nMODE B: Create new standalone task file (can contain single or multiple tasks)\n\nIMPORTANT: This skill creates MICRO-LEVEL atomic steps, NOT macro architecture plans.\nFor architecture planning or feature scoping, use EnterPlanMode instead.\n\nUse this skill when:\n- Running /frontend.plan command\n- User asks for \"atomic steps\", \"step-by-step plan with verification\"\n- Have a specific task and need implementation steps\n- User wants to create a standalone task file (not from story)\n- Need granular steps: Setup (create files) → Implementation (write code) → Test (verify)\n\nDO NOT use for:\n- Architecture planning (use EnterPlanMode)\n- General development planning\n- Feature scoping or estimation\n\nOutput:\n- MODE A: Update specific task section in file with Implementation Steps\n- MODE B: Create new standalone-{name}.md file with one or multiple tasks"
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.0001840264998159735
+  },
+  {
+    "query_id": "q-00007",
+    "query": "Refactor this async Rust service into idiomatic Rust 2024 style — it compiles but clippy is screaming at me and I know the error handling is a mess. The service fetches sensor readings from multiple IoT devices concurrently, aggregates them, and writes summaries to a PostgreSQL database. Here's the current code:\n```rust\nuse tokio;\nuse sqlx;\nuse reqwest;\nuse std::collections::HashMap;\nuse serde::{Deserialize, Serialize};\n\n#[derive(Debug, Deserialize, Clone)]\nstruct SensorReading {\n    device_id: String,\n    temperature: f64,\n    humidity: f64,\n    timestamp: i64,\n}\n\n#[derive(Debug, Serialize)]\nstruct AggregatedSummary {\n    avg_temperature: f64,\n    avg_humidity: f64,\n    device_count: i32,\n    window_start: i64,\n    window_end: i64,\n}\n\nasync fn fetch_sensor_data(client: &reqwest::Client, url: String) -> Result<SensorReading, Box<dyn std::error::Error + Send + Sync>> {\n    let resp = client.get(&url).send().await?;\n    let body = resp.text().await?;\n    let reading: SensorReading = serde_json::from_str(&body)?;\n    return Ok(reading);\n}\n\nasync fn fetch_all_sensors(device_urls: Vec<String>) -> Vec<SensorReading> {\n    let client = reqwest::Client::new();\n    let mut handles = vec![];\n    \n    for url in device_urls.clone() {\n        let c = client.clone();\n        let u = url.clone();\n        let handle = tokio::spawn(async move {\n            let result = fetch_sensor_data(&c, u).await;\n            match result {\n                Ok(r) => Some(r),\n                Err(e) => {\n                    println!(\"Error fetching sensor: {}\", e);\n                    None\n                }\n            }\n        });\n        handles.push(handle);\n    }\n    \n    let mut readings: Vec<SensorReading> = vec![];\n    for handle in handles {\n        match handle.await {\n            Ok(maybe_reading) => {\n                match maybe_reading {\n                    Some(r) => readings.push(r),\n                    None => {}\n                }\n            }",
+    "gold": [
+      {
+        "id": "eac09569-3240-4005-be67-a10c87e4c1b6",
+        "text": "modern-rust-expert: Expert knowledge for writing cutting-edge, idiomatic Rust code with Rust Edition 2024, strict clippy compliance, and functional-but-pragmatic philosophy. Use when writing any Rust code, fixing clippy warnings, structuring modules or crates, reviewing or refactoring Rust code, or questions about Rust 2024 features, async patterns, documentation standards, or performance optimization."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "853210a9-b99c-417e-8438-f255157ea379",
+        "text": "enhance-prompt: Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results."
+      },
+      {
+        "id": "5c30267e-f1d9-4064-bea0-8f3c9d6cef52",
+        "text": "stitch-loop: Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern"
+      },
+      {
+        "id": "9a1a6158-b7a7-47f1-ae54-6e11069c993f",
+        "text": "prisma-v7: Expert guidance for Prisma ORM v7 (7.0+). Use when working with Prisma schema files, migrations, Prisma Client queries, database setup, or when the user mentions Prisma, schema.prisma, @prisma/client, database models, or ORM. Covers ESM modules, driver adapters, prisma.config.ts, Rust-free client, and migration from v6."
+      },
+      {
+        "id": "37e00ae3-2f2b-4599-8a30-5a713df1a3ef",
+        "text": "agent-memory-systems: Memory is the cornerstone of intelligent agents. Without it, every interaction starts from zero. This skill covers the architecture of agent memory: short-term (context window), long-term (vector stores), and the cognitive architectures that organize them.  Key insight: Memory isn't just storage - it's retrieval. A million stored facts mean nothing if you can't find the right one. Chunking, embedding, and retrieval strategies determine whether your agent remembers or forgets.  The field is fragm"
+      },
+      {
+        "id": "a64733f6-332d-4dad-86e1-e3f2657c129f",
+        "text": "Bun TanStack Start: TanStack Start full-stack React framework with Bun runtime. Use for TanStack Router, server functions, vinxi, or encountering SSR, build, preset errors."
+      },
+      {
+        "id": "44a0c3a1-a694-4fc1-a93f-ae31a57f830a",
+        "text": "entropy-loop: Iteratively reduce code entropy by fixing smells and improving quality. Use when: cleanup, code smells, entropy, refactor loop, baldrick entropy. Triggers on: entropy, cleanup, code smells, reduce entropy."
+      },
+      {
+        "id": "ecbe3e1d-c191-438a-8ffc-ac0e7cfaa041",
+        "text": "automation-refactor: Expert automation workflow refactoring tool for Power Automate, n8n, Make, Zapier and other platforms. Optimizes existing flows by improving performance, reliability, maintainability, and best practices compliance. Triggers when user wants to improve, optimize, refactor, correct values, enhance, or modernize workflows. Analyzes JSON, suggests improvements, outputs refactored flow maintaining original functionality unless changes requested."
+      },
+      {
+        "id": "f7717b8b-5f8e-4ef9-9233-fd30f7445604",
+        "text": "orchestration:creating-workflows: Use when user says \"create workflow\", \"create a workflow\", \"design workflow\", \"orchestrate\", \"automate multiple steps\", \"coordinate agents\", \"multi-agent workflow\". Creates orchestration workflows from natural language using Socratic questioning to plan multi-agent workflows with visualization."
+      },
+      {
+        "id": "dfa947f9-cc3b-481c-88f5-a80ed48fc6ef",
+        "text": "agentic-workflow: Agentic Workflow Pattern"
+      },
+      {
+        "id": "9bfdbcdf-59ad-456f-b6ea-771a2d5fc3a1",
+        "text": "Bun Jest Migration: Use when migrating from Jest to Bun's test runner, import compatibility, mocks, and config."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.0001890359168241966
+  },
+  {
+    "query_id": "q-02754",
+    "query": "Can you review this C# service class and refactor it? It's part of our \"WarehouseOps\" inventory management system and honestly it grew organically over the past year without much thought. I'm worried about SOLID violations, poor naming, and inconsistent async usage. Here's the code:\n```csharp\npublic class InventoryService\n{\n    private string _connString;\n    private static HttpClient _client = new HttpClient();\n    \n    public InventoryService()\n    {\n        _connString = ConfigurationManager.ConnectionStrings[\"WarehouseDB\"].ConnectionString;\n    }\n\n    public List<InventoryItem> GetAllItems()\n    {\n        var items = new List<InventoryItem>();\n        using (var conn = new SqlConnection(_connString))\n        {\n            conn.Open();\n            var cmd = new SqlCommand(\"SELECT * FROM Inventory\", conn);\n            var reader = cmd.ExecuteReader();\n            while (reader.Read())\n            {\n                var item = new InventoryItem();\n                item.Id = (int)reader[\"Id\"];\n                item.SKU = (string)reader[\"SKU\"];\n                item.Name = (string)reader[\"Name\"];\n                item.qty = (int)reader[\"Quantity\"];\n                item.Price = (decimal)reader[\"Price\"];\n                item.warehouseLocation = (string)reader[\"Location\"];\n                items.Add(item);\n            }\n        }\n        return items;\n    }\n\n    public async Task<bool> UpdateStock(int id, int quantity, string reason)\n    {\n        using (var conn = new SqlConnection(_connString))\n        {\n            conn.Open();\n            var cmd = new SqlCommand($\"UPDATE Inventory SET Quantity = {quantity} WHERE Id = {id}\", conn);\n            cmd.ExecuteNonQuery();\n        }\n\n        // Log the change\n        try\n        {\n            var log = new { ItemId = id, Qty = quantity, Reason = reason, Timestamp = DateTime.Now };\n            var json = Newtonsoft.Json.JsonConvert.SerializeObject(log);\n            var content = new StringContent(json, Encoding.UTF8, \"application/json\");\n            var response = _client.PostAsync(\"https://internal-api.warehouseops.local/audit/log\", content).Result;\n            \n            if (!response.IsSuccessStatusCode)\n            {\n                Console.WriteLine(\"Failed to",
+    "gold": [
+      {
+        "id": "3dd46b10-b9c8-420b-93bc-399e02c76804",
+        "text": "clean-code-dotnet: Clean Code principles adapted for C#/.NET including naming, variables, functions, SOLID, error handling, and async patterns. Use when: (1) reviewing C# code, (2) refactoring for clarity, (3) writing new code, (4) code review feedback."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "84d05555-ccb7-4aee-b19c-63d04bcd49d4",
+        "text": "blazemeter-troubleshooting: Comprehensive troubleshooting guide for BlazeMeter, covering API Monitoring, Performance Testing, general issues, integrations, and security. Use when troubleshooting for (1) API Monitoring issues (Radar Agent auth, SSL certificates, debug tests), (2) Performance Testing issues (high response time, 500 errors, partial load, tests not starting), (3) General issues (delete non-empty project, forbidden domains, Chrome Extension export failures), (4) Integration issues (New Relic reporting), (5) Security issues (Apache Log4j2 vulnerability), (6) Support requests and tickets, or any other troubleshooting tasks."
+      },
+      {
+        "id": "9eb2e34f-0f66-4da2-88d7-a8576f1e18d7",
+        "text": "Migration Planning: Systematic planning and execution of system migrations including database migrations, platform changes, and technology stack transitions."
+      },
+      {
+        "id": "1de4943f-5625-49a7-b7fd-6e536c34cf4c",
+        "text": "agent-registry: Guide for managing the Agent Registry - database-backed agent configuration system. Use when asked to \"configure agents\", \"manage skills\", \"set tool permissions\", \"create context rules\", or when working with agent assignments per platform/chat. Covers dashboard UI, API endpoints, CLI commands, and MCP tools."
+      },
+      {
+        "id": "062ab9f3-0aac-43b3-ab39-bd86bb674a6c",
+        "text": "instance-actors: Managing instance actor orchestrations for PostgreSQL health monitoring. Use when debugging stale actors, restarting actors, or troubleshooting health check issues."
+      },
+      {
+        "id": "ff9ffb99-0f49-40a3-be31-f9bcdf5cbd10",
+        "text": "aws-agentic-ai: AWS Bedrock AgentCore comprehensive expert for deploying and managing all AgentCore services. Use when working with Gateway, Runtime, Memory, Identity, or any AgentCore component. Covers MCP target deployment, credential management, schema optimization, runtime configuration, memory management, and identity services."
+      },
+      {
+        "id": "d917b50d-a900-4bac-b6c4-d5585d9d9ef3",
+        "text": "aws-serverless-eda: AWS serverless and event-driven architecture expert based on Well-Architected Framework. Use when building serverless APIs, Lambda functions, REST APIs, microservices, or async workflows. Covers Lambda with TypeScript/Python, API Gateway (REST/HTTP), DynamoDB, Step Functions, EventBridge, SQS, SNS, and serverless patterns. Essential when user mentions serverless, Lambda, API Gateway, event-driven, async processing, queues, pub/sub, or wants to build scalable serverless applications with AWS best practices."
+      },
+      {
+        "id": "45f6bda3-df12-483b-adbd-99ddc46430f8",
+        "text": "duckdb-alb-log-analyzer: Analyze AWS Application Load Balancer (ALB) logs stored in S3 using DuckDB. Use when users request ALB log analysis, error investigation, performance analysis, traffic analysis, or need to query ALB access logs. Supports analyzing response times, status codes, error patterns, and traffic trends from S3-stored logs."
+      },
+      {
+        "id": "fcfe956a-b745-461b-b0ac-ee269a6f8a58",
+        "text": "database-backup-restore: Implement backup and restore strategies for disaster recovery. Use when creating backup plans, testing restore procedures, or setting up automated backups."
+      },
+      {
+        "id": "b0842c7e-0909-4dd1-a827-bb60aa6ba770",
+        "text": "blazemeter-administration: Comprehensive guide for BlazeMeter Administration, including workspaces, projects, security, alerts, and team management. Use when working with administration for (1) Managing workspaces and projects, (2) Configuring security settings (SAML SSO, 2FA, API keys), (3) Creating workspace alerts, (4) Managing private locations across workspaces, (5) Creating APM credentials, (6) Managing API Monitoring teams, (7) Configuring AI consent, or any other administration tasks."
+      },
+      {
+        "id": "775b48af-a7fb-4f5e-a61c-f682cee26dd9",
+        "text": "dbt-projects-snowflake-setup: Step-by-step setup guide for dbt Projects on Snowflake including prerequisites, external access integration, Git API integration, event table configuration, and automated scheduling. Use this skill when setting up dbt Projects on Snowflake for the first time or troubleshooting setup issues."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.0001966955153422502
+  },
+  {
+    "query_id": "q-03261",
+    "query": "Can you review our `src/lib/eventBus.ts` module before we merge it? We wrote a custom pub/sub event bus for our internal tooling and I'm worried about type safety — specifically whether our generic event map pattern is sound, if there are any `any` escapes we missed, and whether our `tsconfig.json` strict mode settings are actually catching everything they should. Here's the code:\n```typescript\n// src/lib/eventBus.ts\n\ntype EventMap = {\n  \"user:login\": { userId: string; timestamp: number };\n  \"user:logout\": { userId: string; reason?: string };\n  \"order:created\": { orderId: string; items: Array<{ sku: string; qty: number }> };\n  \"order:fulfilled\": { orderId: string; fulfilledAt: Date };\n  \"analytics:track\": { event: string; properties: Record<string, unknown> };\n};\n\ntype EventKey = keyof EventMap;\n\ntype EventCallback<T extends EventKey> = (payload: EventMap[T]) => void;\n\nclass EventBus {\n  private listeners: {\n    [K in EventKey]?: Array<EventCallback<K>>;\n  } = {};\n\n  on<K extends EventKey>(event: K, callback: EventCallback<K>): () => void {\n    if (!this.listeners[event]) {\n      this.listeners[event] = [];\n    }\n    (this.listeners[event] as Array<EventCallback<K>>).push(callback);\n\n    return () => this.off(event, callback);\n  }\n\n  off<K extends EventKey>(event: K, callback: EventCallback<K>): void {\n    const cbs = this.listeners[event];\n    if (!cbs) return;\n    this.listeners[event] = cbs.filter((cb) => cb !== callback) as any;\n  }\n\n  emit<K extends EventKey>(event: K, payload: EventMap[K]): void {\n    const cbs = this.listeners[event];\n    if (!cbs) return;\n    for (const cb of cbs) {\n      (cb as any)(payload);\n    }\n  }\n\n  once<K extends EventKey>(event: K, callback: EventCallback<K>): () => void {\n    const wrapper = ((payload: EventMap[K]) => {\n      this.off(event, wrapper);\n      callback(payload);\n    }) as EventCallback<K>;\n    return this.on(event, wrapper);\n  }\n\n  // For debugging — dumps all registered listener counts\n  debug():",
+    "gold": [
+      {
+        "id": "04bb7f14-22fb-40f0-85e0-3ee6cd9c2328",
+        "text": "typescript-reviewer: WHEN: TypeScript code review, type safety audit, tsconfig analysis, TS migration review\nWHAT: Type safety checks + any usage audit + generic patterns + strict mode + compiler options analysis\nWHEN NOT: React specific → nextjs-reviewer, Node.js backend → nodejs-reviewer, General code → code-reviewer"
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "46f70d85-f258-44ca-b2bf-71f047e636e8",
+        "text": "kirby-debugging-and-tracing: Diagnose Kirby rendering/runtime issues using MCP runtime rendering, dump traces, and template/snippet/controller indexes. Use when outputs are wrong, errors occur, or you need to trace execution paths."
+      },
+      {
+        "id": "c7945c83-2e2f-4a76-ae81-c55e66dfa444",
+        "text": "render-info: Using the RendererInfo class in Blazor to detect rendering context and interactivity."
+      },
+      {
+        "id": "390a0eaf-44d8-4e2b-b559-06b602935b96",
+        "text": "tdd-workflow: Strict TDD state machine with Result types. 7-state workflow (PLANNING, RED, GREEN, REFACTOR, VERIFY, BLOCKED, VIOLATION). Every message MUST announce state. Integrates with fn(args, deps), vitest-mock-extended, and typed error handling."
+      },
+      {
+        "id": "3441690a-3ad7-4bd6-8e2d-fa6e90702c1b",
+        "text": "crdt-vterm: Collaborative terminal session sharing using CRDT-style s-expressions"
+      },
+      {
+        "id": "58f6082e-83b9-49d4-9ac3-73e2d3946c99",
+        "text": "devflow-constitution-quick-ref: Quick reference guide to CC-DevFlow Constitution v2.0.0 with links to full text. Covers all 10 Articles and Phase -1 Gates."
+      },
+      {
+        "id": "ba055339-2878-44a4-8f8e-a5c87e0a932c",
+        "text": "jetbrains-theme-investigation: Investigates JetBrains IntelliJ Platform theme properties by searching source code. Use when user asks about UI theming, icon colors, tab spacing, component styling, or needs to find what properties are themeable vs hardcoded in IntelliJ-based IDEs."
+      },
+      {
+        "id": "b0153545-0c16-4928-afc2-1fd745c880a2",
+        "text": "deck-creator: Create, update, and translate Dify X Reveal.js slide decks in this repo. Use when asked to draft slides, extract outlines, or maintain bilingual CN/EN parity for the ctrip/paypal/pupu/milvus/aispeech/dentsply/oceanbase/legalai decks, including deck HTML (index.html/index_en.html) and legal workflow YAMLs."
+      },
+      {
+        "id": "d9c95f58-3343-43f8-8046-4a56c949119b",
+        "text": "javascript-mastery: Comprehensive JavaScript reference covering 33+ essential concepts every developer should know. From fundamentals like primitives and closures to advanced patterns like async/await and functional programming. Use when explaining JS concepts, debugging JavaScript issues, or teaching JavaScript fundamentals."
+      },
+      {
+        "id": "7484fa0b-800c-4929-a645-181083db04f4",
+        "text": "cross-plugin-detective: Integration guide for using detective skills across plugins. Maps agent roles from frontend, bun, and other plugins to appropriate detective skills. Developer agents should use developer-detective, architect agents should use architect-detective, etc."
+      },
+      {
+        "id": "74786e53-eab0-49d3-b38e-f0c5cef109ca",
+        "text": "webflow-code-component:component-audit: Audit Webflow Code Components for architecture decisions - prop exposure, state management, slot opportunities, and Shadow DOM compatibility. Focused on Webflow-specific patterns, not generic React best practices."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.0002109259649862898
+  },
+  {
+    "query_id": "q-02591",
+    "query": "Can you go through the `component.py`, `client.py`, and `configuration.py` files in our Keboola custom extractor component below and give me a thorough code review? We built this to pull campaign performance data from a third-party ad platform API and write it into Keboola Storage. I'm especially concerned about whether the config dataclass pattern in `configuration.py` follows Keboola conventions properly, if the API client retry/backoff logic in `client.py` is robust enough, whether the docstrings and README accurately reflect what the code actually does (I noticed some drift after our last refactor), and any general Pythonic improvements. Here's the code:\n**component.py**\n```python\n\"\"\"\nKeboola Custom Extractor Component for AdPlatform Campaign Performance Data\n\nThis component connects to the AdPlatform reporting API, fetches campaign\nmetrics (impressions, clicks, spend, conversions) for a given date range,\nand writes results to Keboola Storage as CSV files.\n\"\"\"\n\nimport logging\nimport csv\nfrom datetime import datetime, timedelta\nfrom pathlib import Path\n\nfrom keboola.component.base import ComponentBase, sync_action\nfrom keboola.component import CommonInterface\nfrom keboola.component.exceptions import UserException\n\nfrom configuration import Configuration, AuthConfig\nfrom client import AdPlatformClient\n\nKEY_CAMPAIGN_ID = \"campaign_id\"\nKEY_DATE = \"date\"\n\nREQUIRED_COLUMNS = [\n    KEY_CAMPAIGN_ID,\n    KEY_DATE,\n    \"impressions\",\n    \"clicks\",\n    \"spend\",\n    \"conversions\",\n    \"ctr\",\n    \"cpc\"\n]\n\nclass Component(ComponentBase):\n    \"\"\"\n    AdPlatform extractor component that pulls daily campaign performance\n    data and stores it in Keboola Storage tables.\n    \n    Supports incremental loading based on date ranges and handles\n    pagination of the upstream API automatically.\n    \"\"\"\n\n    def __init__(self):\n        super().__init__()\n        self.client = None\n\n    def run(self):\n        \"\"\"\n        Main execution method. Reads configuration, initializes the API client,\n        fetches campaign data, and writes output tables.\n        \"\"\"\n        self.validate_configuration_parameters(Configuration.get_dataclass_required_parameters())\n        params = Configuration.from_dict(self.configuration.parameters)\n        \n        auth = params.auth\n        self.client = AdPlatformClient(\n            api_key=auth.api_key,\n            api_secret=auth.api_secret,\n            base_url=auth.base_url or \"https://api.adplatform.io/v2\"\n        )\n        \n        # Authenticate\n        self.client.login()\n        \n        # Determine date range\n        if params.date_from and params.date_",
+    "gold": [
+      {
+        "id": "1374d860-36f2-4cee-a46e-72b2136dd73f",
+        "text": "reviewer: Expert Python/Keboola component code reviewer focusing on architecture, configuration/client patterns, documentation consistency, and Pythonic best practices. Provides actionable feedback with clear location, pattern identification, and fix guidance."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "5f8c5087-1770-43e6-ac3a-843b63f3eac0",
+        "text": "session-closing: End-of-session ritual. Reflect while context is rich, then seal. Triggers on /close, 'wrap up', 'let's finish', or context nearly full. Pairs with /open and /close. (user)"
+      },
+      {
+        "id": "e900ce57-c290-43c0-91d6-67e93340ac0b",
+        "text": "azure-functions: Create serverless functions on Azure with triggers, bindings, authentication, and monitoring. Use for event-driven computing without managing infrastructure."
+      },
+      {
+        "id": "c5013a3e-3033-4697-a3a2-2eb5a05c628d",
+        "text": "distill: Strip designs to their essence by removing unnecessary complexity. Great design is simple, powerful, and clean."
+      },
+      {
+        "id": "4b35e258-577b-4e15-91bd-6feae1bcfad4",
+        "text": "campaign-architecture: Use when structuring paid media campaigns/ad sets to balance testing,"
+      },
+      {
+        "id": "83b04dc8-876f-41c9-ae6f-067f84a6b219",
+        "text": "ux-designer: Expert UX Designer that enforces flat, minimal design, strict accessibility (WCAG 2.1 AA), and collaborative design decisions. Use this skill for all UI/UX tasks to avoid \"AI slop\"."
+      },
+      {
+        "id": "d9ec7f6d-cda1-4de2-90fe-727e4caa75c6",
+        "text": "site-management: Manage and monitor UniFi sites across your account. View site details, organization structure, and multi-site overview for centralized infrastructure management."
+      },
+      {
+        "id": "bc5973c8-f358-4382-8f1f-8bf295880473",
+        "text": "sms-text-optimizer: Condense messages to 160 characters without losing meaning. Remove unnecessary words while keeping tone."
+      },
+      {
+        "id": "72d19ce8-12a6-4533-80c2-0dd1d50bd496",
+        "text": "undercity: Dispatch tasks to the undercity orchestrator for autonomous batch execution. Use when adding tasks, checking status, or running parallel work. Ideal for multi-task workloads that benefit from autonomous verification."
+      },
+      {
+        "id": "b5f752be-9a24-491e-9bf0-7c3eba3d3f92",
+        "text": "upload-chat-log: Export and upload the current chat conversation as a markdown file attachment to a JIRA ticket for later review and documentation."
+      },
+      {
+        "id": "06147297-8ee1-4145-96e1-2f84e71f8644",
+        "text": "marketing-cro: Conversion Rate Optimization - A/B testing methodology, landing page optimization, form design, statistical significance, and funnel analysis."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.00021715526601520088
+  },
+  {
+    "query_id": "q-02536",
+    "query": "We have a Python build orchestration script (`build_pipeline.py`) that models our CI steps as a directed acyclic graph — each task (lint, compile, test, package, deploy, etc.) declares its dependencies, and a topological sort determines execution order so independent tasks run in parallel across a thread pool. It works great, but we're migrating our entire toolchain to Roc for better type safety and performance. Can you convert this Python DAG executor to idiomatic Roc? Here's the current code — it uses `dict[str, set[str]]` for the adjacency list, computes in-degrees, does a BFS-based topological sort to find execution levels, then fans out tasks at each level using `concurrent.futures.ThreadPoolExecutor`. I want the Roc version to use tagged unions for task status, leverage Roc's `Task` for effects, and replace the mutable in-degree map with a functional fold. Also make sure the cycle detection logic translates properly — in Python we just check if the sorted output length mismatches the node count, but I'd like the Roc version to return a descriptive error via `Result`. Here's the Python:\n```python\nfrom concurrent.futures import ThreadPoolExecutor, as_completed\nfrom collections import deque\n\n# Task definitions: task_name -> set of dependency task names\npipeline = {\n    \"lint\": set(),\n    \"compile\": {\"lint\"},\n    \"unit_test\": {\"compile\"},\n    \"integration_test\": {\"compile\"},\n    \"security_scan\": {\"lint\"},\n    \"package\": {\"unit_test\", \"integration_test\", \"security_scan\"},\n    \"deploy_staging\": {\"package\"},\n    \"smoke_test\": {\"deploy_staging\"},\n    \"deploy_prod\": {\"smoke_test\"},\n}\n\ndef compute_in_degrees(graph):\n    in_degree = {node: 0 for node in graph}\n    for node, deps in graph.items():\n        for dep in deps:\n            if dep not in in_degree:\n                raise ValueError(f\"Unknown dependency: {dep}\")\n            # dep -> node means node depends on dep\n    # Build forward adjacency\n    forward = {node: set() for node in graph}\n    for node, deps in graph.items():\n        for dep in deps:\n            forward[dep].add(node)\n    for node, children in forward.items():\n        for child in children:\n            in_degree[child] += 1\n    return in_degree, forward\n\ndef topological_levels(graph):\n    in_degree, forward = compute_in_degrees(graph)\n    queue = deque([n for n, d in in_degree.items() if d == 0])\n    levels = []\n    visited_count = 0\n    while queue:\n        level = list(queue)\n        levels.append(level)\n        next_queue = deque()\n        for node in level:\n            visited_count += 1\n            for child in forward[node]:\n                in_degree[child] -= 1\n                if in_degree[child] == 0:\n                    next_queue.append(child)\n        queue = next_queue\n    if visited_count != len(graph):\n        raise ValueError(\"Cycle detected in pipeline graph!\")\n    return levels\n\ndef run_task(task_name):\n    import time, random\n    duration",
+    "gold": [
+      {
+        "id": "6d3e84d3-b891-469b-a7f3-75f4f66a8940",
+        "text": "convert-python-roc: Convert Python code to idiomatic Roc. Use when migrating Python projects to Roc, translating Python patterns to idiomatic Roc, or refactoring Python codebases for type safety, functional purity, and native performance. Extends meta-convert-dev with Python-to-Roc specific patterns."
+      },
+      {
+        "id": "d8d037bf-bfce-41b4-b223-fd459c729b82",
+        "text": "DAG Execution: This skill should be used when the user asks about \"DAG execution\", \"directed acyclic graph\", \"task dependencies\", \"parallel task execution\", \"topological sort\", \"level-based execution\", \"dependency resolution\", or needs guidance on executing tasks with dependencies efficiently."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "0b033e21-396b-494f-8f16-9a7513ab6714",
+        "text": "micro-100-200ms: Use when building micro-interactions between 100-200ms - tooltips appearing, dropdown opens, small feedback animations that feel quick but perceptible"
+      },
+      {
+        "id": "f73c5ba8-7e55-4a31-8b6b-fef1dea4ebf0",
+        "text": "malware-dynamic-analysis: Execute and monitor malware in controlled sandbox environments. Use when you need to observe runtime behavior, capture network traffic, monitor process activity, analyze file/registry changes, or understand actual malware functionality beyond static analysis. Guides safe execution with Procmon, Wireshark, Process Hacker, Sysmon, and automated sandboxes."
+      },
+      {
+        "id": "d6054e1f-d0f1-49fd-843c-405e053168e0",
+        "text": "perf-analyzer: Analyzes performance benchmarks from CUDA, CPU, memory tests. Parses output, identifies bottlenecks, tracks metrics over time, generates optimization insights."
+      },
+      {
+        "id": "e22d2652-8fef-444e-946e-31f39ca00527",
+        "text": "monorepo-ci-optimizer: Optimizes CI pipelines for monorepos by detecting affected packages/apps and running only necessary builds and tests. Includes Turborepo/Nx strategies, caching, and parallel execution. Use for \"monorepo CI\", \"affected detection\", \"incremental builds\", or \"workspace optimization\"."
+      },
+      {
+        "id": "f9445370-9005-4a9c-bdd9-87291c1153f2",
+        "text": "cpu-profiling: Profile CPU usage to identify hot spots and bottlenecks. Optimize code paths consuming most CPU time for better performance and resource efficiency."
+      },
+      {
+        "id": "998013aa-4d09-429c-9215-27c05ece774e",
+        "text": "effect-testing-mocking: Testing patterns with layers, mocks, and deterministic time. Use when preparing testable services and small smoke tests."
+      },
+      {
+        "id": "19e2d156-7234-4f94-9720-04899d73e0ad",
+        "text": "runtime-skills: Universal Runtime best practices for PyTorch inference, Transformers models, and FastAPI serving. Covers device management, model loading, memory optimization, and performance tuning."
+      },
+      {
+        "id": "3402a85f-db67-4ee8-af14-4f2a6b82486e",
+        "text": "Focus Techniques: Science-backed techniques for maintaining deep focus, managing distractions, and maximizing productive coding sessions"
+      },
+      {
+        "id": "2f35940e-94f2-4294-91d0-f19fa0e60700",
+        "text": "numerical-stability: Analyze and enforce numerical stability for time-dependent PDE simulations. Use when selecting time steps, choosing explicit/implicit schemes, diagnosing numerical blow-up, checking CFL/Fourier criteria, von Neumann analysis, matrix conditioning, or detecting stiffness in advection/diffusion/reaction problems."
+      },
+      {
+        "id": "fea4afb2-7773-488c-877d-a07e637b9fd5",
+        "text": "julien-workflow-queuing-background-tasks: Queue long-running tasks (transcoding, API calls, batch processing) to run in background at low priority when user is active, normal priority when idle. Use when scripts take minutes/hours and shouldn't impact PC performance during active use."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.00021848372296263927
+  },
+  {
+    "query_id": "q-01711",
+    "query": "Can you do a thorough review of the Python module below? It's the core of our \"AstroLog\" satellite telemetry ingestion pipeline — it handles parsing raw downlink packets, validating checksums, persisting to TimescaleDB, and firing alerts. We've been getting intermittent silent data loss in production and I suspect there are deeper structural issues beyond just that bug. I want you to flag anything: repeated logic, poor error handling, missing tests, SOLID violations, naming issues, docstring gaps, overly coupled classes — the works. Here's the code:\n```python\nimport struct\nimport time\nimport hashlib\nimport logging\nimport psycopg2\nimport smtplib\nfrom email.mime.text import MIMEText\nfrom datetime import datetime, timezone\n\nlogger = logging.getLogger(\"astrolog\")\n\nDB_HOST = \"timescale-prod.internal\"\nDB_PORT = 5432\nDB_NAME = \"astrolog\"\nDB_USER = \"ingestion_svc\"\nDB_PASS = \"s3cur3_pr0d_pw!\"\n\nALERT_EMAIL_FROM = \"alerts@astrolog.internal\"\nALERT_EMAIL_TO = [\"oncall@astrolog.internal\"]\nSMTP_HOST = \"smtp.internal\"\n\nPACKET_HEADER_FMT = \">HHI8sI\"\nPACKET_HEADER_SIZE = struct.calcsize(PACKET_HEADER_FMT)\n\nVALID_SAT_IDS = [101, 102, 103, 200, 201, 202, 300, 301]\n\nclass TelemetryPacket:\n    def __init__(self, raw_bytes):\n        self.raw = raw_bytes\n        self.sat_id = None\n        self.seq_num = None\n        self.timestamp = None\n        self.payload_type = None\n        self.checksum = None\n        self.payload = None\n        self.parsed = False\n\n    def parse(self):\n        try:\n            header = struct.unpack(PACKET_HEADER_FMT, self.raw[:PACKET_HEADER_SIZE])\n            self.sat_id = header[0]\n            self.seq_num = header[1]\n            self.timestamp = header[2]\n            self.payload_type = header[3].decode('ascii').rstrip('\\x00')\n            self.checksum = header[4]\n            self.payload = self.raw[PACKET_HEADER_SIZE:]\n            self.parsed = True\n        except Exception as e:\n            logger.error(f\"Parse failed: {e}\")\n            self.parsed = False\n\n    def validate_checksum(self):\n        computed = 0",
+    "gold": [
+      {
+        "id": "4c4696b2-7f83-4c6c-b151-7d53bd381c50",
+        "text": "best-practices-checker: Checks code for best practice violations including DRY violations, SOLID principles, error handling patterns, testing practices, documentation standards, and version control practices. Returns structured best practice reports with improvement suggestions."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "fd7556ae-c023-45f3-9630-cceebfcd29f4",
+        "text": "quetrex-architect: Use when implementing new features in Quetrex. Ensures TDD, TypeScript strict mode, Next.js App Router patterns, ShadCN UI components, and security best practices are followed. Updated for November 2025 standards."
+      },
+      {
+        "id": "0f79458b-caec-4f4c-ad66-ce5f00e0921c",
+        "text": "ux-animation-motion: Animation patterns using Anime.js v4 for UI feedback, transitions, and celebrations. Use when implementing hover effects, transitions, loading animations, or gamification feedback. Includes reduced motion handling. (project)"
+      },
+      {
+        "id": "74aa7225-03e6-4f5e-803c-4571503b82e8",
+        "text": "qa-lead: QA Lead that creates test suites ONE FILE AT A TIME to prevent crashes. Handles test plans, test cases, testing strategies, quality gates. **CRITICAL CHUNKING RULE - Large test suites (15 files) done incrementally.** Activates for QA, quality assurance, testing, test strategy, test plan, test cases, unit tests, integration tests, E2E tests, end-to-end testing, Playwright, Jest, Mocha, Cypress, test automation, test coverage, regression, test-driven development, TDD, BDD, behavior-driven development, quality gates, acceptance criteria, test data, test scenarios, smoke tests, sanity tests, exploratory testing, write tests, create test suite, test file, spec file, describe block, it block, expect assertions, mock functions, test doubles, stubs, spies, test fixtures, setup teardown, beforeEach, afterEach, test report, coverage report."
+      },
+      {
+        "id": "6863050b-6867-4631-81f0-d5d27a73ef3d",
+        "text": "ux-color-system: Fantasy-themed color tokens and semantic color usage. Use when applying colors, creating themes, or ensuring color accessibility. Covers surface/text relationships, state colors, and dark theme patterns. (project)"
+      },
+      {
+        "id": "8a5c8b94-0525-409f-84c4-335f6c5325d5",
+        "text": "excel-export-validator: Validates Customer Feedback Analyzer Excel exports with 7 view sheets, 36 columns, and professional formatting. Use when checking Excel files, verifying export quality, debugging Excel generation issues, before releasing new versions, or when modifying Excel export code. Ensures zero errors in customer-facing deliverables."
+      },
+      {
+        "id": "f7fa2bc5-124c-4d28-b2d5-389156e357f0",
+        "text": "ux-feedback-patterns: User feedback patterns including success/error messages, loading states, confirmations, and progress indicators. Use when implementing notifications, toasts, or status updates. (project)"
+      },
+      {
+        "id": "1e7b1c18-2462-4c04-a230-296f418bf321",
+        "text": "string-manipulation-mastery: Advanced bash string manipulation including parameter expansion, pattern matching, regex, and text processing (2025)"
+      },
+      {
+        "id": "6127e796-d2c4-4656-96fc-1f3624b9af48",
+        "text": "slsa-implementation-playbook: Complete SLSA implementation playbook: clarify SLSA vs SBOM confusion, classify runner configurations, implement verification workflows, and adopt incrementally from Level 1 to Level 3."
+      },
+      {
+        "id": "610860bd-f780-4b96-9d03-ed6baa67638e",
+        "text": "axiom-ios-integration: Use when integrating ANY iOS system feature - Siri, Shortcuts, Apple Intelligence, widgets, IAP, camera, photo library, photos picker, audio, axiom-haptics, axiom-localization, privacy. Covers App Intents, WidgetKit, StoreKit, AVFoundation, PHPicker, PhotosPicker, Core Haptics, App Shortcuts, Spotlight."
+      },
+      {
+        "id": "43f17883-fe54-4976-8eae-b76d279f69ca",
+        "text": "learning-translation-quality: Assess pedagogical equivalence of translations, check terminology consistency, validate educational accuracy in target language, and measure translation quality metrics. Use when validating translated educational content. Activates on \"translation quality\", \"pedagogical equivalence\", or \"translation validation\"."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.0002254283137962128
+  },
+  {
+    "query_id": "q-04135",
+    "query": "Our Django REST Framework project at `~/repos/clinic-scheduler` needs a pretty big overhaul — the appointment booking system currently doesn't handle recurring appointments or provider availability windows. I need you to add a `RecurringAppointment` model in `scheduling/models.py` with fields for recurrence pattern (daily, weekly, biweekly, monthly), day-of-week selections, start/end dates, and a FK to the existing `Provider` model. Then create the corresponding serializer in `scheduling/serializers.py` with validation that prevents overlapping recurrences for the same provider. Update `scheduling/views.py` with full CRUD viewset endpoints and add the URL routes in `scheduling/urls.py`. Also need a new `availability/models.py` module with a `ProviderAvailabilityWindow` model (weekday, start_time, end_time, provider FK), its serializer, views, and URLs. Finally, write a management command in `scheduling/management/commands/generate_appointments.py` that expands all active recurring appointments into concrete `Appointment` instances for the next 90 days, skipping any that fall outside the provider's availability windows. Make sure all new models have migrations generated and that the existing test suite in `tests/` still passes after your changes.",
+    "gold": [
+      {
+        "id": "b9da5008-6410-4e8d-aa3e-fbd2e7bd2350",
+        "text": "invoke-opencode-acp: Delegate complex tasks to OpenCode subagent, use when â¥2 file modifications or batch operations"
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "20c557a5-52a8-4de4-a629-d240d3a02fd8",
+        "text": "django-orm-patterns: Use when Django ORM patterns with models, queries, and relationships. Use when building database-driven Django applications."
+      },
+      {
+        "id": "cded1baf-7783-4ee6-b64d-4ea5fa17465b",
+        "text": "pytest-testing: Guide for writing pytest tests following this project's patterns including fixtures, mocking, and test organization."
+      },
+      {
+        "id": "dfcaf13d-e740-4d25-9bc2-2f08ad637158",
+        "text": "django-application: Develop production-grade Django applications with models, views, ORM queries, authentication, and admin interfaces. Use when building web applications, managing databases with Django ORM, and implementing authentication systems."
+      },
+      {
+        "id": "4a18a3e8-98ed-48f9-a8e9-3489194089c4",
+        "text": "testing: Expert in creating comprehensive pytest test suites for Drift project with strict 90%+ coverage requirements. Specializes in unit tests, integration tests, mocking external APIs (Anthropic, AWS Bedrock), and coverage validation using pytest-cov. Use when writing tests, test fixtures, validating test coverage, or implementing mocking strategies for external dependencies."
+      },
+      {
+        "id": "d26bc986-ef3a-4d7f-a2b2-cc307f30468f",
+        "text": "fastapi-validation: Use when FastAPI validation with Pydantic models. Use when building type-safe APIs with robust request/response validation."
+      },
+      {
+        "id": "3662ec84-0ea7-47d8-9f26-01cacc974930",
+        "text": "pydantic-schemas: ALWAYS USE when working with Pydantic models, BaseModel, Field, validators, or data contracts. MUST be loaded before creating any Pydantic schemas, configuration classes, or API contracts. Provides v2 syntax validation and SDK research steps."
+      },
+      {
+        "id": "b98932c8-8b06-4237-916f-759ce03fbd63",
+        "text": "python-peewee: Patterns for using Peewee ORM with DatabaseProxy and scoped connections/transactions. Use when setting up DatabaseProxy, managing connection_context/atomic blocks, or writing tests with SQLite."
+      },
+      {
+        "id": "7a1af592-a117-4255-8c06-e8c96bb816c3",
+        "text": "health-check: Run comprehensive project health checks including code quality, documentation, git status, and project structure"
+      },
+      {
+        "id": "3a46d491-c6b7-4d72-bee8-a408c60865a1",
+        "text": "ml-model-training: Train ML models with scikit-learn, PyTorch, TensorFlow. Use for classification/regression, neural networks, hyperparameter tuning, or encountering overfitting, underfitting, convergence issues."
+      },
+      {
+        "id": "cfedb7ff-65a3-49d4-a53e-fbb1669aeca1",
+        "text": "Type Hints for ML Code: Apply appropriate type hints for ML/PyTorch code. Use when adding type annotations to ML code or addressing mypy errors."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.00022747952684258417
+  },
+  {
+    "query_id": "q-03233",
+    "query": "We're in the middle of a massive refactoring of our Django monolith into a domain-driven design structure — I've already moved the `accounts` and `billing` bounded contexts into their own modules with clean interfaces, but there are still about 15 more domains to extract (`inventory`, `shipping`, `notifications`, `analytics`, `reporting`, `loyalty`, `returns`, `vendor-management`, `catalog`, `pricing`, `promotions`, `fulfillment`, `customer-support`, `audit-log`, `webhooks`). Each extraction involves identifying all cross-module imports, creating an anti-corruption layer, writing new service interfaces, migrating the relevant models and their tests, updating the URL routing, and verifying nothing breaks. I've been working on this with an AI assistant but I keep hitting the context window limit right in the middle of extracting a domain — last time it happened halfway through `shipping` and I lost track of which models I'd already migrated, which circular imports I'd already resolved, and what my next steps were. Can you help me continue this refactoring systematically? I need you to keep track of where we are across all 15 domains, proactively tell me when we're getting close to running out of context so we can save a checkpoint of our progress (which domains are done, which are in-progress and at what step, which are pending, and any decisions we've made), and then we can resume cleanly after a reset. Let's start with `inventory` — it currently has models spread across `core/models.py`, `warehouse/models.py`, and `products/models.py`, with views in at least four different apps.",
+    "gold": [
+      {
+        "id": "1d6792d1-d1b9-48c3-8771-092b8f47c192",
+        "text": "compaction-advisor: Provides context-aware compaction guidance with intelligent checkpointing. Monitors context during long tasks and suggests checkpoints before compaction interrupts your work."
+      }
+    ],
+    "predicted_top_10": [
+      {
+        "id": "5db4c81a-ec3f-4f53-8b5a-b56b6abc7b0b",
+        "text": "cabinet-configurator: Cabinet Editor web application development skill. Use when working on Cabinet Editor codebase - a 2D/3D furniture configurator built with Canvas API and Three.js. Covers architecture (Panel and Drawer classes, connections system, virtual panels), coordinate systems, panel/drawer movement logic, cabinet dimension changes (width/height/depth/base), 3D rendering with rank-based depth, ribs system, and drawer box calculations. Essential for debugging, adding features, or understanding how panels/drawers interact with cabinet sizing."
+      },
+      {
+        "id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+        "text": "i18n-frontend-implementer: Adds internationalization (i18n) infrastructure with translation plumbing, scalable key strategy, formatters for dates/numbers/currency, plural rules, and language switching. Use when implementing \"internationalization\", \"translations\", \"multi-language support\", or \"i18n\"."
+      },
+      {
+        "id": "bd244c6d-0678-44de-a2cf-008ffaaa1e80",
+        "text": "Backend Models: Define database models with clear naming, appropriate data types, proper constraints, and relationship definitions. Use this skill when creating or modifying ORM model files, database entity definitions, or data structure schemas. When defining table relationships, foreign keys, and cascade behaviors. When implementing model validation rules, timestamps, or indexes. When working with model files in frameworks like SQLAlchemy, Sequelize, ActiveRecord, SQLx, Prisma, or similar ORMs. When choosing appropriate data types for columns or establishing data integrity constraints (NOT NULL, UNIQUE, foreign keys)."
+      },
+      {
+        "id": "ad84d3c2-9b46-4839-932b-141604a59ba1",
+        "text": "axiom-foundation-models-ref: Reference â Complete Foundation Models framework guide covering LanguageModelSession, @Generable, @Guide, Tool protocol, streaming, dynamic schemas, built-in use cases, and all WWDC 2025 code examples"
+      },
+      {
+        "id": "5522bba9-1e15-4ba9-946f-5425cce41e13",
+        "text": "Marketplace Management Skill: Main orchestration agent for marketplace package discovery, installation, and registry management"
+      },
+      {
+        "id": "f30fd871-4763-4b18-ba39-8e5890d87616",
+        "text": "label-manager: Add, remove, and list labels on issues via Fractary CLI"
+      },
+      {
+        "id": "c5dde2ef-cfa7-428f-a603-a187535dcb36",
+        "text": "rails-business-logic: Specialized skill for Rails business logic with ActiveInteraction, AASM state machines, and ActiveDecorator. Use when implementing complex operations, state transitions, or presentation logic. Enforces interaction pattern over service objects."
+      },
+      {
+        "id": "3fd046e2-570a-496c-a209-f086818888e8",
+        "text": "Feature Dependency Mapper: You are the architecture analyst for Leavn's complex feature interconnections."
+      },
+      {
+        "id": "594a5cea-b6e7-473a-8d70-47e80d41d12f",
+        "text": "inbox-assistant: Manage Gmail inbox with AI-powered triage, cleanup, and restore. Use when the user mentions inbox, email triage, clean inbox, email cleanup, check email, email summary, delete emails, manage inbox, or wants to organize their email."
+      },
+      {
+        "id": "ad0de187-b54a-43cb-b992-a333e34b4eec",
+        "text": "thinking-model-router: Route to the right mental model based on your domain and problem type. The single entry point for all thinking skills."
+      }
+    ],
+    "recall_at_5": 0.0,
+    "reciprocal_rank": 0.00024078979051288225
+  }
+]

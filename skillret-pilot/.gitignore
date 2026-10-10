@@ -1,0 +1,41 @@
+# Secrets and local environments: never add with git -f.
+.env
+.env.*
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+
+# Regenerable inputs and new experiment outputs.
+data/
+vendor/
+results/
+reports/
+output/
+tmp/
+dist/
+reference_review/
+
+# Runtime evidence is private until separately reviewed for publication.
+evidence/*
+!evidence/official_skillret_eval.py.txt
+!evidence/dataset_card.md
+
+# Keep the small reproducibility pins/configurations; ignore generated run state.
+manifests/*
+!manifests/configs/
+!manifests/openrouter/
+!manifests/dataset.json
+!manifests/embedding.json
+!manifests/selector_tokenizer.json
+!manifests/llm.json
+!manifests/pilot_query_ids.json
+!manifests/live_query_ids.json
+!manifests/final_query_ids.json
+
+# Only the explicitly reviewed historical ZIP belongs in version control.
+*.zip
+!reference_run/MIA5150_skillret_handoff.zip

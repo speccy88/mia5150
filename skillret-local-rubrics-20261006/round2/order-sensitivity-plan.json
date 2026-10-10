@@ -1,0 +1,18 @@
+{
+  "version": "order-sensitivity-2-v1",
+  "selection": "First2 cases in already-frozen fusion-confirmation panel order, independent of gains/losses: q-00091 and q-03583.",
+  "permutation": "Reverse all20 candidate questions once. Task/rubric/model unchanged; map new scores back to skill IDs. Tie breaks remain ORIGINAL dense order, not permuted order.",
+  "ids": [
+    "q-00091",
+    "q-03583"
+  ],
+  "requests_sha256": "cb09583508a498a27c1f2a4974f8962a2f674fd29572d8be956fef7977b15cae",
+  "model": "jev-1.13.0",
+  "max_calls": 2,
+  "max_input_tokens": 128000,
+  "usage_bound_usd": "0.005376",
+  "reserve_usd": "0.02",
+  "question": "Do mapped scores, Jev ranking and final RRF change under this one request-order perturbation?",
+  "caveat": "Operational robustness only. No quality labels. A changed answer could reflect temporal/backend nondeterminism as well as order; without a repeated original-order control we cannot isolate cause. Two cases do not establish general invariance.",
+  "protocol_sha256": "2a38f670f91c94ab1fbc29d392b4b400561a87ccd5bf4d55934eacb2ddb30e34"
+}

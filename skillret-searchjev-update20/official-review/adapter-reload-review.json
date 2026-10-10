@@ -1,0 +1,20 @@
+{
+  "review_type": "Static audit of revised shared-base adapter reload gate; active scripts unchanged",
+  "script": "pilot20_adapter_reload.py",
+  "script_sha256": "48ef6722ab8c412061058f8a55cbacb1998229e1cc2f0fb967b70fba3dfb6511",
+  "common_sha256": "56d92a2cd30357eb35318f90740b53b8c24a6076bd8db49bcf8050b50dd2e4f4",
+  "finding": "No substantive correctness defect identified",
+  "validated_semantics": [
+    "Installed PEFT set_adapter accepts inference_mode and re-enables default adapter gradients when false",
+    "Named adapter state extraction produces canonical keys for tensor comparison",
+    "Expected adapter state CPU-cloned before adding reload_check",
+    "Saved checkpoint reload tensors and same-input eval logits compared",
+    "Default adapter restored and reload_check deleted before full frozen-base hash",
+    "Optimizer parameter IDs match restored trainable parameters; optimizer/scaler remain same objects",
+    "CPU and CUDA RNG restored after reload initialization",
+    "Next iteration model.train() restores training/dropout mode"
+  ],
+  "resource_note": "Only second adapter allocated, not second base model; host copy is bounded by adapter size. Continuous guard remains necessary.",
+  "proof_scope": "Current checkpoint gets a fresh named-adapter reload into verified same frozen base. Prior checkpoint-validation run supplies independent full-base reload evidence. This is not a demand for identical stochastic training across runs.",
+  "runtime_status": "Not asserted by static review"
+}

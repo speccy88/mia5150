@@ -1,0 +1,28 @@
+{
+  "planned": 200,
+  "attempted": 200,
+  "unrun": 0,
+  "status": "COMPLETE",
+  "bm25_recall_at_5": 0.6058333333333333,
+  "bm25_recall_at_20": 0.7275,
+  "bm25_clm_recall_at_5": 0.38166666666666665,
+  "absolute_delta": -0.22416666666666668,
+  "relative_delta": -0.37001375515818435,
+  "paired_bootstrap_95_ci": [
+    -0.2891666666666667,
+    -0.15914583333333365
+  ],
+  "improved": 14,
+  "worsened": 76,
+  "unchanged": 110,
+  "queries_with_any_gold_missing_top20": 80,
+  "queries_with_all_gold_missing_top20": 32,
+  "service_failures": 0,
+  "failure_policy": "attempted failures score zero; unrun queries excluded and counted",
+  "clm_complete_at_5": 0.255,
+  "clm_precision_at_5": 0.112,
+  "clm_f1": 0.1680952380952381,
+  "mean_seconds": 0.29819251674693076,
+  "median_seconds": 0.27934269281104207,
+  "p95_seconds": 0.4476817158516496
+}

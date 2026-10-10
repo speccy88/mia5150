@@ -1,0 +1,151 @@
+{
+  "qwen_pool_top5_matches_original_all32": true,
+  "vectors": {
+    "skillret-docs.npy": {
+      "shape": [
+        270,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "706ce925a2d17f06a7268de3e45d9766de6c9cbdd1275df0ef5180cc2734b37d"
+    },
+    "skillret-queries-0.npy": {
+      "shape": [
+        32,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "4cd597181f98d9d1f88f0137f936d521a67216815b6dd149574709821b5c316f"
+    },
+    "skillret-queries-1.npy": {
+      "shape": [
+        32,
+        768
+      ],
+      "max_unit_norm_error": 5.960464477539063e-08,
+      "sha256": "4cd597181f98d9d1f88f0137f936d521a67216815b6dd149574709821b5c316f"
+    },
+    "small-docs.npy": {
+      "shape": [
+        28,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "238886e6a5dbba4afd87d13deab7dcbbb2a3e0b22bfeefd6f78c17d6c1937a2b"
+    },
+    "small-queries-0.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "bcaef43c4eacd69ef28ced268779f6c54b91cafa6baeb15eb66bb72e8d339a2e"
+    },
+    "small-queries-1.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "bcaef43c4eacd69ef28ced268779f6c54b91cafa6baeb15eb66bb72e8d339a2e"
+    },
+    "small-queries-2.npy": {
+      "shape": [
+        20,
+        768
+      ],
+      "max_unit_norm_error": 1.1920928955078125e-07,
+      "sha256": "bcaef43c4eacd69ef28ced268779f6c54b91cafa6baeb15eb66bb72e8d339a2e"
+    },
+    "smoke-0.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 0.0,
+      "sha256": "8b4bb2c4b8185a219223bffbf4db9c1b63658cc3ca923db6f0d38385d58dc93e"
+    },
+    "smoke-1.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 0.0,
+      "sha256": "8b4bb2c4b8185a219223bffbf4db9c1b63658cc3ca923db6f0d38385d58dc93e"
+    },
+    "smoke-2.npy": {
+      "shape": [
+        3,
+        768
+      ],
+      "max_unit_norm_error": 0.0,
+      "sha256": "8b4bb2c4b8185a219223bffbf4db9c1b63658cc3ca923db6f0d38385d58dc93e"
+    }
+  },
+  "small_repeat_max_absolute_difference": 0.0,
+  "skillret_repeat_max_absolute_difference": 0.0,
+  "calls": 431,
+  "truncated": [
+    {
+      "id": "skillret/query/0/5",
+      "prompt": "SearchQuery",
+      "wall_seconds": 0.12782219900009295,
+      "cpu_seconds": 0.12446230000000469,
+      "raw_tokens": 836,
+      "used_tokens": 512,
+      "truncated": true,
+      "query_id": "q-02348"
+    },
+    {
+      "id": "skillret/query/1/5",
+      "prompt": "SearchQuery",
+      "wall_seconds": 0.07991667700002836,
+      "cpu_seconds": 0.07965719999999976,
+      "raw_tokens": 836,
+      "used_tokens": 512,
+      "truncated": true,
+      "query_id": "q-02348"
+    }
+  ],
+  "cached_qwen_selected_query_max_tokens": 801,
+  "cached_qwen_selected_truncated_queries": 0,
+  "runtime_wheels": [
+    {
+      "name": "sentence-transformers",
+      "version": "6.1.0",
+      "file": "sentence_transformers-6.1.0-py3-none-any.whl",
+      "sha256": "eb8122f4d180f552eda26dc3d77e84e8c11dc2b1d456a406b9f24abb70ceeadd",
+      "url": "https://files.pythonhosted.org/packages/b5/6e/9115e19589c83172bd37ec793cfef7f7c719464053fa6a8882700c1f4488/sentence_transformers-6.1.0-py3-none-any.whl"
+    },
+    {
+      "name": "transformers",
+      "version": "5.19.0",
+      "file": "transformers-5.19.0-py3-none-any.whl",
+      "sha256": "afcd2dd5f603ed28c1e1fcb00a338ccbb4ef5f878ed289635df8b58187afb518",
+      "url": "https://files.pythonhosted.org/packages/b9/59/1e7f1212c215c73690ae6cab4678efe1555ff985953e145d88cc212859b0/transformers-5.19.0-py3-none-any.whl"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "1.33.0",
+      "file": "huggingface_hub-1.33.0-py3-none-any.whl",
+      "sha256": "04e434b06e100eddbce9a6e817d72693a7884b10a79bd67ab48080d5c07eb899",
+      "url": "https://files.pythonhosted.org/packages/fc/16/963096d224b80909432dc16561a615fd33d2d13beef3ce4c63fa25e40867/huggingface_hub-1.33.0-py3-none-any.whl"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "file": "tokenizers-0.23.2-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "41c2f84d172449b4dadb9cdc508e3e364076613c35b16e76ecfe47a60d1e3305",
+      "url": "https://files.pythonhosted.org/packages/2c/ca/ca6b93c7820df123b2662a9469e8facc826ccc94e98fdd0d615f6431e73a/tokenizers-0.23.2-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.23.0",
+      "file": "torchvision-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "sha256": "4e7d31c43bc7cbecbb1a5652ac0106b436aa66e26437585fc2c4b2cf04d6014c",
+      "url": "https://files.pythonhosted.org/packages/e4/b5/3e580dcbc16f39a324f3dd71b90edbf02a42548ad44d2b4893cc92b1194b/torchvision-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl"
+    }
+  ],
+  "inference_wall_sum": 32.22388196300176,
+  "inference_cpu_sum": 32.009357700000045
+}

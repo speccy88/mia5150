@@ -1,0 +1,9 @@
+{
+  "best_sha256": "45770bd332ece2830ed624bac30c33f3ac3267eed684edf151abd0cc36fa4dd4",
+  "original_unchanged": true,
+  "reload_scores_equal": true,
+  "reload_rankings_equal": true,
+  "sample_queries": 10,
+  "sample_skills": 50,
+  "best_epoch": 10
+}

@@ -1,0 +1,14 @@
+{
+  "consolidation_performed_no_inference_training_or_api_calls": true,
+  "suites": [
+    {"folder": "skillret-embedding-jev-fusion", "command": "python -m unittest -q test_evaluate test_jev_prepare test_baseline test_hosted_jev_client test_hosted_study test_actual_hosted_report_recovery test_eval_hosted_snapshot_recovery", "environment": "existing Linux venv; one CPU thread", "tests": 170, "status": "passed"},
+    {"folder": "skillret-local-metadata-20261005", "command": "python -m unittest -q tests", "environment": "existing Linux venv; one CPU thread", "tests": 14, "status": "passed"},
+    {"folder": "skillret-seed5150-scaling", "command": "python -m unittest discover -s scaling5150 -p test_*.py -q", "environment": "existing Linux venv; one CPU thread", "tests": 11, "status": "passed"},
+    {"folder": "skillret-local-rubrics-20261006/round2", "command": "python -m unittest discover -p test_*.py -q", "environment": "native Linux temporary copy of exact source and saved request-order fixtures; one CPU thread", "tests": 70, "status": "passed"}
+  ],
+  "environment_notes": [
+    "Initial Windows-only runs lacked pytrec_eval and torch metadata and could not mock Linux os.killpg; intended Linux venv suites passed.",
+    "The credential-store permission tests intentionally reject the /mnt/c filesystem. Native Linux temporary fixtures contain only dummy values.",
+    "Initial minimal native Linux fixture copies omitted two saved request-order JSON inputs. The final fixture includes those existing artifacts without issuing requests."
+  ]
+}

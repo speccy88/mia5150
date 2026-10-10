@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "verified_at_unix": 1791336293.1462228,
+  "source": "https://docs.typesafe.ai/models (public model/pricing page checked 2026-10-07)",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "input": "0.042",
+  "output": "0",
+  "model": "jev-1.13.0"
+}

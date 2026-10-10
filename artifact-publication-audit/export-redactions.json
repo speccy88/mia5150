@@ -1,0 +1,314 @@
+{
+  "redactions": [
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/1d8bf9e74b39870ab7219fd0f4bc6a5512cda1caf5a2a499144b55e3c9776499.json",
+      "original_sha256": "1d8bf9e74b39870ab7219fd0f4bc6a5512cda1caf5a2a499144b55e3c9776499",
+      "export_sha256": "fc33bd18281c7a555e6093f4767d783105a82e1659ce97bf68136c891115f944",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/1f7beb227df8bcdbc77eba2d60c3a6833c6f95e27b1bb3e883445112839baeb4.json",
+      "original_sha256": "1f7beb227df8bcdbc77eba2d60c3a6833c6f95e27b1bb3e883445112839baeb4",
+      "export_sha256": "51f766c0fcdcfc10009c08b6621d4ba2165d41a914b7bd81b5dac5479b87b26c",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/27c36c17f1998e8c766e5f34cc1a15919c2d5e42d859f54b7d8b7045433a5ad0.json",
+      "original_sha256": "27c36c17f1998e8c766e5f34cc1a15919c2d5e42d859f54b7d8b7045433a5ad0",
+      "export_sha256": "9d9bbb203d451160e3e4e338ea84170bcd7249595d21d83618ab9caeb54612ce",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0.json",
+      "original_sha256": "78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0",
+      "export_sha256": "7c3b987a8833bcee736a8956e03b239f45e9913e0dd6162f920174c5b3891268",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/79daf04e41db9e98dc6a02254c09126030a312b38186fbdeb67ae9375a3d8e9f.json",
+      "original_sha256": "79daf04e41db9e98dc6a02254c09126030a312b38186fbdeb67ae9375a3d8e9f",
+      "export_sha256": "b97b6b01bdcfc561259d11cacb942691a3184bb3ac12d760d8c5e2eb7a7f1048",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/ea661fdd5eed051e51b98c7dee1478f6f7325021860702b540373eaa86fdd4bf.json",
+      "original_sha256": "ea661fdd5eed051e51b98c7dee1478f6f7325021860702b540373eaa86fdd4bf",
+      "export_sha256": "706b79158051361cb0345d9871453f1d0653146ce1781a919650d7e5531504db",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/hosted-execution/requests/f0ced4dfc9e5d2eb5d6e5faab8f57a5bd992a329a3306501bcd4cf8bdf98e200.json",
+      "original_sha256": "f0ced4dfc9e5d2eb5d6e5faab8f57a5bd992a329a3306501bcd4cf8bdf98e200",
+      "export_sha256": "80ebaed84c82fb0a0802e249c97299fbca09c622b27016e1cb707a3ede61d8cd",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0.json",
+      "original_sha256": "97f54e604719a5b209cf6754d2665d218c93facfc3fcdd65169d2e43ad0e74f0",
+      "export_sha256": "d06f3891ca46ac573fba4ce234f47ef8ed85ae554dbbf5973624b32f0154c968",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/d05a4ac1509d2dc702354f1872b13372cde0a2e259adb5f3c67b099051334e5c.json",
+      "original_sha256": "c6b3ca1684068ee5e78771b9e1b72e646f7ca045d9cac22daceee01dd15d5045",
+      "export_sha256": "10eeb841a886f2d9b08bbc325f8e98f8427ef2da86d6005b7afac2c84655ed97",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/e19f0ecff9ff2fdc276816db28940104690c474254b3c1c9039e8864df277d4b.json",
+      "original_sha256": "f3f4876f46728cec2af468ddbfa1df65bc8d0f5804b9c5dd5939341fd7c1da82",
+      "export_sha256": "6866933c4a8b5ebd57318f125aa53bbdbc918b3c8c4a6e380a06b816d0fa5f7b",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/0a7611f374b8bdecef05f55d75420b5b7c0e6d3af96f4b027b15b656c2991a33.json",
+      "original_sha256": "5ba1644c20140ca017fc6e08f1406f6362ade0bd057cb0db5cf99cb747f1cd5b",
+      "export_sha256": "31c7d57bedbeb0b2d36a1de7090a86267f25d4bd59fd85f724967f31b7e22599",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/22a50e18951939e59559b1a7d90855a9e16bf27cc2595a85e5c91c79b908df90.json",
+      "original_sha256": "2d20907db7232d8348c2ae9425ad559ede9515cc1b91bd089b6667eddcc36ac6",
+      "export_sha256": "293d8700346f0e7ed21152aa33c51a49a3a50d37b71b92102b67befa0afce130",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0.json",
+      "original_sha256": "97f54e604719a5b209cf6754d2665d218c93facfc3fcdd65169d2e43ad0e74f0",
+      "export_sha256": "d06f3891ca46ac573fba4ce234f47ef8ed85ae554dbbf5973624b32f0154c968",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/7f05088eb7fccb184ddcd99a0b40a0f66158c022a42eccd0170ce001bda00c2e.json",
+      "original_sha256": "47ca2fc9f32e468ed08f6ff543deb2c9897b7792ffd96a0b77aaef029e9013dc",
+      "export_sha256": "416cf8b95656d9e833d4fb9fee4622c4bb565e3e6d7a4f4ff3902bea3db9f92e",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/cc0490c2105ee905e1561443a7588d9d30202354d58c2812c9985c00b3b563e9.json",
+      "original_sha256": "389a68697b4f253303be78228e2ee56a8881d0ef32f0c1d59798f27b15881eea",
+      "export_sha256": "5dad747af042fdf752ca775e451aad571c4ef0a1acaa180937b310763952a047",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/d05a4ac1509d2dc702354f1872b13372cde0a2e259adb5f3c67b099051334e5c.json",
+      "original_sha256": "c6b3ca1684068ee5e78771b9e1b72e646f7ca045d9cac22daceee01dd15d5045",
+      "export_sha256": "10eeb841a886f2d9b08bbc325f8e98f8427ef2da86d6005b7afac2c84655ed97",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/e19f0ecff9ff2fdc276816db28940104690c474254b3c1c9039e8864df277d4b.json",
+      "original_sha256": "f3f4876f46728cec2af468ddbfa1df65bc8d0f5804b9c5dd5939341fd7c1da82",
+      "export_sha256": "6866933c4a8b5ebd57318f125aa53bbdbc918b3c8c4a6e380a06b816d0fa5f7b",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/1d8bf9e74b39870ab7219fd0f4bc6a5512cda1caf5a2a499144b55e3c9776499.json",
+      "original_sha256": "3e2c4963003f9b9b322ca1fcbd7c54eb4b8852d3b15b95f4132cadb4418b1d51",
+      "export_sha256": "0d33a6de5e3eaf8c926f2bb292bc1eb1b694f23d93fcff8617bd1757949812bb",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/1f7beb227df8bcdbc77eba2d60c3a6833c6f95e27b1bb3e883445112839baeb4.json",
+      "original_sha256": "2111dd047d7fcc1a33d07ebf13abc6eddbb86efba592d7c513851e581f3cc8cb",
+      "export_sha256": "9eb0863ae6072867c93e55808d798b5411e8479f11d4fdb037bfc1fcf79acea6",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/27c36c17f1998e8c766e5f34cc1a15919c2d5e42d859f54b7d8b7045433a5ad0.json",
+      "original_sha256": "befaa823e1ee05ac779087b028b96157e279151669a92a0869f1167b969943fe",
+      "export_sha256": "c5829de20af2d023d68486e2e9af171720dbf858cdd548cb3aef2201e4f76d9f",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/79daf04e41db9e98dc6a02254c09126030a312b38186fbdeb67ae9375a3d8e9f.json",
+      "original_sha256": "a7d876b275db4caa34c1e3200b53953bf84a14d8da314ac28f571c58998348af",
+      "export_sha256": "78607cfdde9e4c3831250033fa3e8ef3b034d3bae3f0deb69745623ed0fbf880",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/e69d4ba7fde5353f1550e90476c1c3bf3e5dd0ea1804a6ea1451ac64ecb1cbd6.json",
+      "original_sha256": "bb1b391a6631e93d3426936041ef7c80678767994a25e6b9664938f251b15290",
+      "export_sha256": "ef6d6ab4993447fa9161a6b9180744bde204420fa9f9210f0b8e677b1c22a37c",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/ea661fdd5eed051e51b98c7dee1478f6f7325021860702b540373eaa86fdd4bf.json",
+      "original_sha256": "a6530a9f0b08036a591ad8d23b4ea9f5cc0592e184cbd7bd306ab731fc8a07a0",
+      "export_sha256": "016ff4ffce1a01f6be83d5995a1b86bd0d9f8afc49434d46577bcb49c47599c9",
+      "replacements": 1,
+      "match_hashes": [
+        "46eb12352e801d0b8907174aa272b0d9d4a414fef2e1c8be66ceab11910d7fd0"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/f0ced4dfc9e5d2eb5d6e5faab8f57a5bd992a329a3306501bcd4cf8bdf98e200.json",
+      "original_sha256": "c64f6044b7d89d6bde050b2ccf2de82a91a5452d4dc41db30017e4018835b89b",
+      "export_sha256": "f9d9e4e46d2dd99061711d0bb551649238cfa9a1edcc809f834b3f04b82f703d",
+      "replacements": 1,
+      "match_hashes": [
+        "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-smoke/requests/78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0.json",
+      "original_sha256": "97f54e604719a5b209cf6754d2665d218c93facfc3fcdd65169d2e43ad0e74f0",
+      "export_sha256": "d06f3891ca46ac573fba4ce234f47ef8ed85ae554dbbf5973624b32f0154c968",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-embedding-jev-fusion/results/jev-plan-smoke-context-v1/requests/78fc6b3b89105126ff33fd868c9e30e87648a3a76d58ef8420fe06651b5e42d0.json",
+      "original_sha256": "97f54e604719a5b209cf6754d2665d218c93facfc3fcdd65169d2e43ad0e74f0",
+      "export_sha256": "d06f3891ca46ac573fba4ce234f47ef8ed85ae554dbbf5973624b32f0154c968",
+      "replacements": 1,
+      "match_hashes": [
+        "66ba0afa26e54b08db8ffb0a9056d867bef3a395934685267b82c1dadf27356c"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-local-metadata-20261005/data/queries/test.jsonl",
+      "original_sha256": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+      "export_sha256": "a86a579d0d2ca37e8efd7c8487e2a4c490be1c745372ea29fb81b2bd4efc5eed",
+      "replacements": 1,
+      "match_hashes": [
+        "773a965e631893c632823cf01b8bb80133d8a38d3e91ef304d67cddb0e4a59c7"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    },
+    {
+      "path": "skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs/queries-test.jsonl",
+      "original_sha256": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+      "export_sha256": "a86a579d0d2ca37e8efd7c8487e2a4c490be1c745372ea29fb81b2bd4efc5eed",
+      "replacements": 1,
+      "match_hashes": [
+        "773a965e631893c632823cf01b8bb80133d8a38d3e91ef304d67cddb0e4a59c7"
+      ],
+      "classification": "credential-shaped documentation/command examples from pinned public benchmark inputs",
+      "scope": "export text only; source files preserved locally; IDs, labels, rankings and metrics unchanged"
+    }
+  ],
+  "history_note": "The completed source branch already exists remotely. Its commits are preserved without rewriting history. Redactions below describe the new main-tip export copies; original per-request payload hashes and filenames continue to identify historical bytes, and cannot be used as hashes of the redacted copies.",
+  "rebuild": "Pinned source data and original local bundles reconstruct historical bytes. Never send the redacted saved requests as exact-payload retries."
+}

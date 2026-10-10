@@ -1,0 +1,167 @@
+run:
+  name: qwen35-0.8b-jev-nopub
+  output_root: outputs
+  seed: 42
+  hf_home: null
+  report_to: wandb
+  wandb_project: Search_JEV
+  wandb_entity: R-DTeam
+  output_dir: outputs/qwen35-0.8b-jev-nopub
+  model_name: Qwen/Qwen3.5-0.8B
+model:
+  size: 0.8B
+  variant: instruct
+  name: null
+  dtype: bfloat16
+  attn_implementation: sdpa
+  load_in_4bit: false
+  gradient_checkpointing: true
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+  - in_proj_qkv
+  - in_proj_z
+  - in_proj_b
+  - in_proj_a
+  - out_proj
+  init_adapter: null
+labels:
+  alphabet: extended
+  max_options: null
+  over_limit_policy: drop
+prompt:
+  style: auto
+  language: bilingual
+  max_length: 2048
+data:
+  root: data/SearchJev-V2
+  mode: sampled
+  families:
+  - unified_v2
+  use_publication: true
+  family_modes:
+    unified_v2: full
+    publication: full
+    benchmarkheaven: full
+  val_only_families:
+  - classification
+  - ranking
+  - search
+  processed_dir: data/processed
+  train_splits:
+  - train
+  val_split: val
+  val_fallback_per_dataset: 300
+  max_val_per_dataset: 500
+  max_train_per_dataset: null
+  dedup_val_against_train: true
+  exclude_test_overlap: true
+  include_datasets: null
+  exclude_datasets: []
+  permutation:
+    choice: true
+    noul: true
+    score: false
+    copies: 1
+  prepare_workers: 8
+  rebuild: false
+training:
+  epochs: 1
+  per_device_train_batch_size: 22
+  per_device_eval_batch_size: 32
+  gradient_accumulation_steps: 1
+  learning_rate: 5.0e-05
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  lr_scheduler_type: cosine
+  max_grad_norm: 1.0
+  bf16: true
+  logging_steps: 10
+  eval_strategy: steps
+  eval_steps: 500
+  save_steps: 500
+  save_total_limit: 3
+  max_steps: -1
+  max_train_examples: null
+  max_eval_examples: 2000
+  dataloader_num_workers: 8
+  group_by_length: true
+  optim: adamw_torch_fused
+  resume_from_checkpoint: null
+loss:
+  type: ce
+  lambda_brier: 0.5
+  sample_weights:
+    weak: 0.5
+    label_tier:
+      llm_teacher: 0.5
+calibration:
+  enabled: true
+  fraction: 0.5
+  per_question_type: true
+  max_examples: 5000
+evaluation:
+  max_examples: 5000
+  test_before_training: true
+  test_after_training: true
+  test_families:
+  - classification
+  - ranking
+  - search
+  - unified_v2
+  - publication
+  - benchmarkheaven
+  test_only_families:
+  - benchmarkheaven
+  benchmarkheaven_dir: data/benchmarkheaven
+  test_split: test
+  test_max_examples_per_dataset: 10000
+  test_max_rows_per_file: null
+  test_batch_size: 512
+  test_max_batch_tokens: 131072
+  test_extra_gpus:
+  - 0
+  - 1
+  test_shard: true
+  test_permutation_trials: 0
+distributed:
+  backend: auto
+  num_gpus: all
+  gpus: 0,1,2,3,4,5
+  gpu_selection: free
+  min_free_gb: 16.0
+presets:
+  0.8B:
+    training:
+      per_device_train_batch_size: 32
+      gradient_accumulation_steps: 1
+      per_device_eval_batch_size: 32
+  2B:
+    training:
+      per_device_train_batch_size: 16
+      gradient_accumulation_steps: 2
+  4B:
+    training:
+      per_device_train_batch_size: 32
+      gradient_accumulation_steps: 1
+      per_device_eval_batch_size: 32
+  9B:
+    training:
+      per_device_train_batch_size: 32
+      gradient_accumulation_steps: 1
+      per_device_eval_batch_size: 32
+  27B:
+    training:
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 32
+      per_device_eval_batch_size: 4

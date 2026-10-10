@@ -1,0 +1,208 @@
+% MIA5150 course proposal. Edit this file; GitHub Actions rebuilds its PDF.
+% Measured results come from skillret-pilot/reference_run/, not future experiments.
+\documentclass{article}
+\PassOptionsToPackage{numbers,compress}{natbib}
+% Preprint shows team names without implying acceptance at NeurIPS.
+\usepackage[preprint]{neurips_2026}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+\title{Agent Skill Discovery at Scale}
+\author{\texttt{deepujoy88} \And \texttt{speccy88} \And \texttt{vsimard}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+An agent with thousands of available skills must decide what to load without
+spending its context budget on the whole library. We propose a controlled
+comparison of listing, vector retrieval and domain-then-vector retrieval, with
+BM25 as a lexical reference. Library size is the main experimental variable;
+selection quality and model token use are the main outcomes. An executed pilot
+established a full-document BM25 Recall@5 of 51.67\% on 200 queries over 6,006
+skills, and verified native Deep Agents integration with five OpenRouter models.
+The small live sample exposed invalid selections and provider limits rather than
+a reliable model ranking. The next study will isolate discovery strategy under
+fixed inputs, a pinned model/provider and an explicit request budget.
+\end{abstract}
+
+% Add student numbers here if the course requires them; none were supplied.
+\noindent\textbf{MIA5150 project proposal --- Benchmark and Empirical Study.}
+\textbf{Research claim to test:} skill shortlisting reduces model context cost,
+but its effect on selection accuracy depends on retrieval coverage and routing
+errors as the available library grows.
+
+\section{Problem and related work}
+A reusable skill can package task instructions in a \texttt{SKILL.md} document.
+Showing every skill description makes the discovery prompt grow with the library.
+Retrieving a shortlist controls this input, but can remove a necessary skill
+before the model sees it. Routing to one category narrows the search further,
+while introducing another possible point of failure. We ask when this trade-off
+is useful, without assuming that any strategy must win.
+
+SkillRet supplies a large skill-retrieval benchmark and highlights the difficulty
+of finding relevant skills in noisy requests \citep{kang2026skillret}. Skill
+Retrieval Augmentation separates retrieval, skill incorporation and downstream
+task execution \citep{su2026skill}; our project studies the first two boundaries
+through retrieval and metadata-only selection, not task completion.
+Work on single-agent skill libraries motivates examining semantic confusion and
+hierarchical routing as libraries expand \citep{li2026single}. Skill Shadowing
+separates wrong skill selection from execution degradation caused by additional
+context \citep{song2026shadowing}. Graph-of-Skills investigates dependencies and
+structured retrieval \citep{liu2026graph}; dependency graphs and skill chains are
+outside our scope. Our contribution will be a reproducible, bounded comparison
+of simple discovery strategies using real native skill middleware, with failures
+and costs reported alongside accuracy.
+
+\section{Experimental design}
+\paragraph{Data and library construction.}
+We use the pinned SkillRet test snapshot with 6,006 skills, 4,392 synthetic queries
+and 7,187 relevance judgments. Its six-way \texttt{major} taxonomy supports the
+router. For each query, the sampler retains all annotated relevant skills and
+adds seeded random distractors to form nested libraries of $N=50,250,1000$.
+Membership and display order are shared across strategies. This is a conditional
+distractor-scaling study, not the official full-corpus benchmark or a production
+catalogue. Labels are available only to the sampler and evaluator; the model sees
+canonical query text and candidate metadata.
+
+\paragraph{Four methods, one selector.}
+\textbf{Listing} exposes all $N$ descriptions. \textbf{BM25} retrieves up to five
+candidates using keyword matching. \textbf{Vector} retrieves five by cosine
+similarity using the pinned CPU BGE-small-en-v1.5 encoder.
+\textbf{Domain-vector} asks the same language model to predict one of six major
+categories, then searches within that category. An empty category is recorded as
+a routing failure, without global fallback. Each arm uses identical original
+name/description text, capped once at 1,024 characters and 128 BGE tokens.
+
+\paragraph{Native integration and controls.}
+Candidates enter the real LangChain Deep Agents \texttt{SkillsMiddleware} through
+an isolated in-memory \texttt{StateBackend}. Main selection allows one
+\texttt{select\_skills} call returning zero to five original IDs; filesystem,
+shell and subagent tools are excluded. A separate activation check permits
+bounded native reads, never execution of downloaded instructions. Temperature,
+output limit, prompt, provider, embedding revision and candidate order are fixed
+across methods. We propose DeepSeek V4.1 Flash on its pinned provider as the
+primary model because its pilot integration completed most cases, not because
+the pilot established superior accuracy. Availability must pass a new canary.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.93\linewidth}{\centering
+Canonical request + seeded skill library\\[3pt]
+$\downarrow$ listing / BM25 / vector / domain-vector $\downarrow$\\[3pt]
+Candidate metadata $\rightarrow$ native skill middleware $\rightarrow$ selected IDs\\[3pt]
+$\downarrow$ evaluator-only labels, saved failures, tokens and costs}}
+\caption{The same selection boundary follows every discovery method. Skill bodies
+are read only in the separate activation check.}
+\label{fig:flow}
+\end{figure}
+
+\section{Executed pilot and feasibility}
+% These are observed snapshot values. Do not replace them with a planned result.
+The real baseline ran before API spending. Table~\ref{tab:retrieval} separates
+full-document retrieval from the common-metadata representation. The former is
+a 200-query partial-protocol check, not reproduction of a published full-test
+score. All rows use the same 200 consumed pilot queries and all 6,006 test skills.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llr}
+\toprule
+Retriever & Document representation & Recall@5 \\
+\midrule
+BM25 & Full name, description and body & 51.67\% \\
+BM25 & Capped name and description & 60.58\% \\
+BGE-small & Same capped metadata & 49.25\% \\
+\bottomrule
+\end{tabular}
+\caption{Measured retrieval baselines. Input representation changes between the
+first and second rows, so that difference is not a method-only comparison.}
+\label{tab:retrieval}
+\end{table}
+
+The live follow-up compared five fixed OpenRouter model/provider configurations
+on three requests, three library sizes and four methods: 180 planned cases,
+138 attempted, 121 valid selections and 24 exact reference sets. Of these cases,
+53 reused compatible earlier records. At $N=1000$, none of 35 valid selections
+was exact, although 22 included at least one annotated skill. Qwen 27B rate limits,
+MiMo overload and invalid IDs reduced coverage. These unequal, tiny denominators
+do not support a general model ranking or a reliable scaling law.
+
+All five revised integration canaries passed. Separate activation recorded 16
+actual native reads across 25 cases, with 15 completed workflows. Total recorded
+project spending was US\$0.3865, or an estimated CAD\$0.5797 at the declared 1.50
+planning factor. This includes earlier stages, not just the scaling comparison.
+The reproducible handoff contains two notebooks, 54 passing tests, exact source
+pins and sanitized traces. Code and measured evidence are available in the
+\href{https://github.com/speccy88/mia5150/tree/b9c9df2/skillret-pilot}{versioned pilot folder}.
+
+\section{Evaluation and next-stage plan}
+\paragraph{Metrics and interpretation.}
+Let $G_q$ be the annotated skill set, $C_q$ the retrieved candidates and $S_q$ the
+valid selected set. We will report candidate recall $|C_q\cap G_q|/|G_q|$ separately
+from selection precision, recall and F1. Exact-set match requires $S_q=G_q$.
+Every table will show planned, attempted and valid counts. Conditional accuracy
+will be accompanied by exact successes per planned case, so provider exclusions
+and malformed outputs remain visible rather than disappearing from the denominator.
+Token accounting includes input and output, plus routing in every logical
+domain-vector workflow even when a physical route is reused. Actual USD charges,
+estimated CAD, latency and failed-call reservations will be reported separately.
+
+\paragraph{Sampling and analysis.}
+The 200 exploratory queries remain consumed; 4,192 disjoint final IDs are reserved.
+The next bounded batch will preregister 20 previously unused queries, including
+single- and multiple-positive cases, with seed 42 and the three fixed library
+sizes. It requires at most 240 selectors and 20 routers before exclusions, plus
+canary/activation calls. Additional seeds 43 and 44 are planned only after an
+explicit budget review. We will compare methods on paired queries, report
+uncertainty over queries when sample size permits, and inspect missing candidates,
+wrong categories and extra selections separately. A more independent domain-vector
+arm should replace the pilot's earlier-output gate in a separately versioned
+protocol; historical gated results will not be pooled with that new arm.
+
+\paragraph{Resources, risks and backup.}
+The existing harness enforces US\$3 and CAD\$5 ceilings, a persistent 300-request
+cap, per-call reserves and no automatic retries. Its recorded 236 attempts leave
+insufficient capacity for the proposed next batch: a separately authorized study
+budget is required, and the existing ledger will not be reset. No new paid calls
+are authorized by this proposal. Provider availability and context limits may
+reduce coverage; we will retain exclusions and use one stable endpoint. Synthetic
+queries, imperfect relevance labels, random distractors and seven truncated BGE
+query embeddings in the pilot limit generalization. If live coverage remains
+unreliable, the backup is full-corpus BM25 versus BGE on matched metadata, followed
+by a smaller $N=50$ native selection study. No training or GPU is required.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.12\linewidth}p{0.55\linewidth}p{0.23\linewidth}}
+\toprule
+Weeks & Deliverable & Proposed lead \\
+\midrule
+5--7 & Freeze queries, protocol and provider; check reproducibility & Anonymous \\
+8--10 & Run authorized batches; audit labels, costs and exclusions & Anonymous \\
+11 & Paired analysis, error taxonomy and figures & Anonymous \\
+12--13 & Presentation, report and reproduction review & All three \\
+\bottomrule
+\end{tabular}
+\caption{Proposed responsibilities, to be confirmed by the team.}
+\label{tab:timeline}
+\end{table}
+
+\noindent\textbf{Reproducibility and disclosure.}
+We will retain source/configuration hashes, query reservations and failures; no
+labels enter model state and no skill instructions execute. AI tools supported
+code preparation and proposal drafting. Team review of the methods, references,
+roles and final claims is required before submission.
+
+% References do not count toward the course's 2--3 page proposal body.
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,757 @@
+{
+  "sha": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f",
+  "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "119c2671b1d3aa154f4a1160fda0ae54835ca396",
+      "size": 200,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/119c2671b1d3aa154f4a1160fda0ae54835ca396"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e78f9170273cf35f619fadb1645e9e2d2bd9f3b",
+      "size": 101,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/6e78f9170273cf35f619fadb1645e9e2d2bd9f3b"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1a9f416d14b941fdb02f0c046f54e8029376dd2",
+      "size": 1067,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/d1a9f416d14b941fdb02f0c046f54e8029376dd2"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2048c2bbab76a1e75afa2665455aa8bd0533bcf4",
+      "size": 18092,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/2048c2bbab76a1e75afa2665455aa8bd0533bcf4"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdc3b7e77ca8650e8f750c502207e61e3c8279f4",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/fdc3b7e77ca8650e8f750c502207e61e3c8279f4"
+    },
+    {
+      "path": "assets/overall.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3645dd7476453560c4cc3fb0efd0406de4f13d2",
+      "size": 319976,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/f3645dd7476453560c4cc3fb0efd0406de4f13d2"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e943ea1068c9e7ea594cf89a1822496439c686d7",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/e943ea1068c9e7ea594cf89a1822496439c686d7"
+    },
+    {
+      "path": "data/bench",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b340c143ac22e98cd7392b2234a35ef1ba94c4a0",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/b340c143ac22e98cd7392b2234a35ef1ba94c4a0"
+    },
+    {
+      "path": "data/bench/corpus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98b0f3854bbf00076f0482290bdcce158ee45d88",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/98b0f3854bbf00076f0482290bdcce158ee45d88"
+    },
+    {
+      "path": "data/bench/corpus/corpus.json.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcad99233461f884cff2962afb71b914a67947ed",
+      "size": 71440203,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/dcad99233461f884cff2962afb71b914a67947ed"
+    },
+    {
+      "path": "data/bench/instances",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d13f10c42e2ac8757104ec60d7ab1cc2af60963c",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/d13f10c42e2ac8757104ec60d7ab1cc2af60963c"
+    },
+    {
+      "path": "data/bench/instances/bigcodebench.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a1990d7c8f49e4cb916e715373f3fad90963515",
+      "size": 4623115,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/1a1990d7c8f49e4cb916e715373f3fad90963515"
+    },
+    {
+      "path": "data/bench/instances/champ.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c446f1fe7ea31b7551a096e00b817f5bbc30ded",
+      "size": 72375,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/0c446f1fe7ea31b7551a096e00b817f5bbc30ded"
+    },
+    {
+      "path": "data/bench/instances/logicbench.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70c06a0c6eff58f4c25defa406982e0a49c0e925",
+      "size": 531231,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/70c06a0c6eff58f4c25defa406982e0a49c0e925"
+    },
+    {
+      "path": "data/bench/instances/medcalcbench.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a870f60bd8f0e98c7ca65ad343a728c4c5be28",
+      "size": 3693279,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/52a870f60bd8f0e98c7ca65ad343a728c4c5be28"
+    },
+    {
+      "path": "data/bench/instances/theoremqa.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1233cf25ea38efbd77305ef89e2454be606fc703",
+      "size": 320643,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/1233cf25ea38efbd77305ef89e2454be606fc703"
+    },
+    {
+      "path": "data/bench/instances/toolqa.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de05245d947a04b0a84cce0708b6f73ba59a88fd",
+      "size": 413554,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/de05245d947a04b0a84cce0708b6f73ba59a88fd"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c943b3553063ff80f55dfdb8f376d3de4acfd78",
+      "size": 1849,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/4c943b3553063ff80f55dfdb8f376d3de4acfd78"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "390a106042a13dd2da0bfd546d147ba985bdce30",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/390a106042a13dd2da0bfd546d147ba985bdce30"
+    },
+    {
+      "path": "src/sragents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c3d183d68fe343b52267eddc0ca30b41085c20c",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/8c3d183d68fe343b52267eddc0ca30b41085c20c"
+    },
+    {
+      "path": "src/sragents/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40d087b8e9eff8e3288a4852d46cb4ec5020f310",
+      "size": 155,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/40d087b8e9eff8e3288a4852d46cb4ec5020f310"
+    },
+    {
+      "path": "src/sragents/cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee9f3d48fddbc956df3e60dcd9c0309bd7ae746d",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/ee9f3d48fddbc956df3e60dcd9c0309bd7ae746d"
+    },
+    {
+      "path": "src/sragents/cli/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa55bfe98093cc2066ea0c451ef6872a161d5ca6",
+      "size": 77,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/fa55bfe98093cc2066ea0c451ef6872a161d5ca6"
+    },
+    {
+      "path": "src/sragents/cli/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdfd4ed686a8872d6c2c3a7ab1ca784c641101b1",
+      "size": 1314,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/cdfd4ed686a8872d6c2c3a7ab1ca784c641101b1"
+    },
+    {
+      "path": "src/sragents/cli/evaluate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "833d19d5181c1db707606db77ad713f0baa1cd48",
+      "size": 7122,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/833d19d5181c1db707606db77ad713f0baa1cd48"
+    },
+    {
+      "path": "src/sragents/cli/experiment.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9b0f70bc74081da76942b90b1c96869afa58c92",
+      "size": 2842,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/c9b0f70bc74081da76942b90b1c96869afa58c92"
+    },
+    {
+      "path": "src/sragents/cli/hybrid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a9bf5b8045c89d2dcee7799a204c3937d9a4d0",
+      "size": 1442,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/e0a9bf5b8045c89d2dcee7799a204c3937d9a4d0"
+    },
+    {
+      "path": "src/sragents/cli/infer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2246c543f2a48f75eb2fffc8f98577519c43327",
+      "size": 5710,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/a2246c543f2a48f75eb2fffc8f98577519c43327"
+    },
+    {
+      "path": "src/sragents/cli/listing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37d144eae9f700bafe8d0866614c35bc005f53af",
+      "size": 3477,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/37d144eae9f700bafe8d0866614c35bc005f53af"
+    },
+    {
+      "path": "src/sragents/cli/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc443aa81f8712f4154fdfa8466e004ee94bf390",
+      "size": 3333,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/bc443aa81f8712f4154fdfa8466e004ee94bf390"
+    },
+    {
+      "path": "src/sragents/cli/rerank.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21b2cabbf0f46f34e533b07f0287e76625664d49",
+      "size": 5496,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/21b2cabbf0f46f34e533b07f0287e76625664d49"
+    },
+    {
+      "path": "src/sragents/cli/retrieve.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a63e9249c18786ea4e36f54ffcc116a288bf8e6",
+      "size": 3900,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/0a63e9249c18786ea4e36f54ffcc116a288bf8e6"
+    },
+    {
+      "path": "src/sragents/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "092e8dba8b9bbb7861a9bc567a4b3a87e2dd7c23",
+      "size": 1704,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/092e8dba8b9bbb7861a9bc567a4b3a87e2dd7c23"
+    },
+    {
+      "path": "src/sragents/corpus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c8e1acd4f1d722ffb33e8b1098b99eb493a4e4",
+      "size": 2036,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/00c8e1acd4f1d722ffb33e8b1098b99eb493a4e4"
+    },
+    {
+      "path": "src/sragents/evaluate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "510549f1bef7c7888ef0b13cacfbfa8af23e4680",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/510549f1bef7c7888ef0b13cacfbfa8af23e4680"
+    },
+    {
+      "path": "src/sragents/evaluate/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0f7a4b9d0cd946cc71072f2d2e75925e25ccccf",
+      "size": 971,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/c0f7a4b9d0cd946cc71072f2d2e75925e25ccccf"
+    },
+    {
+      "path": "src/sragents/evaluate/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d28d200a77f7f21ce2765063b94ed04ae4aa2f1",
+      "size": 1496,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/2d28d200a77f7f21ce2765063b94ed04ae4aa2f1"
+    },
+    {
+      "path": "src/sragents/evaluate/common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb08f9eb663dfcca2eb1ff7552a6e0b8f3bbfd0c",
+      "size": 1418,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/fb08f9eb663dfcca2eb1ff7552a6e0b8f3bbfd0c"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d8da512c814db882ee0c2003ab81515f300574b",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/8d8da512c814db882ee0c2003ab81515f300574b"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a78430d9275d7b28d7cf6ae55d4268d18b1efbc",
+      "size": 335,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/8a78430d9275d7b28d7cf6ae55d4268d18b1efbc"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/bigcodebench",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfd44d212520afb14a76ee345c577c9d3ea1edfe",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/cfd44d212520afb14a76ee345c577c9d3ea1edfe"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/bigcodebench/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9feec33590ce9ccdb432004aff74f51e5144bef",
+      "size": 1639,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/c9feec33590ce9ccdb432004aff74f51e5144bef"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/bigcodebench/execution.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20c01d3cddea76a6b1a47aab439e58bb50baeed",
+      "size": 13662,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/f20c01d3cddea76a6b1a47aab439e58bb50baeed"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/bigcodebench/sanitize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3be56ee0b8b425e1c6a1d616bb3652a040151e2",
+      "size": 6066,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/a3be56ee0b8b425e1c6a1d616bb3652a040151e2"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/champ.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "446ac205579741bdcf7f8af36b295a1c05c53aa4",
+      "size": 6983,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/446ac205579741bdcf7f8af36b295a1c05c53aa4"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/logicbench.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e118f721ba8c060ff4801be8843e6b220fd86b37",
+      "size": 3458,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/e118f721ba8c060ff4801be8843e6b220fd86b37"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/medcalcbench.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "815d215efe9bbfbfa4fda5d40b10f40a15b2c2b3",
+      "size": 5701,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/815d215efe9bbfbfa4fda5d40b10f40a15b2c2b3"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/theoremqa.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b527f28f84cb42c6c78d081595b414f9cd41426a",
+      "size": 6642,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/b527f28f84cb42c6c78d081595b414f9cd41426a"
+    },
+    {
+      "path": "src/sragents/evaluate/datasets/toolqa.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42a275357fcfb8873ba09004a0516b761f7826fe",
+      "size": 2700,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/42a275357fcfb8873ba09004a0516b761f7826fe"
+    },
+    {
+      "path": "src/sragents/evaluate/metrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68e729b12e78e98b1a3906a1f3d31795deab6995",
+      "size": 556,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/68e729b12e78e98b1a3906a1f3d31795deab6995"
+    },
+    {
+      "path": "src/sragents/experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ba15746385466da052039aaf5f71db7ddb98ffc",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/8ba15746385466da052039aaf5f71db7ddb98ffc"
+    },
+    {
+      "path": "src/sragents/experiments/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3428a5e82715a28b1009650ce7b358bc85bfdf9a",
+      "size": 189,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/3428a5e82715a28b1009650ce7b358bc85bfdf9a"
+    },
+    {
+      "path": "src/sragents/experiments/definitions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8032e27320d1bdeea4f570bee2a15b5277c9d810",
+      "size": 10443,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/8032e27320d1bdeea4f570bee2a15b5277c9d810"
+    },
+    {
+      "path": "src/sragents/experiments/runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9263a6414aa7eadb1f81624bb20aeb024ccb8e77",
+      "size": 7549,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/9263a6414aa7eadb1f81624bb20aeb024ccb8e77"
+    },
+    {
+      "path": "src/sragents/infer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abc1b91b47e681f9f969bc0da0d5244e705917b2",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/abc1b91b47e681f9f969bc0da0d5244e705917b2"
+    },
+    {
+      "path": "src/sragents/infer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53116d8d7f3860fd4c4bfa49f2707f3e86a94d18",
+      "size": 849,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/53116d8d7f3860fd4c4bfa49f2707f3e86a94d18"
+    },
+    {
+      "path": "src/sragents/infer/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174e81a76fdaab4d18babe14fe0e1212d4704b06",
+      "size": 6172,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/174e81a76fdaab4d18babe14fe0e1212d4704b06"
+    },
+    {
+      "path": "src/sragents/infer/engines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58321a9c92500998e64ceea5b6db4f8f2bfa56ff",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/58321a9c92500998e64ceea5b6db4f8f2bfa56ff"
+    },
+    {
+      "path": "src/sragents/infer/engines/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1decae4561f1b7e8f341400327f44a5b04dd48d2",
+      "size": 950,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/1decae4561f1b7e8f341400327f44a5b04dd48d2"
+    },
+    {
+      "path": "src/sragents/infer/engines/direct.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdb066d2134907ae9dc7fb32d22252ca567fdc30",
+      "size": 2113,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/fdb066d2134907ae9dc7fb32d22252ca567fdc30"
+    },
+    {
+      "path": "src/sragents/infer/engines/progressive_disclosure.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dbe020d6da20dfae4d5c619217d667adedddb2c",
+      "size": 7184,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/7dbe020d6da20dfae4d5c619217d667adedddb2c"
+    },
+    {
+      "path": "src/sragents/infer/engines/react.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "026efdf6a077b44efd3b012c6e3145db6319fb7e",
+      "size": 11526,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/026efdf6a077b44efd3b012c6e3145db6319fb7e"
+    },
+    {
+      "path": "src/sragents/infer/engines/tool_loop.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe265ca4cdf09998fbb1508a7f86b2125c14d9ac",
+      "size": 4928,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/fe265ca4cdf09998fbb1508a7f86b2125c14d9ac"
+    },
+    {
+      "path": "src/sragents/infer/providers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f37e5b646f9e56a4397b8b0d12ed9b045b36f253",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/f37e5b646f9e56a4397b8b0d12ed9b045b36f253"
+    },
+    {
+      "path": "src/sragents/infer/providers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c5c2089c516960bb4768f3137d8add32de9f931",
+      "size": 635,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/3c5c2089c516960bb4768f3137d8add32de9f931"
+    },
+    {
+      "path": "src/sragents/infer/providers/distractor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d1a3d653bf7573c486618e458b522d423600c1a",
+      "size": 4404,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/3d1a3d653bf7573c486618e458b522d423600c1a"
+    },
+    {
+      "path": "src/sragents/infer/providers/llm_select.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74315f6817a7c4805e762368244834c49c123030",
+      "size": 3526,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/74315f6817a7c4805e762368244834c49c123030"
+    },
+    {
+      "path": "src/sragents/infer/providers/none.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "351a99ea3ae13f876ced4066864627c31ee1654a",
+      "size": 309,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/351a99ea3ae13f876ced4066864627c31ee1654a"
+    },
+    {
+      "path": "src/sragents/infer/providers/oracle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3b2b827522dc0a1e3f4fbf6010468f996219011",
+      "size": 702,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/f3b2b827522dc0a1e3f4fbf6010468f996219011"
+    },
+    {
+      "path": "src/sragents/infer/providers/topk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1616af3da516f3e7d03cd7baf11ad0e051a9689",
+      "size": 2059,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/b1616af3da516f3e7d03cd7baf11ad0e051a9689"
+    },
+    {
+      "path": "src/sragents/infer/runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de39bffc5ef57e4bb73ffa1add5c2735171106c5",
+      "size": 4346,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/de39bffc5ef57e4bb73ffa1add5c2735171106c5"
+    },
+    {
+      "path": "src/sragents/infer/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1ffd6183577e67abc58f253a1485a252bc6d153",
+      "size": 1322,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/c1ffd6183577e67abc58f253a1485a252bc6d153"
+    },
+    {
+      "path": "src/sragents/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f732956aae9ed835968deced18de4927036cc11",
+      "size": 3464,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/8f732956aae9ed835968deced18de4927036cc11"
+    },
+    {
+      "path": "src/sragents/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a82815432fca8bf4be72021718a6ffe71784243b",
+      "size": 4783,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/a82815432fca8bf4be72021718a6ffe71784243b"
+    },
+    {
+      "path": "src/sragents/retrieve",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5fd3f15e9496a0b30f80a8c2f104416bc144d12",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/a5fd3f15e9496a0b30f80a8c2f104416bc144d12"
+    },
+    {
+      "path": "src/sragents/retrieve/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2aede99092d539a737555cd3a425d3760d3dd2d",
+      "size": 757,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/e2aede99092d539a737555cd3a425d3760d3dd2d"
+    },
+    {
+      "path": "src/sragents/retrieve/_sparse_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5e7c4b1d58166e2b8a3e36cd41726e2ae78e421",
+      "size": 265,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/d5e7c4b1d58166e2b8a3e36cd41726e2ae78e421"
+    },
+    {
+      "path": "src/sragents/retrieve/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65ef222d66eb11e9402d75eda3106e8218938674",
+      "size": 2499,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/65ef222d66eb11e9402d75eda3106e8218938674"
+    },
+    {
+      "path": "src/sragents/retrieve/bm25.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dc4f28a85305f54133dc999b725936547a1dec1",
+      "size": 3972,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/0dc4f28a85305f54133dc999b725936547a1dec1"
+    },
+    {
+      "path": "src/sragents/retrieve/dense.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46edefed559f4458c00c599572ab8926cd64f294",
+      "size": 3619,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/46edefed559f4458c00c599572ab8926cd64f294"
+    },
+    {
+      "path": "src/sragents/retrieve/hybrid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e333aaa5b9f1570cf6ec5e20751a0c4f795e72",
+      "size": 2638,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/d4e333aaa5b9f1570cf6ec5e20751a0c4f795e72"
+    },
+    {
+      "path": "src/sragents/retrieve/llm_rerank.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c794888ea52cfcf38d10e810c0ee4bd6cf13ef",
+      "size": 3186,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/e9c794888ea52cfcf38d10e810c0ee4bd6cf13ef"
+    },
+    {
+      "path": "src/sragents/retrieve/metrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb2f0562e3f747f92e71dc763a8061600a31b1da",
+      "size": 1510,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/bb2f0562e3f747f92e71dc763a8061600a31b1da"
+    },
+    {
+      "path": "src/sragents/retrieve/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "557d4cafbeb9c3c971edcca10be638f5b46d3e29",
+      "size": 2511,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/557d4cafbeb9c3c971edcca10be638f5b46d3e29"
+    },
+    {
+      "path": "src/sragents/retrieve/tfidf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc2873c8454a0a3a0834ae06484711d4522d61a4",
+      "size": 3849,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/bc2873c8454a0a3a0834ae06484711d4522d61a4"
+    },
+    {
+      "path": "src/sragents/toolqa",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1430a49269c0241aaca3e54a9777bd2887206fdc",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/1430a49269c0241aaca3e54a9777bd2887206fdc"
+    },
+    {
+      "path": "src/sragents/toolqa/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d4af5f040feff2e12162800fc84ab3402472e42",
+      "size": 186,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/4d4af5f040feff2e12162800fc84ab3402472e42"
+    },
+    {
+      "path": "src/sragents/toolqa/fewshots.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c7a66094e0eaf53445709bbf7cec725bacb7d4",
+      "size": 13720,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/63c7a66094e0eaf53445709bbf7cec725bacb7d4"
+    },
+    {
+      "path": "src/sragents/toolqa/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f03d9d05203851c0d855d44433d87275e4cac216",
+      "size": 1837,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/f03d9d05203851c0d855d44433d87275e4cac216"
+    },
+    {
+      "path": "src/sragents/toolqa/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f0971b3c0a0a8755481db11174ad22d5da1c77a",
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/trees/7f0971b3c0a0a8755481db11174ad22d5da1c77a"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f021dd5f5c76d8dbea8d2c423eca3bcfcc9a9821",
+      "size": 9700,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/f021dd5f5c76d8dbea8d2c423eca3bcfcc9a9821"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/calculator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20134ed8d1d81399aa2aba8a4b07ae548740d932",
+      "size": 2608,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/20134ed8d1d81399aa2aba8a4b07ae548740d932"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/code.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57962718d83838329128dbb75260d4b16d49d907",
+      "size": 2235,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/57962718d83838329128dbb75260d4b16d49d907"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "893c3d260ff0f19735a33fdee81c80e0cd696b70",
+      "size": 5324,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/893c3d260ff0f19735a33fdee81c80e0cd696b70"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6800753e5e0ade80a6486941bc7e0ff115048d9c",
+      "size": 5438,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/6800753e5e0ade80a6486941bc7e0ff115048d9c"
+    },
+    {
+      "path": "src/sragents/toolqa/tools/text.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d36b9c88c7229d181d5647db4eb829944410c3c",
+      "size": 4003,
+      "url": "https://api.github.com/repos/oneal2000/SR-Agents/git/blobs/5d36b9c88c7229d181d5647db4eb829944410c3c"
+    }
+  ],
+  "truncated": false
+}

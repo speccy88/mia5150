@@ -1,0 +1,193 @@
+{
+  "rows": [
+    {
+      "system": "qwen_embed_06",
+      "cohort": "128 public development",
+      "ndcg10": 0.5286615567679426,
+      "phase": "warm query encoding plus exact search; document indexing separate",
+      "seconds": {
+        "p50": 0.07347557650018643,
+        "p95": 0.1554017255005874,
+        "mean": 0.09540317310938917
+      },
+      "startup_seconds": 10.086619554999743,
+      "document_forward_seconds": 131.77303634899454,
+      "index_bytes": 24600704,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillret_embed_06",
+      "cohort": "128 public development",
+      "ndcg10": 0.7073717270441552,
+      "phase": "warm query encoding plus exact search; document indexing separate",
+      "seconds": {
+        "p50": 0.07477830299967536,
+        "p95": 0.14645382910020996,
+        "mean": 0.09638102591414821
+      },
+      "startup_seconds": 8.939203807000013,
+      "document_forward_seconds": 129.37951037701168,
+      "index_bytes": 24600704,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillrouter_embed_06",
+      "cohort": "128 public development",
+      "ndcg10": 0.7087298257287165,
+      "phase": "warm query encoding plus exact search; document indexing separate",
+      "seconds": {
+        "p50": 0.08648518399968452,
+        "p95": 0.16785023009988428,
+        "mean": 0.09885095470316685
+      },
+      "startup_seconds": 9.711716069999966,
+      "document_forward_seconds": 131.15090751404568,
+      "index_bytes": 24600704,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillreason_embed_06",
+      "cohort": "128 public development",
+      "ndcg10": 0.6917446653389664,
+      "phase": "warm query encoding plus exact search; document indexing separate",
+      "seconds": {
+        "p50": 0.06880115300100442,
+        "p95": 0.15326255354948437,
+        "mean": 0.08707528180471513
+      },
+      "startup_seconds": 8.209247844000856,
+      "document_forward_seconds": 119.17897212000571,
+      "index_bytes": 24600704,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "BM25-header",
+      "cohort": "128 public development",
+      "ndcg10": 0.5988191244699981,
+      "phase": "query tokenization/retrieval; indexing separate",
+      "seconds": {
+        "p50": 0.001323659000263433,
+        "p95": 0.002194505000079516,
+        "mean": 0.0014339129375002813
+      },
+      "index_seconds": 0.21972271899994666,
+      "index_bytes": null,
+      "index_note": "Original BM25 index was in memory, not serialized; process resource receipt available. Do not infer zero storage.",
+      "failure_rate": 0.0
+    },
+    {
+      "system": "BM25-full",
+      "cohort": "128 public development",
+      "ndcg10": 0.4729316501188342,
+      "phase": "query tokenization/retrieval; indexing separate",
+      "seconds": {
+        "p50": 0.0016121819999170839,
+        "p95": 0.0025070305500321404,
+        "mean": 0.001973833734382424
+      },
+      "index_seconds": 4.033321361999697,
+      "index_bytes": null,
+      "index_note": "Original BM25 index was in memory, not serialized; process resource receipt available. Do not infer zero storage.",
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillret_rerank_06-header-32",
+      "cohort": "32 public development",
+      "ndcg10": 0.7991757191645666,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 1.8338254049999705,
+        "p95": 2.0961931832499885,
+        "mean": 1.8110677863750198
+      },
+      "startup_seconds": 8.59439470199959,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillrouter_rerank_06-header-32",
+      "cohort": "32 public development",
+      "ndcg10": 0.8245359977859633,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 1.8509792444992854,
+        "p95": 2.098522385749675,
+        "mean": 1.8451061605939003
+      },
+      "startup_seconds": 8.78022487799899,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "skillreason_rerank_06-header-32",
+      "cohort": "32 public development",
+      "ndcg10": 0.8252474473542789,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 1.7545571209993795,
+        "p95": 2.021895927350761,
+        "mean": 1.7804168411562387
+      },
+      "startup_seconds": 9.26407274200028,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "r3_rerank_fp16_local-header-32",
+      "cohort": "32 public development",
+      "ndcg10": 0.7954959733264723,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 1.98982432899993,
+        "p95": 2.493842949199461,
+        "mean": 2.043928001531185
+      },
+      "startup_seconds": 7.8113963560008415,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "jina-native",
+      "cohort": "32 public development",
+      "ndcg10": 0.824567299673604,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 0.3185174950003784,
+        "p95": 0.39756097689969466,
+        "mean": 0.3126729594062567
+      },
+      "startup_seconds": null,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "jevk5-pointwise",
+      "cohort": "8 public development",
+      "ndcg10": 0.6788345978899254,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 4.551133674500306,
+        "p95": 5.992394542350029,
+        "mean": 4.331521014375539
+      },
+      "startup_seconds": 4.53729830300108,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    },
+    {
+      "system": "plumb-pointwise",
+      "cohort": "8 public development",
+      "ndcg10": 0.6788345978899254,
+      "phase": "candidate reranking only; excludes retrieval and loading",
+      "seconds": {
+        "p50": 4.490142311001364,
+        "p95": 5.816550896799798,
+        "mean": 4.254279922875412
+      },
+      "startup_seconds": 4.017521453000882,
+      "index_bytes": null,
+      "failure_rate": 0.0
+    }
+  ],
+  "interpretation": "Each row uses its stated cohort and native deployment implementation. All recorded query durations including failures enter latency summaries. Different precisions and candidate counts are not a pure hardware/model speed comparison. See resource telemetry for peak RAM/GPU/CPU; missing values are unavailable, not zero."
+}

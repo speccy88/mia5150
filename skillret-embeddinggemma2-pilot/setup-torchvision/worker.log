@@ -1,0 +1,8 @@
+INSTALL [('torchvision', '==0.23.0')]
+Using CPython 3.12.15 interpreter at: /home/user/code/mia5150-local/.venv/bin/python
+Resolved 1 package in 6ms
+Prepared 1 package in 63ms
+Installed 1 package in 6ms
+ + torchvision==0.23.0 (from file:///home/user/code/embeddinggemma2-pilot/wheels/torchvision-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl)
+DEPENDENCIES_OK 58
+NATIVE_IMPORT_OK 5.19.0

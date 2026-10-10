@@ -1,0 +1,142 @@
+{
+  "status": "offline_preparation_audited_not_executed",
+  "network_calls": 0,
+  "credentials_accessed": false,
+  "scopes": {
+    "smoke": {
+      "selected": 10,
+      "prepared": 10,
+      "blocked": 0,
+      "pair_count": 200,
+      "truncated_pairs": 5,
+      "full_text_pairs": 195,
+      "queries_with_truncation": 4,
+      "unique_truncated_skills": 5,
+      "original_skill_md_utf8_bytes": 1647309,
+      "prepared_skill_md_utf8_bytes": 1607532,
+      "removed_skill_md_utf8_bytes": 39777,
+      "retained_skill_md_utf8_fraction": 0.9758533462756532,
+      "truncated_pair_retained_fraction_min": 0.4966706230260114,
+      "truncated_pair_retained_fraction_median": 0.8478664831383345,
+      "gold_relevant_truncated_pairs_analysis_only": 1,
+      "request_count": 40,
+      "max_total_estimate_with_output": 63971,
+      "max_pair_estimate_with_output": 32000,
+      "manifest_path": "jev-plan-smoke-context-v1/preparation_manifest.json",
+      "plan_sha256": "4202da9d6067127246f25bcc3586f0157d03949cdc176862b1243f00f80d690a"
+    },
+    "pilot": {
+      "selected": 200,
+      "prepared": 200,
+      "blocked": 0,
+      "pair_count": 4000,
+      "truncated_pairs": 143,
+      "full_text_pairs": 3857,
+      "queries_with_truncation": 96,
+      "unique_truncated_skills": 103,
+      "original_skill_md_utf8_bytes": 33276536,
+      "prepared_skill_md_utf8_bytes": 31852541,
+      "removed_skill_md_utf8_bytes": 1423995,
+      "retained_skill_md_utf8_fraction": 0.9572072345510964,
+      "truncated_pair_retained_fraction_min": 0.15780074307658684,
+      "truncated_pair_retained_fraction_median": 0.8020350291909925,
+      "gold_relevant_truncated_pairs_analysis_only": 11,
+      "request_count": 779,
+      "max_total_estimate_with_output": 63976,
+      "max_pair_estimate_with_output": 32000,
+      "manifest_path": "jev-plan-pilot-context-v1/preparation_manifest.json",
+      "plan_sha256": "6da7ec1a2062a4a1d6c38aae6c14ea268188fe05933fc8fd3b5f5bec9cb1f1b8"
+    }
+  },
+  "previous_plans": {
+    "smoke": {
+      "selected": 10,
+      "prepared": 6,
+      "blocked": 4,
+      "plan_sha256": "0662a369214d0679f7906eeca9422b315b9cb53a6702afabbb096072e9436191"
+    },
+    "pilot": {
+      "selected": 200,
+      "prepared": 104,
+      "blocked": 96,
+      "plan_sha256": "24bd5da86d85687e5694be7aa38c86c9c225feb95835e9975596f6c0230e34ab"
+    }
+  },
+  "selection_unchanged": true,
+  "fixed_top20_unchanged": true,
+  "caveat": "Truncation is required by the frozen conservative byte estimator, not proven native Jev overflow. No provider acceptance or accuracy effect is measured.",
+  "smoke_exact_subset_of_pilot": true,
+  "policy": {
+    "admission": "total estimate + output reservation <= total limit AND every pair estimate + output reservation <= pair limit",
+    "documented_provider_pair_limit": 32000,
+    "documented_provider_total_limit": 64000,
+    "documented_source": "https://docs.typesafe.ai/models; local API_READINESS.md",
+    "estimator": "canonical serialized UTF-8 bytes plus overhead; provisional conservative estimate, not native Jev tokens",
+    "estimator_version": "canonical-utf8-bytes-plus-overhead-v2-dual-limit",
+    "limit_supplied": 64000,
+    "native_tokenizer_verified": false,
+    "overhead_tokens": 2048,
+    "oversize_policy": "truncate_skill_md_right",
+    "pair_estimator": "same state plus one full question/rubric under its actual question ID and model wrapper, plus overhead",
+    "pair_limit_supplied": 32000,
+    "reserved_output_tokens": 2048,
+    "truncation_caveat": "Any truncation is required by this conservative byte-based admission policy, not proven necessary under the unpublished native tokenizer.",
+    "truncation_policy": {
+      "activation": "only when one complete candidate exceeds either conservative admission limit",
+      "algorithm": "retain the longest Unicode-codepoint prefix of original skill_md that fits both limits; remove only its right suffix; no marker, normalization, rewriting, or label-based selection",
+      "batching": "greedy original dense order; split before exceeding either limit; full text remains unchanged when its individual request fits",
+      "estimator_version": "canonical-utf8-bytes-plus-overhead-v2-dual-limit",
+      "immutable": [
+        "query",
+        "name",
+        "description",
+        "question_prefix",
+        "rubric",
+        "candidate_ids",
+        "dense_ranks"
+      ],
+      "minimum_body": "at least one non-whitespace character from the original skill_md",
+      "name": "truncate_skill_md_right",
+      "native_tokenizer_verified": false,
+      "unavoidable_failure": "block the whole selected query if immutable content plus a nonempty body cannot fit; never skip or substitute candidates",
+      "version": "skill-md-longest-unicode-prefix-v1"
+    },
+    "truncation_policy_sha256": "ffaca8f5ca2b01acccaeec30a05df7db07946cb55bd7fad86a8cd9b1e36ba96d",
+    "verified_provider_limit": false
+  },
+  "source_counts": {
+    "queries": 4392,
+    "skills": 6006,
+    "qrels": 7187
+  },
+  "qrels_usage": "post-preparation impact counting only; never used to select queries, cuts, batches, or provider inputs",
+  "prepared_request_secret_screen": {
+    "unique_prepared_requests_checked": 779,
+    "findings": [],
+    "status": "passed",
+    "no_values_printed": true,
+    "network_calls": 0
+  },
+  "offline_tests_context_v1": {
+    "passed": 89,
+    "artifact": "offline-tests-context-v1.txt"
+  },
+  "final_integrated_offline_validation": {
+    "status": "passed",
+    "test_count": 113,
+    "elapsed_seconds": 33.15,
+    "evidence": "offline-tests-final-context-runner-v1.txt",
+    "evidence_sha256": "67fed5eb1f32319be7d14c7cbf49e25a04be7b808da2b77ad4c1d31e6b9eec0c",
+    "network_or_real_credentials_used_by_tests": false,
+    "source_sha256": {
+      "run_jev_rerank.py": "ed9c4abe34e2c57d16124009c0173fee4378ace956c588bacb49d1edcde69e12",
+      "hosted_jev_client.py": "c36568ce5b0bc12ba5061e22266c24e828fea0790af89c3c591bf4afe3f2e324",
+      "run_hosted_study.py": "2afcbe24a7598b40a993343084ec71a4e93062f481873a0dc9b8120b7432e757",
+      "evaluate.py": "4b03f247d440dac5866b479e98d1d30ed5b88a80cc2820d2d94017457e49768b",
+      "run_skillret_baseline.py": "92e5ec7efd7051cb8506acbea6cd2d596bf738b8a85b29a88c8279a3ecdff105",
+      "test_jev_prepare.py": "a3fd2a86e435cb2e13445c7bc17c0a9c4d316d10ceb597d97f0d1a3475b20e0e",
+      "test_hosted_jev_client.py": "208ff2d4f9a2b8004fcbf7291ea97bf4a92f1ab4be63c65e2d4cdbdcb3c06589",
+      "test_hosted_study.py": "3e8ff21760e1976e355ac6b1dc48ad84442923bd739b9ed66f39ba0418ab2ab6"
+    }
+  }
+}

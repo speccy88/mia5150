@@ -1,0 +1,29 @@
+{
+  "train": {
+    "counts": [
+      10123,
+      63259,
+      127190
+    ],
+    "gold_sizes": {
+      "1": 20776,
+      "2": 21035,
+      "3": 21448
+    },
+    "query_duplicates": 435
+  },
+  "test": {
+    "counts": [
+      6006,
+      4392,
+      7187
+    ],
+    "gold_sizes": {
+      "1": 2143,
+      "3": 546,
+      "2": 1703
+    },
+    "query_duplicates": 0
+  },
+  "train_test_skill_id_overlap": 0
+}

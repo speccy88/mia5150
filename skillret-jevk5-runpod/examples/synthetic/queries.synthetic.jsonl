@@ -1,0 +1,2 @@
+{"id": "q-multi", "query": "Review staged changes and check them for security problems.", "original_id": "f1", "skill_ids": ["s-review", "s-security"], "skill_names": ["do not leak"], "k": 2}
+{"id": "q-miss", "query": "Analyze the pump measurements.", "original_id": "f2", "skill_ids": ["s-pump"]}

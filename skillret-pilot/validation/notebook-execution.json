@@ -1,0 +1,14 @@
+[
+  {
+    "notebook": "01_data_and_retrieval.ipynb",
+    "status": "passed",
+    "code_cells": 5,
+    "wall_seconds": 11.265599707956426
+  },
+  {
+    "notebook": "02_deepagents_trial.ipynb",
+    "status": "passed",
+    "code_cells": 14,
+    "wall_seconds": 7.313368458009791
+  }
+]

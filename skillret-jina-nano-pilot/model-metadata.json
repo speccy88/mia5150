@@ -1,0 +1,236 @@
+{
+  "_id": "6971f0f49681580ace168a48",
+  "id": "jinaai/jina-embeddings-v5-text-nano",
+  "private": false,
+  "pipeline_tag": "feature-extraction",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "jina_embeddings_v5",
+    "feature-extraction",
+    "mteb",
+    "sentence-transformers",
+    "custom_code",
+    "multilingual",
+    "arxiv:2602.15547",
+    "base_model:EuroBERT/EuroBERT-210m",
+    "base_model:finetune:EuroBERT/EuroBERT-210m",
+    "license:cc-by-nc-4.0",
+    "region:eu"
+  ],
+  "downloads": 154167,
+  "likes": 102,
+  "modelId": "jinaai/jina-embeddings-v5-text-nano",
+  "author": "jinaai",
+  "sha": "8a7f00aac812071b69403df470f1038ec85f8925",
+  "lastModified": "2026-04-15T09:15:08.000Z",
+  "gated": false,
+  "disabled": false,
+  "mask_token": "<|mask|>",
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "JinaEmbeddingsV5Model"
+    ],
+    "auto_map": {
+      "AutoConfig": "configuration_jina_embeddings_v5.JinaEmbeddingsV5Config",
+      "AutoModel": "modeling_jina_embeddings_v5.JinaEmbeddingsV5Model"
+    },
+    "model_type": "jina_embeddings_v5",
+    "tokenizer_config": {
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|end_of_text|>",
+      "mask_token": "<|mask|>",
+      "pad_token": "<|pad|>"
+    }
+  },
+  "cardData": {
+    "license": "cc-by-nc-4.0",
+    "language": [
+      "multilingual"
+    ],
+    "base_model": [
+      "EuroBERT/EuroBERT-210m"
+    ],
+    "tags": [
+      "feature-extraction",
+      "mteb",
+      "sentence-transformers"
+    ],
+    "library_name": "transformers"
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModel",
+    "custom_class": "modeling_jina_embeddings_v5.JinaEmbeddingsV5Model",
+    "pipeline_tag": "feature-extraction"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+      "size": 1570
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "2b323513f6980de47f94c2bcc9f29329d385dd18",
+      "size": 13968
+    },
+    {
+      "rfilename": "adapters/classification/adapter_config.json",
+      "blobId": "fc8ded15b76ecadb9a6bffdd8925fce58ecf34da",
+      "size": 883
+    },
+    {
+      "rfilename": "adapters/classification/adapter_model.safetensors",
+      "blobId": "e7df00cbd94d67146e659e55ae81cd93e11c2ad5",
+      "size": 13587024,
+      "lfs": {
+        "sha256": "c106c3748866900ecd22edbd49ba124c6c50ae898a53f5cd3ce10a5c091f6f28",
+        "size": 13587024,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "adapters/clustering/adapter_config.json",
+      "blobId": "b99b0b54da5eeb9fad434bf8fb9e77010455ce46",
+      "size": 882
+    },
+    {
+      "rfilename": "adapters/clustering/adapter_model.safetensors",
+      "blobId": "526ca29e47527e24b44a8238aad9b6010ce2c69b",
+      "size": 13587024,
+      "lfs": {
+        "sha256": "80dd657af859b61c286872f15af83cb3bfd3456e9b6201398fee2ef701d06e21",
+        "size": 13587024,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "adapters/retrieval/adapter_config.json",
+      "blobId": "e0532a287c6e6e1ea1f2e988155e301c33a06236",
+      "size": 882
+    },
+    {
+      "rfilename": "adapters/retrieval/adapter_model.safetensors",
+      "blobId": "e3f682b91e246c435f3c882ce44ccd5c0fc72199",
+      "size": 13586992,
+      "lfs": {
+        "sha256": "bc1afe96601bbb5198cd5553fa17d74bd77df3e30b515e50139980dd3a933cba",
+        "size": 13586992,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "adapters/text-matching/adapter_config.json",
+      "blobId": "23933f4fac46294d58f13fb8900703b6841635a1",
+      "size": 882
+    },
+    {
+      "rfilename": "adapters/text-matching/adapter_model.safetensors",
+      "blobId": "d3b509f9903c68f86704026c56a2966d62104c9e",
+      "size": 13587024,
+      "lfs": {
+        "sha256": "16c3bb35e45cdbfd877988019815f5c9661940beeab90fea186d10a0df9e6cd8",
+        "size": 13587024,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "a6717751721a97f782c1f08ff6dbb3a9b67a155e",
+      "size": 1127
+    },
+    {
+      "rfilename": "config_sentence_transformers.json",
+      "blobId": "41d88833ed5b82b8a57999e28f35d3cfd0e3ff39",
+      "size": 283
+    },
+    {
+      "rfilename": "configuration_eurobert.py",
+      "blobId": "3c3a8ba653d0afe527ecada4d0bee8e5aec71331",
+      "size": 12138
+    },
+    {
+      "rfilename": "configuration_jina_embeddings_v5.py",
+      "blobId": "79f063abac0ebd4628ac224799ffd89de1ee999f",
+      "size": 137
+    },
+    {
+      "rfilename": "custom_st.py",
+      "blobId": "3cfc4d4fc8de8a7d822d8e42a16954a1aa15257a",
+      "size": 4261
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "16316454e5a9847516fbf0dda75464b6745b60be",
+      "size": 423543680,
+      "lfs": {
+        "sha256": "f07de152e254b5d03b1273e0bca0a11dfade686508503500d460813428539651",
+        "size": 423543680,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "modeling_eurobert.py",
+      "blobId": "7d5e3115dc024ecb3a87b754b3a14487c7df9409",
+      "size": 48939
+    },
+    {
+      "rfilename": "modeling_jina_embeddings_v5.py",
+      "blobId": "123068aa8f5353b707b807d38bc530f2a5ecb6f9",
+      "size": 4118
+    },
+    {
+      "rfilename": "modules.json",
+      "blobId": "a2bfbb30e4e6800744321f3a4b0ebbd082cf2f9c",
+      "size": 169
+    },
+    {
+      "rfilename": "special_tokens_map.json",
+      "blobId": "2ae35e125ce06c06a6dc380b0d9069e5818db07c",
+      "size": 582
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "daf9dbd143da28aeca9edad126ea9329af7fbaae",
+      "size": 17210235,
+      "lfs": {
+        "sha256": "98d4a1d32152d6cedf85b5e88f3b205106dca1fe72aaab34e0ac13c238421069",
+        "size": 17210235,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "942da6f5be919d7b3e4e841a377aa7c8dac3821c",
+      "size": 50554
+    }
+  ],
+  "spaces": [
+    "tardellirs/model-pulse",
+    "mteb/leaderboard",
+    "embedl/hfviewer",
+    "hakari-bench/leaderboard",
+    "AbdullahKhanSherwani/BlackBox",
+    "maxpar1/leaderboard",
+    "kiedistv/leaderboard",
+    "qiaosong88/leaderboard",
+    "ArtemBolgov/leaderboard",
+    "pranaysuyash/shopstack",
+    "malyvena/leaderboard",
+    "HuggingLLM/leaderboard",
+    "wangsh0111/leaderboard",
+    "kaotd/leaderboard",
+    "rjsins/smart-resume-ranker",
+    "kazutab/mindmap-studio"
+  ],
+  "createdAt": "2026-01-22T09:42:12.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 211766016
+    },
+    "total": 211766016
+  },
+  "usedStorage": 535863051
+}

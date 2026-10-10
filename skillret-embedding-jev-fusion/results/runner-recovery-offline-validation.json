@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "receipt_type": "observed_offline_runner_recovery_validation",
+  "created_at_utc": "2026-10-07 02:56:39 UTC",
+  "status": "passed",
+  "execution": {
+    "command": "wsl.exe -d Ubuntu-26.04 -- bash -lc 'cd /mnt/c/Users/user/Documents/Codex/2026-10-06/task-3/skillret-embedding-jev-fusion; /home/user/code/mia5150-local/.venv/bin/python -m unittest test_hosted_study.StudyRunnerTests -v'",
+    "test_count": 20,
+    "reported_runtime_seconds": 8.743,
+    "exit_code": 0,
+    "terminal_summary": "Ran 20 tests in 8.743s; OK",
+    "rerun_for_receipt": false,
+    "environment": {
+      "host_shell": "PowerShell",
+      "execution_environment": "WSL",
+      "distribution_target": "Ubuntu-26.04",
+      "python_executable": "/home/user/code/mia5150-local/.venv/bin/python",
+      "test_working_directory": "/mnt/c/Users/user/Documents/Codex/2026-10-06/task-3/skillret-embedding-jev-fusion"
+    }
+  },
+  "tested_source_sha256": {
+    "run_hosted_study.py": "0253a3a874e08c78f62c9da1e76cd15fdcb177569cc5516f3b89eff379bb11f9",
+    "test_hosted_study.py": "d7476c65f0583059d5a76e6d0d91142ec4dbf7580729004ea4b0997fbe597209"
+  },
+  "documentation_sha256": {
+    "HOSTED_STUDY_RUNNER.md": "a8b8cd4549d2b6c3f63a8c198831f633a904693aabaeedb0bae3aed25797b278"
+  },
+  "documentation_updated_after_test_run": true,
+  "source_hashes_rechecked_unchanged_when_receipt_written": true,
+  "recovery_tests": [
+    "Genuine synthetic recovery receipt permits full selected scope while original attempt remains unresolved and fully held",
+    "First-attempt deadline is unchanged and provider contract max_attempts remains one",
+    "Lost replacement remains blocking and cannot cause a third attempt",
+    "Another unknown request remains blocking despite the reviewed original",
+    "Modified recovery receipt blocks without reading a real credential",
+    "Completed caches resume without new calls or release of the unknown original reservation"
+  ],
+  "interpretation": {
+    "reviewed_original": "Admission exception only; not settled, released, cancelled or proved unbilled",
+    "completion": "Evaluation coverage is separate from original-request billing reconciliation"
+  },
+  "isolation": {
+    "applies_to": "This offline test invocation only; not a statement of experiment-wide spend or API status",
+    "real_api_calls": 0,
+    "real_credentials_read": false,
+    "real_ledger_or_saved_response_files_modified": false,
+    "fixtures": "Temporary synthetic ledgers, reboot proof, receipt, mocked environment and injected transport"
+  },
+  "evidence_limitations": [
+    "Original stdout/stderr was observed in execution-tool output and was not redirected to a persistent raw test log.",
+    "This immutable receipt records an already completed run; no suite rerun was performed to create it.",
+    "Exact test start/end UTC and interpreter version were not separately captured by the test command.",
+    "The runner was tested against the concurrent worktree recovery client; its full dependency hashes were not captured at invocation start.",
+    "These tests do not prove live reboot evidence, account credit, provider cancellation, actual duplicate billing, or final study completion."
+  ]
+}

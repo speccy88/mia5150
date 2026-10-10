@@ -1,0 +1,81 @@
+library_size,query,gold_skill,selected_skill,exact_match,fuzzy_match,latency_s
+25,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,2.197
+25,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,0.846
+25,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,1.867
+25,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,2.239
+25,Help me document agent_skill,advanced-features-2025,api-portal-design,0,0,0.906
+25,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,2.08
+25,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,0.922
+25,I'm looking for a tool to configure a pipeline,ci-cd,ci-cd,1,1,1.828
+25,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,0.819
+25,I'm looking for a tool to implement a ui_component,svelte-flow,svelte-flow,1,1,0.817
+50,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,0.844
+50,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,1.559
+50,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,1.121
+50,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,0.711
+50,Help me document agent_skill,advanced-features-2025,skill-creator,0,0,1.415
+50,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,1.53
+50,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,0.885
+50,I'm looking for a tool to configure a pipeline,ci-cd,ci-cd,1,1,0.913
+50,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,1.028
+50,I'm looking for a tool to implement a ui_component,svelte-flow,svelte-flow,1,1,0.923
+100,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,0.898
+100,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,0.959
+100,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,1.13
+100,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,2.292
+100,Help me document agent_skill,advanced-features-2025,anchor-suggester,0,0,1.001
+100,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,1.862
+100,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,1.149
+100,I'm looking for a tool to configure a pipeline,ci-cd,ci-cd,1,1,1.65
+100,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,1.859
+100,I'm looking for a tool to implement a ui_component,svelte-flow,frontend-design-review,0,0,0.885
+200,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,2.141
+200,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,2.209
+200,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,1.759
+200,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,1.777
+200,Help me document agent_skill,advanced-features-2025,markdown-writer,0,0,1.19
+200,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,1.851
+200,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,1.043
+200,I'm looking for a tool to configure a pipeline,ci-cd,deployment-generator,0,0,1.053
+200,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,0.998
+200,I'm looking for a tool to implement a ui_component,svelte-flow,setting-up-a-project,0,0,1.108
+400,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,1.331
+400,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,8.024
+400,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,8.346
+400,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,9.001
+400,Help me document agent_skill,advanced-features-2025,skill-documentation,0,0,8.407
+400,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,7.452
+400,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,11.807
+400,I'm looking for a tool to configure a pipeline,ci-cd,ado-pipeline-best-practices,0,0,6.753
+400,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,6.429
+400,I'm looking for a tool to implement a ui_component,svelte-flow,frontend-builder,0,0,8.358
+800,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,15.483
+800,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,15.509
+800,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,17.883
+800,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,13.827
+800,Help me document agent_skill,advanced-features-2025,documentation-production,0,0,14.876
+800,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,16.547
+800,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,15.204
+800,I'm looking for a tool to configure a pipeline,ci-cd,ado-pipeline-best-practices,0,0,15.532
+800,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,15.15
+800,I'm looking for a tool to implement a ui_component,svelte-flow,frontend-builder,0,0,15.689
+1200,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,skriptoteket-devops,1,1,26.176
+1200,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,telecom-licensing-expert,1,1,21.797
+1200,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,web3-testing,1,1,22.066
+1200,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,swift-testing,1,1,23.018
+1200,Help me document agent_skill,advanced-features-2025,agent_skill,0,0,25.465
+1200,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,chatbot-analytics,1,1,22.022
+1200,I need to implement a documentation using ring:writing plans,ring:writing-plans,ring-writing-plans,0,0,22.768
+1200,I'm looking for a tool to configure a pipeline,ci-cd,ci-cd,1,1,23.595
+1200,"asked to run tests, check code quality, or verify test coverage.",run-tests,run-tests,1,1,19.743
+1200,I'm looking for a tool to implement a ui_component,svelte-flow,frontend-builder,0,0,24.689
+1800,I need to deploy a infrastructure using skriptoteket devops,skriptoteket-devops,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.184
+1800,"building owner is negotiating with telecom providers, reviewing carrier access rights, structuring e",telecom-licensing-expert,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.174
+1800,"testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",web3-testing,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.175
+1800,"writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing asy",swift-testing,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.175
+1800,Help me document agent_skill,advanced-features-2025,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.178
+1800,"adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building con",chatbot-analytics,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.177
+1800,I need to implement a documentation using ring:writing plans,ring:writing-plans,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.176
+1800,I'm looking for a tool to configure a pipeline,ci-cd,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.176
+1800,"asked to run tests, check code quality, or verify test coverage.",run-tests,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.175
+1800,I'm looking for a tool to implement a ui_component,svelte-flow,"ERROR: Context remains above the input budget after compaction; reduce input, tools, or configured output tokens.",0,0,0.175

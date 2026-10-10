@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "smoke",
+  "recorded_at_utc": "2026-10-07T02:32:50.1265026+00:00",
+  "receipt_policy": "New immutable record of the completed independent read-only audit; no evaluation rerun was performed to save this receipt.",
+  "evaluation_path": "/home/user/code/mia5150-local/skillret-embedding-jev-fusion/results/hosted-smoke-native-field-evaluation/evaluation.json",
+  "evaluation_sha256": "43df9cfab047ed4dbbbd24f7afb816effe847add1d94a7ccef01ebdafb10402c",
+  "plan_sha256": "4202da9d6067127246f25bcc3586f0157d03949cdc176862b1243f00f80d690a",
+  "snapshot_invocation_id": "14076642124b4bb8804f56e6a746d925",
+  "checks": {
+    "selected_queries": 10,
+    "complete_queries_each_system": 10,
+    "same_fixed_candidates_per_query": 20,
+    "deterministic_sha256_query_selection": "passed",
+    "source_file_hashes": "passed",
+    "independently_recomputed_metrics_per_system": 17,
+    "metric_comparison_absolute_tolerance": 1e-12,
+    "native_score_confidence_dense_rank_order": "passed",
+    "exact_rational_equal_rrf60_order": "passed",
+    "independently_recomputed_bootstrap_intervals": 10,
+    "bootstrap_resamples_per_comparison": 10000,
+    "bootstrap_seed": 20261006,
+    "bootstrap_query_denominator": 10,
+    "raw_native_score_confidence_probability_records_verified": 200,
+    "actual_model_versions": ["jev-1.13.0"],
+    "verified_unique_raw_response_hashes": 40,
+    "ledger_hash_chain_through_snapshot": "passed"
+  },
+  "ndcg10": {
+    "A_matched_dense": 0.9496883923277701,
+    "B_jev": 0.8557486632162309,
+    "C_rrf60": 0.9636439180988958,
+    "B_minus_A": {
+      "delta": -0.09393972911153925,
+      "paired_percentile_95ci": [-0.19638055298510615, 0.0]
+    },
+    "C_minus_A": {
+      "delta": 0.013955525771125632,
+      "paired_percentile_95ci": [0.0, 0.03851246270351577]
+    }
+  },
+  "response_validation": {
+    "policy": "native-fields-arithmetic-diagnostics-v1",
+    "native_values_preserved_in_all_200_pairs": true,
+    "arithmetic_diagnostic_only_in_all_200_pairs": true,
+    "pair_mode_counts": {"cent": 190, "strict": 9, "inconsistent": 1},
+    "query_mode_set_counts": {"cent": 5, "cent+strict": 4, "cent+inconsistent+strict": 1},
+    "inconsistent_pairs": [
+      {"query_id": "q-02768", "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366"}
+    ]
+  },
+  "truncation_and_coverage": {
+    "queries_with_any_truncated_candidate": 4,
+    "queries_with_all_twenty_candidates_full_text": 6,
+    "upstream_gold_pairs_found_at20": 14,
+    "upstream_gold_pairs_found_at50": 14,
+    "upstream_gold_pairs_total": 14
+  },
+  "exploratory_sensitivity": {
+    "policy": "Native score descending; exact score ties use original dense rank without confidence. Primary results were not changed.",
+    "changed_B_query_orders": 2,
+    "changed_C_query_orders": 0,
+    "B_ndcg10_delta_from_primary": 0.0006773982623103581,
+    "C_ndcg10_delta_from_primary": 0.0
+  },
+  "unique_ledger_at_smoke_snapshot": {
+    "head_sha256": "3dce3a39c38d6621e710b3f165fc6eafd4439da39b8881fda9212fca69411ad0",
+    "events": 124,
+    "unique_reserved_attempts": 40,
+    "unique_settled_responses": 40,
+    "unresolved_attempts": 0,
+    "alias_cache_reuse_events": 0,
+    "settled_usd": "0.020591466",
+    "settled_cad_with_recorded_allowances": "0.04027845185595000",
+    "held_usd": "0",
+    "held_cad": "0",
+    "input_tokens": 490273,
+    "output_tokens": 3060,
+    "scope_equals_cumulative_only_at_this_checkpoint": true,
+    "caveat": "Do not add overlapping smoke and pilot scope totals. CAD is recorded valuation including configured allowances, not an asserted new card payment; separate fixed fees are excluded."
+  },
+  "timing_seconds": {
+    "scope_invocation_wall_including_local_overhead": 32.08644676208496,
+    "unique_paid_api_elapsed": 16.377058267593384,
+    "scope_non_api_wall": 15.709388494491577,
+    "experiment_elapsed_including_parser_repair_gaps": 1523.2538537979126,
+    "caveat": "Wall endpoints use original immutable final-receipt mtime proxies. API duration excludes local work and repair gaps; future growing-ledger overhead is not guaranteed by this smoke timing."
+  },
+  "verified_source_sha256": {
+    "smoke_preparation_manifest.json": "6b24896b91dc2a8eb89642e4a9119f917db3c6897565fe9fcd0f62e762353aa2",
+    "baseline_skillret_06b.json": "06af8037a9a606703cbd4e9dde821fc0375642b82d9032e7aea1c15512710301",
+    "official_test_qrels.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "snapshot_final.json": "1621e39f5c9df1c79e67c25bbd88d7c74658e96e33bebda03dbbce975b1f6939",
+    "snapshot_dense_top20.json": "2605032827eed752e59ec402bdd1df29d27e7f885ee6b27e3601dc2209a40a2f",
+    "snapshot_jev_rerank.json": "8b7a44ffaffe14d0ebce71c48d7e217d04dc0f55eab8d669b6611664487c41da",
+    "snapshot_rrf60_fusion.json": "4b9a597a0f7df10e7c63e1c2a5f8057e91b4af38a07574b133a18e34fc1099cd"
+  },
+  "caveats": [
+    "Ten queries are a smoke test, not a stable estimate of generalization; both NDCG@10 comparison intervals include zero.",
+    "All 14 relevant pairs are inside the smoke top20 pool; the subset has a higher retrieval ceiling than harder queries may have.",
+    "C Recall@10 is 0.9666666666666666 versus A 1.0, despite C's higher NDCG@10.",
+    "Native confidence arithmetic inconsistency remains recorded; provider values and all selected queries were retained.",
+    "No pilot or full-study completion claim is made by this smoke receipt."
+  ],
+  "network_calls_this_audit": 0,
+  "credentials_accessed": false,
+  "existing_results_modified": false
+}

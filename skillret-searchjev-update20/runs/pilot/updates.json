@@ -1,0 +1,120 @@
+[
+  {
+    "update": 1,
+    "mean_loss": 0.3776254430413246,
+    "gradient_norm_before_clip": 13.688109397888184,
+    "gradients_finite": true,
+    "scale": 128.0,
+    "seconds": 12.082554385999998,
+    "examples": [
+      {
+        "query_id": "q-train-044243",
+        "skill_id": "789261ba-8a91-4f98-85bc-1cac0698f381",
+        "y": 1,
+        "loss": 0.2238379716873169
+      },
+      {
+        "query_id": "q-train-031977",
+        "skill_id": "b6bb8065-b0d2-4614-b2b7-851f4899769b",
+        "y": 0,
+        "loss": 0.15044312179088593
+      },
+      {
+        "query_id": "q-train-002288",
+        "skill_id": "10668445-6a3e-44ee-83d2-94a8258eabe2",
+        "y": 1,
+        "loss": 0.08739107102155685
+      },
+      {
+        "query_id": "q-train-054817",
+        "skill_id": "b42ae0e6-c27d-4bb8-b2d1-5074ce09b842",
+        "y": 1,
+        "loss": 0.06454148143529892
+      },
+      {
+        "query_id": "q-train-039352",
+        "skill_id": "26ce4380-7b94-419e-84f4-86c64f88f7f0",
+        "y": 1,
+        "loss": 0.0677018016576767
+      },
+      {
+        "query_id": "q-train-027915",
+        "skill_id": "366adf20-aef1-4247-832d-1099f553e8c7",
+        "y": 0,
+        "loss": 1.9760468006134033
+      },
+      {
+        "query_id": "q-train-049785",
+        "skill_id": "bd2c71e7-5959-4ceb-b3ff-2305d987182b",
+        "y": 0,
+        "loss": 0.17643769085407257
+      },
+      {
+        "query_id": "q-train-062816",
+        "skill_id": "d8ad6a05-e102-40d4-bc06-a93e75cc3668",
+        "y": 1,
+        "loss": 0.27460360527038574
+      }
+    ],
+    "changed_adapter_tensors": 372
+  },
+  {
+    "update": 2,
+    "mean_loss": 0.1900044083595276,
+    "gradient_norm_before_clip": 8.23153018951416,
+    "gradients_finite": true,
+    "scale": 128.0,
+    "seconds": 11.708329136999993,
+    "examples": [
+      {
+        "query_id": "q-train-030605",
+        "skill_id": "bb71bfbf-1226-4cf4-809d-9db9f73eb734",
+        "y": 1,
+        "loss": 0.11466635018587112
+      },
+      {
+        "query_id": "q-train-047636",
+        "skill_id": "06b27216-bf5a-477c-8af8-f8818f189f47",
+        "y": 1,
+        "loss": 0.4158634543418884
+      },
+      {
+        "query_id": "q-train-025068",
+        "skill_id": "b4cfa07f-7c15-4de3-a471-49a0e6241e67",
+        "y": 1,
+        "loss": 0.057734109461307526
+      },
+      {
+        "query_id": "q-train-052357",
+        "skill_id": "1901a814-ea26-4684-8e33-c3e0be1bb58d",
+        "y": 1,
+        "loss": 0.09315666556358337
+      },
+      {
+        "query_id": "q-train-062816",
+        "skill_id": "dd8a9b17-3b29-4db4-ad85-edeb87207ee3",
+        "y": 0,
+        "loss": 0.1324024796485901
+      },
+      {
+        "query_id": "q-train-010941",
+        "skill_id": "97b7fd20-2e4f-4f2f-a4c6-74f9aef171d4",
+        "y": 0,
+        "loss": 0.4755791127681732
+      },
+      {
+        "query_id": "q-train-027299",
+        "skill_id": "de6df426-131f-464e-b7d9-1b4979ac8453",
+        "y": 0,
+        "loss": 0.16293129324913025
+      },
+      {
+        "query_id": "q-train-046564",
+        "skill_id": "38e97e51-599c-4551-bc52-14e0480fa127",
+        "y": 1,
+        "loss": 0.0677018016576767
+      }
+    ],
+    "changed_adapter_tensors": 372
+  }
+]

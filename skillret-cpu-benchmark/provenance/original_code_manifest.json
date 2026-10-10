@@ -1,0 +1,164 @@
+{
+  "created_utc": "2026-10-02T10:39:07.187951+00:00",
+  "scope": "Code-only; no inference performed while packaging",
+  "platform": "Observed Linux x86-64 Python3.12; no Windows support claim",
+  "validation": "Static Python/JSON/readme path checks, exact copied-source SHA256 comparisons and ZIP CRC check; not clean-room installation or inference",
+  "executed_core_source_unchanged": [
+    "src/common.py",
+    "src/embeddings.py",
+    "src/decision_adapters.py",
+    "src/download_models.py",
+    "src/prepare_dataset.py",
+    "src/run_retrieval.py",
+    "src/run_decision.py",
+    "src/test_decision_adapters.py",
+    "src/controller.py"
+  ],
+  "analysis_and_test_source_status": "Provided and lightweight-tested; final full analysis deferred until inference has stopped",
+  "files": {
+    "MODEL_DOWNLOADS.md": {
+      "bytes": 3622,
+      "sha256": "886a843240dd7834c7c96bc6172310643cda141cfefce0ff1ceb54aa4fd2a132"
+    },
+    "README.md": {
+      "bytes": 6845,
+      "sha256": "f2a828eab6936102c77a35d716859bb955cd5af0127c6c5e422861d7f0386fba"
+    },
+    "docs/FULL_REPRODUCTION.md": {
+      "bytes": 9736,
+      "sha256": "a66a6b4800f35296cb769cdc403dbe50e26bd6f3e1554916a2acb83c76263bc0"
+    },
+    "docs/PRIVACY_ADDENDUM.md": {
+      "bytes": 2238,
+      "sha256": "03498b09af390012a2b46af34876a3086937022f396f19e8a024741fb0a8436c"
+    },
+    "docs/RUNTIME_NOTES.md": {
+      "bytes": 1691,
+      "sha256": "1ef7c7a68024c3176d2ca69df006f7471af7317c9ee36616653a2385daacdf1e"
+    },
+    "docs/dataset_download_receipts.json": {
+      "bytes": 1862,
+      "sha256": "63e13561baabd704877a6bce605a6f97be130c34884274b2981ed9638cb619e6"
+    },
+    "docs/dataset_source_metadata.json": {
+      "bytes": 530,
+      "sha256": "3aac191b2bed04ac6364482273dc2d314a75f6c4724284dfa16351b80edf26e1"
+    },
+    "docs/download_receipts.json": {
+      "bytes": 15027,
+      "sha256": "5a96eb39e96e229d49b354c083b0e0672cd21c3764c54d61a658370f12ff1d52"
+    },
+    "docs/model_sources.json": {
+      "bytes": 8681,
+      "sha256": "1ecc42dc2502e17c7741351ab2aa2d13f1531843a34c17d62ad4857c88799201"
+    },
+    "docs/notebook_validation.md": {
+      "bytes": 4875,
+      "sha256": "1a1da1cd7f3acbe1ca23cef700d7c63a2c00759197776a43527ce3f3b92ff405"
+    },
+    "docs/ort_privacy_source.json": {
+      "bytes": 667,
+      "sha256": "0f16b83985899b605fa40de37f3b20d4c0ac2e46a3f641fa9b353ff952a0cdd5"
+    },
+    "docs/report_contract.md": {
+      "bytes": 7228,
+      "sha256": "1df74295cc803acdcb30cd94ce5ded1326a48b9e9a344593b3bb3707e4ef112b"
+    },
+    "protocol/DATA_PROTOCOL.md": {
+      "bytes": 4280,
+      "sha256": "33e90396f3f39bdd08cf24340578aef634278c402bb33bd85fe3ec6f09c9c970"
+    },
+    "requirements-gliner.txt": {
+      "bytes": 274,
+      "sha256": "56b5e41844de0feace5d4c58a15b53d932b747efc4905b5d0f52f3344af16e09"
+    },
+    "requirements-julia.txt": {
+      "bytes": 260,
+      "sha256": "dd1900e21de4fec2c2d75fa32f35c8ff0b7041a75ed64a55bf66e9a68441b110"
+    },
+    "requirements-main.txt": {
+      "bytes": 368,
+      "sha256": "d495530e03ead35151a2f584fc65af4148109c962d488af1cb6e50d46d6046a7"
+    },
+    "setup_privacy.sh": {
+      "bytes": 382,
+      "sha256": "66c1454e58b089802fb70f05abda2246597ab3765e546a61cde385abffda1d48"
+    },
+    "src/build_compact_pdf.py": {
+      "bytes": 17954,
+      "sha256": "f88bcb301a26afd5dec7bcd4538dbff1360178a7f1af760005533a8ded3c1275"
+    },
+    "src/build_notebook.py": {
+      "bytes": 45151,
+      "sha256": "c997f97d3a948a5c796081f712f59742b8b490a23b97e25b230ffd35910cfa36"
+    },
+    "src/build_report.py": {
+      "bytes": 19781,
+      "sha256": "ae7833a3e41a42e326ec26f48a5735f59b0efed08fee15889fddc03640714247"
+    },
+    "src/common.py": {
+      "bytes": 5115,
+      "sha256": "b255bf6adafa5f524790493b90e0aca20e33be2968ea6bcc4d4c94e06cbb6ea1"
+    },
+    "src/controller.py": {
+      "bytes": 4281,
+      "sha256": "df83f7c16085211ff6eb5e4e03f7df7908a5662485140f67a9092b398d824325"
+    },
+    "src/decision_adapters.py": {
+      "bytes": 18092,
+      "sha256": "bc8d7d475d9d54d098ddb5ebaa96b86417ce732af14025160fcbf4aa80c2cc07"
+    },
+    "src/download_models.py": {
+      "bytes": 1166,
+      "sha256": "cbedd61e24cef652ed2ac39a689c8065730c5339a29a6fd628e598a3104761cc"
+    },
+    "src/embeddings.py": {
+      "bytes": 4414,
+      "sha256": "5368a8b138f6cc1fba85bcba6158e51e3cb708cd033b77c98c28255fbb8b12fa"
+    },
+    "src/prepare_dataset.py": {
+      "bytes": 18902,
+      "sha256": "a0093d6cb465eb328f9af6a588d7c981b80a8d75014baa7f72c439e00f79e322"
+    },
+    "src/report_aggregation.sql": {
+      "bytes": 432,
+      "sha256": "bbda1e4e40d7a3967501aaa4ee756822d33452d0c99256bc9b84038fc7c9a406"
+    },
+    "src/report_fresh.py": {
+      "bytes": 35396,
+      "sha256": "8d83e004e8c4d8c6ac5825f7d57d9a3a8815e7d1506ac9a4c2e3e75e86ebe784"
+    },
+    "src/run_decision.py": {
+      "bytes": 5268,
+      "sha256": "49a3cf10d537e12a6e7f9fdb06631beae9e872c4f71c2039cc4d9d809f5229ae"
+    },
+    "src/run_retrieval.py": {
+      "bytes": 3276,
+      "sha256": "598e0a3b2e70304bd682e1f7ff3adefe6b89616869a9e42cbabf915edb746ea3"
+    },
+    "src/test_decision_adapters.py": {
+      "bytes": 3823,
+      "sha256": "8d2f9ffde46a9dc9c9cbe542b7229e983cbe48490f26eb9fdd1d53be7934da52"
+    },
+    "tests/audit_skillret_recovery.py": {
+      "bytes": 7536,
+      "sha256": "c2c51cfc86ee59a82e3bfb8a7e352c9687f1333fd8b95f29ad317abce09dfbca"
+    },
+    "tests/test_notebook.py": {
+      "bytes": 7510,
+      "sha256": "9f9d7afc08cd4c360c535caca0b5be0407a46855207231fb7047669cce537c22"
+    },
+    "tests/test_report.py": {
+      "bytes": 2653,
+      "sha256": "90ee32031ac67e952a941f54c2f739b0e6713334317b03ad6875aea7754ffe3e"
+    }
+  },
+  "revised_utc": "2026-10-02T10:56:41.123200+00:00",
+  "revision_note": "Prospective pre-initialization ONNX telemetry opt-out added to documentation/setup only. Not measured; no ORT or model execution.",
+  "new_prospective_files": [
+    "setup_privacy.sh",
+    "docs/PRIVACY_ADDENDUM.md",
+    "docs/ort_privacy_source.json"
+  ],
+  "optional_test_dependency": "tests/test_report.py historical-values integration test requires docs/retained_observations.json from the full results archive; intentionally absent here."
+}
