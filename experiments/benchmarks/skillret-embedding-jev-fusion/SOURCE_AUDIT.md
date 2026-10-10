@@ -8,7 +8,7 @@ The current user request authorizes free local preparation and baseline executio
 
 Read-only GitHub connector inspection resolved the destination as **speccy88/mia5150**, a private repository, default branch `main`, observed commit `041f2ceccd3f43e9f841289541b68083c795df73`. The complete recursive tree had no root `AGENTS.md` and no existing `skillret-embedding-jev-fusion` directory. The only `AGENTS.md` was scoped to `skillret-pilot/`. Prior studies are separate sibling directories and must be preserved. This audit made no repository mutation.
 
-Repository context: [README at the observed commit](https://github.com/speccy88/mia5150/blob/main/README.md), [prior pilot instructions](https://github.com/speccy88/mia5150/blob/main/skillret-pilot/AGENTS.md).
+Repository context: [README at the observed commit](https://github.com/speccy88/mia5150/blob/main/README.md), [prior pilot instructions](https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-pilot/AGENTS.md).
 
 The locally saved `/home/user/code/mia5150-local/evidence/fork-CODEX_TASK.md` is the earlier Mac/OpenRouter pilot task. Its reusable evidence principles are: preserve old results, pin data and source, use real measurements, keep qrels outside scoring inputs, record truncation explicitly, persist resumable configuration-specific results, distinguish fixtures from real runs, and export only sanitized files. It does not authorize spending in the current phase. Its old `OPENROUTER_API_KEY`, model, budget, hardware, metadata-only selection, and notebook requirements do not redefine this new study.
 

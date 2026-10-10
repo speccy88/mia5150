@@ -5,9 +5,9 @@ on:
     branches: [main]
     paths:
       - 'EDA/**'
-      - 'skillret-local-metadata-20261005/data/queries/**'
-      - 'skillret-local-metadata-20261005/data/qrels/**'
-      - 'skillret-local-metadata-20261005/evidence/data-manifest.json'
+      - 'experiments/benchmarks/skillret-local-metadata-20261005/data/queries/**'
+      - 'experiments/benchmarks/skillret-local-metadata-20261005/data/qrels/**'
+      - 'experiments/benchmarks/skillret-local-metadata-20261005/evidence/data-manifest.json'
       - '.github/workflows/eda-pages.yml'
   workflow_dispatch:
 
@@ -37,9 +37,9 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             EDA
-            skillret-local-metadata-20261005/data/queries
-            skillret-local-metadata-20261005/data/qrels
-            skillret-local-metadata-20261005/evidence/data-manifest.json
+            experiments/benchmarks/skillret-local-metadata-20261005/data/queries
+            experiments/benchmarks/skillret-local-metadata-20261005/data/qrels
+            experiments/benchmarks/skillret-local-metadata-20261005/evidence/data-manifest.json
           sparse-checkout-cone-mode: false
       - name: Validate golden skill counts
         run: |

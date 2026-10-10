@@ -9,8 +9,9 @@ if ! command -v latexmk >/dev/null 2>&1; then
 fi
 
 mkdir -p build
+cd paper
 # latexmk repeats TeX/BibTeX as needed until citations and cross-references settle.
 for source in project_proposal.tex neurips_2026.tex; do
   latexmk -pdf -no-shell-escape -file-line-error -halt-on-error \
-    -interaction=nonstopmode -outdir=build "$source"
+    -interaction=nonstopmode -outdir=../build "$source"
 done

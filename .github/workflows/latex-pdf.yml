@@ -10,7 +10,7 @@ on:
       - '**/*.sty'
       - '**/*.cls'
       - '**/*.bib'
-      - 'figures/**'
+      - 'paper/figures/**'
       - 'scripts/build_latex.sh'
       - '.github/workflows/latex-pdf.yml'
   pull_request:
@@ -19,7 +19,7 @@ on:
       - '**/*.sty'
       - '**/*.cls'
       - '**/*.bib'
-      - 'figures/**'
+      - 'paper/figures/**'
       - 'scripts/build_latex.sh'
       - '.github/workflows/latex-pdf.yml'
   workflow_dispatch:
@@ -40,6 +40,10 @@ jobs:
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
+          sparse-checkout: |
+            paper
+            scripts/build_latex.sh
+          sparse-checkout-cone-mode: false
 
       - name: Measure runner container storage before compilation
         run: docker system df
@@ -49,12 +53,13 @@ jobs:
         with:
           # Pin the TeX Live 2026 image as well as the action's source revision.
           docker_image: ghcr.io/xu-cheng/texlive-alpine@sha256:11383430b9a3e48c0b79339f34d8092f942f897d91ab3749d4899d06731fea7f
+          working_directory: paper
           root_file: |
             project_proposal.tex
             neurips_2026.tex
           continue_on_error: true
           latexmk_shell_escape: false
-          args: -pdf -no-shell-escape -file-line-error -halt-on-error -interaction=nonstopmode -outdir=build
+          args: -pdf -no-shell-escape -file-line-error -halt-on-error -interaction=nonstopmode -outdir=../build
 
       # v7 can upload a single PDF directly, without wrapping it in a ZIP.
       - name: Upload proposal PDF
@@ -96,7 +101,7 @@ jobs:
             echo "- [Project proposal]($PROPOSAL_URL)"
             echo "- [Original NeurIPS template and checklist]($TEMPLATE_URL)"
             echo ''
-            echo 'Edit project_proposal.tex or references.bib and push to main to rebuild.'
+            echo 'Edit paper/project_proposal.tex or paper/references.bib and push to main to rebuild.'
             echo 'PDFs are retained for 30 days. Run this workflow manually to regenerate them.'
           } >> "$GITHUB_STEP_SUMMARY"
 

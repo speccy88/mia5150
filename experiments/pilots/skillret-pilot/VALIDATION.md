@@ -20,7 +20,7 @@ Validated on 26 September 2026, from this folder in a separate clone of
 | Historical reference ZIP | CRC and exact SHA-256 verified; all 447 members scanned |
 
 The installation and offline steps were actually run; these are not predicted
-results. See [validation/](validation/) for the small saved command/test/notebook
+results. See [validation/](validation) for the small saved command/test/notebook
 records. Runtime downloads and caches are ignored by Git. New retrieval rankings
 were computed without installing historical runtime results or budget ledgers.
 

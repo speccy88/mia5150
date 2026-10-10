@@ -42,3 +42,14 @@ id_ed25519
 .pypirc
 **/privacy-work/
 **/private-history/
+
+# Local paper outputs; preserved study PDFs remain tracked.
+/paper/*.pdf
+/paper/*.aux
+/paper/*.bbl
+/paper/*.blg
+/paper/*.log
+/paper/*.out
+/paper/*.synctex.gz
+/paper/*.fdb_latexmk
+/paper/*.fls

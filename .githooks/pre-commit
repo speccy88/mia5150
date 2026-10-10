@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 if [ "$(git config user.name)" != "Research Team" ] || [ "$(git config user.email)" != "anonymous" ]; then
-  echo "Configure the generic author described in docs/PUBLICATION-PRIVACY.md before committing." >&2
+  echo "Configure the generic author described in docs/publication/PUBLICATION-PRIVACY.md before committing." >&2
   exit 1
 fi
 if ! command -v gitleaks >/dev/null 2>&1; then

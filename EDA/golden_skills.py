@@ -12,7 +12,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-DEFAULT_DATA = REPO / "skillret-local-metadata-20261005/data"
+DEFAULT_DATA = REPO / "experiments/benchmarks/skillret-local-metadata-20261005/data"
 START = "<!-- GOLDEN SKILLS START -->"
 END = "<!-- GOLDEN SKILLS END -->"
 PLOTLY_URL = "https://cdn.plot.ly/plotly-4.1.1.min.js"
@@ -167,7 +167,7 @@ def render_section(stats):
         rows.append(f'<tr><th scope="row">{k}</th>{"".join(cells)}</tr>')
     totals = "".join(f'<td>{split["queries"]:,} (100.00%)</td>'
                      for split in (splits["train"], splits["test"], combined))
-    source = "https://github.com/speccy88/mia5150/blob/main/skillret-local-metadata-20261005"
+    source = "https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005"
     duplicates = sum(s["duplicate_positive_qrel_rows"] for s in splits.values())
     return f'''{START}
 <section class="section" id="golden-skills">

@@ -8,7 +8,7 @@ execute downloaded skills.
 
 **Start with the [comparison below](#results-on-the-same-200-queries), then run
 the [read-only verifier](#verify-the-published-results).** The earlier
-[SkillRet pilot](../skillret-pilot/README.md) contains the Deep Agents,
+[SkillRet pilot](../../pilots/skillret-pilot/README.md) contains the Deep Agents,
 OpenRouter, and local Ollama selector implementations and their broader
 N=50/250/1,000 experiments. This folder adds the Jev and CLM rerankers and
 brings their results together with the pilot's five-query BM25 → LLM results.
@@ -27,7 +27,7 @@ paired query records, Jev had higher recall on **91** queries, lower recall on
 **1**, and the same recall on **108**. All 200 Jev and 200 CLM calls completed.
 BM25 candidate Recall@20 was **72.75%** for both rerankers; it measures the
 available pool before reducing it to five results.
-The [aggregate and per-query comparison CSVs](reference_run/comparison/) are
+The [aggregate and per-query comparison CSVs](reference_run/comparison) are
 included alongside the original raw rows.
 
 The Jev and CLM comparison uses identical query IDs and text, dataset revision,
@@ -90,10 +90,10 @@ invalid cases.
 | GLM 5.3 Flash | OpenRouter | 5/5 | 90% |
 
 Qwen 27B attempted only one BM25 case; four were unrun. The other six models
-attempted all five. The [source CSVs](reference_run/llm/) also report precision,
+attempted all five. The [source CSVs](reference_run/llm) also report precision,
 exact-set matches, failures, and the other selection methods. Raw five-query
 decisions are included there; selector code remains in
-[`skillret-pilot/`](../skillret-pilot/README.md).
+[`skillret-pilot/`](../../pilots/skillret-pilot/README.md).
 
 **Do not rank Jev against those percentages as if they were the same test.** The
 LLM libraries contained all relevant skills by construction, had only 50
@@ -105,7 +105,7 @@ a general LLM ranking.
 
 ## Verify the published results
 
-The historical inputs and outputs are under [`reference_run/`](reference_run/).
+The historical inputs and outputs are under [`reference_run/`](reference_run).
 No API key, remote pod, dataset download, or model weights are needed to check
 the recorded comparisons. Its [`SHA256SUMS`](reference_run/SHA256SUMS) records
 the exact published evidence bytes:
@@ -163,7 +163,7 @@ redistributed here.
 | [`scripts/clm_remote_worker.py`](scripts/clm_remote_worker.py) | Pinned GPU-side CLM/vLLM inference |
 | `pilot.py`, `trial.py`, `agent_runner.py`, `reference_metrics.py` | Shared pinned retrieval and metrics code from the executed local checkout |
 | `prompts/`, `manifests/`, `evidence/` | Model instruction, revision and source pins |
-| [`reference_run/`](reference_run/) | Saved raw decisions, summaries, comparison inputs and historical reports |
+| [`reference_run/`](reference_run) | Saved raw decisions, summaries, comparison inputs and historical reports |
 | `setup_local_key.py` | Optional private key setup helper; never stores keys in version control |
 
 ## Scope and limitations

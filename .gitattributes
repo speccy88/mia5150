@@ -1,19 +1,19 @@
 # Preserve the supplied template files, including their original line endings.
-/neurips_2026.tex -text -whitespace
-/neurips_2026.sty -text -whitespace
-/checklist.tex -text -whitespace
+/paper/neurips_2026.tex -text -whitespace
+/paper/neurips_2026.sty -text -whitespace
+/paper/checklist.tex -text -whitespace
 *.pdf binary
 *.safetensors binary
 *.pt binary
 
 # Preserve archived evidence bytes and SHA256 pins across Windows/Linux checkouts.
-/skillret-seed5150-scaling/** -text
-/skillret-searchjev-update20/** -text
-/skillret-local-metadata-20261005/** -text
-/skillret-local-rubrics-20261006/** -text
-/skillret-embeddinggemma2-pilot/** -text
-/skillret-jina-nano-pilot/** -text
-/artifact-publication-audit/** -text
+/experiments/scaling/skillret-seed5150-scaling/** -text
+/experiments/pilots/skillret-searchjev-update20/** -text
+/experiments/benchmarks/skillret-local-metadata-20261005/** -text
+/experiments/pilots/skillret-local-rubrics-20261006/** -text
+/experiments/pilots/skillret-embeddinggemma2-pilot/** -text
+/experiments/pilots/skillret-jina-nano-pilot/** -text
+/docs/publication/artifact-publication-audit/** -text
 
 # Publish model checkpoints through Git LFS.
 *.safetensors filter=lfs diff=lfs merge=lfs -text

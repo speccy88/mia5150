@@ -67,7 +67,7 @@ RUN_LLM = False
 RUN_DOMAIN = False  # Optional: add the domain → vector condition at the end.
 MODEL = "qwen3.5:4b-mlx"  # Must match a model already installed in your Ollama.
 CONTEXT = 16384
-LOCAL_DATA = None  # Or Path("../skillret-pilot/data") to reuse the pilot download.
+LOCAL_DATA = None  # Or Path("../../experiments/pilots/skillret-pilot/data") to reuse the pilot download.
 
 # Every Run All writes into a new folder. Old evidence is never overwritten.
 stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")

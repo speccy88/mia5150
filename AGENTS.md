@@ -5,6 +5,15 @@
 - Update from remote `main` before making changes, and publish commits directly to `main`.
 - Before removing a temporary branch, verify that every commit it contains is reachable from `main`.
 
+## Repository layout
+
+- Put self-contained studies under `experiments/benchmarks/`, `experiments/pilots/`, or `experiments/scaling/`.
+- Keep each study's source, results, and reproduction instructions together; preserve historical evidence bytes.
+- Paper sources belong under `paper/`; demonstrations under `demos/`; course and publication references under `docs/`.
+- Keep `EDA/eda_report.html` as the GitHub Pages source. Update workflow paths and current navigation links when moving files.
+- Maintain the root README and experiment index. Use `docs/REPOSITORY-LAYOUT.md` for old-to-new path mappings.
+- Current publication checksums are in `docs/publication/PUBLICATION_MANIFEST.sha256`; archived run manifests keep their historical meaning.
+
 ## Public repository privacy
 
 - Use the generic commit author `Research Team` with `user.email=anonymous`.

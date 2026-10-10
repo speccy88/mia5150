@@ -4,8 +4,8 @@ The repository builds **two independent PDFs** with the supplied NeurIPS 2026 st
 
 | Editable source | Generated artifact | Purpose |
 |---|---|---|
-| [`project_proposal.tex`](../project_proposal.tex) + [`references.bib`](../references.bib) | `project_proposal.pdf` | Custom MIA5150 SkillRet proposal |
-| [`neurips_2026.tex`](../neurips_2026.tex), [`neurips_2026.sty`](../neurips_2026.sty), [`checklist.tex`](../checklist.tex) | `neurips_2026.pdf` | Original template example, including the checklist |
+| [`project_proposal.tex`](../../paper/project_proposal.tex) + [`references.bib`](../../paper/references.bib) | `project_proposal.pdf` | Custom MIA5150 SkillRet proposal |
+| [`neurips_2026.tex`](../../paper/neurips_2026.tex), [`neurips_2026.sty`](../../paper/neurips_2026.sty), [`checklist.tex`](../../paper/checklist.tex) | `neurips_2026.pdf` | Original template example, including the checklist |
 
 The three supplied files are preserved byte-for-byte. Their hashes are in
 [`latex-template-provenance.json`](latex-template-provenance.json). `checklist.tex`
@@ -14,17 +14,17 @@ unanswered items belong to the template example; they are not claims about our s
 
 ## Automatic build
 
-1. Open `project_proposal.tex` in GitHub or your editor and change the proposal.
+1. Open `paper/project_proposal.tex` in GitHub or your editor and change the proposal.
 2. Commit and push to `main`, or open/update a pull request.
 3. Open [Actions > Build LaTeX PDFs](https://github.com/speccy88/mia5150/actions/workflows/latex-pdf.yml).
 4. Open the newest successful run and download **project_proposal.pdf** from
    **Artifacts**, or use the link in the run summary. The template PDF is separate.
 
-Changes to `.tex`, `.sty`, `.cls`, `.bib`, files under `figures/`, or the build
+Changes to `.tex`, `.sty`, `.cls`, `.bib`, files under `paper/figures/`, or the build
 configuration trigger compilation. Changes only to the Python pilot do not.
 You can also select **Run workflow** on the workflow page without editing anything.
 Artifacts are retained for **30 days**; rerun to regenerate expired downloads.
-Sign in with access to this private repository to download its artifacts.
+Use the workflow run page to download its artifacts; sign in if GitHub prompts.
 
 GitHub compiles both roots with TeX Live 2026 and `latexmk`. Bibliography and
 cross-reference passes are automatic. A compile error fails the workflow and
@@ -38,16 +38,16 @@ PDF checksums, visual review and an older GitHub CLI download workaround.
 
 ## What to edit
 
-- **Proposal text and tables:** `project_proposal.tex`. Comments mark the sections.
-- **Citations:** `references.bib`; add `\citep{key}` or `\citet{key}` in the proposal.
-- **Figures:** put them under `figures/`, then use `\includegraphics` if needed.
-- **Shared formatting:** the supplied `neurips_2026.sty`; keep it unchanged unless
+- **Proposal text and tables:** `paper/project_proposal.tex`. Comments mark the sections.
+- **Citations:** `paper/references.bib`; add `\citep{key}` or `\citet{key}` in the proposal.
+- **Figures:** put them under `paper/figures/`, then use `\includegraphics` if needed.
+- **Shared formatting:** the supplied `paper/neurips_2026.sty`; keep it unchanged unless
   an updated official style is deliberately adopted.
 
 The proposal uses `preprint` mode to show the team's names without claiming
 conference acceptance. It is a course proposal, so the unfilled conference
 checklist is compiled only in the original template PDF. The outline previously
-at `project_proposal.tex` remains available in Git history (commit `b9c9df2`).
+at the former root `project_proposal.tex` remains available in Git history (commit `b9c9df2`).
 
 The draft separates measured pilot results from planned experiments. Student
 numbers were not supplied and are not invented. Before course submission, add
