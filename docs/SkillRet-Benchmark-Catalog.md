@@ -2,7 +2,7 @@
 
 This catalog covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
-Reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence on [sanitized `main`][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare this catalog.
+Reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare this catalog.
 
 **Environment labels:** Local = documented local/on-machine execution; Cloud = documented remote compute or hosted inference; Hybrid = local preparation/retrieval/evaluation combined with cloud inference. Hardware and provider details are included only where recorded. The CPU archive documents its processor and runtime but not its physical hosting, so that row explicitly leaves Local/Cloud unresolved.
 
@@ -44,63 +44,63 @@ The authoritative [implemented/incomplete/unrun section][index] and metadata [ex
 
 Folder links below open the current source tree. Documentation/evidence links use the reviewed immutable commit so the basis of this catalog remains inspectable if `main` changes. [EXPERIMENTS.md][index] controls the recent-study boundaries; the preserved older studies and BM25 historical evidence supply rows not individually enumerated there.
 
-[index]: https://github.com/speccy88/mia5150/blob/main/EXPERIMENTS.md
-[commit]: https://github.com/speccy88/mia5150/tree/main
+[index]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/EXPERIMENTS.md
+[commit]: https://github.com/speccy88/mia5150/tree/8b64ff5135ec174b1fc99666a7b42be332e64f65
 [folder01]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/benchmark_bm25/results
-[source01]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/benchmark_bm25/results/metrics.json
-[code01]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/benchmark_bm25/benchmark_bm25.py
+[source01]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/benchmark_bm25/results/metrics.json
+[code01]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/benchmark_bm25/benchmark_bm25.py
 [folder02]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/benchmark_bm25/results_listing
-[source02]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/benchmark_bm25/results_listing/metrics.json
-[code02]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/benchmark_bm25/benchmark_listing.py
+[source02]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/benchmark_bm25/results_listing/metrics.json
+[code02]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/benchmark_bm25/benchmark_listing.py
 [folder03]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-pilot
-[readme03]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-pilot/README.md
-[source03]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-pilot/reference_run/OPENROUTER_SCALING.md
+[readme03]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-pilot/README.md
+[source03]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-pilot/reference_run/OPENROUTER_SCALING.md
 [folder04]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-full-catalog-runpod
-[readme04]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-full-catalog-runpod/README.md
-[source04]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-full-catalog-runpod/results/aggregate.json
+[readme04]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-full-catalog-runpod/README.md
+[source04]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-full-catalog-runpod/results/aggregate.json
 [folder05]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-jevk5-runpod
-[readme05]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-jevk5-runpod/README.md
-[source05]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-jevk5-runpod/reference_run/results/summary.json
+[readme05]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-jevk5-runpod/README.md
+[source05]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-jevk5-runpod/reference_run/results/summary.json
 [folder06]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-cpu-benchmark
-[readme06]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-cpu-benchmark/README.md
-[source06]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-cpu-benchmark/reference_run/report/SkillRet_Benchmark_Matched32_FullCatalog.csv
-[receipt06]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-cpu-benchmark/reference_run/results/retrieval64/bm25_run.json
+[readme06]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-cpu-benchmark/README.md
+[source06]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-cpu-benchmark/reference_run/report/SkillRet_Benchmark_Matched32_FullCatalog.csv
+[receipt06]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-cpu-benchmark/reference_run/results/retrieval64/bm25_run.json
 [folder07]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-reranker-study
-[readme07]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-reranker-study/README.md
-[source07]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-reranker-study/reference_run/comparison
+[readme07]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-reranker-study/README.md
+[source07]: https://github.com/speccy88/mia5150/tree/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-reranker-study/reference_run/comparison
 [folder08]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-embedding-jev-fusion
-[readme08]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/README.md
-[source08]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/results/report_comparison.json
-[env08]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/ENVIRONMENT.md
+[readme08]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/README.md
+[source08]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/results/report_comparison.json
+[env08]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/ENVIRONMENT.md
 [folder09]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-embedding-jev-fusion
-[readme09]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/README.md
-[source09]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-study-findings-final/findings.md
-[eval09]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-pilot-native-field-evaluation/evaluation.json
+[readme09]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/README.md
+[source09]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-study-findings-final/findings.md
+[eval09]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-pilot-native-field-evaluation/evaluation.json
 [folder10]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-local-metadata-20261005
-[readme10]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/README.md
-[source10]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md
-[status10]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/EXECUTION_STATUS.md
+[readme10]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/README.md
+[source10]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md
+[status10]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/EXECUTION_STATUS.md
 [folder11]: https://github.com/speccy88/mia5150/tree/main/experiments/benchmarks/skillret-local-metadata-20261005
-[readme11]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/README.md
-[source11]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md
-[status11]: https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skillret-local-metadata-20261005/EXECUTION_STATUS.md
+[readme11]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/README.md
+[source11]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md
+[status11]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/benchmarks/skillret-local-metadata-20261005/EXECUTION_STATUS.md
 [folder12]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-local-rubrics-20261006
-[readme12]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-local-rubrics-20261006/README.md
-[source12]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-local-rubrics-20261006/round2/OVERNIGHT_FINDINGS.md
-[rubric12]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-local-rubrics-20261006/round2/VARIED_SCREEN_RESULTS.md
-[local12]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-local-rubrics-20261006/round2/LOCAL_RUBRIC_RESULTS.md
-[budget12]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-local-rubrics-20261006/round2/CANDIDATE_BUDGET_REPORT.md
+[readme12]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-local-rubrics-20261006/README.md
+[source12]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-local-rubrics-20261006/round2/OVERNIGHT_FINDINGS.md
+[rubric12]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-local-rubrics-20261006/round2/VARIED_SCREEN_RESULTS.md
+[local12]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-local-rubrics-20261006/round2/LOCAL_RUBRIC_RESULTS.md
+[budget12]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-local-rubrics-20261006/round2/CANDIDATE_BUDGET_REPORT.md
 [folder13]: https://github.com/speccy88/mia5150/tree/main/experiments/scaling/skillret-seed5150-scaling
-[readme13]: https://github.com/speccy88/mia5150/blob/main/experiments/scaling/skillret-seed5150-scaling/README.md
-[source13]: https://github.com/speccy88/mia5150/blob/main/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md
+[readme13]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/scaling/skillret-seed5150-scaling/README.md
+[source13]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md
 [folder14]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-embeddinggemma2-pilot
-[readme14]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-embeddinggemma2-pilot/README.md
-[source14]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-embeddinggemma2-pilot/EmbeddingGemma2-RTX2060S-Report.md
+[readme14]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-embeddinggemma2-pilot/README.md
+[source14]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-embeddinggemma2-pilot/EmbeddingGemma2-RTX2060S-Report.md
 [folder15]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-jina-nano-pilot
-[readme15]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-jina-nano-pilot/README.md
-[source15]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-jina-nano-pilot/Jina-Nano-Retrieval-Report.md
+[readme15]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-jina-nano-pilot/README.md
+[source15]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-jina-nano-pilot/Jina-Nano-Retrieval-Report.md
 [folder16]: https://github.com/speccy88/mia5150/tree/main/experiments/pilots/skillret-searchjev-update20
-[readme16]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-searchjev-update20/README.md
-[source16]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-searchjev-update20/SearchJev-SkillRet-Report.txt
-[paired16]: https://github.com/speccy88/mia5150/blob/main/experiments/pilots/skillret-searchjev-update20/paired-quality-analysis.json
-[pdfinventory]: https://github.com/speccy88/mia5150/blob/main/docs/inputs/skillret-user-pdfs/README.md
+[readme16]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-searchjev-update20/README.md
+[source16]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-searchjev-update20/SearchJev-SkillRet-Report.txt
+[paired16]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-searchjev-update20/paired-quality-analysis.json
+[pdfinventory]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/docs/inputs/skillret-user-pdfs/README.md
