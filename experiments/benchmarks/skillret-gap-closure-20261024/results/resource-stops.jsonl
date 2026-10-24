@@ -1,0 +1,5 @@
+{"utc": "2026-10-24T15:22:30.322959+00:00", "host_available_bytes": 1625956352, "telemetry_age_seconds": 2.3229401111602783, "stage": "encoder", "reason": "RAM_reserve"}
+{"utc": "2026-10-24T15:36:01.245277+00:00", "host_available_bytes": 1720180736, "telemetry_age_seconds": 1.2452280521392822, "stage": "encoder", "reason": "RAM_reserve"}
+{"utc": "2026-10-24T15:36:03.404058+00:00", "host_available_bytes": 1019379712, "telemetry_age_seconds": 0.4040348529815674, "stage": "encoder", "reason": "RAM_reserve"}
+{"utc": "2026-10-24T15:52:19.951776+00:00", "host_available_bytes": 2044334080, "telemetry_age_seconds": 0.9517629146575928, "stage": "encoder", "reason": "RAM_reserve"}
+{"utc": "2026-10-24T15:52:21.906876+00:00", "host_available_bytes": 2044334080, "telemetry_age_seconds": 2.906850576400757, "stage": "encoder", "reason": "RAM_reserve"}

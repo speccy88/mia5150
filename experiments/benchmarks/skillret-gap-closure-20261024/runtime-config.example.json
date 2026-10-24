@@ -1,0 +1,8 @@
+{
+  "runtime_root": "/absolute/private/runtime-data",
+  "llama_root": "/absolute/private/llama-runtime-root",
+  "models": {
+    "qwen3_06_q8": {"path":"/absolute/private/models/Qwen3-0.6B-Q8_0.gguf","sha256":"9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031","name":"Qwen3-0.6B","quantization":"Q8_0","seeds":[42,43,44]},
+    "qwen35_4b_q4": {"path":"/absolute/private/models/Qwen3.5-4B-Q4_K_M.gguf","sha256":"00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4","name":"Qwen3.5-4B","quantization":"Q4_K_M","seeds":[42]}
+  }
+}

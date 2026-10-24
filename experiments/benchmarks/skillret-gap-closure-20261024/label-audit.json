@@ -1,0 +1,115 @@
+{
+  "status": "passed mechanical checks",
+  "public_query_count": 4392,
+  "primary_queries": 200,
+  "primary_overlap_with_prior128": 8,
+  "all_primary_previously_exposed": true,
+  "exact_duplicate_texts_in_official": 0,
+  "near_duplicate_threshold": 0.85,
+  "near_duplicate_measure": "Unicode word-token Jaccard, casefold, compared against all official queries excluding sameID",
+  "near_duplicate_pairs": [],
+  "primary_strata": {
+    "2": 78,
+    "1": 98,
+    "3": 24
+  },
+  "generated_checks": [
+    {
+      "query_id": "generated-01",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-02",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-03",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-04",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-05",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-06",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-07",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-08",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-09",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-10",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-11",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    },
+    {
+      "query_id": "generated-12",
+      "constituent_count": 2,
+      "gold_count": 2,
+      "mechanical_union_valid": true,
+      "human_semantic_labels": "pending",
+      "sequence_validity": "not established"
+    }
+  ],
+  "label_limits": "Positive qrels are not exhaustive human semantic judgments; no human agreement, fresh holdout or verified dependency labels are fabricated."
+}

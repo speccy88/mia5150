@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-24T16:40:50.903876+00:00",
+  "campaign_status": "in_progress_or_resource_paused; see current receipts",
+  "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f",
+  "models": {
+    "qwen3_06_q8": {
+      "planned": 5080,
+      "ledger_case_attempt_rows": 13183,
+      "unique_cases_in_ledger": 5080,
+      "canonical_statuses": {
+        "ok": 3531,
+        "pipeline_error": 3,
+        "context_overflow": 403,
+        "invalid_selection": 87,
+        "invalid_or_empty_domain": 13,
+        "transport_or_guard_error": 1,
+        "not_run_resource_guard": 1042
+      },
+      "remaining_unattempted": 1042,
+      "physical_selector_attempts": 3619,
+      "physical_route_attempts": 804
+    },
+    "qwen35_4b_q4": {
+      "planned": 600,
+      "ledger_case_attempt_rows": 0,
+      "unique_cases_in_ledger": 0,
+      "canonical_statuses": {},
+      "remaining_unattempted": 600,
+      "physical_selector_attempts": 0,
+      "physical_route_attempts": 0
+    }
+  },
+  "hosted_paid_calls": 0,
+  "human_adjudication": "pending"
+}

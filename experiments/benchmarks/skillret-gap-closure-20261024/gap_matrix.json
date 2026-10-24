@@ -1,0 +1,989 @@
+{
+  "schema_version": 1,
+  "audit_time_utc": "2026-10-24T14:57:00Z",
+  "baseline_commit": "c4f4889fb3ec6864898d3ba07d08c30c438e3e12",
+  "scope": "read-only audit; no new inference or human annotations",
+  "rows": [
+    {
+      "id": "A1.1",
+      "topic": "Listing/prompt",
+      "verdict": "partly_present_with_failed_arms",
+      "finding": "10-query hosted listing has 10 context-budget/compaction errors at N1800; full-catalog local listing failure evidence already exists. It is false that no full6006 listing result exists anywhere. Wrapper failure does not establish the API model's native maximum.",
+      "acceptance": "New matched official-query panel; actual tokenized preflight; retain all sizes/failures; separate valid-inference and failure latency; do not alter historical run.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "listing_errors",
+          "path": "experiments/benchmarks/benchmark_bm25/results_listing/details.csv",
+          "line_start": 72,
+          "line_end": 81,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/results_listing/details.csv#L72-L81"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        }
+      ]
+    },
+    {
+      "id": "A1.2",
+      "topic": "Domain vector",
+      "verdict": "implemented_and_bounded_tested",
+      "finding": "Unconstrained route failures are real, but a six-category constrained grammar already yielded 11/12 and 12/12 valid local rows. Absolute claim that no controlled comparison exists overlooks the two-query matched study. One-domain restriction and centroid routing are different arms.",
+      "acceptance": "Use a newly frozen independent router arm, preserve old zeros; report parse validity, empty domain, gold coverage and multi-domain ceiling.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "parser",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/domain_constrained.py",
+          "line_start": 1,
+          "line_end": 70,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/domain_constrained.py#L1-L70"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        }
+      ]
+    },
+    {
+      "id": "A1.3",
+      "topic": "Hybrid/unified comparison",
+      "verdict": "partly_present",
+      "finding": "Matched five-method two-query selection exists; CPU32 and full4392 metadata comparisons already control retrieval factors. Remaining gap is informative common-selector coverage and one canonical primary analysis, not implementing hybrid.",
+      "acceptance": "Extend one matched selector design rather than pooling studies. Same panel/candidate memberships, embedder, metadata, selector, metrics and cost ledger.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "A2.1",
+      "topic": "Missing exact selectors",
+      "verdict": "not_found_in_inspected_execution_evidence",
+      "finding": "gpt-4.1-mini/nano execution not found in inspected catalog/config summaries; original factor not completed. Local names in first plan are wrong: Qwen3-0.6B Q8 and Qwen3.5-4B Q4, not Qwen3.5 0.6B/3.5B. --model already accepts arbitrary model strings.",
+      "acceptance": "Original model status table; retain exact unresolved hosted arms; verify availability/pin/credentials/rates before budget-authorized calls. Do not claim local substitutions reproduce them.",
+      "priority": "P2",
+      "completion_route": "hosted_pending",
+      "evidence": [
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A2.2",
+      "topic": "Multi-model sample size",
+      "verdict": "valid_remaining_gap",
+      "finding": "3-query/2-query pilots cannot support reliable model rankings; n20 or n200 is not by itself a power guarantee.",
+      "acceptance": "Predeclare contrasts and sample/precision rationale; paired effect intervals; planned/attempted/valid counts; keep model/version/provider and repeated-query dependence explicit.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A2.3",
+      "topic": "Hosted budget/execution",
+      "verdict": "partly_correct_with_overclaim",
+      "finding": "Full hosted expansion truly not admitted. US0.39 is historic pilot spend, not a verified repository-wide total. Jev full-text expansion cost cannot predict GPT/DeepSeek listing cost. POSIX fcntl is not native-Windows portable.",
+      "acceptance": "Immutable per-study ledgers; platform-appropriate atomic locking; estimate actual tokenized factorial including routing/output/canaries/retries and failure reserves. Paid model matrix remains pending authorization.",
+      "priority": "P0",
+      "completion_route": "local_controls_plus_hosted_pending",
+      "evidence": [
+        {
+          "key": "budget",
+          "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/full_expansion_decision.json",
+          "line_start": 1,
+          "line_end": 1,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-embedding-jev-fusion/results/full_expansion_decision.json#L1-L1"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        },
+        {
+          "key": "pilot",
+          "path": "experiments/pilots/skillret-pilot/README.md",
+          "line_start": 1,
+          "line_end": 220,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/README.md#L1-L220"
+        }
+      ]
+    },
+    {
+      "id": "A3.1",
+      "topic": "Retrieval query count",
+      "verdict": "partly_obsolete",
+      "finding": "Full4392 BM25/vector/RRF work already exists; small scaling panel is separate. 'Retrieval is free' confuses zero hosted charge with zero compute cost.",
+      "acceptance": "Reuse verified artifacts for reanalysis; extend scaling only when it answers a predeclared question and fits wall-time/memory budget. Distinguish reanalysis from fresh inference.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "index",
+          "path": "EXPERIMENTS.md",
+          "line_start": 7,
+          "line_end": 34,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/EXPERIMENTS.md#L7-L34"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        }
+      ]
+    },
+    {
+      "id": "A3.2",
+      "topic": "Selection count/exposure",
+      "verdict": "valid_gap_with_critical_obsolete_instruction",
+      "finding": "Meaningful matched selection is incomplete. The plan's instruction to take blind queries from 4192 reserved IDs is obsolete after full4392 public studies. Also 50 generated BM25 selection cases exist; the 3/2/10 enumeration is incomplete.",
+      "acceptance": "Mark SkillRet exposed; freeze new panel before run; distinguish stratified selection from natural sampling; no fresh-heldout claim. Human independent panel separately pending.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "index",
+          "path": "EXPERIMENTS.md",
+          "line_start": 7,
+          "line_end": 34,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/EXPERIMENTS.md#L7-L34"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A3.3",
+      "topic": "Seeds",
+      "verdict": "overstated_absence",
+      "finding": "Metadata scaling already uses seeds5150/5151/5152 across eight queries and random/hard-overlap conditions. Revised 43/44 are conditional on budget, not unconditional; exact named seeds not found in inspected runs.",
+      "acceptance": "Report existing seed evidence accurately. New primary design needs matched multi-seed sensitivity if claiming robustness; fullcatalog seed repeats are not independent catalogs.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "seeds",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/scale.py",
+          "line_start": 1,
+          "line_end": 20,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/scale.py#L1-L20"
+        },
+        {
+          "key": "seed_config",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/configs.json",
+          "line_start": 1,
+          "line_end": 20,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/configs.json#L1-L20"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A3.4",
+      "topic": "Size alignment",
+      "verdict": "false_as_global_absence",
+      "finding": "CPU32 already uses exactly10/100/1000/6006; seed5150 uses six-size superset. The real gap is joint method/model/final-selection coverage.",
+      "acceptance": "Select one balanced size grid and disclose proposal deviations; do not add duplicate sizes merely for compliance.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A4.1",
+      "topic": "Token accounting",
+      "verdict": "partly_present",
+      "finding": "Newer local selector logs already contain input/output/logical route tokens and physical reuse. Legacy listing/BM25 results do not. Universal token accounting remains incomplete.",
+      "acceptance": "Generate one measured token table; distinguish estimated preflight, actual model usage, embedding preprocessing/query tokens, logical routing and physical cached calls. Missing stays null.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "A4.2",
+      "topic": "Relative latency",
+      "verdict": "valid_gap_with_bad_prescribed_baseline",
+      "finding": "Fresh all-cell end-to-end latency not present. CPU32 has matched fullcatalog warm timing. Dividing selector end-to-end latency at every N by retrieval-only BM25 at6006 is not a controlled end-to-end method contrast.",
+      "acceptance": "Same-size BM25+same-selector paired baseline; absolute and relative values; separate setup, failures, cache replay, successful serving and system resources.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        }
+      ]
+    },
+    {
+      "id": "A4.3",
+      "topic": "Use-case analysis",
+      "verdict": "partly_missing_proxies_misnamed",
+      "finding": "Gold multiplicity is available; category co-membership does not prove overlap. Hard-overlap distractor sensitivity already exists. Dependency/cascade labels remain unsupported and revised proposal excludes chains.",
+      "acceptance": "Report gold-count/domain-coverage strata as proxies; label semantic overlap/cascade only after real adjudication; separate set coverage from sequence correctness.",
+      "priority": "P1",
+      "completion_route": "local_proxy_analysis_plus_human_pending",
+      "evidence": [
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "seeds",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/scale.py",
+          "line_start": 1,
+          "line_end": 20,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/scale.py#L1-L20"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A5.1",
+      "topic": "Final consolidated paper",
+      "verdict": "not_found_in_inspected_paper_directory",
+      "finding": "Paper directory contains proposal/template/bibliography, not a canonical final report at baseline; source directories were inspected. This does not prove no private draft exists.",
+      "acceptance": "New final-report source, max6-page course body, traceable matched results, limitations and accurate contributions; preserve proposal. Compilation plus visual QA required.",
+      "priority": "P1",
+      "completion_route": "publication_owner",
+      "evidence": [
+        {
+          "key": "paper",
+          "path": "paper/README.md",
+          "line_start": 1,
+          "line_end": 30,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/README.md#L1-L30"
+        },
+        {
+          "key": "course",
+          "path": "docs/course/PROJECT-TEMPLATE.md",
+          "line_start": 30,
+          "line_end": 96,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/course/PROJECT-TEMPLATE.md#L30-L96"
+        }
+      ]
+    },
+    {
+      "id": "A5.2",
+      "topic": "Presentation",
+      "verdict": "not_found_in_inspected_navigation",
+      "finding": "No presentation artifact was found in inspected root/paper/docs navigation; no claim about uninspected private materials.",
+      "acceptance": "Create evidence-aligned 10-minute deck/outline and speaking assignments confirmed by humans; distinguish actual results and pending work.",
+      "priority": "P2",
+      "completion_route": "publication_owner_plus_team_review",
+      "evidence": [
+        {
+          "key": "course",
+          "path": "docs/course/PROJECT-TEMPLATE.md",
+          "line_start": 30,
+          "line_end": 96,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/course/PROJECT-TEMPLATE.md#L30-L96"
+        },
+        {
+          "key": "paper",
+          "path": "paper/README.md",
+          "line_start": 1,
+          "line_end": 30,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/README.md#L1-L30"
+        }
+      ]
+    },
+    {
+      "id": "A5.3",
+      "topic": "Manually defined tasks",
+      "verdict": "not_found_as_validated_human_panel",
+      "finding": "No independently human-authored/adjudicated evaluation panel established by inspected evidence. Some hand-built fixture panels exist, so 'no manual cases anywhere' is too broad.",
+      "acceptance": "Prepare annotation guide/template; actual humans author and independently label/adjudicate; assistant-authored examples are synthetic, never human-labelled by assertion.",
+      "priority": "P2",
+      "completion_route": "human_pending",
+      "evidence": [
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        }
+      ]
+    },
+    {
+      "id": "A5.4",
+      "topic": "Scope drift",
+      "verdict": "valid_disclosure_need_unsupported_causality",
+      "finding": "Extensions are substantial and partly answer retrieval tradeoffs. Claim that extensions came 'at expense of' proposal is an unsupported causal judgment. Original proposal explicitly permits refinement.",
+      "acceptance": "Separate original commitments, revised scope, supporting extensions and untested claims; preserve reported results/status; no fabricated reason for absent work.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "index",
+          "path": "EXPERIMENTS.md",
+          "line_start": 7,
+          "line_end": 34,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/EXPERIMENTS.md#L7-L34"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "topic": "80-cell matrix",
+      "verdict": "valid_disclosure_goal_not_mandatory_execution",
+      "finding": "The original5×4×4 matrix is an appropriate scope inventory. Revised proposal is narrower; not all80 cells must be run to report an honest reduced study.",
+      "acceptance": "Explicit cell statuses/evidence and reduced-scope claim; never fill gaps using incomparable results or model substitutions.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "topic": "Scenario taxonomy and labels",
+      "verdict": "valid_remaining_gap",
+      "finding": "Five scenario categories are a useful proposed taxonomy but are not observed labels. Two-human agreement, adjudication, semantic overlap and dependency order cannot be inferred automatically from qrels.",
+      "acceptance": "Version proposed labels as draft/unadjudicated until real review; source-specific analysis; avoid obligatory semantic labels for official queries when only proxies are supported.",
+      "priority": "P2",
+      "completion_route": "human_pending",
+      "evidence": [
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "topic": "End-to-end measures/common ledger",
+      "verdict": "partly_present",
+      "finding": "Stage metrics and traces exist across studies, but consistent primary-ledger integration remains. Older single-name scoring is incompatible with official multi-positive exact-set evaluation.",
+      "acceptance": "Build case ledger with explicit stage/validity denominators and null unavailable costs/times; score retrieval versus final selection separately; regenerate reports from saved rows.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "metrics",
+          "path": "experiments/pilots/skillret-pilot/reference_metrics.py",
+          "line_start": 1,
+          "line_end": 135,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/reference_metrics.py#L1-L135"
+        },
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "B4",
+      "topic": "Comparable primary result",
+      "verdict": "valid_remaining_gap",
+      "finding": "Matched retrieval and tiny selector comparisons exist; the remaining deliverable is a clearly bounded primary analysis with uncertainty, not a universal leaderboard assembled across16 studies.",
+      "acceptance": "One primary matched analysis with predeclared contrasts, paired differences, relevant clustering and unchanged failure denominator. Other studies supporting only.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "B5",
+      "topic": "Robustness/generalization",
+      "verdict": "partly_present_with_human_pending",
+      "finding": "Three-seed/hard-overlap/representation/candidate-depth checks already exist, but independent fresh request generalization and repeated-training evidence remain limited.",
+      "acceptance": "Reuse existing diagnostics honestly; predeclare only conclusion-relevant new sensitivity; leave independent human panel and extensive training repeats pending or narrow claim.",
+      "priority": "P1",
+      "completion_route": "local_sensitivity_plus_human_pending",
+      "evidence": [
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "seeds",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/scale.py",
+          "line_start": 1,
+          "line_end": 20,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/scale.py#L1-L20"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "N1",
+      "topic": "Legacy identity and output scoring",
+      "verdict": "confirmed_code_risk_not_quantified_data_loss",
+      "finding": "Legacy listing normalizes names to paths without collision assertions, scores name equality, and may treat read_file/first text as selection. Actual lost-row/collision count was not measured. Recent alias-based selector avoids these risks.",
+      "acceptance": "New harness uses canonical unique IDs, collision-free alias/path map and strict schema. Test two different names that normalize identically; duplicate names; early text versus final tool call. Preserve historical artifacts.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "native",
+          "path": "experiments/pilots/skillret-pilot/agent_runner.py",
+          "line_start": 604,
+          "line_end": 786,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/agent_runner.py#L604-L786"
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "topic": "Legacy library/single-target extension hazard",
+      "verdict": "confirmed_code_design_constraint",
+      "finding": "Legacy listing builds one catalog preserving every query's gold-name union; raising query count can make N10/N50 impossible and skip them. It truncates description at300 characters, not proposed1024.",
+      "acceptance": "Use per-query shared nested libraries; full positive qrels and exact-set scorer; assert actual unique membership equals requested N; version exact rendered text hashes.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "protocol",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/protocol.py",
+          "line_start": 11,
+          "line_end": 64,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/protocol.py#L11-L64"
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "topic": "Qrel semantics and empty gold",
+      "verdict": "methodological_risk",
+      "finding": "Positive qrels are incomplete evidence, not exhaustive semantic truth. Current set metrics assume nonempty positive sets; a natural random catalog may have no available gold without the user genuinely needing no skill.",
+      "acceptance": "Keep official-label evaluation intact; separately audit alternatives; never add gold to shortlists. Report catalog coverage, candidate ceiling, all-planned and available-gold conditional metrics with counts. Explicit new no-gold policy/tests if introduced.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "metrics",
+          "path": "experiments/pilots/skillret-pilot/reference_metrics.py",
+          "line_start": 1,
+          "line_end": 135,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/reference_metrics.py#L1-L135"
+        },
+        {
+          "key": "harness",
+          "path": "experiments/scaling/skillret-seed5150-scaling/harness.py",
+          "line_start": 1,
+          "line_end": 65,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/harness.py#L1-L65"
+        },
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "topic": "Domain impossibility ceiling",
+      "verdict": "additional_required_diagnostic",
+      "finding": "A single-domain router cannot retrieve all required gold skills spanning multiple categories even with perfect routing. One 'correct category' accuracy is ambiguous for multicorrect queries.",
+      "acceptance": "For each query compute max_domain |G intersect domain|/|G|, any-positive and all-positive feasibility, plus observed route coverage; do not label two-domain/global fallback as same method.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        },
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "topic": "Dependence, precision and selection bias",
+      "verdict": "additional_required_diagnostic",
+      "finding": "Same queries recur across seeds/sizes/models; treating rows as independent inflates n. N20 or N200 not automatic power. Selecting primary method after viewing all public feedback is exposed exploratory analysis.",
+      "acceptance": "Pair/cluster by query or task family; confidence intervals for differences and rates; planned contrasts or multiplicity disclosure; no equivalence claim from non-significance.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "metadata",
+          "path": "experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md",
+          "line_start": 92,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-local-metadata-20261005/REPORT.md#L92-L179"
+        },
+        {
+          "key": "cpu",
+          "path": "experiments/benchmarks/skillret-cpu-benchmark/README.md",
+          "line_start": 18,
+          "line_end": 97,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/skillret-cpu-benchmark/README.md#L18-L97"
+        },
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        }
+      ]
+    },
+    {
+      "id": "N6",
+      "topic": "Native activation versus task execution",
+      "verdict": "partly_present_boundary",
+      "finding": "Pilot records real SkillsMiddleware/StateBackend and bounded reads. Scaling uses direct local completion; it is not native middleware evidence. A read_file success does not mean skills ran or task succeeded.",
+      "acceptance": "Trace native middleware candidate injection, isolated select call and actual bounded read in separate live canary; offline fixtures only wiring. No arbitrary downloaded instructions executed.",
+      "priority": "P1",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "native",
+          "path": "experiments/pilots/skillret-pilot/agent_runner.py",
+          "line_start": 604,
+          "line_end": 786,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/agent_runner.py#L604-L786"
+        },
+        {
+          "key": "selector",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py",
+          "line_start": 1,
+          "line_end": 110,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/selection.py#L1-L110"
+        },
+        {
+          "key": "proposal",
+          "path": "paper/project_proposal.tex",
+          "line_start": 56,
+          "line_end": 179,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/paper/project_proposal.tex#L56-L179"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        }
+      ]
+    },
+    {
+      "id": "N7",
+      "topic": "Prompt exposure and skill-text injection",
+      "verdict": "confirmed_legacy_control_difference",
+      "finding": "Legacy listing only instructs not to use tools while default agent tools remain; newer pilot enforces isolation. Untrusted skill/query text may contain instructions or label-like cues.",
+      "acceptance": "Use explicit tool allowlist/read-only activation; prompt-boundary fixtures; labels/gold count never model inputs; audit actual serialized payload, candidate IDs and cache keys.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "listing",
+          "path": "experiments/benchmarks/benchmark_bm25/benchmark_listing.py",
+          "line_start": 121,
+          "line_end": 280,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/benchmarks/benchmark_bm25/benchmark_listing.py#L121-L280"
+        },
+        {
+          "key": "native",
+          "path": "experiments/pilots/skillret-pilot/agent_runner.py",
+          "line_start": 604,
+          "line_end": 786,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/pilots/skillret-pilot/agent_runner.py#L604-L786"
+        },
+        {
+          "key": "protocol",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/protocol.py",
+          "line_start": 11,
+          "line_end": 64,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/protocol.py#L11-L64"
+        }
+      ]
+    },
+    {
+      "id": "N8",
+      "topic": "Runtime/cost/provenance reproducibility",
+      "verdict": "partly_present",
+      "finding": "Historical source/vector provenance and response gaps are explicitly retained; replay is not fresh timing and estimates are not invoices. All-failure cells operational feasibility, not intrinsic model quality.",
+      "acceptance": "Model/tokenizer/artifact hashes; returned provider/version/date; actual calls vs reservations; regenerate aggregates offline; preserve unknowns and redaction distinction.",
+      "priority": "P0",
+      "completion_route": "local_8GB",
+      "evidence": [
+        {
+          "key": "scaling",
+          "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md",
+          "line_start": 18,
+          "line_end": 180,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/experiments/scaling/skillret-seed5150-scaling/scaling5150/report/REPORT.md#L18-L180"
+        },
+        {
+          "key": "catalog",
+          "path": "docs/SkillRet-Benchmark-Catalog.md",
+          "line_start": 9,
+          "line_end": 41,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/SkillRet-Benchmark-Catalog.md#L9-L41"
+        },
+        {
+          "key": "privacy",
+          "path": "docs/publication/PUBLICATION-PRIVACY.md",
+          "line_start": 1,
+          "line_end": 34,
+          "url": "https://github.com/speccy88/mia5150/blob/c4f4889fb3ec6864898d3ba07d08c30c438e3e12/docs/publication/PUBLICATION-PRIVACY.md#L1-L34"
+        }
+      ]
+    }
+  ]
+}

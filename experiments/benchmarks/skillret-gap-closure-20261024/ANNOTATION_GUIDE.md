@@ -1,0 +1,9 @@
+# Human annotation and independent requests remain pending
+
+The official test queries are synthetic and previously exposed. The200-query primary panel is a fixed sample of that population. Its results concern benchmark judgments, which may omit plausible alternatives.
+
+The12 generated compositions concatenate two public requests using a documented deterministic template. Their labels are the union of constituent positive qrels, mechanically checked against unique catalog IDs. They are silver labels. No human authored or adjudicated them. Same-major co-membership is a taxonomy proxy, not proof of overlapping capabilities. A template saying first/then requests a dependency but does not establish that the tasks have a valid dependency. The current selector returns a set and cannot establish ordering or execution success.
+
+To complete the independent human panel, two people should separately author and label requests without copying skill names or descriptions. Record required skills, optional skills, acceptable alternatives and any ordered stages. Each annotator should judge every example independently before seeing the other decisions. Preserve their original labels, agreement counts, disagreements and adjudicated changes. Use permitted aliases only. Keep the new requests isolated from prompt/fusion/model selection and screen exact and near duplicates against all exposed panels. Never label absent catalog gold as a genuine no-skill-needed task.
+
+Suggested source-specific categories: single skill, cross-domain wording, ambiguous overlapping capabilities, independent multiple skills, and a semantically validated dependency. Report each category separately with counts. Until these people and independently sourced requests exist, the corresponding gap is pending. No agreement statistic or human-label accuracy is supplied.

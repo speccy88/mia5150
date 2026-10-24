@@ -1,0 +1,13 @@
+# Isolated runtime. The executed host reused an existing Python3.12 environment
+# and an ONNX overlay. Actual loaded versions are in execution/embedding receipts.
+numpy==2.5.3
+onnxruntime==1.31.0
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+psutil==7.2.2
+pytest==8.4.2
+# Used only for the independent CPU export parity fixture on a fresh setup.
+torch==2.8.0
+transformers==4.57.1
+# Optional plotting, kept in a separate reporting overlay during execution.
+matplotlib==3.11.2

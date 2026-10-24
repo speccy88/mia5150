@@ -3,6 +3,7 @@ import argparse,contextlib,datetime,gzip,importlib.metadata,json,os,pathlib,rand
 os.environ.update(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false',HF_HUB_DISABLE_TELEMETRY='1',HF_HUB_DISABLE_IMPLICIT_TOKEN='1')
 import numpy as np
 from core import *
+from ledger import store_case,recover_cases,append_jsonl
 HERE=pathlib.Path(__file__).resolve().parent
 REV='6583d7d2ed07644d0fb8938ed8178f3a7dc42a12'
 CONTEXT=8192;OUTPUT=128
@@ -15,7 +16,7 @@ def rows(p):
 def save(p,x):
     p=pathlib.Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,ensure_ascii=False))
 def append(p,x):
-    with open(p,'a') as f:f.write(json.dumps(x,ensure_ascii=False)+'\n');f.flush()
+    append_jsonl(p,x)
 def immutable(p,x):
     if p.exists():assert read(p)==x,'immutable artifact changed'
     else:save(p,x)
@@ -128,6 +129,7 @@ class Encoder:
         self.raw=Tokenizer.from_file(str(p/'tokenizer.json'));self.tok=Tokenizer.from_file(str(p/'tokenizer.json'))
         self.tok.enable_truncation(max_length=512);self.tok.enable_padding(pad_id=0,pad_token='[PAD]')
         options=ort.SessionOptions();options.intra_op_num_threads=1;options.inter_op_num_threads=1;options.execution_mode=ort.ExecutionMode.ORT_SEQUENTIAL
+        options.enable_cpu_mem_arena=False;options.enable_mem_pattern=False
         self.session=ort.InferenceSession(str(p/'model.onnx'),sess_options=options,providers=['CPUExecutionProvider'])
         self.inputs={x.name for x in self.session.get_inputs()};self.outputs=[x.name for x in self.session.get_outputs()]
         assert 'last_hidden_state' in self.outputs,'Official ONNX output contract changed'
@@ -178,14 +180,14 @@ def retrieval(cfg):
     queries=rows(source()/'queries-test.jsonl');gold={q['id']:set(q['skill_ids']) for q in queries};out=HERE/'results/retrieval.jsonl';out.parent.mkdir(exist_ok=True)
     done={x['case_id'] for x in rows(out)} if out.exists() else set();started=time.perf_counter();protocol_id=read(HERE/'protocol.json')['protocol_sha256']
     for qi,q in enumerate(queries):
-        qid=q['id'];scores=dv@qv[qpos[qid]];scoremap={d:scores[i] for d,i in docpos.items()}
+        qid=q['id']
         for seed in SEEDS:
             for n in SIZES:
                 key=digest(['retrieval',protocol_id,qid,seed,n])
                 if key in done:continue
                 lib=library(docs,gold[qid],qid,n,seed)
                 t=time.perf_counter();cpu=time.process_time();br=bm.search(q['query'],lib);bt=time.perf_counter()-t;bc=time.process_time()-cpu
-                t=time.perf_counter();vr=rank(scoremap,lib);vt=time.perf_counter()-t
+                t=time.perf_counter();indices=[docpos[d] for d in lib];scores=dv[indices]@qv[qpos[qid]];scoremap={d:float(s) for d,s in zip(lib,scores)};vr=rank(scoremap,lib);vt=time.perf_counter()-t
                 t=time.perf_counter();hr=rrf(br,vr);ht=time.perf_counter()-t
                 append(out,{'case_id':key,'query_id':qid,'seed':seed,'size':n,'catalog_sha256':digest(lib),'methods':{k:{'ranking5':v[:5],**retrieval_metrics(v,gold[qid]),'search_seconds':sec} for k,v,sec in [('bm25',br,bt),('vector',vr,vt),('hybrid',hr,bt+vt+ht)]},'bm25_cpu_seconds':bc,'query_embedding_tokens':m['query_stats']['tokens'][qpos[qid]],'query_embedding_seconds':None,'timing_note':'search-only; query embeddings precomputed in separately measured batch; no end-to-end claim'})
         if qi%100==0:print('retrieval',qi,len(queries),'elapsed',round(time.perf_counter()-started,1),flush=True)
@@ -247,12 +249,12 @@ class Server:
         if hasattr(self,'thread'):self.thread.join(timeout=8)
         if hasattr(self,'log'):self.log.close()
     def infer(self,prompt,grammar,kind):
-        result={'prompt_sha256':digest(prompt),'request_sha256':digest([self.role,prompt,grammar,CONTEXT,OUTPUT,20261024]),'kind':kind,'content':'','input_tokens':None,'output_tokens':0,'physical_call':False}
+        result={'prompt_sha256':digest(prompt),'request_sha256':digest([self.role,prompt,grammar,CONTEXT,OUTPUT,20261024]),'kind':kind,'content':'','input_tokens':None,'output_tokens':None,'physical_call':False}
         t=time.perf_counter();cpu=time.process_time()
         try:
             if self.failure:raise RuntimeError('resource_guard: '+self.failure)
             tokens=post('/tokenize',{'content':prompt,'add_special':False,'parse_special':True})['tokens'];result['input_tokens']=len(tokens)
-            if len(tokens)+OUTPUT>CONTEXT:result['status']='context_overflow'
+            if len(tokens)+OUTPUT>CONTEXT:result.update(status='context_overflow',output_tokens=0)
             else:
                 result['physical_call']=True
                 answer=post('/completion',{'prompt':tokens,'n_predict':OUTPUT,'temperature':0,'seed':20261024,'cache_prompt':False,'grammar':grammar})
@@ -287,14 +289,21 @@ def select(cfg,role):
     catalog_ids=read(HERE/'catalog-document-ids.json')
     for c in cats:c['skill_ids']=[catalog_ids[i] for i in c['document_indices']];assert digest(c['skill_ids'])==c['membership_sha256']
     out=HERE/f'results/{role}-cases.jsonl';out.parent.mkdir(exist_ok=True)
-    old=rows(out) if out.exists() else [];assert all(x['protocol_sha256']==protocol['protocol_sha256'] for x in old)
-    done={r['case_id'] for r in old};routefile=HERE/f'results/{role}-routes.json';routes=read(routefile) if routefile.exists() else {}
+    old=rows(out) if out.exists() else [];spool=pathlib.Path(cfg['runtime_root'])/'case-spool'/role
+    old=recover_cases(out,old,spool);assert all(x['protocol_sha256']==protocol['protocol_sha256'] for x in old)
+    latest={r['case_id']:r for r in old};attempt_counts={}
+    for r in old:attempt_counts[r['case_id']]=attempt_counts.get(r['case_id'],0)+1
+    done={key for key,r in latest.items() if not r['status'].startswith('not_run')};routefile=HERE/f'results/{role}-routes.json';routes=read(routefile) if routefile.exists() else {}
+    execution_file=HERE/f'results/{role}-execution.json'
+    prior=read(execution_file) if execution_file.exists() else None
+    prior_elapsed=(prior.get('cumulative_elapsed_seconds',prior['elapsed_seconds']) if prior else 0)
     t=time.perf_counter();encoder=Encoder(cfg);encoder_load=time.perf_counter()-t;encoder.encode(['warmup'],True)
     with Server(cfg,role) as server:
         warm=server.infer(chat('Return only [].','Format and speed check.'),'root ::= "[]"','warmup');save(HERE/f'results/{role}-warmup.json',warm)
-        started=time.monotonic();sourcehash=digest({p.name:filehash(p) for p in [HERE/'run.py',HERE/'core.py']});calls=0
+        source_files=[HERE/'run.py',HERE/'core.py',HERE/'ledger.py']
+        started=time.monotonic();sourcehash=digest({p.name:filehash(p) for p in source_files});calls=0
         snapshot=HERE/'source-snapshots'/sourcehash;snapshot.mkdir(parents=True,exist_ok=True)
-        for p in [HERE/'run.py',HERE/'core.py']:
+        for p in source_files:
             target=snapshot/p.name
             if target.exists():assert target.read_bytes()==p.read_bytes()
             else:target.write_bytes(p.read_bytes())
@@ -306,12 +315,14 @@ def select(cfg,role):
                 if caseid in done:continue
                 case_start=time.perf_counter();cpu=time.process_time();gold=evaluator[qid]
                 row={'case_id':caseid,'protocol_sha256':protocol['protocol_sha256'],'source_sha256':sourcehash,'model':role,'query_id':qid,'panel':qmap[qid]['source'],'seed':seed,'size':n,'method':method,'catalog_sha256':c['membership_sha256'],'candidate_ids':[],'selected_ids':[],'status':'not_run','physical_call':False,'routing':None,'selector':None,'embedding_tokens':0,'embedding_seconds':0.,'retrieval_seconds':0.,'end_to_end_seconds':None,'serving_seconds':None,'input_tokens':0,'output_tokens':0,'gold_count':len(gold),'gold_domain_count':len({major[x] for x in gold}),'catalog_gold_coverage':1.0,'utc':utc()}
-                if time.monotonic()-started>protocol['runtime_cap_seconds_per_model'][role] or server.failure:
+                row['attempt_number']=attempt_counts.get(caseid,0)+1
+                row['resumed_unattempted']=caseid in latest
+                if prior_elapsed+time.monotonic()-started>protocol['runtime_cap_seconds_per_model'][role] or server.failure:
                     row['status']='not_run_resource_guard' if server.failure else 'not_run_runtime_cap'
                 else:
                     try:
                         route_seconds=0.;scoremap=None
-                        if method in ['vector','domain_vector','hybrid']:
+                        if method in ['vector','hybrid']:
                             v,stats=encoder.encode([query],True,1);row['embedding_tokens']=stats['tokens'][0];row['embedding_seconds']=stats['seconds'];row['embedding_truncated']=bool(stats['truncated'])
                             t=time.perf_counter();scores=dv[index]@v[0];scoremap={d:float(s) for d,s in zip(lib,scores)};row['retrieval_seconds']+=time.perf_counter()-t
                         if method=='listing':pool=lib;ranking=display(qid,lib,seed)
@@ -332,13 +343,21 @@ def select(cfg,role):
                                 except (ValueError,AssertionError,TypeError):route['category']=None;route['status']='invalid_route'
                                 routes[route_key]=route;save(routefile,routes)
                             route=routes[route_key];row['routing']=route;route_seconds=route['wall_seconds'];row['routing_reused']=route_reused
-                            row['input_tokens']+=route.get('input_tokens') or 0;row['output_tokens']+=route.get('output_tokens') or 0
-                            t=time.perf_counter();allowed=[d for d in lib if major[d]==route['category']];ranking=rank(scoremap,allowed);row['retrieval_seconds']+=time.perf_counter()-t;pool=ranking[:5]
+                            row['input_tokens']=row['input_tokens']+route['input_tokens'] if row['input_tokens'] is not None and route.get('input_tokens') is not None else None
+                            row['output_tokens']=row['output_tokens']+route['output_tokens'] if row['output_tokens'] is not None and route.get('output_tokens') is not None else None
+                            allowed=[d for d in lib if major[d]==route['category']]
+                            if allowed:
+                                v,stats=encoder.encode([query],True,1);row['embedding_tokens']=stats['tokens'][0];row['embedding_seconds']=stats['seconds'];row['embedding_truncated']=bool(stats['truncated'])
+                                t=time.perf_counter();allowed_indices=[docpos[d] for d in allowed];scores=dv[allowed_indices]@v[0];domain_scores={d:float(s) for d,s in zip(allowed,scores)};ranking=rank(domain_scores,allowed);row['retrieval_seconds']+=time.perf_counter()-t
+                            else:ranking=[]
+                            pool=ranking[:5];row['domain_scoring_implementation']='route first, score only chosen-domain subset'
                             row['domain_candidate_count']=len(allowed);row['routing_gold_retention']=sum(major[d]==route['category'] for d in gold)/len(gold)
                         row['candidate_ids']=pool if method!='listing' else None;row['candidate_count']=len(pool);row['candidate_catalog_ref']=c['membership_sha256'] if method=='listing' else None;row['ranking5']=ranking[:5] if method!='listing' else None;row['retrieval']=retrieval_metrics(ranking,gold) if method!='listing' else None;row['candidate_recall']=len(set(pool)&set(gold))/len(gold)
                         if method=='domain_vector' and not pool:row['status']='invalid_or_empty_domain'
                         else:
-                            prompt,mapping=select_prompt(query,pool,docs,qid,seed);answer=server.infer(prompt,selection_grammar(mapping),'selection');calls+=int(answer['physical_call']);row['selector']=answer;row['physical_call']=answer['physical_call'];row['status']=answer['status'];row['input_tokens']+=answer.get('input_tokens') or 0;row['output_tokens']+=answer.get('output_tokens') or 0
+                            prompt,mapping=select_prompt(query,pool,docs,qid,seed);answer=server.infer(prompt,selection_grammar(mapping),'selection');calls+=int(answer['physical_call']);row['selector']=answer;row['physical_call']=answer['physical_call'];row['status']=answer['status']
+                            row['input_tokens']=row['input_tokens']+answer['input_tokens'] if row['input_tokens'] is not None and answer.get('input_tokens') is not None else None
+                            row['output_tokens']=row['output_tokens']+answer['output_tokens'] if row['output_tokens'] is not None and answer.get('output_tokens') is not None else None
                             if answer['status']=='ok':
                                 try:row['selected_ids']=parse_selection(answer['content'],mapping)
                                 except (ValueError,TypeError):
@@ -354,9 +373,11 @@ def select(cfg,role):
                     row.update(input_tokens=None,output_tokens=None,embedding_tokens=None,embedding_seconds=None,retrieval_seconds=None)
                 row['metrics']=selection_metrics(row['selected_ids'],gold,row['status'])
                 if row['status']=='invalid_selection' and row.get('invalid_return_count') is not None:row['metrics']['fp']=row['invalid_return_count']
-                row['client_cpu_seconds']=time.process_time()-cpu;append(out,row);old.append(row);done.add(caseid)
+                row['client_cpu_seconds']=time.process_time()-cpu;store_case(out,row,spool);old.append(row);latest[caseid]=row;done.add(caseid)
             if ci%8==0:print(role,ci,len(cats),'physical_calls',calls,'elapsed',round(time.monotonic()-started,1),flush=True)
-        save(HERE/f'results/{role}-execution.json',{'startup_seconds':server.startup,'encoder_load_seconds':encoder_load,'elapsed_seconds':time.monotonic()-started,'physical_calls_this_invocation':calls+int(warm['physical_call']),'cases_total':len(old),'guard_failure':server.failure,'server_binary_sha256':filehash(server.binary),'versions':{x:importlib.metadata.version(x) for x in ['torch','transformers','numpy','psutil']},'hardware':'RTX 2060 SUPER 8192 MiB, WSL on Windows 11; one GPU job, one CPU thread; CPU BGE; llama.cpp b11425','time':utc(),'billed_usd':0,'billed_usd_scope':'no hosted calls; local electricity unmeasured'})
+        receipt={'startup_seconds':server.startup,'encoder_load_seconds':encoder_load,'elapsed_seconds':time.monotonic()-started,'cumulative_elapsed_seconds':prior_elapsed+time.monotonic()-started,'physical_calls_this_invocation':calls+int(warm['physical_call']),'case_attempt_rows':len(old),'unique_planned_cases':len(latest),'guard_failure':server.failure,'server_binary_sha256':filehash(server.binary),'versions':{'numpy_loaded':np.__version__,'onnxruntime':encoder.ort.__version__,'psutil':importlib.metadata.version('psutil')},'hardware':'RTX 2060 SUPER 8192 MiB, WSL on Windows 11; one GPU job, one CPU thread; CPU BGE; llama.cpp b11425','time':utc(),'billed_usd':0,'billed_usd_scope':'no hosted calls; local electricity unmeasured'}
+        if prior and not (HERE/f'results/{role}-execution-attempts.jsonl').exists():append(HERE/f'results/{role}-execution-attempts.jsonl',prior)
+        append(HERE/f'results/{role}-execution-attempts.jsonl',receipt);save(execution_file,receipt)
 
 if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('stage',choices=['freeze','embed','embed-full','retrieval','select','canary']);a.add_argument('--runtime-config',required=True);a.add_argument('--model',choices=['qwen3_06_q8','qwen35_4b_q4']);args=a.parse_args();cfg=read(args.runtime_config)

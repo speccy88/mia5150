@@ -1,0 +1,5 @@
+size,queries,any_positive_route_rate,all_positive_route_rate,oracle_single_domain_recall_ceiling,all_gold_one_domain_feasible_rate,empty_domain_count,valid_route_count
+10,200,0.715,0.47,0.8475,0.69,13,199
+100,200,0.715,0.47,0.8475,0.69,0,200
+1000,200,0.715,0.47,0.8475,0.69,0,199
+6006,200,0.71,0.47,0.8475,0.69,0,199

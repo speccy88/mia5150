@@ -1,6 +1,6 @@
 # SkillRet benchmark catalog
 
-This catalog covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
+This catalog covers **17 studies and bounded pilots**, including the new matched proposal study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
 Reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare this catalog.
 
@@ -39,6 +39,12 @@ Unless stated otherwise, SkillRet refers to `ThakiCloud/SKILLRET` revision `6583
 ## Work outside the completed catalog
 
 The authoritative [implemented/incomplete/unrun section][index] and metadata [execution table][status10] preserve the full hosted expansion, corrected replay, full-body/six-field partial runs, 32K prompt diagnostic, external SRA/SkillReason transfer, multipass selection and actual escalation-latency study as unrun or incomplete. Later small Qwen8/scaling diagnostics do not complete the earlier blocked experiments. The [user-PDF inventory][pdfinventory] remains pending input bytes and is not a benchmark. Consolidation/publication/offline validation is not an additional inference run.
+
+## 17. Matched proposal gap study — 24 October 2026
+
+[Study source and reproduction](../experiments/benchmarks/skillret-gap-closure-20261024/README.md) · [audited primary report](../experiments/benchmarks/skillret-gap-closure-20261024/report/RESEARCH_DRAFT.md) · [closure matrix](../experiments/benchmarks/skillret-gap-closure-20261024/GAP_CLOSURE.md)
+
+Local Windows/WSL, RTX 2060 SUPER 8 GB, Qwen3-0.6B Q8 and separate Qwen3.5-4B Q4 sensitivity. The completed primary grid uses 200 exposed official queries, all five methods and 10/100/1,000/6,006 gold-conditioned per-query catalogs. Primary final selection at full catalog: BM25 9/200, vector 7/200, hybrid 11/200; hybrid's paired interval spans zero. BGE-small metadata Recall@5 is reported separately from final selection. All context exclusions and failures remain in planned denominators. Model/seed sensitivity is still in progress at this publication; hosted access and human adjudication remain pending. This is direct strict-ID metadata selection, with no new native activation or skill execution claim. The original 16-study historical catalog below retains its reviewed basis.
 
 ## Source snapshot
 

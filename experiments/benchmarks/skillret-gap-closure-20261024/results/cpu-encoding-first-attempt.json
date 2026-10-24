@@ -1,0 +1,1 @@
+{"status": "stopped_by_operator_resource_guard", "reason": "host available RAM below2GiB", "task_owned_encoder_pid": 305, "completed_output": "none; partial arrays not claimed", "last_progress": "1536of6006documents", "host_sample_available_bytes": 1666301952}
