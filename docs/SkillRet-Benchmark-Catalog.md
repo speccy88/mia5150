@@ -110,3 +110,6 @@ Folder links below open the current source tree. Documentation/evidence links us
 [source16]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-searchjev-update20/SearchJev-SkillRet-Report.txt
 [paired16]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/experiments/pilots/skillret-searchjev-update20/paired-quality-analysis.json
 [pdfinventory]: https://github.com/speccy88/mia5150/blob/8b64ff5135ec174b1fc99666a7b42be332e64f65/docs/inputs/skillret-user-pdfs/README.md
+
+
+Hosted terminal follow-up: Qwen/SiliconFlow completed 120 matched cases on the balanced exposed 24-query/N=100 panel. The later Mistral/Parasail BF16 arm failed its first upstream rate-limited canary and attempted no benchmark case. All generation is stopped. See the current hosted report, per-call ledger and terminal receipt under experiments/benchmarks/skillret-gap-closure-20261024/hosted/. The original 360-case plan and added 120-case exploratory arm remain separate; only Qwen provides successful hosted quality evidence.

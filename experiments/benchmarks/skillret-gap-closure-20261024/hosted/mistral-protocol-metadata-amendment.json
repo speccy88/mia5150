@@ -1,0 +1,10 @@
+{
+  "kind": "post-freeze bookkeeping repair; no request or catalog change",
+  "frozen_mistral_protocol_sha256": "0bad1b5b20250a865721198c83150cfbf3131d22f67a2547c99de5ccd82e0201",
+  "immutable_parent_protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3",
+  "issue": "The added protocol omitted timing_scope, which the case writer previously indexed directly after selection.",
+  "repair": "Resolve and validate timing_scope from the matching checksum-verified immutable parent before any network operation. Future preparation writes it explicitly. Preserve the actual frozen protocol and all sent request hashes unchanged.",
+  "observed_execution": "Only the first Mistral canary was attempted; it returned upstream429. No selector or routing request and no case response was lost. No recovery, replay or timing remeasurement occurred.",
+  "test": "Offline fixture loads both actual frozen protocols and persists result metadata without network/model calls.",
+  "terminal": "No new paid request. All generation remains stopped."
+}

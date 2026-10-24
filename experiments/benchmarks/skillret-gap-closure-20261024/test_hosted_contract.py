@@ -29,3 +29,10 @@ def test_reconcile_only_blocks_post_and_generation_before_network_or_reserve():
     client=runner.Client('dummy',None,None,None,{},read_only=True)
     with pytest.raises(runner.BudgetStop):client.http('chat/completions',{'model':'fixture'})
     with pytest.raises(runner.BudgetStop):client.call('fixture',[],'selection',[],8192)
+
+def test_terminal_campaign_blocks_post_before_network_or_reservation(tmp_path):
+    import pytest
+    (tmp_path/'terminal-no-more-generation.json').write_text('{"status":"terminal"}')
+    client=runner.Client('dummy',None,None,tmp_path,{})
+    with pytest.raises(runner.BudgetStop):client.http('chat/completions',{'model':'fixture'})
+    with pytest.raises(runner.BudgetStop):client.call('fixture',[],'selection',[],8192)

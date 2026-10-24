@@ -70,3 +70,16 @@ def test_mistral_reservation_cap_is_independent_inside_global_cap(tmp_path):
     with pytest.raises(BudgetStop):b.reserve('too-large','.35000001',model=MISTRAL['model'])
     b.reserve('fits','.32532660',model=MISTRAL['model']);b.settle('fits','.024')
     assert str(b.state()[1])=='0.024'
+
+def test_actual_frozen_protocols_resolve_metadata_and_persist_result_before_network(tmp_path):
+    from run_diverse import resolve_timing_scope
+    from ledger import append_jsonl
+    parent=json.loads((ROOT/'hosted/diverse-protocol.json').read_text())
+    for name in ['diverse-protocol.json','mistral-protocol.json']:
+        plan=json.loads((ROOT/'hosted'/name).read_text())
+        scope=resolve_timing_scope(plan,parent)
+        fixture={'case_id':'offline-persistence-fixture','status':'fixture_only','method_body_wall_seconds':None,'end_to_end_seconds':None,'timing_scope':scope}
+        path=tmp_path/(name+'.jsonl');append_jsonl(path,fixture)
+        assert json.loads(path.read_text())['timing_scope']==parent['timing_scope']
+    mistral=json.loads((ROOT/'hosted/mistral-protocol.json').read_text())
+    with pytest.raises(ValueError):resolve_timing_scope({**mistral,'parent_protocol_sha256':'wrong'},parent)

@@ -1,0 +1,6 @@
+model,method,size,planned,attempted,valid,unattempted,exact_rate,f1,status
+mistralai/mistral-small-3.2-24b-instruct,listing,100,24,0,0,24,,,unattempted_after_upstream429_canary
+mistralai/mistral-small-3.2-24b-instruct,bm25,100,24,0,0,24,,,unattempted_after_upstream429_canary
+mistralai/mistral-small-3.2-24b-instruct,vector,100,24,0,0,24,,,unattempted_after_upstream429_canary
+mistralai/mistral-small-3.2-24b-instruct,domain_vector,100,24,0,0,24,,,unattempted_after_upstream429_canary
+mistralai/mistral-small-3.2-24b-instruct,hybrid,100,24,0,0,24,,,unattempted_after_upstream429_canary

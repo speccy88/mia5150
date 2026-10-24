@@ -1,0 +1,303 @@
+{"kind": "reserve", "reserve_usd": "0.00051456", "actual_usd": null, "attempt_id": "nonbenchmark-canary-1"}
+{"kind": "unknown", "actual_usd": null, "attempt_id": "nonbenchmark-canary-1"}
+{"kind": "bounded_unknown", "reserve_usd": "0.14", "actual_usd": null, "evidence_sha256": "c132cbd75bb9f735bf108fb587a7ba6c33dc8744d591ef4e70ef7a1c6c7f38ba", "meaning": "Permanent unknown liability hold; not settled or measured cost", "attempt_id": "nonbenchmark-canary-1"}
+{"kind": "reserve", "reserve_usd": "0.00074400", "actual_usd": null, "model": "google/gemma-3-27b-it", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "nonbenchmark-canary-v2-gemma-1"}
+{"kind": "unknown", "actual_usd": null, "attempt_id": "nonbenchmark-canary-v2-gemma-1"}
+{"kind": "bounded_unknown", "reserve_usd": "0.02", "actual_usd": null, "evidence_sha256": "42558c8bea44df3d60344c5181a6b51accc6a3a1febf0442a002ae39a21ab21b", "meaning": "Permanent unknown liability hold; not settled or measured cost", "attempt_id": "nonbenchmark-canary-v2-gemma-1"}
+{"kind": "reserve", "reserve_usd": "0.00085236", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "nonbenchmark-canary-v2-qwen-1"}
+{"kind": "settled", "actual_usd": "0.00000855", "attempt_id": "nonbenchmark-canary-v2-qwen-1"}
+{"kind": "reserve", "reserve_usd": "0.00084930", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "nonbenchmark-canary-v2-qwen-2"}
+{"kind": "settled", "actual_usd": "0.00000348", "attempt_id": "nonbenchmark-canary-v2-qwen-2"}
+{"kind": "reserve", "reserve_usd": "0.00084318", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "nonbenchmark-canary-v2-qwen-3"}
+{"kind": "settled", "actual_usd": "0.00000387", "attempt_id": "nonbenchmark-canary-v2-qwen-3"}
+{"kind": "reserve", "reserve_usd": "0.00634254", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-db7aadb3cfafd7923e9933ffc9025743ade88ae8530d121575364d5d9615de68"}
+{"kind": "settled", "actual_usd": "0.00066429", "attempt_id": "hv2-db7aadb3cfafd7923e9933ffc9025743ade88ae8530d121575364d5d9615de68"}
+{"kind": "reserve", "reserve_usd": "0.00147336", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5d83593694cb5231cb1d41531dc0e5c276af04faea6076b34cb38a97ada5fef9"}
+{"kind": "settled", "actual_usd": "0.00007923", "attempt_id": "hv2-5d83593694cb5231cb1d41531dc0e5c276af04faea6076b34cb38a97ada5fef9"}
+{"kind": "reserve", "reserve_usd": "0.00130992", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5e1c200acb7122f9dbbf95de50613e4ea6dd612386df6618ee539d0c0d662975"}
+{"kind": "settled", "actual_usd": "0.00006426", "attempt_id": "hv2-5e1c200acb7122f9dbbf95de50613e4ea6dd612386df6618ee539d0c0d662975"}
+{"kind": "reserve", "reserve_usd": "0.00104424", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4d1335e7aa8e43a57d1c13bfd62ab8f22620e0960e45276f8ba34b04d3414ca4-routing"}
+{"kind": "settled", "actual_usd": "0.00002145", "attempt_id": "hv2-4d1335e7aa8e43a57d1c13bfd62ab8f22620e0960e45276f8ba34b04d3414ca4-routing"}
+{"kind": "reserve", "reserve_usd": "0.00142782", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4d1335e7aa8e43a57d1c13bfd62ab8f22620e0960e45276f8ba34b04d3414ca4"}
+{"kind": "settled", "actual_usd": "0.00006903", "attempt_id": "hv2-4d1335e7aa8e43a57d1c13bfd62ab8f22620e0960e45276f8ba34b04d3414ca4"}
+{"kind": "reserve", "reserve_usd": "0.00137544", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-6cbedaa1be201a34a405e8a246501265c9000fb8e86de14214ce503d47ef671b"}
+{"kind": "settled", "actual_usd": "0.00007053", "attempt_id": "hv2-6cbedaa1be201a34a405e8a246501265c9000fb8e86de14214ce503d47ef671b"}
+{"kind": "reserve", "reserve_usd": "0.00653208", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d3c5e032686bdeee25ae619de9b6e9d3fb5c25083c0032c603750ae4d485c527"}
+{"kind": "settled", "actual_usd": "0.00067848", "attempt_id": "hv2-d3c5e032686bdeee25ae619de9b6e9d3fb5c25083c0032c603750ae4d485c527"}
+{"kind": "reserve", "reserve_usd": "0.00164274", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-264c023b678acc67e662e8acba9b6b7869fe414010fc9c815ec13ba3abd258ca"}
+{"kind": "settled", "actual_usd": "0.00009042", "attempt_id": "hv2-264c023b678acc67e662e8acba9b6b7869fe414010fc9c815ec13ba3abd258ca"}
+{"kind": "reserve", "reserve_usd": "0.00158136", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-941d03c8caacc094ecb43125fd52a9fac45b81c700194a1074bf47112c90b206"}
+{"kind": "settled", "actual_usd": "0.00008376", "attempt_id": "hv2-941d03c8caacc094ecb43125fd52a9fac45b81c700194a1074bf47112c90b206"}
+{"kind": "reserve", "reserve_usd": "0.00118536", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-79e6a426badf16bbbc998f79b69619740d6905f15599522e5eab32a7dbb919cf-routing"}
+{"kind": "settled", "actual_usd": "0.00003612", "attempt_id": "hv2-79e6a426badf16bbbc998f79b69619740d6905f15599522e5eab32a7dbb919cf-routing"}
+{"kind": "reserve", "reserve_usd": "0.00158136", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-79e6a426badf16bbbc998f79b69619740d6905f15599522e5eab32a7dbb919cf"}
+{"kind": "settled", "actual_usd": "0.00008376", "attempt_id": "hv2-79e6a426badf16bbbc998f79b69619740d6905f15599522e5eab32a7dbb919cf"}
+{"kind": "reserve", "reserve_usd": "0.00165894", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-ff0528d0367fc63b5826a6c3b85a0f41b5c74f482064c127a6ef14deeb616cba"}
+{"kind": "settled", "actual_usd": "0.00008997", "attempt_id": "hv2-ff0528d0367fc63b5826a6c3b85a0f41b5c74f482064c127a6ef14deeb616cba"}
+{"kind": "reserve", "reserve_usd": "0.00679542", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-b4e2b8f78f9924359fc7fe09121cb72a84a7fadf240ad7fd0add30d378fd0170"}
+{"kind": "settled", "actual_usd": "0.00070521", "attempt_id": "hv2-b4e2b8f78f9924359fc7fe09121cb72a84a7fadf240ad7fd0add30d378fd0170"}
+{"kind": "reserve", "reserve_usd": "0.00143070", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-59212a677fc97747d453cae6f431ac6abd50034fea5a67c434527c8677155aeb"}
+{"kind": "settled", "actual_usd": "0.00008196", "attempt_id": "hv2-59212a677fc97747d453cae6f431ac6abd50034fea5a67c434527c8677155aeb"}
+{"kind": "reserve", "reserve_usd": "0.00135168", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-756db445f448775b984cef2b0facf082db585491fc6b5b83538d812e6dac055d"}
+{"kind": "settled", "actual_usd": "0.00007032", "attempt_id": "hv2-756db445f448775b984cef2b0facf082db585491fc6b5b83538d812e6dac055d"}
+{"kind": "reserve", "reserve_usd": "0.00114090", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2197b12fca9c1ce438d298b40b4f1f09e6ca3f152245bff14577fee888440ce0-routing"}
+{"kind": "settled", "actual_usd": "0.00003588", "attempt_id": "hv2-2197b12fca9c1ce438d298b40b4f1f09e6ca3f152245bff14577fee888440ce0-routing"}
+{"kind": "reserve", "reserve_usd": "0.00151458", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2197b12fca9c1ce438d298b40b4f1f09e6ca3f152245bff14577fee888440ce0"}
+{"kind": "settled", "actual_usd": "0.00008421", "attempt_id": "hv2-2197b12fca9c1ce438d298b40b4f1f09e6ca3f152245bff14577fee888440ce0"}
+{"kind": "reserve", "reserve_usd": "0.00142242", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-3a13d2bc10fb0a669a402369300b4e9ece77527d786dbd8bb6625ba498881c1b"}
+{"kind": "settled", "actual_usd": "0.00007716", "attempt_id": "hv2-3a13d2bc10fb0a669a402369300b4e9ece77527d786dbd8bb6625ba498881c1b"}
+{"kind": "reserve", "reserve_usd": "0.00689280", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d7bc893a184bc7e2a338d69756ff71700826b4bffb360e00a71ac246e87618d5"}
+{"kind": "settled", "actual_usd": "0.00071115", "attempt_id": "hv2-d7bc893a184bc7e2a338d69756ff71700826b4bffb360e00a71ac246e87618d5"}
+{"kind": "reserve", "reserve_usd": "0.00176766", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-e1fcbe4c89fce44133575c451683c8619bbab2f3f702b64116c3d827d54604ac"}
+{"kind": "settled", "actual_usd": "0.00010089", "attempt_id": "hv2-e1fcbe4c89fce44133575c451683c8619bbab2f3f702b64116c3d827d54604ac"}
+{"kind": "reserve", "reserve_usd": "0.00153672", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-e3a1a86d7852721b8330716b30ae588964d7d985e67723b0002768e02a27f543"}
+{"kind": "settled", "actual_usd": "0.00007785", "attempt_id": "hv2-e3a1a86d7852721b8330716b30ae588964d7d985e67723b0002768e02a27f543"}
+{"kind": "reserve", "reserve_usd": "0.00121524", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-a0d625edee24b7a6637613f84ba7f3a77eb60aad223bc5ededb7094fa8d0b3d6-routing"}
+{"kind": "settled", "actual_usd": "0.00004062", "attempt_id": "hv2-a0d625edee24b7a6637613f84ba7f3a77eb60aad223bc5ededb7094fa8d0b3d6-routing"}
+{"kind": "reserve", "reserve_usd": "0.00169260", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-a0d625edee24b7a6637613f84ba7f3a77eb60aad223bc5ededb7094fa8d0b3d6"}
+{"kind": "settled", "actual_usd": "0.00007938", "attempt_id": "hv2-a0d625edee24b7a6637613f84ba7f3a77eb60aad223bc5ededb7094fa8d0b3d6"}
+{"kind": "reserve", "reserve_usd": "0.00162168", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-45b2b0d83ddfeeb1b7d2b41034a4fb540e75272ab630a22b3433b70f034a79ec"}
+{"kind": "settled", "actual_usd": "0.00008667", "attempt_id": "hv2-45b2b0d83ddfeeb1b7d2b41034a4fb540e75272ab630a22b3433b70f034a79ec"}
+{"kind": "reserve", "reserve_usd": "0.00624264", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-58fc71961455137465b20e736acc51a498011a92a8cc517740c80ef1800f4633"}
+{"kind": "settled", "actual_usd": "0.00068133", "attempt_id": "hv2-58fc71961455137465b20e736acc51a498011a92a8cc517740c80ef1800f4633"}
+{"kind": "reserve", "reserve_usd": "0.00158190", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-e7224f88fd2b106b64e4d4d27ec323f6d8d311a4a88b177b80c211d53f5f71da"}
+{"kind": "settled", "actual_usd": "0.00008817", "attempt_id": "hv2-e7224f88fd2b106b64e4d4d27ec323f6d8d311a4a88b177b80c211d53f5f71da"}
+{"kind": "reserve", "reserve_usd": "0.00139056", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4fa1cab974ac893e2d2173fed2b3d0da87d42d6fef9ef98c74eb0efeba10f179"}
+{"kind": "settled", "actual_usd": "0.00007065", "attempt_id": "hv2-4fa1cab974ac893e2d2173fed2b3d0da87d42d6fef9ef98c74eb0efeba10f179"}
+{"kind": "reserve", "reserve_usd": "0.00122586", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-afdb85e7b14b63dcf07a57fcb2b72b164972c9c099fa75ac01ab09aa97188a28-routing"}
+{"kind": "settled", "actual_usd": "0.00004206", "attempt_id": "hv2-afdb85e7b14b63dcf07a57fcb2b72b164972c9c099fa75ac01ab09aa97188a28-routing"}
+{"kind": "reserve", "reserve_usd": "0.00156462", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-afdb85e7b14b63dcf07a57fcb2b72b164972c9c099fa75ac01ab09aa97188a28"}
+{"kind": "settled", "actual_usd": "0.00008028", "attempt_id": "hv2-afdb85e7b14b63dcf07a57fcb2b72b164972c9c099fa75ac01ab09aa97188a28"}
+{"kind": "reserve", "reserve_usd": "0.00150288", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-a38f0961ff82993afef53cf855855aa071bbad82596ce3038b518a6eaca16c2d"}
+{"kind": "settled", "actual_usd": "0.00007719", "attempt_id": "hv2-a38f0961ff82993afef53cf855855aa071bbad82596ce3038b518a6eaca16c2d"}
+{"kind": "reserve", "reserve_usd": "0.00644190", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-6ada65b8c31bbbde57ae7993c8b640cb7709d7f1129f8b7d17193941aa44d7b0"}
+{"kind": "settled", "actual_usd": "0.0006741", "attempt_id": "hv2-6ada65b8c31bbbde57ae7993c8b640cb7709d7f1129f8b7d17193941aa44d7b0"}
+{"kind": "reserve", "reserve_usd": "0.00154104", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-67990212da88ea619afcfede5be97cccd58241df5b77f4765c4e19af55592595"}
+{"kind": "settled", "actual_usd": "0.00008613", "attempt_id": "hv2-67990212da88ea619afcfede5be97cccd58241df5b77f4765c4e19af55592595"}
+{"kind": "reserve", "reserve_usd": "0.00154212", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-33f167fe418c32b3ddb22f536304d9788dcd6dcb0516c9b709c53e29bef603d0"}
+{"kind": "settled", "actual_usd": "0.00008568", "attempt_id": "hv2-33f167fe418c32b3ddb22f536304d9788dcd6dcb0516c9b709c53e29bef603d0"}
+{"kind": "reserve", "reserve_usd": "0.00118590", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2e75b8583fbcf07fc70b65fa53f83fcb4c4af5015b75cb3f90d4f0d2dffa4976-routing"}
+{"kind": "settled", "actual_usd": "0.00003729", "attempt_id": "hv2-2e75b8583fbcf07fc70b65fa53f83fcb4c4af5015b75cb3f90d4f0d2dffa4976-routing"}
+{"kind": "reserve", "reserve_usd": "0.00156786", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2e75b8583fbcf07fc70b65fa53f83fcb4c4af5015b75cb3f90d4f0d2dffa4976"}
+{"kind": "settled", "actual_usd": "0.00008445", "attempt_id": "hv2-2e75b8583fbcf07fc70b65fa53f83fcb4c4af5015b75cb3f90d4f0d2dffa4976"}
+{"kind": "reserve", "reserve_usd": "0.00154104", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-52970379da2ba80c96813805f68639de630c536a115bb4b128087b145ae79457"}
+{"kind": "settled", "actual_usd": "0.00008613", "attempt_id": "hv2-52970379da2ba80c96813805f68639de630c536a115bb4b128087b145ae79457"}
+{"kind": "reserve", "reserve_usd": "0.00605868", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-08fcc8f4b521f34814643fa3871e78fc50abb7dae22832cc75250eef88bdf5ee"}
+{"kind": "settled", "actual_usd": "0.00063129", "attempt_id": "hv2-08fcc8f4b521f34814643fa3871e78fc50abb7dae22832cc75250eef88bdf5ee"}
+{"kind": "reserve", "reserve_usd": "0.00134322", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-fc1afca2df39c9968a7a7053a24f6843bab43dfe1c543c479a8f971adc51cfc7"}
+{"kind": "settled", "actual_usd": "0.00006777", "attempt_id": "hv2-fc1afca2df39c9968a7a7053a24f6843bab43dfe1c543c479a8f971adc51cfc7"}
+{"kind": "reserve", "reserve_usd": "0.00135366", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-b54c5186f8227f714b67f21cf6e24bd9a2aacd61fa1d06cd073b18ea0411ecb2"}
+{"kind": "settled", "actual_usd": "0.00007467", "attempt_id": "hv2-b54c5186f8227f714b67f21cf6e24bd9a2aacd61fa1d06cd073b18ea0411ecb2"}
+{"kind": "reserve", "reserve_usd": "0.00108762", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-894cca48576b517f4059a04e997e0bedaa1e74ba6fa6a7c11376da9757143dac-routing"}
+{"kind": "settled", "actual_usd": "0.00002973", "attempt_id": "hv2-894cca48576b517f4059a04e997e0bedaa1e74ba6fa6a7c11376da9757143dac-routing"}
+{"kind": "reserve", "reserve_usd": "0.00143502", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-894cca48576b517f4059a04e997e0bedaa1e74ba6fa6a7c11376da9757143dac"}
+{"kind": "settled", "actual_usd": "0.00007467", "attempt_id": "hv2-894cca48576b517f4059a04e997e0bedaa1e74ba6fa6a7c11376da9757143dac"}
+{"kind": "reserve", "reserve_usd": "0.00137022", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-591b460f1c861ab51f361f7cb0f650b57f08ea4cb85ee6f852065ccc886c43d4"}
+{"kind": "settled", "actual_usd": "0.00007638", "attempt_id": "hv2-591b460f1c861ab51f361f7cb0f650b57f08ea4cb85ee6f852065ccc886c43d4"}
+{"kind": "reserve", "reserve_usd": "0.00662064", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2e26f5415fad98300b43d82f8e6b3aabcb45bf44f6832e5fba131693ed16d471"}
+{"kind": "settled", "actual_usd": "0.00069027", "attempt_id": "hv2-2e26f5415fad98300b43d82f8e6b3aabcb45bf44f6832e5fba131693ed16d471"}
+{"kind": "reserve", "reserve_usd": "0.00150486", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-c78952b523aac9abcc3b6915fe2e4be50ee05e1dbdcff3f4a41a3b90d33712e0"}
+{"kind": "settled", "actual_usd": "0.00007788", "attempt_id": "hv2-c78952b523aac9abcc3b6915fe2e4be50ee05e1dbdcff3f4a41a3b90d33712e0"}
+{"kind": "reserve", "reserve_usd": "0.00140622", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-771f0695694638ebc0e8aed3231881ad0924ffd32ae7945b017d9fef0305ee1e"}
+{"kind": "settled", "actual_usd": "0.00007083", "attempt_id": "hv2-771f0695694638ebc0e8aed3231881ad0924ffd32ae7945b017d9fef0305ee1e"}
+{"kind": "reserve", "reserve_usd": "0.00119202", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2f212e28dfbadcac321be307b7d8f0c4b635e9cd52d68b9583eadf798d6e5cd1-routing"}
+{"kind": "settled", "actual_usd": "0.00003513", "attempt_id": "hv2-2f212e28dfbadcac321be307b7d8f0c4b635e9cd52d68b9583eadf798d6e5cd1-routing"}
+{"kind": "reserve", "reserve_usd": "0.00154554", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2f212e28dfbadcac321be307b7d8f0c4b635e9cd52d68b9583eadf798d6e5cd1"}
+{"kind": "settled", "actual_usd": "0.00006615", "attempt_id": "hv2-2f212e28dfbadcac321be307b7d8f0c4b635e9cd52d68b9583eadf798d6e5cd1"}
+{"kind": "reserve", "reserve_usd": "0.00157758", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-6e8023d02ff5637fa6a3270bb98811862c63ec9354938480904f442acb7c3d39"}
+{"kind": "settled", "actual_usd": "0.00009333", "attempt_id": "hv2-6e8023d02ff5637fa6a3270bb98811862c63ec9354938480904f442acb7c3d39"}
+{"kind": "reserve", "reserve_usd": "0.00648186", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-1a33c7c02d5fe186ca03619f1265a6b6d0144c2a22f85531b059212e77c650b5"}
+{"kind": "settled", "actual_usd": "0.00068784", "attempt_id": "hv2-1a33c7c02d5fe186ca03619f1265a6b6d0144c2a22f85531b059212e77c650b5"}
+{"kind": "reserve", "reserve_usd": "0.00149118", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-fd9f944ebc4d24093581706cd15b860998abf9602d912b2abbb91fc325a87727"}
+{"kind": "settled", "actual_usd": "0.0000798", "attempt_id": "hv2-fd9f944ebc4d24093581706cd15b860998abf9602d912b2abbb91fc325a87727"}
+{"kind": "reserve", "reserve_usd": "0.00144294", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-32c46ce0e54015f003993bfc6fec489855568525c3d327361dd31d7e8d374ef7"}
+{"kind": "settled", "actual_usd": "0.00007521", "attempt_id": "hv2-32c46ce0e54015f003993bfc6fec489855568525c3d327361dd31d7e8d374ef7"}
+{"kind": "reserve", "reserve_usd": "0.00123198", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7c3cc126ffac18b2b700be66943c2e64f396e1caa66d273aeb37b391258a94e7-routing"}
+{"kind": "settled", "actual_usd": "0.00004071", "attempt_id": "hv2-7c3cc126ffac18b2b700be66943c2e64f396e1caa66d273aeb37b391258a94e7-routing"}
+{"kind": "reserve", "reserve_usd": "0.00155166", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7c3cc126ffac18b2b700be66943c2e64f396e1caa66d273aeb37b391258a94e7"}
+{"kind": "settled", "actual_usd": "0.00007827", "attempt_id": "hv2-7c3cc126ffac18b2b700be66943c2e64f396e1caa66d273aeb37b391258a94e7"}
+{"kind": "reserve", "reserve_usd": "0.00142908", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d4a3d25aadafd049f14230c1213916256450a02994f0636117cd2d2084071068"}
+{"kind": "settled", "actual_usd": "0.00007713", "attempt_id": "hv2-d4a3d25aadafd049f14230c1213916256450a02994f0636117cd2d2084071068"}
+{"kind": "reserve", "reserve_usd": "0.00657348", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-a75f58e470651095844754d9874dfcabe30896b52e437d94f12e4b523d611f3f"}
+{"kind": "settled", "actual_usd": "0.00069318", "attempt_id": "hv2-a75f58e470651095844754d9874dfcabe30896b52e437d94f12e4b523d611f3f"}
+{"kind": "reserve", "reserve_usd": "0.00156012", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-b9c82c72d71ef87f712d571d6626af94b02570564ffd4c08a0a877ec91a7bfa6"}
+{"kind": "settled", "actual_usd": "0.00008352", "attempt_id": "hv2-b9c82c72d71ef87f712d571d6626af94b02570564ffd4c08a0a877ec91a7bfa6"}
+{"kind": "reserve", "reserve_usd": "0.00143466", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-ad60abb3abcf501ea96d57a8d56cc09ad4a74ae62bc81b73f4be3d7e5af55f78"}
+{"kind": "settled", "actual_usd": "0.00007644", "attempt_id": "hv2-ad60abb3abcf501ea96d57a8d56cc09ad4a74ae62bc81b73f4be3d7e5af55f78"}
+{"kind": "reserve", "reserve_usd": "0.00113550", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-729387f79fdf7f4742c25b8a6001d9e3ed6981342683d12febf9c60ef116c7cf-routing"}
+{"kind": "settled", "actual_usd": "0.00003279", "attempt_id": "hv2-729387f79fdf7f4742c25b8a6001d9e3ed6981342683d12febf9c60ef116c7cf-routing"}
+{"kind": "reserve", "reserve_usd": "0.00149028", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-729387f79fdf7f4742c25b8a6001d9e3ed6981342683d12febf9c60ef116c7cf"}
+{"kind": "settled", "actual_usd": "0.00007779", "attempt_id": "hv2-729387f79fdf7f4742c25b8a6001d9e3ed6981342683d12febf9c60ef116c7cf"}
+{"kind": "reserve", "reserve_usd": "0.00149208", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-8f034b81854be21cba0a78e11185035f4c4fa8de42099c52c47d019a88f03644"}
+{"kind": "settled", "actual_usd": "0.00008121", "attempt_id": "hv2-8f034b81854be21cba0a78e11185035f4c4fa8de42099c52c47d019a88f03644"}
+{"kind": "reserve", "reserve_usd": "0.00659202", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-9512da57370955d4742a25167009126a059125abfa8a13568d4c7551c84574f4"}
+{"kind": "settled", "actual_usd": "0.00068547", "attempt_id": "hv2-9512da57370955d4742a25167009126a059125abfa8a13568d4c7551c84574f4"}
+{"kind": "reserve", "reserve_usd": "0.00134250", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-db5083faf6c24ef5559be923aa81e47b031c47b3224a4d91582c3293869c41f1"}
+{"kind": "settled", "actual_usd": "0.00006492", "attempt_id": "hv2-db5083faf6c24ef5559be923aa81e47b031c47b3224a4d91582c3293869c41f1"}
+{"kind": "reserve", "reserve_usd": "0.00132288", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5d19a60f355ff24cd4a54ab2049d41607335ef7e0d786e058222e1ea44d66fb8"}
+{"kind": "settled", "actual_usd": "0.00006183", "attempt_id": "hv2-5d19a60f355ff24cd4a54ab2049d41607335ef7e0d786e058222e1ea44d66fb8"}
+{"kind": "reserve", "reserve_usd": "0.00107106", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-05ff976bea43d63895000ab2d35a93b7ec98160c08924de8539aa9e8dac910fa-routing"}
+{"kind": "settled", "actual_usd": "0.00002478", "attempt_id": "hv2-05ff976bea43d63895000ab2d35a93b7ec98160c08924de8539aa9e8dac910fa-routing"}
+{"kind": "reserve", "reserve_usd": "0.00135456", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-05ff976bea43d63895000ab2d35a93b7ec98160c08924de8539aa9e8dac910fa"}
+{"kind": "settled", "actual_usd": "0.00006153", "attempt_id": "hv2-05ff976bea43d63895000ab2d35a93b7ec98160c08924de8539aa9e8dac910fa"}
+{"kind": "reserve", "reserve_usd": "0.00133062", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-ed271adf98fac2af371316875cc406f22c22d8b89da56f44009d2288cc7fac98"}
+{"kind": "settled", "actual_usd": "0.00006594", "attempt_id": "hv2-ed271adf98fac2af371316875cc406f22c22d8b89da56f44009d2288cc7fac98"}
+{"kind": "reserve", "reserve_usd": "0.00654162", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5085d934249675f815c53e462eb182c1d852c47954876f01532a257fd696b940"}
+{"kind": "settled", "actual_usd": "0.00066534", "attempt_id": "hv2-5085d934249675f815c53e462eb182c1d852c47954876f01532a257fd696b940"}
+{"kind": "reserve", "reserve_usd": "0.00145482", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-82b3e5605bfeb730eb7c1c8c13f93a26896c2f2f0b3151267b7ed2da76ed0339"}
+{"kind": "settled", "actual_usd": "0.00007863", "attempt_id": "hv2-82b3e5605bfeb730eb7c1c8c13f93a26896c2f2f0b3151267b7ed2da76ed0339"}
+{"kind": "reserve", "reserve_usd": "0.00135672", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-1c48b607ea9ddd61e66f712f3e4105dfa489de9e2109b3059aad1583aa18adfa"}
+{"kind": "settled", "actual_usd": "0.00006174", "attempt_id": "hv2-1c48b607ea9ddd61e66f712f3e4105dfa489de9e2109b3059aad1583aa18adfa"}
+{"kind": "reserve", "reserve_usd": "0.00115512", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-775aed637f0b8c4590a8897266d75415e2bfce35c6930ab15414cf95075d869c-routing"}
+{"kind": "settled", "actual_usd": "0.00003342", "attempt_id": "hv2-775aed637f0b8c4590a8897266d75415e2bfce35c6930ab15414cf95075d869c-routing"}
+{"kind": "reserve", "reserve_usd": "0.00153960", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-775aed637f0b8c4590a8897266d75415e2bfce35c6930ab15414cf95075d869c"}
+{"kind": "settled", "actual_usd": "0.00007155", "attempt_id": "hv2-775aed637f0b8c4590a8897266d75415e2bfce35c6930ab15414cf95075d869c"}
+{"kind": "reserve", "reserve_usd": "0.00145248", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d0b39f0349335665fea51008125cef1fd8c4177ec492807e18042bfa74ceaf28"}
+{"kind": "settled", "actual_usd": "0.00007899", "attempt_id": "hv2-d0b39f0349335665fea51008125cef1fd8c4177ec492807e18042bfa74ceaf28"}
+{"kind": "reserve", "reserve_usd": "0.00643380", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-a52b63a1f49cfab4dac8841802753983cf2acdef6def45155394bd39624a800d"}
+{"kind": "settled", "actual_usd": "0.00067479", "attempt_id": "hv2-a52b63a1f49cfab4dac8841802753983cf2acdef6def45155394bd39624a800d"}
+{"kind": "reserve", "reserve_usd": "0.00140082", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-706ff69171b5d7d49bb1d06c84c59b84a9bcba48eae12944059abc3c7610ba8a"}
+{"kind": "settled", "actual_usd": "0.00006687", "attempt_id": "hv2-706ff69171b5d7d49bb1d06c84c59b84a9bcba48eae12944059abc3c7610ba8a"}
+{"kind": "reserve", "reserve_usd": "0.00138300", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-216a5fd6815375b5e57156c2aa7d11fa9225bffc7fda9ece6b749f3a6c4a4d5c"}
+{"kind": "settled", "actual_usd": "0.00007047", "attempt_id": "hv2-216a5fd6815375b5e57156c2aa7d11fa9225bffc7fda9ece6b749f3a6c4a4d5c"}
+{"kind": "reserve", "reserve_usd": "0.00113748", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4e59333039720f7b4a457a61df15ae8888005b1ffce63732dedeceefaaae80ce-routing"}
+{"kind": "settled", "actual_usd": "0.00003171", "attempt_id": "hv2-4e59333039720f7b4a457a61df15ae8888005b1ffce63732dedeceefaaae80ce-routing"}
+{"kind": "reserve", "reserve_usd": "0.00142008", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4e59333039720f7b4a457a61df15ae8888005b1ffce63732dedeceefaaae80ce"}
+{"kind": "settled", "actual_usd": "0.0000726", "attempt_id": "hv2-4e59333039720f7b4a457a61df15ae8888005b1ffce63732dedeceefaaae80ce"}
+{"kind": "reserve", "reserve_usd": "0.00138822", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7f613756819d53b48a22a15cf22c79250556a5d2eca46a6332cf18f5ebc3eb61"}
+{"kind": "settled", "actual_usd": "0.00007026", "attempt_id": "hv2-7f613756819d53b48a22a15cf22c79250556a5d2eca46a6332cf18f5ebc3eb61"}
+{"kind": "reserve", "reserve_usd": "0.00583278", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-862f929644f9dd8c2dbd13011a23b069fcdf0fb436c6c8f3ab9ff6f23e5b1064"}
+{"kind": "settled", "actual_usd": "0.00059097", "attempt_id": "hv2-862f929644f9dd8c2dbd13011a23b069fcdf0fb436c6c8f3ab9ff6f23e5b1064"}
+{"kind": "reserve", "reserve_usd": "0.00138390", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5b807d70aa4f2ed41365da427323d5156005b232adf1546a2be15a733a864291"}
+{"kind": "settled", "actual_usd": "0.00006762", "attempt_id": "hv2-5b807d70aa4f2ed41365da427323d5156005b232adf1546a2be15a733a864291"}
+{"kind": "reserve", "reserve_usd": "0.00142638", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2f9ce57cc1eccd54848160248da86ef782c7e881c97d97246305e8927de32d2b"}
+{"kind": "settled", "actual_usd": "0.00007158", "attempt_id": "hv2-2f9ce57cc1eccd54848160248da86ef782c7e881c97d97246305e8927de32d2b"}
+{"kind": "reserve", "reserve_usd": "0.00098628", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-b29ab77a4f4bdacefbf8f9514efe9aa01eda087d90fdf2a2410467e3aa6fc880-routing"}
+{"kind": "settled", "actual_usd": "0.00001704", "attempt_id": "hv2-b29ab77a4f4bdacefbf8f9514efe9aa01eda087d90fdf2a2410467e3aa6fc880-routing"}
+{"kind": "reserve", "reserve_usd": "0.00142638", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-b29ab77a4f4bdacefbf8f9514efe9aa01eda087d90fdf2a2410467e3aa6fc880"}
+{"kind": "settled", "actual_usd": "0.00007158", "attempt_id": "hv2-b29ab77a4f4bdacefbf8f9514efe9aa01eda087d90fdf2a2410467e3aa6fc880"}
+{"kind": "reserve", "reserve_usd": "0.00138048", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-f70f119e6945fbc50528e7bb90a6815a5d615f69f0fab7d4e5500c80bdb14fd5"}
+{"kind": "settled", "actual_usd": "0.00006627", "attempt_id": "hv2-f70f119e6945fbc50528e7bb90a6815a5d615f69f0fab7d4e5500c80bdb14fd5"}
+{"kind": "reserve", "reserve_usd": "0.00650544", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-f63aed24c7506140e98047a20108da9e6ff50e3336a439c01d2e64770e4d7539"}
+{"kind": "settled", "actual_usd": "0.00068076", "attempt_id": "hv2-f63aed24c7506140e98047a20108da9e6ff50e3336a439c01d2e64770e4d7539"}
+{"kind": "reserve", "reserve_usd": "0.00146724", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-3aa820d5d13f860d94546e42a3ee3efc178ac473f186feefef591d8e4e488ffd"}
+{"kind": "settled", "actual_usd": "0.00007731", "attempt_id": "hv2-3aa820d5d13f860d94546e42a3ee3efc178ac473f186feefef591d8e4e488ffd"}
+{"kind": "reserve", "reserve_usd": "0.00141666", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-6f8c7d33b2d1698d4955ab43d5c411c250a2a63e54ca5807779e592522d47d81"}
+{"kind": "settled", "actual_usd": "0.00006525", "attempt_id": "hv2-6f8c7d33b2d1698d4955ab43d5c411c250a2a63e54ca5807779e592522d47d81"}
+{"kind": "reserve", "reserve_usd": "0.00114954", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-558413106b64869be220810b57c6ec7e5b537710613a95f068ee7fef6df607a8-routing"}
+{"kind": "settled", "actual_usd": "0.00003378", "attempt_id": "hv2-558413106b64869be220810b57c6ec7e5b537710613a95f068ee7fef6df607a8-routing"}
+{"kind": "reserve", "reserve_usd": "0.00147912", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-558413106b64869be220810b57c6ec7e5b537710613a95f068ee7fef6df607a8"}
+{"kind": "settled", "actual_usd": "0.00006354", "attempt_id": "hv2-558413106b64869be220810b57c6ec7e5b537710613a95f068ee7fef6df607a8"}
+{"kind": "reserve", "reserve_usd": "0.00145536", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-85f02bdce1356e1941f2645567cfa5123e7265ccc65e261bda1d87e3270227cd"}
+{"kind": "settled", "actual_usd": "0.00006813", "attempt_id": "hv2-85f02bdce1356e1941f2645567cfa5123e7265ccc65e261bda1d87e3270227cd"}
+{"kind": "reserve", "reserve_usd": "0.00684096", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-377015db0abd1d38823e0a75ec4974c17cf6096af3825e677e32f141f4bdaa55"}
+{"kind": "settled", "actual_usd": "0.00070173", "attempt_id": "hv2-377015db0abd1d38823e0a75ec4974c17cf6096af3825e677e32f141f4bdaa55"}
+{"kind": "reserve", "reserve_usd": "0.00171708", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d7e3afe744ff03002ac473643489ead7fefed312195ef968b5909db3147594bc"}
+{"kind": "settled", "actual_usd": "0.00009864", "attempt_id": "hv2-d7e3afe744ff03002ac473643489ead7fefed312195ef968b5909db3147594bc"}
+{"kind": "reserve", "reserve_usd": "0.00171258", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-960a30816d021d7300def550bce9ef62948da4a70d5aa1a1e0f8671f6c683902"}
+{"kind": "settled", "actual_usd": "0.00010197", "attempt_id": "hv2-960a30816d021d7300def550bce9ef62948da4a70d5aa1a1e0f8671f6c683902"}
+{"kind": "reserve", "reserve_usd": "0.00124494", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-8711dbc94186b798405a3a348f7839a35796eee17847d19f90b11cfa359cb4da-routing"}
+{"kind": "settled", "actual_usd": "0.00004305", "attempt_id": "hv2-8711dbc94186b798405a3a348f7839a35796eee17847d19f90b11cfa359cb4da-routing"}
+{"kind": "reserve", "reserve_usd": "0.00166812", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-8711dbc94186b798405a3a348f7839a35796eee17847d19f90b11cfa359cb4da"}
+{"kind": "settled", "actual_usd": "0.00009324", "attempt_id": "hv2-8711dbc94186b798405a3a348f7839a35796eee17847d19f90b11cfa359cb4da"}
+{"kind": "reserve", "reserve_usd": "0.00166794", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d0751706a6178a37890338f05a1354d7edf3fb399e97475b6037a82bc7439636"}
+{"kind": "settled", "actual_usd": "0.00009648", "attempt_id": "hv2-d0751706a6178a37890338f05a1354d7edf3fb399e97475b6037a82bc7439636"}
+{"kind": "reserve", "reserve_usd": "0.00598632", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7cb9338166f6e48f2ef004c7bc185f80e7bd42263b4a5c84142ba4891abbec98"}
+{"kind": "settled", "actual_usd": "0.00062073", "attempt_id": "hv2-7cb9338166f6e48f2ef004c7bc185f80e7bd42263b4a5c84142ba4891abbec98"}
+{"kind": "reserve", "reserve_usd": "0.00134520", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-e18e3848701786feb68f9f98134b11d9ba604c1f90565b2a1a84c916c26ce556"}
+{"kind": "settled", "actual_usd": "0.00006417", "attempt_id": "hv2-e18e3848701786feb68f9f98134b11d9ba604c1f90565b2a1a84c916c26ce556"}
+{"kind": "reserve", "reserve_usd": "0.00153240", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-654b62b5c144480b183f6f5f1ad40bb94dd2fd58c3742ddae11c050c286782a4"}
+{"kind": "settled", "actual_usd": "0.00008262", "attempt_id": "hv2-654b62b5c144480b183f6f5f1ad40bb94dd2fd58c3742ddae11c050c286782a4"}
+{"kind": "reserve", "reserve_usd": "0.00113496", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-dc2476df8f9f45c72b07dd9ba315fc15fda35100182c319a36b602a660814275-routing"}
+{"kind": "settled", "actual_usd": "0.00003039", "attempt_id": "hv2-dc2476df8f9f45c72b07dd9ba315fc15fda35100182c319a36b602a660814275-routing"}
+{"kind": "reserve", "reserve_usd": "0.00148524", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-dc2476df8f9f45c72b07dd9ba315fc15fda35100182c319a36b602a660814275"}
+{"kind": "settled", "actual_usd": "0.00005805", "attempt_id": "hv2-dc2476df8f9f45c72b07dd9ba315fc15fda35100182c319a36b602a660814275"}
+{"kind": "reserve", "reserve_usd": "0.00157686", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-809d82055a515716607e59d822718e3576f812f8a8774a36d5098e0a0f0fcca1"}
+{"kind": "settled", "actual_usd": "0.00008667", "attempt_id": "hv2-809d82055a515716607e59d822718e3576f812f8a8774a36d5098e0a0f0fcca1"}
+{"kind": "reserve", "reserve_usd": "0.00622230", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-01fd19b5960bc34ff489f762f8d41304382638a3c9e75ae8cc4f348c9053e568"}
+{"kind": "settled", "actual_usd": "0.00064356", "attempt_id": "hv2-01fd19b5960bc34ff489f762f8d41304382638a3c9e75ae8cc4f348c9053e568"}
+{"kind": "reserve", "reserve_usd": "0.00141198", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-70b3694eb594e82932419cb25c8b323b20caa97a2c58a0753b5acd5041c0f3b9"}
+{"kind": "settled", "actual_usd": "0.0000756", "attempt_id": "hv2-70b3694eb594e82932419cb25c8b323b20caa97a2c58a0753b5acd5041c0f3b9"}
+{"kind": "reserve", "reserve_usd": "0.00135672", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-4539d62be26647dbdb961569d6ec608160a8d0a5c424d036734980573e5bb0a5"}
+{"kind": "settled", "actual_usd": "0.00007044", "attempt_id": "hv2-4539d62be26647dbdb961569d6ec608160a8d0a5c424d036734980573e5bb0a5"}
+{"kind": "reserve", "reserve_usd": "0.00108042", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d30d059d313b04b604c916d17e12c51954694912cc15c5fa6ac61bb9ec7423c4-routing"}
+{"kind": "settled", "actual_usd": "0.00002604", "attempt_id": "hv2-d30d059d313b04b604c916d17e12c51954694912cc15c5fa6ac61bb9ec7423c4-routing"}
+{"kind": "reserve", "reserve_usd": "0.00135348", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d30d059d313b04b604c916d17e12c51954694912cc15c5fa6ac61bb9ec7423c4"}
+{"kind": "settled", "actual_usd": "0.00006549", "attempt_id": "hv2-d30d059d313b04b604c916d17e12c51954694912cc15c5fa6ac61bb9ec7423c4"}
+{"kind": "reserve", "reserve_usd": "0.00142314", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d11175007c0f59b488a2901cd4e1599468380efb7278817005dabe738904e097"}
+{"kind": "settled", "actual_usd": "0.00008232", "attempt_id": "hv2-d11175007c0f59b488a2901cd4e1599468380efb7278817005dabe738904e097"}
+{"kind": "reserve", "reserve_usd": "0.00655854", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-238e4e2175d5b05fba06a52f811c1070869169dfc3b87517bdb4048cb750d2c1"}
+{"kind": "settled", "actual_usd": "0.00068028", "attempt_id": "hv2-238e4e2175d5b05fba06a52f811c1070869169dfc3b87517bdb4048cb750d2c1"}
+{"kind": "reserve", "reserve_usd": "0.00143934", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d8f638911c929746d289c0321f5372d291a06320ff5ca872d91f1590b1dc9cae"}
+{"kind": "settled", "actual_usd": "0.00007863", "attempt_id": "hv2-d8f638911c929746d289c0321f5372d291a06320ff5ca872d91f1590b1dc9cae"}
+{"kind": "reserve", "reserve_usd": "0.00137652", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5bdb18b058849ec9fea7ab7895630f81b903a915ad506e0ae288d16d4c40f615"}
+{"kind": "settled", "actual_usd": "0.00007395", "attempt_id": "hv2-5bdb18b058849ec9fea7ab7895630f81b903a915ad506e0ae288d16d4c40f615"}
+{"kind": "reserve", "reserve_usd": "0.00117600", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-43ea8a83601547d82c13d76291f9cd6667ba8c52c29378245a46760247bd7e64-routing"}
+{"kind": "settled", "actual_usd": "0.00003675", "attempt_id": "hv2-43ea8a83601547d82c13d76291f9cd6667ba8c52c29378245a46760247bd7e64-routing"}
+{"kind": "reserve", "reserve_usd": "0.00150972", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-43ea8a83601547d82c13d76291f9cd6667ba8c52c29378245a46760247bd7e64"}
+{"kind": "settled", "actual_usd": "0.00007455", "attempt_id": "hv2-43ea8a83601547d82c13d76291f9cd6667ba8c52c29378245a46760247bd7e64"}
+{"kind": "reserve", "reserve_usd": "0.00146544", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-14286c0f640b6e8c151ea02bc26027329e45fa7aec052cf48a212c107ede62c5"}
+{"kind": "settled", "actual_usd": "0.00008112", "attempt_id": "hv2-14286c0f640b6e8c151ea02bc26027329e45fa7aec052cf48a212c107ede62c5"}
+{"kind": "reserve", "reserve_usd": "0.00608604", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-84e338f347769579ef59d24a27e1f7153da3b929ea901291522faa006576a07b"}
+{"kind": "settled", "actual_usd": "0.00063687", "attempt_id": "hv2-84e338f347769579ef59d24a27e1f7153da3b929ea901291522faa006576a07b"}
+{"kind": "reserve", "reserve_usd": "0.00149766", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-45046de2ee2835eb01000e8acf3d1e8551be9db61e5ea3a8dbe1071bbad11627"}
+{"kind": "settled", "actual_usd": "0.00008526", "attempt_id": "hv2-45046de2ee2835eb01000e8acf3d1e8551be9db61e5ea3a8dbe1071bbad11627"}
+{"kind": "reserve", "reserve_usd": "0.00144366", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d52cbb5741bdce0059c7554812f1358fee3b4a58c8993f9a751073a94a4cb481"}
+{"kind": "settled", "actual_usd": "0.00008127", "attempt_id": "hv2-d52cbb5741bdce0059c7554812f1358fee3b4a58c8993f9a751073a94a4cb481"}
+{"kind": "reserve", "reserve_usd": "0.00115566", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-fd048fc9a50dfb4426b8e37a7e0c2014ae45452e1ec0c8ada63d593dca98917d-routing"}
+{"kind": "settled", "actual_usd": "0.00003252", "attempt_id": "hv2-fd048fc9a50dfb4426b8e37a7e0c2014ae45452e1ec0c8ada63d593dca98917d-routing"}
+{"kind": "reserve", "reserve_usd": "0.00148344", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-fd048fc9a50dfb4426b8e37a7e0c2014ae45452e1ec0c8ada63d593dca98917d"}
+{"kind": "settled", "actual_usd": "0.00007008", "attempt_id": "hv2-fd048fc9a50dfb4426b8e37a7e0c2014ae45452e1ec0c8ada63d593dca98917d"}
+{"kind": "reserve", "reserve_usd": "0.00146184", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-af88ea7e0c1897a4c9723fa7d3e39e73f1b0b7a94caf89d7143a47e5d73680e6"}
+{"kind": "settled", "actual_usd": "0.00008412", "attempt_id": "hv2-af88ea7e0c1897a4c9723fa7d3e39e73f1b0b7a94caf89d7143a47e5d73680e6"}
+{"kind": "reserve", "reserve_usd": "0.00693708", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-913a635147a2cc98b174d6918fd9f62956266610c547483f08b6fb13cae6f511"}
+{"kind": "settled", "actual_usd": "0.00072837", "attempt_id": "hv2-913a635147a2cc98b174d6918fd9f62956266610c547483f08b6fb13cae6f511"}
+{"kind": "reserve", "reserve_usd": "0.00152052", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d66216eb58644a8f60007397c0209162cbe022ca747076fc255d081958e85afb"}
+{"kind": "settled", "actual_usd": "0.00008067", "attempt_id": "hv2-d66216eb58644a8f60007397c0209162cbe022ca747076fc255d081958e85afb"}
+{"kind": "reserve", "reserve_usd": "0.00144474", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-293959d30a33227df99b1232f0dd501a3186fb1ac0c1ab89b7ea818d154f66be"}
+{"kind": "settled", "actual_usd": "0.00006921", "attempt_id": "hv2-293959d30a33227df99b1232f0dd501a3186fb1ac0c1ab89b7ea818d154f66be"}
+{"kind": "reserve", "reserve_usd": "0.00117528", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-421aa9a7b34bebb477a066edbf6eaae8b907abdf2d459fecff259106b12b52e1-routing"}
+{"kind": "settled", "actual_usd": "0.00003576", "attempt_id": "hv2-421aa9a7b34bebb477a066edbf6eaae8b907abdf2d459fecff259106b12b52e1-routing"}
+{"kind": "reserve", "reserve_usd": "0.00162024", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-421aa9a7b34bebb477a066edbf6eaae8b907abdf2d459fecff259106b12b52e1"}
+{"kind": "settled", "actual_usd": "0.00007029", "attempt_id": "hv2-421aa9a7b34bebb477a066edbf6eaae8b907abdf2d459fecff259106b12b52e1"}
+{"kind": "reserve", "reserve_usd": "0.00165354", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-97f496e770ac219aa88285693fc795045d9a707d682ece5254390f052200e7ef"}
+{"kind": "settled", "actual_usd": "0.00009261", "attempt_id": "hv2-97f496e770ac219aa88285693fc795045d9a707d682ece5254390f052200e7ef"}
+{"kind": "reserve", "reserve_usd": "0.00604068", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-0b7d163f85a3fad381867ecf22a7cba4fc35b28b94fc23ff8f97d180b74662d9"}
+{"kind": "settled", "actual_usd": "0.0006339", "attempt_id": "hv2-0b7d163f85a3fad381867ecf22a7cba4fc35b28b94fc23ff8f97d180b74662d9"}
+{"kind": "reserve", "reserve_usd": "0.00127374", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-029bd0fa45a9e1ff6510cc3f29566728cde48faf278d036befcfeaab21c54f26"}
+{"kind": "settled", "actual_usd": "0.00005352", "attempt_id": "hv2-029bd0fa45a9e1ff6510cc3f29566728cde48faf278d036befcfeaab21c54f26"}
+{"kind": "reserve", "reserve_usd": "0.00126186", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-748f694a59f087c307067ee1c015d068b55647625b2ce6eebeab9af2b466a065"}
+{"kind": "settled", "actual_usd": "0.00005145", "attempt_id": "hv2-748f694a59f087c307067ee1c015d068b55647625b2ce6eebeab9af2b466a065"}
+{"kind": "reserve", "reserve_usd": "0.00100896", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-3c7a1843b87d050519656763e86c4b42ae653f51608ac9c9d7d9697cc9988b7a-routing"}
+{"kind": "settled", "actual_usd": "0.00001875", "attempt_id": "hv2-3c7a1843b87d050519656763e86c4b42ae653f51608ac9c9d7d9697cc9988b7a-routing"}
+{"kind": "reserve", "reserve_usd": "0.00137364", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-3c7a1843b87d050519656763e86c4b42ae653f51608ac9c9d7d9697cc9988b7a"}
+{"kind": "settled", "actual_usd": "0.00005145", "attempt_id": "hv2-3c7a1843b87d050519656763e86c4b42ae653f51608ac9c9d7d9697cc9988b7a"}
+{"kind": "reserve", "reserve_usd": "0.00129966", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-626dc58b989f1d38bdc70f1a074f1dec86adce7e082cb8d8a2df8b1d27d43149"}
+{"kind": "settled", "actual_usd": "0.00005658", "attempt_id": "hv2-626dc58b989f1d38bdc70f1a074f1dec86adce7e082cb8d8a2df8b1d27d43149"}
+{"kind": "reserve", "reserve_usd": "0.00634146", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d8daab7df166c2311cc769f7bf886633a7556ae3a0745b3c3f5f7dfa393e0774"}
+{"kind": "settled", "actual_usd": "0.00067155", "attempt_id": "hv2-d8daab7df166c2311cc769f7bf886633a7556ae3a0745b3c3f5f7dfa393e0774"}
+{"kind": "reserve", "reserve_usd": "0.00136140", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-2184dec053b978ade3e16ec64c0615e61b202211da610c67012628c1e8c59fab"}
+{"kind": "settled", "actual_usd": "0.00006324", "attempt_id": "hv2-2184dec053b978ade3e16ec64c0615e61b202211da610c67012628c1e8c59fab"}
+{"kind": "reserve", "reserve_usd": "0.00149226", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-01d4e5bdb3d3354d85064d41a9549ee5fc8ef40077a7f57d15055dc85b6598c2"}
+{"kind": "settled", "actual_usd": "0.00007557", "attempt_id": "hv2-01d4e5bdb3d3354d85064d41a9549ee5fc8ef40077a7f57d15055dc85b6598c2"}
+{"kind": "reserve", "reserve_usd": "0.00110760", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7fc5749c8e8192da38094088491cecee91ab4e20f83dfb09666561871de2bc65-routing"}
+{"kind": "settled", "actual_usd": "0.00002904", "attempt_id": "hv2-7fc5749c8e8192da38094088491cecee91ab4e20f83dfb09666561871de2bc65-routing"}
+{"kind": "reserve", "reserve_usd": "0.00150954", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-7fc5749c8e8192da38094088491cecee91ab4e20f83dfb09666561871de2bc65"}
+{"kind": "settled", "actual_usd": "0.00005355", "attempt_id": "hv2-7fc5749c8e8192da38094088491cecee91ab4e20f83dfb09666561871de2bc65"}
+{"kind": "reserve", "reserve_usd": "0.00143682", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-da1241f56715a72776605b25639017fc45a70d1d1d921eb758c3e36c7523fd31"}
+{"kind": "settled", "actual_usd": "0.00007116", "attempt_id": "hv2-da1241f56715a72776605b25639017fc45a70d1d1d921eb758c3e36c7523fd31"}
+{"kind": "reserve", "reserve_usd": "0.00634560", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-5892410b70a54eb66ebe984764a94e8a71f96000b461c7309afca3892ea98573"}
+{"kind": "settled", "actual_usd": "0.00066573", "attempt_id": "hv2-5892410b70a54eb66ebe984764a94e8a71f96000b461c7309afca3892ea98573"}
+{"kind": "reserve", "reserve_usd": "0.00143340", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-bc0a66756de0457aff7957777af5f47d8d969d05b6c1b0a352660fe548bd346c"}
+{"kind": "settled", "actual_usd": "0.00007479", "attempt_id": "hv2-bc0a66756de0457aff7957777af5f47d8d969d05b6c1b0a352660fe548bd346c"}
+{"kind": "reserve", "reserve_usd": "0.00149496", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-9af2bbdfa667a35671031bf014e2d8ad6306ed3b8016001a8af443d34c1c4b37"}
+{"kind": "settled", "actual_usd": "0.00008289", "attempt_id": "hv2-9af2bbdfa667a35671031bf014e2d8ad6306ed3b8016001a8af443d34c1c4b37"}
+{"kind": "reserve", "reserve_usd": "0.00104586", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-ce61a604c4e661f9283bcc63407bb0d772198d067deaaad3459983cdde874ad7-routing"}
+{"kind": "settled", "actual_usd": "0.0000219", "attempt_id": "hv2-ce61a604c4e661f9283bcc63407bb0d772198d067deaaad3459983cdde874ad7-routing"}
+{"kind": "reserve", "reserve_usd": "0.00150756", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-ce61a604c4e661f9283bcc63407bb0d772198d067deaaad3459983cdde874ad7"}
+{"kind": "settled", "actual_usd": "0.00005793", "attempt_id": "hv2-ce61a604c4e661f9283bcc63407bb0d772198d067deaaad3459983cdde874ad7"}
+{"kind": "reserve", "reserve_usd": "0.00141792", "actual_usd": null, "model": "qwen/qwen3-30b-a3b-instruct-2507", "run_id": "hosted-diverse-v2-20261024", "attempt_id": "hv2-d58bd81ca21a7db88158bb1e37cd7f00855fbc548886ff242ec1997a3576d706"}
+{"kind": "settled", "actual_usd": "0.00007434", "attempt_id": "hv2-d58bd81ca21a7db88158bb1e37cd7f00855fbc548886ff242ec1997a3576d706"}
+{"kind": "reserve", "reserve_usd": "0.00085236", "actual_usd": null, "model": "mistralai/mistral-small-3.2-24b-instruct", "run_id": "hosted-mistral-v3-20261024", "attempt_id": "nonbenchmark-canary-v3-mistral-1"}
+{"kind": "unknown", "actual_usd": null, "attempt_id": "nonbenchmark-canary-v3-mistral-1"}
+{"kind": "unknown", "reserve_usd": "0.03", "actual_usd": null, "evidence_sha256": "402e44f227b6134a0efb5467f026503fc489a0274aac144f44c63c88b0fbe1e5", "meaning": "Increased conservative liability; generation remains stopped. Not settled, not permission to continue.", "attempt_id": "nonbenchmark-canary-v3-mistral-1"}

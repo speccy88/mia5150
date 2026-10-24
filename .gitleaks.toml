@@ -19,6 +19,11 @@ regexTarget = "match"
 regexes = [ '''backend_api",\s*"[^"\r\n]+"''' ]
 
 [[rules.allowlists]]
+description = "Exact independently verified public Qwen ledger SHA-256 at 497ca150; not an authentication credential"
+regexTarget = "match"
+regexes = [ '''api-call-ledger\.jsonl"\s*:\s*"4ddb457e0caf6c63a5e0723b3974580eb55aa43d027f01159280730ae8d3eae0''' ]
+
+[[rules.allowlists]]
 description = "Reviewed JSON field names and documented public model or skill identifiers"
 regexTarget = "match"
 regexes = [

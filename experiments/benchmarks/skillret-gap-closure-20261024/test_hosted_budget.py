@@ -60,3 +60,10 @@ def test_bound_requires_prior_unknown_and_cannot_shrink_it(tmp_path):
     with pytest.raises(BudgetStop):b.settle('one',None)
     with pytest.raises(BudgetStop):b.bound_unknown('one','.1','a'*64)
     with pytest.raises(BudgetStop):b.bound_unknown('one','.3','not-a-hash')
+
+def test_increased_unknown_hold_does_not_allow_more_generation(tmp_path):
+    b=Budget(tmp_path/'stop.jsonl',2,3,1.5,600);b.reserve('failed','.00085236')
+    with pytest.raises(BudgetStop):b.settle('failed',None)
+    b.raise_unknown_hold('failed','.03','a'*64)
+    assert b.state()[0]['failed']['actual_usd'] is None and str(b.state()[1])=='0.03'
+    with pytest.raises(BudgetStop):b.reserve('another','.001')

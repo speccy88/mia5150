@@ -19,6 +19,13 @@ def accept(record,profile,kind,values):
     if not isinstance(record,dict) or record.get('http_status')!=200 or not valid_result(record,profile['model'],profile['provider_name']):raise ValueError('invalid_response_envelope')
     return parse(record['content'],kind,values)
 
+def resolve_timing_scope(plan,parent):
+    if isinstance(plan.get('timing_scope'),str) and plan['timing_scope']:return plan['timing_scope']
+    if plan.get('parent_protocol_sha256')!=parent.get('protocol_sha256'):raise ValueError('Missing timing metadata without matching frozen parent')
+    check=dict(parent);identity=check.pop('protocol_sha256');assert digest(check)==identity
+    if not isinstance(parent.get('timing_scope'),str) or not parent['timing_scope']:raise ValueError('Parent timing scope absent')
+    return parent['timing_scope']
+
 def verify(client,p):
     response=client.http('models/'+p['model']+'/endpoints');data=response.get('data') or {};endpoint=next(e for e in data.get('endpoints',[]) if e['tag']==p['endpoint'])
     assert endpoint['status']==0 and endpoint['context_length']>=p['context']
@@ -31,6 +38,7 @@ def execute(runtime,key,mistral=False):
     from mistral_contract import PROFILE as MISTRAL
     out=runtime/'hosted-execution';work=runtime/('hosted-mistral-v3' if mistral else 'hosted-diverse-v2');plan=read(HERE/('mistral-protocol.json' if mistral else 'diverse-protocol.json'));private_plan=read(work/'frozen-plan.json');assert plan==private_plan
     check=dict(plan);protocol_sha=check.pop('protocol_sha256');assert digest(check)==protocol_sha
+    timing_scope=resolve_timing_scope(plan,read(HERE/'diverse-protocol.json'))
     shared=read(work/'shared-inputs.json');assert digest(shared['entries'])==plan['shared_inputs_sha256']
     if mistral:assert plan['profile']==MISTRAL;profiles=[MISTRAL]
     else:assert plan['profiles']==PROFILES;profiles=PROFILES
@@ -97,7 +105,7 @@ def execute(runtime,key,mistral=False):
                     answer=request(client,p,cid,branch_input['messages'],'selection',branch_input['mapping'],planned);record['selector_attempt_key']=cid;record['candidate_ids']=branch_input['candidate_ids'];record['retrieval']=None if method=='listing' else retrieval_metrics(branch_input['ranking'],labels[qid])
                     try:record['selected_ids']=accept(answer,p,'selection',branch_input['mapping']);record['status']='ok'
                     except (ValueError,TypeError):record['status']='invalid_selection_response';record['returned_cardinality_unknown']=True
-            record['metrics']=selection_metrics(record['selected_ids'],labels[qid],record['status']);record['method_body_wall_seconds']=time.perf_counter()-started;record['end_to_end_seconds']=None;record['timing_scope']=plan['timing_scope'];append_jsonl(work/'cases.jsonl',record);cases[cid]=record
+            record['metrics']=selection_metrics(record['selected_ids'],labels[qid],record['status']);record['method_body_wall_seconds']=time.perf_counter()-started;record['end_to_end_seconds']=None;record['timing_scope']=timing_scope;append_jsonl(work/'cases.jsonl',record);cases[cid]=record
             if len(cases)%20==0:print('hosted matched cases durable '+str(len(cases))+'/120 active cases',flush=True)
         terminal.append({'model':p['model'],'status':'benchmark_panel_complete'})
     current,held=budget.state();receipt={'status':'run_terminal','protocol_sha256':protocol_sha,'models':terminal,'canonical_cases':len(cases),'physical_generation_attempts_including_legacy':len(current),'guarded_total_usd':str(held),'actual_total_usd':None if any(x.get('actual_usd') is None for x in current.values()) else str(held),'legacy_unknown_cost_preserved':True,'cap_usd':'2.00','call_cap':600};(work/'execution.json').write_text(json.dumps(receipt,indent=2));print(json.dumps(receipt),flush=True)

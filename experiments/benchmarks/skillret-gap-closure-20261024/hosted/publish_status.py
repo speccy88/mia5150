@@ -21,7 +21,8 @@ def main():
         key='legacy-observed-'+str(i+1)
         current[key]={'request_id':key,'attempt_id':key,'run_id':'hosted-v1-20261024','case_id':call['case_key'],'stage':'canary' if call['case_key'].startswith('nonbenchmark-canary') else call.get('kind'),'utc':call.get('utc'),'http_method':'POST','endpoint_family':'chat/completions','generation_request':True,'model_requested':MODEL,'provider_pin':{'only':['deepinfra/fp8'],'allow_fallbacks':False},'model':call.get('model'),'provider':call.get('provider'),'input_tokens':call.get('input_tokens'),'output_tokens':call.get('output_tokens'),'reasoning_tokens':call.get('reasoning_tokens'),'latency_seconds':call.get('wall_seconds'),'http_status':call.get('http_status'),'status':'invalid_canary_missing_output_or_usage','finish_reason':call.get('finish_reason'),'cost_usd':call.get('cost_usd'),'record_scope':'Legacy source had no complete HTTP envelope; unobserved fields remain null. No private generation ID exported.'}
     budget={}
-    for event in rows(private/'budget-ledger.jsonl'):
+    budget_events=rows(private/'budget-ledger.jsonl')
+    for event in budget_events:
         if event['kind']=='reserve':budget[event['case_key']]=dict(event)
         else:budget[event['case_key']].update(event)
     for row in current.values():
@@ -36,11 +37,16 @@ def main():
     status['benchmark_routing_cases_completed']=sum('route_attempt_key' in c for c in actual_cases)
     status['bounded_unknown_attempts']=sum(x['kind']=='bounded_unknown' for x in budget.values())
     status['continuation']='New unknown/in-flight request blocks continuation' if any(x['kind'] in ['reserve','unknown'] for x in budget.values()) else 'Approved legacy UNKNOWN liability hold installed; frozen v2 model-specific controls apply. See execution receipt for campaign state.'
+    if (private/'terminal-no-more-generation.json').exists():status['continuation']='Terminal: no more generation, retries or models. See mistral-reports/terminal-execution.json for combined denominators and preserved unknown holds.'
     aggregates=[]
     groups=collections.defaultdict(list)
     for row in current.values():groups[(row.get('run_id'),row.get('model_requested'),row.get('stage'),row.get('method'))].append(row)
     for (run,model,stage,method),items in groups.items():aggregates.append({'run_id':run,'model_requested':model,'stage':stage,'method':method,'physical_http_attempts':len(items),'generation_post_attempts':sum(bool(x.get('generation_request')) for x in items),'observed_response_cost_sum_usd':sum(float(x['cost_usd']) for x in items if x.get('cost_usd') is not None),'actual_billed_known_sum_usd':sum(float(x['actual_billed_cost_usd']) for x in items if x.get('actual_billed_cost_usd') is not None),'unknown_cost_records':sum(bool(x.get('generation_request')) and x.get('actual_billed_cost_usd') is None for x in items),'reserve_sum_usd':sum(float(x['reserve_usd']) for x in items if x.get('reserve_usd') is not None)})
     payloads={'api-call-ledger.jsonl':''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in current.values()),'status.json':json.dumps(status,indent=2),'api-call-cost-summary.json':json.dumps(aggregates,indent=2)}
+    public_budget=[]
+    for event in budget_events:
+        item={k:event.get(k) for k in ['kind','reserve_usd','actual_usd','model','run_id','evidence_sha256','meaning'] if k in event};item['attempt_id']=event['case_key'];public_budget.append(item)
+    payloads['budget-reservation-history.jsonl']=''.join(json.dumps(e)+'\n' for e in public_budget)
     for name,text in payloads.items():
         assert not re.search(r'\bgen-[0-9A-Za-z-]+\b',text)
         assert all(identifier not in text for identifier in private_ids)

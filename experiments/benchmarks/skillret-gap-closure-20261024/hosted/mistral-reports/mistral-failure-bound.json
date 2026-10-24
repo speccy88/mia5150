@@ -1,0 +1,22 @@
+{
+  "status": "increased_conservative_stop_hold_no_continuation",
+  "case_id": "nonbenchmark-canary-v3-mistral-1",
+  "request_sha256": "878814214909f29ab17d6035cfe6110b5a953317c689eff736bd692bc14db6ff",
+  "request_reconstruction_matches": true,
+  "http_status": 429,
+  "provider_name": "Parasail",
+  "limit_source": "upstream_provider_shared_pool",
+  "retry_after_header_present": false,
+  "actual_cost_usd": null,
+  "context_tokens": 131072,
+  "endpoint_max_completion_tokens": 32768,
+  "pricing": {
+    "prompt": "0.00000009",
+    "completion": "0.0000003",
+    "input_cache_read": "0.00000005",
+    "discount": 0
+  },
+  "full_endpoint_bound_usd": "0.02162688",
+  "conservative_stop_hold_usd": ".03",
+  "meaning": "Hold increased to cover entire advertised input/completion ceilings. Actual cost remains unknown. The STOP stays active; no retry, fallback or different model is authorized."
+}

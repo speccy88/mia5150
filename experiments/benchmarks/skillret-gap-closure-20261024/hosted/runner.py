@@ -45,6 +45,7 @@ class Client:
         self.profile=profile;self.model=profile['model'] if profile else MODEL;self.expected_provider=profile['provider_name'] if profile else 'DeepInfra'
     def http(self,suffix,body=None):
         if self.read_only and body is not None:raise BudgetStop('Read-only reconciliation forbids POST')
+        if body is not None and self.out is not None and (self.out/'terminal-no-more-generation.json').exists():raise BudgetStop('Hosted campaign terminal; no more generation')
         assert suffix in ['key','models/'+self.model+'/endpoints','chat/completions'] or re.fullmatch(r'generation\?id=gen-[0-9A-Za-z-]{1,124}',suffix)
         request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
         entry,started=log_begin(self,suffix,body)
@@ -95,6 +96,7 @@ class Client:
         return {'authenticated':True,'model':MODEL,'provider_pin':PROVIDER,'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'prices_within_approved_limits':True,'credential_storage':'anonymous stdin into process memory only'}
     def call(self,key,msg,kind,values,allowance):
         if self.read_only:raise BudgetStop('Read-only reconciliation forbids generation')
+        if self.out is not None and (self.out/'terminal-no-more-generation.json').exists():raise BudgetStop('Hosted campaign terminal; no more generation')
         self.active_case=key;self.active_kind=kind
         if self.profile:
             from diverse_contract import payload

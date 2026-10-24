@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "source_commit": "497ca150798d3a4ee3852d0f915e2c1ab276a418",
+  "scope": "Independent offline recomputation from sanitized owner-exported raw response text and HTTP/cost receipts; no live provider calls or account invoice verification.",
+  "inputs_sha256": {
+    "hosted/reports/diverse-cases.jsonl": "55c23cf09aaf2d48ac5d4a4e529a1414b542ab0ce05c5b687f3055eb4ab80a32",
+    "hosted/reports/api-call-ledger.jsonl": "4ddb457e0caf6c63a5e0723b3974580eb55aa43d027f01159280730ae8d3eae0",
+    "hosted/diverse-protocol.json": "1784ad08977e4523a00ea0913a643973518675383f3eda584a2ab0cd1d558836",
+    "hosted/diverse-request-plan.csv": "7929e7d55f00c39b05b1e7045bf1ff8ecaa87bf8890b1331d8b29d90b19b4d49",
+    "hosted/reports/hosted-selection.csv": "31066df42bd8dc964d0327501a37f3ac509f0fe395619a972463336f5e2ecfc8",
+    "hosted/reports/hosted-paired-bootstrap.csv": "902e881b8006786d8529d67b0923dd5012a0412975abf18c8b9a255d96ca8af2"
+  },
+  "official_public_inputs_sha256": {
+    "skills-metadata.jsonl": "74819f4f683cb4dfcfc34085f6caa610202e78c49e8e32a2f5045a825addeb2f",
+    "queries-test.jsonl": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220",
+    "qrels-test.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "manifest_files_verified": 43,
+  "independent_exposed_queries": 24,
+  "gold_cardinality_strata": {
+    "1": 8,
+    "2": 8,
+    "3": 8
+  },
+  "canonical_cases": 120,
+  "response_ledger_matches": 144,
+  "request_payload_hashes_reconstructed": 144,
+  "routing_decisions_checked": 24,
+  "retrieval_metrics_checked": 96,
+  "prior_full_retrieval_candidate_overlaps": 72,
+  "summary_cells": 5,
+  "paired_intervals": 8,
+  "method_results": {
+    "listing": {
+      "exact_count": 5,
+      "denominator": 24,
+      "macro_f1": 0.5446428571428571,
+      "known_benchmark_cost_usd": "0.01609719"
+    },
+    "bm25": {
+      "exact_count": 13,
+      "denominator": 24,
+      "macro_f1": 0.7236111111111111,
+      "known_benchmark_cost_usd": "0.00186564"
+    },
+    "vector": {
+      "exact_count": 7,
+      "denominator": 24,
+      "macro_f1": 0.6291666666666667,
+      "known_benchmark_cost_usd": "0.00176991"
+    },
+    "domain_vector": {
+      "exact_count": 4,
+      "denominator": 24,
+      "macro_f1": 0.5041666666666667,
+      "known_benchmark_cost_usd": "0.00248013"
+    },
+    "hybrid": {
+      "exact_count": 10,
+      "denominator": 24,
+      "macro_f1": 0.6765873015873015,
+      "known_benchmark_cost_usd": "0.00189069"
+    }
+  },
+  "generation_requests_total": 149,
+  "qwen_generation_requests": 147,
+  "qwen_request_stages": {
+    "canary": 3,
+    "selection": 120,
+    "routing": 24
+  },
+  "failed_generation_canaries": 2,
+  "known_qwen_billed_usd": "0.02411946",
+  "benchmark_routing_selection_usd": "0.02410356",
+  "successful_qwen_canaries_usd": "0.00001590",
+  "unknown_hold_usd": "0.16",
+  "guarded_known_plus_hold_usd": "0.18411946",
+  "actual_total_spend_usd": null,
+  "qwen_input_tokens": 253574,
+  "qwen_output_tokens": 4326,
+  "qwen_missing_token_usage_requests": 0,
+  "failed_canaries_missing_token_usage_requests": 2,
+  "logged_readonly_http_events": 6,
+  "historical_readonly_http_total": "unknown; legacy pre-logger events not reconstructed",
+  "reporting_correction_required": "diverse-execution.json known_charged_cost_for_failed_canary_usd mislabels successful Qwen routing-canary cost .00000387; both failed costs remain unknown. No impact on main sums.",
+  "limitations": [
+    "Balanced 24 previously exposed diagnostic, not official-prevalence/fresh-heldout estimate.",
+    "Five repeated methods on 24 queries are 120 condition-cases, not 120 independent queries.",
+    "Gold-conditioned 100-skill catalogs; qrels-based selection, not human semantic adjudication or native skill execution.",
+    "Qwen is one successful hosted arm in this snapshot; DeepSeek/Gemma failed canaries are not model performance results.",
+    "Object-wrapper contract, backend/quantization, context and timing differ from local arms; no causal model-size claim.",
+    "Timing excludes offline retrieval/query embeddings; API-ledger consistency is not independent provider invoice confirmation.",
+    "Nominal paired stratified intervals are descriptive and not multiplicity-adjusted superiority tests.",
+    "Raw canary content is not in public packet; identity/usage/cost receipts audited, owner-only format-check result not independently parsed."
+  ]
+}

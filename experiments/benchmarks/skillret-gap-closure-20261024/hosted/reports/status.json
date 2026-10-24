@@ -1,15 +1,15 @@
 {
-  "checked_utc": "2026-10-24T20:05:36.201339+00:00",
+  "checked_utc": "2026-10-24T20:28:13.232857+00:00",
   "authorized_global_cap_usd": 2,
   "generation_request_ceiling": 600,
-  "generation_post_attempts": 149,
+  "generation_post_attempts": 150,
   "benchmark_selector_cases_completed": 120,
   "benchmark_routing_cases_completed": 24,
   "known_billed_generation_cost_usd": 0.02411946,
   "known_cost_records": 147,
   "actual_total_generation_cost_usd": null,
-  "unknown_cost_attempts": 2,
-  "conservative_reserved_or_known_total_usd": 0.18411946,
+  "unknown_cost_attempts": 3,
+  "conservative_reserved_or_known_total_usd": 0.21411946,
   "latest_read_only_lookup": {
     "http_status": 404,
     "api_error_code": 404,
@@ -34,6 +34,6 @@
   "historical_read_only_request_count": null,
   "historical_read_only_scope": "Read-only calls before transport instrumentation were not fully logged; no invented count or latency. All newly instrumented HTTP calls include stage and method.",
   "credential_policy": "User requested encrypted local retention until explicit deletion instruction; never publish credential/ciphertext/path.",
-  "continuation": "Approved legacy UNKNOWN liability hold installed; frozen v2 model-specific controls apply. See execution receipt for campaign state.",
+  "continuation": "Terminal: no more generation, retries or models. See mistral-reports/terminal-execution.json for combined denominators and preserved unknown holds.",
   "bounded_unknown_attempts": 2
 }

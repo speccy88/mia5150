@@ -69,3 +69,17 @@ class Budget:
                 model_total=sum((D(x.get('actual_usd') if x.get('actual_usd') is not None else x['reserve_usd']) for x in current.values() if (x.get('model') or self.legacy_model)==model),D(0))-D(old['reserve_usd'])+value
                 if model not in self.model_caps or model_total>self.model_caps[model]:raise BudgetStop('Bound exceeds model allocation')
             self.append({'kind':'bounded_unknown','case_key':key,'reserve_usd':str(value),'actual_usd':None,'evidence_sha256':evidence_sha256,'meaning':'Permanent unknown liability hold; not settled or measured cost'})
+    def raise_unknown_hold(self,key,amount,evidence_sha256):
+        """Increase a failed request's hold while retaining the generation STOP."""
+        import re
+        value=D(str(amount))
+        if not value.is_finite() or value<0 or not re.fullmatch('[a-f0-9]{64}',evidence_sha256):raise BudgetStop('Invalid hold evidence')
+        with self.lock():
+            current,held=self.state();old=current.get(key)
+            if old is None or old.get('kind')!='unknown' or old.get('actual_usd') is not None:raise BudgetStop('Expected an unknown stopped request')
+            if value<D(old['reserve_usd']):raise BudgetStop('Hold cannot shrink')
+            total=held-D(old['reserve_usd'])+value
+            if total>self.usd_cap or total*self.fx>self.cad_cap:raise BudgetStop('Hold exceeds global cap')
+            model=old.get('model') or self.legacy_model
+            if self.model_caps and (model not in self.model_caps or value>self.model_caps[model]):raise BudgetStop('Hold exceeds model cap')
+            self.append({'kind':'unknown','case_key':key,'reserve_usd':str(value),'actual_usd':None,'evidence_sha256':evidence_sha256,'meaning':'Increased conservative liability; generation remains stopped. Not settled, not permission to continue.'})
