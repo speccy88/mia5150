@@ -45,7 +45,14 @@ def execute(runtime,key):
         if key in calls:return calls[key]
         prior,_=budget.state()
         if key in prior:raise BudgetStop('Attempt exists without durable response; never replay')
-        record=client.call(key,msg,kind,values,int(planned['input_allowance']));calls[key]=record;return record
+        try:record=client.call(key,msg,kind,values,int(planned['input_allowance']))
+        except BudgetStop:
+            append_jsonl(work/'halted-attempts.jsonl',{'case_key':key,'model':p['model'],'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'reason':'request_guard_halt','no_replay':True});raise
+        calls[key]=record
+        if record.get('http_status')!=200 or record.get('status') in ['provider_error','choice_error']:
+            client.unavailable_halt=True
+            append_jsonl(work/'halted-attempts.jsonl',{'case_key':key,'model':p['model'],'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'reason':'unavailable_response','no_replay':True});raise BudgetStop('Unavailable response; stop route')
+        return record
     terminal=[]
     continuation=read(HERE/'continuation-20261024.json');assert continuation['frozen_protocol_sha256']==protocol_sha
     for p in PROFILES:
@@ -58,7 +65,7 @@ def execute(runtime,key):
             try:answer=request(client,p,cid,c['messages'],c['kind'],c['values'],planned)
             except BudgetStop:
                 state,_=budget.state()
-                if getattr(client,'rate_limit_halt',False) or any(s['kind'] in ['reserve','unknown'] for s in state.values()):
+                if getattr(client,'unavailable_halt',False) or getattr(client,'rate_limit_halt',False) or any(s['kind'] in ['reserve','unknown'] for s in state.values()):
                     append_jsonl(work/'canary-validation.jsonl',{'case_id':cid,'model':p['model'],'status':'failed_guard_unknown_billing','protocol_sha256':protocol_sha});raise
                 append_jsonl(work/'canary-validation.jsonl',{'case_id':cid,'model':p['model'],'status':'failed_guard_after_known_billing','protocol_sha256':protocol_sha});failed=True;break
             try:assert accept(answer,p,c['kind'],c['values'])==c['expected']
