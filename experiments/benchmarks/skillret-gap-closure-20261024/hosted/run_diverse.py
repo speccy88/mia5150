@@ -27,15 +27,18 @@ def verify(client,p):
     if p['seed']:assert 'seed' in endpoint['supported_parameters']
     return {'model':p['model'],'provider':p['endpoint'],'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':0,'prices_within_frozen_limits':True}
 
-def execute(runtime,key):
-    out=runtime/'hosted-execution';work=runtime/'hosted-diverse-v2';plan=read(HERE/'diverse-protocol.json');private_plan=read(work/'frozen-plan.json');assert plan==private_plan
+def execute(runtime,key,mistral=False):
+    from mistral_contract import PROFILE as MISTRAL
+    out=runtime/'hosted-execution';work=runtime/('hosted-mistral-v3' if mistral else 'hosted-diverse-v2');plan=read(HERE/('mistral-protocol.json' if mistral else 'diverse-protocol.json'));private_plan=read(work/'frozen-plan.json');assert plan==private_plan
     check=dict(plan);protocol_sha=check.pop('protocol_sha256');assert digest(check)==protocol_sha
-    shared=read(work/'shared-inputs.json');assert digest(shared['entries'])==plan['shared_inputs_sha256'] and plan['profiles']==PROFILES
-    with (HERE/'diverse-request-plan.csv').open() as f:request_plan=list(csv.DictReader(f))
+    shared=read(work/'shared-inputs.json');assert digest(shared['entries'])==plan['shared_inputs_sha256']
+    if mistral:assert plan['profile']==MISTRAL;profiles=[MISTRAL]
+    else:assert plan['profiles']==PROFILES;profiles=PROFILES
+    with (HERE/('mistral-request-plan.csv' if mistral else 'diverse-request-plan.csv')).open() as f:request_plan=list(csv.DictReader(f))
     typed=[{k:(int(v) if k in ['input_allowance','output_limit'] else v=='True' if k=='context_admitted' else v) for k,v in r.items()} for r in request_plan]
     assert digest(typed)==plan['request_plan_sha256'],'Request/token plan changed after freeze'
     allowances={(r['model'],r['query_id'],r['method'],r['stage']):r for r in request_plan}
-    budget=Budget(out/'budget-ledger.jsonl',2,3,1.5,600,{p['model']:p['cap'] for p in PROFILES},legacy_model='deepseek/deepseek-v4-flash-0731')
+    budget=Budget(out/'budget-ledger.jsonl',2,3,1.5,600,{p['model']:p['cap'] for p in [*PROFILES,MISTRAL]},legacy_model='deepseek/deepseek-v4-flash-0731')
     state,_=budget.state();assert state['nonbenchmark-canary-1']['kind']=='bounded_unknown' and D(state['nonbenchmark-canary-1']['reserve_usd'])>=D('.14') and state['nonbenchmark-canary-1']['actual_usd'] is None
     if any(s['kind'] in ['reserve','unknown'] for s in state.values()):raise BudgetStop('New unresolved/in-flight request; no expansion')
     calls={r['case_key']:r for r in rows(out/'calls.jsonl')};cases={r['case_id']:r for r in rows(work/'cases.jsonl')};labels=read(HERE.parent/'evaluator-labels.json')
@@ -54,14 +57,15 @@ def execute(runtime,key):
             append_jsonl(work/'halted-attempts.jsonl',{'case_key':key,'model':p['model'],'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'reason':'unavailable_response','no_replay':True});raise BudgetStop('Unavailable response; stop route')
         return record
     terminal=[]
-    continuation=read(HERE/'continuation-20261024.json');assert continuation['frozen_protocol_sha256']==protocol_sha
-    for p in PROFILES:
+    continuation={'active_model_slugs':['mistral']} if mistral else read(HERE/'continuation-20261024.json')
+    if not mistral:assert continuation['frozen_protocol_sha256']==protocol_sha
+    for p in profiles:
         if p['slug'] not in continuation['active_model_slugs']:
             terminal.append({'model':p['model'],'status':'no_generation_provider_paused_by_continuation'});continue
         client=Client(key,budget,None,out,{},profile=p);auth=client.http('key');assert auth.get('_http_status')==200 and isinstance(auth.get('data'),dict)
         append_jsonl(work/'availability.jsonl',verify(client,p));failed=False
         for i,c in enumerate(canaries()):
-            cid='nonbenchmark-canary-v2-'+p['slug']+'-'+str(i+1);client.active_method='canary';planned=allowances[(p['model'],'canary-'+str(i+1),'canary',c['kind'])]
+            cid='nonbenchmark-canary-'+('v3-' if mistral else 'v2-')+p['slug']+'-'+str(i+1);client.active_method='canary';planned=allowances[(p['model'],'canary-'+str(i+1),'canary',c['kind'])]
             try:answer=request(client,p,cid,c['messages'],c['kind'],c['values'],planned)
             except BudgetStop:
                 state,_=budget.state()
@@ -75,7 +79,7 @@ def execute(runtime,key):
         if failed:
             terminal.append({'model':p['model'],'status':'compatibility_failed_no_benchmark_expansion'});print(p['slug']+' compatibility failed; no benchmark requests for model',flush=True);continue
         for entry in shared['entries']:
-            qid=entry['query_id'];method=entry['method'];cid='hv2-'+digest([protocol_sha,p['model'],qid,100,method]);client.active_method=method
+            qid=entry['query_id'];method=entry['method'];cid=('hm3-' if mistral else 'hv2-')+digest([protocol_sha,p['model'],qid,100,method]);client.active_method=method
             if cid in cases:continue
             record={'case_id':cid,'query_id':qid,'size':100,'seed':42,'method':method,'model':p['model'],'provider_pin':p['endpoint'],'protocol_sha256':protocol_sha,'panel':'balanced24_exposed','gold_ids':labels[qid],'selected_ids':[],'status':'pending'};started=time.perf_counter()
             branch='common'
@@ -88,20 +92,20 @@ def execute(runtime,key):
                 branch_input=entry['branches'][branch];planned=allowances[(p['model'],qid,method,'selection')]
                 if method=='domain_vector':
                     frozen_hash=digest([digest(payload(p,b['messages'],'selection',b['mapping'])) for b in entry['branches'].values()]);assert frozen_hash==planned['request_sha256']
-                if planned['context_admitted']!='True':record['status']='context_preflight_excluded'
+                if planned.get('context_admitted','True')!='True':record['status']='context_preflight_excluded'
                 else:
                     answer=request(client,p,cid,branch_input['messages'],'selection',branch_input['mapping'],planned);record['selector_attempt_key']=cid;record['candidate_ids']=branch_input['candidate_ids'];record['retrieval']=None if method=='listing' else retrieval_metrics(branch_input['ranking'],labels[qid])
                     try:record['selected_ids']=accept(answer,p,'selection',branch_input['mapping']);record['status']='ok'
                     except (ValueError,TypeError):record['status']='invalid_selection_response';record['returned_cardinality_unknown']=True
             record['metrics']=selection_metrics(record['selected_ids'],labels[qid],record['status']);record['method_body_wall_seconds']=time.perf_counter()-started;record['end_to_end_seconds']=None;record['timing_scope']=plan['timing_scope'];append_jsonl(work/'cases.jsonl',record);cases[cid]=record
-            if len(cases)%20==0:print('hosted matched cases durable '+str(len(cases))+'/360',flush=True)
+            if len(cases)%20==0:print('hosted matched cases durable '+str(len(cases))+'/120 active cases',flush=True)
         terminal.append({'model':p['model'],'status':'benchmark_panel_complete'})
     current,held=budget.state();receipt={'status':'run_terminal','protocol_sha256':protocol_sha,'models':terminal,'canonical_cases':len(cases),'physical_generation_attempts_including_legacy':len(current),'guarded_total_usd':str(held),'actual_total_usd':None if any(x.get('actual_usd') is None for x in current.values()) else str(held),'legacy_unknown_cost_preserved':True,'cap_usd':'2.00','call_cap':600};(work/'execution.json').write_text(json.dumps(receipt,indent=2));print(json.dumps(receipt),flush=True)
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--runtime-root',required=True);a=p.parse_args();key=sys.stdin.read().strip()
+    p=argparse.ArgumentParser();p.add_argument('--runtime-root',required=True);p.add_argument('--mistral',action='store_true');a=p.parse_args();key=sys.stdin.read().strip()
     if not key or '\n' in key:raise BudgetStop('Missing private stdin credential')
-    execute(pathlib.Path(a.runtime_root),key)
+    execute(pathlib.Path(a.runtime_root),key,a.mistral)
 if __name__=='__main__':
     try:main()
     except Exception as error:print('HOSTED_DIVERSE_HALTED: '+type(error).__name__+'; inspect private receipts; no automatic retry',file=sys.stderr);raise SystemExit(1)

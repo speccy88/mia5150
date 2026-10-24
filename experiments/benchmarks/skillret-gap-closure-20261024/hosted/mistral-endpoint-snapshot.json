@@ -1,0 +1,56 @@
+{
+  "source": "https://openrouter.ai/api/v1/models/mistralai/mistral-small-3.2-24b-instruct/endpoints",
+  "checked_utc": "2026-10-24T20:18:18.387216+00:00",
+  "endpoint": {
+    "name": "Parasail | mistralai/mistral-small-3.2-24b-instruct-2506",
+    "model_id": "mistralai/mistral-small-3.2-24b-instruct",
+    "model_name": "Mistral: Mistral Small 3.2 24B",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005",
+      "discount": 0
+    },
+    "provider_name": "Parasail",
+    "tag": "parasail/bf16",
+    "service_tier": null,
+    "quantization": "bf16",
+    "max_completion_tokens": 32768,
+    "max_prompt_tokens": null,
+    "supported_parameters": [
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "frequency_penalty",
+      "presence_penalty",
+      "repetition_penalty",
+      "seed",
+      "stop",
+      "top_k",
+      "logit_bias",
+      "structured_outputs",
+      "response_format",
+      "logprobs",
+      "top_logprobs"
+    ],
+    "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+    },
+    "status": 0,
+    "uptime_last_30m": 100,
+    "uptime_last_5m": 100,
+    "uptime_last_1d": 99.85984583041345,
+    "supports_implicit_caching": true,
+    "native_tools": {},
+    "supports_voice_cloning": false,
+    "supports_multiple_audio_references": false,
+    "supports_image_reference": false,
+    "supports_diarization": false,
+    "latency_last_30m": null,
+    "throughput_last_30m": null
+  }
+}

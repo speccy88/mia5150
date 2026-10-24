@@ -108,7 +108,7 @@ class Client:
         else:tokens=sum(len(self.tokenizer.encode(m['role']+'\n'+m['content']).ids) for m in msg)+len(self.tokenizer.encode(json.dumps(body['response_format'])).ids)
         if tokens+512>allowance:raise BudgetStop('Tokenizer/schema count exceeds frozen per-request allowance; no call')
         rate_in=self.profile['input_rate'] if self.profile else '.00000006';rate_out=self.profile['output_rate'] if self.profile else '.00000018'
-        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal(rate_in)+decimal.Decimal(128)*decimal.Decimal(rate_out),model=self.model,run_id='hosted-diverse-v2-20261024' if self.profile else 'hosted-followup-20261024')
+        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal(rate_in)+decimal.Decimal(128)*decimal.Decimal(rate_out),model=self.model,run_id=self.profile.get('run_id','hosted-diverse-v2-20261024') if self.profile else 'hosted-followup-20261024')
         record={'case_key':key,'request_sha256':digest(body),'kind':kind,'reserved_input_tokens':allowance,'estimated_input_tokens':tokens,'output_token_limit':128,'physical_call':True,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_tokens':None,'output_tokens':None,'cost_usd':None}
         started=time.perf_counter()
         try:

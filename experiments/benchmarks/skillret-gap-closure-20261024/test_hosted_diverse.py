@@ -6,6 +6,7 @@ from diverse_contract import PROFILES,payload,input_allowance,parse
 from run_diverse import accept
 from runner import Client
 from budget import Budget,BudgetStop
+from mistral_contract import PROFILE as MISTRAL
 
 @pytest.mark.parametrize('profile',PROFILES)
 def test_model_specific_route_rates_and_parameters(profile):
@@ -54,3 +55,18 @@ def test_unicode_line_separators_do_not_break_jsonl_records(tmp_path):
     from prepare_diverse import rows
     p=tmp_path/'unicode.jsonl';p.write_text(json.dumps({'text':'a\u2028b'},ensure_ascii=False)+'\n')
     assert rows(p)==[{'text':'a\u2028b'}]
+
+def test_mistral_uses_distinct_pinned_bf16_route_and_matching_object_contract():
+    body=payload(MISTRAL,[{'role':'user','content':'fixture'}],'selection',{})
+    assert body['model']=='mistralai/mistral-small-3.2-24b-instruct'
+    assert body['provider']=={'only':['parasail/bf16'],'allow_fallbacks':False,'require_parameters':True}
+    assert body['max_tokens']==128 and body['temperature']==0 and 'seed' not in body
+    record={'http_status':200,'status':'returned','finish_reason':'stop','content':'{"selected_ids":[]}','model':MISTRAL['model'],'provider':'Parasail','input_tokens':10,'output_tokens':5,'cost_usd':0}
+    assert accept(record,MISTRAL,'selection',{})==[]
+    with pytest.raises(ValueError):accept({**record,'provider':'SiliconFlow'},MISTRAL,'selection',{})
+
+def test_mistral_reservation_cap_is_independent_inside_global_cap(tmp_path):
+    b=Budget(tmp_path/'b.jsonl',2,3,1.5,600,{MISTRAL['model']:'.35'})
+    with pytest.raises(BudgetStop):b.reserve('too-large','.35000001',model=MISTRAL['model'])
+    b.reserve('fits','.32532660',model=MISTRAL['model']);b.settle('fits','.024')
+    assert str(b.state()[1])=='0.024'
