@@ -1,0 +1,39 @@
+{
+  "status": "frozen_before_new_model_outcomes",
+  "models": [
+    {
+      "model": "google/gemma-3-27b-it",
+      "planned_generation_attempts": 147,
+      "admitted_attempts": 147,
+      "input_allowance_sum": 3552020,
+      "output_allowance_sum": 18816,
+      "conservative_planned_cost_usd": "0.28717216",
+      "legacy_unknown_hold_usd": "0",
+      "model_cap_usd": ".65"
+    },
+    {
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "planned_generation_attempts": 147,
+      "admitted_attempts": 147,
+      "input_allowance_sum": 3552020,
+      "output_allowance_sum": 18816,
+      "conservative_planned_cost_usd": "0.32532660",
+      "legacy_unknown_hold_usd": "0",
+      "model_cap_usd": ".70"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "planned_generation_attempts": 147,
+      "admitted_attempts": 147,
+      "input_allowance_sum": 3552020,
+      "output_allowance_sum": 18816,
+      "conservative_planned_cost_usd": "0.21650808",
+      "legacy_unknown_hold_usd": "0.14",
+      "model_cap_usd": ".60"
+    }
+  ],
+  "total_with_unknown_hold_usd": "0.96900684",
+  "planned_generation_attempts_including_legacy": 442,
+  "context_excluded_requests": 0,
+  "protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3"
+}

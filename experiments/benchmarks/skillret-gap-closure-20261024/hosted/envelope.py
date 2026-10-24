@@ -7,12 +7,13 @@ def decode_http(raw,status):
     if not isinstance(value,dict):return {'_non_object_json':type(value).__name__,'_http_status':status}
     return {**value,'_http_status':status}
 
-def provider_matches(value):
+def provider_matches(value,expected_provider='DeepInfra'):
     # Human-readable provider evidence does not prove FP8; the request pin is
     # recorded separately. Do not compare display names to endpoint slugs.
-    return isinstance(value,str) and re.sub('[^a-z0-9]','',value.casefold()) in {'deepinfra','deepinfrafp8'}
+    expected=re.sub('[^a-z0-9]','',expected_provider.casefold())
+    return isinstance(value,str) and re.sub('[^a-z0-9]','',value.casefold()) in {expected,expected+'fp8'}
 
-def provenance_matches(model,provider,expected_model):return model==expected_model and provider_matches(provider)
+def provenance_matches(model,provider,expected_model,expected_provider='DeepInfra'):return model==expected_model and provider_matches(provider,expected_provider)
 
 def envelope_identity(value):
     if not isinstance(value,dict):value={'_non_object_json':type(value).__name__}
@@ -40,10 +41,10 @@ def parse_envelope(value):
     elif not isinstance(content,str) or not content.strip():status='empty_content'
     return {**identity,'status':status,'input_tokens':usage.get('prompt_tokens'),'output_tokens':usage.get('completion_tokens'),'reasoning_tokens':details.get('reasoning_tokens') if isinstance(details,dict) else None,'cost_usd':usage.get('cost'),'finish_reason':finish,'content':content if isinstance(content,str) else None,'refusal_present':bool(message.get('refusal'))}
 
-def valid_result(record,expected_model):
+def valid_result(record,expected_model,expected_provider='DeepInfra'):
     try:cost=decimal.Decimal(str(record.get('cost_usd')));cost_known=not isinstance(record.get('cost_usd'),bool) and cost.is_finite() and cost>=0
     except decimal.InvalidOperation:cost_known=False
-    return cost_known and record.get('status')=='returned' and record.get('finish_reason')=='stop' and not record.get('refusal_present') and isinstance(record.get('content'),str) and bool(record['content'].strip()) and provenance_matches(record.get('model'),record.get('provider'),expected_model) and all(isinstance(record.get(k),int) and not isinstance(record[k],bool) and record[k]>=0 for k in ['input_tokens','output_tokens'])
+    return cost_known and record.get('status')=='returned' and record.get('finish_reason')=='stop' and not record.get('refusal_present') and isinstance(record.get('content'),str) and bool(record['content'].strip()) and provenance_matches(record.get('model'),record.get('provider'),expected_model,expected_provider) and all(isinstance(record.get(k),int) and not isinstance(record[k],bool) and record[k]>=0 for k in ['input_tokens','output_tokens'])
 
 def canary_valid(record,expected_model):
     if not valid_result(record,expected_model):return False

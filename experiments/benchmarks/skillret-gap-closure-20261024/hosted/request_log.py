@@ -9,6 +9,7 @@ def begin(client,suffix,body):
     if body is not None:stage='canary' if (getattr(client,'active_case','') or '').startswith('nonbenchmark-canary') else getattr(client,'active_kind','generation')
     row={'event':'started','request_id':uid,'run_id':'hosted-followup-20261024','case_id':getattr(client,'active_case',None),'attempt_id':uid,'stage':stage,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'http_method':'POST' if body is not None else 'GET','endpoint_family':suffix.split('?')[0],'generation_request':body is not None,'model_requested':body.get('model') if isinstance(body,dict) else None,'provider_pin':body.get('provider') if isinstance(body,dict) else None}
     row['method']=getattr(client,'active_method',None)
+    if getattr(client,'profile',None):row['run_id']='hosted-diverse-v2-20261024'
     append_jsonl(client.out/'http-events.jsonl',row);client.last_http_request_id=uid
     return row,time.perf_counter()
 

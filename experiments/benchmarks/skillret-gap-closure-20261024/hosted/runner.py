@@ -40,10 +40,12 @@ def request_body(msg,kind,values):
     return {'model':MODEL,'provider':PROVIDER,'messages':msg,'response_format':schema(kind,values),'temperature':0,'seed':20261024,'max_tokens':128,'reasoning':{'effort':'none'},'stream':False}
 
 class Client:
-    def __init__(self,key,budget,tokenizer,out,allowances,read_only=False):self.key=key;self.budget=budget;self.tokenizer=tokenizer;self.out=out;self.allowances=allowances;self.read_only=read_only
+    def __init__(self,key,budget,tokenizer,out,allowances,read_only=False,profile=None):
+        self.key=key;self.budget=budget;self.tokenizer=tokenizer;self.out=out;self.allowances=allowances;self.read_only=read_only
+        self.profile=profile;self.model=profile['model'] if profile else MODEL;self.expected_provider=profile['provider_name'] if profile else 'DeepInfra'
     def http(self,suffix,body=None):
         if self.read_only and body is not None:raise BudgetStop('Read-only reconciliation forbids POST')
-        assert suffix in ['key','models/deepseek/deepseek-v4-flash-0731/endpoints','chat/completions'] or re.fullmatch(r'generation\?id=gen-[0-9A-Za-z-]{1,124}',suffix)
+        assert suffix in ['key','models/'+self.model+'/endpoints','chat/completions'] or re.fullmatch(r'generation\?id=gen-[0-9A-Za-z-]{1,124}',suffix)
         request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
         entry,started=log_begin(self,suffix,body)
         try:
@@ -80,7 +82,7 @@ class Client:
         if isinstance(data['total_cost'],bool) or not cost.is_finite() or cost<0:
             append_jsonl(self.out/'reconciliation.jsonl',{'case_key':key,'response_id':response_id,'status':'invalid_total_cost_hold_retained','cost_type':type(data['total_cost']).__name__})
             raise BudgetStop('Invalid authoritative total_cost; hold retained')
-        receipt={'case_key':key,'response_id':response_id,'status':'provider_usage_reconciled','cost_usd':data['total_cost'],'input_tokens':data.get('native_tokens_prompt') if data.get('native_tokens_prompt') is not None else data.get('tokens_prompt'),'output_tokens':data.get('native_tokens_completion') if data.get('native_tokens_completion') is not None else data.get('tokens_completion'),'provider':data.get('provider_name'),'model':data.get('model'),'provenance_verified':provenance_matches(data.get('model'),data.get('provider_name'),MODEL),'finish_reason':data.get('finish_reason'),'generation_error':data.get('error'),'scope':'Matched ID and authoritative total_cost settle billing; model/provider validity is a separate gate. No generation replay.'}
+        receipt={'case_key':key,'response_id':response_id,'status':'provider_usage_reconciled','cost_usd':data['total_cost'],'input_tokens':data.get('native_tokens_prompt') if data.get('native_tokens_prompt') is not None else data.get('tokens_prompt'),'output_tokens':data.get('native_tokens_completion') if data.get('native_tokens_completion') is not None else data.get('tokens_completion'),'provider':data.get('provider_name'),'model':data.get('model'),'provenance_verified':provenance_matches(data.get('model'),data.get('provider_name'),self.model,self.expected_provider),'finish_reason':data.get('finish_reason'),'generation_error':data.get('error'),'scope':'Matched ID and authoritative total_cost settle billing; model/provider validity is a separate gate. No generation replay.'}
         append_jsonl(self.out/'reconciliation.jsonl',receipt);self.budget.settle(key,data['total_cost']);return receipt
     def verify(self,auth_only=False):
         auth=self.http('key');assert 'data' in auth,'Authentication response missing data'
@@ -94,12 +96,19 @@ class Client:
     def call(self,key,msg,kind,values,allowance):
         if self.read_only:raise BudgetStop('Read-only reconciliation forbids generation')
         self.active_case=key;self.active_kind=kind
-        body=request_body(msg,kind,values)
+        if self.profile:
+            from diverse_contract import payload
+            body=payload(self.profile,msg,kind,values)
+        else:body=request_body(msg,kind,values)
         # Estimate model-visible content, not doubly escaped HTTP wire JSON.
         # The frozen allowance separately reserves 4096 wrapper/schema tokens.
-        tokens=sum(len(self.tokenizer.encode(m['role']+'\n'+m['content']).ids) for m in msg)+len(self.tokenizer.encode(json.dumps(body['response_format'])).ids)
+        if self.profile:
+            from diverse_contract import input_allowance
+            tokens=input_allowance(body)-8192
+        else:tokens=sum(len(self.tokenizer.encode(m['role']+'\n'+m['content']).ids) for m in msg)+len(self.tokenizer.encode(json.dumps(body['response_format'])).ids)
         if tokens+512>allowance:raise BudgetStop('Tokenizer/schema count exceeds frozen per-request allowance; no call')
-        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal('.00000006')+decimal.Decimal(128)*decimal.Decimal('.00000018'),model=MODEL,run_id='hosted-followup-20261024')
+        rate_in=self.profile['input_rate'] if self.profile else '.00000006';rate_out=self.profile['output_rate'] if self.profile else '.00000018'
+        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal(rate_in)+decimal.Decimal(128)*decimal.Decimal(rate_out),model=self.model,run_id='hosted-diverse-v2-20261024' if self.profile else 'hosted-followup-20261024')
         record={'case_key':key,'request_sha256':digest(body),'kind':kind,'reserved_input_tokens':allowance,'estimated_input_tokens':tokens,'output_token_limit':128,'physical_call':True,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_tokens':None,'output_tokens':None,'cost_usd':None}
         started=time.perf_counter()
         try:
@@ -115,7 +124,7 @@ class Client:
                 recovered=self.reconcile(key,record['response_id']);record.update(cost_usd=recovered['cost_usd'],input_tokens=recovered['input_tokens'],output_tokens=recovered['output_tokens'],provider=recovered['provider'])
                 if recovered['provenance_verified']:record['model']=recovered['model']
             else:self.budget.settle(key,record['cost_usd'])
-            if not provenance_matches(record.get('model'),record.get('provider'),MODEL):raise BudgetStop('Unverified model/provider; expansion halted')
+            if not provenance_matches(record.get('model'),record.get('provider'),self.model,self.expected_provider):raise BudgetStop('Unverified model/provider; expansion halted')
             if record['input_tokens'] is None or record['output_tokens'] is None:raise BudgetStop('Missing usage; expansion halted')
             if record['input_tokens']>allowance or record['output_tokens']>128:raise BudgetStop('Usage exceeded reserved token contract; expansion halted')
             return record

@@ -1,0 +1,168 @@
+[
+  {
+    "utc": "2026-10-24T19:43:49.859148+00:00",
+    "source": "https://openrouter.ai/api/v1/models/google/gemma-3-27b-it/endpoints",
+    "endpoint": {
+      "name": "DeepInfra | google/gemma-3-27b-it",
+      "model_id": "google/gemma-3-27b-it",
+      "model_name": "Google: Gemma 3 27B",
+      "context_length": 131072,
+      "pricing": {
+        "prompt": "0.00000008",
+        "completion": "0.00000016",
+        "discount": 0
+      },
+      "provider_name": "DeepInfra",
+      "tag": "deepinfra/fp8",
+      "service_tier": null,
+      "quantization": "fp8",
+      "max_completion_tokens": 16384,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "repetition_penalty",
+        "top_k",
+        "seed",
+        "min_p",
+        "logit_bias",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "response_format"
+      ],
+      "supports_tool_choice": {
+        "none": false,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 99.93016759776536,
+      "supports_implicit_caching": false,
+      "native_tools": {},
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  },
+  {
+    "utc": "2026-10-24T19:43:49.954502+00:00",
+    "source": "https://openrouter.ai/api/v1/models/qwen/qwen3-30b-a3b-instruct-2507/endpoints",
+    "endpoint": {
+      "name": "SiliconFlow | qwen/qwen3-30b-a3b-instruct-2507",
+      "model_id": "qwen/qwen3-30b-a3b-instruct-2507",
+      "model_name": "Qwen: Qwen3 30B A3B Instruct 2507",
+      "context_length": 262144,
+      "pricing": {
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "discount": 0
+      },
+      "provider_name": "SiliconFlow",
+      "tag": "siliconflow/fp8",
+      "service_tier": null,
+      "quantization": "fp8",
+      "max_completion_tokens": 235929,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "structured_outputs",
+        "response_format",
+        "temperature",
+        "top_p",
+        "top_k",
+        "frequency_penalty",
+        "tools",
+        "tool_choice",
+        "max_tokens"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {},
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  },
+  {
+    "utc": "2026-10-24T19:43:50.090040+00:00",
+    "source": "https://openrouter.ai/api/v1/models/deepseek/deepseek-v4-flash-0731/endpoints",
+    "endpoint": {
+      "name": "DeepInfra | deepseek/deepseek-v4-flash-20260731",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "model_name": "DeepSeek: DeepSeek V4 Flash 0731",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000015",
+        "discount": 0
+      },
+      "provider_name": "DeepInfra",
+      "tag": "deepinfra/fp8",
+      "service_tier": null,
+      "quantization": "fp8",
+      "max_completion_tokens": 384000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "repetition_penalty",
+        "top_k",
+        "seed",
+        "min_p",
+        "tools",
+        "tool_choice",
+        "structured_outputs",
+        "logit_bias",
+        "response_format",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": true,
+      "native_tools": {},
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  }
+]
