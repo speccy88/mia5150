@@ -1,0 +1,141 @@
+{
+  "scope": "Synthetic non-evaluation fixtures, no expected relevance labels. CPU encoder may be running; timing is calibration only, not paper method latency.",
+  "records": [
+    {
+      "size": 10,
+      "fixture_sha256": "036a9a0c5346864dd1e380b45d9f9119920210c05e2abe6a02986f57b16f5997",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.0002875000000130967,
+          0.00011210000002392917,
+          8.870000010574586e-05
+        ],
+        "sparse": [
+          0.00020110000014028628,
+          0.00011199999971722718,
+          8.489999981975416e-05
+        ]
+      }
+    },
+    {
+      "size": 10,
+      "fixture_sha256": "2b5aa8de4c0bb604b2414ae2e2946d04fcaeb4b74aa566c60239496c15a3fead",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.0001525999996374594,
+          0.000105000000075961,
+          9.669999963080045e-05
+        ],
+        "sparse": [
+          0.00019770000017160783,
+          0.00013650000028064824,
+          0.0001194999999825086
+        ]
+      }
+    },
+    {
+      "size": 100,
+      "fixture_sha256": "036a9a0c5346864dd1e380b45d9f9119920210c05e2abe6a02986f57b16f5997",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.00033889999986058683,
+          0.0002912999998443411,
+          0.0002632999999150343
+        ],
+        "sparse": [
+          0.0001882000001387496,
+          0.00015590000020893058,
+          0.00014009999995323597
+        ]
+      }
+    },
+    {
+      "size": 100,
+      "fixture_sha256": "2b5aa8de4c0bb604b2414ae2e2946d04fcaeb4b74aa566c60239496c15a3fead",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.00036789999967368203,
+          0.0003670000000965956,
+          0.00032129999999597203
+        ],
+        "sparse": [
+          0.000279900000350608,
+          0.000292899999749352,
+          0.00020100000028833165
+        ]
+      }
+    },
+    {
+      "size": 1000,
+      "fixture_sha256": "036a9a0c5346864dd1e380b45d9f9119920210c05e2abe6a02986f57b16f5997",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.002414000000044325,
+          0.002134300000307121,
+          0.002122599999893282
+        ],
+        "sparse": [
+          0.0008761999997659586,
+          0.0007166000000324857,
+          0.0006668999999419611
+        ]
+      }
+    },
+    {
+      "size": 1000,
+      "fixture_sha256": "2b5aa8de4c0bb604b2414ae2e2946d04fcaeb4b74aa566c60239496c15a3fead",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.0026899999998022395,
+          0.0026810000003933965,
+          0.0026987999999619205
+        ],
+        "sparse": [
+          0.0008916000001590874,
+          0.0008328999997502251,
+          0.0007779000002301473
+        ]
+      }
+    },
+    {
+      "size": 6006,
+      "fixture_sha256": "036a9a0c5346864dd1e380b45d9f9119920210c05e2abe6a02986f57b16f5997",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.013085899999623507,
+          0.01298789999964356,
+          0.013098900000386493
+        ],
+        "sparse": [
+          0.009457999999995081,
+          0.004366800000298099,
+          0.004519999999956781
+        ]
+      }
+    },
+    {
+      "size": 6006,
+      "fixture_sha256": "2b5aa8de4c0bb604b2414ae2e2946d04fcaeb4b74aa566c60239496c15a3fead",
+      "ranking100_identical": true,
+      "timings_seconds": {
+        "reference": [
+          0.016074699000000692,
+          0.016533999999865046,
+          0.01570639999999912
+        ],
+        "sparse": [
+          0.004711000000042986,
+          0.0046056000001044595,
+          0.005379900000207272
+        ]
+      }
+    }
+  ]
+}

@@ -176,7 +176,15 @@ def load_search(cfg,full=False):
     return docs,m,np.load(r/'docs.npy',mmap_mode='r'),np.load(r/('queries-full.npy' if full else 'queries.npy'),mmap_mode='r'),BM25(docs)
 
 def retrieval(cfg):
+    archive=HERE/'results/retrieval.jsonl.gz'
+    if archive.exists():
+        receipt=read(HERE/'results/retrieval-archive.json');assert filehash(archive)==receipt['gzip_sha256']
+        print('Verified completed retrieval archive reused; aggregate.py reads compressed raw evidence',flush=True);return
     docs,m,dv,qv,bm=load_search(cfg,True);docpos={d:i for i,d in enumerate(m['document_ids'])};qpos={q:i for i,q in enumerate(m['query_ids'])}
+    from fast_bm25 import SparseBM25
+    del bm
+    bm=SparseBM25(docs)
+    source_id=digest([filehash(HERE/'run.py'),filehash(HERE/'fast_bm25.py'),filehash(HERE/'core.py')])
     queries=rows(source()/'queries-test.jsonl');gold={q['id']:set(q['skill_ids']) for q in queries};out=HERE/'results/retrieval.jsonl';out.parent.mkdir(exist_ok=True)
     done={x['case_id'] for x in rows(out)} if out.exists() else set();started=time.perf_counter();protocol_id=read(HERE/'protocol.json')['protocol_sha256']
     for qi,q in enumerate(queries):
@@ -190,7 +198,7 @@ def retrieval(cfg):
                 t=time.perf_counter();cpu=time.process_time();br=bm.search(q['query'],lib);bt=time.perf_counter()-t;bc=time.process_time()-cpu
                 t=time.perf_counter();indices=[docpos[d] for d in lib];scores=dv[indices]@qv[qpos[qid]];scoremap={d:float(s) for d,s in zip(lib,scores)};vr=rank(scoremap,lib);vt=time.perf_counter()-t
                 t=time.perf_counter();hr=rrf(br,vr);ht=time.perf_counter()-t
-                append(out,{'case_id':key,'query_id':qid,'seed':seed,'size':n,'catalog_sha256':digest(lib),'methods':{k:{'ranking5':v[:5],**retrieval_metrics(v,gold[qid]),'search_seconds':sec} for k,v,sec in [('bm25',br,bt),('vector',vr,vt),('hybrid',hr,bt+vt+ht)]},'bm25_cpu_seconds':bc,'query_embedding_tokens':m['query_stats']['tokens'][qpos[qid]],'query_embedding_seconds':None,'timing_note':'search-only; query embeddings precomputed in separately measured batch; no end-to-end claim'})
+                append(out,{'case_id':key,'query_id':qid,'seed':seed,'size':n,'catalog_sha256':digest(lib),'methods':{k:{'ranking5':v[:5],**retrieval_metrics(v,gold[qid]),'search_seconds':sec} for k,v,sec in [('bm25',br,bt),('vector',vr,vt),('hybrid',hr,bt+vt+ht)]},'bm25_cpu_seconds':bc,'query_embedding_tokens':m['query_stats']['tokens'][qpos[qid]],'query_embedding_seconds':None,'bm25_implementation':'sparse-postings-equivalent; separate from primary dense-reference timing','source_sha256':source_id,'timing_note':'search-only; query embeddings precomputed in separately measured batch; no end-to-end claim; do not pool with primary dense-reference search latency'})
         if qi%100==0:print('retrieval',qi,len(queries),'elapsed',round(time.perf_counter()-started,1),flush=True)
     save(HERE/'results/retrieval-execution.json',{'elapsed_seconds':time.perf_counter()-started,'cases_total':len(rows(out)),'query_count':len(queries),'time':utc()})
 

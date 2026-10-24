@@ -53,3 +53,7 @@ id_ed25519
 /paper/*.synctex.gz
 /paper/*.fdb_latexmk
 /paper/*.fls
+
+# Exact full-retrieval raw bytes are published as deterministic gzip.
+/experiments/benchmarks/skillret-gap-closure-20261024/results/retrieval.jsonl
+

@@ -11,3 +11,6 @@ These are implementation/measurement repairs, not outcome-driven changes to quer
 ## Exact interruption accounting
 
 The second interruption snapshot contains5080 planned small-model cases:874 valid,100 preflight context exclusions,20 invalid selections,4 invalid/empty-domain outcomes,3 pipeline/resource failures and4079 unattempted. The earlier short progress message omitted the3 pipeline failures when listing the other failure categories. They remain in the ledger. More recent status snapshots supersede these counts as unattempted cases resume; attempted failures remain unchanged.
+
+The separate full-query retrieval pass uses a mathematically equivalent sparse-postings BM25 implementation, amended before that pass. Its measured search latency is distinct from primary dense-reference fresh discovery latency. Local primary predictions, tokens and timings are unchanged. Hosted method-body wall explicitly excludes cached embeddings and precomputed retrieval; hosted end-to-end latency remains null.
+

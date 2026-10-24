@@ -1,0 +1,12 @@
+{
+  "phase": "After primary and local sensitivity outcomes; before full-query retrieval quality/timing pass",
+  "primary_latency_rewritten": false,
+  "old_source": "core.py BM25 remains preserved",
+  "recorded_utc": "2026-10-24T17:45:33.9191851Z",
+  "timing_scope": "Do not pool full-query sparse-search latency with primary dense-reference fresh discovery latency",
+  "quality_protocol_unchanged": true,
+  "verification": "Deterministic equivalence test across membership sizes, Unicode, repeated terms, absent terms and all-score ties; real non-evaluation canary follows",
+  "primary_predictions_replayed": false,
+  "new_source": "fast_bm25.py SparseBM25; run.py retrieval only",
+  "amendment": "Sparse-postings implementation of identical frozen BM25 formula for separate full-query search-only timing"
+}

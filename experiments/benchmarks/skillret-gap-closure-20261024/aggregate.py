@@ -8,7 +8,7 @@ OUT=HERE/'report'
 
 def read(p):return json.loads(pathlib.Path(p).read_text())
 def rows(p):
-    with open(p) as f:return [json.loads(x) for x in f if x.strip()]
+    with (gzip.open(p,'rt') if pathlib.Path(p).suffix=='.gz' else open(p)) as f:return [json.loads(x) for x in f if x.strip()]
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False))
 def csvout(name,data):
     if not data:return
@@ -145,8 +145,10 @@ def main():
                 'empty_domain_count':sum(r.get('domain_candidate_count')==0 for r in part),
                 'valid_route_count':sum((r.get('routing') or {}).get('status')=='ok' for r in part)})
     csvout('domain-diagnostics.csv',domain)
-    if (HERE/'results/retrieval.jsonl').exists():
-        retrieval=rows(HERE/'results/retrieval.jsonl');ret=[]
+    retrieval_file=HERE/'results/retrieval.jsonl'
+    if not retrieval_file.exists():retrieval_file=HERE/'results/retrieval.jsonl.gz'
+    if retrieval_file.exists():
+        retrieval=rows(retrieval_file);ret=[]
         for seed in [42,43,44]:
             for n in SIZES:
                 for method in ['bm25','vector','hybrid']:
