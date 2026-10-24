@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "commit": "0f4e9818b6cefb94e09da30ad76b9ff5ac97999c",
+  "checks": {
+    "seed_bootstrap_cells": 40,
+    "model_bootstrap_cells": 40,
+    "disjoint_error_cells": 20
+  },
+  "scope": "Independently reconstructed bootstrap arithmetic and disjoint first-failure counts from already independently validated raw cases; descriptive nominal sensitivity, no multiplicity-adjusted or causal model-size claim."
+}

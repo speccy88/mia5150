@@ -42,3 +42,12 @@ On Windows, run monitor_host_memory.ps1 before the Linux stages. It writes atomi
 
 The [completed-local independent audit](audit/INDEPENDENT_SENSITIVITY_README.md) verifies all 5,680 canonical cases, official qrels/generated unions, 100 summary cells and 80 seed cells within its explicit limits. This external review does not cover human labels, full-query retrieval or hosted execution. The full-query streaming arithmetic and overlap check is a separate owner-run verification.
 
+
+The [final independent retrieval and supplementary audit](audit/INDEPENDENT_FULL_RETRIEVAL_README.md) targets immutable data commit 0f4e9818b6cefb94e09da30ad76b9ff5ac97999c. Its standalone verifiers and unchanged passed receipts cover 52,704 retrieval cases, 158,112 ranker metric rows, 36 aggregates, 2,400 primary overlaps, 26,352 additional-seed full-catalog rank comparisons, and the supplementary bootstrap/error tables. Recorded timing arithmetic was checked; timing was not independently remeasured. Exposed-query, human-label, hosted and execution limitations remain explicit.
+
+
+[Visual gap analysis and results summary (PDF)](report/MIA5150_Gap_Analysis_and_Results_2026-10-24.pdf) — eight validated pages, preserved unchanged. The PDF cites data commit 0f4e9818b6cefb94e09da30ad76b9ff5ac97999c; later documentation/audit commits do not change that data identity.
+
+
+Hosted follow-up after the immutable PDF/data snapshot: authentication succeeded and one canary generation request was attempted, but it produced no usable output/usage. No benchmark case ran. Its US0.00051456 reservation remains held because authenticated generation lookup returned404; actual cost is unknown. The new authorized total budget is US2 across models, with600generation-request maximum; no new generation occurs before reconciliation and validation of the revised gates/protocol. Private request identifiers and the live ledger remain outside the public repository.
+

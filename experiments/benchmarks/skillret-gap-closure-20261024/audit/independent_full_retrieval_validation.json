@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "commit": "0f4e9818b6cefb94e09da30ad76b9ff5ac97999c",
+  "source_library_id": "libfile_1c718d66ccc88191a5519e6cb6a93a4e",
+  "unique_queries": 4392,
+  "positive_qrels": 7187,
+  "query_seed_size_rows": 52704,
+  "checks": {
+    "catalog_memberships": 52704,
+    "ranker_metric_checks": 158112,
+    "full_catalog_seed_invariance": 26352,
+    "aggregate_cells": 36
+  },
+  "primary_overlap_checks": {
+    "bm25": 800,
+    "vector": 800,
+    "hybrid": 800
+  },
+  "primary_overlap_differences": 0,
+  "raw_gzip": {
+    "bytes": 15054930,
+    "sha256": "a55bfecfa99508cebcc0d6c0238575c60bfbd919d46c2e69654f66dcd0b53a35",
+    "git_blob_sha1": "268b1281e2851a811aab7be4cdcc32d363c88536"
+  },
+  "uncompressed": {
+    "bytes": 91864324,
+    "sha256": "dcf3630cf9d8fade4375e335c43aaf070ee507ce0482579276efd8df23ca60e1"
+  },
+  "execution_source_sha256": {
+    "2694a77fdde84cf6b35e2b91c22621050810ecb971d60eade7f959dc5f164de9": 52704
+  },
+  "scope": "Independent full-rank positive-qrel rescore, catalog/ID/grid validation, 36 aggregates and all 2400 primary overlaps; no inference or search reexecution",
+  "limits": [
+    "All requests were previously exposed; this is full-benchmark breadth, not fresh-holdout evidence",
+    "Small catalogs are gold-conditioned; catalog membership is naturally identical across seeds at N6006",
+    "Repeated seeds and sizes do not increase the number of independent queries",
+    "Search-only timings are reproduced as recorded; sparse BM25 and cached batch query embeddings are distinct from primary end-to-end timing",
+    "No hosted calls, human semantic adjudication, native activation, or execution success established"
+  ]
+}
