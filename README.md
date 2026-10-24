@@ -9,7 +9,7 @@ requests retrieve and select agent skills. Start with the
 
 The [proposal gap study](experiments/benchmarks/skillret-gap-closure-20261024/README.md) completes a 200-query exposed primary panel across five methods and the original 10/100/1,000/6,006 catalog sizes. At 6,006 skills, the small local selector exactly recovered 9/200 sets with BM25, 7/200 with vector and 11/200 with hybrid. The paired interval does not establish a hybrid advantage. Full listing exceeds the configured local context at 1,000 and 6,006 skills.
 
-Read the [measured report and charts](experiments/benchmarks/skillret-gap-closure-20261024/report/RESEARCH_DRAFT.md), [raw primary outcomes](experiments/benchmarks/skillret-gap-closure-20261024/results/primary200-canonical.jsonl), and [gap closure matrix](experiments/benchmarks/skillret-gap-closure-20261024/GAP_CLOSURE.md). Additional seed/model sensitivity is in progress. Hosted access and human adjudication remain pending; no local substitute silently completes the original hosted matrix.
+Read the [measured report and charts](experiments/benchmarks/skillret-gap-closure-20261024/report/RESEARCH_DRAFT.md), [raw primary outcomes](experiments/benchmarks/skillret-gap-closure-20261024/results/primary200-canonical.jsonl), and [gap closure matrix](experiments/benchmarks/skillret-gap-closure-20261024/GAP_CLOSURE.md). The separate local seed/model sensitivity is complete. Hosted access and human adjudication remain pending; no local substitute silently completes the original hosted matrix.
 
 ## Find your way
 

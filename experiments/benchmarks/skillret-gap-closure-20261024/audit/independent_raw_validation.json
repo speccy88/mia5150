@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "audit_scope": "independent raw primary set/retrieval rescore, alias parsing, prompt hash/candidate membership and aggregate/paired-bootstrap reproduction; no model inference",
+  "rows": 4000,
+  "unique_queries": 200,
+  "source_library_id": "libfile_cf2e5ab47a548191b135ef9964ee2d5d",
+  "sha256": "6b77f74019790a27243ca2e243aa6626acddbe8070c69930658192de8b4302f2",
+  "git_blob_sha1": "61d1d606dc46da62efedd884af5cb174f3485c62",
+  "commit": "ed12adad509ea0e5a082a906c4974c13ab5b3719",
+  "checks": {
+    "prompt_hashes": 3984,
+    "valid_raw_alias_maps": 3496,
+    "independent_set_metrics": 4000,
+    "independent_retrieval_metrics": 3197,
+    "route_retention": 797,
+    "preflight_overflows": 400,
+    "invalid_cardinality": 87,
+    "weighted_exact_cells": 20,
+    "paired_bootstrap_contrasts": 8,
+    "primary_token_timing_cells": 20
+  },
+  "statuses": {
+    "ok": 3496,
+    "pipeline_error": 3,
+    "context_overflow": 400,
+    "invalid_selection": 87,
+    "invalid_or_empty_domain": 13,
+    "transport_or_guard_error": 1
+  },
+  "limits": [
+    "Library bytes match committed primary Git blob; full append-only campaign ledger not independently rescored here",
+    "No new inference or external/human generalization validation",
+    "Final sensitivity/4B/full4392 status requires subsequent commit",
+    "Timing values inspected as recorded, not independently remeasured"
+  ]
+}

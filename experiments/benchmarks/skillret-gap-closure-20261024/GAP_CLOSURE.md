@@ -1,6 +1,6 @@
 # Gap closure matrix
 
-The submitted proposal is the historical target. The independent baseline audit is preserved unchanged. Local measurements are a reduced, exposed-query study; pending human and hosted work remains explicit.
+The submitted proposal is the historical target. Independent baseline and primary validation receipts remain unchanged. Pending human and hosted evidence is explicit.
 
 |ID|Topic|Status|Evidence and limits|
 |---|---|---|---|
@@ -8,11 +8,11 @@ The submitted proposal is the historical target. The independent baseline audit 
 |A1.2|Domain vector|measured_local|Same-model constrained route, no fallback; domain error and oracle ceiling measured. Early timing correction is explicit. [report/domain-diagnostics.csv](report/domain-diagnostics.csv), [IMPLEMENTATION_CORRECTIONS.md](IMPLEMENTATION_CORRECTIONS.md)|
 |A1.3|Hybrid/unified comparison|measured_local|All five methods share 200 exposed primary queries, one selector and exact original sizes. No clear universal winner. [report/paired-primary.csv](report/paired-primary.csv), [report/selection-summary.csv](report/selection-summary.csv)|
 |A2.1|Missing exact selectors|pending_hosted_access|Exact original hosted selectors remain unrun in the new matched study; local substitutes are labeled. [proposal-80-cells.csv](proposal-80-cells.csv)|
-|A2.2|Multi-model sample size|partial_local|Primary breadth is 200 for the 0.6B deployment; separate balanced24 4B sensitivity is in progress. No claimed general power. [protocol.json](protocol.json), [EXECUTION_STATUS.json](EXECUTION_STATUS.json)|
+|A2.2|Multi-model sample size|partial_local|Primary breadth is 200 for the 0.6B deployment; separate balanced24 4B sensitivity completed. No claimed general power. [protocol.json](protocol.json), [EXECUTION_STATUS.json](EXECUTION_STATUS.json)|
 |A2.3|Hosted budget/execution|controls_implemented_execution_blocked|Cheaper DeepSeek plan is authorized within US$1.10/600 calls. Credential absent; zero paid calls. [hosted/approval-request.json](hosted/approval-request.json), [hosted/cheaper-budget-plan.json](hosted/cheaper-budget-plan.json), [hosted/budget.py](hosted/budget.py)|
 |A3.1|Retrieval query count|historically_present_new_stage_pending|Existing verified full4392 retrieval is retained; new representation requires a separate full-query pass after selectors. [AUDIT.md](AUDIT.md), [EXECUTION_STATUS.json](EXECUTION_STATUS.json)|
 |A3.2|Selection count/exposure|measured_exposed_sample|Complete matched primary200 with public exposure audit; no fresh holdout claim. [panel.json](panel.json), [label-audit.json](label-audit.json), [report/validation.json](report/validation.json)|
-|A3.3|Seeds|partial_local|Three catalog seeds are frozen for balanced24 sensitivity; previous three-seed evidence is acknowledged. [protocol.json](protocol.json), [report/seed-sensitivity.csv](report/seed-sensitivity.csv)|
+|A3.3|Seeds|measured_local_sensitivity|Balanced24 three-catalog-seed sensitivity completed. Repeated seeds are paired by query; previous seed evidence is acknowledged. [protocol.json](protocol.json), [report/seed-sensitivity.csv](report/seed-sensitivity.csv)|
 |A3.4|Size alignment|measured_local|Exact 10/100/1000/6006 catalogs per query; historical exact-size studies preserved. [catalogs.json.gz](catalogs.json.gz), [report/selection-summary.csv](report/selection-summary.csv)|
 |A4.1|Token accounting|measured_local|Embedding, prompt preflight, actual returned usage and unknown failed usage distinguished; fresh routing included. [report/selection-summary.csv](report/selection-summary.csv), [MEASUREMENT_CORRECTIONS.md](MEASUREMENT_CORRECTIONS.md)|
 |A4.2|Relative latency|measured_with_limits|Fresh end-to-end and components saved; paired valid same-implementation latency only. Failures retain separate timing. [report/selection-summary.csv](report/selection-summary.csv), [MEASUREMENT_CORRECTIONS.md](MEASUREMENT_CORRECTIONS.md)|

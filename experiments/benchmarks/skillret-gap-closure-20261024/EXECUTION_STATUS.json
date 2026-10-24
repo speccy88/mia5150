@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-24T17:23:17.039812+00:00",
-  "campaign_status": "in_progress_or_resource_paused; see current receipts",
+  "checked_utc": "2026-10-24T17:36:34.296386+00:00",
+  "campaign_status": "local_selection_complete_with_exclusions_and_failures; retrieval and hosted separate",
   "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f",
   "models": {
     "qwen3_06_q8": {
@@ -22,19 +22,24 @@
     },
     "qwen35_4b_q4": {
       "planned": 600,
-      "ledger_case_attempt_rows": 448,
-      "unique_cases_in_ledger": 448,
+      "ledger_case_attempt_rows": 600,
+      "unique_cases_in_ledger": 600,
       "canonical_statuses": {
-        "ok": 402,
-        "context_overflow": 44,
+        "ok": 538,
+        "context_overflow": 60,
         "invalid_selection": 1,
         "invalid_or_empty_domain": 1
       },
-      "remaining_unattempted": 152,
-      "physical_selector_attempts": 403,
-      "physical_route_attempts": 89
+      "remaining_unattempted": 0,
+      "physical_selector_attempts": 539,
+      "physical_route_attempts": 120
     }
   },
   "hosted_paid_calls": 0,
-  "human_adjudication": "pending"
+  "human_adjudication": "pending",
+  "full_retrieval": {
+    "planned_query_seed_size_rows": 52704,
+    "completed_rows": 0,
+    "scope": "4392 exposed queries; three catalog seeds; four sizes; three rankers per row"
+  }
 }

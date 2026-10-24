@@ -28,7 +28,7 @@ def main():
             y=[lookup[(method,n)].get(metric) for n in N];y=[np.nan if v is None else v for v in y]
             if all(np.isnan(y)):continue
             ax.plot(N,y,marker='o',lw=2,label=LABELS[method],color=COLORS[method])
-        ax.set_xscale('log');ax.set_xticks(N,[f'{n:,}' for n in N]);ax.set_xlabel('Catalog size');ax.set_ylabel(ylabel);ax.set_title(title+'\n200 exposed queries, one common0.6B selector');ax.grid(alpha=.2);ax.legend(frameon=False)
+        ax.set_xscale('log');ax.set_xticks(N,[f'{n:,}' for n in N]);ax.set_xlabel('Catalog size');ax.set_ylabel(ylabel);ax.set_title(title+'\n200 exposed queries, one common 0.6B selector');ax.grid(alpha=.2);ax.legend(frameon=False)
         if logy:ax.set_yscale('log')
         else:ax.set_ylim(0,1.03)
         note='Overflow tokens describe preflight input, not model-consumed tokens.' if name=='input-growth' else ('Startup and failures excluded. Missing listing points are explicit context failures.' if name=='latency' else 'Listing coverage is1 by construction and has no semantic ranking; omitted from Recall@5.')

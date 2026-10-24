@@ -1,0 +1,26 @@
+{
+  "prompt_sha256": "b47c8feddab845135a80a1e198a7b9ac9fdb625977ff2e6751e82a4c531822d7",
+  "request_sha256": "d7a59a1067f662d1bdd1d59ab44c195ea56b43779f139c5250942f0a5f21a31d",
+  "kind": "warmup",
+  "content": "[]",
+  "input_tokens": 25,
+  "output_tokens": 2,
+  "physical_call": true,
+  "status": "ok",
+  "server_input_tokens": 25,
+  "server_timings": {
+    "cache_n": 0,
+    "prompt_n": 25,
+    "prompt_ms": 198.227,
+    "prompt_per_token_ms": 7.92908,
+    "prompt_per_second": 126.11803639262058,
+    "predicted_n": 2,
+    "predicted_ms": 32.127,
+    "predicted_per_token_ms": 32.127,
+    "predicted_per_second": 31.126466834749586
+  },
+  "stop_type": "eos",
+  "truncated": false,
+  "wall_seconds": 0.23271063200002118,
+  "client_cpu_seconds": 0.001184300000000249
+}

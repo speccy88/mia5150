@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "case_rows": 5080,
+  "case_rows": 5680,
   "unique_case_ids": true,
-  "independent_metric_checks": 5080,
-  "raw_selection_checks": 3806,
-  "request_hash_checks": 4332,
+  "independent_metric_checks": 5680,
+  "raw_selection_checks": 4985,
+  "request_hash_checks": 5662,
   "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f",
-  "historical_unattempted_rows": 8414,
+  "historical_unattempted_rows": 9145,
   "primary200_complete": true,
   "primary200_unattempted": 0
 }

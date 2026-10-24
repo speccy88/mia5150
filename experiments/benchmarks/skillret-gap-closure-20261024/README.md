@@ -1,6 +1,6 @@
 # Matched local discovery study and proposal reconciliation
 
-This research study is in progress. [Execution status](EXECUTION_STATUS.json) distinguishes actual outputs, preflight exclusions and unattempted cases. The original80 hosted model/method/size cells remain visible in [the crosswalk](proposal-80-cells.csv); local Qwen measurements are explicitly a reduced substitute.
+The 200-query primary and both local selector campaigns are complete with retained context exclusions and failures. Full-query retrieval is a separate stage. [Execution status](EXECUTION_STATUS.json) distinguishes actual outputs, preflight exclusions and unattempted cases. The original80 hosted model/method/size cells remain visible in [the crosswalk](proposal-80-cells.csv); local Qwen measurements are explicitly a reduced substitute.
 
 The frozen primary comparison uses200 exposed official SkillRet queries,98/78/24 with one/two/three positive labels, seed42, five methods and catalog sizes10/100/1000/6006. A separate balanced24-query panel supplies additional catalog seeds and a matched4B sensitivity. Twelve generated compositional probes retain silver labels and separate reporting. See [SPEC.md](SPEC.md), [protocol.json](protocol.json), [scope drift](scope-drift.csv), [label audit](label-audit.json), and [the independent baseline audit](AUDIT.md).
 
@@ -29,4 +29,7 @@ python plot.py
 
 The Windows host monitor writes `host-memory.json` in the workspace containing the checkout. Keep it running during local work; stale/missing telemetry blocks execution. Supervisor waits for4.5GiB headroom before loading and stops after15minutes without recovery. It never changes Windows/WSL settings or stops other services. The runner's source snapshots bind measured cases to actual implementation. Bulk vectors are local assets; archived per-case outputs and public pinned inputs support offline aggregate regeneration.
 
-Tables/charts and final closure status will be generated from saved ledgers after the campaign. Human authoring/adjudication, a fresh external panel, original hosted cells and execution/ordering remain distinct pending evidence. The [annotation guide](ANNOTATION_GUIDE.md) specifies the human work without inventing labels.
+Tables/charts and closure status are regenerated from saved ledgers. Read report/RESEARCH_DRAFT.md and GAP_CLOSURE.md. Human authoring/adjudication, a fresh external panel, original hosted cells and execution/ordering remain distinct pending evidence. The [annotation guide](ANNOTATION_GUIDE.md) specifies the human work without inventing labels.
+
+The [independent primary validation](audit/INDEPENDENT_VALIDATION_README.md) reproduces all 4,000 primary cases, 20 weighted cells and eight paired intervals against immutable commit ed12adad. It does not claim validation of later sensitivity or full-query retrieval.
+

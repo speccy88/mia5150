@@ -180,6 +180,7 @@ def retrieval(cfg):
     queries=rows(source()/'queries-test.jsonl');gold={q['id']:set(q['skill_ids']) for q in queries};out=HERE/'results/retrieval.jsonl';out.parent.mkdir(exist_ok=True)
     done={x['case_id'] for x in rows(out)} if out.exists() else set();started=time.perf_counter();protocol_id=read(HERE/'protocol.json')['protocol_sha256']
     for qi,q in enumerate(queries):
+        if qi%25==0:host_reserve()
         qid=q['id']
         for seed in SEEDS:
             for n in SIZES:

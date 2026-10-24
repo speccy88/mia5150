@@ -26,7 +26,10 @@ def main():
         w=csv.writer(f);w.writerow(['factor','supplied_proposal','revised_proposal','new_scope']);w.writerows(scope)
     # Retain the baseline audit; a separate closure field must point to new evidence.
     matrix=json.loads((HERE/'gap_matrix.json').read_text())
-    (HERE/'gap-closure-matrix.json').write_text(json.dumps({'baseline_audit':matrix,'new_study':'protocol.json','status':'closure fields generated after saved-output validation; baseline statuses retained verbatim'},indent=2))
+    # Existing evidence-linked closure is a publication artifact; do not replace
+    # measured statuses with the baseline placeholder on a reconciliation rerun.
+    if not (HERE/'gap-closure-matrix.json').exists():
+        (HERE/'gap-closure-matrix.json').write_text(json.dumps({'baseline_audit':matrix,'new_study':'protocol.json','status':'pending evidence-linked closure'},indent=2))
     print('80 original cells; scope drift preserved; independent audit retained')
 
 if __name__=='__main__':main()

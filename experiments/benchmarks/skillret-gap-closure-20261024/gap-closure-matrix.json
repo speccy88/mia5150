@@ -162,7 +162,7 @@
       "priority": "P1",
       "baseline_verdict": "valid_remaining_gap",
       "status": "partial_local",
-      "closure_and_limits": "Primary breadth is 200 for the 0.6B deployment; separate balanced24 4B sensitivity is in progress. No claimed general power.",
+      "closure_and_limits": "Primary breadth is 200 for the 0.6B deployment; separate balanced24 4B sensitivity completed. No claimed general power.",
       "new_evidence": [
         "protocol.json",
         "EXECUTION_STATUS.json"
@@ -310,8 +310,8 @@
       "topic": "Seeds",
       "priority": "P0",
       "baseline_verdict": "overstated_absence",
-      "status": "partial_local",
-      "closure_and_limits": "Three catalog seeds are frozen for balanced24 sensitivity; previous three-seed evidence is acknowledged.",
+      "status": "measured_local_sensitivity",
+      "closure_and_limits": "Balanced24 three-catalog-seed sensitivity completed. Repeated seeds are paired by query; previous seed evidence is acknowledged.",
       "new_evidence": [
         "protocol.json",
         "report/seed-sensitivity.csv"

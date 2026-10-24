@@ -1,0 +1,36 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{graphicx}
+\usetheme{Boadilla}
+\setbeamertemplate{navigation symbols}{}
+\title{Skill Discovery: Evidence and Remaining Gaps}
+\author{deepujoy88 \and speccy88 \and vsimard}
+\date{Research draft --- 24 October 2026}
+\begin{document}\frame{\titlepage}
+\begin{frame}{Question and proposal}
+Five methods; original catalog sizes 10/100/1,000/6,006.\Separate retrieval, final selection and execution.\Original 80 hosted cells remain explicitly tracked.
+\end{frame}
+\begin{frame}{Frozen design}
+200 exposed requests; 98/78/24 positive-count strata.\Pinned metadata, models and per-query catalogs.\Strict opaque IDs; no tools or filesystem.
+\end{frame}
+\begin{frame}{Final selection}
+\centering\includegraphics[height=.75\textheight]{../../experiments/benchmarks/skillret-gap-closure-20261024/report/selection-heatmap.png}
+\end{frame}
+\begin{frame}{Retrieval versus selection}
+\centering\includegraphics[height=.75\textheight]{../../experiments/benchmarks/skillret-gap-closure-20261024/report/candidate-recall.png}
+\end{frame}
+\begin{frame}{Context and tokens}
+\centering\includegraphics[height=.75\textheight]{../../experiments/benchmarks/skillret-gap-closure-20261024/report/input-growth.png}
+\end{frame}
+\begin{frame}{Paired uncertainty}
+\centering\includegraphics[height=.75\textheight]{../../experiments/benchmarks/skillret-gap-closure-20261024/report/paired-differences.png}
+\end{frame}
+\begin{frame}{Sensitivity and scenarios}
+Balanced 24-query model/seed sensitivity is separate.\Generated 12-probe labels are silver unions.\No dependency order, human agreement or task success is claimed.
+\end{frame}
+\begin{frame}{Reproducibility and resources}
+Raw outputs, source hashes, strict scoring and small per-cell audit files.\One GPU job; 8 GB VRAM; CPU encoder; preserved RAM interruptions.\Hosted stage blocked on credentials; no paid calls.
+\end{frame}
+\begin{frame}{Next evidence and team review}
+Fresh independent requests and human semantic agreement.\Workflow ordering and activation/execution instrumentation.\Team contributions and speaking allocation require confirmation.
+\end{frame}
+\end{document}

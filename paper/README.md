@@ -6,6 +6,8 @@
 | --- | --- |
 | [project_proposal.tex](project_proposal.tex) | Editable SkillRet course proposal |
 | [references.bib](references.bib) | Proposal bibliography |
+| [final_report.tex](final_report.tex) | AI-assisted matched-study research draft, measured table/figures and explicit remaining gaps |
+| [presentation/research_draft.tex](presentation/research_draft.tex) | Static ten-slide Beamer research draft; team roles and final visual review pending |
 | [neurips_2026.sty](neurips_2026.sty) | Shared NeurIPS formatting |
 | [neurips_2026.tex](neurips_2026.tex) | Original template example |
 | [checklist.tex](checklist.tex) | Checklist included by the template example |

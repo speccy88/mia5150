@@ -13,5 +13,8 @@ def main():
                     except json.JSONDecodeError:break
         current=canonical_attempts(attempts);counts=collections.Counter(r['status'] for r in current.values())
         result['models'][model]={'planned':planned,'ledger_case_attempt_rows':len(attempts),'unique_cases_in_ledger':len(current),'canonical_statuses':dict(counts),'remaining_unattempted':planned-sum(v for k,v in counts.items() if not k.startswith('not_run')),'physical_selector_attempts':sum(bool(r.get('selector',{}).get('physical_call')) for r in current.values() if r.get('selector')),'physical_route_attempts':sum(bool(r.get('routing',{}).get('physical_call')) and not r.get('routing_reused',False) for r in current.values() if r.get('routing'))}
+    if all(m['remaining_unattempted']==0 for m in result['models'].values()):result['campaign_status']='local_selection_complete_with_exclusions_and_failures; retrieval and hosted separate'
+    rp=HERE/'results/retrieval.jsonl'
+    result['full_retrieval']={'planned_query_seed_size_rows':4392*3*4,'completed_rows':sum(1 for _ in rp.open()) if rp.exists() else 0,'scope':'4392 exposed queries; three catalog seeds; four sizes; three rankers per row'}
     (HERE/'EXECUTION_STATUS.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))
 if __name__=='__main__':main()
