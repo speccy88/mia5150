@@ -1,0 +1,9 @@
+factor,supplied_proposal,revised_proposal,new_scope
+methods,five methods,four methods,New local study retains all five; no retroactive proposal rewrite.
+sizes,10/100/1000/6006,50/250/1000,New study uses original grid; existing CPU/scaling coverage reused as historical support.
+model,four named hosted models,DeepSeek V4.1 Flash primary,Two local Qwen sensitivity tiers; all original hosted cells pending new authorization/access.
+panel,4392 local; about2000 hosted,20 intended new IDs;200 consumed,"24 exposed official selection queries, balanced gold-count strata; 4392 retrieval, separate generated probes. Old4192 reservation obsolete."
+description,1024 character description limit,1024 combined chars and128 BGE tokens,"New name plus description[:1024], BGE512tokens with truncation measured; new representation not pooled with old scores."
+integration,discovery,native middleware and bounded read,"Direct isolated local JSON selection, no tools. Existing native pilot remains separate; no native execution claim."
+scenarios,"single/multi-domain,overlap,cascade",no dependency chains,"Gold-count/major proxies and12 silver compositional probes; real overlap, ordering, human labels and untouched external panel pending."
+scope refinement,explicitly permitted,bounded pilot,"Local completion is a reduced study, not completion of80 hosted cells or original full-selection scale."

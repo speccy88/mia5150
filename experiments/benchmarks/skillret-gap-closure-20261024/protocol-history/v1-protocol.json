@@ -1,0 +1,89 @@
+{
+  "version": "gap-closure-v1",
+  "dataset": {
+    "repository": "ThakiCloud/SKILLRET",
+    "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+    "split": "test",
+    "public_projection": true,
+    "exposure": "previously exposed; no fresh-holdout claim"
+  },
+  "source_repository_base": "c4f4889fb3ec6864898d3ba07d08c30c438e3e12",
+  "source_hashes": {
+    "skills-metadata.jsonl": "74819f4f683cb4dfcfc34085f6caa610202e78c49e8e32a2f5045a825addeb2f",
+    "queries-test.jsonl": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220",
+    "qrels-test.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "spec_sha256": "3c674ebd81026e7a5b7426370861002446a9c235902e84619a84d53d5a1819c5",
+  "panel_sha256": "8dafd0bdcaf98e55bc36ce28c8a24b4816182f808f050f58c9011c168122f787",
+  "generated_sha256": "46027ecdac201deb22c18679ca29b25cf32d90b314985a9a3124992099d578c9",
+  "evaluator_sha256": "6ba41147c0a3fa482160b55351e0600694032d513fc3e5208d9750e3a23ebf94",
+  "document_sha256": "91d9ef5d97af4d7ece9b77a0ff252d682d1bc35bc9b5790300f3ad88951e4dc4",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "sizes": [
+    10,
+    100,
+    1000,
+    6006
+  ],
+  "methods": [
+    "listing",
+    "bm25",
+    "vector",
+    "domain_vector",
+    "hybrid"
+  ],
+  "encoder": {
+    "repository": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "precision": "FP32 CPU",
+    "pooling": "normalized CLS",
+    "max_tokens": 512,
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "document_prefix": ""
+  },
+  "selector": {
+    "context": 8192,
+    "output_cap": 128,
+    "temperature": 0,
+    "seed": 20261024,
+    "grammar": "supplied aliases only, zero to five strings; strict duplicate check",
+    "native_deepagents": false,
+    "tools": []
+  },
+  "models": {
+    "qwen3_06_q8": {
+      "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "name": "Qwen3-0.6B",
+      "quantization": "Q8_0",
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "qwen35_4b_q4": {
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+      "name": "Qwen3.5-4B",
+      "quantization": "Q4_K_M",
+      "seeds": [
+        42
+      ]
+    }
+  },
+  "runtime_cap_seconds_per_model": 2400,
+  "primary_contrasts": [
+    "hybrid-bm25",
+    "domain_vector-vector"
+  ],
+  "bootstrap": {
+    "cluster": "query, mean across catalog seeds",
+    "samples": 2000,
+    "seed": 20261024
+  },
+  "generated": "12 deterministic compositions, N100/6006 seed42, separate silver labels, no human or blind claim",
+  "protocol_sha256": "01ee64dbbdd7dc40f2e800a8e33cff78c8290113f52240f19836fe48179a0adb"
+}

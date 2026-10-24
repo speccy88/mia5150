@@ -1,0 +1,18 @@
+{
+  "skills": 6006,
+  "queries": 4392,
+  "positive_pairs": 7187,
+  "all_query_skill_ids_match_qrels": true,
+  "gold_count_distribution": {
+    "1": 2143,
+    "2": 1703,
+    "3": 546
+  },
+  "exact_duplicate_query_texts": 0,
+  "description_over_1024": 12,
+  "combined_name_description_over_1024": 13,
+  "primary_queries": 200,
+  "generated_queries": 12,
+  "human_labels": "not available; pending two independent people",
+  "near_duplicate_audit": "token-Jaccard >=0.85 on primary/generated constituents versus all official queries; see label-audit.json"
+}

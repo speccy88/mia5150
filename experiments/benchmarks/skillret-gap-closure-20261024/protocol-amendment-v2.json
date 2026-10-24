@@ -1,0 +1,12 @@
+{
+  "date_utc": "2026-10-24T15:13:39.403701+00:00",
+  "before_benchmark_outcomes": true,
+  "reason": "Independent reviewer requests greater independent-query breadth and prevalence-aware analysis. Only synthetic canaries have run.",
+  "primary": "200 deterministic exposed official queries,98/78/24 in1/2/3-positive strata,seed42,allfive methods/allfour sizes. Approximate worst-case95% binomial halfwidth6.93percentage points; no power guarantee.",
+  "sensitivity": "Original24balanced queries atseeds43/44 onsmallmodel,seed42on4B; generated probes unchanged; balanced summaries separate.",
+  "runtime_cap_seconds": {
+    "small": 7200,
+    "medium": 2400
+  },
+  "initial_freeze": "protocol-history/v1-* retains complete initial protocol and catalogs"
+}

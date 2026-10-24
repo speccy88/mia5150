@@ -1,0 +1,9 @@
+{
+  "format": "gzip JSON; document_indices are positions in catalog-document-ids.json; exact ordered memberships round-trip verified",
+  "memberships_changed": false,
+  "old_serialization_sha256": "4a68b8586d4e773ec8cfecbf7fdf6f37b9ceef0f3f20dd3952194869efaf6838",
+  "serialization_sha256": "027f8c72faa54c305181b2d2e0edf05235a04424946b6fd3b90b649cd94610cf",
+  "cases": 1016,
+  "old_bytes": 39065775,
+  "new_bytes": 3422016
+}

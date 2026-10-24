@@ -1,0 +1,22 @@
+{
+  "files": {
+    "CORRECTIVE_ACTIONS.md": {
+      "bytes": 38050,
+      "sha256": "540aebc4930ca0a1fff8639567c4226ddf391d487a72a756aa7d1d0a633e4cc2"
+    },
+    "MIA5150_Corrective_Action_Plan.md": {
+      "bytes": 30110,
+      "sha256": "2330b7fd7ee3fc7d4c2cf86f76d338835a5c09e0f1319bfe680ef9e5c05087ef"
+    },
+    "MIA5150_Independent_Gap_Audit_2026-10-24.zip": {
+      "bytes": 23825,
+      "sha256": "d1f4b1c334fc573dc0e10dc54790ddc5fa15a785623e162676aea1698d1aade8"
+    },
+    "proposal.pdf": {
+      "bytes": 119076,
+      "sha256": "d04749365d0fd31a3effabca366f441a2859fece27a10074dc118f2640179b58"
+    }
+  },
+  "materialization": "official Library helper under WSL to consumer-local Windows directory; metadata applied and readable",
+  "publication": "original PDF and full assessment files remain private; only hashes and sanitized audit are published"
+}

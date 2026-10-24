@@ -1,0 +1,78 @@
+{
+  "generated-01": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-02": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-03": {
+    "ordered_gold_groups": [
+      [
+        "df49fc3e-ab8f-4d37-9c5c-e3bd95723e07"
+      ],
+      [
+        "60996d99-3c8a-4bac-8cae-3f0a0ba29c9d"
+      ]
+    ],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-04": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-05": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-06": {
+    "ordered_gold_groups": [
+      [
+        "43eec6f3-743f-4acb-9d4b-9f7864f1d9d0"
+      ],
+      [
+        "48cf91e6-4554-4fdb-b985-0c70581aae2b"
+      ]
+    ],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-07": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-08": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-09": {
+    "ordered_gold_groups": [
+      [
+        "2f9457dc-4838-4287-98f4-aac2d5fdd964"
+      ],
+      [
+        "c8354997-fb52-472b-aec7-71c94e41211b"
+      ]
+    ],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-10": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-11": {
+    "ordered_gold_groups": [],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  },
+  "generated-12": {
+    "ordered_gold_groups": [
+      [
+        "26333038-e168-494a-893a-58d3af7a97e3"
+      ],
+      [
+        "7385737f-fa55-48da-8e31-c77e38377f19"
+      ]
+    ],
+    "label_status": "silver_union; independent mechanical membership check; human semantic adjudication pending"
+  }
+}
