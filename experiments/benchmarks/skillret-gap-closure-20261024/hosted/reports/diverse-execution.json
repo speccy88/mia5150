@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-10-24T19:49:08.227755+00:00",
+  "protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3",
+  "benchmark_cases_planned": 360,
+  "benchmark_cases_completed": 0,
+  "benchmark_cases_unattempted": 360,
+  "v2_canary_attempts": 1,
+  "canary_results": [
+    {
+      "case_key": "nonbenchmark-canary-v2-gemma-1",
+      "utc": "2026-10-24T19:46:40.318245+00:00",
+      "kind": "selection",
+      "http_status": 429,
+      "status": "provider_error",
+      "request_sha256": "36c850be91ddb09847ead57db8032053cda7cca60b119b6ef7e5ad479ca0b365",
+      "model": null,
+      "provider": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "finish_reason": null
+    }
+  ],
+  "latest_http_status": 429,
+  "status": "halted_by_unknown_cost_guard",
+  "reason": "Gemma DeepInfra returned HTTP429 upstream model rate limit; no generation ID, choices or usage. No automatic retry; different-model continuation paused by new unknown-cost policy.",
+  "known_charged_cost_for_failed_canary_usd": null,
+  "failed_case_replayed": false,
+  "credential_retention": "Encrypted local credential retained at user request; no value/path/account metadata published.",
+  "scope": "No never-run cell is scored as zero. No hosted benchmark performance is claimed when completed count is zero."
+}

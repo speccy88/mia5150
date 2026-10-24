@@ -1,0 +1,16 @@
+model,method,size,planned,attempted_logical_cases,valid,unattempted,status,exact_count,decision_exact_rate_attempted,macro_f1_attempted,balanced_panel_only,model_canary_attempts
+google/gemma-3-27b-it,listing,100,24,0,0,24,not_started,,,,True,1
+google/gemma-3-27b-it,bm25,100,24,0,0,24,not_started,,,,True,1
+google/gemma-3-27b-it,vector,100,24,0,0,24,not_started,,,,True,1
+google/gemma-3-27b-it,domain_vector,100,24,0,0,24,not_started,,,,True,1
+google/gemma-3-27b-it,hybrid,100,24,0,0,24,not_started,,,,True,1
+qwen/qwen3-30b-a3b-instruct-2507,listing,100,24,0,0,24,not_started,,,,True,0
+qwen/qwen3-30b-a3b-instruct-2507,bm25,100,24,0,0,24,not_started,,,,True,0
+qwen/qwen3-30b-a3b-instruct-2507,vector,100,24,0,0,24,not_started,,,,True,0
+qwen/qwen3-30b-a3b-instruct-2507,domain_vector,100,24,0,0,24,not_started,,,,True,0
+qwen/qwen3-30b-a3b-instruct-2507,hybrid,100,24,0,0,24,not_started,,,,True,0
+deepseek/deepseek-v4-flash-0731,listing,100,24,0,0,24,not_started,,,,True,0
+deepseek/deepseek-v4-flash-0731,bm25,100,24,0,0,24,not_started,,,,True,0
+deepseek/deepseek-v4-flash-0731,vector,100,24,0,0,24,not_started,,,,True,0
+deepseek/deepseek-v4-flash-0731,domain_vector,100,24,0,0,24,not_started,,,,True,0
+deepseek/deepseek-v4-flash-0731,hybrid,100,24,0,0,24,not_started,,,,True,0

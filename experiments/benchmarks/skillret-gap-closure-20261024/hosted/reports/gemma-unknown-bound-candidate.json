@@ -1,0 +1,26 @@
+{
+  "status": "candidate_only_not_applied_pending_review",
+  "case_id": "nonbenchmark-canary-v2-gemma-1",
+  "request_sha256": "36c850be91ddb09847ead57db8032053cda7cca60b119b6ef7e5ad479ca0b365",
+  "request_reconstruction_matches": true,
+  "http_status": 429,
+  "actual_cost_usd": null,
+  "request_pin": {
+    "only": [
+      "deepinfra/fp8"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "sent_max_tokens": 128,
+  "endpoint_context_tokens": 131072,
+  "endpoint_max_completion_tokens": 16384,
+  "pricing": {
+    "prompt": "0.00000008",
+    "completion": "0.00000016",
+    "discount": 0
+  },
+  "full_endpoint_bound_usd": "0.01310720",
+  "candidate_unknown_hold_usd": ".02",
+  "reason": "No generation ID or usage supplied; cannot perform bound generation lookup. Preserve failed case and unknown actual cost. A second conservative hold requires explicit policy review before other-model continuation."
+}

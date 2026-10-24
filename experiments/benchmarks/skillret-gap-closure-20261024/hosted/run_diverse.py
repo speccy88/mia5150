@@ -55,7 +55,8 @@ def execute(runtime,key):
             try:answer=request(client,p,cid,c['messages'],c['kind'],c['values'],planned)
             except BudgetStop:
                 state,_=budget.state()
-                if any(s['kind'] in ['reserve','unknown'] for s in state.values()):raise
+                if any(s['kind'] in ['reserve','unknown'] for s in state.values()):
+                    append_jsonl(work/'canary-validation.jsonl',{'case_id':cid,'model':p['model'],'status':'failed_guard_unknown_billing','protocol_sha256':protocol_sha});raise
                 append_jsonl(work/'canary-validation.jsonl',{'case_id':cid,'model':p['model'],'status':'failed_guard_after_known_billing','protocol_sha256':protocol_sha});failed=True;break
             try:assert accept(answer,p,c['kind'],c['values'])==c['expected']
             except (ValueError,AssertionError,TypeError):

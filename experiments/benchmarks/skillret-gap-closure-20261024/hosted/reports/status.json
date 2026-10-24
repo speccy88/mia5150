@@ -1,15 +1,15 @@
 {
-  "checked_utc": "2026-10-24T19:45:48.108533+00:00",
+  "checked_utc": "2026-10-24T19:48:08.293526+00:00",
   "authorized_global_cap_usd": 2,
   "generation_request_ceiling": 600,
-  "generation_post_attempts": 1,
+  "generation_post_attempts": 2,
   "benchmark_selector_cases_completed": 0,
   "benchmark_routing_cases_completed": 0,
   "known_billed_generation_cost_usd": 0,
   "known_cost_records": 0,
   "actual_total_generation_cost_usd": null,
-  "unknown_cost_attempts": 1,
-  "conservative_reserved_or_known_total_usd": 0.14,
+  "unknown_cost_attempts": 2,
+  "conservative_reserved_or_known_total_usd": 0.140744,
   "latest_read_only_lookup": {
     "http_status": 404,
     "api_error_code": 404,
@@ -34,6 +34,6 @@
   "historical_read_only_request_count": null,
   "historical_read_only_scope": "Read-only calls before transport instrumentation were not fully logged; no invented count or latency. All newly instrumented HTTP calls include stage and method.",
   "credential_policy": "User requested encrypted local retention until explicit deletion instruction; never publish credential/ciphertext/path.",
-  "continuation": "Approved legacy UNKNOWN liability hold installed; frozen v2 model-specific controls apply. See execution receipt for campaign state.",
+  "continuation": "New unknown/in-flight request blocks continuation",
   "bounded_unknown_attempts": 1
 }
