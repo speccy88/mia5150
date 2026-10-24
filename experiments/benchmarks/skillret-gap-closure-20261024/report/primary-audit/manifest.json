@@ -1,0 +1,108 @@
+{
+  "cases": 4000,
+  "source": "results/primary200-canonical.jsonl",
+  "source_row_hash": "SHA256 of exact UTF8 source row without CR/LF line terminator",
+  "scoring": "status=ok: strict set comparison; otherwise decision exact/precision/recall/F1 zero. Unknown output cardinality precludes unqualified micro precision. Listing candidate_ids=null means full catalog.",
+  "files": {
+    "10-hybrid.jsonl": {
+      "bytes": 150850,
+      "sha256": "068262b5fda705c28e9a09126dcd5c92469ef93523a5ca54c4fcb56fa8bc8741",
+      "queries": 200
+    },
+    "10-bm25.jsonl": {
+      "bytes": 150041,
+      "sha256": "a9ff27c1290e8e4166d61b46732b807f182f0d444b7bd4e36b958f2458d51459",
+      "queries": 200
+    },
+    "10-vector.jsonl": {
+      "bytes": 150568,
+      "sha256": "a7a6875e4b3092738f56fae89568056a372c88a8eeebbb80916cdc55eb97b4d8",
+      "queries": 200
+    },
+    "10-domain_vector.jsonl": {
+      "bytes": 137745,
+      "sha256": "43e874d6b62c5dc86cb667471a168fe9961fc6645e7f3f391fa59e18047f3b09",
+      "queries": 200
+    },
+    "10-listing.jsonl": {
+      "bytes": 117488,
+      "sha256": "a47c6d02eb5fbd4377d6101bd3f343868e7a38be58b2d5e661bdb5a0921ba560",
+      "queries": 200
+    },
+    "100-hybrid.jsonl": {
+      "bytes": 152458,
+      "sha256": "4d5eb452cc6d70be515d3b21b5f701ec6aa431535ccb7dafb7b5b3bb00c253fd",
+      "queries": 200
+    },
+    "100-bm25.jsonl": {
+      "bytes": 150776,
+      "sha256": "d055b52eaef0c96700bb818af804804a992b9fd22032a56f915607deca267af6",
+      "queries": 200
+    },
+    "100-domain_vector.jsonl": {
+      "bytes": 153181,
+      "sha256": "62bf7da7de0ecf75bb0b0e933f1b21fa0a3829eb7652cecc5eca5bf65e09ba87",
+      "queries": 200
+    },
+    "100-vector.jsonl": {
+      "bytes": 152255,
+      "sha256": "b250236b3a43f7423797d1fb3b6a6ab7e84364f384a18f59159bd7388a95e1d9",
+      "queries": 200
+    },
+    "100-listing.jsonl": {
+      "bytes": 119323,
+      "sha256": "e8d29e441c1f7183528e2fa6b121597a341b53c0b27097ad3a2ba9a06f717d63",
+      "queries": 200
+    },
+    "1000-hybrid.jsonl": {
+      "bytes": 154841,
+      "sha256": "6ed12dc7c6ec59f5918192c286dbbd5eba93ed26c0b4a31453970b414bc5f37f",
+      "queries": 200
+    },
+    "1000-bm25.jsonl": {
+      "bytes": 152739,
+      "sha256": "4d7256f1d75059a7ff9164a34e04607ad0926c920b99fa5a8aeaa0e7aca9b5df",
+      "queries": 200
+    },
+    "1000-domain_vector.jsonl": {
+      "bytes": 154931,
+      "sha256": "136db6deded28452e24e1dedb6473f6cbf32a5799e176e3d4a9df82a6e189a2e",
+      "queries": 200
+    },
+    "1000-vector.jsonl": {
+      "bytes": 154912,
+      "sha256": "b64ba97aecd62b7d14a3de6dfb4b1bdd63c8231c46f77ac6f98a2321c6a4301d",
+      "queries": 200
+    },
+    "1000-listing.jsonl": {
+      "bytes": 93914,
+      "sha256": "a6a785fe9d319d93fac9863cd2d6c14b1c426bb20ff88657d152bfcad15bc367",
+      "queries": 200
+    },
+    "6006-listing.jsonl": {
+      "bytes": 93914,
+      "sha256": "520668de5681f2767cbe24b4b1b3c36e0a3e7fc775bf8143490e34433fb4f532",
+      "queries": 200
+    },
+    "6006-bm25.jsonl": {
+      "bytes": 154698,
+      "sha256": "ba5d7cf9bbdf1985765934e42678b8b6c5b778cb5083c1000e3f4b1c159fb49a",
+      "queries": 200
+    },
+    "6006-vector.jsonl": {
+      "bytes": 155943,
+      "sha256": "b040aec27587082997e5f7e52aabc69e34144ec410361cb7d181f58f5a11d55e",
+      "queries": 200
+    },
+    "6006-domain_vector.jsonl": {
+      "bytes": 158469,
+      "sha256": "6506c070b4cf5fa63d02d4cb841174d17968b71682d8e4a2c381f32958322c81",
+      "queries": 200
+    },
+    "6006-hybrid.jsonl": {
+      "bytes": 157250,
+      "sha256": "ccac56f64ec90cdd54b1aeddcc21ce5db79df947860edd4432e45d82f8adf24a",
+      "queries": 200
+    }
+  }
+}

@@ -121,7 +121,10 @@ def main():
             for n in SIZES:
                 for method in METHODS:
                     part=[r for r in group if r['query_id'] in sensitivity and r['seed']==seed and r['size']==n and r['method']==method]
-                    if part:seed_results.append({'model':model,'seed':seed,'size':n,'method':method,'queries':len(part),'exact':mean([r['metrics']['exact'] for r in part]),'f1':mean([r['metrics']['f1'] for r in part])})
+                    if part:
+                        pending=sum(r['status'].startswith('not_run') for r in part)
+                        attempted=[r for r in part if not r['status'].startswith('not_run')]
+                        seed_results.append({'model':model,'seed':seed,'size':n,'method':method,'queries':len(part),'attempted':len(attempted),'valid':sum(r['status']=='ok' for r in part),'not_run':pending,'status':'incomplete' if pending else 'attempted_complete_with_exclusions','exact':None if pending else mean([r['metrics']['exact'] for r in part]),'f1':None if pending else mean([r['metrics']['f1'] for r in part]),'attempted_only_exact':mean([r['metrics']['exact'] for r in attempted])})
         for r in group:
             errors.append({'case_id':r['case_id'],'model':model,'query_id':r['query_id'],'panel':r['panel'],'size':r['size'],'seed':r['seed'],'method':r['method'],'status':r['status'],'gold_count':len(labels[r['query_id']]),'gold_domain_count':r['gold_domain_count'],'candidate_missing_gold':(r.get('candidate_recall') or 0)<1,'extra_selections':r['metrics']['fp'],'missing_selections':r['metrics']['fn'],'route_gold_retention':r.get('routing_gold_retention')})
     primary=[r for r in allrows if r['model']=='qwen3_06_q8' and r['panel']=='official_exposed' and r['seed']==42]
