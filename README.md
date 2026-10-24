@@ -7,7 +7,7 @@ requests retrieve and select agent skills. Start with the
 
 ## Latest matched comparison (24 October 2026)
 
-[Read the visual PDF summary](experiments/benchmarks/skillret-gap-closure-20261024/report/MIA5150_Gap_Analysis_and_Results_2026-10-24.pdf). The validated eight-page report cites immutable data commit `0f4e9818`.
+[Read the visual PDF summary](experiments/benchmarks/skillret-gap-closure-20261024/report/MIA5150_Gap_Analysis_and_Results_2026-10-24.pdf). The validated ten-page report includes a dated hosted-results addendum and cites immutable local (`0f4e9818`) and hosted terminal (`d769811`) evidence. The underlying Qwen audit separately targets `497ca150`.
 
 The [proposal gap study](experiments/benchmarks/skillret-gap-closure-20261024/README.md) completes a 200-query exposed primary panel across five methods and the original 10/100/1,000/6,006 catalog sizes. At 6,006 skills, the small local selector exactly recovered 9/200 sets with BM25, 7/200 with vector and 11/200 with hybrid. The paired interval does not establish a hybrid advantage. Full listing exceeds the configured local context at 1,000 and 6,006 skills.
 
