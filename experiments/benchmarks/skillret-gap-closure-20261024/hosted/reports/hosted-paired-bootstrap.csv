@@ -1,0 +1,9 @@
+model,method,reference,metric,n_independent_exposed_queries,balanced_mean_difference,paired_stratified_bootstrap95_low,paired_stratified_bootstrap95_high,bootstrap_samples,seed,scope
+qwen/qwen3-30b-a3b-instruct-2507,listing,bm25,exact,24,-0.3333333333333333,-0.5416666666666666,-0.125,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,listing,bm25,f1,24,-0.17896825396825397,-0.33046130952380953,-0.024801587301587293,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,vector,bm25,exact,24,-0.25,-0.4166666666666667,-0.08333333333333333,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,vector,bm25,f1,24,-0.09444444444444444,-0.20555555555555557,0.005555555555555557,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,domain_vector,bm25,exact,24,-0.375,-0.5833333333333334,-0.20833333333333334,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,domain_vector,bm25,f1,24,-0.21944444444444447,-0.3652777777777778,-0.07777777777777779,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,hybrid,bm25,exact,24,-0.125,-0.3333333333333333,0.08333333333333333,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim
+qwen/qwen3-30b-a3b-instruct-2507,hybrid,bm25,f1,24,-0.04702380952380952,-0.16071428571428573,0.0638888888888889,10000,20261024,descriptive nominal intervals; no multiplicity-adjusted superiority claim

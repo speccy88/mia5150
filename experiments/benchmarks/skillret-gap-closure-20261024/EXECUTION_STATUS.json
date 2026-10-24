@@ -40,7 +40,7 @@
     }
   },
   "hosted_paid_calls_at_local_data_snapshot": 0,
-  "hosted_followup_status": "hosted/reports/status.json; two later canary POSTs, unknown actual costs, latest upstream HTTP429, zero benchmark cases",
+  "hosted_followup_status": "hosted/reports/status.json; 120 Qwen cases complete, 147 Qwen requests with US$0.02411946 reported charges; two prior failed canaries retain US$0.16 UNKNOWN holds; 149 total generation attempts",
   "human_adjudication": "pending",
   "full_retrieval": {
     "planned_query_seed_size_rows": 52704,

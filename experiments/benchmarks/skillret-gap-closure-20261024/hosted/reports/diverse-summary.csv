@@ -4,11 +4,11 @@ google/gemma-3-27b-it,bm25,100,24,0,0,24,not_started,,,,True,1
 google/gemma-3-27b-it,vector,100,24,0,0,24,not_started,,,,True,1
 google/gemma-3-27b-it,domain_vector,100,24,0,0,24,not_started,,,,True,1
 google/gemma-3-27b-it,hybrid,100,24,0,0,24,not_started,,,,True,1
-qwen/qwen3-30b-a3b-instruct-2507,listing,100,24,0,0,24,not_started,,,,True,0
-qwen/qwen3-30b-a3b-instruct-2507,bm25,100,24,0,0,24,not_started,,,,True,0
-qwen/qwen3-30b-a3b-instruct-2507,vector,100,24,0,0,24,not_started,,,,True,0
-qwen/qwen3-30b-a3b-instruct-2507,domain_vector,100,24,0,0,24,not_started,,,,True,0
-qwen/qwen3-30b-a3b-instruct-2507,hybrid,100,24,0,0,24,not_started,,,,True,0
+qwen/qwen3-30b-a3b-instruct-2507,listing,100,24,24,24,0,complete,5.0,0.20833333333333334,0.5446428571428571,True,3
+qwen/qwen3-30b-a3b-instruct-2507,bm25,100,24,24,24,0,complete,13.0,0.5416666666666666,0.7236111111111111,True,3
+qwen/qwen3-30b-a3b-instruct-2507,vector,100,24,24,24,0,complete,7.0,0.2916666666666667,0.6291666666666667,True,3
+qwen/qwen3-30b-a3b-instruct-2507,domain_vector,100,24,24,24,0,complete,4.0,0.16666666666666666,0.5041666666666667,True,3
+qwen/qwen3-30b-a3b-instruct-2507,hybrid,100,24,24,24,0,complete,10.0,0.4166666666666667,0.6765873015873015,True,3
 deepseek/deepseek-v4-flash-0731,listing,100,24,0,0,24,not_started,,,,True,0
 deepseek/deepseek-v4-flash-0731,bm25,100,24,0,0,24,not_started,,,,True,0
 deepseek/deepseek-v4-flash-0731,vector,100,24,0,0,24,not_started,,,,True,0

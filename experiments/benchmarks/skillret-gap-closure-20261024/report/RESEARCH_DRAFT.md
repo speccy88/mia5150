@@ -56,7 +56,7 @@ The supplied four-page proposal remains the primary historical target; the revis
 
 The balanced 24-query sensitivity must be reported separately from the primary prevalence estimate. Two local model configurations differ in architecture, training and quantization as well as parameter count; they are not a clean causal size experiment. Generated compositional labels are silver unions, not human adjudication or proof of dependency semantics. Sequence ordering, actual activation/execution, independently authored requests and two-person agreement remain pending. No human label or contribution is invented.
 
-Hosted DeepSeek V4 Flash 0731 / DeepInfra FP8 is separately planned and authorized within a tighter US$1.10/600-call guard. The complete 24-query plan reserves 14,032,062 input and 74,112 output tokens over 579 requests, including routing/canaries, with no cache discount or retries. It estimates US$0.855 before 25% reserve. Credential availability and real provider canaries determine whether it can run; no hosted success or cost is invented.
+Hosted follow-up is separately versioned under [hosted/](../hosted/README.md), including its frozen shared panel, exact model/provider pins, physical API ledger, known charges and unknown liability holds. The user authorized US$2 total across models and 600 generation attempts. See the current saved execution receipt and results; the earlier four-size DeepSeek planning files are superseded preparation, not completed evidence. Hosted and local panels/output contracts are not pooled.
 
 ## Draft authorship and review
 

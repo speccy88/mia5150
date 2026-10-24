@@ -11,8 +11,19 @@ def rows(p):
 def main(runtime):
     work=runtime/'hosted-diverse-v2';out=HERE/'reports';out.mkdir(exist_ok=True);private=runtime/'hosted-execution'
     cases=rows(work/'cases.jsonl');calls=rows(private/'calls.jsonl');http=rows(private/'http-events.jsonl');lookup={c['case_key']:c for c in calls};public=[]
+    shared=json.loads((work/'shared-inputs.json').read_text());inputs={(e['query_id'],e['method']):e for e in shared['entries']}
     for case in cases:
         item=dict(case)
+        # These are public SHA-256 attempt identities, never authentication keys.
+        # Use unambiguous field names; keep original private source bytes intact.
+        for stage in ['selector','route']:
+            name=stage+'_attempt_key'
+            if name in item:item[stage+'_attempt_id']=item.pop(name)
+        item['source_row_sha256']=digest(case)
+        e=inputs[(case['query_id'],case['method'])];branch=e['branches'].get(case.get('domain','common'))
+        item['alias_mapping']=branch['mapping'] if branch else None
+        item['catalog_ids']=e['catalog_ids']
+        item['gold_major_domains']={g:shared['major'][g] for g in case['gold_ids']}
         for stage,key in [('selector','selector_attempt_key'),('route','route_attempt_key')]:
             answer=lookup.get(case.get(key),{})
             item[stage+'_response']={k:answer.get(k) for k in ['http_status','status','content','model','provider','finish_reason','input_tokens','output_tokens','reasoning_tokens','cost_usd','request_sha256']}
@@ -36,6 +47,13 @@ def main(runtime):
     latest=canary[-1] if canary else {}
     receipt={'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'protocol_sha256':protocol['protocol_sha256'],'benchmark_cases_planned':360,'benchmark_cases_completed':len(cases),'benchmark_cases_unattempted':360-len(cases),'v2_canary_attempts':len(canary),'canary_results':canary,'latest_http_status':latest.get('http_status'),'status':'halted_by_unknown_cost_guard' if latest.get('cost_usd') is None and latest else 'inspect_execution_receipt','reason':'Gemma DeepInfra returned HTTP429 upstream model rate limit; no generation ID, choices or usage. No automatic retry; different-model continuation paused by new unknown-cost policy.' if latest.get('http_status')==429 else None,'known_charged_cost_for_failed_canary_usd':latest.get('cost_usd'),'failed_case_replayed':False,'credential_retention':'Encrypted local credential retained at user request; no value/path/account metadata published.','scope':'No never-run cell is scored as zero. No hosted benchmark performance is claimed when completed count is zero.'}
     text=json.dumps(receipt,indent=2);assert not re.search(r'\bgen-[A-Za-z0-9-]+',text);(out/'diverse-execution.json').write_text(text)
+    execution=work/'execution.json'
+    if execution.exists():
+        terminal=json.loads(execution.read_text());receipt['owner_execution_receipt']=terminal
+        receipt['active_model_benchmark_target']=120;receipt['active_model_benchmark_completed']=sum(c['model']=='qwen/qwen3-30b-a3b-instruct-2507' for c in cases)
+        receipt['status']='active_panel_complete_other_models_not_run' if receipt['active_model_benchmark_completed']==120 else 'partial_active_panel'
+        receipt['reason']='Qwen/SiliconFlow continuation only; DeepInfra models remain paused. Earlier failed canaries and both unknown holds retained.'
+        (out/'diverse-execution.json').write_text(json.dumps(receipt,indent=2))
     if latest.get('http_status')==429 and latest.get('case_key')=='nonbenchmark-canary-v2-gemma-1':
         p=PROFILES[0];c=canaries()[0];body=payload(p,c['messages'],c['kind'],c['values']);assert digest(body)==latest['request_sha256']
         snapshots=json.loads((HERE/'diverse-endpoint-snapshots.json').read_text());e=next(s['endpoint'] for s in snapshots if s['endpoint']['model_id']==p['model'])

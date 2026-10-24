@@ -1,10 +1,10 @@
 {
-  "checked_utc": "2026-10-24T19:49:08.227755+00:00",
+  "checked_utc": "2026-10-24T20:11:44.696065+00:00",
   "protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3",
   "benchmark_cases_planned": 360,
-  "benchmark_cases_completed": 0,
-  "benchmark_cases_unattempted": 360,
-  "v2_canary_attempts": 1,
+  "benchmark_cases_completed": 120,
+  "benchmark_cases_unattempted": 240,
+  "v2_canary_attempts": 4,
   "canary_results": [
     {
       "case_key": "nonbenchmark-canary-v2-gemma-1",
@@ -19,13 +19,82 @@
       "output_tokens": null,
       "cost_usd": null,
       "finish_reason": null
+    },
+    {
+      "case_key": "nonbenchmark-canary-v2-qwen-1",
+      "utc": "2026-10-24T19:57:30.829539+00:00",
+      "kind": "selection",
+      "http_status": 200,
+      "status": "returned",
+      "request_sha256": "49e55f9e71fb5d9ad4a8e9344058704b212f69139bb55a1e0b64a4b9f5368fdb",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "provider": "SiliconFlow",
+      "input_tokens": 35,
+      "output_tokens": 18,
+      "cost_usd": 8.55e-06,
+      "finish_reason": "stop"
+    },
+    {
+      "case_key": "nonbenchmark-canary-v2-qwen-2",
+      "utc": "2026-10-24T19:57:32.614295+00:00",
+      "kind": "selection",
+      "http_status": 200,
+      "status": "returned",
+      "request_sha256": "c28a781326714f9d967dbdf7712cf9aaa90be4d48d5a0b60dd98fca8086af9dd",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "provider": "SiliconFlow",
+      "input_tokens": 22,
+      "output_tokens": 5,
+      "cost_usd": 3.48e-06,
+      "finish_reason": "stop"
+    },
+    {
+      "case_key": "nonbenchmark-canary-v2-qwen-3",
+      "utc": "2026-10-24T19:57:33.458405+00:00",
+      "kind": "routing",
+      "http_status": 200,
+      "status": "returned",
+      "request_sha256": "8f8ffd2561820df1e97ff1628f05b938c88724194dcb51a181eb7b31d7a69139",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "provider": "SiliconFlow",
+      "input_tokens": 23,
+      "output_tokens": 6,
+      "cost_usd": 3.87e-06,
+      "finish_reason": "stop"
     }
   ],
-  "latest_http_status": 429,
-  "status": "halted_by_unknown_cost_guard",
-  "reason": "Gemma DeepInfra returned HTTP429 upstream model rate limit; no generation ID, choices or usage. No automatic retry; different-model continuation paused by new unknown-cost policy.",
-  "known_charged_cost_for_failed_canary_usd": null,
+  "latest_http_status": 200,
+  "status": "active_panel_complete_other_models_not_run",
+  "reason": "Qwen/SiliconFlow continuation only; DeepInfra models remain paused. Earlier failed canaries and both unknown holds retained.",
+  "known_charged_cost_for_failed_canary_usd": 3.87e-06,
   "failed_case_replayed": false,
   "credential_retention": "Encrypted local credential retained at user request; no value/path/account metadata published.",
-  "scope": "No never-run cell is scored as zero. No hosted benchmark performance is claimed when completed count is zero."
+  "scope": "No never-run cell is scored as zero. No hosted benchmark performance is claimed when completed count is zero.",
+  "owner_execution_receipt": {
+    "status": "run_terminal",
+    "protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3",
+    "models": [
+      {
+        "model": "google/gemma-3-27b-it",
+        "status": "no_generation_provider_paused_by_continuation"
+      },
+      {
+        "model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "status": "benchmark_panel_complete"
+      },
+      {
+        "model": "deepseek/deepseek-v4-flash-0731",
+        "status": "no_generation_provider_paused_by_continuation"
+      }
+    ],
+    "canonical_cases": 120,
+    "physical_generation_attempts_including_legacy": 149,
+    "guarded_total_usd": "0.18411946",
+    "actual_total_usd": null,
+    "legacy_unknown_cost_preserved": true,
+    "cap_usd": "2.00",
+    "call_cap": 600
+  },
+  "active_model_benchmark_target": 120,
+  "active_model_benchmark_completed": 120
 }

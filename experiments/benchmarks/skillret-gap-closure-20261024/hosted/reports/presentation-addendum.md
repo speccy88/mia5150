@@ -1,0 +1,3 @@
+## Hosted follow-up diagnostic
+
+The separate Qwen/SiliconFlow diagnostic uses 24 exposed balanced queries at 100 skills. Exact sets: listing 5/24; bm25 13/24; vector 7/24; domain vector 4/24; hybrid 10/24. Known reported charges across all Qwen requests including canaries and routing total US$0.02411946; earlier failed requests retain US$0.16 UNKNOWN liability holds. Actual total cost remains unknown. There are 149 cumulative generation attempts. These results are not official-prevalence estimates, a causal local-versus-hosted model comparison, native task execution, or completion of the original hosted matrix.

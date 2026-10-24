@@ -29,3 +29,8 @@ Exposed synthetic queries, incomplete qrels, small sensitivity panel, no human a
 
 ##10. Reproduction and next evidence
 Source snapshots, raw ledgers, tests and regeneration commands. Hosted stage obeys explicit caps and credential availability. Team roles and speaking allocation await confirmation.
+
+## Hosted follow-up addendum
+The separately frozen Qwen/SiliconFlow diagnostic completed all 120 cases on 24 exposed queries at N=100. Exact sets: listing 5/24; BM25 13/24; vector 7/24; domain vector 4/24; hybrid 10/24. These balanced-panel results are descriptive and do not complete the original hosted matrix or establish a causal model-size effect.
+
+All 147 Qwen generation requests, including three canaries and 24 domain routes, report usage and costs totaling US$0.02411946. Two prior failed canaries retain unknown actual costs and US$0.16 conservative holds. Guarded total US$0.18411946 across 149 generation attempts. The original visual PDF remains an unchanged snapshot of the validated local study; see the separate hosted report and API ledger for this later stage.
