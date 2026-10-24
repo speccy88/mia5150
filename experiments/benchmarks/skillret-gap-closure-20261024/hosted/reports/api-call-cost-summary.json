@@ -33,7 +33,7 @@
     "observed_response_cost_sum_usd": 0,
     "actual_billed_known_sum_usd": 0,
     "unknown_cost_records": 1,
-    "reserve_sum_usd": 0.000744
+    "reserve_sum_usd": 0.02
   },
   {
     "run_id": "hosted-v1-20261024",

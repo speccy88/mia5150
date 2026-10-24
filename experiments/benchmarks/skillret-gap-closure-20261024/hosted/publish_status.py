@@ -11,6 +11,7 @@ def main():
     events=rows(private/'http-events.jsonl');current={}
     allowed=['request_id','run_id','case_id','attempt_id','stage','method','utc','completed_utc','http_method','endpoint_family','generation_request','model_requested','provider_pin','latency_seconds','http_status','result_status','error_type','model','provider','input_tokens','output_tokens','reasoning_tokens','finish_reason','status','cost_usd']
     allowed.append('api_error_code')
+    allowed.append('cooldown')
     for event in events:
         key=event['request_id'];current.setdefault(key,{}).update({k:event.get(k) for k in allowed if k in event})
     old=rows(private/'calls.jsonl');private_ids=[]

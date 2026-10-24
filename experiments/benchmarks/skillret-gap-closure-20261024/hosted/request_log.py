@@ -18,6 +18,7 @@ def finish(client,start,started,payload=None,error=None):
     if isinstance(payload,dict):
         row.update(response_keys=sorted(payload),response_error=client.safe_error(payload) if payload.get('error') else None)
         row['api_error_code']=payload['error'].get('code') if isinstance(payload.get('error'),dict) else None
+        row['cooldown']=payload.get('_cooldown')
         if start['generation_request']:
             parsed=parse_envelope(payload)
             row.update({k:parsed[k] for k in ['model','provider','input_tokens','output_tokens','reasoning_tokens','finish_reason','status','cost_usd']})

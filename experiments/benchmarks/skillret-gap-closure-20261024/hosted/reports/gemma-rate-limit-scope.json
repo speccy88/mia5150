@@ -1,0 +1,15 @@
+{
+  "case_id": "nonbenchmark-canary-v2-gemma-1",
+  "http_status": 429,
+  "error_code": 429,
+  "provider_error_message": "Provider returned error",
+  "reported_provider": "DeepInfra",
+  "reported_provider_detail": "google/gemma-3-27b-it is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+  "scope_inference": "The saved error explicitly attributes the rate limit to the Gemma model upstream at DeepInfra. This supports provider/model scope; it does not independently prove absence of a simultaneous account/global limit.",
+  "retry_after_headers": "Not captured by the transport at the time; cannot infer absence or recover without a new request. No request was repeated to inspect headers.",
+  "limit_source_metadata": "Not retained by the original error whitelist; unknown, not asserted absent.",
+  "same_provider_action": "No Gemma retry, fallback, credential change, account setting change or quota workaround. Its failed canary remains terminal.",
+  "next_model": "The already frozen Qwen/SiliconFlow route awaits independent scope and bounded-hold review. No request sent yet.",
+  "future_transport_amendment": "Retain parsed Retry-After seconds/date and error limit_source; any new429 stops before automatic model switching, even when billed cost is known.",
+  "sources": ["https://openrouter.ai/docs/api_reference/limits", "https://openrouter.ai/docs/api_reference/errors-and-debugging"]
+}

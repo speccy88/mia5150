@@ -11,7 +11,7 @@ sys.path.insert(0,str(STUDY))
 from core import BM25,chat,digest,parse_selection,rank,render,retrieval_metrics,rrf,select_prompt,selection_metrics
 from ledger import append_jsonl
 from budget import Budget,BudgetStop
-from envelope import decode_http,envelope_identity,parse_envelope,provenance_matches,valid_result,canary_valid
+from envelope import decode_http,envelope_identity,parse_envelope,provenance_matches,valid_result,canary_valid,cooldown_headers
 from request_log import begin as log_begin,finish as log_finish
 API='https://openrouter.ai/api/v1/'
 MODEL='deepseek/deepseek-v4-flash-0731'
@@ -49,9 +49,9 @@ class Client:
         request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
         entry,started=log_begin(self,suffix,body)
         try:
-            with urllib.request.build_opener(NoRedirect()).open(request,timeout=180) as response:payload=decode_http(response.read(),response.status)
+            with urllib.request.build_opener(NoRedirect()).open(request,timeout=180) as response:payload=decode_http(response.read(),response.status);payload['_cooldown']=cooldown_headers(response.headers)
         except urllib.error.HTTPError as error:
-            payload=decode_http(error.read(),error.code)
+            payload=decode_http(error.read(),error.code);payload['_cooldown']=cooldown_headers(error.headers)
         except Exception as error:
             log_finish(self,entry,started,error=error);raise
         log_finish(self,entry,started,payload=payload);return payload
@@ -64,7 +64,7 @@ class Client:
             return re.sub(r'(?i)(?:Bearer\s+\S+|sk-(?:or-v1-)?[A-Za-z0-9_-]{12,})','[REDACTED]',text)[:2000]
         metadata=error.get('metadata') or {}
         if not isinstance(metadata,dict):metadata={}
-        return {'code':error.get('code',response.get('_http_status')),'message':clean(error.get('message','')),'provider_name':clean(metadata.get('provider_name','')),'provider_detail':clean(metadata.get('raw',''))}
+        return {'code':error.get('code',response.get('_http_status')),'message':clean(error.get('message','')),'provider_name':clean(metadata.get('provider_name','')),'provider_detail':clean(metadata.get('raw','')),'limit_source':clean(metadata.get('limit_source',''))}
     def reconcile(self,key,response_id):
         assert re.fullmatch(r'gen-[0-9A-Za-z-]{1,124}',response_id)
         self.active_case=key
@@ -117,6 +117,7 @@ class Client:
             record.update(envelope_identity(response))
             append_jsonl(self.out/'envelopes.jsonl',{**{k:record[k] for k in ['case_key','request_sha256','utc']},**envelope_identity(response)})
             record.update(parse_envelope(response))
+            if record.get('http_status')==429:self.rate_limit_halt=True
             record['http_request_id']=getattr(self,'last_http_request_id',None)
             if response.get('error'):record['provider_error']=self.safe_error(response)
             record['wall_seconds']=time.perf_counter()-started;append_jsonl(self.out/'calls.jsonl',record)
@@ -124,6 +125,7 @@ class Client:
                 recovered=self.reconcile(key,record['response_id']);record.update(cost_usd=recovered['cost_usd'],input_tokens=recovered['input_tokens'],output_tokens=recovered['output_tokens'],provider=recovered['provider'])
                 if recovered['provenance_verified']:record['model']=recovered['model']
             else:self.budget.settle(key,record['cost_usd'])
+            if getattr(self,'rate_limit_halt',False):raise BudgetStop('Rate limit response: halt for scope/cooldown review, no automatic model switch')
             if not provenance_matches(record.get('model'),record.get('provider'),self.model,self.expected_provider):raise BudgetStop('Unverified model/provider; expansion halted')
             if record['input_tokens'] is None or record['output_tokens'] is None:raise BudgetStop('Missing usage; expansion halted')
             if record['input_tokens']>allowance or record['output_tokens']>128:raise BudgetStop('Usage exceeded reserved token contract; expansion halted')

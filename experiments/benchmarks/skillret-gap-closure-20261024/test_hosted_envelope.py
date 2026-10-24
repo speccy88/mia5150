@@ -4,6 +4,7 @@ import pytest
 ROOT=pathlib.Path(__file__).parent;sys.path.insert(0,str(ROOT/'hosted'))
 from envelope import decode_http,parse_envelope,canary_valid
 from budget import Budget,BudgetStop
+from envelope import cooldown_headers
 spec=importlib.util.spec_from_file_location('tested_hosted_runner',ROOT/'hosted/runner.py');runner=importlib.util.module_from_spec(spec);spec.loader.exec_module(runner)
 
 def good():return {'id':'gen-fixture-1','model':runner.MODEL,'provider':'DeepInfra','usage':{'prompt_tokens':10,'completion_tokens':8,'cost':0},'choices':[{'message':{'content':'["s000000000000"]'},'finish_reason':'stop'}]}
@@ -82,3 +83,9 @@ def test_invalid_matched_cost_retains_hold_with_history(tmp_path,cost):
     with pytest.raises(BudgetStop):c.reconcile('attempt','gen-fixture-1')
     assert str(c.budget.state()[1])=='0.00051456'
     assert json.loads((tmp_path/'reconciliation.jsonl').read_text())['status']=='invalid_total_cost_hold_retained'
+
+def test_retry_after_guidance_is_parsed_without_dumping_headers():
+    assert cooldown_headers({})=={'retry_after_header_present':False}
+    assert cooldown_headers({'Retry-After':'60','Account':'private'})=={'retry_after_header_present':True,'retry_after_seconds':60}
+    assert 'retry_after_utc' in cooldown_headers({'Retry-After':'Sat, 24 Oct 2026 20:00:00 GMT'})
+    assert cooldown_headers({'Retry-After':'untrusted header'})=={'retry_after_header_present':True,'retry_after_unparseable':True}

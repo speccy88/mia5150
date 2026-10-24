@@ -1,5 +1,19 @@
 """Pure defensive parsing and validity gates. No network, keys or billing guesses."""
-import decimal,hashlib,json,re
+import decimal,hashlib,json,re,email.utils
+
+def cooldown_headers(headers):
+    """Retain only parsed cooldown guidance, never arbitrary header contents."""
+    raw=headers.get('Retry-After') if headers else None
+    result={'retry_after_header_present':raw is not None}
+    if raw is None:return result
+    try:
+        seconds=int(raw)
+        if seconds<0:raise ValueError('negative')
+        result['retry_after_seconds']=seconds
+    except (ValueError,TypeError):
+        try:result['retry_after_utc']=email.utils.parsedate_to_datetime(raw).isoformat()
+        except (ValueError,TypeError,OverflowError):result['retry_after_unparseable']=True
+    return result
 
 def decode_http(raw,status):
     try:value=json.loads(raw)
