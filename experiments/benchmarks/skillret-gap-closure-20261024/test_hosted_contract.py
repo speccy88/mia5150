@@ -23,3 +23,9 @@ def test_authenticated_redirect_is_never_followed():
     import urllib.request
     request=urllib.request.Request(runner.API+'key',headers={'Authorization':'Bearer synthetic-nonsecret-fixture'})
     assert runner.NoRedirect().redirect_request(request,None,302,'redirect',{},'https://not-authorized.invalid') is None
+
+def test_reconcile_only_blocks_post_and_generation_before_network_or_reserve():
+    import pytest
+    client=runner.Client('dummy',None,None,None,{},read_only=True)
+    with pytest.raises(runner.BudgetStop):client.http('chat/completions',{'model':'fixture'})
+    with pytest.raises(runner.BudgetStop):client.call('fixture',[],'selection',[],8192)

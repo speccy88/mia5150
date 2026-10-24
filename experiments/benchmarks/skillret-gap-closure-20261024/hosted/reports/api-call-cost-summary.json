@@ -1,0 +1,14 @@
+[
+  {
+    "run_id": "hosted-v1-20261024",
+    "model_requested": "deepseek/deepseek-v4-flash-0731",
+    "stage": "canary",
+    "method": null,
+    "physical_http_attempts": 1,
+    "generation_post_attempts": 1,
+    "observed_response_cost_sum_usd": 0,
+    "actual_billed_known_sum_usd": 0,
+    "unknown_cost_records": 1,
+    "reserve_sum_usd": 0.00051456
+  }
+]

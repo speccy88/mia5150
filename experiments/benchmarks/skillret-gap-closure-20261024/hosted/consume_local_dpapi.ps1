@@ -44,7 +44,8 @@ try {
     if ($secretPointer -ne [IntPtr]::Zero) { [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($secretPointer) }
     $memoryCredential=$null
     if ($protectedValue) { $protectedValue.Dispose() }
-    if ($transferred) { Remove-Item -LiteralPath $credentialPath }
+    # The user explicitly revoked automatic deletion on 24 October 2026.
+    # Preserve the encrypted local copy until explicitly requested otherwise.
 }
 if ($transferred) {
     $benchmarkProcess.WaitForExit()

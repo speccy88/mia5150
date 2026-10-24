@@ -39,7 +39,8 @@
       "physical_call_unknown_cases": 0
     }
   },
-  "hosted_paid_calls": 0,
+  "hosted_paid_calls_at_local_data_snapshot": 0,
+  "hosted_followup_status": "hosted/reports/status.json; one later canary POST, unknown cost, zero benchmark cases",
   "human_adjudication": "pending",
   "full_retrieval": {
     "planned_query_seed_size_rows": 52704,

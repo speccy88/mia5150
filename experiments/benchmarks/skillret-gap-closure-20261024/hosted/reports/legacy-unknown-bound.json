@@ -1,0 +1,44 @@
+{
+  "status": "request_reconstruction_passed_bound_candidate_pending_review",
+  "generation_post_attempts_recorded": 1,
+  "additional_generation_retries_in_source": 0,
+  "request_sha256": "d3df0990c35f4413fb69952c5725361fd4346158b446de9138db28e9e8c7ef69",
+  "request_hash_matches_reconstruction": true,
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "provider_pin": {
+    "only": [
+      "deepinfra/fp8"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "sent_max_tokens": 128,
+  "sent_reasoning": {
+    "effort": "none"
+  },
+  "recorded_estimated_input_tokens": 102,
+  "old_input_allowance": 8192,
+  "endpoint_context_tokens": 1048576,
+  "endpoint_max_completion_tokens": 384000,
+  "endpoint_pricing": {
+    "prompt": "0.00000006",
+    "completion": "0.00000018",
+    "input_cache_read": "0.000000015",
+    "discount": 0
+  },
+  "full_context_plus_sent_output_usd": "0.06293760",
+  "full_context_plus_entire_endpoint_completion_usd": "0.13203456",
+  "candidate_permanent_unknown_hold_usd": "0.14",
+  "actual_billed_cost_usd": null,
+  "candidate_reason": "Full input context plus the entire endpoint completion ceiling, beyond the actual sent 128 output cap. This avoids relying solely on a provider-specific reasoning/max_tokens interpretation. No request fee or tier was listed in the saved endpoint pricing. One recorded POST, no retries or redirects in transport. Requires independent review before any ledger amendment or new POST.",
+  "limitations": [
+    "Observed request count and source do not independently prove provider-side billing correctness.",
+    "A protocol hold is a conservative liability reserve, not known spend.",
+    "Saved endpoint metadata is historical; future requests need fresh rates and separate caps."
+  ],
+  "sources": [
+    "https://openrouter.ai/docs/api/api-reference/chat/create-a-chat-completion",
+    "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+    "https://openrouter.ai/api/v1/models/deepseek/deepseek-v4-flash-0731/endpoints"
+  ]
+}

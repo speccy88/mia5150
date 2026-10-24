@@ -3,7 +3,7 @@
 Never use shell arguments, environment variables or repository files for the key.
 No generation retries: a reservation is a terminal attempt, including unknown use.
 """
-import argparse,csv,datetime,decimal,gzip,hashlib,json,os,pathlib,sys,time,urllib.error,urllib.request
+import argparse,csv,datetime,decimal,gzip,hashlib,json,os,pathlib,re,sys,time,urllib.error,urllib.parse,urllib.request
 os.environ.update(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false')
 import numpy as np
 HERE=pathlib.Path(__file__).resolve().parent;STUDY=HERE.parent
@@ -11,6 +11,8 @@ sys.path.insert(0,str(STUDY))
 from core import BM25,chat,digest,parse_selection,rank,render,retrieval_metrics,rrf,select_prompt,selection_metrics
 from ledger import append_jsonl
 from budget import Budget,BudgetStop
+from envelope import decode_http,envelope_identity,parse_envelope,provenance_matches,valid_result,canary_valid
+from request_log import begin as log_begin,finish as log_finish
 API='https://openrouter.ai/api/v1/'
 MODEL='deepseek/deepseek-v4-flash-0731'
 PROVIDER={'only':['deepinfra/fp8'],'allow_fallbacks':False,'require_parameters':True}
@@ -38,13 +40,51 @@ def request_body(msg,kind,values):
     return {'model':MODEL,'provider':PROVIDER,'messages':msg,'response_format':schema(kind,values),'temperature':0,'seed':20261024,'max_tokens':128,'reasoning':{'effort':'none'},'stream':False}
 
 class Client:
-    def __init__(self,key,budget,tokenizer,out,allowances):self.key=key;self.budget=budget;self.tokenizer=tokenizer;self.out=out;self.allowances=allowances
+    def __init__(self,key,budget,tokenizer,out,allowances,read_only=False):self.key=key;self.budget=budget;self.tokenizer=tokenizer;self.out=out;self.allowances=allowances;self.read_only=read_only
     def http(self,suffix,body=None):
-        assert suffix in ['key','models/deepseek/deepseek-v4-flash-0731/endpoints','chat/completions']
+        if self.read_only and body is not None:raise BudgetStop('Read-only reconciliation forbids POST')
+        assert suffix in ['key','models/deepseek/deepseek-v4-flash-0731/endpoints','chat/completions'] or re.fullmatch(r'generation\?id=gen-[0-9A-Za-z-]{1,124}',suffix)
         request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
-        with urllib.request.build_opener(NoRedirect()).open(request,timeout=180) as response:return json.load(response)
-    def verify(self):
+        entry,started=log_begin(self,suffix,body)
+        try:
+            with urllib.request.build_opener(NoRedirect()).open(request,timeout=180) as response:payload=decode_http(response.read(),response.status)
+        except urllib.error.HTTPError as error:
+            payload=decode_http(error.read(),error.code)
+        except Exception as error:
+            log_finish(self,entry,started,error=error);raise
+        log_finish(self,entry,started,payload=payload);return payload
+    def safe_error(self,response):
+        error=response.get('error') or {}
+        if not isinstance(error,dict):error={'message':str(error)}
+        def clean(value):
+            text=str(value).replace(self.key,'[REDACTED]') if self.key else str(value)
+            text=re.sub(r'\bgen-[0-9A-Za-z-]+\b','[PRIVATE_GENERATION_ID]',text)
+            return re.sub(r'(?i)(?:Bearer\s+\S+|sk-(?:or-v1-)?[A-Za-z0-9_-]{12,})','[REDACTED]',text)[:2000]
+        metadata=error.get('metadata') or {}
+        if not isinstance(metadata,dict):metadata={}
+        return {'code':error.get('code',response.get('_http_status')),'message':clean(error.get('message','')),'provider_name':clean(metadata.get('provider_name','')),'provider_detail':clean(metadata.get('raw',''))}
+    def reconcile(self,key,response_id):
+        assert re.fullmatch(r'gen-[0-9A-Za-z-]{1,124}',response_id)
+        self.active_case=key
+        response=self.http('generation?'+urllib.parse.urlencode({'id':response_id}));data=response.get('data') if isinstance(response,dict) else None
+        if not isinstance(data,dict):data={}
+        identity_ok=data.get('id')==response_id
+        if not identity_ok:
+            append_jsonl(self.out/'reconciliation.jsonl',{'case_key':key,'response_id':response_id,'status':'identity_mismatch' if data.get('id') is not None else 'identity_missing','id_matches':False,'data_present':'data' in response,'data_type':type(response.get('data')).__name__,'data_keys':sorted(data),'data_id_present':'id' in data,'top_level_id_present':'id' in response,'top_level_id_matches':response.get('id')==response_id,'returned_model':data.get('model'),'returned_provider':data.get('provider_name'),'reported_total_cost':data.get('total_cost'),'http_status':response.get('_http_status',200),'response_keys':sorted(response),'lookup_error':self.safe_error(response),'scope':'Hold retained: saved actual generation ID is absent or different; no new generation'})
+            raise BudgetStop('Generation identity not verified; hold retained')
+        if data.get('total_cost') is None:
+            append_jsonl(self.out/'reconciliation.jsonl',{'case_key':key,'response_id':response_id,'status':'usage_still_unknown','error':self.safe_error(response)})
+            raise BudgetStop('Generation usage remains unknown; no expansion')
+        try:cost=decimal.Decimal(str(data['total_cost']))
+        except decimal.InvalidOperation:cost=decimal.Decimal('NaN')
+        if isinstance(data['total_cost'],bool) or not cost.is_finite() or cost<0:
+            append_jsonl(self.out/'reconciliation.jsonl',{'case_key':key,'response_id':response_id,'status':'invalid_total_cost_hold_retained','cost_type':type(data['total_cost']).__name__})
+            raise BudgetStop('Invalid authoritative total_cost; hold retained')
+        receipt={'case_key':key,'response_id':response_id,'status':'provider_usage_reconciled','cost_usd':data['total_cost'],'input_tokens':data.get('native_tokens_prompt') if data.get('native_tokens_prompt') is not None else data.get('tokens_prompt'),'output_tokens':data.get('native_tokens_completion') if data.get('native_tokens_completion') is not None else data.get('tokens_completion'),'provider':data.get('provider_name'),'model':data.get('model'),'provenance_verified':provenance_matches(data.get('model'),data.get('provider_name'),MODEL),'finish_reason':data.get('finish_reason'),'generation_error':data.get('error'),'scope':'Matched ID and authoritative total_cost settle billing; model/provider validity is a separate gate. No generation replay.'}
+        append_jsonl(self.out/'reconciliation.jsonl',receipt);self.budget.settle(key,data['total_cost']);return receipt
+    def verify(self,auth_only=False):
         auth=self.http('key');assert 'data' in auth,'Authentication response missing data'
+        if auth_only:return {'authenticated':True,'mode':'read_only_reconciliation','checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'generation_posts_allowed':False,'credential_storage':'anonymous stdin into process memory only'}
         data=self.http('models/deepseek/deepseek-v4-flash-0731/endpoints')
         endpoint=next(e for e in data['data']['endpoints'] if e['tag']=='deepinfra/fp8')
         assert endpoint['status']==0 and endpoint['context_length']>=1048576
@@ -52,19 +92,30 @@ class Client:
         assert {'structured_outputs','response_format','seed'}<=set(endpoint['supported_parameters'])
         return {'authenticated':True,'model':MODEL,'provider_pin':PROVIDER,'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'prices_within_approved_limits':True,'credential_storage':'anonymous stdin into process memory only'}
     def call(self,key,msg,kind,values,allowance):
+        if self.read_only:raise BudgetStop('Read-only reconciliation forbids generation')
+        self.active_case=key;self.active_kind=kind
         body=request_body(msg,kind,values)
         # Estimate model-visible content, not doubly escaped HTTP wire JSON.
         # The frozen allowance separately reserves 4096 wrapper/schema tokens.
         tokens=sum(len(self.tokenizer.encode(m['role']+'\n'+m['content']).ids) for m in msg)+len(self.tokenizer.encode(json.dumps(body['response_format'])).ids)
         if tokens+512>allowance:raise BudgetStop('Tokenizer/schema count exceeds frozen per-request allowance; no call')
-        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal('.00000006')+decimal.Decimal(128)*decimal.Decimal('.00000018'))
+        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal('.00000006')+decimal.Decimal(128)*decimal.Decimal('.00000018'),model=MODEL,run_id='hosted-followup-20261024')
         record={'case_key':key,'request_sha256':digest(body),'kind':kind,'reserved_input_tokens':allowance,'estimated_input_tokens':tokens,'output_token_limit':128,'physical_call':True,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_tokens':None,'output_tokens':None,'cost_usd':None}
         started=time.perf_counter()
         try:
-            response=self.http('chat/completions',body);usage=response.get('usage',{});record.update(response_id=response.get('id'),provider=response.get('provider'),input_tokens=usage.get('prompt_tokens'),output_tokens=usage.get('completion_tokens'),cost_usd=usage.get('cost'),content=response.get('choices',[{}])[0].get('message',{}).get('content'),finish_reason=response.get('choices',[{}])[0].get('finish_reason'),status='returned')
+            response=self.http('chat/completions',body)
+            # Save ID/HTTP/shape before touching optional usage/choice/message.
+            record.update(envelope_identity(response))
+            append_jsonl(self.out/'envelopes.jsonl',{**{k:record[k] for k in ['case_key','request_sha256','utc']},**envelope_identity(response)})
+            record.update(parse_envelope(response))
+            record['http_request_id']=getattr(self,'last_http_request_id',None)
+            if response.get('error'):record['provider_error']=self.safe_error(response)
             record['wall_seconds']=time.perf_counter()-started;append_jsonl(self.out/'calls.jsonl',record)
-            self.budget.settle(key,record['cost_usd'])
-            if record['provider'] and 'deepinfra' not in record['provider'].casefold():raise BudgetStop('Unexpected provider; expansion halted')
+            if record['cost_usd'] is None and record.get('response_id'):
+                recovered=self.reconcile(key,record['response_id']);record.update(cost_usd=recovered['cost_usd'],input_tokens=recovered['input_tokens'],output_tokens=recovered['output_tokens'],provider=recovered['provider'])
+                if recovered['provenance_verified']:record['model']=recovered['model']
+            else:self.budget.settle(key,record['cost_usd'])
+            if not provenance_matches(record.get('model'),record.get('provider'),MODEL):raise BudgetStop('Unverified model/provider; expansion halted')
             if record['input_tokens'] is None or record['output_tokens'] is None:raise BudgetStop('Missing usage; expansion halted')
             if record['input_tokens']>allowance or record['output_tokens']>128:raise BudgetStop('Usage exceeded reserved token contract; expansion halted')
             return record
@@ -75,19 +126,29 @@ class Client:
             self.budget.settle(key,None)
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--runtime-root',required=True);args=parser.parse_args();runtime=pathlib.Path(args.runtime_root)
+    parser=argparse.ArgumentParser();parser.add_argument('--runtime-root',required=True);parser.add_argument('--reconcile-only',action='store_true');args=parser.parse_args();runtime=pathlib.Path(args.runtime_root)
     # The caller closes stdin immediately after an anonymous pipe transfer.
     key=sys.stdin.read().strip()
     if not key or '\n' in key:raise SystemExit('Credential not supplied through the private stdin flow')
-    out=HERE/'results';out.mkdir(exist_ok=True);budget=Budget(out/'budget-ledger.jsonl','1.10','1.65','1.5',600)
+    out=runtime/'hosted-execution';out.mkdir(exist_ok=True);budget=Budget(out/'budget-ledger.jsonl','2.00','3.00','1.5',600,model_caps={MODEL:'.60','google/gemma-3-27b-it':'.65','qwen/qwen3-30b-a3b-instruct-2507':'.70'},legacy_model=MODEL)
     prior,_=budget.state()
-    if any(x['kind'] in ['reserve','unknown'] for x in prior.values()):raise BudgetStop('Unresolved earlier charge; no new request')
     from tokenizers import Tokenizer
     pin=read(runtime/'hosted-tokenizer/private-manifest.json');assert pin['repository']=='deepseek-ai/DeepSeek-V4-Flash-0731'
     tok=Tokenizer.from_file(pin['tokenizer.json']);tok.no_truncation();tok.no_padding()
     assert hashlib.sha256(pathlib.Path(pin['tokenizer.json']).read_bytes()).hexdigest()=='8f9f37ca37fdc4f5fd36d5cf4d3b0e8392edb4e894fd10cc0d70b4957c8633cf'
     with (HERE/'cheaper-token-ledger.csv').open() as f:allowances={(r['query_id'],int(r['size']),r['method']):int(r['reserved_input_tokens']) for r in csv.DictReader(f)}
-    client=Client(key,budget,tok,out,allowances);receipt=client.verify();(HERE/'credential-status.json').write_text(json.dumps(receipt,indent=2));print('OpenRouter authentication and exact provider availability verified; bounded canaries starting',flush=True)
+    client=Client(key,budget,tok,out,allowances,read_only=args.reconcile_only);receipt=client.verify(auth_only=args.reconcile_only);(HERE/'credential-status.json').write_text(json.dumps(receipt,indent=2));print('OpenRouter authentication verified; '+('read-only usage reconciliation' if args.reconcile_only else 'exact provider checked, bounded canaries starting'),flush=True)
+    if args.reconcile_only:
+        calls={r['case_key']:r for r in rows(out/'calls.jsonl')} if (out/'calls.jsonl').exists() else {}
+        for case_id,state in prior.items():
+            if state['kind'] in ['reserve','unknown']:
+                response_id=calls.get(case_id,{}).get('response_id')
+                if not response_id:raise BudgetStop('No generation ID for unresolved charge')
+                reconciled=client.reconcile(case_id,response_id)
+                print(json.dumps({k:v for k,v in reconciled.items() if k!='response_id'}),flush=True)
+        print('Read-only reconciliation ended; no generation requested',flush=True);return
+    if any(x['kind'] in ['reserve','unknown'] for x in prior.values()):raise BudgetStop('Unresolved earlier charge; no new request')
+    raise BudgetStop('Legacy four-size matrix superseded by the authorized diverse-model protocol; generation remains disabled pending frozen amendment and gate review')
     # Resume only wholly unreserved cases; no semantic retry. Canaries from a
     # prior successful invocation are reused without new paid requests.
     calls={r['case_key']:r for r in rows(out/'calls.jsonl')} if (out/'calls.jsonl').exists() else {}
@@ -96,7 +157,7 @@ def main():
         if cid not in calls:
             msg=[{'role':'system','content':'Return only the JSON array requested. No tools.'},{'role':'user','content':'Return ["s000000000000"] for this non-evaluation format check.'}]
             calls[cid]=client.call(cid,msg,'selection',[],8192)
-        assert json.loads(calls[cid]['content'])==['s000000000000'],'Canary schema or usage validation failed; no benchmark expansion'
+        assert canary_valid(calls[cid],MODEL),'Canary response/provenance/finish/schema gate failed; no expansion'
     protocol=read(STUDY/'protocol.json');chosen=set(protocol['sensitivity_query_ids']);panel=[q for q in read(STUDY/'panel.json') if q['id'] in chosen]
     source=STUDY.parents[1]/'scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs';skills=rows(source/'skills-metadata.jsonl');docs={s['id']:render(s) for s in skills};major={s['id']:s['major'] for s in skills};domains=sorted(set(major.values()));bm=BM25(docs)
     manifest=read(STUDY/'embedding-manifest.json');dv=np.load(runtime/'docs.npy',mmap_mode='r');qv=np.load(runtime/'queries.npy',mmap_mode='r');di={d:i for i,d in enumerate(manifest['document_ids'])};qi={q:i for i,q in enumerate(manifest['query_ids'])}
