@@ -47,7 +47,10 @@ def execute(runtime,key):
         if key in prior:raise BudgetStop('Attempt exists without durable response; never replay')
         record=client.call(key,msg,kind,values,int(planned['input_allowance']));calls[key]=record;return record
     terminal=[]
+    continuation=read(HERE/'continuation-20261024.json');assert continuation['frozen_protocol_sha256']==protocol_sha
     for p in PROFILES:
+        if p['slug'] not in continuation['active_model_slugs']:
+            terminal.append({'model':p['model'],'status':'no_generation_provider_paused_by_continuation'});continue
         client=Client(key,budget,None,out,{},profile=p);auth=client.http('key');assert auth.get('_http_status')==200 and isinstance(auth.get('data'),dict)
         append_jsonl(work/'availability.jsonl',verify(client,p));failed=False
         for i,c in enumerate(canaries()):

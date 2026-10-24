@@ -1,0 +1,20 @@
+{
+  "version": "hosted-diverse-v2-continuation-1",
+  "frozen_protocol_sha256": "7da0e95bce254d5ffd913f7651063ca44ee30c8573126f21ecc617027eaaaca3",
+  "active_model_slugs": ["qwen"],
+  "inactive_model_slugs": ["gemma", "deepseek"],
+  "reason": "Saved Gemma error explicitly reports a DeepInfra upstream model rate limit. No more generation on DeepInfra. The previously authorized distinct Qwen/SiliconFlow experiment proceeds on the unchanged frozen shared panel.",
+  "prior_unknown_holds_usd": "0.16",
+  "actual_prior_cost_usd": null,
+  "new_generation_request_max": 147,
+  "cumulative_generation_request_max_for_this_amendment": 149,
+  "qwen_reserved_input_tokens": 3552020,
+  "qwen_output_token_allowance": 18816,
+  "qwen_conservative_planned_cost_usd": "0.32532660",
+  "total_guarded_plan_including_prior_holds_usd": "0.48532660",
+  "global_authorized_cap_usd": "2.00",
+  "global_authorized_request_cap": 600,
+  "retry_after_for_prior_failure": "UNKNOWN, original headers not captured; no retry of the affected provider",
+  "stop_rule": "Any new unknown cost,429, unavailable response or guard failure stops this route. No cycling providers, fallback, duplicate generation or purchase.",
+  "scope": "Qwen120 matched selection cases if three canaries pass. Other240 planned benchmark cases remain explicitly unattempted. No pooling or complete original-matrix claim."
+}
