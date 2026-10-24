@@ -13,7 +13,7 @@
     "queries-test.jsonl": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220",
     "qrels-test.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
   },
-  "spec_sha256": "a25a8b929978f5879e823084545076995f0287a5f57d65dfca9163c61c467cc1",
+  "spec_sha256": "1b206d2af0f433053c6f3caf7530d83b1d3b93b7f1cdede7af0b4164e4ccf784",
   "panel_sha256": "e1ace9754735cf058c3911e3bd3d1c3856368c44b6d9f8d380f81d4ec28432f4",
   "generated_sha256": "46027ecdac201deb22c18679ca29b25cf32d90b314985a9a3124992099d578c9",
   "evaluator_sha256": "8f83214059cc3061c6201f3e40821bd89624369524b9bf0104c9979503474252",
@@ -122,6 +122,8 @@
     "3": 24
   },
   "analysis": "Stratified paired query bootstrap, official prevalence weights forprimary; balancedmacro only onsensitivity24; never rows-as-independent",
-  "bulk_embedding_backend": "FP32 CUDA with TF32 disabled; batch8; sequential before selectors; fresh serving queries FP32 CPU; parity check required",
-  "protocol_sha256": "0db393b0b5b2b1533e7b078475b7d3668c486a1b223ed7295a9e0d7c4600bba8"
+  "bulk_embedding_backend": "Official pinned ONNX FP32 CPU, one intra/inter-op thread, batch8; fresh serving batch1; synthetic parity check against pinned PyTorch CPU required; CUDA indexing attempts resource-stopped before any quality outcome",
+  "routing_cache": "fresh route per logical domain case; exact-case interrupted resume cache flagged and excluded from fresh timing",
+  "invalid_micro_policy": "invalid schema scores zero; parseable invalid returned list cardinality counts false positives, all gold false negatives; malformed unknown length unavailable",
+  "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f"
 }

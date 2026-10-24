@@ -86,4 +86,5 @@ def retrieval_metrics(ranking,gold):
 def selection_metrics(selected,gold,status='ok'):
     gold=set(gold);pred=set(selected) if status=='ok' else set();tp=len(pred&gold);fp=len(pred-gold);fn=len(gold-pred)
     p=tp/len(pred) if pred else 0.;r=tp/len(gold) if gold else 0.
+    if status!='ok':fp=len(selected)
     return {'exact':float(status=='ok' and pred==gold),'precision':p,'recall':r,'f1':2*p*r/(p+r) if p+r else 0.,'tp':tp,'fp':fp,'fn':fn}
