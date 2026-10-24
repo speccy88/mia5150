@@ -1,0 +1,127 @@
+"""Optional no-fallback OpenRouter stage. Read a credential only from closed stdin.
+
+Never use shell arguments, environment variables or repository files for the key.
+No generation retries: a reservation is a terminal attempt, including unknown use.
+"""
+import argparse,csv,datetime,decimal,gzip,hashlib,json,os,pathlib,sys,time,urllib.error,urllib.request
+os.environ.update(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false')
+import numpy as np
+HERE=pathlib.Path(__file__).resolve().parent;STUDY=HERE.parent
+sys.path.insert(0,str(STUDY))
+from core import BM25,chat,digest,parse_selection,rank,render,retrieval_metrics,rrf,select_prompt,selection_metrics
+from ledger import append_jsonl
+from budget import Budget,BudgetStop
+API='https://openrouter.ai/api/v1/'
+MODEL='deepseek/deepseek-v4-flash-0731'
+PROVIDER={'only':['deepinfra/fp8'],'allow_fallbacks':False,'require_parameters':True}
+
+def read(p):return json.loads(pathlib.Path(p).read_text())
+def rows(p):
+    with open(p) as f:return [json.loads(x) for x in f if x.strip()]
+def messages(prompt):
+    start='<|im_start|>system\n';split='<|im_end|>\n<|im_start|>user\n';end='<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+    assert prompt.startswith(start) and prompt.endswith(end)
+    system,user=prompt[len(start):-len(end)].split(split,1)
+    return [{'role':'system','content':system},{'role':'user','content':user}]
+def schema(kind,values):
+    # Constant-size structural schema avoids hiding a catalog-size-dependent ID
+    # enum inside provider prompts. Known-ID and uniqueness validation is strict
+    # after return; this differs explicitly from the local enum grammar.
+    body={'type':'string','enum':list(values)} if kind=='routing' else {'type':'array','items':{'type':'string','pattern':'^s[0-9a-f]{12}$'},'maxItems':5,'uniqueItems':True}
+    return {'type':'json_schema','json_schema':{'name':'skill_route' if kind=='routing' else 'skill_selection','strict':True,'schema':body}}
+def request_body(msg,kind,values):
+    return {'model':MODEL,'provider':PROVIDER,'messages':msg,'response_format':schema(kind,values),'temperature':0,'seed':20261024,'max_tokens':128,'reasoning':{'effort':'none'},'stream':False}
+
+class Client:
+    def __init__(self,key,budget,tokenizer,out,allowances):self.key=key;self.budget=budget;self.tokenizer=tokenizer;self.out=out;self.allowances=allowances
+    def http(self,suffix,body=None):
+        assert suffix in ['key','models/deepseek/deepseek-v4-flash-0731/endpoints','chat/completions']
+        request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
+        with urllib.request.urlopen(request,timeout=180) as response:return json.load(response)
+    def verify(self):
+        auth=self.http('key');assert 'data' in auth,'Authentication response missing data'
+        data=self.http('models/deepseek/deepseek-v4-flash-0731/endpoints')
+        endpoint=next(e for e in data['data']['endpoints'] if e['tag']=='deepinfra/fp8')
+        assert endpoint['status']==0 and endpoint['context_length']>=1048576
+        assert decimal.Decimal(endpoint['pricing']['prompt'])<=decimal.Decimal('.00000006') and decimal.Decimal(endpoint['pricing']['completion'])<=decimal.Decimal('.00000018'),'Price increased'
+        assert {'structured_outputs','response_format','seed'}<=set(endpoint['supported_parameters'])
+        return {'authenticated':True,'model':MODEL,'provider_pin':PROVIDER,'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'prices_within_approved_limits':True,'credential_storage':'anonymous stdin into process memory only'}
+    def call(self,key,msg,kind,values,allowance):
+        body=request_body(msg,kind,values)
+        # Estimate model-visible content, not doubly escaped HTTP wire JSON.
+        # The frozen allowance separately reserves 4096 wrapper/schema tokens.
+        tokens=sum(len(self.tokenizer.encode(m['role']+'\n'+m['content']).ids) for m in msg)+len(self.tokenizer.encode(json.dumps(body['response_format'])).ids)
+        if tokens+512>allowance:raise BudgetStop('Tokenizer/schema count exceeds frozen per-request allowance; no call')
+        self.budget.reserve(key,decimal.Decimal(allowance)*decimal.Decimal('.00000006')+decimal.Decimal(128)*decimal.Decimal('.00000018'))
+        record={'case_key':key,'request_sha256':digest(body),'kind':kind,'reserved_input_tokens':allowance,'estimated_input_tokens':tokens,'output_token_limit':128,'physical_call':True,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_tokens':None,'output_tokens':None,'cost_usd':None}
+        started=time.perf_counter()
+        try:
+            response=self.http('chat/completions',body);usage=response.get('usage',{});record.update(response_id=response.get('id'),provider=response.get('provider'),input_tokens=usage.get('prompt_tokens'),output_tokens=usage.get('completion_tokens'),cost_usd=usage.get('cost'),content=response.get('choices',[{}])[0].get('message',{}).get('content'),finish_reason=response.get('choices',[{}])[0].get('finish_reason'),status='returned')
+            record['wall_seconds']=time.perf_counter()-started;append_jsonl(self.out/'calls.jsonl',record)
+            self.budget.settle(key,record['cost_usd'])
+            if record['provider'] and 'deepinfra' not in record['provider'].casefold():raise BudgetStop('Unexpected provider; expansion halted')
+            if record['input_tokens'] is None or record['output_tokens'] is None:raise BudgetStop('Missing usage; expansion halted')
+            if record['input_tokens']>allowance or record['output_tokens']>128:raise BudgetStop('Usage exceeded reserved token contract; expansion halted')
+            return record
+        except BudgetStop:raise
+        except Exception as error:
+            record.update(status='transport_or_provider_error',error_type=type(error).__name__,http_status=getattr(error,'code',None),wall_seconds=time.perf_counter()-started)
+            append_jsonl(self.out/'calls.jsonl',record)
+            self.budget.settle(key,None)
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--runtime-root',required=True);args=parser.parse_args();runtime=pathlib.Path(args.runtime_root)
+    # The caller closes stdin immediately after an anonymous pipe transfer.
+    key=sys.stdin.read().strip()
+    if not key or '\n' in key:raise SystemExit('Credential not supplied through the private stdin flow')
+    out=HERE/'results';out.mkdir(exist_ok=True);budget=Budget(out/'budget-ledger.jsonl','1.10','1.65','1.5',600)
+    prior,_=budget.state()
+    if any(x['kind'] in ['reserve','unknown'] for x in prior.values()):raise BudgetStop('Unresolved earlier charge; no new request')
+    from tokenizers import Tokenizer
+    pin=read(runtime/'hosted-tokenizer/private-manifest.json');assert pin['repository']=='deepseek-ai/DeepSeek-V4-Flash-0731'
+    tok=Tokenizer.from_file(pin['tokenizer.json']);tok.no_truncation();tok.no_padding()
+    assert hashlib.sha256(pathlib.Path(pin['tokenizer.json']).read_bytes()).hexdigest()=='8f9f37ca37fdc4f5fd36d5cf4d3b0e8392edb4e894fd10cc0d70b4957c8633cf'
+    with (HERE/'cheaper-token-ledger.csv').open() as f:allowances={(r['query_id'],int(r['size']),r['method']):int(r['reserved_input_tokens']) for r in csv.DictReader(f)}
+    client=Client(key,budget,tok,out,allowances);receipt=client.verify();(HERE/'credential-status.json').write_text(json.dumps(receipt,indent=2));print('OpenRouter authentication and exact provider availability verified; bounded canaries starting',flush=True)
+    # Resume only wholly unreserved cases; no semantic retry. Canaries from a
+    # prior successful invocation are reused without new paid requests.
+    calls={r['case_key']:r for r in rows(out/'calls.jsonl')} if (out/'calls.jsonl').exists() else {}
+    for i in range(3):
+        cid='nonbenchmark-canary-'+str(i+1)
+        if cid not in calls:
+            msg=[{'role':'system','content':'Return only the JSON array requested. No tools.'},{'role':'user','content':'Return ["s000000000000"] for this non-evaluation format check.'}]
+            calls[cid]=client.call(cid,msg,'selection',[],8192)
+        assert json.loads(calls[cid]['content'])==['s000000000000'],'Canary schema or usage validation failed; no benchmark expansion'
+    protocol=read(STUDY/'protocol.json');chosen=set(protocol['sensitivity_query_ids']);panel=[q for q in read(STUDY/'panel.json') if q['id'] in chosen]
+    source=STUDY.parents[1]/'scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs';skills=rows(source/'skills-metadata.jsonl');docs={s['id']:render(s) for s in skills};major={s['id']:s['major'] for s in skills};domains=sorted(set(major.values()));bm=BM25(docs)
+    manifest=read(STUDY/'embedding-manifest.json');dv=np.load(runtime/'docs.npy',mmap_mode='r');qv=np.load(runtime/'queries.npy',mmap_mode='r');di={d:i for i,d in enumerate(manifest['document_ids'])};qi={q:i for i,q in enumerate(manifest['query_ids'])}
+    ids=read(STUDY/'catalog-document-ids.json');catalog={(c['query_id'],c['size']):[ids[i] for i in c['document_indices']] for c in json.loads(gzip.decompress((STUDY/'catalogs.json.gz').read_bytes())) if c['seed']==42 and c['query_id'] in chosen}
+    labels=read(STUDY/'evaluator-labels.json');casefile=out/'cases.jsonl';done={r['case_id'] for r in rows(casefile)} if casefile.exists() else set()
+    for query in panel:
+        qid=query['id']
+        for n in [10,100,1000,6006]:
+            lib=catalog[(qid,n)];scores=dict(zip(lib,map(float,dv[[di[d] for d in lib]]@qv[qi[qid]])));br=bm.search(query['query'],lib);vr=rank(scores,lib)
+            for method in ['listing','bm25','vector','domain_vector','hybrid']:
+                cid=digest(['hosted',protocol['protocol_sha256'],qid,n,method])
+                if cid in done:continue
+                row={'case_id':cid,'query_id':qid,'size':n,'seed':42,'method':method,'model':MODEL,'provider_pin':PROVIDER,'panel':'balanced24_exposed','status':'pending','selected_ids':[],'gold_count':len(labels[qid]),'protocol_sha256':protocol['protocol_sha256']};started=time.perf_counter()
+                if method=='domain_vector':
+                    rkey=cid+'-routing';prompt=chat('Choose the single best supplied category. Return a JSON string.',json.dumps({'request':query['query'],'categories':domains},ensure_ascii=False));route=calls.get(rkey) or client.call(rkey,messages(prompt),'routing',domains,allowances[(qid,n,'routing')]);calls[rkey]=route
+                    try:category=json.loads(route['content']);assert category in domains
+                    except (ValueError,AssertionError,TypeError):row.update(status='invalid_route',routing=route);append_jsonl(casefile,row);done.add(cid);continue
+                    allowed=[d for d in lib if major[d]==category];ranking=rank(scores,allowed);pool=ranking[:5];row['routing']=route;row['routing_gold_retention']=sum(major[d]==category for d in labels[qid])/len(labels[qid])
+                else:ranking={'listing':lib,'bm25':br,'vector':vr,'hybrid':rrf(br,vr)}[method];pool=ranking if method=='listing' else ranking[:5]
+                row['candidate_ids']=None if method=='listing' else pool;row['retrieval']=None if method=='listing' else retrieval_metrics(ranking,labels[qid]);row['candidate_recall']=len(set(pool)&set(labels[qid]))/len(labels[qid])
+                prompt,mapping=select_prompt(query['query'],pool,docs,qid,42)
+                answer=calls.get(cid) or client.call(cid,messages(prompt),'selection',mapping,allowances[(qid,n,method)]);calls[cid]=answer;row['selector']=answer
+                try:row['selected_ids']=parse_selection(answer['content'],mapping);row['status']='ok'
+                except (ValueError,TypeError):row['status']='invalid_selection';row['returned_cardinality_unknown']=True
+                row['metrics']=selection_metrics(row['selected_ids'],labels[qid],row['status']);row['end_to_end_seconds']=time.perf_counter()-started;row['timing_scope']='hosted retrieval uses precomputed query vectors; distinct from fresh local embedding timing';append_jsonl(casefile,row);done.add(cid)
+            print('hosted cases durable',len(done),'of480',flush=True)
+    _,held=budget.state();(out/'execution.json').write_text(json.dumps({'cases':len(done),'usd_guarded_total':str(held),'usd_cap':'1.10','request_cap':600,'model':MODEL,'provider':PROVIDER,'status':'stage_complete'},indent=2));print('Hosted stage ended; inspect saved receipts',flush=True)
+
+if __name__=='__main__':
+    try:main()
+    except Exception as error:
+        # No error payload, request header, credential or provider echo is printed.
+        print('HOSTED_HALTED: '+type(error).__name__+'; inspect nonsecret budget/call receipts; no automatic generation retry',file=sys.stderr);raise SystemExit(1)

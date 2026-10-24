@@ -193,7 +193,7 @@
       "closure_and_limits": "Cheaper DeepSeek plan is authorized within US$1.10/600 calls. Credential absent; zero paid calls.",
       "new_evidence": [
         "hosted/approval-request.json",
-        "hosted/cheaper-plan.json",
+        "hosted/cheaper-budget-plan.json",
         "hosted/budget.py"
       ],
       "baseline_evidence": [

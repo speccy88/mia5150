@@ -1,0 +1,40 @@
+{
+  "status": "authorized_within1_10USD600requests; credential_pending; zero_paid_calls",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "provider": {
+    "only": [
+      "deepinfra/fp8"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "endpoint_context": 1048576,
+  "input_rate_usd_per_token": "0.00000006",
+  "output_rate_usd_per_token": "0.00000018",
+  "cache_savings_assumed": false,
+  "planned_selector_cases": 480,
+  "routing_cases": 96,
+  "canary_cases": 3,
+  "total_request_allowance": 579,
+  "request_cap": 600,
+  "retries": 0,
+  "input_token_allowance": 14032062,
+  "output_token_allowance": 74112,
+  "estimated_content_tokens": 11648190,
+  "cost_at_pinned_rates_usd": 0.85526388,
+  "planning_usd_with25pct_margin": 1.06907985,
+  "recommended_hard_cap_usd": 1.07,
+  "cad_estimate_at1_5": 1.605,
+  "cad_per_usd": "planning assumption1.5, not exchange-rate quote",
+  "tokenizer": {
+    "repository": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+    "sha256": "8f9f37ca37fdc4f5fd36d5cf4d3b0e8392edb4e894fd10cc0d70b4957c8633cf"
+  },
+  "context_pending_rows": 0,
+  "full_listing_cases_included": 96,
+  "largest_reserved_prompt_tokens": 401493,
+  "limits": "HF tokenizer estimate plus4096-token wrapper/schema reserve is not provider-reported usage. All original-size listing cells remain planned. Exact effective wrapper/token/context and structured-JSON canary must pass before paid expansion. Preserve unknown-charge reserves. Do not silently swap this route to V4.1.",
+  "credential_requirement": "Locally configured OPENROUTER_API_KEY, never plaintext chat",
+  "paid_calls_executed": 0
+}

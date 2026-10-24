@@ -1,0 +1,21 @@
+{
+  "status": "pending_parent_approval_and_local_credential",
+  "provider": "OpenRouter, pinned OpenAI route",
+  "model": "openai/gpt-4.1-nano",
+  "canonical_slug": "openai/gpt-4.1-nano-2025-04-14",
+  "panel": "24 balanced exposed sensitivity queries, seed42, five methods, four original sizes",
+  "planned_selector_cases": 480,
+  "fresh_router_calls": 96,
+  "canary_calls": 3,
+  "maximum_physical_calls": 579,
+  "request_cap": 600,
+  "planning_usd_for_current_conservative_admission": 1.632387625,
+  "proposed_cap_usd": 3,
+  "proposed_cap_cad": 4.5,
+  "cad_per_usd_planning_assumption": 1.5,
+  "retries": 0,
+  "credential_requirement": "OPENROUTER_API_KEY configured locally; never paste into chat",
+  "remaining_admission_requirements": ["Actual effective prompt tokenization/context checks", "Exact provider pin and pricing refresh", "Persistent new budget ledger with reserves, unknown-charge retention and both currency caps", "Credentialed capability/identity canary after approval", "Explicit native versus bare selection interface choice; no native reproduction claim without verified runtime"],
+  "paid_calls_executed": 0,
+  "full_listing": "Conservative byte bound defers24 large-listing cases; exact hosted tokenizer preflight may admit them, but current metadata alone does not prove infeasibility. Stop rather than exceed cap."
+}

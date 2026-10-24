@@ -1,0 +1,502 @@
+{
+  "checked_utc": "2026-10-24T15:26:56.510694+00:00",
+  "source": "https://openrouter.ai/api/v1/models",
+  "models": {
+    "deepseek/deepseek-v4.1-flash": {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "canonical_slug": "deepseek/deepseek-v4.1-flash-20260910",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek: DeepSeek V4.1 Flash",
+      "created": 1789021285,
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "DeepSeek",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000002",
+        "completion": "0.000001",
+        "input_cache_read": "0.000000015"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "parallel_tool_calls",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_a",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/deepseek/deepseek-v4.1-flash-20260910/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 24.7,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260731",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731",
+      "created": 1785478908,
+      "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "DeepSeek",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000004444",
+        "completion": "0.00000013332",
+        "input_cache_read": "0.000000001414"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "parallel_tool_calls",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_a",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": [],
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/deepseek/deepseek-v4-flash-20260731/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1209,
+            "win_rate": 48.7,
+            "rank": 47
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1090,
+            "win_rate": 33.3,
+            "rank": 63
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1228,
+            "win_rate": 46.4,
+            "rank": 51
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1180,
+            "win_rate": 41.1,
+            "rank": 65
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1208,
+            "win_rate": 44.6,
+            "rank": 54
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1185,
+            "win_rate": 45.1,
+            "rank": 32
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1230,
+            "win_rate": 46.8,
+            "rank": 48
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1236,
+            "win_rate": 46.7,
+            "rank": 52
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 34.3,
+          "coding_index": 69.1,
+          "agentic_index": 41
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    "openai/gpt-4.1-mini": {
+      "id": "openai/gpt-4.1-mini",
+      "canonical_slug": "openai/gpt-4.1-mini-2025-04-14",
+      "hugging_face_id": "",
+      "name": "OpenAI: GPT-4.1 Mini",
+      "created": 1744651381,
+      "description": "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard...",
+      "context_length": 1047576,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "image",
+          "text",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000004",
+        "completion": "0.0000016",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001"
+      },
+      "top_provider": {
+        "context_length": 1047576,
+        "max_completion_tokens": 32768,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_completion_tokens",
+        "max_tokens",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-06-30",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-4.1-mini-2025-04-14/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 837,
+            "win_rate": 30.5,
+            "rank": 126
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 992,
+            "win_rate": 47.5,
+            "rank": 126
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1034,
+            "win_rate": 49.2,
+            "rank": 111
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1071,
+            "win_rate": 58.5,
+            "rank": 109
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 956,
+            "win_rate": 45.4,
+            "rank": 120
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 997,
+            "win_rate": 47.8,
+            "rank": 132
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 10.2,
+          "coding_index": 20.2,
+          "agentic_index": null
+        }
+      }
+    },
+    "openai/gpt-4.1-nano": {
+      "id": "openai/gpt-4.1-nano",
+      "canonical_slug": "openai/gpt-4.1-nano-2025-04-14",
+      "hugging_face_id": "",
+      "name": "OpenAI: GPT-4.1 Nano",
+      "created": 1744651369,
+      "description": "For tasks that demand low latency, GPT\u20114.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
+      "context_length": 1047576,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "image",
+          "text",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000004",
+        "web_search": "0.01",
+        "input_cache_read": "0.000000025"
+      },
+      "top_provider": {
+        "context_length": 1047576,
+        "max_completion_tokens": 32768,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_completion_tokens",
+        "max_tokens",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-06-30",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-4.1-nano-2025-04-14/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 925,
+            "win_rate": 46,
+            "rank": 119
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 961,
+            "win_rate": 47.3,
+            "rank": 130
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 891,
+            "win_rate": 41.1,
+            "rank": 129
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 971,
+            "win_rate": 49.6,
+            "rank": 128
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 911,
+            "win_rate": 43.9,
+            "rank": 127
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 971,
+            "win_rate": 48.1,
+            "rank": 136
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 7.8,
+          "coding_index": 11.1,
+          "agentic_index": null
+        }
+      }
+    },
+    "openai/gpt-4o-mini": {
+      "id": "openai/gpt-4o-mini",
+      "canonical_slug": "openai/gpt-4o-mini",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-4o-mini",
+      "created": 1721260800,
+      "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 16384,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "prediction",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-10-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-4o-mini/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 6.7,
+          "coding_index": 11.4,
+          "agentic_index": null
+        }
+      }
+    }
+  },
+  "missing_ids": [],
+  "inference_canary": "not run; no paid call authorized",
+  "credentials": "must be local OPENROUTER_API_KEY; never paste into chat"
+}
