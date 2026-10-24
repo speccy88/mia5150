@@ -15,6 +15,11 @@ API='https://openrouter.ai/api/v1/'
 MODEL='deepseek/deepseek-v4-flash-0731'
 PROVIDER={'only':['deepinfra/fp8'],'allow_fallbacks':False,'require_parameters':True}
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self,request,fp,code,msg,headers,newurl):
+        # Never forward the authentication header to a redirect destination.
+        return None
+
 def read(p):return json.loads(pathlib.Path(p).read_text())
 def rows(p):
     with open(p) as f:return [json.loads(x) for x in f if x.strip()]
@@ -37,7 +42,7 @@ class Client:
     def http(self,suffix,body=None):
         assert suffix in ['key','models/deepseek/deepseek-v4-flash-0731/endpoints','chat/completions']
         request=urllib.request.Request(API+suffix,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
-        with urllib.request.urlopen(request,timeout=180) as response:return json.load(response)
+        with urllib.request.build_opener(NoRedirect()).open(request,timeout=180) as response:return json.load(response)
     def verify(self):
         auth=self.http('key');assert 'data' in auth,'Authentication response missing data'
         data=self.http('models/deepseek/deepseek-v4-flash-0731/endpoints')
@@ -116,7 +121,7 @@ def main():
                 answer=calls.get(cid) or client.call(cid,messages(prompt),'selection',mapping,allowances[(qid,n,method)]);calls[cid]=answer;row['selector']=answer
                 try:row['selected_ids']=parse_selection(answer['content'],mapping);row['status']='ok'
                 except (ValueError,TypeError):row['status']='invalid_selection';row['returned_cardinality_unknown']=True
-                row['metrics']=selection_metrics(row['selected_ids'],labels[qid],row['status']);row['end_to_end_seconds']=time.perf_counter()-started;row['timing_scope']='hosted retrieval uses precomputed query vectors; distinct from fresh local embedding timing';append_jsonl(casefile,row);done.add(cid)
+                row['metrics']=selection_metrics(row['selected_ids'],labels[qid],row['status']);row['method_body_wall_seconds']=time.perf_counter()-started;row['end_to_end_seconds']=None;row['timing_scope']='Method-body wall includes API routing/selection and prompt handling; excludes precomputed query embeddings and BM25/vector scoring done outside this clock. Not end-to-end discovery latency; no direct local latency ranking.';append_jsonl(casefile,row);done.add(cid)
             print('hosted cases durable',len(done),'of480',flush=True)
     _,held=budget.state();(out/'execution.json').write_text(json.dumps({'cases':len(done),'usd_guarded_total':str(held),'usd_cap':'1.10','request_cap':600,'model':MODEL,'provider':PROVIDER,'status':'stage_complete'},indent=2));print('Hosted stage ended; inspect saved receipts',flush=True)
 

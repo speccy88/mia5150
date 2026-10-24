@@ -1,6 +1,6 @@
 # Proposal gap closure: measured local primary results
 
-Research draft. The complete primary grid contains 200 exposed official queries × five methods × four catalog sizes =4000 planned cases. Additional 24-query seed/model sensitivity, 12 generated probes and full 4,392-query retrieval are separate stages. Their status follows execution receipts; they are not pooled into this primary analysis.
+Research draft. The complete primary grid contains 200 exposed official queries × five methods × four catalog sizes = 4,000 planned cases. Additional 24-query seed/model sensitivity, 12 generated probes and full 4,392-query retrieval are separate stages. Their status follows execution receipts; they are not pooled into this primary analysis.
 
 ## Findings
 
@@ -103,3 +103,11 @@ Permitted team aliases: deepujoy88, speccy88, vsimard. This AI-assisted engineer
 |qwen35_4b_q4|6006|hybrid|12|12|0|0|0.3278|
 
 Balanced sensitivity is distinct from the primary prevalence-weighted estimate. Seeds do not add independent requests. Generated labels are silver unions; neither table establishes workflow order or human agreement. Inspect per-cell attempt status before interpreting any pending row.
+
+The benchmark contains positive-gold requests, so it does not validate true no-skill abstention or open-world negative-request calibration. See [disjoint error attribution](error-pipeline.csv), [query-clustered seed uncertainty](seed-query-bootstrap.csv), [paired model sensitivity](model-paired-bootstrap.csv) and [actual resource samples](resource-summary.csv). These supplementary diagnostics remain distinct from the independently audited primary comparison.
+
+## Completed full-query retrieval
+
+All 4,392 exposed official queries × three catalog seeds × four original sizes are complete (52,704 rows, three rankers per row). Seed 42 at 6,006 skills: bm25 Recall@5 0.4773, MRR@5 0.5232; vector Recall@5 0.5173, MRR@5 0.5877; hybrid Recall@5 0.5870, MRR@5 0.6550. These are full-query retrieval metrics, not final selection.
+
+Independent positive-qrel arithmetic passes for 158,112 ranker rows. All 2400 available BM25/vector/hybrid primary seed 42 top-five rankings and retrieval metrics match exactly. See [full-query CSV](full-retrieval.csv), [validation](full-retrieval-validation.json) and [compressed exact raw evidence](../results/retrieval.jsonl.gz). Search timing uses sparse BM25 and offline batched query embeddings; do not pool it with primary fresh discovery latency.

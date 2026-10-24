@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-24T18:13:27.476185+00:00",
+  "python_version": "3.12.15",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "pytest",
+      "exit_code": 0,
+      "stdout": "...................................                                      [100%]\n35 passed in 0.98s\n",
+      "stderr": ""
+    },
+    {
+      "check": "python_compileall",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "scope": "Synthetic/local scoring, equivalence, persistence and hosted-budget contract tests plus Python compilation. No inference, paid request, human validation or TeX-build success claimed."
+}

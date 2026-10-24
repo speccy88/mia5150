@@ -1,0 +1,9 @@
+{
+  "documents": 6006,
+  "document_vectors_reused_and_hash_verified": true,
+  "document_cumulative_successful_checkpoint_seconds": 368.667623732,
+  "query_vectors_including12_generated": 4404,
+  "query_cumulative_successful_checkpoint_seconds": 1804.168871262,
+  "query_truncated_count_scope_all4404": 84,
+  "scope": "Successful CPU checkpoint encoding time only; not last-invocation wall. Document timing is reused from the completed primary index. Pauses, loading, warmup and failed setup remain separately recorded."
+}

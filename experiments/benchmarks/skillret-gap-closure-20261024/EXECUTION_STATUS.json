@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-24T17:36:34.296386+00:00",
-  "campaign_status": "local_selection_complete_with_exclusions_and_failures; retrieval and hosted separate",
+  "checked_utc": "2026-10-24T14:19:29.773909-04:00",
+  "campaign_status": "local_selection_and_full_retrieval_complete_with_exclusions_and_failures; hosted_and_human_pending",
   "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f",
   "models": {
     "qwen3_06_q8": {
@@ -18,7 +18,9 @@
       },
       "remaining_unattempted": 0,
       "physical_selector_attempts": 4556,
-      "physical_route_attempts": 1013
+      "physical_route_attempts": 1013,
+      "physical_count_scope": "Known calls attached to canonical logical cases. Warmups/canaries and invocation receipts are separate; unavailable persistence outcomes keep physical count unknown.",
+      "physical_call_unknown_cases": 1
     },
     "qwen35_4b_q4": {
       "planned": 600,
@@ -32,14 +34,16 @@
       },
       "remaining_unattempted": 0,
       "physical_selector_attempts": 539,
-      "physical_route_attempts": 120
+      "physical_route_attempts": 120,
+      "physical_count_scope": "Known calls attached to canonical logical cases. Warmups/canaries and invocation receipts are separate; unavailable persistence outcomes keep physical count unknown.",
+      "physical_call_unknown_cases": 0
     }
   },
   "hosted_paid_calls": 0,
   "human_adjudication": "pending",
   "full_retrieval": {
     "planned_query_seed_size_rows": 52704,
-    "completed_rows": 0,
+    "completed_rows": 52704,
     "scope": "4392 exposed queries; three catalog seeds; four sizes; three rankers per row"
   }
 }

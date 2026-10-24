@@ -18,3 +18,8 @@ def test_hosted_message_conversion_preserves_json_data():
 def test_hosted_schema_size_does_not_hide_catalog_enum():
     assert runner.schema('selection',range(6006))==runner.schema('selection',range(5))
     assert runner.schema('routing',['A','B'])['json_schema']['schema']['enum']==['A','B']
+
+def test_authenticated_redirect_is_never_followed():
+    import urllib.request
+    request=urllib.request.Request(runner.API+'key',headers={'Authorization':'Bearer synthetic-nonsecret-fixture'})
+    assert runner.NoRedirect().redirect_request(request,None,302,'redirect',{},'https://not-authorized.invalid') is None

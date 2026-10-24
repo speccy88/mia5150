@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "query_seed_size_rows": 52704,
+  "ranker_metric_checks": 158112,
+  "counts": {
+    "(42, 10)": 4392,
+    "(42, 100)": 4392,
+    "(42, 1000)": 4392,
+    "(42, 6006)": 4392,
+    "(43, 10)": 4392,
+    "(43, 100)": 4392,
+    "(43, 1000)": 4392,
+    "(43, 6006)": 4392,
+    "(44, 10)": 4392,
+    "(44, 100)": 4392,
+    "(44, 1000)": 4392,
+    "(44, 6006)": 4392
+  },
+  "primary_overlap_available": 2400,
+  "primary_overlap_checked_by_method": {
+    "bm25": 800,
+    "vector": 800,
+    "hybrid": 800
+  },
+  "primary_overlap_differences": [],
+  "scope": "Independent positive-qrel/top-five arithmetic and primary exact-ranking overlap. Search execution/timing is not independently remeasured. Batch8 offline query embeddings versus batch1 primary serving may require numerical diagnostics if differences appear."
+}

@@ -13,6 +13,8 @@ def main():
                     except json.JSONDecodeError:break
         current=canonical_attempts(attempts);counts=collections.Counter(r['status'] for r in current.values())
         result['models'][model]={'planned':planned,'ledger_case_attempt_rows':len(attempts),'unique_cases_in_ledger':len(current),'canonical_statuses':dict(counts),'remaining_unattempted':planned-sum(v for k,v in counts.items() if not k.startswith('not_run')),'physical_selector_attempts':sum(bool(r.get('selector',{}).get('physical_call')) for r in current.values() if r.get('selector')),'physical_route_attempts':sum(bool(r.get('routing',{}).get('physical_call')) and not r.get('routing_reused',False) for r in current.values() if r.get('routing'))}
+        result['models'][model]['physical_count_scope']='Known calls attached to canonical logical cases. Warmups/canaries and invocation receipts are separate; unavailable persistence outcomes keep physical count unknown.'
+        result['models'][model]['physical_call_unknown_cases']=sum(r['status']=='persistence_error_outcome_unavailable' for r in current.values())
     if all(m['remaining_unattempted']==0 for m in result['models'].values()):result['campaign_status']='local_selection_complete_with_exclusions_and_failures; retrieval and hosted separate'
     rp=HERE/'results/retrieval.jsonl'
     if not rp.exists():rp=HERE/'results/retrieval.jsonl.gz'

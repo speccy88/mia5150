@@ -1,0 +1,10 @@
+{
+  "rows": 52704,
+  "unique_official_queries": 4392,
+  "rankers_per_row": 3,
+  "uncompressed_bytes": 91864324,
+  "uncompressed_sha256": "dcf3630cf9d8fade4375e335c43aaf070ee507ce0482579276efd8df23ca60e1",
+  "gzip_bytes": 15054930,
+  "gzip_sha256": "a55bfecfa99508cebcc0d6c0238575c60bfbd919d46c2e69654f66dcd0b53a35",
+  "compression": "gzip mtime0, level6; exact raw bytes preserved; original uncompressed file remains local and ignored"
+}

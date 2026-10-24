@@ -232,11 +232,13 @@
       "topic": "Retrieval query count",
       "priority": "P1",
       "baseline_verdict": "partly_obsolete",
-      "status": "historically_present_new_stage_pending",
-      "closure_and_limits": "Existing verified full4392 retrieval is retained; new representation requires a separate full-query pass after selectors.",
+      "status": "measured_full_query_retrieval",
+      "closure_and_limits": "New pinned metadata representation completes all4392 exposed queries, four original sizes and three catalog seeds for BM25/vector/hybrid. Prior full-query studies remain separate.",
       "new_evidence": [
-        "AUDIT.md",
-        "EXECUTION_STATUS.json"
+        "report/full-retrieval.csv",
+        "report/full-retrieval-validation.json",
+        "results/retrieval.jsonl.gz",
+        "AUDIT.md"
       ],
       "baseline_evidence": [
         {
@@ -314,7 +316,8 @@
       "closure_and_limits": "Balanced24 three-catalog-seed sensitivity completed. Repeated seeds are paired by query; previous seed evidence is acknowledged.",
       "new_evidence": [
         "protocol.json",
-        "report/seed-sensitivity.csv"
+        "report/seed-sensitivity.csv",
+        "report/seed-query-bootstrap.csv"
       ],
       "baseline_evidence": [
         {
@@ -531,7 +534,8 @@
       "status": "research_draft",
       "closure_and_limits": "Presentation outline drafted from actual primary measurements; team review and speaking roles pending.",
       "new_evidence": [
-        "../../../paper/presentation/research_draft.md"
+        "../../../paper/presentation/research_draft.md",
+        "../../../paper/presentation/research_draft.tex"
       ],
       "baseline_evidence": [
         {
@@ -1057,7 +1061,9 @@
         "model-provenance.json",
         "embedding-manifest.json",
         "results/persistence-error-receipt.json",
-        "ledger.py"
+        "ledger.py",
+        "report/engineering-validation.json",
+        "audit/INDEPENDENT_SENSITIVITY_README.md"
       ],
       "baseline_evidence": [
         {

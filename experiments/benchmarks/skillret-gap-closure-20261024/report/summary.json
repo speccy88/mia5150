@@ -5187,6 +5187,7 @@
     "protocol_sha256": "44acc3d80d6a904da7f9d554d5de9995617c629073c64c5b1653b5ab9ddf916f",
     "historical_unattempted_rows": 9145,
     "primary200_complete": true,
-    "primary200_unattempted": 0
+    "primary200_unattempted": 0,
+    "retrieval_cases": 52704
   }
 }

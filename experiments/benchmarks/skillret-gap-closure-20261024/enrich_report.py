@@ -13,6 +13,7 @@ def main():
             score='pending' if r['not_run'] else f"{r['macro_f1']:.4f}"
             text+=f"|{r['model']}|{r['size']}|{r['method']}|{r['planned']}|{r['valid']}|{r['not_run']}|{r['exact_successes']}|{score}|\n"
     text+='\nBalanced sensitivity is distinct from the primary prevalence-weighted estimate. Seeds do not add independent requests. Generated labels are silver unions; neither table establishes workflow order or human agreement. Inspect per-cell attempt status before interpreting any pending row.\n'
+    text+='\nThe benchmark contains positive-gold requests, so it does not validate true no-skill abstention or open-world negative-request calibration. See [disjoint error attribution](error-pipeline.csv), [query-clustered seed uncertainty](seed-query-bootstrap.csv), [paired model sensitivity](model-paired-bootstrap.csv) and [actual resource samples](resource-summary.csv). These supplementary diagnostics remain distinct from the independently audited primary comparison.\n'
     p.write_text(text)
     paper=ROOT/'paper/final_report.tex';tex=paper.read_text()
     for a,b in replacements.items():tex=tex.replace(a,b)
@@ -27,4 +28,6 @@ def main():
         slides += [r'\begin{frame}{'+title+'}',body,r'\end{frame}']
     slides += [r'\end{document}'];(ROOT/'paper/presentation/research_draft.tex').write_text('\n'.join(slides)+'\n')
     print('Sensitivity tables, bibliography, audit appendix and static Beamer draft added')
+    from polish_publication import main as polish
+    polish()
 if __name__=='__main__':main()

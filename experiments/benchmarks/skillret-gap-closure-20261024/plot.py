@@ -20,9 +20,9 @@ def main():
             row=lookup[(m,n)];text=f"{values[i,j]:.1%}\n{row['exact_successes']}/{row['planned']} exact\n{row['valid']} valid"
             if row['context_overflow']==row['planned']:text+='\ncontext overflow'
             ax.text(j,i,text,ha='center',va='center',color='white' if values[i,j]>.52 else '#102739',fontsize=10)
-    ax.set_xticks(range(4),[f'{n:,}' for n in N]);ax.set_yticks(range(5),[LABELS[m] for m in METHODS]);ax.set_xlabel('Skills in the gold-conditioned catalog');ax.set_title('Final skill-set selection on 200 exposed queries\nQwen3-0.6B Q8, seed42, official-prevalence estimate',pad=16)
+    ax.set_xticks(range(4),[f'{n:,}' for n in N]);ax.set_yticks(range(5),[LABELS[m] for m in METHODS]);ax.set_xlabel('Skills in the gold-conditioned catalog');ax.set_title('Final skill-set selection on 200 exposed queries\nQwen3-0.6B Q8, seed 42, official-prevalence estimate',pad=16)
     fig.colorbar(image,ax=ax,label='Exact-set accuracy estimate',shrink=.85);fig.text(.02,.015,'All planned cases remain in the denominator. Counts show raw successes. Listing is unranked metadata exposure.',fontsize=9);fig.tight_layout(rect=(0,.04,1,1));save(fig,'selection-heatmap')
-    for metric,name,title,ylabel,logy in [('tokenized_logical_input_mean_including_preflight','input-growth','Tokenized input growth','Mean logical prompt tokens, including overflow preflight',True),('fresh_valid_e2e_mean_s','latency','Measured successful workflow latency','Fresh valid end-to-end seconds',True),('retrieval_recall5','candidate-recall','Candidate retrieval on the matched primary panel','Macro Recall@5',False)]:
+    for metric,name,title,ylabel,logy in [('tokenized_logical_input_mean_including_preflight','input-growth','Tokenized input growth','Mean logical prompt tokens, including overflow preflight',True),('fresh_valid_e2e_mean_s','latency','Measured valid discovery latency','Fresh valid end-to-end seconds',True),('retrieval_recall5','candidate-recall','Candidate retrieval on the matched primary panel','Macro Recall@5',False)]:
         fig,ax=plt.subplots(figsize=(9.8,5.5))
         for method in METHODS:
             y=[lookup[(method,n)].get(metric) for n in N];y=[np.nan if v is None else v for v in y]
@@ -31,7 +31,7 @@ def main():
         ax.set_xscale('log');ax.set_xticks(N,[f'{n:,}' for n in N]);ax.set_xlabel('Catalog size');ax.set_ylabel(ylabel);ax.set_title(title+'\n200 exposed queries, one common 0.6B selector');ax.grid(alpha=.2);ax.legend(frameon=False)
         if logy:ax.set_yscale('log')
         else:ax.set_ylim(0,1.03)
-        note='Overflow tokens describe preflight input, not model-consumed tokens.' if name=='input-growth' else ('Startup and failures excluded. Missing listing points are explicit context failures.' if name=='latency' else 'Listing coverage is1 by construction and has no semantic ranking; omitted from Recall@5.')
+        note='Overflow tokens describe preflight input, not model-consumed tokens.' if name=='input-growth' else ('Startup and failures excluded. Missing listing points are explicit context failures.' if name=='latency' else 'Listing coverage is 1 by construction and has no semantic ranking; omitted from Recall@5.')
         fig.text(.02,.015,note,fontsize=9);fig.tight_layout(rect=(0,.045,1,1));save(fig,name)
     paired=data['paired']
     if paired:
@@ -40,5 +40,23 @@ def main():
             ax.plot([100*row['bonferroni8_nominal_low'],100*row['bonferroni8_nominal_high']],[y,y],color='#b6c1c8',lw=5)
             ax.plot([100*row['ci95_low'],100*row['ci95_high']],[y,y],color='#2379a5',lw=3);ax.plot(100*row['weighted_exact_difference'],y,'o',color='#143e56')
         ax.axvline(0,color='#596b77',ls='--',lw=1);ax.set_yticks(ys,[f"{r['contrast']}   N={r['size']:,}" for r in paired]);ax.set_xlabel('Difference in exact-set accuracy, percentage points');ax.set_title('Paired query-level differences\nStratified bootstrap,200 queries,2,000 resamples');ax.grid(axis='x',alpha=.2);fig.text(.02,.015,'Blue: nominal95% intervals. Gray: nominal Bonferroni8 percentile intervals. Exposed exploratory evaluation.',fontsize=9);fig.tight_layout(rect=(0,.04,1,1));save(fig,'paired-differences')
+    matched=[r for r in data['selection'] if r['scope']=='balanced24_seed42' and r['size']==6006 and r['method']!='listing']
+    models=['qwen3_06_q8','qwen35_4b_q4'];methods=METHODS[1:];lookup2={(r['model'],r['method']):r for r in matched}
+    if len(matched)==8 and not any(r['not_run'] for r in matched):
+        fig,ax=plt.subplots(figsize=(10,5.4));x=np.arange(4)
+        for offset,model,color,label in [(-.18,models[0],'#2379a5','Qwen3-0.6B Q8'),(.18,models[1],'#d77724','Qwen3.5-4B Q4')]:
+            bars=ax.bar(x+offset,[lookup2[(model,m)]['macro_f1'] for m in methods],width=.34,color=color,label=label)
+            for bar,m in zip(bars,methods):
+                r=lookup2[(model,m)];ax.text(bar.get_x()+bar.get_width()/2,bar.get_height()+.018,f"{r['macro_f1']:.3f}\n{r['exact_successes']}/24 exact",ha='center',fontsize=9)
+        ax.set_xticks(x,[LABELS[m] for m in methods]);ax.set_ylim(0,.65);ax.set_ylabel('Macro selection F1');ax.set_title('Matched local model sensitivity at 6,006 skills\n24 balanced exposed queries, seed 42');ax.legend(frameon=False);ax.grid(axis='y',alpha=.2)
+        fig.text(.02,.015,'Descriptive sensitivity only. Model training/architecture/quantization differ. Listing excluded: all cases exceed 8K context.',fontsize=9);fig.tight_layout(rect=(0,.05,1,1));save(fig,'model-sensitivity')
+    if (OUT/'full-retrieval.csv').exists():
+        with (OUT/'full-retrieval.csv').open() as f:ret=list(csv.DictReader(f))
+        if len(ret)==36 and all(int(r['queries'])==4392 for r in ret):
+            fig,ax=plt.subplots(figsize=(9.8,5.5))
+            for method in ['bm25','vector','hybrid']:
+                values=np.array([[float(next(r for r in ret if r['method']==method and int(r['size'])==n and int(r['seed'])==s)['macro_recall5']) for n in N] for s in [42,43,44]])
+                ax.plot(N,values.mean(axis=0),marker='o',lw=2,color=COLORS[method],label=LABELS[method]);ax.fill_between(N,values.min(axis=0),values.max(axis=0),color=COLORS[method],alpha=.15)
+            ax.set_xscale('log');ax.set_xticks(N,[f'{n:,}' for n in N]);ax.set_ylim(0,1.03);ax.set_ylabel('Macro Recall@5, mean across catalog seeds');ax.set_xlabel('Gold-conditioned catalog size');ax.set_title('Completed full-query retrieval\n4,392 exposed official requests, three catalog seeds');ax.legend(frameon=False);ax.grid(alpha=.2);fig.text(.02,.015,'Bands show min–max seed means, not confidence intervals. This is retrieval; no generative selector follows.',fontsize=9);fig.tight_layout(rect=(0,.05,1,1));save(fig,'full-retrieval')
     print('Figures regenerated from saved aggregate data')
 if __name__=='__main__':main()

@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "commit": "e8690e35de1821980f82c20ce13318d4e64bfcf2",
+  "rows": 5680,
+  "new_nonprimary_rows": 1680,
+  "unique_official_queries": 200,
+  "unique_generated_probes": 12,
+  "checks": {
+    "prompt_hashes": 5662,
+    "valid_raw_alias_maps": 4985,
+    "independent_set_metrics": 5680,
+    "independent_retrieval_metrics": 4541,
+    "route_retention": 1133,
+    "preflight_overflows": 567,
+    "invalid_cardinality": 109,
+    "summary_cells": 100,
+    "seed_cells": 80,
+    "official_qrels_checked": 200,
+    "generated_unions_checked": 12
+  },
+  "statuses": {
+    "qwen3_06_q8": {
+      "ok": 4447,
+      "pipeline_error": 3,
+      "context_overflow": 507,
+      "invalid_selection": 108,
+      "invalid_or_empty_domain": 13,
+      "transport_or_guard_error": 1,
+      "persistence_error_outcome_unavailable": 1
+    },
+    "qwen35_4b_q4": {
+      "ok": 538,
+      "context_overflow": 60,
+      "invalid_selection": 1,
+      "invalid_or_empty_domain": 1
+    }
+  },
+  "raw_inputs": {
+    "MIA5150_Primary200_Raw_2026-10-24.jsonl": {
+      "bytes": 11535421,
+      "sha256": "6b77f74019790a27243ca2e243aa6626acddbe8070c69930658192de8b4302f2",
+      "git_blob_sha1": "61d1d606dc46da62efedd884af5cb174f3485c62"
+    },
+    "qwen3_06_q8-nonprimary-canonical.jsonl": {
+      "bytes": 3140289,
+      "sha256": "51cc8227aa7f1b7357db0de81402781697a8d64bb52568bc8bcf97f3e8021b1f",
+      "git_blob_sha1": "b8238c6a86a72f10983615a3886d311bf327cb02"
+    },
+    "qwen35_4b_q4-nonprimary-canonical.jsonl": {
+      "bytes": 1697925,
+      "sha256": "93b484be6c3a10bdf5cd3d3e1366ab107ec7476bc5349a733ed2233de5e691ff",
+      "git_blob_sha1": "32f84963175943fdbf1e29bdb3a8eee330ad8672"
+    }
+  },
+  "source_library_id": "libfile_3b9b3352b2308191af4015a0cd0b2c63",
+  "limits": [
+    "No inference or latency remeasurement; recorded values and arithmetic audited",
+    "Primary and 4B raw bytes match committed Git blobs; small non-primary canonical export pinned by Library SHA256, not independently byte-compared with full repeated ledger",
+    "Public exposed requests, gold-conditioned catalogs and generated silver unions do not establish fresh external or human validity",
+    "All planned cases processed includes context exclusions and failures; not 5680 independent queries",
+    "Full4392 retrieval and hosted stage are separate and not validated by this result"
+  ]
+}
