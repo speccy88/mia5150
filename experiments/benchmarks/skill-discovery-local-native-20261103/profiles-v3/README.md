@@ -38,5 +38,5 @@ described in the report.
 To repeat measurements, use a fresh directory, independently verified weights and
 new process evidence. Source paths and the derivative-data hash are adapted to
 this tree without changing measured parameters. `source-measured/` preserves the
-original runner and launcher versions. Llama/Gemma remain unexecuted: see
+original runner and launcher versions. Llama/Gemma were not run before closure, as requested: see
 [CLOSURE.md](CLOSURE.md).

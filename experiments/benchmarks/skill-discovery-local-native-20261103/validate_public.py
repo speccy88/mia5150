@@ -214,7 +214,7 @@ def plot(coverage):
 
 def report(summary):
     lines=['# Descriptive comparison: identical libraries, distinct inference conditions','',
-        'The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence: local models are quantized, use a 32K window and 500-token output cap, and have a native final-answer adapter; OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.','',
+        'The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence. The initial local series uses quantized models, a 32K window, a 500-token output cap and a native final-answer adapter. The separate v3 supplement adjusts context to actual input tokens +500 and compares f16 with Q8_0 KV at N=500. OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.','',
         '![Measured quality and coverage](figures/coverage-comparison.png)','',
         'The plot uses the same 20 questions at each size. Every colored zero comes from actual measured outputs; missing scores indicate exclusions, blocks or unattempted sizes. Format errors and reasoning without final answers stay in the denominator of measured local outputs.','',
         '## Shared panel: N = 50, 100, 250, 500','',
@@ -228,7 +228,7 @@ def report(summary):
         latency=f"{s['median_llm_s_common']:.3f}" if n else '—'
         lines.append(f"| {s['route']} | {s['model']} | {n} | {rate} | {interval} | {s['valid_nonerror_common']} | {latency} |")
     lines += ['', '## Limitations and evidence','',
-        '- **Position bias:** all golds occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.',
+        '- **Position bias:** all expected correct skills (gold labels) occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.',
         '- **Initial local coverage:** 14 models executed, 1,120 outputs with actual usage; four models without inference. The 1,080 estimated-context rows do not measure native maximum model windows.',
         '- **OAuth coverage:** 360 measured responses at N≤2000. At N=5000 each model has one HTTP string-length rejection and 19 unattempted cases, rather than an established token-context limit.',
         '- **Nanbeige:** all 80 measured outputs lack a final answer within the 500-token budget. Its zero does not establish a general semantic inability.',
@@ -237,7 +237,7 @@ def report(summary):
         '- **Native-v2 definition:** this corrects reasoning parsing; the biased scientific v1 protocol is unchanged. The scientific v2 proposed in the OAuth report was not executed.',
         '- **External comparability:** agreement with the reference cloud runner remains unverified; duplicate names and lexical query hints remain.',
         '', '[Local report](LOCAL_REPORT.md) · [OAuth report](../skill-discovery-oauth-v1-20261103/REPORT.md) · [Offline validation](validation/public-validation.json) · [Shared-panel summary](validation/common-panel-summary.csv)', '',
-        'CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recomputes ranking metrics and persistence without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.']
+        'CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recalculates ranking metrics, checks local CSV/SQLite consistency and reproduces OAuth CSV summaries without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.']
     if (ROOT/'PROFILE_COMPLEMENT.md').exists():
         lines += ['',(ROOT/'PROFILE_COMPLEMENT.md').read_text(encoding='utf-8')]
     (ROOT/'COMPARISON.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')

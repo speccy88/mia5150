@@ -4,13 +4,14 @@ The study closes with the available measurements. Sixteen distinct local models
 produced measurements in at least one series: 1,120 responses in the initial series
 and 200 in the Qwen8/Mistral supplement. Three OAuth models add 360 responses.
 These 1,680 responses reuse the same 20 questions; they are not 1,680 independent
-observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.
+observations. Llama 3.2 and Gemma 3 were not run before the study was closed, as requested.
 
 The series remain separate. The initial local series uses 32K/f16 and an estimated
 context gate. The v3 supplement sizes n_ctx to actual input tokens +500 without the
 10% margin, and compares Q8_0 KV with f16 at N=500. OAuth does not expose the same
-temperature and output-length controls. Golds always occupy positions 1–20. Scores
-describe these disclosed, position-biased conditions.
+temperature and output-length controls. Gold labels identify the expected correct
+skills; these skills ("golds") always occupy positions 1–20. Scores describe these
+disclosed, position-biased conditions.
 
 This report combines the coverage/uncertainty comparison, initial local results,
 final profiles and OAuth analysis. Code, configurations, unchanged CSVs, sanitized
@@ -31,7 +32,7 @@ their original bytes, as documented in the
 
 # Descriptive comparison: identical libraries, distinct inference conditions
 
-The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence: local models are quantized, use a 32K window and 500-token output cap, and have a native final-answer adapter; OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.
+The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence. The initial local series uses quantized models, a 32K window, a 500-token output cap and a native final-answer adapter. The separate v3 supplement adjusts context to actual input tokens +500 and compares f16 with Q8_0 KV at N=500. OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.
 
 ![Measured quality and coverage](https://raw.githubusercontent.com/speccy88/mia5150/main/experiments/benchmarks/skill-discovery-local-native-20261103/figures/coverage-comparison.png)
 
@@ -67,7 +68,7 @@ These scores use 80 measurements per executed model: 20 questions repeated at fo
 
 ## Limitations and evidence
 
-- **Position bias:** all golds occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.
+- **Position bias:** all expected correct skills (gold labels) occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.
 - **Initial local coverage:** 14 models executed, 1,120 outputs with actual usage; four models without inference. The 1,080 estimated-context rows do not measure native maximum model windows.
 - **OAuth coverage:** 360 measured responses at N≤2000. At N=5000 each model has one HTTP string-length rejection and 19 unattempted cases, rather than an established token-context limit.
 - **Nanbeige:** all 80 measured outputs lack a final answer within the 500-token budget. Its zero does not establish a general semantic inability.
@@ -78,7 +79,7 @@ These scores use 80 measurements per executed model: 20 questions repeated at fo
 
 [Local report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/LOCAL_REPORT.md) · [OAuth report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md) · [Offline validation](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/public-validation.json) · [Shared-panel summary](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/common-panel-summary.csv)
 
-CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recomputes ranking metrics and persistence without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.
+CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recalculates ranking metrics, checks local CSV/SQLite consistency and reproduces OAuth CSV summaries without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.
 
 ## Final Qwen8/Mistral supplement: separate v3 series
 
@@ -104,7 +105,7 @@ The two models produced 200 additional responses: 80 f16 responses per model at 
 
 Across the four f16 sizes, Qwen8 scores 34/80 (42.5%) and Mistral 36/80 (45.0%). Q8 results remain separate. The 20 paired questions establish neither a general improvement nor quantization equivalence. No N≥1000 case was measured in this supplement.
 
-In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1.320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.
+In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1,320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 were not run before the study was closed, as requested.
 
 [Detailed v3 report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/PROFILE_REPORT.md) · [Validation](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/validation/public-validation.json) · [Llama/Gemma closure](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/CLOSURE.md)
 
@@ -286,8 +287,8 @@ Rates over measured outputs include missing final lists and formatting failures.
 - `random.Random(42).sample(all_skills,N)` is restarted at each size. Each question gets a copy, with last-item replacement if and only if its gold ID is missing. **Verified intrinsic bias: the 20 supplied gold IDs are already the first 20 seed-42 draws; their positions remain 1–20 at every size.** The runner adds no gold prefix. This is not a test of uniformly distributed answer positions.
 - All 140 v1/native-v2 candidate plans and prompt hashes are identical. The corrected adapter only adds parsing state for reasoning already prefilled by the template; prompts and thinking mode are unchanged. Delimited internal blocks are excluded from ranks. An unfinished reasoning block at the cap produces `REASONING_NO_FINAL_ANSWER` while retaining actual usage.
 - RTX 2060 SUPER, 8,192 MiB; driver 610.88; llama.cpp b11960 CUDA 12.4. Transformer/output layers, f16 KV and observed recurrent state are on CUDA. Effective context 32,768, one slot, fit=off, no context shift, warmup, RAM cache or checkpoints; batch 512 / microbatch 128. **Exact scope: llama.cpp retains default CPU_Mapped input/embedding weights**, even with all transformer/output layers on GPU. This profile is not CPU-free computation. Transformer-layer fallback to fit VRAM is rejected. The buffer audit records these allocations. Preparatory conversion and quantization also use CPU.
-- `/apply-template` then `/tokenize` provide actual counts; IDs are sent to `/completion`. Temperature 0, seed 42, 500-token output cap, no truncation. The estimated v1 gate `44.5*N+200 > 90% of context` excludes 60 rows at sizes 1,000/2,000/5,000; those are not measured input-token counts.
-- **The 60 rows reflect the chosen n_ctx filter, not intrinsic model limits.** Qwen3.5 advertises 262,144 native tokens (an extension to 1,010,000); Ling configures 131,072 native tokens and a YaRN recipe for 262.144. This series loads only 32,768, a uniform conservative choice without per-model maximum-VRAM search. No tokenizer request or inference measures excluded sizes. Published windows, publisher configs, GGUF values and observed n_ctx are separated in the context-window audit and notes.
+- `/apply-template` then `/tokenize` provide actual counts; IDs are sent to `/completion`. Temperature 0, seed 42, 500-token output cap, no truncation. The estimated v1 gate `44.5*N+200 > 90% of context` excludes 60 rows per model at sizes 1,000/2,000/5,000 (1,080 rows across all 18 models); those are not measured input-token counts.
+- **The 60 excluded rows per model reflect the chosen n_ctx filter, not intrinsic model limits.** Qwen3.5 advertises 262,144 native tokens (an extension to 1,010,000); Ling configures 131,072 native tokens and a YaRN recipe for 262,144 tokens. This series loads only 32,768, a uniform conservative choice without per-model maximum-VRAM search. No tokenizer request or inference measures excluded sizes. Published windows, publisher configs, GGUF values and observed n_ctx are separated in the context-window audit and notes.
 - Reasoning models can spend all 500 tokens before the final list. Budget/format failures describe this configuration, not their best possible ability. Quantization differs and is identified per model.
 - Multimodal models are tested with text only. H2O uses its official ordinary-chat export without a typed-decision shim. Instruct/IT versions are used when available; Mistral is explicitly v0.3.
 - The 20 questions form a small, partly lexical sample; duplicate names prevent recovery of some gold IDs through name-only responses. The original reference cloud runner was not supplied.
@@ -331,7 +332,7 @@ The benchmark/report generators do not send email or push code. Weights, archive
 
 Under Windows WDDM, CUDA allocation can succeed despite a declared budget exceeding physical VRAM. The launcher therefore checks the sum of model, KV, recurrent-state and maximum compute CUDA buffers before inference. Excess produces `HARDWARE_VRAM_CAPACITY_EXCEEDED`, distinct from an observed CUDA OOM. It does not silently offload layers or change context.
 
-Qwen3-8B at 32K declares 9,097.34 MiB against 8,192 MiB physical VRAM. The 21 responses acquired before this control remain in `results/diagnostic-vram-oversubscription/`, with the next unresolved intent unreplayed. They are excluded from the comparative series; its canonical ledger records hardware outcomes without measured accuracy. Corrected guard validation rejected the same load without inference. Exact launch hashes and allocations are audited in the native-buffer evidence.
+Qwen3-8B at 32K declares 9,097.34 MiB against 8,192 MiB physical VRAM. The 21 responses acquired before this control remain in `results/diagnostic-vram-oversubscription/`; the next pending inference transaction (`100:1`) has an uncertain outcome and was not retried. They are excluded from the comparative series; its canonical ledger records hardware outcomes without measured accuracy. Corrected guard validation rejected the same load without inference. Exact launch hashes and allocations are audited in the native-buffer evidence.
 
 Mistral-7B-Instruct-v0.3 is likewise rejected before generation: 8,230.52 MiB declared against 8,192 MiB physical VRAM. It is not assigned an observed zero; measured accuracy is absent. Converted originals and startup allocations are preserved.
 
@@ -433,6 +434,7 @@ Final closure: Llama 3.2 and Gemma 3 are not pursued further, as requested by th
 Skill-discovery listing study conducted on 3 November 2026 with `gpt-6-luna`,
 `gpt-6.1-sol` and `gpt-6.1-terra`. This execution is an **OAuth variant of protocol v1**.
 It does not reproduce a temperature-0 API run with a 500-token output limit exactly.
+Gold labels identify the expected correct skills for the 20 questions.
 
 ## What the results support
 
@@ -556,7 +558,7 @@ No fabricated zero usage is assigned to the three rejections.
 
 The CSVs contain all metrics at K = 1, 3, 5 and 10. With one gold item, a hit at
 rank r ≤ K gives R@K = 1, P@K = 1/K, NDCG@K = 1/log2(r+1), and MRR@K = AP@K = 1/r.
-P@10 therefore cannot exceed 0.1; it is not a 10% top-1 selection precision.
+P@10 therefore cannot exceed 0.1. This metric ceiling does not limit top-1 selection accuracy to 10%; top-1 accuracy can reach 100%.
 
 | Model | Invalid names in ranked lists, total | Additional top-1 hits from case fallback |
 | --- | --- | --- |

@@ -88,7 +88,7 @@ above physical 8,192 MiB; WDDM can accept allocations exceeding that capacity.
 The Qwen3-8B diagnostic preserves 21 separate responses without counting them as
 admissible measurements or replaying its interrupted intent.
 
-The 60 exclusions at sizes 1,000/2,000/5,000 come from the configured 32K-window
+The 60 exclusions per model at sizes 1,000/2,000/5,000 come from the configured 32K-window
 gate. They demonstrate neither native limits nor the VRAM maximum.
 
 ## Finalize and package

@@ -169,11 +169,11 @@ def main():
     if paired:
         lines+=['| Model | N | Shared n_ctx | Paired questions | Top-1 f16 / Q8 | Top-10 f16 / Q8 | Identical raw outputs |','|---|---:|---:|---:|---|---|---:|']
         for p in paired: lines.append(f"| {p['model']} | {p['size']} | {p['context']} | {p['paired_queries']} | {p['f16_top1']} / {p['q8_top1']} | {p['f16_top10']:g} / {p['q8_top10']:g} | {p['identical_raw_texts']} |")
-    else: lines+=['Comparaison encore en attente.']
+    else: lines+=['Comparison is still pending.']
     lines+=['','Q8_0 uses rounded quantization: 32 int8 values and an f16 scale, or 8.5 bits/value versus 16 for f16. The [initial llama.cpp experiments](https://github.com/ggml-org/llama.cpp/pull/7412) motivate this one quantized format here without guaranteeing equivalence. The same 20 questions at the same context permit a local comparison; this small set does not replace a general perplexity evaluation.','',
         'Outputs with no final answer at the 500-token cap are generation/format failures for this profile. Hardware rejections have no measured accuracy. The seed-42 gold-position bias at positions 1–20 remains. No N≥1000 context, new weights, other weight quantization or hosted inference is tested.','',
         'Evidence: `evidence/profile-review.json`, `evidence/runtime-kv-support.json`, `evidence/candidate-comparison.json`, preflights and historical runtime records; transactional SQLite and 45-column CSV files under `results/`. Raw outputs were hash-checked and remain private. The historical baseline-preservation records verify the earlier archives.','',
-        'Llama 3.2 and Gemma 3 remain unexecuted at user-requested closure; see [CLOSURE.md](CLOSURE.md). This report generator performs no connection, terms acceptance, publication or email delivery.','']
+        'Llama 3.2 and Gemma 3 were not run before the study was closed, as requested; see [CLOSURE.md](CLOSURE.md). This report generator performs no connection, terms acceptance, publication or email delivery.','']
     (ROOT/'PROFILE_REPORT.md').write_text('\n'.join(lines),encoding='utf-8')
     print(json.dumps({'state':state['state'],'measured':output['measured_total'],'verified_raw':raw_count,'profiles':len(summary),'checks_passed':True}),flush=True)
 

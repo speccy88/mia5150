@@ -3,6 +3,7 @@
 Skill-discovery listing study conducted on 3 November 2026 with `gpt-6-luna`,
 `gpt-6.1-sol` and `gpt-6.1-terra`. This execution is an **OAuth variant of protocol v1**.
 It does not reproduce a temperature-0 API run with a 500-token output limit exactly.
+Gold labels identify the expected correct skills for the 20 questions.
 
 ## What the results support
 
@@ -126,7 +127,7 @@ No fabricated zero usage is assigned to the three rejections.
 
 The CSVs contain all metrics at K = 1, 3, 5 and 10. With one gold item, a hit at
 rank r ≤ K gives R@K = 1, P@K = 1/K, NDCG@K = 1/log2(r+1), and MRR@K = AP@K = 1/r.
-P@10 therefore cannot exceed 0.1; it is not a 10% top-1 selection precision.
+P@10 therefore cannot exceed 0.1. This metric ceiling does not limit top-1 selection accuracy to 10%; top-1 accuracy can reach 100%.
 
 | Model | Invalid names in ranked lists, total | Additional top-1 hits from case fallback |
 | --- | --- | --- |

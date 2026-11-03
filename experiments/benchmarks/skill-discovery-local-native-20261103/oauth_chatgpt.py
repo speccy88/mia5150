@@ -279,7 +279,7 @@ def login(port=1455, open_browser=False, ready_file=None):
                     "<button style='font:inherit;padding:12px'>Continue with ChatGPT</button></form>"
                 )
             if uri.path != "/auth/callback":
-                return self.page("Page inconnue", 404)
+                return self.page("Page not found", 404)
             if not session["approved"] or not session["started"] or session["done"]:
                 return self.page("No active attempt", 400)
             values = urllib.parse.parse_qs(uri.query)
@@ -296,7 +296,7 @@ def login(port=1455, open_browser=False, ready_file=None):
                 return self.page("Incomplete registration or mismatched client", 400)
             code = values.get("code", [""])[0]
             if not code:
-                return self.page("Code absent", 400)
+                return self.page("Missing authorization code", 400)
             session["done"] = True  # Single-use code; no callback auto retry.
             try:
                 with CredentialLock():

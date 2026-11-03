@@ -1,6 +1,6 @@
 # Descriptive comparison: identical libraries, distinct inference conditions
 
-The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence: local models are quantized, use a 32K window and 500-token output cap, and have a native final-answer adapter; OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.
+The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence. The initial local series uses quantized models, a 32K window, a 500-token output cap and a native final-answer adapter. The separate v3 supplement adjusts context to actual input tokens +500 and compares f16 with Q8_0 KV at N=500. OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.
 
 ![Measured quality and coverage](figures/coverage-comparison.png)
 
@@ -36,7 +36,7 @@ These scores use 80 measurements per executed model: 20 questions repeated at fo
 
 ## Limitations and evidence
 
-- **Position bias:** all golds occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.
+- **Position bias:** all expected correct skills (gold labels) occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.
 - **Initial local coverage:** 14 models executed, 1,120 outputs with actual usage; four models without inference. The 1,080 estimated-context rows do not measure native maximum model windows.
 - **OAuth coverage:** 360 measured responses at N≤2000. At N=5000 each model has one HTTP string-length rejection and 19 unattempted cases, rather than an established token-context limit.
 - **Nanbeige:** all 80 measured outputs lack a final answer within the 500-token budget. Its zero does not establish a general semantic inability.
@@ -47,7 +47,7 @@ These scores use 80 measurements per executed model: 20 questions repeated at fo
 
 [Local report](LOCAL_REPORT.md) · [OAuth report](../skill-discovery-oauth-v1-20261103/REPORT.md) · [Offline validation](validation/public-validation.json) · [Shared-panel summary](validation/common-panel-summary.csv)
 
-CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recomputes ranking metrics and persistence without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.
+CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recalculates ranking metrics, checks local CSV/SQLite consistency and reproduces OAuth CSV summaries without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.
 
 ## Final Qwen8/Mistral supplement: separate v3 series
 
@@ -73,7 +73,7 @@ The two models produced 200 additional responses: 80 f16 responses per model at 
 
 Across the four f16 sizes, Qwen8 scores 34/80 (42.5%) and Mistral 36/80 (45.0%). Q8 results remain separate. The 20 paired questions establish neither a general improvement nor quantization equivalence. No N≥1000 case was measured in this supplement.
 
-In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1.320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.
+In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1,320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 were not run before the study was closed, as requested.
 
 [Detailed v3 report](profiles-v3/PROFILE_REPORT.md) · [Validation](profiles-v3/validation/public-validation.json) · [Llama/Gemma closure](profiles-v3/CLOSURE.md)
 

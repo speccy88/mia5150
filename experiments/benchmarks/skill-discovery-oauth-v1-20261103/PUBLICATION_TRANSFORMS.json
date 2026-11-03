@@ -6,5 +6,12 @@
     "audit": "docs/publication/ENGLISH_LANGUAGE_AUDIT.json",
     "new_inference_calls": 0,
     "original_archive_mappings": "Existing original/public mappings describe the pre-translation release. Current hashes are in FILE_MANIFEST.json and SHA256SUMS."
+  },
+  "english_presentation_corrections": {
+    "base_commit": "7b90ba68728fff42c58be6b577ffc3926b9ab9d5",
+    "review": "docs/publication/ENGLISH_CORRECTION_REVIEW.json",
+    "scope": "English presentation and wording only; current generators updated with reports.",
+    "new_inference_calls": 0,
+    "historical_hash_evidence": "Existing archive mappings and the original English audit are unchanged; current publication hashes are in FILE_MANIFEST.json and SHA256SUMS."
   }
 }

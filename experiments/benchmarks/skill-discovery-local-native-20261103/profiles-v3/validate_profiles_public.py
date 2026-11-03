@@ -124,7 +124,7 @@ def write_summary(summaries,pairs):
     for x in pairs:
         lines.append(f"| {x['model']} | {x['f16_top1']} → {x['q8_top1']} | {x['f16_top10']:.0f} → {x['q8_top10']:.0f} | {x['f16_hit_q8_miss']} | {x['q8_hit_f16_miss']} |")
     lines += ['', 'Across the four f16 sizes, Qwen8 scores 34/80 (42.5%) and Mistral 36/80 (45.0%). Q8 results remain separate. The 20 paired questions establish neither a general improvement nor quantization equivalence. No N≥1000 case was measured in this supplement.','',
-        'In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1.320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.','',
+        'In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1,320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 were not run before the study was closed, as requested.','',
         '[Detailed v3 report](profiles-v3/PROFILE_REPORT.md) · [Validation](profiles-v3/validation/public-validation.json) · [Llama/Gemma closure](profiles-v3/CLOSURE.md)']
     (ROOT.parent/'PROFILE_COMPLEMENT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 

@@ -14,9 +14,10 @@ three OAuth models produced 360 completed responses. The initial local 32K serie
 produced 1,120 measured outputs from 14 configurations, with four blocked. A
 [separate Qwen8/Mistral context/KV series](experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/PROFILE_REPORT.md)
 adds 200 responses: 16 distinct local models now have measurements across the
-series, while Llama 3.2 and Gemma 3 remain unexecuted at closure. The local
-final-answer adapter and OAuth settings differ. The same 20 questions recur at each
-size, with every gold at positions 1-20; these are exposed, position-biased results.
+series. Llama 3.2 and Gemma 3 were not run before the study was closed, as
+requested. The local final-answer adapter and OAuth settings differ. The same 20 questions recur at each
+size, with every expected correct skill (gold label) at positions 1-20; these are
+exposed, position-biased results.
 Read the [OAuth report](experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md)
 and [local report](experiments/benchmarks/skill-discovery-local-native-20261103/LOCAL_REPORT.md).
 Unexecuted cases and context or hardware exclusions have no measured accuracy.

@@ -1,4 +1,4 @@
-# Skill Discovery — lot local Windows
+# Skill discovery — local Windows series
 
 Status at 2026-11-03T04:54:01.513021+00:00.
 
@@ -12,26 +12,26 @@ This file supplies a section of the combined report. Generating it does not send
 | Qwen3-1.7B | complete export; TRANSPORT_ERROR=1, GPU_SERVER_NOT_RUNNING=13 | 140 | 66 | 22 | 15/66 (22.7%) |
 | Qwen3.5-4B | complete export | 140 | 80 | 64 | 0/80 (0.0%) |
 | Ling-3.0-tiny | complete export | 140 | 80 | 39 | 0/80 (0.0%) |
-| Qwen3.5-9B | en attente | 0 | 0 | 0 | 0/0 (—) |
+| Qwen3.5-9B | pending | 0 | 0 | 0 | 0/0 (—) |
 | Llama 3.2 3B | gated access: user acceptance required | 0 | 0 | 0 | 0/0 (—) |
 | Gemma 3 4B | gated access: user acceptance required | 0 | 0 | 0 | 0/0 (—) |
-| H2O-Lightning-4B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Gemma 4 E2B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Qwen3-8B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| NeoHorse-1-9B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Ornith-1.5-9B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Nemotron 3.5 Bolt E4B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Ternary Bonsai 2 9B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| LFM3-Omni-2B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Phi-4 Mini 3.8B | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Mistral 7B Instruct | en attente | 0 | 0 | 0 | 0/0 (—) |
-| Nanbeige 4.2 3B | en attente | 0 | 0 | 0 | 0/0 (—) |
+| H2O-Lightning-4B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Gemma 4 E2B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Qwen3-8B | pending | 0 | 0 | 0 | 0/0 (—) |
+| NeoHorse-1-9B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Ornith-1.5-9B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Nemotron 3.5 Bolt E4B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Ternary Bonsai 2 9B | pending | 0 | 0 | 0 | 0/0 (—) |
+| LFM3-Omni-2B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Phi-4 Mini 3.8B | pending | 0 | 0 | 0 | 0/0 (—) |
+| Mistral 7B Instruct | pending | 0 | 0 | 0 | 0/0 (—) |
+| Nanbeige 4.2 3B | pending | 0 | 0 | 0 | 0/0 (—) |
 
 A 140-row export records all outcomes; it does not mean 140 calls succeeded. Hardware failures, blocked access and context exclusions are not observed zero-accuracy results.
 
 ## Results by library size
 
-| Model | N | Measured responses | Top-1 exact | Top-10 exact | Top-1 precision, non-error outputs | Erreurs/limites |
+| Model | N | Measured responses | Top-1 exact | Top-10 exact | Top-1 precision, non-error outputs | Errors/limits |
 |---|---:|---:|---:|---:|---:|---|
 | ling-3.0-tiny-q4km | 50 | 20 | 0.0% | 15.0% | 0.0% | INVALID_OUTPUT: 16, OK: 4 |
 | ling-3.0-tiny-q4km | 100 | 20 | 0.0% | 55.0% | 0.0% | OK: 13, INVALID_OUTPUT: 7 |
@@ -66,11 +66,11 @@ Measured rates use only rows with actual input and output token usage. Precision
 
 ## Protocol and interpretation-changing limitations
 
-- Supplied inputs: 6,006 skills, 5,801 distinct names and 20 exact questions. Seven sizes: 50, 100, 250, 500, 1,000, 2,000 and 5.000. No deduplication.
+- Supplied inputs: 6,006 skills, 5,801 distinct names and 20 exact questions. Seven sizes: 50, 100, 250, 500, 1,000, 2,000 and 5,000. No deduplication.
 - Each size restarts `random.Random(42).sample(all_skills, N)`. Every question keeps that library, replacing the last item only when its gold ID is absent. Prompts use only the name and first 300 description characters, without full skill bodies.
 - **Verified position bias:** the 20 supplied gold IDs are already the first 20 seed-42 samples. They occupy positions 1–20 at every size; no final replacement occurs. The runner does not add a gold prefix. Examined local and Luna/Sol/Terra plans are identical. This series does not test uniformly distributed answer positions. A corrected variant needs a separate version and execution.
 - The originally requested and verified server profile uses context 32,768, one slot, transformer/output layers and f16 KV on CUDA, fit=off, no context shift, warmup, RAM cache or checkpoints, and batch 512 / microbatch 128. Later hardware auditing clarifies that default CPU_Mapped input/embedding weights remain; see the final hardware-scope note. Transformer-layer CPU fallback is not allowed.
-- Actual tokenization uses `/apply-template` then `/tokenize`, with IDs passed to `/completion`, temperature 0, seed 42 and a 500-token output cap; truncation is rejected. At this context, the estimated v1 gate `44.5*N+200 > 90% of context` excludes sizes 1,000/2,000/5,000, or 60 rows per model. The estimate is not an actual token count.
+- Actual tokenization uses `/apply-template` then `/tokenize`, with IDs passed to `/completion`, temperature 0, seed 42 and a 500-token output cap; truncation is rejected. At this context, the estimated v1 gate `44.5*N+200 > 90% of context` excludes sizes 1,000/2,000/5,000, or 60 rows per model (1,080 planned rows across all 18 models). The estimate is not an actual token count.
 - Default model thinking is retained. Reasoning can consume the 500-token cap before the expected list; invalid outputs and outputs reaching the cap remain visible in the evidence.
 - Available artifacts use different quantizations. Results compare those specific variants, not parameter counts alone.
 - The hosted OAuth variant imposes neither temperature 0 nor a 500-token output limit. Identical candidates therefore do not make it strictly equivalent to local inference. The original reference runner was not supplied; exact reproduction of that execution is not claimed.

@@ -1,0 +1,73 @@
+{
+  "base_commit": "7b90ba68728fff42c58be6b577ffc3926b9ab9d5",
+  "scope": "English presentation corrections; no inference or email",
+  "translation_commit_markdown_reviewed": 19,
+  "translation_commit_python_reviewed": 12,
+  "changed_python_structure_unchanged_except_string_constants": true,
+  "markdown_table_data_unchanged_except_translated_labels": true,
+  "protected_study_files_unchanged": 317,
+  "csv_files_unchanged": 38,
+  "sqlite_files_unchanged": 33,
+  "prior_96_file_preservation_proof_verified": true,
+  "language_audit_exception_hashes_verified": 71,
+  "new_inference_calls": 0,
+  "protected_inventory_sha256": "84ba35589020614b4e7ef03dd26d73422a57c235074e99d275b65d6812b68425",
+  "protected_inventory_definition": "Tracked files under either November 3 skill-discovery study with a data, results, evidence, configs, source-measured, source-original or validation path component, sorted by git ls-files; compare bytes to base_commit.",
+  "offline_checks": {
+    "local_public_validator": {
+      "databases": 23,
+      "canonical_measured_responses": 1120,
+      "canonical_rows": 2520,
+      "prompt_plans_match": true
+    },
+    "v3_public_validator": {
+      "profiles": 10,
+      "measured_responses": 200,
+      "metrics_sqlite_preflights_and_pairs_match": true
+    },
+    "oauth_public_validator": {
+      "csv_rows": 420,
+      "valid_responses": 360,
+      "saved_summaries_bootstrap_and_prompts_match": true,
+      "sqlite_rechecked": false
+    },
+    "synthetic_tests": {
+      "local_tests_run": 34,
+      "oauth_tests_run": 28,
+      "v3_tests_run": 2,
+      "passed": 62,
+      "skipped": 2,
+      "linux_adapter": "Only the working OAuth module os.name is modeled as nt for serialized synthetic listener tests. HTTP, token exchange and storage remain mocked. Real os.name/pathlib remain Linux; Windows DPAPI roundtrips remain skipped.",
+      "unadapted_linux_result": "Two existing Windows-only listener tests fail in each suite because login exits before the listener; the same two failures were reproduced with the unchanged baseline helper."
+    },
+    "regeneration": {
+      "comparison_and_supplement_reproduce_exactly": true,
+      "local_and_diagnostic_and_proposal_table_data_match": true,
+      "consolidated_sections_match_standalone_reports": true,
+      "private_profile_review_not_replayed": "Historical review_profiles.py requires private response captures/runtime logs. Its translation-only changes were compiled and its AST structure checked; validate_profiles_public.py passed."
+    },
+    "privacy": {
+      "tool": "gitleaks 8.30.0",
+      "scope": "staged changes only",
+      "config": ".gitleaks.toml",
+      "exit_code": 0,
+      "findings": 0,
+      "command": "gitleaks git --pre-commit --staged --config .gitleaks.toml --redact=100 --max-decode-depth 1"
+    }
+  },
+  "limitations": [
+    "No model inference or email was performed.",
+    "Public OAuth SQLite files and private raw captures are not distributed; public validation does not claim a new OAuth database or raw-normalization replay.",
+    "Windows DPAPI cannot be exercised on Linux.",
+    "The language review is not a formal proof that every possible wording error is absent."
+  ],
+  "corrections": [
+    "English thousands separators for 1,320; 262,144 tokens; 44,700 / 89,200 / 222,700; 5,000.",
+    "Gate exclusions are per model; 60 across each of 18 initial-series plans yields 1,080 rows.",
+    "32K is scoped to the initial local series; separate v3 contexts and KV conditions stay explicit.",
+    "Metric recalculation is distinguished from local CSV/SQLite consistency checks and OAuth CSV reproduction.",
+    "Pending inference transaction 100:1 was not retried and its outcome remains uncertain.",
+    "Gold labels, closure wording and the P@10 ceiling are clarified without changing results.",
+    "Residual French diagnostic report labels, generator fallbacks and working OAuth error messages are translated."
+  ]
+}

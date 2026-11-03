@@ -15,7 +15,7 @@ def main():
     by_model=collections.defaultdict(list)
     for row in audited['summary']:
         by_model[row['model']].append(row)
-    lines=['# Skill Discovery — lot local Windows', '',
+    lines=['# Skill discovery — local Windows series', '',
         'Status at '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'.', '',
         'This file supplies a section of the combined report. Generating it does not send messages or publish anything.', '',
         '## Status of the 18 requested models', '',
@@ -27,7 +27,7 @@ def main():
         rows=by_model.get(alias,[])
         measured=sum(r['measured_inference_rows'] for r in rows)
         hit=sum(r['strict_top1_hits'] for r in rows)
-        state='en attente'
+        state='pending'
         if job.get('blocked'):
             state='gated access: user acceptance required'
         elif alias in checks:
@@ -41,18 +41,18 @@ def main():
         lines.append(f"| {job['requested']} | {state} | {sum(r['recorded_rows'] for r in rows)} | {measured} | {sum(r['valid_nonerror_rows'] for r in rows)} | {hit}/{measured} ({percent(hit/measured if measured else None)}) |")
     lines += ['', 'A 140-row export records all outcomes; it does not mean 140 calls succeeded. Hardware failures, blocked access and context exclusions are not observed zero-accuracy results.', '',
         '## Results by library size', '',
-        '| Model | N | Measured responses | Top-1 exact | Top-10 exact | Top-1 precision, non-error outputs | Erreurs/limites |',
+        '| Model | N | Measured responses | Top-1 exact | Top-10 exact | Top-1 precision, non-error outputs | Errors/limits |',
         '|---|---:|---:|---:|---:|---:|---|']
     for r in audited['summary']:
-        counts=', '.join(f'{k}: {v}' for k,v in r['errors'].items()) or 'en attente'
+        counts=', '.join(f'{k}: {v}' for k,v in r['errors'].items()) or 'pending'
         lines.append(f"| {r['model']} | {r['library_size']} | {r['measured_inference_rows']} | {percent(r['top1_rate_measured'])} | {percent(r['top10_rate_measured'])} | {percent(r['top1_precision_valid'])} | {counts} |")
     lines += ['', 'Measured rates use only rows with actual input and output token usage. Precision conditional on non-error outputs uses a different denominator. Invalid or duplicate ranks remain in place; removing them never promotes a correct answer.', '',
         '## Protocol and interpretation-changing limitations', '',
-        '- Supplied inputs: 6,006 skills, 5,801 distinct names and 20 exact questions. Seven sizes: 50, 100, 250, 500, 1,000, 2,000 and 5.000. No deduplication.',
+        '- Supplied inputs: 6,006 skills, 5,801 distinct names and 20 exact questions. Seven sizes: 50, 100, 250, 500, 1,000, 2,000 and 5,000. No deduplication.',
         '- Each size restarts `random.Random(42).sample(all_skills, N)`. Every question keeps that library, replacing the last item only when its gold ID is absent. Prompts use only the name and first 300 description characters, without full skill bodies.',
         '- **Verified position bias:** the 20 supplied gold IDs are already the first 20 seed-42 samples. They occupy positions 1–20 at every size; no final replacement occurs. The runner does not add a gold prefix. Examined local and Luna/Sol/Terra plans are identical. This series does not test uniformly distributed answer positions. A corrected variant needs a separate version and execution.',
         '- The originally requested and verified server profile uses context 32,768, one slot, transformer/output layers and f16 KV on CUDA, fit=off, no context shift, warmup, RAM cache or checkpoints, and batch 512 / microbatch 128. Later hardware auditing clarifies that default CPU_Mapped input/embedding weights remain; see the final hardware-scope note. Transformer-layer CPU fallback is not allowed.',
-        '- Actual tokenization uses `/apply-template` then `/tokenize`, with IDs passed to `/completion`, temperature 0, seed 42 and a 500-token output cap; truncation is rejected. At this context, the estimated v1 gate `44.5*N+200 > 90% of context` excludes sizes 1,000/2,000/5,000, or 60 rows per model. The estimate is not an actual token count.',
+        '- Actual tokenization uses `/apply-template` then `/tokenize`, with IDs passed to `/completion`, temperature 0, seed 42 and a 500-token output cap; truncation is rejected. At this context, the estimated v1 gate `44.5*N+200 > 90% of context` excludes sizes 1,000/2,000/5,000, or 60 rows per model (1,080 planned rows across all 18 models). The estimate is not an actual token count.',
         '- Default model thinking is retained. Reasoning can consume the 500-token cap before the expected list; invalid outputs and outputs reaching the cap remain visible in the evidence.',
         '- Available artifacts use different quantizations. Results compare those specific variants, not parameter counts alone.',
         '- The hosted OAuth variant imposes neither temperature 0 nor a 500-token output limit. Identical candidates therefore do not make it strictly equivalent to local inference. The original reference runner was not supplied; exact reproduction of that execution is not claimed.',

@@ -152,8 +152,8 @@
     },
     {
       "path": "oauth_chatgpt.py",
-      "bytes": 20993,
-      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
+      "bytes": 21009,
+      "sha256": "87f8616a7287b20153e4a7b4e2fb69d3bf096c5454821a14bb0041a8688adb17"
     },
     {
       "path": "package_profiles.py",
@@ -167,13 +167,13 @@
     },
     {
       "path": "PUBLICATION_TRANSFORMS.json",
-      "bytes": 98231,
-      "sha256": "67daa07844b194bed1fa5edc55e9f0b803705f653a1bd4527ae89dc3e2050b95"
+      "bytes": 98705,
+      "sha256": "71db85a683cb53a4e0768a4145a645dec7e0bb06b550afe515e263021607ec37"
     },
     {
       "path": "README.md",
-      "bytes": 2314,
-      "sha256": "c7d1ade1192d95a97663b9f2af172ba73627be513b6317e261e3b86c8ded61fd"
+      "bytes": 2338,
+      "sha256": "1a8629ad8a2f2d7e412b16ecec3eae908146925e892e173291a8fbb2f1676bff"
     },
     {
       "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
@@ -427,8 +427,8 @@
     },
     {
       "path": "review_profiles.py",
-      "bytes": 15564,
-      "sha256": "0ec0cb7dfe36f39a537996a96415fe50223bed7c0ff0b27fbfaabc33da7c7a5c"
+      "bytes": 15573,
+      "sha256": "7b5f33cf29e7606a5e526437355f5c16b8e6efe08013b56ac9eea042354d47e8"
     },
     {
       "path": "run_profiles.py",
@@ -472,8 +472,8 @@
     },
     {
       "path": "validate_profiles_public.py",
-      "bytes": 8947,
-      "sha256": "666977c77980443bc1f47af28549b4123a054081e8be9d953f2577f2a66fb072"
+      "bytes": 8959,
+      "sha256": "37572c74a094b14e2a911eb71acd63c4d5357affcff2283eab6b73429deb3529"
     },
     {
       "path": "validation/public-validation.json",
@@ -497,6 +497,6 @@
     }
   ],
   "file_count": 99,
-  "total_bytes": 5585318,
+  "total_bytes": 5585853,
   "self_and_SHA256SUMS_excluded": true
 }

@@ -11,7 +11,7 @@ The existing 32K series remains unchanged. Its 60 exclusions per model come from
 3. Load one model at a time. Preserve weight quantization, f16 KV, transformer/output layers on CUDA, default CPU_Mapped input weights, temperature 0, seed 42, a 500-token cap, one slot and fit=off. Reject declared CUDA-buffer totals above 8,192 MiB before generation and leave room for the driver and transient allocations. Also inspect observed dedicated-memory usage and WDDM messages; successful cudaMalloc does not prove residency.
 4. Start with N=1,000, then N=2,000 if native and hardware limits allow. N=5,000 is a separate phase after preflight. Save each response and intent transactionally; a hardware error stops the model, and an uncertain request is never replayed automatically.
 
-Indicative context tiers 65,536 / 131,072 / 262,144 correspond to historical estimates 44.700 / 89.200 / 222.700, not actual token counts. LFM3 is restricted here to its 128,000 text configuration; proposed tiers are adjusted to that window.
+Indicative context tiers 65,536 / 131,072 / 262,144 correspond to historical estimates 44,700 / 89,200 / 222,700, not actual token counts. LFM3 is restricted here to its 128,000 text configuration; proposed tiers are adjusted to that window.
 
 ## Model-by-model review
 

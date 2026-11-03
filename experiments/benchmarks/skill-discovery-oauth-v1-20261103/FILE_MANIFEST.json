@@ -127,13 +127,13 @@
     },
     {
       "path": "oauth_chatgpt.py",
-      "bytes": 20993,
-      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
+      "bytes": 21009,
+      "sha256": "87f8616a7287b20153e4a7b4e2fb69d3bf096c5454821a14bb0041a8688adb17"
     },
     {
       "path": "PUBLICATION_TRANSFORMS.json",
-      "bytes": 586,
-      "sha256": "1f086b213b333953c2cad23dfe37cdb99a37f84b026f56110098d1621552d52e"
+      "bytes": 1060,
+      "sha256": "ee8a1482314261cc3a06388d3b6bd464279a8f10b28b8d5e49454b9b9b489d74"
     },
     {
       "path": "README.md",
@@ -142,8 +142,8 @@
     },
     {
       "path": "REPORT.md",
-      "bytes": 19631,
-      "sha256": "ff49e55fc9c81281c9d0397e5288243253835897013cf264d58f74bc0dbb9aa2"
+      "bytes": 19758,
+      "sha256": "d782c33d83407a13aca748bc351d51d05f05d18d6a011f8cf3d7879b333a27d7"
     },
     {
       "path": "requirements-analysis.txt",
@@ -392,6 +392,6 @@
     }
   ],
   "file_count": 78,
-  "total_bytes": 30253487,
+  "total_bytes": 30254104,
   "self_and_SHA256SUMS_excluded": true
 }
