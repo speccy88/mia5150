@@ -17,8 +17,8 @@
     },
     {
       "path": "analyze_results.py",
-      "bytes": 12898,
-      "sha256": "452c66451cf5eeff1ce1c67007d107b54f02e6375d3ce21d049b2533193c7bde"
+      "bytes": 12876,
+      "sha256": "3d63c95b2ed7a0b3c5bb3006bb43d5795a51d3ea058e78cfa5f1440f7d3a7553"
     },
     {
       "path": "bench.py",
@@ -112,8 +112,8 @@
     },
     {
       "path": "figures/scaling.png",
-      "bytes": 164802,
-      "sha256": "179f96c1033070c77fe5fec08d425ae17240b26636daee81e7202149761a2425"
+      "bytes": 162588,
+      "sha256": "201acd6c38fb8947b8a756f641e30fe2c1e981d112e78cd4f2677a1988589d67"
     },
     {
       "path": "Install-LocalRuntime.ps1",
@@ -127,8 +127,13 @@
     },
     {
       "path": "oauth_chatgpt.py",
-      "bytes": 21123,
-      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      "bytes": 20993,
+      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
+    },
+    {
+      "path": "PUBLICATION_TRANSFORMS.json",
+      "bytes": 586,
+      "sha256": "1f086b213b333953c2cad23dfe37cdb99a37f84b026f56110098d1621552d52e"
     },
     {
       "path": "README.md",
@@ -137,8 +142,8 @@
     },
     {
       "path": "REPORT.md",
-      "bytes": 22808,
-      "sha256": "7c00f5492338c72b7fd4507e1e6ae7b044253c169cab44b760859e2736770851"
+      "bytes": 19631,
+      "sha256": "ff49e55fc9c81281c9d0397e5288243253835897013cf264d58f74bc0dbb9aa2"
     },
     {
       "path": "requirements-analysis.txt",
@@ -342,8 +347,8 @@
     },
     {
       "path": "tests/test_oauth_local_form.py",
-      "bytes": 7292,
-      "sha256": "fc23e6aa8777c88116453cca20b56e5302d661be4212e4a08de32b183d91b823"
+      "bytes": 7290,
+      "sha256": "209f7bdc79f929d990ce41e4e5b8886bcdd5a834c6ac08f84272b5e5eaba6123"
     },
     {
       "path": "tests/test_oauth_run_controls.py",
@@ -386,7 +391,7 @@
       "sha256": "4b284c4638b2a4fee8423a48e333e3e1b56d7bbda2e36332bc9f718f80f3a812"
     }
   ],
-  "file_count": 77,
-  "total_bytes": 30258446,
+  "file_count": 78,
+  "total_bytes": 30253487,
   "self_and_SHA256SUMS_excluded": true
 }

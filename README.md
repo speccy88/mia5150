@@ -5,6 +5,8 @@ requests retrieve and select agent skills. Start with the
 [19-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
 [published EDA report](https://speccy88.github.io/mia5150/).
 
+Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
+
 ## Skill discovery listing studies (3 November 2026)
 
 [Compare measured accuracy and coverage](experiments/benchmarks/skill-discovery-local-native-20261103/COMPARISON.md):

@@ -1,10 +1,12 @@
-# Lot local Skill Discovery
+# Local skill-discovery suite: historical preparation notes
 
-Ce dossier est indépendant de `task-4/benchmark`. Les scripts, fichiers résultats,
-processus et identifiants OAuth de ce dernier ne sont pas modifiés. Le README
-copié à la racine décrit la préparation historique; `LOCAL_REPORT.md` décrit ce lot.
+This suite was prepared independently of the separate OAuth workspace. Its scripts,
+results, processes and OAuth credentials were not modified by the local suite.
+[README.md](README.md) describes the public layout; [LOCAL_REPORT.md](LOCAL_REPORT.md)
+describes the completed initial study. This document retains historical operating
+instructions; public sanitized evidence exports cannot resume the original runs.
 
-## Consulter le lot en cours
+## Inspect a suite
 
 ```powershell
 Get-Content .\evidence\live-status.json
@@ -12,100 +14,97 @@ Get-Content .\results\local-native-v2\suite-status.json
 .\.venv\Scripts\python.exe .\write_native_v2_report.py
 ```
 
-Le dernier appel régénère le rapport depuis les CSV/SQLite disponibles, après
-vérification indépendante des rangs, des métriques et de la persistance. Un export
-complet peut contenir des erreurs ou des blocages; les réponses réellement mesurées
-et leurs dénominateurs sont distincts. Ne pas réexécuter le lanceur de suite dans
-le même dossier : il refuse volontairement un état existant pour éviter un replay.
+The last command regenerates the report from available CSV/SQLite files after
+independently checking ranks, metrics and persistence. A complete export can include
+errors and blocks; measured responses and their denominators remain distinct.
+Do not rerun a suite launcher in its existing directory: it deliberately rejects
+existing state to prevent replay.
 
-`evidence/AUDIT_VERDICT.md` donne le verdict de conformité de l'échantillonnage et
-le biais gold aux positions 1–20. Les originaux sont conservés. Une modification du
-protocole, des poids, des paramètres ou du scoring demande un nouveau run/version.
+`evidence/AUDIT_VERDICT.md` records sampler compliance and gold-position bias at
+positions 1–20. Originals are preserved. Changing the protocol, weights, parameters
+or scoring requires a new run/version.
 
-## Reproduire dans un nouveau dossier
+## Reproduce in a new directory
 
-Python 3.12 et PowerShell 7.6.5 sont utilisés (7.5+ pour `-DateKind String`). Le moteur local emploie la bibliothèque
-standard. Les dépendances de `requirements-test.txt` ne servent qu'aux tests OAuth
-synthétiques conservés avec le moteur; aucune connexion réelle n'est requise.
+Python 3.12 and PowerShell 7.6.5 were used (7.5+ for `-DateKind String`). The local
+engine uses the standard library. `requirements-test.txt` dependencies support only
+synthetic OAuth tests retained with the engine; no real login is required.
 
-1. Fournir les deux données privées validées sous `data/`, sans les publier.
-   Les SHA-256 attendus sont vérifiés par `bench.py` avant tout appel.
-2. Créer un venv local, installer le runtime CUDA avec `Install-LocalRuntime.ps1`
-   et les outils de conversion uniquement si nécessaires. Le runtime officiel
-   llama.cpp b11960 CUDA 12.4 est épinglé par SHA-256; aucune installation globale.
-3. `inspect_sources.py` lit uniquement les métadonnées publiques des éditeurs.
-   `fetch_official.py REPO FICHIER` télécharge un GGUF public épinglé; `fetch_batch.py`
-   contient la sélection officielle. Les transferts utilisent des plages HTTP
-   vérifiées et un SHA-256 intégral avant promotion des `.part`.
-4. Les modèles sans GGUF éditeur se préparent avec `prepare_conversion.py converter`
-   puis `prepare_conversion.py REPO`. `convert_official_batch.py` utilise le code
-   officiel épinglé, en mode hors ligne, PyTorch CPU et un quantificateur sans DLL
-   CUDA. Ces opérations préparent les poids; ce ne sont pas des inférences CPU.
-5. Examiner `local-models.json` et ajuster les chemins des poids déjà présents sur
-   la machine. Les Qwen3.5 sont les fichiers Ollama installés; Ling correspond
-   exactement au fichier officiel. Ne pas substituer un modèle homonyme.
-6. Utiliser `bench_native_v2.py` et les configurations `configs/native-v2/` pour
-   le parsing corrigé des réponses finales. `run_local_suite_v2.py` crée un lot
-   neuf, un modèle à la fois sur `127.0.0.1:28085`; il arrête uniquement ses
-   serveurs vérifiés par PID/heure/exécutable. Une charge CUDA étrangère bloque
-   le lancement. `continue_local_suite_v2.py` a servi à la reprise inspectée
-   après le diagnostic Qwen3-8B; il ignore les modèles complets et refuse tout
-   état transactionnel incomplet susceptible de rejouer une requête.
+1. Supply the two validated input files under `data/`. `bench.py` verifies expected
+   SHA-256 hashes before any call. The public minimal derivative has the same
+   prompt-relevant fields; see the current README and attribution catalogue.
+2. Create a local venv and install CUDA runtime with `Install-LocalRuntime.ps1`;
+   install conversion tools only if needed. Official llama.cpp b11960 CUDA 12.4 is
+   pinned by SHA-256, without global installation.
+3. `inspect_sources.py` reads public publisher metadata only. `fetch_official.py REPO FILE`
+   downloads a pinned public GGUF; `fetch_batch.py` contains the official selection.
+   Transfers verify HTTP ranges and a complete SHA-256 before promoting `.part` files.
+4. Prepare models without publisher GGUFs using `prepare_conversion.py converter`,
+   then `prepare_conversion.py REPO`. `convert_official_batch.py` uses pinned official
+   code offline, CPU PyTorch and a quantizer without CUDA DLLs. These operations
+   prepare weights; they are not CPU inference.
+5. Review `local-models.json` and set paths to verified weights on the machine.
+   Qwen3.5 used installed Ollama files; Ling exactly matches the official file.
+   Do not substitute another model with the same name.
+6. Use `bench_native_v2.py` and `configs/native-v2/` for corrected final-answer
+   parsing. `run_local_suite_v2.py` creates a fresh suite, one model at a time on
+   `127.0.0.1:28085`; it stops only its own servers verified by PID/time/executable.
+   Unrelated CUDA workloads block startup. `continue_local_suite_v2.py` was used
+   for the inspected continuation after the Qwen3-8B diagnostic. It skips complete
+   models and rejects incomplete transactional state that could replay a request.
 
-Le lanceur exige toutes les couches et le cache KV sur CUDA, f16, contexte réel
-32 768, `fit=off`, un slot, sans context shift, warmup, cache RAM ou checkpoints.
-Il ne réduit pas silencieusement le contexte ou les couches si la VRAM manque.
-Chaque serveur a ses journaux et une preuve liée au PID, à l'heure de démarrage,
-aux empreintes poids/exécutable et au préfixe scellé du journal.
+The launcher requires transformer/output layers and KV on CUDA, f16, actual context
+32,768, `fit=off`, one slot, no context shift, warmup, RAM cache or checkpoints.
+It does not silently reduce context or layers when VRAM is insufficient. Each
+server has logs and evidence tied to PID, start time, weight/executable hashes and
+a sealed log prefix. Llama 3.2 3B and Gemma 3 4B require manual gated access; no
+terms acceptance, login or ungated third-party copy was used to bypass those gates.
 
-Les accès Llama 3.2 3B et Gemma 3 4B sont manuellement gated. Aucune acceptation,
-connexion ou copie tierce non gated n'est tentée pour les contourner.
+## Preserve and integrate
 
-## Préserver et intégrer
+- Original `state.sqlite3` files are transactional authorities; `details.csv` is
+  exported atomically with exactly 45 columns. Public SQLite copies are sanitized
+  audit exports, explicitly non-resumable.
+- `manifest.json` preserves configuration, identities and candidate/prompt plans.
+  Resumption must match its fingerprint. Interrupted requests with uncertain
+  outcomes are never automatically replayed.
+- Original errors remain unchanged. The late 1.7B OOM is documented in
+  `evidence/qwen17-runtime-incident.json`; subsequent server-stopped rows are not
+  interpreted as measured zero accuracy.
+- `.gitignore` excludes weights, archives, tools, environments, conversions and
+  private data. No OAuth secret was copied. Results contain questions/names and
+  occasional output fragments, reviewed for public release.
+- Report/package commands themselves do not push or send messages. Publication
+  and delivery are separate actions.
 
-- `results/local-native-v2/*/state.sqlite3` est transactionnel et fait autorité;
-  `details.csv` est exporté atomiquement, avec exactement 45 colonnes.
-- `manifest.json` conserve configuration, identités et plans de candidats/prompt;
-  toute reprise doit respecter son empreinte. Une requête interrompue d'issue
-  incertaine n'est jamais rejouée automatiquement.
-- Les erreurs initiales restent inchangées. L'incident OOM tardif du 1.7B est
-  documenté dans `evidence/qwen17-runtime-incident.json`; les lignes consécutives
-  serveur arrêté ne sont pas interprétées comme des réponses de précision nulle.
-- `.gitignore` exclut poids, archives, outils, environnements, conversions et
-  données privées. Aucun secret OAuth n'a été copié. Les résultats contiennent
-  questions/noms et parfois des fragments de sorties : examiner avant diffusion.
-- Aucun email ni push n'est exécuté ici. Le parent coordonne le rapport Markdown
-  commun et l'intégration au dépôt demandé.
+`local-v1/` remains a historical parser diagnostic with non-comparative scores.
+Raw v2 responses remain in `private-responses/`, excluded from Git.
+`evidence/model-artifact-provenance.json` collects public manifests without weights.
+`audit_native_buffers.py` verifies sealed prefixes and budgets.
 
-`local-v1/` reste un diagnostic historique du parsing; ses scores ne sont pas
-comparatifs. Les réponses brutes v2 sont dans `private-responses/`, exclu de Git.
-`evidence/model-artifact-provenance.json` regroupe les manifestes publics sans
-les poids. `audit_native_buffers.py` vérifie les préfixes scellés et les budgets.
+GPU scope covers transformer/output layers and KV/recurrent states. The input
+buffer remains CPU_Mapped by default. The launcher rejects declared CUDA budgets
+above physical 8,192 MiB; WDDM can accept allocations exceeding that capacity.
+The Qwen3-8B diagnostic preserves 21 separate responses without counting them as
+admissible measurements or replaying its interrupted intent.
 
-La portée GPU correspond aux couches transformer/sortie et KV/états récurrents.
-Le buffer d'entrée reste CPU_Mapped par défaut. Le lanceur refuse aussi un budget
-CUDA déclaré supérieur aux 8 192 MiB physiques : WDDM peut accepter une allocation
-qui dépasse cette capacité. Le diagnostic Qwen3-8B préserve 21 réponses séparées,
-sans les compter comme mesures admissibles ni rejouer l'intention interrompue.
+The 60 exclusions at sizes 1,000/2,000/5,000 come from the configured 32K-window
+gate. They demonstrate neither native limits nor the VRAM maximum.
 
-Les 60 exclusions aux tailles 1 000/2 000/5 000 viennent du filtre de la fenêtre
-configurée à 32K. Elles ne démontrent pas une limite native ni le maximum VRAM.
+## Finalize and package
 
-## Finaliser et empaqueter
+After resolving all 18 configurations, `finalize_local_handoff.py` performs only
+offline checks and generates `evidence/final-handoff.json`, the standalone report
+and `HIGH_CONTEXT_PROPOSAL.md`. The latter remains a proposal: no larger-context
+load or call is executed by that command.
 
-Après résolution des 18 modèles, `finalize_local_handoff.py` effectue uniquement
-des vérifications hors ligne et génère `evidence/final-handoff.json`, le rapport
-autonome et `HIGH_CONTEXT_PROPOSAL.md`. Ce dernier est une proposition : aucun
-chargement ni appel à un contexte supérieur n'est exécuté.
+`package_local_handoff.py` creates archives in `../deliverables/`, verifying ZIP CRCs
+and every content SHA-256. Integration archives contain code, tests, configurations,
+results, notes and logs, excluding weights, binary tools, environments, private
+source data and raw responses. Original SQLite/WAL files are preserved privately.
+The interrupted diagnostic also has `state.portable.sqlite3` with unresolved intents.
 
-`package_local_handoff.py` crée les archives dans `../deliverables/` et vérifie
-les CRC ZIP ainsi que chaque SHA-256 de contenu. L'archive d'intégration contient
-code, tests, configurations, résultats, notes et journaux; elle exclut les poids,
-outils binaires, environnements, données sources privées et réponses brutes.
-Les originaux SQLite/WAL sont conservés. Le diagnostic interrompu possède aussi
-une copie autonome `state.portable.sqlite3`, avec les intentions non résolues.
-
-L'archive séparée `PRIVATE-local-response-evidence-*.zip` conserve les réponses
-brutes pour vérification locale. Elle reste hors intégration GitHub et livraison
-ordinaire. Les rapports copiés, manifestes et `SHA256SUMS-*.txt` accompagnent les
-archives. Ces commandes ne font ni push ni envoi de message.
+The separate `PRIVATE-local-response-evidence-*.zip` retains raw responses for local
+verification and remains outside GitHub integration and ordinary delivery. Copied
+reports, manifests and `SHA256SUMS-*.txt` accompany archives. These commands neither
+push nor send messages.

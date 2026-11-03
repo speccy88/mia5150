@@ -37,8 +37,8 @@
     },
     {
       "path": "COMPARISON.md",
-      "bytes": 7967,
-      "sha256": "01869db9cc2f45128f8e51395b6b011ff724bd21b73e1ee2069c112aeb3cc757"
+      "bytes": 7348,
+      "sha256": "3a802a851ea114c0a22cb265622a23a306335532934c852626c0933540482a77"
     },
     {
       "path": "configs/ling-3.0-tiny-q4km.json",
@@ -192,8 +192,8 @@
     },
     {
       "path": "evidence/AUDIT_VERDICT.md",
-      "bytes": 1712,
-      "sha256": "f96d90ec8cb1996f2c5caca81644759e62ca27edf3f2ffb349afe1e395e2bba1"
+      "bytes": 1660,
+      "sha256": "1cdeb9281754bdc89af39f59e3869ca30f742754f7ec1651da8e70109ab20b93"
     },
     {
       "path": "evidence/context-window-audit.json",
@@ -202,8 +202,8 @@
     },
     {
       "path": "evidence/CONTEXT_WINDOWS.md",
-      "bytes": 1986,
-      "sha256": "a5acae3d1273604ea68dd81d6ff6c003e5c636c07727687627323fc40733b8d7"
+      "bytes": 1771,
+      "sha256": "8d3e4451d9057814c07fbc652620ccddb78644508e64daf7776e314ae6a57be0"
     },
     {
       "path": "evidence/converter-source.json",
@@ -262,13 +262,13 @@
     },
     {
       "path": "evidence/NATIVE_GPU_SCOPE.md",
-      "bytes": 1419,
-      "sha256": "24d37bdb0fe78c50b4e8d2f59b980397137083271efe302c2fc91827a5fb821f"
+      "bytes": 1231,
+      "sha256": "f49852d84694766b1145359d178ee503e792473708236bd374c589fcaa25c178"
     },
     {
       "path": "evidence/NATIVE_PARSER_V2.md",
-      "bytes": 2107,
-      "sha256": "7ea376b59af8fd42372564b82ba46a8f35e841496ee30e6bbaee60d0f6ccb19c"
+      "bytes": 1866,
+      "sha256": "823c7d4fd67e32c42a5afde3bd249607c8585d96390bcfedab6fb41d6473eb4d"
     },
     {
       "path": "evidence/offline-reasoning-audit.json",
@@ -277,8 +277,8 @@
     },
     {
       "path": "evidence/PHYSICAL_VRAM_ADMISSION.md",
-      "bytes": 2079,
-      "sha256": "897d5f04b4ae57028a390d80d1bf4dfe279135390e89ed328993c5d9e5bcff4f"
+      "bytes": 1792,
+      "sha256": "d0a6e75838e315a54a1b9797e2b9c2cea46ed817036b8295aaebf1fc9305d361"
     },
     {
       "path": "evidence/response-capture-audit.json",
@@ -332,8 +332,8 @@
     },
     {
       "path": "figures/coverage-comparison.png",
-      "bytes": 501972,
-      "sha256": "0285e852ecc8a94a024ef41b662775a7156d073a077f7439de0dfbc96813a42e"
+      "bytes": 486305,
+      "sha256": "b4a18c9b563a78fcebdbbca63e25601b11e8adf31997e44959becad4aed6d309"
     },
     {
       "path": "FINAL_CLOSURE.md",
@@ -342,8 +342,8 @@
     },
     {
       "path": "FINAL_REPORT.md",
-      "bytes": 68644,
-      "sha256": "531042d2d33ae7d43686d2cf16378cce7e7deb7b9ec53b47567379462c69c3d0"
+      "bytes": 64036,
+      "sha256": "ba4edef378143e39f2a903a90bc4b1b7dd16be86470e5f69a4314f0e8cbf0dec"
     },
     {
       "path": "finalize_local_handoff.py",
@@ -352,8 +352,8 @@
     },
     {
       "path": "HIGH_CONTEXT_PROPOSAL.md",
-      "bytes": 7015,
-      "sha256": "77319e21c7f09f0687cf7502f634d3121dc37f771a7ed3014a365508c4f3ec13"
+      "bytes": 6478,
+      "sha256": "dbbc95d5b11da40bae15a1e4ca7a477c69831c56d0205789cd1f4fcab7da1f3e"
     },
     {
       "path": "inspect_gguf.py",
@@ -382,13 +382,13 @@
     },
     {
       "path": "LOCAL_REPORT-v1-diagnostic.md",
-      "bytes": 11746,
-      "sha256": "c7c410665f08548c58288069ae7e185352f2b324bdc532e62ade1a731e8f0422"
+      "bytes": 10906,
+      "sha256": "99a7df0322fbdf38cd74482400ce7d0549969789175bf72e0cca10202c55e932"
     },
     {
       "path": "LOCAL_REPORT.md",
-      "bytes": 26410,
-      "sha256": "9665b8df72a49214f2a4219e4b1d21f405f3538a3a7d83e5f01b0e90daf9c6ec"
+      "bytes": 25194,
+      "sha256": "394a80261d247fbf07c0f06d3bd78df3600ef1c3e4a4d3c6f8d99d608b353152"
     },
     {
       "path": "notes.md",
@@ -397,8 +397,8 @@
     },
     {
       "path": "oauth_chatgpt.py",
-      "bytes": 21123,
-      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      "bytes": 20993,
+      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
     },
     {
       "path": "offline_reasoning_audit.py",
@@ -422,8 +422,8 @@
     },
     {
       "path": "PROFILE_COMPLEMENT.md",
-      "bytes": 2579,
-      "sha256": "44cc19b46900b1e5f8c93729e135f435e3a4fbe916296a700c19160dd9fa07ea"
+      "bytes": 2441,
+      "sha256": "de39fc212d7eaa92f953b68d8c4f994aa11a5351a4e632f6db3567c3aae185d8"
     },
     {
       "path": "profiles-v3/bench_profiles_v3.py",
@@ -432,8 +432,8 @@
     },
     {
       "path": "profiles-v3/CLOSURE.md",
-      "bytes": 436,
-      "sha256": "3f7d56cb8a10b7b3414185b58eacda38839a2cc155acf072b5f41fae1150fb55"
+      "bytes": 371,
+      "sha256": "d6092e326692565218793ef8be8f0158011b07d041ace44e01e2755ab57490e4"
     },
     {
       "path": "profiles-v3/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
@@ -573,7 +573,7 @@
     {
       "path": "profiles-v3/FILE_MANIFEST.json",
       "bytes": 18043,
-      "sha256": "cb40ca652c0abacb6d02c8da9d94d8876a7a319155f2a41769698ef153ee6dda"
+      "sha256": "cab030b718ea8eb04c1b92388e755b10baaaecbe46320f1dcf89caa49fc9f92d"
     },
     {
       "path": "profiles-v3/inspect_gguf.py",
@@ -582,8 +582,8 @@
     },
     {
       "path": "profiles-v3/oauth_chatgpt.py",
-      "bytes": 21123,
-      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      "bytes": 20993,
+      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
     },
     {
       "path": "profiles-v3/package_profiles.py",
@@ -592,18 +592,18 @@
     },
     {
       "path": "profiles-v3/PROFILE_REPORT.md",
-      "bytes": 8417,
-      "sha256": "b3eeea0d5a8aa950c2432cdd9bd145937c1c21893e3bb4bac317e75b4bd8ed46"
+      "bytes": 7986,
+      "sha256": "05fcf3235fc617361f7105000498c8bdb791c0cb2410459f8a80e9ac503e8b30"
     },
     {
       "path": "profiles-v3/PUBLICATION_TRANSFORMS.json",
-      "bytes": 97751,
-      "sha256": "f8e1db88e09972bc03292439d0afc93730b328a6215785dc0aaddcd5533ec404"
+      "bytes": 98231,
+      "sha256": "67daa07844b194bed1fa5edc55e9f0b803705f653a1bd4527ae89dc3e2050b95"
     },
     {
       "path": "profiles-v3/README.md",
-      "bytes": 2638,
-      "sha256": "fd1e71f3a22e5812f221e6cb3514fa782a3a798f5f55f7cf8a276f2f0b29e38b"
+      "bytes": 2314,
+      "sha256": "c7d1ade1192d95a97663b9f2af172ba73627be513b6317e261e3b86c8ded61fd"
     },
     {
       "path": "profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
@@ -857,8 +857,8 @@
     },
     {
       "path": "profiles-v3/review_profiles.py",
-      "bytes": 16135,
-      "sha256": "5c24184e4b8352faa6b50795e38950aaf0bf0b25b34cb8d9d1a6b34742c70171"
+      "bytes": 15564,
+      "sha256": "0ec0cb7dfe36f39a537996a96415fe50223bed7c0ff0b27fbfaabc33da7c7a5c"
     },
     {
       "path": "profiles-v3/run_profiles.py",
@@ -873,7 +873,7 @@
     {
       "path": "profiles-v3/SHA256SUMS",
       "bytes": 11196,
-      "sha256": "44a70765221e34156e925bff0b64be5be3a482b9f80f06ddf4eb06782973570b"
+      "sha256": "af1df2bb5b6d5bcb25ec5c26047219ccc5e3f9ee7114b59aa7595704962546c4"
     },
     {
       "path": "profiles-v3/source-measured/bench_profiles_v3.py",
@@ -907,8 +907,8 @@
     },
     {
       "path": "profiles-v3/validate_profiles_public.py",
-      "bytes": 9058,
-      "sha256": "6567a0a0bda1afc196a4205652c99324f16486e667d4f776a23bba344e7d50b8"
+      "bytes": 8947,
+      "sha256": "666977c77980443bc1f47af28549b4123a054081e8be9d953f2577f2a66fb072"
     },
     {
       "path": "profiles-v3/validation/public-validation.json",
@@ -932,13 +932,13 @@
     },
     {
       "path": "propose_high_context.py",
-      "bytes": 8243,
-      "sha256": "c2440ccbfb8b7954e78c484e4480f7e98a3eaa62aa38df4165ce23f29ec9d2ba"
+      "bytes": 7789,
+      "sha256": "b21f048d58f91e97c368975954012e745f143e7b789a31f7ca3e53750b60f4da"
     },
     {
       "path": "PUBLICATION_TRANSFORMS.json",
-      "bytes": 219477,
-      "sha256": "1679898d3207d038df4a691f4dbcc280a887749b9c6be3cce373b97f69e8aacb"
+      "bytes": 216355,
+      "sha256": "ed2963d755c18da599658a858afc1288542c4a615a248ed643b2754dbc4228a0"
     },
     {
       "path": "README.md",
@@ -947,13 +947,13 @@
     },
     {
       "path": "README_LOCAL.md",
-      "bytes": 6980,
-      "sha256": "c9639d2be63ce0693f38441b797056bca6d7ca00119965351070695ec3bace51"
+      "bytes": 6528,
+      "sha256": "b66933ef3bce39cf7b50e09c28a01ad34470028b91e0794b542c788b1882bdda"
     },
     {
       "path": "README_LOCAL_ARCHIVED.md",
-      "bytes": 6980,
-      "sha256": "c9639d2be63ce0693f38441b797056bca6d7ca00119965351070695ec3bace51"
+      "bytes": 6528,
+      "sha256": "b66933ef3bce39cf7b50e09c28a01ad34470028b91e0794b542c788b1882bdda"
     },
     {
       "path": "requirements-analysis.txt",
@@ -1627,8 +1627,8 @@
     },
     {
       "path": "tests/test_oauth_local_form.py",
-      "bytes": 7292,
-      "sha256": "fc23e6aa8777c88116453cca20b56e5302d661be4212e4a08de32b183d91b823"
+      "bytes": 7290,
+      "sha256": "209f7bdc79f929d990ce41e4e5b8886bcdd5a834c6ac08f84272b5e5eaba6123"
     },
     {
       "path": "tests/test_oauth_run_controls.py",
@@ -1637,8 +1637,8 @@
     },
     {
       "path": "validate_public.py",
-      "bytes": 17420,
-      "sha256": "173b8d4b4b592cde00af80018a3e0cfa2e5a8e037539393225b1487dcb54cf27"
+      "bytes": 16942,
+      "sha256": "f40acecb0ee44c9eb93bc8a8dd1ff25918653958ce163281f524fb364ab441aa"
     },
     {
       "path": "validation/common-panel-summary.csv",
@@ -1649,6 +1649,11 @@
       "path": "validation/csv-preservation.json",
       "bytes": 5774,
       "sha256": "4ac69654c218ca7a5b97f182100746abfd0041cd6afee120fff0fcbba277a24e"
+    },
+    {
+      "path": "validation/english-preservation.json",
+      "bytes": 24322,
+      "sha256": "9636b1df7bee668a3afdc00bc8fe6a84634f21ecfa4310de7821098070ff7252"
     },
     {
       "path": "validation/final-closure-privacy.json",
@@ -1702,16 +1707,16 @@
     },
     {
       "path": "write_local_report.py",
-      "bytes": 8959,
-      "sha256": "5e726c3351068e4108b1701fc9a7b6a146f1b6a11bb4a8207ed54deb0d1a781c"
+      "bytes": 8242,
+      "sha256": "1d754f1a5fa003966f10fb1812d69e42906536aee4e000543e8c2d41ba654143"
     },
     {
       "path": "write_native_v2_report.py",
-      "bytes": 13556,
-      "sha256": "77e63957cb549ce2222723df0bb9cc62713169365ca6fc16e1ccea4ea477c58f"
+      "bytes": 12561,
+      "sha256": "9bdff8974208e3971cc91fb59276ca2cbf30a5f0720701aa3434386012396ca0"
     }
   ],
-  "file_count": 342,
-  "total_bytes": 215026371,
+  "file_count": 343,
+  "total_bytes": 215018131,
   "self_and_SHA256SUMS_excluded": true
 }

@@ -1,33 +1,29 @@
-# Admission par capacité physique
+# Admission against physical capacity
 
-Le premier chargement Qwen3-8B a annoncé 4 455,34 MiB de modèle CUDA,
-4 608 MiB de KV f16 et 34 MiB de compute : 9 097,34 MiB pour une carte de
-8 192 MiB. WDDM a accepté l'allocation. Les 21 réponses acquises sont conservées
-comme diagnostic séparé; l'intention `100:1` interrompue reste d'issue incertaine
-et n'est pas rejouée. Aucun taux mesuré de ce diagnostic n'entre dans le lot
-comparatif canonique.
+The first Qwen3-8B load declared 4,455.34 MiB of CUDA model weights, 4,608 MiB of
+f16 KV cache and 34 MiB of compute buffers: 9,097.34 MiB for an 8,192 MiB card.
+WDDM accepted the allocation. The 21 acquired responses remain a separate
+diagnostic; interrupted intent `100:1` has an uncertain outcome and is not replayed.
+No measured rate from this diagnostic enters the canonical comparison.
 
-Le lanceur refuse maintenant un budget CUDA déclaré supérieur à la VRAM
-physique avant tout appel de génération. Ce refus est nommé
-`HARDWARE_VRAM_CAPACITY_EXCEEDED`; il ne signifie pas qu'un cudaMalloc a renvoyé
-OOM. Un OOM effectivement observé garde son propre type d'erreur.
+Before generation, the launcher now rejects declared CUDA budgets exceeding
+physical VRAM with `HARDWARE_VRAM_CAPACITY_EXCEEDED`. This does not mean that
+cudaMalloc returned OOM. An actually observed OOM retains its own error type.
 
-Une première sonde de démarrage du garde-fou avait un bug de sommation des
-OrderedDictionary PowerShell, produisant zéro malgré trois enregistrements
-corrects. Elle n'a effectué aucune inférence. Sa preuve est conservée sous
-`gpu-proof-diagnostic-invalid-sum.json` et explicitement invalidée dans
-`invalidated-guard-probe-proof.json`. La sommation corrigée par index direct,
-avec refus de tout total nul/non vérifié, a rejeté le même modèle à
-9 097,34 MiB. Les journaux et le JSON du refus sont conservés.
+The first admission-only guard probe had a PowerShell OrderedDictionary summation
+bug: it returned zero despite three correct records. It performed no inference.
+Its evidence is preserved as `gpu-proof-diagnostic-invalid-sum.json` and explicitly
+invalidated in `invalidated-guard-probe-proof.json`. Correct direct-index summation,
+rejecting zero or unverified totals, rejected the same model at 9,097.34 MiB.
+Rejection logs and JSON are preserved.
 
-Les modèles suivants passent ce contrôle avant génération. Les modèles déjà
-terminés sont audités hors ligne à partir du préfixe de démarrage scellé; leurs
-budgets déclarés sont inférieurs à la capacité physique. Les allocations restent
-distinctes de la résidence réelle. Les compteurs WDDM dédié/partagé sont collectés
-à partir d'Ornith, avec vérification du PID, de l'heure et de l'exécutable.
-Un usage partagé non nul ne localise pas à lui seul un buffer CUDA paginé.
+Subsequent models pass this check before generation. Completed models are audited
+offline from sealed startup prefixes; their declared budgets are below physical
+capacity. Allocation remains distinct from actual residency. Dedicated/shared
+WDDM counters were collected starting with Ornith, verifying PID, time and
+executable. Nonzero shared usage alone cannot locate a paged CUDA buffer.
 
-Les couches transformer/sortie et KV/états récurrents observés sont CUDA.
-Le buffer d'entrée/embeddings CPU_Mapped est le comportement par défaut du
-runtime, documenté séparément; le profil n'est pas qualifié de GPU-only absolu.
-Le contexte 32K et les autres paramètres de ce lot ne sont pas modifiés.
+Observed transformer/output layers and KV/recurrent states are CUDA. The
+CPU_Mapped input/embedding buffer is the runtime default, documented separately;
+this profile is not described as absolutely GPU-only. The 32K context and other
+parameters of this historical suite remain unchanged.

@@ -1,20 +1,20 @@
-# Profils locaux de contexte et de KV — résultats séparés
+# Separate local context and KV profiles — results
 
-État : completed; vérification 2026-11-03T11:32:21.712806+00:00. 200 réponses mesurées, plafond de 200.
+Status: completed; verified 2026-11-03T11:32:21.712806+00:00. 200 measured responses, cap 200.
 
-Les chargements initiaux à 32K/f16 dépassaient la capacité de 8 192 MiB : 9 097,34 MiB CUDA pour Qwen3-8B et 8 230,52 pour Mistral v0.3. Ce complément mesure des contextes plus petits en f16 et un cache Q8_0 distinct, en conservant les mêmes poids.
+Initial 32K/f16 loads exceeded the 8,192 MiB capacity: 9,097.34 MiB of declared CUDA buffers for Qwen3-8B and 8,230.52 for Mistral v0.3. This supplement measures smaller f16 contexts and a separate Q8_0 cache condition while keeping the same weights.
 
-Le lot historique 32K/f16 et ses archives sont préservés. Ces mesures emploient un autre protocole de contexte : préflight réel du tokenizer + 500 tokens, arrondi au multiple de 256 supérieur. Les 20 questions, candidats, prompts, seed 42, température 0, rangs et plafond 500 restent identiques. Aucun résultat n’est mélangé avec le lot v2.
+The historical 32K/f16 series and archives are preserved. These measurements use a different context protocol: actual tokenizer preflight plus 500 tokens, rounded up to a multiple of 256. The 20 questions, candidates, prompts, seed 42, temperature 0, ranking rules and 500-token cap remain identical. Results are not merged with the native-v2 series.
 
-N désigne la taille du catalogue présenté. Les données validées contiennent 6 006 skills et 5 801 noms distincts; les 20 questions originales sont reprises. Les prompts utilisent seulement le nom et la description limitée à 300 caractères, sans corps complet. Le sampler et le scoring restent identiques, avec leurs doublons de noms et leur biais gold aux positions 1–20.
+N is the presented library size. Validated inputs contain 6,006 skills and 5,801 distinct names; the 20 original questions are reused. Prompts contain only names and descriptions capped at 300 characters, without full bodies. Sampling and scoring remain unchanged, including duplicate names and gold positions 1–20.
 
-Écart explicite : le filtre estimé initial `44,5×N+200 > 90 % de n_ctx` ne s’applique pas dans cette version v3. Le contrôle devient `tokens réels d’entrée  + 500 ≤ n_ctx`, sans marge de 10% supplémentaire. Les contextes peuvent être proches de cette réserve exacte; chaque entrée est retokenisée avant génération et aucune troncature n’est acceptée. Ce complément ne constitue donc pas un protocole initial inchangé.
+Explicit deviation: the original estimated gate `44.5×N+200 > 90% of n_ctx` is not applied in v3. The control becomes `actual input tokens + 500 ≤ n_ctx`, without an additional 10% margin. Contexts can be close to this exact reserve; each input is retokenized before generation and truncation is rejected. This supplement is therefore not an unchanged execution of the initial protocol.
 
-Matériel : RTX 2060 SUPER, 8 192 MiB. Runtime : llama.cpp b11960 CUDA 12.4, commit `8642541b255bfb5dc39cd351a178be09013a55d6`. Les poids Q4_K_M restent identiques au lot précédent : [Qwen3-8B officiel](https://huggingface.co/Qwen/Qwen3-8B-GGUF) et conversion locale épinglée de [Mistral v0.3 officiel](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3). Les SHA des poids, de l’exécutable et des préfixes de journaux sont liés à chaque lancement. La notation Q8_0 de ce rapport désigne le cache KV, pas une autre quantification des poids.
+Hardware: RTX 2060 SUPER, 8,192 MiB. Runtime: llama.cpp b11960 CUDA 12.4, commit `8642541b255bfb5dc39cd351a178be09013a55d6`. Q4_K_M weights are unchanged from the earlier series: [official Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B-GGUF) and a pinned local conversion of [official Mistral v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3). Weight, executable and sealed log-prefix hashes are linked to each launch. Q8_0 here refers to the KV cache, not a different weight quantization.
 
-## Mesures par profil
+## Measurements by profile
 
-| Modèle | Profil | N | n_ctx | KV | Réponses | Top-1 | Top-10 | Sans erreur | Médiane LLM (s) | Issues |
+| Model | Profile | N | n_ctx | KV | Responses | Top-1 | Top-10 | Without errors | Median LLM (s) | Issues |
 |---|---|---:|---:|---|---:|---:|---:|---:|---:|---|
 | qwen3-8b-q4km | f16-adjusted-n50 | 50 | 2816 | f16 | 20 | 10/20 (50.00%) | 10.0/20 (50.00%) | 10 | 9.94 | OK=10, REASONING_NO_FINAL_ANSWER=10 |
 | qwen3-8b-q4km | f16-adjusted-n100 | 100 | 5120 | f16 | 20 | 8/20 (40.00%) | 8.0/20 (40.00%) | 8 | 11.94 | OK=8, REASONING_NO_FINAL_ANSWER=12 |
@@ -27,18 +27,18 @@ Matériel : RTX 2060 SUPER, 8 192 MiB. Runtime : llama.cpp b11960 CUDA 12.4, com
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n500 | 500 | 27392 | f16 | 20 | 3/20 (15.00%) | 10.0/20 (50.00%) | 19 | 37.40 | OK=19, INVALID_OUTPUT=1 |
 | mistral-7b-instruct-v03-q4km | q8-adjusted-n500 | 500 | 27392 | q8_0 | 20 | 3/20 (15.00%) | 8.0/20 (40.00%) | 18 | 46.02 | OK=18, INVALID_OUTPUT=2 |
 
-## Totaux f16 aux quatre tailles
+## f16 totals across four sizes
 
-| Modèle | Réponses | Top-1 | Top-10 | Sorties sans erreur |
+| Model | Responses | Top-1 | Top-10 | Outputs without errors |
 |---|---:|---:|---:|---:|
 | mistral-7b-instruct-v03-q4km | 80 | 36/80 (45.00%) | 57.0/80 (71.25%) | 78 |
 | qwen3-8b-q4km | 80 | 34/80 (42.50%) | 35.0/80 (43.75%) | 36 |
 
-Ces totaux regroupent les quatre contextes f16 ajustés; les résultats Q8_0 restent dans leur comparaison appariée.
+These totals combine the four adjusted f16 contexts; Q8_0 results remain in their separate paired comparison.
 
-## Admissions matérielles
+## Hardware admission
 
-| Modèle | Profil | n_ctx | KV | État | CUDA déclaré MiB | WDDM admission MiB | WDDM maximum échantillonné MiB |
+| Model | Profile | n_ctx | KV | Status | Declared CUDA MiB | Admission WDDM MiB | Maximum sampled WDDM MiB |
 |---|---|---:|---|---|---:|---:|---:|
 | qwen3-8b-q4km | preflight-f16-4096 | 4096 | f16 | completed_no_generation | 5058.34 | 5242.92 | - |
 | qwen3-8b-q4km | q8-32768-admission-only | 32768 | q8_0 | completed_no_generation | 7049.42 | 7242.95 | 7242.95 |
@@ -55,24 +55,24 @@ Ces totaux regroupent les quatre contextes f16 ajustés; les résultats Q8_0 res
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n500 | 27392 | f16 | completed | 7557.21 | 7746.95 | 7762.95 |
 | mistral-7b-instruct-v03-q4km | q8-adjusted-n500 | 27392 | q8_0 | completed | 6040.29 | 6230.94 | 6248.94 |
 
-Les chargements `admission-only` et les préflights n’exécutent aucune génération. K et V doivent avoir le type demandé dans les journaux, Flash Attention doit être active, les couches transformer/sortie et le KV doivent rester CUDA. Le total CUDA déclaré et le total engagé WDDM sont contrôlés avant inférence. L’entrée/les embeddings CPU_Mapped par défaut sont explicitement conservés; aucun repli de couches transformer n’est autorisé. Ces compteurs restent distincts d’une trace exhaustive de résidence.
+Admission-only loads and preflights perform no generation. K and V must have the requested types in the logs, Flash Attention must be enabled, and transformer/output layers and KV must remain on CUDA. Declared CUDA buffers and WDDM committed memory are checked before inference. Default CPU_Mapped input/embedding weights are explicitly retained; no transformer-layer fallback is allowed. These counters are distinct from an exhaustive residency trace.
 
-Les latences incluent le préfill et la génération, avec longueur de sortie variable plafonnée à 500; le chargement des poids et leurs hashes sont exclus du temps LLM. Elles décrivent cette session Windows avec télémétrie, sans isolation complète de la machine.
+Latencies include prefill and generation, with variable output lengths capped at 500 tokens. Weight loading and hashing are excluded from LLM time. They describe this Windows session with telemetry, without complete machine isolation.
 
-## Comparaison appariée de qualité
+## Paired quality comparison
 
-| Modèle | N | n_ctx commun | Questions appariées | Top-1 f16 / Q8 | Top-10 f16 / Q8 | Textes bruts identiques |
+| Model | N | Shared n_ctx | Paired questions | Top-1 f16 / Q8 | Top-10 f16 / Q8 | Identical raw outputs |
 |---|---:|---:|---:|---|---|---:|
 | qwen3-8b-q4km | 500 | 23552 | 20 | 8 / 10 | 9 / 10 | 0 |
 | mistral-7b-instruct-v03-q4km | 500 | 27392 | 20 | 3 / 3 | 10 / 8 | 11 |
 
-Q8_0 est une quantification avec arrondi : 32 valeurs int8 et une échelle f16, soit 8,5 bits/valeur contre 16 pour f16. Les [essais initiaux de llama.cpp](https://github.com/ggml-org/llama.cpp/pull/7412) motivent ce seul format quantifié ici, sans garantir son équivalence. Les mêmes 20 questions au même contexte permettent une comparaison locale; ce petit jeu ne remplace pas une évaluation générale de perplexité.
+Q8_0 uses rounded quantization: 32 int8 values and an f16 scale, or 8.5 bits/value versus 16 for f16. The [initial llama.cpp experiments](https://github.com/ggml-org/llama.cpp/pull/7412) motivate this one quantized format here without guaranteeing equivalence. The same 20 questions at the same context permit a local comparison; this small set does not replace a general perplexity evaluation.
 
-Les sorties sans finale au plafond 500 sont des échecs de format/génération de ce profil. Les refus matériels n’ont aucun taux mesuré. Le biais gold aux positions 1–20 du seed 42 reste présent. Aucun contexte pour N≥1000, nouveau poids, autre quantification ou appel hébergé n’est testé.
+Outputs with no final answer at the 500-token cap are generation/format failures for this profile. Hardware rejections have no measured accuracy. The seed-42 gold-position bias at positions 1–20 remains. No N≥1000 context, new weights, other weight quantization or hosted inference is tested.
 
-Preuves : `evidence/profile-review.json`, `evidence/runtime-kv-support.json`, `evidence/candidate-comparison.json`, préflights et journaux sous `runtime/`; SQLite transactionnels et CSV 45 colonnes sous `results/`. Les réponses brutes sont vérifiées par SHA et restent privées. Les fichiers `baseline-preservation-*.json` vérifient les archives précédentes.
+Evidence: `evidence/profile-review.json`, `evidence/runtime-kv-support.json`, `evidence/candidate-comparison.json`, preflights and historical runtime records; transactional SQLite and 45-column CSV files under `results/`. Raw outputs were hash-checked and remain private. The historical baseline-preservation records verify the earlier archives.
 
-Pour Llama 3.2 et Gemma 3, voir [la clôture de ces deux accès](CLOSURE.md). Aucune connexion, acceptation, publication ou livraison par email n’est exécutée ici.
+For Llama 3.2 and Gemma 3, see [closure of these two access paths](CLOSURE.md). Report generation performs no login, terms acceptance, publication or email delivery.
 
 
-Clôture finale : Llama 3.2 et Gemma 3 ne sont pas poursuivis, conformément à la décision utilisateur. Aucun résultat mesuré ne leur est attribué.
+Final closure: Llama 3.2 and Gemma 3 are not pursued further, as requested by the user. No measured result is assigned to them.

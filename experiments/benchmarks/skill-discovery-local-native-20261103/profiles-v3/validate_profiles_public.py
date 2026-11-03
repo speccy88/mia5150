@@ -113,19 +113,19 @@ def main():
 
 
 def write_summary(summaries,pairs):
-    lines=['## Complément final Qwen8/Mistral : série v3 séparée','',
-        'Les deux modèles ont fourni 200 réponses supplémentaires : 80 f16 par modèle à N=50/100/250/500, puis 20 Q8_0 par modèle à N=500. Le contexte est adapté aux tokens réels +500, sans la marge estimée de 10 % du lot initial. Les poids Q4_K_M sont inchangés ; Q8_0 désigne le cache KV. Les blocages 32K/f16 historiques restent conservés.','',
-        '| Modèle | Profil | N | n_ctx | KV | Top-1 /20 | Top-10 /20 | Sans erreur | Médiane LLM (s) |',
+    lines=['## Final Qwen8/Mistral supplement: separate v3 series','',
+        'The two models produced 200 additional responses: 80 f16 responses per model at N=50/100/250/500, then 20 Q8_0 responses per model at N=500. Context is sized to actual input tokens +500, without the initial estimated 10% margin. Q4_K_M weights are unchanged; Q8_0 refers to the KV cache. Historical 32K/f16 blocks remain preserved.','',
+        '| Model | Profile | N | n_ctx | KV | Top-1 /20 | Top-10 /20 | Without errors | Median LLM (s) |',
         '| --- | --- | ---: | ---: | --- | ---: | ---: | ---: | ---: |']
     for s in summaries:
         lines.append(f"| {s['model']} | {s['profile']} | {s['N']} | {s['context']} | {s['kv']} | {s['top1']} | {s['top10']:.0f} | {s['valid']} | {s['median_llm_s']:.3f} |")
-    lines += ['', '| Comparaison appariée N=500 | Top-1 f16 → Q8 | Top-10 f16 → Q8 | f16 seul correct | Q8 seul correct |',
+    lines += ['', '| Paired comparison at N=500 | Top-1 f16 → Q8 | Top-10 f16 → Q8 | Only f16 correct | Only Q8 correct |',
         '| --- | --- | --- | ---: | ---: |']
     for x in pairs:
         lines.append(f"| {x['model']} | {x['f16_top1']} → {x['q8_top1']} | {x['f16_top10']:.0f} → {x['q8_top10']:.0f} | {x['f16_hit_q8_miss']} | {x['q8_hit_f16_miss']} |")
-    lines += ['', 'Sur les quatre tailles f16, Qwen8 atteint 34/80 (42,5 %) et Mistral 36/80 (45,0 %). Les résultats Q8 restent séparés. Les 20 questions appariées ne prouvent ni une amélioration générale ni une équivalence de quantification. Aucun N≥1000 n’a été mesuré dans ce complément.','',
-        'Au total, 16 modèles locaux distincts ont maintenant des mesures dans au moins une série : 1 120 réponses dans le lot initial, plus 200 dans ce complément, soit 1 320. Les trois modèles OAuth ajoutent 360 réponses, soit 1 680 réponses mesurées tous profils confondus ; ces nombres ne sont pas des observations indépendantes. Llama 3.2 et Gemma 3 restent non exécutés à la clôture demandée.','',
-        '[Rapport détaillé v3](profiles-v3/PROFILE_REPORT.md) · [Validation](profiles-v3/validation/public-validation.json) · [Clôture Llama/Gemma](profiles-v3/CLOSURE.md)']
+    lines += ['', 'Across the four f16 sizes, Qwen8 scores 34/80 (42.5%) and Mistral 36/80 (45.0%). Q8 results remain separate. The 20 paired questions establish neither a general improvement nor quantization equivalence. No N≥1000 case was measured in this supplement.','',
+        'In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1.320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.','',
+        '[Detailed v3 report](profiles-v3/PROFILE_REPORT.md) · [Validation](profiles-v3/validation/public-validation.json) · [Llama/Gemma closure](profiles-v3/CLOSURE.md)']
     (ROOT.parent/'PROFILE_COMPLEMENT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 
 

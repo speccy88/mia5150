@@ -14,17 +14,17 @@ def main():
     contexts = {m['model']: m for m in json.loads((ROOT/'evidence/context-window-audit.json').read_text())['models']}
     allocations = {m['alias']: m for m in json.loads((ROOT/'evidence/native-buffer-audit.json').read_text())['models']}
     statuses = {m['alias']: m for m in state['models']}
-    lines = ['# Proposition de mesures des tailles 1 000 et plus', '',
-        'Préparée le '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'. **Proposition seulement : aucun appel, chargement de contexte supérieur ou téléchargement nouveau n’est lancé par ce document. Le parent décide de sa réalisation.**', '',
-        'Le lot 32K existant reste inchangé. Ses 60 exclusions par modèle viennent du filtre estimé, sans tokenisation des tailles 1 000/2 000/5 000. Elles ne démontrent ni une limite native ni le maximum de VRAM utilisable.', '',
-        '## Étapes proposées', '',
-        '1. Dans un nouveau dossier/version, préparer les mêmes 20 prompts pour chaque taille avec les mêmes candidats, seed et descriptions. Utiliser le vrai template et le vrai tokenizer du même runtime pour compter chaque entrée, sans génération. Cette opération peut utiliser les endpoints du chargement 32K admissible : tokeniser une chaîne ne nécessite pas un cache KV de sa longueur. Pour les modèles déjà refusés au chargement 32K, étudier seulement un outil de tokenisation vocabulaire sans exécution des couches; ne pas forcer un chargement GPU surdimensionné.',
-        '2. Choisir le plus petit contexte dans la fenêtre officielle qui couvre les entrées réelles plus 500 tokens de sortie. Le filtre approximatif 44,5*N+200 est remplacé par cette barrière exacte dans cette nouvelle version. Une taille peut donc éventuellement tenir dans 32K ou 40 960 après mesure; ne pas présumer 64K nécessaire.',
-        '3. Charger un modèle à la fois. Conserver quantification, cache f16, couches transformer/sortie CUDA, entrée CPU_Mapped par défaut, température 0, seed 42, plafond 500, un slot et fit=off. Refuser avant génération toute somme CUDA déclarée dépassant 8 192 MiB; garder une marge pour le pilote et les allocations transitoires. Vérifier également la consommation dédiée observée et tout message WDDM, sans considérer cudaMalloc réussi comme preuve de résidence.',
-        '4. Commencer par N=1 000, puis N=2 000 si le budget natif et matériel l’autorise. N=5 000 est une phase séparée après préflight. Sauvegarder chaque réponse et intention transactionnellement; une erreur matérielle arrête le modèle, aucune reprise automatique d’une requête incertaine.', '',
-        'Les paliers indicatifs 65 536 / 131 072 / 262 144 correspondent aux estimations historiques 44 700 / 89 200 / 222 700, qui ne sont pas des comptages réels. LFM3 est limité ici à sa config texte 128 000; les paliers sont ajustés à cette fenêtre.', '',
-        '## Examen par modèle', '',
-        '| Modèle | Fenêtre publiée/config texte/GGUF | CUDA déclaré à 32K (MiB) | Projection f16 à 64K / 128K / 256K (MiB) | Proposition initiale |',
+    lines = ['# Proposal for measurements at library sizes 1,000 and above', '',
+        'Prepared at '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'. **Proposal only: this document initiates no calls, larger-context loads or new downloads. Execution requires a separate decision.**', '',
+        'The existing 32K series remains unchanged. Its 60 exclusions per model come from the estimated gate, without tokenizing N=1,000/2,000/5,000 inputs. They establish neither the native model limit nor the maximum usable VRAM context.', '',
+        '## Proposed steps', '',
+        '1. In a new directory/version, prepare the same 20 prompts at each size with unchanged candidates, seed and descriptions. Use the actual template and tokenizer of the same runtime to count each input without generation. Tokenization can use an admitted 32K load: tokenizing a string does not require a KV cache of the same length. For models already rejected at 32K loading, consider vocabulary-only tokenization without executing layers; do not force an oversized GPU load.',
+        '2. Choose the smallest context within the official window that covers actual inputs plus 500 output tokens. In this separate version, the approximate 44.5*N+200 filter is replaced by the exact reserve gate. A size might fit within 32K or 40,960 after counting; do not assume 64K is required.',
+        '3. Load one model at a time. Preserve weight quantization, f16 KV, transformer/output layers on CUDA, default CPU_Mapped input weights, temperature 0, seed 42, a 500-token cap, one slot and fit=off. Reject declared CUDA-buffer totals above 8,192 MiB before generation and leave room for the driver and transient allocations. Also inspect observed dedicated-memory usage and WDDM messages; successful cudaMalloc does not prove residency.',
+        '4. Start with N=1,000, then N=2,000 if native and hardware limits allow. N=5,000 is a separate phase after preflight. Save each response and intent transactionally; a hardware error stops the model, and an uncertain request is never replayed automatically.', '',
+        'Indicative context tiers 65,536 / 131,072 / 262,144 correspond to historical estimates 44.700 / 89.200 / 222.700, not actual token counts. LFM3 is restricted here to its 128,000 text configuration; proposed tiers are adjusted to that window.', '',
+        '## Model-by-model review', '',
+        '| Model | Published window / text config / GGUF | Declared CUDA at 32K (MiB) | f16 projection at 64K / 128K / 256K (MiB) | Initial proposal |',
         '|---|---|---:|---|---|']
     for job in jobs:
         ctx = contexts[job['requested']]
@@ -35,11 +35,11 @@ def main():
         native = published.get('native') or limits.get('text_config.max_position_embeddings') or limits.get('max_position_embeddings')
         if native is None:
             native = next(iter(ctx.get('gguf_context_metadata', {}).values()), None)
-        window = str(native) if native else 'non inspectée : accès gated'
+        window = str(native) if native else 'not inspected: gated access'
         if job['requested'] in ('Qwen3-0.6B', 'Qwen3-1.7B'):
-            window = '32 768 annoncé; config/GGUF 40 960'
+            window = '32,768 advertised; config/GGUF 40,960'
         if published.get('extension'):
-            window += '; extension '+str(published['extension'])+' distincte'
+            window += '; extension '+str(published['extension'])+' separate'
         buffers = a.get('cuda_buffer_records', [])
         declared = a.get('declared_cuda_buffers_mib')
         kv = sum(b['mib'] for b in buffers if b['kind'].upper() == 'KV')
@@ -47,36 +47,36 @@ def main():
         if declared is not None and kv:
             for target in (65536, 131072, 262144):
                 if native and target > native:
-                    projection.append('hors fenêtre')
+                    projection.append('outside window')
                 else:
                     estimate = declared + kv * (target / 32768 - 1)
-                    projection.append(f'{estimate:.0f}'+(' >8 Go' if estimate > 8192 else ''))
+                    projection.append(f'{estimate:.0f}'+(' >8 GB' if estimate > 8192 else ''))
         else:
-            projection = ['non disponible']
+            projection = ['unavailable']
         if job.get('blocked'):
-            recommendation = 'Attendre acceptation officielle et accès authentifié; aucun substitut.'
+            recommendation = 'Wait for official acceptance and authenticated access; no substitute.'
         elif a.get('physical_capacity_exceeded'):
-            recommendation = 'Profil f16 32K déjà trop grand; aucun contexte supérieur avec ce profil.'
+            recommendation = 'The 32K f16 profile is already too large; no larger context with this profile.'
         elif status['state'] != 'completed':
-            recommendation = 'Résoudre le blocage runtime/matériel avant toute mesure supérieure.'
+            recommendation = 'Resolve the runtime/hardware block before any larger-context measurement.'
         elif job['requested'] in ('Qwen3-0.6B', 'Qwen3-1.7B'):
-            recommendation = 'Tokeniser N=1 000; vérifier 32K/40 960. Extension supérieure séparée, pas implicite.'
+            recommendation = 'Tokenize N=1,000; check 32K/40,960. A larger-context extension is separate, not implicit.'
         elif job['requested'] == 'Mistral 7B Instruct':
-            recommendation = 'Tokeniser N=1 000 face à 32K; pas de dépassement natif implicite.'
+            recommendation = 'Tokenize N=1,000 against 32K; no implicit native-window extension.'
         else:
             viable=[]
             for target, label in ((65536, '1 000'), (min(131072, native or 131072), '2 000')):
                 if native and target <= native and declared is not None and kv and declared + kv*(target/32768-1) < 8192:
                     viable.append(label)
-            recommendation = 'Préflight N='+', puis '.join(viable)+'; confirmer allocation réelle avant appels.' if viable else 'Préflight tokenizer à 32K; aucun palier supérieur retenu par la projection f16.'
+            recommendation = 'Preflight N='+', then '.join(viable)+'; confirm actual allocation before calls.' if viable else 'Tokenizer preflight at 32K; the f16 projection selects no larger tier.'
         lines.append(f"| {job['requested']} | {window} | {declared if declared is not None else '-'} | {' / '.join(projection)} | {recommendation} |")
     lines += ['',
-        'Projection = allocation CUDA observée à 32K + KV observé × (contexte futur / 32 768 − 1). Il s’agit d’une approximation de planification, pas d’une mesure, d’une garantie d’admission ou d’un maximum VRAM. Les caches à fenêtre glissante, états récurrents, graphes compute et allocations transitoires peuvent évoluer autrement. Aucun contexte supérieur n’a été essayé dans ce lot.', '',
-        '## Profils à soumettre séparément', '',
-        '- Quantifier le cache KV, réduire le contexte pour Qwen3-8B ou Mistral, changer la quantification des poids, désactiver le thinking ou augmenter le plafond de génération modifierait le profil. Chacun exige un nouveau dossier et une comparaison explicitement séparée.',
-        '- Les extensions YaRN/RoPE, dont Ling au-delà de 131 072, nécessitent la recette officielle et une validation distincte. Une grande fenêtre publiée ne garantit pas qu’elle tienne dans 8 Go.',
-        '- Garder le sampler actuel préserve la comparaison, mais les 20 gold restent aux positions 1–20. Une mesure de recherche à positions réparties demanderait un second protocole approuvé; elle ne doit pas remplacer ni être mélangée à ce lot.', '',
-        'Sources inspectables : `evidence/context-window-audit.json`, `evidence/native-buffer-audit.json`, `evidence/model-artifact-provenance.json` et les snapshots publics épinglés sous `evidence/sources/`. Les limites texte ont priorité sur les champs vision/audio secondaires.', '']
+        'Projection = observed 32K CUDA allocation + observed KV × (future context / 32,768 − 1). This is a planning approximation, not a measurement, admission guarantee or maximum VRAM estimate. Sliding-window caches, recurrent state, compute graphs and transient allocations can scale differently. No larger context was tested in this series.', '',
+        '## Profiles requiring separate consideration', '',
+        '- KV-cache quantization, a smaller Qwen3-8B/Mistral context, different weight quantization, disabling thinking or raising the generation cap changes the profile. Each requires a new directory and explicitly separate comparison.',
+        '- YaRN/RoPE extensions, including Ling beyond 131,072, require the official recipe and separate validation. A large published window does not guarantee that it fits in 8 GB.',
+        '- Keeping the sampler preserves the existing comparison but keeps all golds at positions 1–20. Testing distributed positions requires a separate approved protocol, which must not replace or be mixed into this series.', '',
+        'Inspectable sources: `evidence/context-window-audit.json`, `evidence/native-buffer-audit.json`, `evidence/model-artifact-provenance.json` and pinned public-source records under `evidence/sources/`. Text limits take precedence over secondary vision/audio fields.', '']
     (ROOT/'HIGH_CONTEXT_PROPOSAL.md').write_text('\n'.join(lines), encoding='utf-8')
     print('Wrote proposal; no model action performed.')
 

@@ -1,47 +1,47 @@
-# Proposition de mesures des tailles 1 000 et plus
+# Proposal for measurements at library sizes 1,000 and above
 
-Préparée le 2026-11-03T09:52:40.072379+00:00. **Proposition seulement : aucun appel, chargement de contexte supérieur ou téléchargement nouveau n’est lancé par ce document. Le parent décide de sa réalisation.**
+Prepared at 2026-11-03T09:52:40.072379+00:00. **Proposal only: this document initiates no calls, larger-context loads or new downloads. Execution requires a separate decision.**
 
-Le lot 32K existant reste inchangé. Ses 60 exclusions par modèle viennent du filtre estimé, sans tokenisation des tailles 1 000/2 000/5 000. Elles ne démontrent ni une limite native ni le maximum de VRAM utilisable.
+The existing 32K series remains unchanged. Its 60 exclusions per model come from the estimated gate, without tokenizing N=1,000/2,000/5,000 inputs. They establish neither the native model limit nor the maximum usable VRAM context.
 
-## Étapes proposées
+## Proposed steps
 
-1. Dans un nouveau dossier/version, préparer les mêmes 20 prompts pour chaque taille avec les mêmes candidats, seed et descriptions. Utiliser le vrai template et le vrai tokenizer du même runtime pour compter chaque entrée, sans génération. Cette opération peut utiliser les endpoints du chargement 32K admissible : tokeniser une chaîne ne nécessite pas un cache KV de sa longueur. Pour les modèles déjà refusés au chargement 32K, étudier seulement un outil de tokenisation vocabulaire sans exécution des couches; ne pas forcer un chargement GPU surdimensionné.
-2. Choisir le plus petit contexte dans la fenêtre officielle qui couvre les entrées réelles plus 500 tokens de sortie. Le filtre approximatif 44,5*N+200 est remplacé par cette barrière exacte dans cette nouvelle version. Une taille peut donc éventuellement tenir dans 32K ou 40 960 après mesure; ne pas présumer 64K nécessaire.
-3. Charger un modèle à la fois. Conserver quantification, cache f16, couches transformer/sortie CUDA, entrée CPU_Mapped par défaut, température 0, seed 42, plafond 500, un slot et fit=off. Refuser avant génération toute somme CUDA déclarée dépassant 8 192 MiB; garder une marge pour le pilote et les allocations transitoires. Vérifier également la consommation dédiée observée et tout message WDDM, sans considérer cudaMalloc réussi comme preuve de résidence.
-4. Commencer par N=1 000, puis N=2 000 si le budget natif et matériel l’autorise. N=5 000 est une phase séparée après préflight. Sauvegarder chaque réponse et intention transactionnellement; une erreur matérielle arrête le modèle, aucune reprise automatique d’une requête incertaine.
+1. In a new directory/version, prepare the same 20 prompts at each size with unchanged candidates, seed and descriptions. Use the actual template and tokenizer of the same runtime to count each input without generation. Tokenization can use an admitted 32K load: tokenizing a string does not require a KV cache of the same length. For models already rejected at 32K loading, consider vocabulary-only tokenization without executing layers; do not force an oversized GPU load.
+2. Choose the smallest context within the official window that covers actual inputs plus 500 output tokens. In this separate version, the approximate 44.5*N+200 filter is replaced by the exact reserve gate. A size might fit within 32K or 40,960 after counting; do not assume 64K is required.
+3. Load one model at a time. Preserve weight quantization, f16 KV, transformer/output layers on CUDA, default CPU_Mapped input weights, temperature 0, seed 42, a 500-token cap, one slot and fit=off. Reject declared CUDA-buffer totals above 8,192 MiB before generation and leave room for the driver and transient allocations. Also inspect observed dedicated-memory usage and WDDM messages; successful cudaMalloc does not prove residency.
+4. Start with N=1,000, then N=2,000 if native and hardware limits allow. N=5,000 is a separate phase after preflight. Save each response and intent transactionally; a hardware error stops the model, and an uncertain request is never replayed automatically.
 
-Les paliers indicatifs 65 536 / 131 072 / 262 144 correspondent aux estimations historiques 44 700 / 89 200 / 222 700, qui ne sont pas des comptages réels. LFM3 est limité ici à sa config texte 128 000; les paliers sont ajustés à cette fenêtre.
+Indicative context tiers 65,536 / 131,072 / 262,144 correspond to historical estimates 44.700 / 89.200 / 222.700, not actual token counts. LFM3 is restricted here to its 128,000 text configuration; proposed tiers are adjusted to that window.
 
-## Examen par modèle
+## Model-by-model review
 
-| Modèle | Fenêtre publiée/config texte/GGUF | CUDA déclaré à 32K (MiB) | Projection f16 à 64K / 128K / 256K (MiB) | Proposition initiale |
+| Model | Published window / text config / GGUF | Declared CUDA at 32K (MiB) | f16 projection at 64K / 128K / 256K (MiB) | Initial proposal |
 |---|---|---:|---|---|
-| Qwen3-0.6B | 32 768 annoncé; config/GGUF 40 960 | 4202.65 | hors fenêtre / hors fenêtre / hors fenêtre | Tokeniser N=1 000; vérifier 32K/40 960. Extension supérieure séparée, pas implicite. |
-| Qwen3-1.7B | 32 768 annoncé; config/GGUF 40 960 | 5348.77 | hors fenêtre / hors fenêtre / hors fenêtre | Tokeniser N=1 000; vérifier 32K/40 960. Extension supérieure séparée, pas implicite. |
-| Qwen3.5-4B | 262144; extension 1010000 distincte | 3616.2 | 4640 / 6688 / 10784 >8 Go | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Ling-3.0-tiny | 131072; extension 262144 distincte | 4728.97 | 4945 / 5377 / hors fenêtre | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Qwen3.5-9B | 262144; extension 1010000 distincte | 5920.51 | 6945 / 8993 >8 Go / 13089 >8 Go | Préflight N=1 000; confirmer allocation réelle avant appels. |
-| Llama 3.2 3B | non inspectée : accès gated | - | non disponible | Attendre acceptation officielle et accès authentifié; aucun substitut. |
-| Gemma 3 4B | non inspectée : accès gated | - | non disponible | Attendre acceptation officielle et accès authentifié; aucun substitut. |
-| H2O-Lightning-4B | 262144 | 3673.62 | 4698 / 6746 / 10842 >8 Go | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Gemma 4 E2B | 131072 | 1580.72 | 1782 / 2184 / hors fenêtre | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Qwen3-8B | 40960 | 9097.34 | hors fenêtre / hors fenêtre / hors fenêtre | Profil f16 32K déjà trop grand; aucun contexte supérieur avec ce profil. |
-| NeoHorse-1-9B | 262144 | 5920.51 | 6945 / 8993 >8 Go / 13089 >8 Go | Préflight N=1 000; confirmer allocation réelle avant appels. |
-| Ornith-1.5-9B | 262144 | 5920.51 | 6945 / 8993 >8 Go / 13089 >8 Go | Préflight N=1 000; confirmer allocation réelle avant appels. |
-| Nemotron 3.5 Bolt E4B | 65536 | 3604.99 | 4147 / hors fenêtre / hors fenêtre | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Ternary Bonsai 2 9B | 262144 | 3263.12 | 4287 / 6335 / 10431 >8 Go | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| LFM3-Omni-2B | 128000 | 1453.86 | 1843 / hors fenêtre / hors fenêtre | Préflight N=1 000, puis 2 000; confirmer allocation réelle avant appels. |
-| Phi-4 Mini 3.8B | 131072 | 6492.44 | 10588 >8 Go / 18780 >8 Go / hors fenêtre | Préflight tokenizer à 32K; aucun palier supérieur retenu par la projection f16. |
-| Mistral 7B Instruct | 32768 | 8230.52 | hors fenêtre / hors fenêtre / hors fenêtre | Profil f16 32K déjà trop grand; aucun contexte supérieur avec ce profil. |
-| Nanbeige 4.2 3B | 262144 | 7839.7 | 13472 >8 Go / 24736 >8 Go / 47264 >8 Go | Préflight tokenizer à 32K; aucun palier supérieur retenu par la projection f16. |
+| Qwen3-0.6B | 32,768 advertised; config/GGUF 40,960 | 4202.65 | outside window / outside window / outside window | Tokenize N=1,000; check 32K/40,960. A larger-context extension is separate, not implicit. |
+| Qwen3-1.7B | 32,768 advertised; config/GGUF 40,960 | 5348.77 | outside window / outside window / outside window | Tokenize N=1,000; check 32K/40,960. A larger-context extension is separate, not implicit. |
+| Qwen3.5-4B | 262144; extension 1010000 separate | 3616.2 | 4640 / 6688 / 10784 >8 GB | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Ling-3.0-tiny | 131072; extension 262144 separate | 4728.97 | 4945 / 5377 / outside window | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Qwen3.5-9B | 262144; extension 1010000 separate | 5920.51 | 6945 / 8993 >8 GB / 13089 >8 GB | Preflight N=1 000; confirm actual allocation before calls. |
+| Llama 3.2 3B | not inspected: gated access | - | unavailable | Wait for official acceptance and authenticated access; no substitute. |
+| Gemma 3 4B | not inspected: gated access | - | unavailable | Wait for official acceptance and authenticated access; no substitute. |
+| H2O-Lightning-4B | 262144 | 3673.62 | 4698 / 6746 / 10842 >8 GB | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Gemma 4 E2B | 131072 | 1580.72 | 1782 / 2184 / outside window | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Qwen3-8B | 40960 | 9097.34 | outside window / outside window / outside window | The 32K f16 profile is already too large; no larger context with this profile. |
+| NeoHorse-1-9B | 262144 | 5920.51 | 6945 / 8993 >8 GB / 13089 >8 GB | Preflight N=1 000; confirm actual allocation before calls. |
+| Ornith-1.5-9B | 262144 | 5920.51 | 6945 / 8993 >8 GB / 13089 >8 GB | Preflight N=1 000; confirm actual allocation before calls. |
+| Nemotron 3.5 Bolt E4B | 65536 | 3604.99 | 4147 / outside window / outside window | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Ternary Bonsai 2 9B | 262144 | 3263.12 | 4287 / 6335 / 10431 >8 GB | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| LFM3-Omni-2B | 128000 | 1453.86 | 1843 / outside window / outside window | Preflight N=1 000, then 2 000; confirm actual allocation before calls. |
+| Phi-4 Mini 3.8B | 131072 | 6492.44 | 10588 >8 GB / 18780 >8 GB / outside window | Tokenizer preflight at 32K; the f16 projection selects no larger tier. |
+| Mistral 7B Instruct | 32768 | 8230.52 | outside window / outside window / outside window | The 32K f16 profile is already too large; no larger context with this profile. |
+| Nanbeige 4.2 3B | 262144 | 7839.7 | 13472 >8 GB / 24736 >8 GB / 47264 >8 GB | Tokenizer preflight at 32K; the f16 projection selects no larger tier. |
 
-Projection = allocation CUDA observée à 32K + KV observé × (contexte futur / 32 768 − 1). Il s’agit d’une approximation de planification, pas d’une mesure, d’une garantie d’admission ou d’un maximum VRAM. Les caches à fenêtre glissante, états récurrents, graphes compute et allocations transitoires peuvent évoluer autrement. Aucun contexte supérieur n’a été essayé dans ce lot.
+Projection = observed 32K CUDA allocation + observed KV × (future context / 32,768 − 1). This is a planning approximation, not a measurement, admission guarantee or maximum VRAM estimate. Sliding-window caches, recurrent state, compute graphs and transient allocations can scale differently. No larger context was tested in this series.
 
-## Profils à soumettre séparément
+## Profiles requiring separate consideration
 
-- Quantifier le cache KV, réduire le contexte pour Qwen3-8B ou Mistral, changer la quantification des poids, désactiver le thinking ou augmenter le plafond de génération modifierait le profil. Chacun exige un nouveau dossier et une comparaison explicitement séparée.
-- Les extensions YaRN/RoPE, dont Ling au-delà de 131 072, nécessitent la recette officielle et une validation distincte. Une grande fenêtre publiée ne garantit pas qu’elle tienne dans 8 Go.
-- Garder le sampler actuel préserve la comparaison, mais les 20 gold restent aux positions 1–20. Une mesure de recherche à positions réparties demanderait un second protocole approuvé; elle ne doit pas remplacer ni être mélangée à ce lot.
+- KV-cache quantization, a smaller Qwen3-8B/Mistral context, different weight quantization, disabling thinking or raising the generation cap changes the profile. Each requires a new directory and explicitly separate comparison.
+- YaRN/RoPE extensions, including Ling beyond 131,072, require the official recipe and separate validation. A large published window does not guarantee that it fits in 8 GB.
+- Keeping the sampler preserves the existing comparison but keeps all golds at positions 1–20. Testing distributed positions requires a separate approved protocol, which must not replace or be mixed into this series.
 
-Sources inspectables : `evidence/context-window-audit.json`, `evidence/native-buffer-audit.json`, `evidence/model-artifact-provenance.json` et les snapshots publics épinglés sous `evidence/sources/`. Les limites texte ont priorité sur les champs vision/audio secondaires.
+Inspectable sources: `evidence/context-window-audit.json`, `evidence/native-buffer-audit.json`, `evidence/model-artifact-provenance.json` and pinned public-source records under `evidence/sources/`. Text limits take precedence over secondary vision/audio fields.

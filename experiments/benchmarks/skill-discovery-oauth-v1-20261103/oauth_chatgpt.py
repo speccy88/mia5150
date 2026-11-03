@@ -238,7 +238,7 @@ def login(port=1455, open_browser=False, ready_file=None):
             pass  # Callback URLs contain credentials: suppress all HTTP access logging.
 
         def page(self, text, status=200):
-            data = ("<!doctype html><html lang='fr'><meta charset='utf-8'><title>" + APP_NAME +
+            data = ("<!doctype html><html lang='en'><meta charset='utf-8'><title>" + APP_NAME +
                     "</title><body style='font:18px system-ui;max-width:760px;margin:60px auto;padding:20px'>"+
                     text+"</body></html>").encode()
             self.send_response(status)
@@ -259,41 +259,41 @@ def login(port=1455, open_browser=False, ready_file=None):
 
         def do_GET(self):
             if not self.allowed():
-                return self.page("Hôte refusé", 400)
+                return self.page("Host rejected", 400)
             uri = urllib.parse.urlparse(self.path)
             if uri.path == review_path:
-                account = ("Renouvellement de la connexion existante, même compte et espace." if old else
-                           "Nouvelle connexion propre au benchmark; aucun identifiant Hermes ou Codex réutilisé.")
+                account = ('Renew the existing connection for the same account and workspace.' if old else
+                           'New benchmark-specific connection; no Hermes or Codex credentials are reused.')
                 return self.page(
-                    "<h1>Connexion ChatGPT du benchmark</h1><p>À ouvrir dans le navigateur du PC Windows, pas sur iPhone.</p>"
-                    "<p>" + account + "</p><p>Cette action demande ton identité de base et l'autorisation d'utiliser ton forfait ChatGPT "
-                    "pour des requêtes compatibles. Elle ne donne pas accès à tes conversations ChatGPT.</p>"
-                    "<p>Les permissions comprennent une session renouvelable (<code>offline_access</code>), "
-                    "<code>resource.invoke</code> et <code>chatgpt.tokens.use.direct</code>.</p>"
-                    "<p>Après ton accord sur OpenAI, les jetons seront stockés avec Windows DPAPI CurrentUser dans "
-                    "<code>benchmark/private/connection.dpapi</code>. Ils ne seront pas affichés ni envoyés au chat.</p>"
-                    "<p>La connexion seule ne lance aucun benchmark. Les appels futurs consommeront les limites de ton forfait "
-                    "ou les crédits disponibles selon tes réglages. Tu peux gérer ou révoquer cet accès dans les paramètres ChatGPT.</p>"
-                    "<p>En cliquant, tu autorises la création de cette connexion persistante, sous réserve de ton consentement sur OpenAI.</p>"
+                    '<h1>Benchmark ChatGPT connection</h1><p>Open in the browser on the Windows PC; this loopback page cannot complete login on an iPhone.</p>'
+                    "<p>" + account + "</p><p>This action requests your basic identity and permission to use your ChatGPT plan "
+                    'for compatible requests. It does not grant access to your ChatGPT conversations.</p>'
+                    "<p>Permissions include a renewable session (<code>offline_access</code>), "
+                    "<code>resource.invoke</code> and <code>chatgpt.tokens.use.direct</code>.</p>"
+                    "<p>After your consent on OpenAI, tokens will be stored using Windows DPAPI CurrentUser in "
+                    "<code>benchmark/private/connection.dpapi</code>. They will not be displayed or sent to the chat.</p>"
+                    "<p>Connecting alone does not start a benchmark. Future calls will consume your plan limits "
+                    "or available credits according to your settings. You can manage or revoke this access in ChatGPT settings.</p>"
+                    "<p>By clicking, you authorize creation of this persistent connection, subject to your consent on OpenAI.</p>"
                     f"<form method='post' action='{review_path}'><input type='hidden' name='csrf' value='{csrf}'>"
-                    "<button style='font:inherit;padding:12px'>Continuer avec ChatGPT / Continue with ChatGPT</button></form>"
+                    "<button style='font:inherit;padding:12px'>Continue with ChatGPT</button></form>"
                 )
             if uri.path != "/auth/callback":
                 return self.page("Page inconnue", 404)
             if not session["approved"] or not session["started"] or session["done"]:
-                return self.page("Aucune tentative active", 400)
+                return self.page("No active attempt", 400)
             values = urllib.parse.parse_qs(uri.query)
             # Duplicate parameters are rejected to prevent ambiguous callback interpretation.
             if any(len(v) != 1 for v in values.values()):
-                return self.page("Retour ambigu refusé", 400)
+                return self.page("Ambiguous callback rejected", 400)
             if not hmac.compare_digest(values.get("state", [""])[0], session["state"]):
-                return self.page("État de connexion refusé", 400)
+                return self.page('Connection state rejected', 400)
             if values.get("error"):
                 session["done"], session["error"] = True, "Consent declined or authorization failed"
-                return self.page("Connexion annulée. Aucun jeton échangé.", 400)
+                return self.page('Connection cancelled. No token was exchanged.', 400)
             issued = values.get("client_id", [old["client_id"] if old else ""])[0]
             if not issued or issued == "dynamic_agent_client" or (old and issued != old["client_id"]):
-                return self.page("Inscription incomplète ou client différent", 400)
+                return self.page("Incomplete registration or mismatched client", 400)
             code = values.get("code", [""])[0]
             if not code:
                 return self.page("Code absent", 400)
@@ -308,35 +308,35 @@ def login(port=1455, open_browser=False, ready_file=None):
                     profile = token_profile(tokens, issued, session["host_id"], claims)
                     save_profile(profile)
                     session["connected"] = True
-                self.page("<h1>Connexion confirmée</h1><p>Identité vérifiée; accès au forfait activé pour le benchmark. "
-                          "Les jetons sont chiffrés sur Windows. Aucun appel d'inférence effectué.</p>"
-                          "<p>Tu peux fermer cet onglet et retourner au chat.</p>")
+                self.page("<h1>Connection confirmed</h1><p>Identity verified; plan access enabled for the benchmark. "
+                          "Tokens are encrypted on Windows. No inference call was made.</p>"
+                          "<p>You can close this tab and return to the chat.</p>")
                 print("OAuth connected; identity and granted plan scope validated. No inference performed.", flush=True)
             except Exception:
                 # Never log JWT exceptions or token endpoint payloads.
                 session["error"] = "Token exchange, identity/scope validation or protected storage failed"
-                self.page("Connexion non finalisée : échange, validation ou stockage refusé. Aucun benchmark lancé.", 400)
+                self.page('Connection was not completed: exchange, validation or storage was rejected. No benchmark was started.', 400)
                 print("OAuth not finalized; inspect connection status locally. No secrets logged.", flush=True)
 
         def do_POST(self):
             if not self.allowed() or self.path != review_path:
-                return self.page("Tentative refusée", 400)
+                return self.page('Attempt rejected', 400)
             origin = self.headers.get("Origin")
             if origin != f"http://127.0.0.1:{port}":
-                return self.page("Origine refusée", 400)
+                return self.page('Origin rejected', 400)
             length = int(self.headers.get("Content-Length", "0"))
             if length > 1024:
-                return self.page("Requête trop grande", 400)
+                return self.page('Request too large', 400)
             body = urllib.parse.parse_qs(self.rfile.read(length).decode())
             if not hmac.compare_digest(body.get("csrf", [""])[0], csrf):
-                return self.page("Confirmation refusée", 400)
+                return self.page('Confirmation rejected', 400)
             if session["started"]:
                 # Idempotent recovery: reuse the already approved attempt, never a
                 # second client/PKCE/state or an extended authorization deadline.
                 target = html.escape(session["authorization_url"], quote=True)
-                return self.page("<h1>Connexion déjà démarrée</h1><p>Aucun nouveau flux n'a été créé. "
-                    "Poursuis la même tentative auprès d'OpenAI.</p>"
-                    f"<p><a href='{target}' rel='noreferrer'>Ouvrir le consentement OpenAI</a></p>")
+                return self.page("<h1>Connection already started</h1><p>No new flow was created. "
+                    "Continue the same attempt on OpenAI.</p>"
+                    f"<p><a href='{target}' rel='noreferrer'>Open OpenAI consent</a></p>")
             session["approved"] = True
             # Host identifier is created only after the user's explicit action-time approval.
             PRIVATE.mkdir(exist_ok=True)

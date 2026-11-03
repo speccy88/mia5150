@@ -1,86 +1,90 @@
-# Rapport final — découverte de skills, modèles locaux et OAuth
+# Final report: local and OAuth skill discovery
 
-Les essais sont clos avec les mesures disponibles. Au total, 16 modèles locaux
-distincts ont produit des mesures dans au moins une série : 1 120 réponses dans
-le lot initial et 200 dans le complément Qwen8/Mistral. Les trois modèles OAuth
-ajoutent 360 réponses. Ces 1 680 réponses réutilisent les mêmes 20 questions et
-ne constituent pas 1 680 observations indépendantes. Llama 3.2 et Gemma 3 restent
-non exécutés à la clôture demandée.
+The study closes with the available measurements. Sixteen distinct local models
+produced measurements in at least one series: 1,120 responses in the initial series
+and 200 in the Qwen8/Mistral supplement. Three OAuth models add 360 responses.
+These 1,680 responses reuse the same 20 questions; they are not 1,680 independent
+observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.
 
-Les séries sont conservées séparément : le lot initial local utilise 32K/f16 et
-un seuil de contexte estimé ; la série v3 adapte n_ctx aux tokens réels +500 sans
-la marge de 10 %, et compare le cache Q8_0 à f16 à N=500 ; OAuth ne permet pas les
-mêmes contrôles de température et de longueur de sortie. Les golds sont toujours
-aux positions 1–20. Les scores décrivent ces conditions biaisées et exposées.
+The series remain separate. The initial local series uses 32K/f16 and an estimated
+context gate. The v3 supplement sizes n_ctx to actual input tokens +500 without the
+10% margin, and compares Q8_0 KV with f16 at N=500. OAuth does not expose the same
+temperature and output-length controls. Golds always occupy positions 1–20. Scores
+describe these disclosed, position-biased conditions.
 
-Le rapport ci-dessous rassemble le comparatif avec couverture et incertitude,
-les détails du lot initial local, les profils finaux et l'analyse OAuth. Le code,
-les configurations, les CSV inchangés, les exports SQLite assainis, les attributions
-MIT/Apache des 6 006 skills et les manifestes accompagnent les rapports. Les bruts
-privés, credentials, chemins personnels et fichiers runtime actifs sont exclus.
+This report combines the coverage/uncertainty comparison, initial local results,
+final profiles and OAuth analysis. Code, configurations, unchanged CSVs, sanitized
+SQLite audit exports, MIT/Apache attribution for all 6,006 skills and file manifests
+accompany the reports. Private raw captures, credentials, personal paths and live
+runtime files are excluded. No model inference was rerun for translation.
+
+All authored presentation text is English. Immutable multilingual benchmark data,
+tokenizer vocabularies, recorded requests and exact executed-source snapshots retain
+their original bytes, as documented in the
+[language audit](https://github.com/speccy88/mia5150/blob/main/docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
 
 
 
 ---
 
-# Comparatif final
+# Final comparison
 
-# Comparaison descriptive : bibliothèque identique, conditions d'inférence distinctes
+# Descriptive comparison: identical libraries, distinct inference conditions
 
-Les nouvelles copies publiques préservent les réponses mesurées. Cette comparaison ne valide pas une équivalence API/OAuth/local : les locaux sont quantifiés, limités à 32K et 500 tokens de sortie, avec un adaptateur de réponse finale natif ; OAuth omet température/plafond de sortie et rapporte un raisonnement medium. Aucun nouveau modèle n'a été appelé.
+The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence: local models are quantized, use a 32K window and 500-token output cap, and have a native final-answer adapter; OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.
 
-![Qualité mesurée et couverture](https://raw.githubusercontent.com/speccy88/mia5150/main/experiments/benchmarks/skill-discovery-local-native-20261103/figures/coverage-comparison.png)
+![Measured quality and coverage](https://raw.githubusercontent.com/speccy88/mia5150/main/experiments/benchmarks/skill-discovery-local-native-20261103/figures/coverage-comparison.png)
 
-Le graphique utilise les mêmes 20 questions à chaque taille. Chaque zéro coloré résulte de réponses effectivement mesurées ; les cases sans score signalent une exclusion, un blocage ou une taille non exécutée. Les erreurs de format et raisonnements sans réponse finale restent dans le dénominateur des sorties locales mesurées.
+The plot uses the same 20 questions at each size. Every colored zero comes from actual measured outputs; missing scores indicate exclusions, blocks or unattempted sizes. Format errors and reasoning without final answers stay in the denominator of measured local outputs.
 
-## Panneau commun N = 50, 100, 250, 500
+## Shared panel: N = 50, 100, 250, 500
 
-Les scores ci-dessous utilisent 80 mesures par modèle exécuté, issues de 20 questions répétées sur quatre tailles. Les intervalles rééchantillonnent 20 blocs question avec leurs quatre tailles, 10 000 fois, graine 20261103. Ils sont descriptifs et conditionnels aux listes biaisées, sans interprétation comme 80 essais indépendants. Aucun intervalle n'est fourni aux modèles bloqués.
+These scores use 80 measurements per executed model: 20 questions repeated at four sizes. Intervals resample 20 question clusters with all four sizes together, 10,000 times, seed 20261103. They are descriptive and conditional on the biased lists, rather than treating 80 cases as independent. Blocked models receive no interval.
 
-| Voie | Modèle | Mesures | Top-1 exact | Bootstrap par question, 95 % | Sorties sans erreur | Médiane LLM (s) |
+| Route | Model | Measurements | Top-1 exact | Question-cluster bootstrap, 95% | Outputs without errors | Median LLM (s) |
 | --- | --- | ---: | ---: | --- | ---: | ---: |
-| local | gemma-3-4b-it | 0 | Non mesuré | — | 0 | — |
-| local | gemma-4-e2b-it-q4 | 80 | 34/80 (42.5%) | 25.0% à 61.3% | 34 | 7.292 |
-| local | h2o-lightning-4b-stock-q4km | 80 | 47/80 (58.8%) | 40.0% à 76.2% | 50 | 8.362 |
-| local | lfm3-omni-2b-q4km | 80 | 57/80 (71.2%) | 53.8% à 87.5% | 75 | 2.036 |
-| local | ling-3.0-tiny-q4km | 80 | 38/80 (47.5%) | 31.2% à 63.7% | 40 | 7.976 |
-| local | llama-3.2-3b-instruct | 0 | Non mesuré | — | 0 | — |
-| local | mistral-7b-instruct-v03-q4km | 0 | Non mesuré | — | 0 | — |
-| local | nanbeige4.2-3b-q4km | 80 | 0/80 (0.0%) | 0.0% à 0.0% | 0 | 44.271 |
-| local | nemotron-3.5-bolt-e4b-q4km | 80 | 21/80 (26.2%) | 15.0% à 38.8% | 21 | 9.637 |
-| local | neohorse-1-9b-q4km | 80 | 45/80 (56.2%) | 36.2% à 75.0% | 46 | 12.655 |
-| local | ornith-1.5-9b-q4km | 80 | 50/80 (62.5%) | 46.2% à 77.5% | 57 | 12.614 |
-| local | phi-4-mini-instruct-q4km | 80 | 52/80 (65.0%) | 46.2% à 82.5% | 58 | 5.718 |
-| local | qwen3-0.6b-q8 | 80 | 49/80 (61.3%) | 48.8% à 72.5% | 57 | 3.689 |
-| local | qwen3-1.7b-q8 | 80 | 19/80 (23.8%) | 11.2% à 37.5% | 20 | 5.483 |
-| local | qwen3-8b-q4km | 0 | Non mesuré | — | 0 | — |
-| local | qwen3.5-4b-q4km | 80 | 28/80 (35.0%) | 22.5% à 47.5% | 32 | 8.854 |
-| local | qwen3.5-9b-q4km | 80 | 25/80 (31.2%) | 17.5% à 46.2% | 27 | 13.490 |
-| local | ternary-bonsai-2-9b-q2 | 80 | 23/80 (28.7%) | 17.5% à 40.0% | 25 | 10.925 |
-| OAuth | gpt-6-luna | 80 | 62/80 (77.5%) | 60.0% à 92.5% | 80 | 2.593 |
-| OAuth | gpt-6.1-sol | 80 | 60/80 (75.0%) | 56.2% à 91.2% | 80 | 5.239 |
-| OAuth | gpt-6.1-terra | 80 | 63/80 (78.8%) | 61.3% à 95.0% | 80 | 2.758 |
+| local | gemma-3-4b-it | 0 | Not measured | — | 0 | — |
+| local | gemma-4-e2b-it-q4 | 80 | 34/80 (42.5%) | 25.0% to 61.3% | 34 | 7.292 |
+| local | h2o-lightning-4b-stock-q4km | 80 | 47/80 (58.8%) | 40.0% to 76.2% | 50 | 8.362 |
+| local | lfm3-omni-2b-q4km | 80 | 57/80 (71.2%) | 53.8% to 87.5% | 75 | 2.036 |
+| local | ling-3.0-tiny-q4km | 80 | 38/80 (47.5%) | 31.2% to 63.7% | 40 | 7.976 |
+| local | llama-3.2-3b-instruct | 0 | Not measured | — | 0 | — |
+| local | mistral-7b-instruct-v03-q4km | 0 | Not measured | — | 0 | — |
+| local | nanbeige4.2-3b-q4km | 80 | 0/80 (0.0%) | 0.0% to 0.0% | 0 | 44.271 |
+| local | nemotron-3.5-bolt-e4b-q4km | 80 | 21/80 (26.2%) | 15.0% to 38.8% | 21 | 9.637 |
+| local | neohorse-1-9b-q4km | 80 | 45/80 (56.2%) | 36.2% to 75.0% | 46 | 12.655 |
+| local | ornith-1.5-9b-q4km | 80 | 50/80 (62.5%) | 46.2% to 77.5% | 57 | 12.614 |
+| local | phi-4-mini-instruct-q4km | 80 | 52/80 (65.0%) | 46.2% to 82.5% | 58 | 5.718 |
+| local | qwen3-0.6b-q8 | 80 | 49/80 (61.3%) | 48.8% to 72.5% | 57 | 3.689 |
+| local | qwen3-1.7b-q8 | 80 | 19/80 (23.8%) | 11.2% to 37.5% | 20 | 5.483 |
+| local | qwen3-8b-q4km | 0 | Not measured | — | 0 | — |
+| local | qwen3.5-4b-q4km | 80 | 28/80 (35.0%) | 22.5% to 47.5% | 32 | 8.854 |
+| local | qwen3.5-9b-q4km | 80 | 25/80 (31.2%) | 17.5% to 46.2% | 27 | 13.490 |
+| local | ternary-bonsai-2-9b-q2 | 80 | 23/80 (28.7%) | 17.5% to 40.0% | 25 | 10.925 |
+| OAuth | gpt-6-luna | 80 | 62/80 (77.5%) | 60.0% to 92.5% | 80 | 2.593 |
+| OAuth | gpt-6.1-sol | 80 | 60/80 (75.0%) | 56.2% to 91.2% | 80 | 5.239 |
+| OAuth | gpt-6.1-terra | 80 | 63/80 (78.8%) | 61.3% to 95.0% | 80 | 2.758 |
 
-## Limites et preuves
+## Limitations and evidence
 
-- **Biais de position :** tous les golds sont aux positions 1–20, avec la même graine que la sélection des questions. Les différences ne généralisent pas à des positions aléatoires ou centrales.
-- **Couverture locale :** 14 modèles exécutés, 1 120 réponses avec usage réel ; quatre modèles sans inférence. Les 1 080 lignes de contexte estimé ne mesurent pas la fenêtre native maximale de chaque modèle.
-- **Couverture OAuth :** 360 réponses mesurées à N ≤ 2000 ; N=5000 compte un rejet de longueur de chaîne HTTP et 19 non-exécutions par modèle, pas une limite de contexte en tokens établie.
-- **Nanbeige :** ses 80 sorties mesurées restent sans réponse finale dans le budget 500 ; son zéro ne signifie pas une incapacité sémantique générale.
-- **Matériel local :** transformer, sortie et KV sur CUDA, mais poids d’entrée/embeddings CPU_Mapped et préparation CPU conservés par llama.cpp b11960. Ce profil ne prouve pas une absence totale de calcul CPU. Voir [la portée matérielle](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/evidence/NATIVE_GPU_SCOPE.md).
-- **Latence :** les temps locaux et HTTP OAuth incluent des travaux et longueurs de sortie différents. Aucun ratio de vitesse matérielle n’est revendiqué.
-- **Définition native-v2 :** correction du parsing du raisonnement ; le protocole scientifique biaisé v1 reste inchangé. La v2 scientifique proposée dans le rapport OAuth n’a pas été exécutée.
-- **Comparabilité externe :** la concordance avec le runner cloud de référence reste non vérifiée ; les noms dupliqués et indices lexicaux des questions demeurent.
+- **Position bias:** all golds occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.
+- **Initial local coverage:** 14 models executed, 1,120 outputs with actual usage; four models without inference. The 1,080 estimated-context rows do not measure native maximum model windows.
+- **OAuth coverage:** 360 measured responses at N≤2000. At N=5000 each model has one HTTP string-length rejection and 19 unattempted cases, rather than an established token-context limit.
+- **Nanbeige:** all 80 measured outputs lack a final answer within the 500-token budget. Its zero does not establish a general semantic inability.
+- **Local hardware:** transformer/output layers and KV are on CUDA, but llama.cpp b11960 retains CPU_Mapped input/embedding weights and CPU preparation. This profile does not demonstrate zero CPU participation. See [hardware scope](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/evidence/NATIVE_GPU_SCOPE.md).
+- **Latency:** local and OAuth HTTP timings include different work and output lengths. No hardware-speed ratio is claimed.
+- **Native-v2 definition:** this corrects reasoning parsing; the biased scientific v1 protocol is unchanged. The scientific v2 proposed in the OAuth report was not executed.
+- **External comparability:** agreement with the reference cloud runner remains unverified; duplicate names and lexical query hints remain.
 
-[Rapport local](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/LOCAL_REPORT.md) · [Rapport OAuth](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md) · [Validation hors ligne](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/public-validation.json) · [Résumé du panneau commun](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/common-panel-summary.csv)
+[Local report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/LOCAL_REPORT.md) · [OAuth report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md) · [Offline validation](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/public-validation.json) · [Shared-panel summary](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/validation/common-panel-summary.csv)
 
-Les CSV sont inchangés ; les bases distribuées sont des exports d’audit non reprisables. Les sorties HTTP privées complètes ne sont pas redistribuées, donc les vérifications publiques recalculent rangs/métriques/persistance sans rejouer chaque normalisation depuis le texte brut. Voir les transformations et empreintes pour les adaptations de confidentialité.
+CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recomputes ranking metrics and persistence without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.
 
-## Complément final Qwen8/Mistral : série v3 séparée
+## Final Qwen8/Mistral supplement: separate v3 series
 
-Les deux modèles ont fourni 200 réponses supplémentaires : 80 f16 par modèle à N=50/100/250/500, puis 20 Q8_0 par modèle à N=500. Le contexte est adapté aux tokens réels +500, sans la marge estimée de 10 % du lot initial. Les poids Q4_K_M sont inchangés ; Q8_0 désigne le cache KV. Les blocages 32K/f16 historiques restent conservés.
+The two models produced 200 additional responses: 80 f16 responses per model at N=50/100/250/500, then 20 Q8_0 responses per model at N=500. Context is sized to actual input tokens +500, without the initial estimated 10% margin. Q4_K_M weights are unchanged; Q8_0 refers to the KV cache. Historical 32K/f16 blocks remain preserved.
 
-| Modèle | Profil | N | n_ctx | KV | Top-1 /20 | Top-10 /20 | Sans erreur | Médiane LLM (s) |
+| Model | Profile | N | n_ctx | KV | Top-1 /20 | Top-10 /20 | Without errors | Median LLM (s) |
 | --- | --- | ---: | ---: | --- | ---: | ---: | ---: | ---: |
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n100 | 100 | 5888 | f16 | 9 | 15 | 20 | 11.550 |
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n250 | 250 | 14080 | f16 | 8 | 12 | 19 | 20.081 |
@@ -93,34 +97,34 @@ Les deux modèles ont fourni 200 réponses supplémentaires : 80 f16 par modèle
 | qwen3-8b-q4km | f16-adjusted-n500 | 500 | 23552 | f16 | 8 | 9 | 10 | 34.465 |
 | qwen3-8b-q4km | q8-adjusted-n500 | 500 | 23552 | q8_0 | 10 | 10 | 11 | 42.221 |
 
-| Comparaison appariée N=500 | Top-1 f16 → Q8 | Top-10 f16 → Q8 | f16 seul correct | Q8 seul correct |
+| Paired comparison at N=500 | Top-1 f16 → Q8 | Top-10 f16 → Q8 | Only f16 correct | Only Q8 correct |
 | --- | --- | --- | ---: | ---: |
 | qwen3-8b-q4km | 8 → 10 | 9 → 10 | 1 | 3 |
 | mistral-7b-instruct-v03-q4km | 3 → 3 | 10 → 8 | 0 | 0 |
 
-Sur les quatre tailles f16, Qwen8 atteint 34/80 (42,5 %) et Mistral 36/80 (45,0 %). Les résultats Q8 restent séparés. Les 20 questions appariées ne prouvent ni une amélioration générale ni une équivalence de quantification. Aucun N≥1000 n’a été mesuré dans ce complément.
+Across the four f16 sizes, Qwen8 scores 34/80 (42.5%) and Mistral 36/80 (45.0%). Q8 results remain separate. The 20 paired questions establish neither a general improvement nor quantization equivalence. No N≥1000 case was measured in this supplement.
 
-Au total, 16 modèles locaux distincts ont maintenant des mesures dans au moins une série : 1 120 réponses dans le lot initial, plus 200 dans ce complément, soit 1 320. Les trois modèles OAuth ajoutent 360 réponses, soit 1 680 réponses mesurées tous profils confondus ; ces nombres ne sont pas des observations indépendantes. Llama 3.2 et Gemma 3 restent non exécutés à la clôture demandée.
+In total, 16 distinct local models now have measurements in at least one series: 1,120 responses in the initial series plus 200 in this supplement, or 1.320. Three OAuth models add 360 responses, giving 1,680 measured responses across profiles; these are not independent observations. Llama 3.2 and Gemma 3 remain unexecuted at the requested closure.
 
-[Rapport détaillé v3](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/PROFILE_REPORT.md) · [Validation](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/validation/public-validation.json) · [Clôture Llama/Gemma](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/CLOSURE.md)
+[Detailed v3 report](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/PROFILE_REPORT.md) · [Validation](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/validation/public-validation.json) · [Llama/Gemma closure](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/CLOSURE.md)
 
 
 
 ---
 
-# Lot local initial : résultats historiques conservés
+# Initial local series: historical outcomes preserved
 
-# Skill Discovery — résultats locaux, adaptateur natif corrigé
+# Skill discovery — local results with the corrected native adapter
 
-État vérifié au 2026-11-03T09:52:39.825472+00:00. Lot : `completed`.
+Status verified at 2026-11-03T09:52:39.825472+00:00. Suite: `completed`.
 
-Sur les 18 modèles demandés, 14 ont fourni des réponses mesurées. Le lot contient 2520 lignes de 45 colonnes et 1120 réponses avec usage réel. Les blocages et exclusions restent séparés des mesures.
+Of the 18 requested models, 14 produced measured responses. The series contains 2520 rows with 45 columns and 1120 responses with actual usage. Blocks and exclusions remain separate from measurements.
 
-Le lot comparatif courant est `results/local-native-v2/`. Le lot `local-v1/` est conservé après quatre modèles comme diagnostic : son adaptateur pouvait compter du raisonnement interne dans les rangs. Les scores v1 ne sont pas les résultats comparatifs finaux. Voir `evidence/NATIVE_PARSER_V2.md`.
+The comparative series is `results/local-native-v2/`. The earlier `local-v1/` series was preserved after four models as a diagnostic: its adapter could count internal reasoning as ranked answers. Its scores are not the final comparative results. See `evidence/NATIVE_PARSER_V2.md`.
 
-## Couverture des modèles
+## Model coverage
 
-| Modèle demandé | État | Lignes sauvegardées | Réponses mesurées | Top-1 strict / réponses mesurées | Top-10 / réponses mesurées | Sorties sans erreur |
+| Requested model | Status | Saved rows | Measured responses | Strict top-1 / measured responses | Top-10 / measured responses | Outputs without errors |
 |---|---|---:|---:|---:|---:|---:|
 | Qwen3-0.6B | completed | 140 | 80 | 49/80 (61.25%) | 51/80 (63.75%) | 57 |
 | Qwen3-1.7B | completed | 140 | 80 | 19/80 (23.75%) | 19/80 (23.75%) | 20 |
@@ -141,11 +145,11 @@ Le lot comparatif courant est `results/local-native-v2/`. Le lot `local-v1/` est
 | Mistral 7B Instruct | blocked: HARDWARE_VRAM_CAPACITY_EXCEEDED | 140 | 0 | - | - | 0 |
 | Nanbeige 4.2 3B | completed | 140 | 80 | 0/80 (0.00%) | 0/80 (0.00%) | 0 |
 
-Une réponse mesurée possède des tokens réels d'entrée et de sortie. Les OOM, les accès gated, les limites de contexte et les essais non exécutés restent sans taux mesuré; ils ne sont pas interprétés comme des zéros de précision. Un export complet de 140 lignes ne signifie pas 140 appels réussis.
+A measured response has actual input and output token usage. OOM, gated access, context exclusions and unattempted cases have no measured accuracy; they are not observed zero-accuracy results. A complete 140-row export does not imply 140 successful calls.
 
-## Détail par taille
+## Details by library size
 
-| Modèle | N | Réponses mesurées | Top-1 strict | Rappel Top-10 | Précision Top-1, sorties sans erreur | Sorties au plafond 500 | Tokens entrée réels, min-max | Médiane appel LLM (s) | Issues enregistrées |
+| Model | N | Measured responses | Strict top-1 | Top-10 recall | Top-1 precision, non-error outputs | Outputs reaching the 500-token cap | Actual input tokens, min–max | Median LLM call (s) | Recorded issues |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | gemma-3-4b-it | 50 | 0 | - | - | - | 0 | - | - | ACCESS_GATED_ACCEPTANCE_REQUIRED=20 |
 | gemma-3-4b-it | 100 | 0 | - | - | - | 0 | - | - | ACCESS_GATED_ACCEPTANCE_REQUIRED=20 |
@@ -274,33 +278,33 @@ Une réponse mesurée possède des tokens réels d'entrée et de sortie. Les OOM
 | ternary-bonsai-2-9b-q2 | 2000 | 0 | - | - | - | 0 | - | - | CONTEXT_LIMIT_ESTIMATED=20 |
 | ternary-bonsai-2-9b-q2 | 5000 | 0 | - | - | - | 0 | - | - | CONTEXT_LIMIT_ESTIMATED=20 |
 
-Les taux sur réponses mesurées incluent les réponses sans liste finale ou de mauvais format. La précision sur sorties sans erreur utilise un autre dénominateur. Les erreurs et rangs invalides de la réponse finale ne sont jamais retirés pour promouvoir une bonne réponse.
+Rates over measured outputs include missing final lists and formatting failures. Precision conditional on non-error outputs uses another denominator. Errors and invalid final-answer ranks are never removed to promote a correct answer.
 
-## Conditions communes et limites
+## Shared conditions and limitations
 
-- 6 006 skills, 5 801 noms distincts, 20 questions exactes; tailles 50, 100, 250, 500, 1 000, 2 000 et 5 000; seed 42; top 10. Aucun corps complet : noms et descriptions limitées à 300 caractères.
-- `random.Random(42).sample(all_skills,N)` est réinitialisé pour chaque taille. Copie par question; remplacement du dernier élément si et seulement si le gold ID manque. **Biais intrinsèque vérifié : les 20 gold IDs fournis sont déjà les 20 premiers tirages du seed 42; leurs positions restent 1–20 à toutes les tailles.** Aucun préfixe gold n’est ajouté par le runner. Ce test ne mesure pas des positions uniformément réparties.
-- Les 140 plans de candidats et hashes de prompts v1/native-v2 sont identiques. L’adaptateur corrigé ajoute uniquement un état de parsing pour le raisonnement déjà prérempli par le template; il ne change pas le prompt ni le mode thinking. Les blocs internes délimités sont exclus des rangs. Une pensée inachevée au plafond donne `REASONING_NO_FINAL_ANSWER`, avec les tokens réels conservés.
-- RTX 2060 Super 8 192 MiB; pilote 610.88; llama.cpp b11960 CUDA 12.4. Les couches transformer et de sortie, le KV f16 et les états récurrents observés sont sur CUDA; contexte effectif 32 768, un slot, `fit=off`, sans context shift, warmup, cache RAM ou checkpoints; batch 512 / microbatch 128. **Portée précise : llama.cpp garde l’entrée/les embeddings dans un buffer CPU_Mapped par défaut**, même avec toutes les couches transformer/sortie sur GPU. Ce profil n’est donc pas un calcul sans participation CPU. Aucun repli de couches transformer pour tenir en VRAM n’est accepté. Les journaux détaillent ces buffers dans `evidence/native-buffer-audit.json`. La conversion/quantification préparatoire emploie aussi le CPU.
-- `/apply-template` puis `/tokenize` fournissent le comptage réel; les IDs sont transmis à `/completion`. Température 0, seed 42, sortie plafonnée à 500 tokens. Aucune troncature. La barrière v1 estimée `44.5*N+200 > 90% du contexte` bloque 60 lignes aux tailles 1 000/2 000/5 000 à ce contexte; ce n’est pas un nombre de tokens mesuré.
-- **Ces 60 lignes sont un filtre du n_ctx choisi, pas la limite intrinsèque des modèles.** Qwen3.5 publie 262 144 tokens natifs (extension annoncée à 1 010 000); Ling configure 131 072 natifs avec une recette YaRN à 262 144. Le lot charge seulement 32 768, choix uniforme et conservateur sans recherche du maximum VRAM par modèle. Aucun tokenizer/appel ne mesure les tailles écartées. Fenêtres publiées, config éditeur, GGUF et n_ctx observé sont séparés dans `evidence/context-window-audit.json` et `evidence/CONTEXT_WINDOWS.md`.
-- Les modèles reasoning peuvent consommer les 500 tokens avant leur liste finale. Ces erreurs de budget/format décrivent cette configuration, pas leur meilleure capacité possible. Les quantifications sont différentes et indiquées par modèle.
-- Le multimodal est testé en texte seul. H2O utilise son export officiel stock de chat ordinaire, sans shim de décisions typées. Les versions Instruct/IT sont utilisées quand disponibles; Mistral est explicitement v0.3.
-- Les 20 questions forment un petit échantillon en partie lexical; les noms dupliqués empêchent de récupérer certains gold IDs avec une réponse par noms. Le runner original de Vincent n’a pas été fourni à ce lot.
-- Le lot OAuth Luna/Sol/Terra utilise les mêmes candidats, mais sa route ne garantit ni température 0 ni sortie plafonnée à 500; il doit rester une variante distincte. Aucune équivalence stricte entre routes n’est revendiquée.
-- Les latences sont des mesures dans cet environnement Windows 16 Go de RAM. Téléchargements/conversions CPU ont pu tourner simultanément : ce n’est pas un benchmark de vitesse isolé. Coût de service local 0 USD, hors électricité.
+- 6,006 skills, 5,801 distinct names and the 20 exact questions; sizes 50, 100, 250, 500, 1,000, 2,000 and 5,000; seed 42; top 10. No full bodies: names and descriptions capped at 300 characters.
+- `random.Random(42).sample(all_skills,N)` is restarted at each size. Each question gets a copy, with last-item replacement if and only if its gold ID is missing. **Verified intrinsic bias: the 20 supplied gold IDs are already the first 20 seed-42 draws; their positions remain 1–20 at every size.** The runner adds no gold prefix. This is not a test of uniformly distributed answer positions.
+- All 140 v1/native-v2 candidate plans and prompt hashes are identical. The corrected adapter only adds parsing state for reasoning already prefilled by the template; prompts and thinking mode are unchanged. Delimited internal blocks are excluded from ranks. An unfinished reasoning block at the cap produces `REASONING_NO_FINAL_ANSWER` while retaining actual usage.
+- RTX 2060 SUPER, 8,192 MiB; driver 610.88; llama.cpp b11960 CUDA 12.4. Transformer/output layers, f16 KV and observed recurrent state are on CUDA. Effective context 32,768, one slot, fit=off, no context shift, warmup, RAM cache or checkpoints; batch 512 / microbatch 128. **Exact scope: llama.cpp retains default CPU_Mapped input/embedding weights**, even with all transformer/output layers on GPU. This profile is not CPU-free computation. Transformer-layer fallback to fit VRAM is rejected. The buffer audit records these allocations. Preparatory conversion and quantization also use CPU.
+- `/apply-template` then `/tokenize` provide actual counts; IDs are sent to `/completion`. Temperature 0, seed 42, 500-token output cap, no truncation. The estimated v1 gate `44.5*N+200 > 90% of context` excludes 60 rows at sizes 1,000/2,000/5,000; those are not measured input-token counts.
+- **The 60 rows reflect the chosen n_ctx filter, not intrinsic model limits.** Qwen3.5 advertises 262,144 native tokens (an extension to 1,010,000); Ling configures 131,072 native tokens and a YaRN recipe for 262.144. This series loads only 32,768, a uniform conservative choice without per-model maximum-VRAM search. No tokenizer request or inference measures excluded sizes. Published windows, publisher configs, GGUF values and observed n_ctx are separated in the context-window audit and notes.
+- Reasoning models can spend all 500 tokens before the final list. Budget/format failures describe this configuration, not their best possible ability. Quantization differs and is identified per model.
+- Multimodal models are tested with text only. H2O uses its official ordinary-chat export without a typed-decision shim. Instruct/IT versions are used when available; Mistral is explicitly v0.3.
+- The 20 questions form a small, partly lexical sample; duplicate names prevent recovery of some gold IDs through name-only responses. The original reference cloud runner was not supplied.
+- OAuth Luna/Sol/Terra uses the same candidates, but its route guarantees neither temperature 0 nor a 500-token output cap. It remains a separate variant; strict cross-route equivalence is not claimed.
+- Latencies describe this Windows environment with 16 GB RAM. Downloads and CPU conversions could run concurrently, so this is not an isolated speed benchmark. Local service charges are USD 0, excluding electricity.
 
-## Poids et provenance
+## Weights and provenance
 
-| Modèle | Quantification | Source vérifiée |
+| Model | Quantization | Verified source |
 |---|---|---|
 | Qwen3-0.6B | Q8_0 | [Qwen/Qwen3-0.6B-GGUF](https://huggingface.co/Qwen/Qwen3-0.6B-GGUF) |
 | Qwen3-1.7B | Q8_0 | [Qwen/Qwen3-1.7B-GGUF](https://huggingface.co/Qwen/Qwen3-1.7B-GGUF) |
-| Qwen3.5-4B | Q4_K_M; fichier Ollama installé, digest confirmé par le registre officiel | [Qwen/Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B) |
+| Qwen3.5-4B | Q4_K_M; installed Ollama artifact, digest confirmed against the official registry | [Qwen/Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B) |
 | Ling-3.0-tiny | Q4_K_M | [inclusionAI/Ling-3.0-tiny-GGUF](https://huggingface.co/inclusionAI/Ling-3.0-tiny-GGUF) |
-| Qwen3.5-9B | Q4_K_M; fichier Ollama installé, digest confirmé par le registre officiel | [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B) |
-| Llama 3.2 3B | non téléchargé : accès gated | [meta-llama/Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) |
-| Gemma 3 4B | non téléchargé : accès gated | [google/gemma-3-4b-it](https://huggingface.co/google/gemma-3-4b-it) |
+| Qwen3.5-9B | Q4_K_M; installed Ollama artifact, digest confirmed against the official registry | [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B) |
+| Llama 3.2 3B | not downloaded: gated access | [meta-llama/Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) |
+| Gemma 3 4B | not downloaded: gated access | [google/gemma-3-4b-it](https://huggingface.co/google/gemma-3-4b-it) |
 | H2O-Lightning-4B | Q4_K_M, official stock ordinary-chat export | [h2oai/h2o-lightning-4b-gguf](https://huggingface.co/h2oai/h2o-lightning-4b-gguf) |
 | Gemma 4 E2B | Official QAT Q4_0 | [google/gemma-4-E2B-it-qat-q4_0-gguf](https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf) |
 | Qwen3-8B | Q4_K_M | [Qwen/Qwen3-8B-GGUF](https://huggingface.co/Qwen/Qwen3-8B-GGUF) |
@@ -313,50 +317,50 @@ Les taux sur réponses mesurées incluent les réponses sans liste finale ou de 
 | Mistral 7B Instruct | Q4_K_M, local conversion of pinned official weights | [mistralai/Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) |
 | Nanbeige 4.2 3B | Q4_K_M, local conversion of pinned official weights | [Nanbeige/Nanbeige4.2-3B](https://huggingface.co/Nanbeige/Nanbeige4.2-3B) |
 
-Commits, SHA-256, tailles et licences : `evidence/source-inventory.json`, manifests Ollama vérifiés et fichiers `.source.json` des poids. Ling installé est identique au GGUF officiel. Llama 3.2 3B et Gemma 3 4B demandent une acceptation d’accès manuelle; aucun contournement ni substitut non gated n’a été utilisé.
+Commits, hashes, sizes and licenses are recorded in source inventories, verified Ollama manifests and weight provenance files. Installed Ling matches the official GGUF. Llama 3.2 3B and Gemma 3 4B require manual gated-access acceptance; no bypass or ungated substitute was used.
 
-## Preuves, validation et livraison
+## Evidence, validation and delivery
 
-34 tests synthétiques passent, dont sept régressions de parsing natif. `evidence/result-review-native-v2.json` vérifie les 45 colonnes, les clés uniques, les cardinalités, les vrais tokens, l’intégrité SQLite, l’égalité CSV/SQLite et recalcule les métriques depuis les rangs. Les sources transactionnelles sont les SQLite; les CSV sont remplacés atomiquement après chaque ligne.
+All 34 synthetic tests pass, including seven native-parser regressions. `evidence/result-review-native-v2.json` checks the 45 columns, unique keys, cardinalities, actual usage, SQLite integrity and CSV/SQLite equality, and independently recalculates rank metrics. SQLite is the transactional authority; CSV is replaced atomically after each row.
 
-Chaque modèle conserve configuration, manifest, journaux de lancement et preuve GPU liée au PID/heure/poids/exécutable. Les erreurs initiales sont préservées. Les sorties brutes se trouvent dans `private-responses/`, exclu de Git; aucun prompt complet n’y est sauvegardé. Aucun identifiant/token OAuth n’a été copié dans ce lot.
+Each model retains configuration, manifest and source-linked launch/GPU evidence. Initial failures are preserved. Raw outputs are held in ignored private response captures, without full prompts; no OAuth credential was copied into this local series. Public exports remove process identifiers and private paths while retaining audit hashes.
 
-Aucun email ni push n’est exécuté depuis ce lot. Les poids, archives, outils, environnements, données sources privées et sorties brutes sont exclus par `.gitignore`. Le parent coordonne l’intégration GitHub et le rapport Markdown commun destiné à Vincent.
+The benchmark/report generators do not send email or push code. Weights, archives, tools, environments, private full input files and raw captures are excluded. Public integration and the consolidated Markdown report are handled separately.
 
-## Admission par la VRAM physique
+## Physical-VRAM admission
 
-Sous Windows WDDM, une allocation CUDA peut réussir malgré un budget supérieur à la VRAM physique. Le lanceur contrôle désormais la somme des buffers CUDA modèle + KV + états récurrents + maximum compute avant toute inférence. Un dépassement produit `HARDWARE_VRAM_CAPACITY_EXCEEDED`, distinct d’un OOM CUDA réellement observé; aucun repli de couches ou changement de contexte n’est tenté.
+Under Windows WDDM, CUDA allocation can succeed despite a declared budget exceeding physical VRAM. The launcher therefore checks the sum of model, KV, recurrent-state and maximum compute CUDA buffers before inference. Excess produces `HARDWARE_VRAM_CAPACITY_EXCEEDED`, distinct from an observed CUDA OOM. It does not silently offload layers or change context.
 
-Qwen3-8B au profil 32K déclare 9 097,34 MiB pour 8 192 MiB physiques. Ses 21 réponses acquises avant ce contrôle sont préservées dans `results/diagnostic-vram-oversubscription/`, avec l’intention suivante non rejouée. Elles sont exclues du lot comparatif; son registre canonique contient des issues matérielles sans taux mesuré. La validation corrigée du garde-fou a refusé le même chargement sans inférence. Les empreintes et allocations des lancements exacts sont auditées dans `evidence/native-buffer-audit.json`.
+Qwen3-8B at 32K declares 9,097.34 MiB against 8,192 MiB physical VRAM. The 21 responses acquired before this control remain in `results/diagnostic-vram-oversubscription/`, with the next unresolved intent unreplayed. They are excluded from the comparative series; its canonical ledger records hardware outcomes without measured accuracy. Corrected guard validation rejected the same load without inference. Exact launch hashes and allocations are audited in the native-buffer evidence.
 
-Mistral-7B-Instruct-v0.3 est également refusé avant génération : 8 230,52 MiB déclarés pour 8 192 MiB physiques. Aucun score nul ne lui est attribué : le taux mesuré reste absent. Les originaux convertis et les allocations de démarrage sont conservés.
+Mistral-7B-Instruct-v0.3 is likewise rejected before generation: 8,230.52 MiB declared against 8,192 MiB physical VRAM. It is not assigned an observed zero; measured accuracy is absent. Converted originals and startup allocations are preserved.
 
-À partir d’Ornith, `evidence/wddm-memory-telemetry.jsonl` et son résumé enregistrent les compteurs dédiés/partagés du processus vérifié. Un usage partagé non nul peut comprendre des allocations hôte ou du staging pilote; il ne prouve à lui seul ni offload transformer ni paging d’un buffer CUDA précis. Cette collecte ponctuelle ne reconstitue pas la résidence des modèles précédents.
+Starting with Ornith, historical WDDM telemetry and its summary record verified-process dedicated/shared counters. Nonzero shared usage can include host allocations or driver staging; alone it proves neither transformer offload nor paging of a specific CUDA buffer. This sampled collection cannot reconstruct residency for earlier models.
 
-La provenance publique regroupée, y compris les conversions locales et les poids Ollama installés, est livrée dans `evidence/model-artifact-provenance.json`; elle reste disponible lorsque les répertoires de poids exclus de Git ne sont pas transférés.
+Consolidated public provenance, including local conversions and installed Ollama artifacts, is in `evidence/model-artifact-provenance.json`. It remains available when ignored weight directories are not transferred.
 
 
 ---
 
-# Complément Qwen8/Mistral : contexte et KV, série v3
+# Qwen8/Mistral context and KV supplement: separate v3 series
 
-# Profils locaux de contexte et de KV — résultats séparés
+# Separate local context and KV profiles — results
 
-État : completed; vérification 2026-11-03T11:32:21.712806+00:00. 200 réponses mesurées, plafond de 200.
+Status: completed; verified 2026-11-03T11:32:21.712806+00:00. 200 measured responses, cap 200.
 
-Les chargements initiaux à 32K/f16 dépassaient la capacité de 8 192 MiB : 9 097,34 MiB CUDA pour Qwen3-8B et 8 230,52 pour Mistral v0.3. Ce complément mesure des contextes plus petits en f16 et un cache Q8_0 distinct, en conservant les mêmes poids.
+Initial 32K/f16 loads exceeded the 8,192 MiB capacity: 9,097.34 MiB of declared CUDA buffers for Qwen3-8B and 8,230.52 for Mistral v0.3. This supplement measures smaller f16 contexts and a separate Q8_0 cache condition while keeping the same weights.
 
-Le lot historique 32K/f16 et ses archives sont préservés. Ces mesures emploient un autre protocole de contexte : préflight réel du tokenizer + 500 tokens, arrondi au multiple de 256 supérieur. Les 20 questions, candidats, prompts, seed 42, température 0, rangs et plafond 500 restent identiques. Aucun résultat n’est mélangé avec le lot v2.
+The historical 32K/f16 series and archives are preserved. These measurements use a different context protocol: actual tokenizer preflight plus 500 tokens, rounded up to a multiple of 256. The 20 questions, candidates, prompts, seed 42, temperature 0, ranking rules and 500-token cap remain identical. Results are not merged with the native-v2 series.
 
-N désigne la taille du catalogue présenté. Les données validées contiennent 6 006 skills et 5 801 noms distincts; les 20 questions originales sont reprises. Les prompts utilisent seulement le nom et la description limitée à 300 caractères, sans corps complet. Le sampler et le scoring restent identiques, avec leurs doublons de noms et leur biais gold aux positions 1–20.
+N is the presented library size. Validated inputs contain 6,006 skills and 5,801 distinct names; the 20 original questions are reused. Prompts contain only names and descriptions capped at 300 characters, without full bodies. Sampling and scoring remain unchanged, including duplicate names and gold positions 1–20.
 
-Écart explicite : le filtre estimé initial `44,5×N+200 > 90 % de n_ctx` ne s’applique pas dans cette version v3. Le contrôle devient `tokens réels d’entrée  + 500 ≤ n_ctx`, sans marge de 10% supplémentaire. Les contextes peuvent être proches de cette réserve exacte; chaque entrée est retokenisée avant génération et aucune troncature n’est acceptée. Ce complément ne constitue donc pas un protocole initial inchangé.
+Explicit deviation: the original estimated gate `44.5×N+200 > 90% of n_ctx` is not applied in v3. The control becomes `actual input tokens + 500 ≤ n_ctx`, without an additional 10% margin. Contexts can be close to this exact reserve; each input is retokenized before generation and truncation is rejected. This supplement is therefore not an unchanged execution of the initial protocol.
 
-Matériel : RTX 2060 SUPER, 8 192 MiB. Runtime : llama.cpp b11960 CUDA 12.4, commit `8642541b255bfb5dc39cd351a178be09013a55d6`. Les poids Q4_K_M restent identiques au lot précédent : [Qwen3-8B officiel](https://huggingface.co/Qwen/Qwen3-8B-GGUF) et conversion locale épinglée de [Mistral v0.3 officiel](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3). Les SHA des poids, de l’exécutable et des préfixes de journaux sont liés à chaque lancement. La notation Q8_0 de ce rapport désigne le cache KV, pas une autre quantification des poids.
+Hardware: RTX 2060 SUPER, 8,192 MiB. Runtime: llama.cpp b11960 CUDA 12.4, commit `8642541b255bfb5dc39cd351a178be09013a55d6`. Q4_K_M weights are unchanged from the earlier series: [official Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B-GGUF) and a pinned local conversion of [official Mistral v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3). Weight, executable and sealed log-prefix hashes are linked to each launch. Q8_0 here refers to the KV cache, not a different weight quantization.
 
-## Mesures par profil
+## Measurements by profile
 
-| Modèle | Profil | N | n_ctx | KV | Réponses | Top-1 | Top-10 | Sans erreur | Médiane LLM (s) | Issues |
+| Model | Profile | N | n_ctx | KV | Responses | Top-1 | Top-10 | Without errors | Median LLM (s) | Issues |
 |---|---|---:|---:|---|---:|---:|---:|---:|---:|---|
 | qwen3-8b-q4km | f16-adjusted-n50 | 50 | 2816 | f16 | 20 | 10/20 (50.00%) | 10.0/20 (50.00%) | 10 | 9.94 | OK=10, REASONING_NO_FINAL_ANSWER=10 |
 | qwen3-8b-q4km | f16-adjusted-n100 | 100 | 5120 | f16 | 20 | 8/20 (40.00%) | 8.0/20 (40.00%) | 8 | 11.94 | OK=8, REASONING_NO_FINAL_ANSWER=12 |
@@ -369,18 +373,18 @@ Matériel : RTX 2060 SUPER, 8 192 MiB. Runtime : llama.cpp b11960 CUDA 12.4, com
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n500 | 500 | 27392 | f16 | 20 | 3/20 (15.00%) | 10.0/20 (50.00%) | 19 | 37.40 | OK=19, INVALID_OUTPUT=1 |
 | mistral-7b-instruct-v03-q4km | q8-adjusted-n500 | 500 | 27392 | q8_0 | 20 | 3/20 (15.00%) | 8.0/20 (40.00%) | 18 | 46.02 | OK=18, INVALID_OUTPUT=2 |
 
-## Totaux f16 aux quatre tailles
+## f16 totals across four sizes
 
-| Modèle | Réponses | Top-1 | Top-10 | Sorties sans erreur |
+| Model | Responses | Top-1 | Top-10 | Outputs without errors |
 |---|---:|---:|---:|---:|
 | mistral-7b-instruct-v03-q4km | 80 | 36/80 (45.00%) | 57.0/80 (71.25%) | 78 |
 | qwen3-8b-q4km | 80 | 34/80 (42.50%) | 35.0/80 (43.75%) | 36 |
 
-Ces totaux regroupent les quatre contextes f16 ajustés; les résultats Q8_0 restent dans leur comparaison appariée.
+These totals combine the four adjusted f16 contexts; Q8_0 results remain in their separate paired comparison.
 
-## Admissions matérielles
+## Hardware admission
 
-| Modèle | Profil | n_ctx | KV | État | CUDA déclaré MiB | WDDM admission MiB | WDDM maximum échantillonné MiB |
+| Model | Profile | n_ctx | KV | Status | Declared CUDA MiB | Admission WDDM MiB | Maximum sampled WDDM MiB |
 |---|---|---:|---|---|---:|---:|---:|
 | qwen3-8b-q4km | preflight-f16-4096 | 4096 | f16 | completed_no_generation | 5058.34 | 5242.92 | - |
 | qwen3-8b-q4km | q8-32768-admission-only | 32768 | q8_0 | completed_no_generation | 7049.42 | 7242.95 | 7242.95 |
@@ -397,208 +401,311 @@ Ces totaux regroupent les quatre contextes f16 ajustés; les résultats Q8_0 res
 | mistral-7b-instruct-v03-q4km | f16-adjusted-n500 | 27392 | f16 | completed | 7557.21 | 7746.95 | 7762.95 |
 | mistral-7b-instruct-v03-q4km | q8-adjusted-n500 | 27392 | q8_0 | completed | 6040.29 | 6230.94 | 6248.94 |
 
-Les chargements `admission-only` et les préflights n’exécutent aucune génération. K et V doivent avoir le type demandé dans les journaux, Flash Attention doit être active, les couches transformer/sortie et le KV doivent rester CUDA. Le total CUDA déclaré et le total engagé WDDM sont contrôlés avant inférence. L’entrée/les embeddings CPU_Mapped par défaut sont explicitement conservés; aucun repli de couches transformer n’est autorisé. Ces compteurs restent distincts d’une trace exhaustive de résidence.
+Admission-only loads and preflights perform no generation. K and V must have the requested types in the logs, Flash Attention must be enabled, and transformer/output layers and KV must remain on CUDA. Declared CUDA buffers and WDDM committed memory are checked before inference. Default CPU_Mapped input/embedding weights are explicitly retained; no transformer-layer fallback is allowed. These counters are distinct from an exhaustive residency trace.
 
-Les latences incluent le préfill et la génération, avec longueur de sortie variable plafonnée à 500; le chargement des poids et leurs hashes sont exclus du temps LLM. Elles décrivent cette session Windows avec télémétrie, sans isolation complète de la machine.
+Latencies include prefill and generation, with variable output lengths capped at 500 tokens. Weight loading and hashing are excluded from LLM time. They describe this Windows session with telemetry, without complete machine isolation.
 
-## Comparaison appariée de qualité
+## Paired quality comparison
 
-| Modèle | N | n_ctx commun | Questions appariées | Top-1 f16 / Q8 | Top-10 f16 / Q8 | Textes bruts identiques |
+| Model | N | Shared n_ctx | Paired questions | Top-1 f16 / Q8 | Top-10 f16 / Q8 | Identical raw outputs |
 |---|---:|---:|---:|---|---|---:|
 | qwen3-8b-q4km | 500 | 23552 | 20 | 8 / 10 | 9 / 10 | 0 |
 | mistral-7b-instruct-v03-q4km | 500 | 27392 | 20 | 3 / 3 | 10 / 8 | 11 |
 
-Q8_0 est une quantification avec arrondi : 32 valeurs int8 et une échelle f16, soit 8,5 bits/valeur contre 16 pour f16. Les [essais initiaux de llama.cpp](https://github.com/ggml-org/llama.cpp/pull/7412) motivent ce seul format quantifié ici, sans garantir son équivalence. Les mêmes 20 questions au même contexte permettent une comparaison locale; ce petit jeu ne remplace pas une évaluation générale de perplexité.
+Q8_0 uses rounded quantization: 32 int8 values and an f16 scale, or 8.5 bits/value versus 16 for f16. The [initial llama.cpp experiments](https://github.com/ggml-org/llama.cpp/pull/7412) motivate this one quantized format here without guaranteeing equivalence. The same 20 questions at the same context permit a local comparison; this small set does not replace a general perplexity evaluation.
 
-Les sorties sans finale au plafond 500 sont des échecs de format/génération de ce profil. Les refus matériels n’ont aucun taux mesuré. Le biais gold aux positions 1–20 du seed 42 reste présent. Aucun contexte pour N≥1000, nouveau poids, autre quantification ou appel hébergé n’est testé.
+Outputs with no final answer at the 500-token cap are generation/format failures for this profile. Hardware rejections have no measured accuracy. The seed-42 gold-position bias at positions 1–20 remains. No N≥1000 context, new weights, other weight quantization or hosted inference is tested.
 
-Preuves : `evidence/profile-review.json`, `evidence/runtime-kv-support.json`, `evidence/candidate-comparison.json`, préflights et journaux sous `runtime/`; SQLite transactionnels et CSV 45 colonnes sous `results/`. Les réponses brutes sont vérifiées par SHA et restent privées. Les fichiers `baseline-preservation-*.json` vérifient les archives précédentes.
+Evidence: `evidence/profile-review.json`, `evidence/runtime-kv-support.json`, `evidence/candidate-comparison.json`, preflights and historical runtime records; transactional SQLite and 45-column CSV files under `results/`. Raw outputs were hash-checked and remain private. The historical baseline-preservation records verify the earlier archives.
 
-Pour Llama 3.2 et Gemma 3, voir [la clôture de ces deux accès](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/CLOSURE.md). Aucune connexion, acceptation, publication ou livraison par email n’est exécutée ici.
+For Llama 3.2 and Gemma 3, see [closure of these two access paths](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/CLOSURE.md). Report generation performs no login, terms acceptance, publication or email delivery.
 
 
-Clôture finale : Llama 3.2 et Gemma 3 ne sont pas poursuivis, conformément à la décision utilisateur. Aucun résultat mesuré ne leur est attribué.
+Final closure: Llama 3.2 and Gemma 3 are not pursued further, as requested by the user. No measured result is assigned to them.
 
 
 ---
 
-# Résultats OAuth et limites méthodologiques
+# OAuth outcomes and methodological limitations
 
-# Les trois modèles restent proches sur ce test, avec une couverture limitée à 2 000 skills
+# The three models remain close on this test, with measured coverage through 2,000 skills
 
-Étude de découverte de skills par listing, réalisée le 3 novembre 2026. Modèles : `gpt-6-luna`, `gpt-6.1-sol`, `gpt-6.1-terra`. Cette exécution est une **variante OAuth du protocole v1**, pas une reproduction strictement équivalente à une API avec température 0 et sortie limitée à 500 tokens.
+Skill-discovery listing study conducted on 3 November 2026 with `gpt-6-luna`,
+`gpt-6.1-sol` and `gpt-6.1-terra`. This execution is an **OAuth variant of protocol v1**.
+It does not reproduce a temperature-0 API run with a 500-token output limit exactly.
 
-## Ce que les résultats permettent de dire
+## What the results support
 
-- Les trois modèles ont produit **120 réponses valides chacun**, sur les tailles 50, 100, 250, 500, 1 000 et 2 000. Leur score top-1 exact se situe entre **72,5 % et 75,0 %** sur ces six tailles. Les différences appariées restent compatibles avec zéro sur les 20 questions disponibles.
-- À 5 000 skills, chaque modèle a subi **un rejet HTTP 400 `string_above_max_length`**. Les 19 autres essais de cette taille n’ont pas été exécutés. Ce rejet de longueur de chaîne ne mesure pas une limite de contexte du modèle et ne vaut pas 0 % de précision.
-- L’audit démontre un biais plus précis que la seule règle « remplacer le dernier » : **les 20 golds sont déjà aux positions 1 à 20 pour les sept tailles**. Le remplacement final ne s’est jamais déclenché. Les performances sont donc conditionnelles à une position initiale très favorable des réponses attendues.
-- Les données brutes v1 sont conservées. La comparabilité avec les résultats cloud précédents reste **non vérifiée**, faute du runner original et de ses listes ordonnées. Les différences OAuth constituent de toute façon une condition expérimentale distincte.
+- Each model produced **120 valid responses**, covering sizes 50, 100, 250, 500,
+  1,000 and 2,000. Exact top-1 scores range from **72.5% to 75.0%** across those
+  six sizes. Paired differences remain compatible with zero with only 20 questions.
+- At 5,000 skills, each model received **one HTTP 400 `string_above_max_length`
+  rejection**. The other 19 cases at that size were not attempted. A string-length
+  rejection neither measures the model's token context limit nor represents 0% accuracy.
+- The position audit shows a stronger issue than the potential last-position
+  replacement rule: **the 20 gold skills already occupy positions 1–20 at every
+  size**. Replacement was never needed. These scores are conditional on the
+  expected answers being placed near the beginning of each list.
+- Original v1 evidence is retained. Comparability with the earlier cloud study is
+  **unverified**, because its original runner and ordered candidate lists were not
+  supplied. The OAuth settings are a distinct experimental condition in any case.
 
-## Couverture réelle et performances observées
+## Actual coverage and observed performance
 
-| Modèle | Réponses / prévues | Top-1 exact, tailles mesurées | Latence moyenne / médiane (s) | Tokens entrée / sortie, rapportés |
+| Model | Responses / planned | Exact top-1, measured sizes | Mean / median latency (s) | Reported input / output tokens |
 | --- | --- | --- | --- | --- |
-| Luna | 120/140 | 88/120 (73,3 %) | 2,872 / 2,743 | 3 444 430 / 11 830 |
-| Sol 6.1 | 120/140 | 87/120 (72,5 %) | 5,952 / 5,896 | 3 444 430 / 11 812 |
-| Terra 6.1 | 120/140 | 90/120 (75,0 %) | 3,088 / 2,939 | 3 444 430 / 5 194 |
+| Luna | 120/140 | 88/120 (73.3%) | 2.872 / 2.743 | 3 444 430 / 11 830 |
+| Sol 6.1 | 120/140 | 87/120 (72.5%) | 5.952 / 5.896 | 3 444 430 / 11 812 |
+| Terra 6.1 | 120/140 | 90/120 (75.0%) | 3.088 / 2.939 | 3 444 430 / 5 194 |
 
-Les pourcentages ci-dessus sont conditionnels aux **six tailles entièrement mesurées**, et non aux 140 lignes prévues. Les latences couvrent l’aller-retour HTTP et la génération, sans la pause d’une seconde entre requêtes. Elles dépendent aussi du réseau, du service, du cache de préfixe éventuel et de la longueur des sorties : ce ne sont pas des mesures isolées du matériel du modèle.
+These percentages use the **six fully measured sizes**, rather than all 140 planned
+rows. Latency includes the HTTP round trip and generation, excluding the one-second
+pause between requests. Network/service conditions, possible prefix caching and
+output length also affect it. It is not an isolated model-hardware measurement.
 
-Les trois CSV contiennent bien **420 lignes au total, avec les 45 colonnes demandées**. Ils se décomposent en **360 réponses valides, 3 rejets et 57 lignes `NOT_RUN_AFTER_MODEL_STOP`**. Il y a eu 363 requêtes de benchmark, plus les 3 petits essais d’admission, soit 366 POST d’inférence demandés au service. Les rejets n’ont pas été retentés ; aucun quota ni rate limit n’a été observé. Aucun benchmark local GPU n’a été exécuté dans cette étude.
+The three CSVs contain **420 rows and the requested 45 columns**: **360 valid
+responses, three rejections and 57 `NOT_RUN_AFTER_MODEL_STOP` rows**. There were
+363 benchmark requests and three small admission probes, or 366 inference POSTs
+requested from the service. Rejections were not retried. No quota or rate-limit
+event was observed. No local GPU benchmark was executed as part of this OAuth study.
 
-Les champs numériques à zéro des lignes non exécutées ne sont que des valeurs de structure du format CSV : **ils ne constituent pas des observations**. Ces lignes sont exclues des scores, intervalles et courbes ci-dessous. Aucun prix API n’a été appliqué : `est_cost_usd` reste vide. L’usage a été demandé via la connexion OAuth consentie, sans clé API classique, achat de crédits ni bascule de facturation. Le coût monétaire réel du forfait n’a pas été mesuré.
+Numeric zeros in unattempted rows are CSV structural placeholders, **not
+observations**. Those rows are excluded from the scores, intervals and plots below.
+No API price was assigned: `est_cost_usd` is blank. Usage was requested through the
+consented OAuth connection, without a conventional API key, credit purchase or paid
+API fallback. The subscription's actual monetary cost was not measured.
 
-### Top-1 exact par taille
+### Exact top-1 by library size
 
-Chaque cellule mesurée porte sur les **mêmes 20 questions**, réutilisées à la taille suivante. Les intervalles sont des intervalles de Wilson à 95 % calculés avec **n = 20 par taille**.
+Every measured cell uses the **same 20 questions**, repeated at the next size.
+Wilson 95% intervals use **n = 20 for each size**.
 
-| Taille | Luna, exact et IC 95 % | Sol 6.1, exact et IC 95 % | Terra 6.1, exact et IC 95 % |
+| Size | Luna, exact and 95% CI | Sol 6.1, exact and 95% CI | Terra 6.1, exact and 95% CI |
 | --- | --- | --- | --- |
-| 50 | 17/20 = 85,0 % [64,0–94,8 %] | 18/20 = 90,0 % [69,9–97,2 %] | 17/20 = 85,0 % [64,0–94,8 %] |
-| 100 | 16/20 = 80,0 % [58,4–91,9 %] | 14/20 = 70,0 % [48,1–85,5 %] | 15/20 = 75,0 % [53,1–88,8 %] |
-| 250 | 15/20 = 75,0 % [53,1–88,8 %] | 14/20 = 70,0 % [48,1–85,5 %] | 15/20 = 75,0 % [53,1–88,8 %] |
-| 500 | 14/20 = 70,0 % [48,1–85,5 %] | 14/20 = 70,0 % [48,1–85,5 %] | 16/20 = 80,0 % [58,4–91,9 %] |
-| 1000 | 13/20 = 65,0 % [43,3–81,9 %] | 13/20 = 65,0 % [43,3–81,9 %] | 13/20 = 65,0 % [43,3–81,9 %] |
-| 2000 | 13/20 = 65,0 % [43,3–81,9 %] | 14/20 = 70,0 % [48,1–85,5 %] | 14/20 = 70,0 % [48,1–85,5 %] |
-| 5000 | Non mesuré : 1 rejet, 19 non exécutés | Non mesuré : 1 rejet, 19 non exécutés | Non mesuré : 1 rejet, 19 non exécutés |
+| 50 | 17/20 = 85.0% [64.0–94.8%] | 18/20 = 90.0% [69.9–97.2%] | 17/20 = 85.0% [64.0–94.8%] |
+| 100 | 16/20 = 80.0% [58.4–91.9%] | 14/20 = 70.0% [48.1–85.5%] | 15/20 = 75.0% [53.1–88.8%] |
+| 250 | 15/20 = 75.0% [53.1–88.8%] | 14/20 = 70.0% [48.1–85.5%] | 15/20 = 75.0% [53.1–88.8%] |
+| 500 | 14/20 = 70.0% [48.1–85.5%] | 14/20 = 70.0% [48.1–85.5%] | 16/20 = 80.0% [58.4–91.9%] |
+| 1000 | 13/20 = 65.0% [43.3–81.9%] | 13/20 = 65.0% [43.3–81.9%] | 13/20 = 65.0% [43.3–81.9%] |
+| 2000 | 13/20 = 65.0% [43.3–81.9%] | 14/20 = 70.0% [48.1–85.5%] | 14/20 = 70.0% [48.1–85.5%] |
+| 5000 | Not measured: 1 rejection, 19 unattempted | Not measured: 1 rejection, 19 unattempted | Not measured: 1 rejection, 19 unattempted |
 
-![Précision et latence par taille de bibliothèque](https://raw.githubusercontent.com/speccy88/mia5150/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/figures/scaling.png)
+![Accuracy and latency by library size](https://raw.githubusercontent.com/speccy88/mia5150/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/figures/scaling.png)
 
-La baisse observée entre 50 et 2 000 skills est de 20 points pour Luna et Sol, et de 15 points pour Terra. Elle décrit ce jeu de questions et ces listes ; elle ne démontre pas une loi générale de dégradation. Les golds toujours placés au début ne testent notamment pas le cas où la réponse est enfouie au milieu d’un long contexte.
+From 50 to 2,000 skills, observed top-1 falls by 20 percentage points for Luna and
+Sol and 15 points for Terra. This describes these questions and candidate lists;
+it does not establish a general scaling law. Golds always at the beginning do not
+test retrieval of an answer buried in the middle of a long context.
 
-### Couverture, latence et tokens par taille et modèle
+### Coverage, latency and tokens by size and model
 
-Les tokens sont ceux de `response.completed.usage`, rapportés par le serveur. Les tokens de sortie incluent le raisonnement lorsqu’il est comptabilisé par le service. Les rejets ne retournent pas d’usage exploitable ; aucune estimation ne remplace ces valeurs manquantes.
+Tokens come from the server's `response.completed.usage`. Output usage includes
+reasoning where the service counts it. Rejections provide no usable token usage;
+missing values are not replaced by estimates.
 
-| Modèle | N | Réponses valides | Rejets | Non exécutés | Latence moyenne (s) | Tokens entrée, moyenne | Tokens sortie, moyenne |
+| Model | N | Valid responses | Rejections | Unattempted | Mean latency (s) | Mean input tokens | Mean output tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Luna | 50 | 20/20 | 0 | 0 | 2,408 | 2142,75 | 90,85 |
-| Luna | 100 | 20/20 | 0 | 0 | 2,697 | 4236,75 | 90,30 |
-| Luna | 250 | 20/20 | 0 | 0 | 2,861 | 11034,75 | 95,90 |
-| Luna | 500 | 20/20 | 0 | 0 | 3,061 | 21867,75 | 102,15 |
-| Luna | 1000 | 20/20 | 0 | 0 | 3,017 | 43843,75 | 111,35 |
-| Luna | 2000 | 20/20 | 0 | 0 | 3,190 | 89095,75 | 100,95 |
+| Luna | 50 | 20/20 | 0 | 0 | 2.408 | 2142.75 | 90.85 |
+| Luna | 100 | 20/20 | 0 | 0 | 2.697 | 4236.75 | 90.30 |
+| Luna | 250 | 20/20 | 0 | 0 | 2.861 | 11034.75 | 95.90 |
+| Luna | 500 | 20/20 | 0 | 0 | 3.061 | 21867.75 | 102.15 |
+| Luna | 1000 | 20/20 | 0 | 0 | 3.017 | 43843.75 | 111.35 |
+| Luna | 2000 | 20/20 | 0 | 0 | 3.190 | 89095.75 | 100.95 |
 | Luna | 5000 | 0/20 | 1 | 19 | — | — | — |
-| Sol 6.1 | 50 | 20/20 | 0 | 0 | 4,425 | 2142,75 | 67,40 |
-| Sol 6.1 | 100 | 20/20 | 0 | 0 | 5,248 | 4236,75 | 83,95 |
-| Sol 6.1 | 250 | 20/20 | 0 | 0 | 5,929 | 11034,75 | 109,95 |
-| Sol 6.1 | 500 | 20/20 | 0 | 0 | 6,472 | 21867,75 | 117,95 |
-| Sol 6.1 | 1000 | 20/20 | 0 | 0 | 6,130 | 43843,75 | 102,20 |
-| Sol 6.1 | 2000 | 20/20 | 0 | 0 | 7,507 | 89095,75 | 109,15 |
+| Sol 6.1 | 50 | 20/20 | 0 | 0 | 4.425 | 2142.75 | 67.40 |
+| Sol 6.1 | 100 | 20/20 | 0 | 0 | 5.248 | 4236.75 | 83.95 |
+| Sol 6.1 | 250 | 20/20 | 0 | 0 | 5.929 | 11034.75 | 109.95 |
+| Sol 6.1 | 500 | 20/20 | 0 | 0 | 6.472 | 21867.75 | 117.95 |
+| Sol 6.1 | 1000 | 20/20 | 0 | 0 | 6.130 | 43843.75 | 102.20 |
+| Sol 6.1 | 2000 | 20/20 | 0 | 0 | 7.507 | 89095.75 | 109.15 |
 | Sol 6.1 | 5000 | 0/20 | 1 | 19 | — | — | — |
-| Terra 6.1 | 50 | 20/20 | 0 | 0 | 2,721 | 2142,75 | 26,90 |
-| Terra 6.1 | 100 | 20/20 | 0 | 0 | 2,865 | 4236,75 | 32,70 |
-| Terra 6.1 | 250 | 20/20 | 0 | 0 | 2,946 | 11034,75 | 42,75 |
-| Terra 6.1 | 500 | 20/20 | 0 | 0 | 3,312 | 21867,75 | 47,80 |
-| Terra 6.1 | 1000 | 20/20 | 0 | 0 | 3,248 | 43843,75 | 50,20 |
-| Terra 6.1 | 2000 | 20/20 | 0 | 0 | 3,437 | 89095,75 | 59,35 |
+| Terra 6.1 | 50 | 20/20 | 0 | 0 | 2.721 | 2142.75 | 26.90 |
+| Terra 6.1 | 100 | 20/20 | 0 | 0 | 2.865 | 4236.75 | 32.70 |
+| Terra 6.1 | 250 | 20/20 | 0 | 0 | 2.946 | 11034.75 | 42.75 |
+| Terra 6.1 | 500 | 20/20 | 0 | 0 | 3.312 | 21867.75 | 47.80 |
+| Terra 6.1 | 1000 | 20/20 | 0 | 0 | 3.248 | 43843.75 | 50.20 |
+| Terra 6.1 | 2000 | 20/20 | 0 | 0 | 3.437 | 89095.75 | 59.35 |
 | Terra 6.1 | 5000 | 0/20 | 1 | 19 | — | — | — |
 
-Les 360 réponses valides totalisent **10 333 290 tokens d’entrée** et **28 836 tokens de sortie rapportés**. Les essais d’admission, séparés de ces résultats, totalisent 429 tokens d’entrée et 50 de sortie. Les totaux n’imputent aucun faux zéro d’usage aux trois rejets.
+The 360 valid responses report **10,333,290 input tokens** and **28,836 output
+tokens**. Separate admission probes report 429 input tokens and 50 output tokens.
+No fabricated zero usage is assigned to the three rejections.
 
-### Qualité du classement
+### Ranking quality
 
-| Modèle | N | R@1 | R@3 | R@5 | R@10 | MRR@10 | NDCG@10 |
+| Model | N | R@1 | R@3 | R@5 | R@10 | MRR@10 | NDCG@10 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Luna | 50 | 85,0 % | 90,0 % | 95,0 % | 95,0 % | 0,8767 | 0,8943 |
-| Luna | 100 | 80,0 % | 85,0 % | 85,0 % | 95,0 % | 0,8368 | 0,8624 |
-| Luna | 250 | 75,0 % | 85,0 % | 85,0 % | 85,0 % | 0,7917 | 0,8065 |
-| Luna | 500 | 70,0 % | 80,0 % | 80,0 % | 80,0 % | 0,7417 | 0,7565 |
-| Luna | 1000 | 65,0 % | 70,0 % | 75,0 % | 85,0 % | 0,7030 | 0,7376 |
-| Luna | 2000 | 65,0 % | 75,0 % | 85,0 % | 85,0 % | 0,7117 | 0,7452 |
-| Sol 6.1 | 50 | 90,0 % | 95,0 % | 100,0 % | 100,0 % | 0,9267 | 0,9443 |
-| Sol 6.1 | 100 | 70,0 % | 90,0 % | 95,0 % | 100,0 % | 0,8183 | 0,8633 |
-| Sol 6.1 | 250 | 70,0 % | 80,0 % | 90,0 % | 90,0 % | 0,7558 | 0,7909 |
-| Sol 6.1 | 500 | 70,0 % | 80,0 % | 80,0 % | 85,0 % | 0,7488 | 0,7732 |
-| Sol 6.1 | 1000 | 65,0 % | 70,0 % | 75,0 % | 80,0 % | 0,6931 | 0,7181 |
-| Sol 6.1 | 2000 | 70,0 % | 70,0 % | 75,0 % | 80,0 % | 0,7183 | 0,7372 |
-| Terra 6.1 | 50 | 85,0 % | 95,0 % | 95,0 % | 95,0 % | 0,8833 | 0,9000 |
-| Terra 6.1 | 100 | 75,0 % | 85,0 % | 90,0 % | 90,0 % | 0,8017 | 0,8259 |
-| Terra 6.1 | 250 | 75,0 % | 80,0 % | 85,0 % | 95,0 % | 0,7981 | 0,8326 |
-| Terra 6.1 | 500 | 80,0 % | 80,0 % | 80,0 % | 80,0 % | 0,8000 | 0,8000 |
-| Terra 6.1 | 1000 | 65,0 % | 75,0 % | 80,0 % | 80,0 % | 0,7100 | 0,7324 |
-| Terra 6.1 | 2000 | 70,0 % | 75,0 % | 75,0 % | 80,0 % | 0,7333 | 0,7494 |
+| Luna | 50 | 85.0% | 90.0% | 95.0% | 95.0% | 0.8767 | 0.8943 |
+| Luna | 100 | 80.0% | 85.0% | 85.0% | 95.0% | 0.8368 | 0.8624 |
+| Luna | 250 | 75.0% | 85.0% | 85.0% | 85.0% | 0.7917 | 0.8065 |
+| Luna | 500 | 70.0% | 80.0% | 80.0% | 80.0% | 0.7417 | 0.7565 |
+| Luna | 1000 | 65.0% | 70.0% | 75.0% | 85.0% | 0.7030 | 0.7376 |
+| Luna | 2000 | 65.0% | 75.0% | 85.0% | 85.0% | 0.7117 | 0.7452 |
+| Sol 6.1 | 50 | 90.0% | 95.0% | 100.0% | 100.0% | 0.9267 | 0.9443 |
+| Sol 6.1 | 100 | 70.0% | 90.0% | 95.0% | 100.0% | 0.8183 | 0.8633 |
+| Sol 6.1 | 250 | 70.0% | 80.0% | 90.0% | 90.0% | 0.7558 | 0.7909 |
+| Sol 6.1 | 500 | 70.0% | 80.0% | 80.0% | 85.0% | 0.7488 | 0.7732 |
+| Sol 6.1 | 1000 | 65.0% | 70.0% | 75.0% | 80.0% | 0.6931 | 0.7181 |
+| Sol 6.1 | 2000 | 70.0% | 70.0% | 75.0% | 80.0% | 0.7183 | 0.7372 |
+| Terra 6.1 | 50 | 85.0% | 95.0% | 95.0% | 95.0% | 0.8833 | 0.9000 |
+| Terra 6.1 | 100 | 75.0% | 85.0% | 90.0% | 90.0% | 0.8017 | 0.8259 |
+| Terra 6.1 | 250 | 75.0% | 80.0% | 85.0% | 95.0% | 0.7981 | 0.8326 |
+| Terra 6.1 | 500 | 80.0% | 80.0% | 80.0% | 80.0% | 0.8000 | 0.8000 |
+| Terra 6.1 | 1000 | 65.0% | 75.0% | 80.0% | 80.0% | 0.7100 | 0.7324 |
+| Terra 6.1 | 2000 | 70.0% | 75.0% | 75.0% | 80.0% | 0.7333 | 0.7494 |
 
-Les métriques complètes à K = 1, 3, 5 et 10 figurent dans les CSV. Avec un seul gold, un hit à un rang r ≤ K donne R@K = 1, P@K = 1/K, NDCG@K = 1/log2(r+1), MRR@K = AP@K = 1/r. Ainsi P@10 ne peut pas dépasser 0,1 ; ce n’est pas une précision de sélection top-1 de 10 %.
+The CSVs contain all metrics at K = 1, 3, 5 and 10. With one gold item, a hit at
+rank r ≤ K gives R@K = 1, P@K = 1/K, NDCG@K = 1/log2(r+1), and MRR@K = AP@K = 1/r.
+P@10 therefore cannot exceed 0.1; it is not a 10% top-1 selection precision.
 
-| Modèle | Noms invalides dans les listes, cumul | Top-1 supplémentaire par fallback de casse |
+| Model | Invalid names in ranked lists, total | Additional top-1 hits from case fallback |
 | --- | --- | --- |
 | Luna | 30 | 0 |
 | Sol 6.1 | 4 | 0 |
 | Terra 6.1 | 1 | 0 |
 
-Une réponse « valide » signifie ici qu’elle a terminé sans erreur technique et contient au moins un nom reconnu. Elle peut encore contenir des noms invalides dans d’autres rangs. Les positions invalides et les répétitions sont conservées : une bonne réponse classée deuxième n’est jamais promue première après suppression d’une mauvaise entrée. Le fallback de casse est suivi séparément ; il n’a ajouté aucun succès top-1 dans ce run.
+A “valid response” here completes without a technical error and contains at least
+one recognized name. Other ranks can still contain invalid names. Invalid slots
+and duplicates retain their positions: removing a bad first entry never promotes
+a correct second entry to first. Case fallback is tracked separately and added
+no top-1 success in this run.
 
-## Incertitude : 20 questions, pas 140 observations indépendantes
+## Uncertainty: 20 questions, not 140 independent observations
 
-Les 120 réponses valides d’un modèle sont 20 questions répétées sur six tailles. Un intervalle binomial calculé comme si n = 120 ou 140 était indépendant sous-estimerait cette dépendance. Pour la moyenne globale, le bootstrap rééchantillonne **20 blocs « question »** ; chaque bloc conserve ses six tailles et les trois modèles. Les comparaisons entre modèles utilisent les mêmes indices rééchantillonnés : 10 000 réplicats, graine d’analyse 20261103, intervalles percentiles à 95 %.
+A model's 120 valid responses are 20 questions repeated at six sizes. Treating
+n = 120 or 140 as independent would ignore that dependence. For the overall mean,
+the bootstrap resamples **20 question clusters**, keeping all six sizes and all
+three models together within each cluster. Model comparisons use the same
+resampled indices: 10,000 replicates, analysis seed 20261103, percentile 95% intervals.
 
-| Modèle | Moyenne sur les six tailles | Intervalle bootstrap par question, 95 % |
+| Model | Mean across six sizes | Question-cluster bootstrap interval, 95% |
 | --- | --- | --- |
-| Luna | 73,3 % | 55,0–90,0 % |
-| Sol 6.1 | 72,5 % | 54,2–90,0 % |
-| Terra 6.1 | 75,0 % | 56,7–90,8 % |
+| Luna | 73.3% | 55.0–90.0% |
+| Sol 6.1 | 72.5% | 54.2–90.0% |
+| Terra 6.1 | 75.0% | 56.7–90.8% |
 
-| Comparaison, gauche moins droite | Écart observé (points) | Intervalle apparié 95 % (points) |
+| Comparison, left minus right | Observed difference (pp) | Paired 95% interval (pp) |
 | --- | --- | --- |
-| Luna − Sol 6.1 | 0,83 | -2,50 à 4,17 |
-| Luna − Terra 6.1 | -1,67 | -5,83 à 1,67 |
-| Sol 6.1 − Terra 6.1 | -2,50 | -8,33 à 1,67 |
+| Luna − Sol 6.1 | 0.83 | -2.50 to 4.17 |
+| Luna − Terra 6.1 | -1.67 | -5.83 to 1.67 |
+| Sol 6.1 − Terra 6.1 | -2.50 | -8.33 to 1.67 |
 
-Tous les intervalles appariés contiennent zéro. Cela ne prouve pas l’égalité des modèles ; l’échantillon ne permet pas d’affirmer une supériorité fiable. Les intervalles de Wilson par taille supposent des cas Bernoulli distincts conditionnellement à la liste. Le bootstrap décrit la sensibilité à ces 20 cas, avec listes et paramètres observés fixés. Ni l’un ni l’autre ne couvre le biais de position, la fuite des noms, les autres graines de bibliothèques, la variabilité du décodage ou toute la population des tâches. Ils restent descriptifs, sans correction de multiplicité ni revendication confirmatoire.
+All paired intervals include zero. This does not prove equal model performance;
+the sample cannot establish a reliable superiority claim. Per-size Wilson
+intervals assume distinct Bernoulli cases conditional on the candidate list.
+The bootstrap describes sensitivity to these 20 cases with observed lists and
+settings held fixed. Neither method accounts for position bias, name leakage,
+other library seeds, decoding variability or the full task population. These are
+descriptive intervals without multiplicity correction or confirmatory claims.
 
-## Audit du protocole et limites qui changent l’interprétation
+## Protocol audit and interpretation-changing limitations
 
-### Le gold est toujours au début, et non forcé à la fin dans ce run
+### Golds are always at the beginning in this run
 
-La reconstruction indépendante suit exactement l’ordre reçu, `random.Random(42).sample(all_skills, N)`, puis remplace le dernier élément seulement si le `gold_id` est absent. Pour les trois modèles, **les 140 séquences ordonnées de candidats et leurs empreintes de messages logiques correspondent aux manifestes du run**.
+Independent reconstruction uses the received record order,
+`random.Random(42).sample(all_skills, N)`, then replaces the last item only when
+the gold ID is absent. For each model, **all 140 ordered candidate sequences and
+logical-message hashes match the recorded run manifests**.
 
-| N, IDs | Noms distincts | Gold remplacés en dernier | Positions des 20 golds | Caractères dans instructions |
+| N, IDs | Distinct names | Golds inserted at the last position | Positions of the 20 golds | Instruction string characters |
 | --- | --- | --- | --- | --- |
-| 50 | 50 | 0 | 1 à 20, dans l’ordre des questions | 10 295 |
-| 100 | 100 | 0 | 1 à 20, dans l’ordre des questions | 20 851 |
-| 250 | 250 | 0 | 1 à 20, dans l’ordre des questions | 54 255 |
-| 500 | 499 | 0 | 1 à 20, dans l’ordre des questions | 108 801 |
-| 1000 | 992 | 0 | 1 à 20, dans l’ordre des questions | 217 958 |
-| 2000 | 1973 | 0 | 1 à 20, dans l’ordre des questions | 438 935 |
-| 5000 | 4856 | 0 | 1 à 20, dans l’ordre des questions | 1 094 067 |
+| 50 | 50 | 0 | 1–20, in question order | 10 295 |
+| 100 | 100 | 0 | 1–20, in question order | 20 851 |
+| 250 | 250 | 0 | 1–20, in question order | 54 255 |
+| 500 | 499 | 0 | 1–20, in question order | 108 801 |
+| 1000 | 992 | 0 | 1–20, in question order | 217 958 |
+| 2000 | 1973 | 0 | 1–20, in question order | 438 935 |
+| 5000 | 4856 | 0 | 1–20, in question order | 1 094 067 |
 
-Les gold IDs du fichier reçu coïncident aussi exactement, dans l’ordre des questions, avec `random.Random(42).sample(all_skills, 20)`. C’est un couplage effectif du jeu de questions et du tirage de candidats. La règle de remplacement en dernière position demeure une limite potentielle du protocole général, mais **elle n’a pas été activée ici**. L’hypothèse de tirages indépendants donnant environ 0,8 % de présence à N=50 ne décrit donc pas ce run. L’avantage positionnel observé est un biais de début de liste. Rien n’a été réordonné après découverte de ce point.
+The received gold IDs also exactly match `random.Random(42).sample(all_skills, 20)`
+in question order. Question selection and candidate sampling are therefore
+effectively coupled. Last-position replacement remains a potential limitation
+of the general protocol, but **it never activated here**. An independent-draw
+assumption giving about 0.8% gold inclusion at N=50 does not describe this run.
+The observed placement concern is beginning-of-list bias. No list was reordered
+after discovering the problem.
 
-### Noms dupliqués, fuite des noms et pertinence unique
+### Duplicate names, lexical hints and a single relevant label
 
-Les sources contiennent **6 006 IDs pour 5 801 noms distincts**, soit **153 groupes de noms dupliqués et 358 enregistrements concernés**. Trois des 20 golds portent un nom non unique dans la source. Aucun dédoublonnage n’a été effectué. Un modèle répondant uniquement par nom ne peut pas distinguer deux IDs portant le même nom : ces scores portent sur le **nom attendu**, pas sur une identité UUID prouvée.
+There are **6,006 IDs but 5,801 distinct names**, comprising **153 duplicate-name
+groups and 358 affected records**. Three of the 20 gold names are nonunique in
+the full source. No deduplication was performed. A name-only response cannot
+distinguish two IDs with the same name, so these scores evaluate the **expected
+name**, not proven UUID identification.
 
-Une vérification conservatrice trouve une correspondance exacte du nom normalisé dans **6 requêtes sur 20** (casse et séparateurs normalisés). Ce comptage n’exclut pas d’autres indices lexicaux dans les 14 restantes. Les requêtes guidées par le nom rendent le test en partie lexical. De plus, un seul gold est fourni alors que plusieurs skills peuvent être sémantiquement acceptables ; une alternative pertinente peut donc être comptée fausse. Aucune annotation n’a été corrigée après lecture des sorties.
+A conservative check finds an exact normalized name phrase in **six of the 20
+queries**, ignoring case and separator differences. The other 14 can still contain
+lexical hints. Name-guided tasks partly test lexical matching. Only one gold is
+provided even when multiple skills might be semantically appropriate, so a
+reasonable alternative can be scored wrong. No annotation was changed after
+examining the outputs.
 
-### Le rejet à 5 000 est une limite d’enveloppe, pas une mesure de contexte
+### The 5,000-skill rejection measures a transport envelope, not token context
 
-À N=5 000, la chaîne `instructions` reconstruite contient **1 094 067 caractères** (1 095 016 octets UTF-8). Les trois services ont renvoyé `string_above_max_length`. Les réponses assainies conservées ne donnent pas la valeur maximale exacte du champ ; elle n’est donc pas inventée ici. Le code d’erreur est un rejet de longueur de chaîne, et les indicateurs `context_limit` restent faux. Il ne permet pas de conclure que les modèles eux-mêmes ne peuvent pas traiter les tokens correspondants.
+At N=5,000, reconstructed `instructions` contains **1,094,067 characters**
+(1,095,016 UTF-8 bytes). All three routes returned `string_above_max_length`.
+Retained sanitized responses do not state the field's exact maximum, so no
+maximum is invented. `context_limit` remains false. This string-length rejection
+cannot establish that the models themselves cannot process the corresponding tokens.
 
-Le catalogue OAuth du compte annonçait **272 000 tokens pour Luna** et **500 000 pour Sol et Terra**, contre un maximum de 1 050 000 sur les fiches API publiques. Les limites du catalogue authentifié ont été utilisées. La barrière v1 `44,5 × N + 200 > 90 % de la fenêtre` n’a bloqué aucun essai : à 5 000, elle estimait 222 700 tokens. C’est une estimation, pas un comptage réel du prompt rejeté. Aucun dépassement de contexte en tokens n’a été mesuré.
+The authenticated OAuth catalog advertised **272,000 tokens for Luna** and
+**500,000 for Sol and Terra**, versus a 1,050,000 maximum on the public API cards.
+The authenticated limits were used. The v1 gate
+`44.5 × N + 200 > 90% of the window` blocked no case: it estimated 222,700 tokens
+at N=5,000. That is an estimate, not an actual count of the rejected prompt.
+No token-context overflow was measured.
 
-### Différences OAuth et comparabilité cloud
+### OAuth differences and cloud comparability
 
-La voie officielle OAuth utilise Responses en streaming, `store=false`, et le texte système dans `instructions`. Elle ne permet pas d’imposer `temperature=0` ni `max_output_tokens=500` : ces champs sont absents, sans modification silencieuse. Le raisonnement n’a pas été fixé dans la requête ; les 360 réponses terminées déclarent `medium`. Il n’y a eu ni outil agent, ni retrieval externe, ni exécution des skills. Les descriptions sont limitées à 300 caractères Unicode par le protocole.
+The official OAuth route uses streamed Responses, `store=false`, and the system
+text in `instructions`. It does not support imposing `temperature=0` or
+`max_output_tokens=500`; those fields are omitted explicitly. Reasoning effort
+was not requested; all 360 completed responses report `medium`. No agent tools,
+external retrieval or skill execution were used. Descriptions are capped at
+300 Unicode characters by the protocol.
 
-Les modèles ont été exécutés séquentiellement, avec une pause d’une seconde hors latence par requête. Le cache de préfixe du fournisseur n’est pas contrôlé sur cette route. Les latences de sorties de longueurs différentes ne sont pas des mesures matérielles comparables à des modèles locaux GPU. Les alias de modèles n’ont pas été remplacés par des versions datées inventées ; l’identité renvoyée par le serveur a été auditée pendant le run.
+Models ran sequentially, with a one-second inter-request delay outside measured
+latency. Provider prefix caching is uncontrolled. Different output lengths and
+service boundaries prevent interpreting these timings as hardware comparisons
+against local GPU models. Model aliases were not replaced by invented dated
+versions; actual server-returned identity was audited during execution.
 
-Les deux fichiers reçus et le sampling littéral sont vérifiés, mais le runner et les candidats ordonnés du run cloud de référence n’ont pas été fournis. Il faut vérifier la portée de son RNG, les chaînes effectives, le tokenizer, les paramètres et les dénominateurs avant toute fusion de courbes. La formule de précision de sélection est TP / requêtes valides ; le rappel de sélection sur tous les cas est TP / 20 à une taille entièrement exécutée. Le rappel n’est pas simplement le taux de réponses : une réponse fausse n’est pas un TP. La disponibilité est une mesure séparée.
+The supplied files and literal sampling recipe are verified, but the reference
+cloud runner and ordered candidate lists were unavailable. Its RNG scope, exact
+messages, tokenizer, settings and denominators need checking before curves can
+be combined. Selection precision is TP / valid queries; selection recall across
+all cases is TP / 20 at a fully executed size. Recall is not merely a response
+rate: a wrong response is not a true positive. Availability is reported separately.
 
-## Validation et reproduction
+## Validation and reproduction
 
-- Schéma exact de 45 colonnes, unicité de 140 couples taille/question par modèle et golds concordants.
-- Correspondance champ par champ entre CSV et snapshot transactionnel SQLite des 363 essais enregistrés.
-- Recalcul indépendant de toutes les métriques à K, des sommes de tokens et des dénominateurs ; latences finies et non négatives ; coûts inconnus laissés vides.
-- Vérification indépendante des séquences de candidats et hashes des 140 messages logiques pour chacun des trois modèles.
-- **28 tests synthétiques réussis**, sans nouvelle inférence. Un test a mis en évidence un verrou de fichier Windows transitoire ; le runner partageable ajoute un retry borné du remplacement atomique du fichier, jamais du POST modèle. Le code exact mesuré reste archivé séparément.
+- Exact 45-column schema, 140 unique size/question pairs per model, matching golds.
+- Field-by-field CSV agreement with transactional SQLite snapshots for all
+  363 recorded attempts.
+- Independent recalculation of every K metric, token totals and denominators;
+  finite nonnegative latencies; unknown monetary costs left blank.
+- Independent checks of candidate sequences and all 140 logical-message hashes
+  for each model.
+- **28 synthetic tests passed**, without new inference. A test exposed a transient
+  Windows file lock. The distributed runner adds bounded retries for atomic file
+  replacement only, never for an inference POST. Exact measured code is archived.
 
-Les classements/rangs exportés sont conservés, ainsi que les hashes des réponses. Le texte HTTP intégral des réponses n’a pas été sauvegardé ; on ne peut donc pas réauditer indépendamment chaque normalisation de format ou de suffixe à partir du texte brut. Le contrôle arithmétique ne doit pas être présenté comme une validation sémantique des golds.
+Normalized rankings, ranks and response hashes are retained. Full HTTP response
+text was not saved, so every formatting/suffix normalization cannot be replayed
+independently from raw text. Arithmetic validation is not semantic validation
+of the gold labels.
 
-Le paquet fournit une dérivée minimale des données : ID, nom et les 300 premiers caractères de description, dans l’ordre original. **Les 140 prompts logiques restent identiques**, ce qui est vérifié contre les manifestes. Le fichier complet original de 117,6 Mo, avec corps de skills inutilisés, n’est pas redistribué. Les deux hashes d’origine et le hash de la dérivée figurent dans [la provenance des données](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/PROVENANCE.json). Le runner de reproduction accepte explicitement le hash de cette dérivée ; le code exact utilisé pour les mesures reste dans `source-original/`. Cette adaptation de packaging et le retry de fichiers ne sont pas une correction du sampling v1 et ne changent aucun résultat mesuré.
+The public dataset is a minimal derivative: ID, name and the first 300 description
+characters in original order. **All 140 logical prompts remain identical** to
+the manifests. The unused full skill bodies from the 117.6 MB original are not
+redistributed. Original and derivative hashes are recorded in
+[data provenance](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/PROVENANCE.json). The reproduction runner explicitly
+accepts the derivative hash; exact measured sources remain in `source-original/`.
+Packaging and filesystem retries neither fix v1 sampling nor alter measured results.
+The [attribution companion](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/ATTRIBUTION.md) restores source author handles,
+repository URLs and received MIT/Apache labels without entering any model prompt.
 
-Pour reproduire les calculs et les figures sans appeler de modèle :
+To reproduce calculations and plots without calling a model:
 
 ```powershell
 python -m venv .venv
@@ -606,32 +713,58 @@ python -m venv .venv
 .\.venv\Scripts\python.exe analyze_public.py
 ```
 
-Pour refaire des mesures, installer séparément les dépendances OAuth, connecter son propre compte et exécuter l’admission avant la suite, comme décrit dans [README.md](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/README.md). Cela consomme l’usage de ce compte et peut produire d’autres réponses ; aucun nouveau run n’a été lancé pour ce rapport. Aucun fichier d’accès, état OAuth, identifiant d’installation, lien de review, jeton DPAPI ou journal sensible ne fait partie du paquet.
+New measurements require installing OAuth dependencies, connecting one's own
+account and running admission before the suite, as described in [README.md](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/README.md).
+That consumes the consenting account's usage and may produce different outputs.
+No new run was made for reporting. Credentials, OAuth state, installation IDs,
+review links, DPAPI tokens and sensitive logs are excluded.
 
-## Corrections proposées pour une v2 distincte
+## Proposed scientific v2, kept separate
 
-1. **Séparer les flux aléatoires** de sélection des questions, des candidats et de leur ordre. Après inclusion du gold, mélanger systématiquement la liste, même si le gold était déjà présent. Contrôler et, si souhaité, équilibrer les positions début/milieu/fin. Enregistrer plusieurs graines et la position exacte du gold.
-2. **Écrire davantage de tâches indépendantes sans nom de skill**, avec diversité de domaines et revue à l’aveugle. Partir d’un jeu pilote d’au moins 100 cas, puis dimensionner l’échantillon selon la précision statistique recherchée ; ce nombre n’est pas une garantie de puissance.
-3. **Annoter plusieurs réponses pertinentes lorsque nécessaire** et utiliser des IDs non ambigus. Adapter explicitement les métriques IR à plusieurs golds. Garder séparés le respect du format, la validité des noms, la disponibilité et la qualité sémantique.
-4. **Traiter la limite de transport avant les grands runs** : mesurer caractères/octets/tokens et tester un format d’entrée officiellement accepté. Une modification de découpage ou de rôle des messages doit être nommée, validée et comparée dans un bras distinct ; aucune entrée refusée n’a été fractionnée ou retentée dans v1.
-5. **Séparer les conditions OAuth et API/locales**. Consigner les contrôles effectivement supportés et le raisonnement observé ; répéter le décodage pour estimer sa variabilité. Ne pas supposer que tous les modèles acceptent température, seed ou plafond de sortie.
-6. **Préenregistrer l’analyse et conserver les éléments d’audit utiles** : texte des sorties si le cadre de partage le permet, paramètres effectifs, traces d’erreurs assainies, ordre/positions, usages et cache lorsqu’ils sont fournis. Rapporter les comparaisons appariées par question et distinguer l’incertitude d’échantillonnage des biais systématiques.
+1. Use **independent random streams** for question selection, candidates and
+   ordering. Shuffle after gold inclusion even when the gold was already present.
+   Record multiple seeds and exact positions; optionally balance beginning,
+   middle and end placements.
+2. Write **more independent tasks without skill names**, diversify domains and
+   review labels blind. A pilot of at least 100 cases is a starting point;
+   determine final sample size from the desired precision, not a guaranteed-power claim.
+3. Annotate **multiple relevant answers where appropriate** and use unambiguous
+   IDs. Adapt IR metrics explicitly; distinguish formatting, recognized names,
+   availability and semantic relevance.
+4. Check **transport limits before large runs** using character, byte and token
+   counts and an officially supported input format. Any message splitting or
+   role change is a separately named and validated condition. No rejected v1
+   request was split or retried.
+5. Keep **OAuth and API/local conditions separate**. Record supported controls
+   and observed reasoning, and repeat decoding to estimate variability. Do not
+   assume all models support temperature, seeds or output caps.
+6. **Preregister analysis and retain useful audit records**: output text when
+   shareable, effective settings, sanitized errors, order/positions, usage and
+   caching when provided. Use question-paired comparisons and distinguish
+   sampling uncertainty from systematic bias.
 
-Ces propositions n’ont pas été appliquées rétroactivement. Les trois jeux de résultats v1 restent intacts ; un nouveau protocole demanderait une nouvelle exécution séparée.
+These proposals were not applied retrospectively. Original v1 results remain
+intact; a revised scientific protocol requires a separate execution.
 
-## Sources et fichiers d’appui
+## Sources and supporting files
 
-- Données fournies : `test.jsonl` et `test_queries.json`, hashes SHA-256 d’origine dans [PROVENANCE.json](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/PROVENANCE.json).
-- [Résultats Luna](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6-luna/details.csv), [Sol](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-sol/details.csv), [Terra](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-terra/details.csv), [analyse reproductible](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/analysis.json), [avertissement méthodologique](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/METHODOLOGY_WARNING.json).
-- [OpenAI — usage du forfait OAuth et inférence](https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference).
-- [OpenAI — limitations de la route OAuth](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations).
-- [Fiche API Luna](https://developers.openai.com/api/docs/models/gpt-6-luna), [Sol 6.1](https://developers.openai.com/api/docs/models/gpt-6.1-sol), [Terra 6.1](https://developers.openai.com/api/docs/models/gpt-6.1-terra). Les valeurs de catalogue OAuth observées sont conservées séparément, sans identité de compte.
+- Supplied `test.jsonl` and `test_queries.json`; original hashes in
+  [PROVENANCE.json](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/PROVENANCE.json).
+- [Luna results](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6-luna/details.csv), [Sol](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-sol/details.csv),
+  [Terra](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-terra/details.csv), [reproducible analysis](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/analysis.json),
+  [methodology warning](https://github.com/speccy88/mia5150/blob/main/experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/METHODOLOGY_WARNING.json).
+- [OpenAI: OAuth subscription usage and inference](https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference).
+- [OpenAI: OAuth route limitations](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations).
+- API cards: [Luna](https://developers.openai.com/api/docs/models/gpt-6-luna),
+  [Sol 6.1](https://developers.openai.com/api/docs/models/gpt-6.1-sol),
+  [Terra 6.1](https://developers.openai.com/api/docs/models/gpt-6.1-terra).
+  Observed account-catalog limits are retained separately without account identity.
 
-### Admission, hors scores de benchmark
+### Admission probes, excluded from benchmark scores
 
-| Modèle | Résultat | Durée (s) | Tokens entrée / sortie |
+| Model | Result | Duration (s) | Input / output tokens |
 | --- | --- | --- | --- |
-| Luna | Admis, réponse exacte | 2,154 | 143 / 32 |
-| Sol 6.1 | Admis, réponse exacte | 2,010 | 143 / 9 |
-| Terra 6.1 | Admis, réponse exacte | 2,038 | 143 / 9 |
+| Luna | Admitted, exact response | 2.154 | 143 / 32 |
+| Sol 6.1 | Admitted, exact response | 2.010 | 143 / 9 |
+| Terra 6.1 | Admitted, exact response | 2.038 | 143 / 9 |
 

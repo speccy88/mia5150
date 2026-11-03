@@ -16,10 +16,10 @@ def main():
     for row in audited['summary']:
         by_model[row['model']].append(row)
     lines=['# Skill Discovery — lot local Windows', '',
-        'État au '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'.', '',
-        'Ce fichier est une section destinée au rapport commun. Il ne déclenche aucun envoi ni publication.', '',
-        '## État des 18 modèles', '',
-        '| Modèle demandé | État | Lignes enregistrées | Réponses mesurées | Sorties sans erreur | Top-1 / réponses mesurées |',
+        'Status at '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'.', '',
+        'This file supplies a section of the combined report. Generating it does not send messages or publish anything.', '',
+        '## Status of the 18 requested models', '',
+        '| Requested model | Status | Recorded rows | Measured responses | Outputs without errors | Top-1 / measured responses |',
         '|---|---|---:|---:|---:|---:|']
     checks={r['model']:r for r in audited['checks']}
     for job in jobs:
@@ -29,9 +29,9 @@ def main():
         hit=sum(r['strict_top1_hits'] for r in rows)
         state='en attente'
         if job.get('blocked'):
-            state='accès gated : acceptation utilisateur requise'
+            state='gated access: user acceptance required'
         elif alias in checks:
-            state='export complet' if checks[alias]['complete'] else 'en cours'
+            state='complete export' if checks[alias]['complete'] else 'in progress'
             errors=collections.Counter()
             for r in rows:
                 errors.update(r['errors'])
@@ -39,27 +39,27 @@ def main():
             if operational:
                 state+='; '+', '.join(f'{k}={v}' for k,v in operational.items())
         lines.append(f"| {job['requested']} | {state} | {sum(r['recorded_rows'] for r in rows)} | {measured} | {sum(r['valid_nonerror_rows'] for r in rows)} | {hit}/{measured} ({percent(hit/measured if measured else None)}) |")
-    lines += ['', 'Un export de 140 lignes signifie que les issues ont été enregistrées, pas que 140 appels ont réussi. Les erreurs matérielles, les accès bloqués et les dépassements de contexte ne constituent pas des observations de précision nulle.', '',
-        '## Résultats par taille', '',
-        '| Modèle | N | Réponses mesurées | Top-1 exact | Top-10 exact | Précision Top-1, sorties sans erreur | Erreurs/limites |',
+    lines += ['', 'A 140-row export records all outcomes; it does not mean 140 calls succeeded. Hardware failures, blocked access and context exclusions are not observed zero-accuracy results.', '',
+        '## Results by library size', '',
+        '| Model | N | Measured responses | Top-1 exact | Top-10 exact | Top-1 precision, non-error outputs | Erreurs/limites |',
         '|---|---:|---:|---:|---:|---:|---|']
     for r in audited['summary']:
         counts=', '.join(f'{k}: {v}' for k,v in r['errors'].items()) or 'en attente'
         lines.append(f"| {r['model']} | {r['library_size']} | {r['measured_inference_rows']} | {percent(r['top1_rate_measured'])} | {percent(r['top10_rate_measured'])} | {percent(r['top1_precision_valid'])} | {counts} |")
-    lines += ['', 'Les taux mesurés utilisent exclusivement les lignes portant des tokens réels d’entrée et de sortie. La précision sur les sorties sans erreur a un dénominateur distinct. Les rangs invalides ou répétés restent à leur position; ils ne sont jamais retirés pour promouvoir une réponse.', '',
-        '## Protocole et limites qui changent l’interprétation', '',
-        '- Données fournies : 6 006 skills, 5 801 noms distincts, 20 questions exactes. Sept tailles : 50, 100, 250, 500, 1 000, 2 000, 5 000. Aucun dédoublonnage.',
-        '- Chaque taille réinitialise `random.Random(42).sample(all_skills, N)`. Chaque question garde cette bibliothèque, avec remplacement du dernier élément uniquement si son gold ID est absent. Les prompts utilisent seulement le nom et la description tronquée à 300 caractères; aucun corps complet.',
-        '- **Biais de position vérifié :** les 20 gold IDs fournis sont déjà les 20 premiers éléments de cet échantillonnage de seed 42. Ils occupent donc les positions 1–20 à toutes les tailles; aucun remplacement final ne s’applique sur ces données. Ce n’est pas un préfixage ajouté au runner. Les plans locaux et Luna/Sol/Terra examinés sont identiques. Ce lot ne mesure pas une recherche à positions uniformément réparties. Toute variante corrigée devra avoir une version et un run distincts.',
-        '- Serveur local demandé et vérifié quand chargé : contexte réel 32 768, un slot, toutes les couches et le KV f16 sur CUDA, `fit=off`, sans context shift, sans warmup, sans cache RAM ni checkpoints. Batch 512 / microbatch 128. CPU réservé à la tokenisation/au contrôle et à la préparation des fichiers; aucune inférence CPU ni offload partiel.',
-        '- Tokenisation réelle par `/apply-template` puis `/tokenize`, passage des IDs à `/completion`, température 0, seed 42, plafond 500 tokens de sortie; aucune troncature admise. La barrière v1 estimée `44.5*N+200 > 90% du contexte` bloque les tailles 1 000/2 000/5 000 à ce contexte, soit 60 lignes par modèle. Cette estimation n’est pas un comptage de tokens.',
-        '- Le mode thinking par défaut du modèle est conservé. Un plafond de 500 tokens peut être consommé par le raisonnement avant la liste attendue; les sorties invalides et le nombre de réponses au plafond restent explicitement visibles dans les preuves.',
-        '- Les quantifications diffèrent selon les artefacts disponibles. Les résultats comparent ces variantes précises, pas seulement des nombres de paramètres.',
-        '- La variante OAuth hôte n’impose ni température 0 ni plafond de sortie 500. Même avec des candidats identiques, ses paramètres ne sont donc pas strictement équivalents au local. Le runner original de Vincent n’a pas été fourni à ce lot; aucune reproduction octet pour octet de son exécution n’est revendiquée.',
-        '- Les 20 questions constituent un petit échantillon, en partie lexical; les noms dupliqués empêchent de résoudre exactement certains IDs dans le format de réponse par noms.',
-        '- Les temps sont ceux des appels dans cet environnement Windows 16 Go de RAM. Des téléchargements, installations et conversions CPU préparatoires ont eu lieu en parallèle de certains modèles; ces latences ne constituent pas un essai de vitesse isolé. Coût de service local 0 USD, hors électricité.', '',
-        '## Artefacts et identités', '',
-        '| Modèle | Quantification / provenance | Source éditeur vérifiée |',
+    lines += ['', 'Measured rates use only rows with actual input and output token usage. Precision conditional on non-error outputs uses a different denominator. Invalid or duplicate ranks remain in place; removing them never promotes a correct answer.', '',
+        '## Protocol and interpretation-changing limitations', '',
+        '- Supplied inputs: 6,006 skills, 5,801 distinct names and 20 exact questions. Seven sizes: 50, 100, 250, 500, 1,000, 2,000 and 5.000. No deduplication.',
+        '- Each size restarts `random.Random(42).sample(all_skills, N)`. Every question keeps that library, replacing the last item only when its gold ID is absent. Prompts use only the name and first 300 description characters, without full skill bodies.',
+        '- **Verified position bias:** the 20 supplied gold IDs are already the first 20 seed-42 samples. They occupy positions 1–20 at every size; no final replacement occurs. The runner does not add a gold prefix. Examined local and Luna/Sol/Terra plans are identical. This series does not test uniformly distributed answer positions. A corrected variant needs a separate version and execution.',
+        '- The originally requested and verified server profile uses context 32,768, one slot, transformer/output layers and f16 KV on CUDA, fit=off, no context shift, warmup, RAM cache or checkpoints, and batch 512 / microbatch 128. Later hardware auditing clarifies that default CPU_Mapped input/embedding weights remain; see the final hardware-scope note. Transformer-layer CPU fallback is not allowed.',
+        '- Actual tokenization uses `/apply-template` then `/tokenize`, with IDs passed to `/completion`, temperature 0, seed 42 and a 500-token output cap; truncation is rejected. At this context, the estimated v1 gate `44.5*N+200 > 90% of context` excludes sizes 1,000/2,000/5,000, or 60 rows per model. The estimate is not an actual token count.',
+        '- Default model thinking is retained. Reasoning can consume the 500-token cap before the expected list; invalid outputs and outputs reaching the cap remain visible in the evidence.',
+        '- Available artifacts use different quantizations. Results compare those specific variants, not parameter counts alone.',
+        '- The hosted OAuth variant imposes neither temperature 0 nor a 500-token output limit. Identical candidates therefore do not make it strictly equivalent to local inference. The original reference runner was not supplied; exact reproduction of that execution is not claimed.',
+        '- Twenty questions are a small, partly lexical sample; duplicate names prevent exact identification of some IDs in a name-only response format.',
+        '- Timings describe this Windows environment with 16 GB RAM. Some downloads, installations and preparatory CPU conversions ran alongside model calls; these are not isolated speed measurements. Local service charges are USD 0, excluding electricity.', '',
+        '## Artifacts and identities', '',
+        '| Model | Quantization / provenance | Verified publisher source |',
         '|---|---|---|']
     for j in jobs:
         source=j['source']
@@ -68,15 +68,15 @@ def main():
             source='Qwen/'+j['requested']
         elif j['requested']=='Ling-3.0-tiny':
             source='inclusionAI/Ling-3.0-tiny-GGUF'
-        label=j.get('quantization','non téléchargé : accès gated')
+        label=j.get('quantization','not downloaded: gated access')
         if j['requested'].startswith('Qwen3.5-'):
-            label+='; poids Ollama déjà présents, pas un GGUF publié par Qwen'
+            label+='; existing Ollama weights, not a publisher-provided Qwen GGUF'
         lines.append(f"| {j['requested']} | {label} | [{source}](https://huggingface.co/{source}) |")
-    lines += ['', 'SHA-256, commits, tailles et licences sont dans `evidence/source-inventory.json` et les fichiers `.source.json` des poids. Ling installé correspond exactement au SHA-256 du fichier officiel. Phi, Mistral v0.3 et Nanbeige sont convertis/quantifiés depuis les sources officielles épinglées. H2O utilise son export officiel stock de chat ordinaire; le prompt ne sollicite pas son API de décisions typées. Le multimodal est testé en texte seul, sans projecteur chargé.', '',
-        '## Validation et incidents', '',
-        'Les 27 tests synthétiques du moteur ont passé avant les appels. `review_local_results.py` recompute les métriques depuis les rangs et vérifie largeur du CSV, clés uniques, cardinalités par taille, cohérence tokens, intégrité SQLite, égalité CSV/SQLite et plans de candidats/prompt. Sa portée et son horodatage sont enregistrés dans `evidence/result-review.json`.', '',
-        'Incident Qwen3-1.7B : 66 réponses mesurées; OOM CUDA dans la prélecture de la requête 67 (`500:6`), puis 13 lignes `GPU_SERVER_NOT_RUNNING` et 60 blocs estimés de contexte. Le CSV initial est conservé, aucun appel rejoué; voir `evidence/qwen17-runtime-incident.json` et le journal CUDA. Ces 14 erreurs matérielles/runtime sont exclues des taux mesurés.', '',
-        'Les journaux de lancement, preuves CUDA, SQLite, CSV, manifests et empreintes restent locaux. Aucun token OAuth n’a été copié dans ce lot. Aucun email ni push n’a été effectué depuis ce lot. Les poids, les données sources originales, les environnements et les téléchargements sont exclus du dépôt par `.gitignore`; l’intégration et l’envoi du rapport commun relèvent de l’orchestrateur.', '']
+    lines += ['', 'Source hashes, commits, sizes and licenses are recorded in the source inventories and weight provenance files. Installed Ling bytes exactly match the official file hash. Phi, Mistral v0.3 and Nanbeige were converted/quantized from pinned official sources. H2O uses its official stock ordinary-chat export, without requesting its typed-decision API. Multimodal models are tested as text only, without a projector.', '',
+        '## Validation and incidents', '',
+        'The 27 synthetic engine tests passed before inference. `review_local_results.py` recalculates metrics from ranks and checks CSV width, unique keys, per-size cardinality, token consistency, SQLite integrity, CSV/SQLite agreement and candidate/prompt plans. Its scope and timestamp are recorded in `evidence/result-review.json`.', '',
+        'Qwen3-1.7B incident: 66 measured responses; CUDA OOM during prefill of request 67 (`500:6`), followed by 13 `GPU_SERVER_NOT_RUNNING` rows and 60 estimated-context exclusions. The original CSV is retained and no call was replayed. These 14 hardware/runtime errors are excluded from measured-output rates; original incident and CUDA logs remain in the private source archive.', '',
+        'Historical launch logs, CUDA proofs, SQLite, CSV, manifests and hashes were retained. No OAuth token was copied into this local series. Benchmark execution itself sent no email or push. Weights, original source data, environments and downloads are excluded from the public repository; integration and report delivery are separate operations.', '']
     (ROOT/'LOCAL_REPORT.md').write_text('\n'.join(lines),encoding='utf-8')
     print('Wrote LOCAL_REPORT.md')
 

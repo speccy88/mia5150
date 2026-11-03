@@ -1,43 +1,42 @@
-# Complément final : contextes adaptés et cache KV, série v3 distincte
+# Final supplement: adjusted contexts and KV cache, separate v3 series
 
-Lire [PROFILE_REPORT.md](PROFILE_REPORT.md), [le comparatif final](../COMPARISON.md)
-et [les transformations de publication](PUBLICATION_TRANSFORMS.json).
+Read [PROFILE_REPORT.md](PROFILE_REPORT.md), [the final comparison](../COMPARISON.md)
+and [publication transformations](PUBLICATION_TRANSFORMS.json).
 
-200 réponses : pour chacun de Qwen3-8B et Mistral v0.3, 80 réponses f16 aux tailles
-50/100/250/500, puis 20 réponses Q8_0 au même contexte que f16 à N=500. Les poids
-Q4_K_M ne changent pas. Q8_0 désigne ici le cache KV, pas une nouvelle quantification
-des poids. Les admissions sans génération ne sont pas des résultats de qualité.
+200 responses: each of Qwen3-8B and Mistral v0.3 has 80 f16 responses at sizes
+50/100/250/500, followed by 20 Q8_0 responses at the same context as f16 for N=500.
+Q4_K_M weights are unchanged. Here Q8_0 denotes the KV cache, rather than a new
+weight quantization. Admission-only probes are not quality measurements.
 
-La règle initiale d'estimation avec marge 10 % est remplacée par les tokens réels
-d'entrée +500, avec n_ctx arrondi au multiple de 256 supérieur. Les listes, questions,
-descriptions, température 0, plafond de sortie 500 et scoring sont conservés. Ce
-changement de contexte est explicite : ne pas fusionner cette série avec le lot
-historique 32K/f16 qui avait bloqué ces deux modèles. Aucun N>=1000 n'a été mesuré.
-Le biais des golds aux positions 1-20 reste présent.
+The original estimation gate with a 10% margin is replaced by actual input tokens
++500, rounding n_ctx up to a multiple of 256. Candidate lists, questions,
+descriptions, temperature 0, the 500-token output cap and scoring are unchanged.
+This context change is explicit: do not merge this series into the historical
+32K/f16 suite that blocked these models. No N>=1000 was measured. The gold-position
+bias at positions 1–20 remains.
 
-## Vérification publique hors ligne
+## Public offline verification
 
 ```powershell
 python -m unittest discover -s tests -v
 python validate_profiles_public.py
 ```
 
-Le validateur recalcule les métriques depuis les CSV, vérifie les exports SQLite,
-les préflights tokenizer, les plans/hashes et les comparaisons appariées. Les bruts
-restent privés : `review_profiles.py` est le code d'audit historique, qui nécessite
-ces captures pour un replay complet. Les bases publiques ne sont pas reprisables.
-Le fichier de données minimal produit les mêmes prompts ; les attributions et
-licences de chaque skill sont dans [le catalogue du lot parent](../data/ATTRIBUTION.md).
-Les sources/licences des poids sont dans [la provenance parent](../evidence/model-artifact-provenance.json).
+The validator recomputes metrics from CSVs and checks SQLite exports, tokenizer
+preflights, plans/hashes and paired comparisons. Raw responses remain private:
+`review_profiles.py` is the historical audit code requiring those captures for full
+replay. Public databases cannot be resumed. The minimal dataset produces identical
+prompts; each skill's attribution and license are in [the parent catalogue](../data/ATTRIBUTION.md).
+Weight sources/licenses are in [parent provenance](../evidence/model-artifact-provenance.json).
 
-Les observations GPU archivées sont des preuves historiques assainies. Les couches
-transformer/sortie et le KV sont CUDA, avec embeddings d'entrée CPU_Mapped documentés.
-Les 14 chargements ont été vérifiés localement contre les préfixes de journaux
-scellés et les compteurs CUDA/WDDM ; les journaux complets et identifiants de processus
-ne sont pas redistribués. Les limites de ces compteurs demeurent celles du rapport.
+Archived GPU observations are sanitized historical evidence. Transformer/output
+layers and KV are CUDA, with documented CPU_Mapped input embeddings. All 14 loads
+were checked locally against sealed log prefixes and CUDA/WDDM counters. Full logs
+and process identifiers are not redistributed. Counter limitations remain as
+described in the report.
 
-Pour refaire des mesures, utiliser un dossier neuf, ses propres poids vérifiés et
-de nouvelles preuves de processus. Les chemins source et le hash de la dérivée de
-données sont adaptés pour cette arborescence, sans modifier les paramètres mesurés.
-`source-measured/` conserve les versions originales du runner et du lanceur.
-Llama/Gemma restent non exécutés : voir [CLOSURE.md](CLOSURE.md).
+To repeat measurements, use a fresh directory, independently verified weights and
+new process evidence. Source paths and the derivative-data hash are adapted to
+this tree without changing measured parameters. `source-measured/` preserves the
+original runner and launcher versions. Llama/Gemma remain unexecuted: see
+[CLOSURE.md](CLOSURE.md).

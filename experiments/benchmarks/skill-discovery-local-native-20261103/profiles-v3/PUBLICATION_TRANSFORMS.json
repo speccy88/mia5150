@@ -1526,5 +1526,12 @@
     "Standalone nonresumable SQLite audit exports; row_json unchanged.",
     "Minimal dataset checksum accepted; prompts identical.",
     "Llama/Gemma access steps replaced by explicit user closure."
-  ]
+  ],
+  "english_presentation_layer": {
+    "base_commit": "5da01dcd1d41f94c06f06ff14c08e4f11b057060",
+    "scope": "Authored documentation, explanatory source strings and plot labels; immutable evidence retained unchanged.",
+    "audit": "docs/publication/ENGLISH_LANGUAGE_AUDIT.json",
+    "new_inference_calls": 0,
+    "original_archive_mappings": "Existing original/public mappings describe the pre-translation release. Current hashes are in FILE_MANIFEST.json and SHA256SUMS."
+  }
 }

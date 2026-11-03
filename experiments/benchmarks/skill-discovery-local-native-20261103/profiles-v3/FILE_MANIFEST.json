@@ -7,8 +7,8 @@
     },
     {
       "path": "CLOSURE.md",
-      "bytes": 436,
-      "sha256": "3f7d56cb8a10b7b3414185b58eacda38839a2cc155acf072b5f41fae1150fb55"
+      "bytes": 371,
+      "sha256": "d6092e326692565218793ef8be8f0158011b07d041ace44e01e2755ab57490e4"
     },
     {
       "path": "configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
@@ -152,8 +152,8 @@
     },
     {
       "path": "oauth_chatgpt.py",
-      "bytes": 21123,
-      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      "bytes": 20993,
+      "sha256": "1284dcb7ae33db06a30712c5196863a875ddcd20879850187d9855af457a30fd"
     },
     {
       "path": "package_profiles.py",
@@ -162,18 +162,18 @@
     },
     {
       "path": "PROFILE_REPORT.md",
-      "bytes": 8417,
-      "sha256": "b3eeea0d5a8aa950c2432cdd9bd145937c1c21893e3bb4bac317e75b4bd8ed46"
+      "bytes": 7986,
+      "sha256": "05fcf3235fc617361f7105000498c8bdb791c0cb2410459f8a80e9ac503e8b30"
     },
     {
       "path": "PUBLICATION_TRANSFORMS.json",
-      "bytes": 97751,
-      "sha256": "f8e1db88e09972bc03292439d0afc93730b328a6215785dc0aaddcd5533ec404"
+      "bytes": 98231,
+      "sha256": "67daa07844b194bed1fa5edc55e9f0b803705f653a1bd4527ae89dc3e2050b95"
     },
     {
       "path": "README.md",
-      "bytes": 2638,
-      "sha256": "fd1e71f3a22e5812f221e6cb3514fa782a3a798f5f55f7cf8a276f2f0b29e38b"
+      "bytes": 2314,
+      "sha256": "c7d1ade1192d95a97663b9f2af172ba73627be513b6317e261e3b86c8ded61fd"
     },
     {
       "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
@@ -427,8 +427,8 @@
     },
     {
       "path": "review_profiles.py",
-      "bytes": 16135,
-      "sha256": "5c24184e4b8352faa6b50795e38950aaf0bf0b25b34cb8d9d1a6b34742c70171"
+      "bytes": 15564,
+      "sha256": "0ec0cb7dfe36f39a537996a96415fe50223bed7c0ff0b27fbfaabc33da7c7a5c"
     },
     {
       "path": "run_profiles.py",
@@ -472,8 +472,8 @@
     },
     {
       "path": "validate_profiles_public.py",
-      "bytes": 9058,
-      "sha256": "6567a0a0bda1afc196a4205652c99324f16486e667d4f776a23bba344e7d50b8"
+      "bytes": 8947,
+      "sha256": "666977c77980443bc1f47af28549b4123a054081e8be9d953f2577f2a66fb072"
     },
     {
       "path": "validation/public-validation.json",
@@ -497,6 +497,6 @@
     }
   ],
   "file_count": 99,
-  "total_bytes": 5586470,
+  "total_bytes": 5585318,
   "self_and_SHA256SUMS_excluded": true
 }

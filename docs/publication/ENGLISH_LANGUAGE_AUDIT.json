@@ -1,0 +1,585 @@
+{
+  "base_commit": "5da01dcd1d41f94c06f06ff14c08e4f11b057060",
+  "scope": "Entire current tracked tree, not repository history",
+  "tracked_files_inventoried": 16323,
+  "baseline_worktree_bytes": 1333995771,
+  "content_scan_counts": {
+    "inventoried": 16323,
+    "utf8_scanned": 16223,
+    "binary_or_pdf": 84,
+    "non_utf8_binary_or_other": 2,
+    "lfs_pointers": 13
+  },
+  "strict_signal_candidates_before_consolidated_report_rebuild": 71,
+  "retained_evidence_exceptions": [
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/data/test.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "f53aad53cfb44c7a3a26edb8550e8a64080b0b9916c17d8e61bb79f60c6617c5",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/data/test.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "f53aad53cfb44c7a3a26edb8550e8a64080b0b9916c17d8e61bb79f60c6617c5",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/source-measured/oauth_chatgpt.py",
+      "category": "exact_executed_source_snapshot",
+      "reason": "Original UI strings retained only in immutable executed-source evidence; current working helper is English.",
+      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/test.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "f53aad53cfb44c7a3a26edb8550e8a64080b0b9916c17d8e61bb79f60c6617c5",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/source-original/oauth_chatgpt.py",
+      "category": "exact_executed_source_snapshot",
+      "reason": "Original UI strings retained only in immutable executed-source evidence; current working helper is English.",
+      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/09e869cccb5de77dd1040a12423f28496f572059a31b7b6a211fef204883d0f9.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "09e869cccb5de77dd1040a12423f28496f572059a31b7b6a211fef204883d0f9",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/2e9cb6cdff3bbac465d8a5da2633f3ae2a00da2b6f8be6fbc9c3ed52f03e8463.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "2e9cb6cdff3bbac465d8a5da2633f3ae2a00da2b6f8be6fbc9c3ed52f03e8463",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/3b5e5df0fd94bae5b532dd52d921c49139a858072ff367575cfc0698064d4aa6.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "3b5e5df0fd94bae5b532dd52d921c49139a858072ff367575cfc0698064d4aa6",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/49f99c1aeaafd07fcf18a6c0bc158c145e9c868988602cf4cc476aaa7199e970.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "49f99c1aeaafd07fcf18a6c0bc158c145e9c868988602cf4cc476aaa7199e970",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/5dff7f60594a0d5ffd6c37a8ba95e598377436c0cb81c2c1da5a7510cd28c868.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "5dff7f60594a0d5ffd6c37a8ba95e598377436c0cb81c2c1da5a7510cd28c868",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/9ee4471054144284a49f38e5838d9ca7d717b7c407630cc84bdf5504eadd3005.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "9ee4471054144284a49f38e5838d9ca7d717b7c407630cc84bdf5504eadd3005",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/a0b6c5288fcc34e306799b6b13c3160b217a24bc31c7d5d037ad1442407bb4ac.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "a0b6c5288fcc34e306799b6b13c3160b217a24bc31c7d5d037ad1442407bb4ac",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/dba9e737fc720292cc775964285f8906f05dd74440e7fa5067a066ffa781c0c7.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "dba9e737fc720292cc775964285f8906f05dd74440e7fa5067a066ffa781c0c7",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/fa03aac77ab7a50939314a4ed064ae379bc2f138d077b0cc4461883e77749823.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "61663e55b00486ef3c4c94769d483bf876468363085f73c3d5d09522b7b45d19",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/136f2f8d46d7c5a0a32292e52fe99a02724d2b11e120575095fd89bc13c77aa5.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "6bbd7493c86e3847223ca7862bbf12bd8a41022e1e8fe41ffcd8ac74475dd206",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/21e152c9a7895a009a698689033db0309192c47a838abb6793cceaece3dc393a.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "75e74f8f0b877c69a1af4ec38c8cf8e8781309e0698bebbd22f045df84464908",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/2d14b8d5e9ca899649841a599d42cc92bbc88a701a227e65feab6febc702a049.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "041d5d7594af931d8734efe314dfd21a484c47ddb2844a5af96d34023096f282",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/39e14a20d8bb3cd0c4889b5217dbf7f86acbc93098d99c8271ca019cc491c81b.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "f0df64e1d1cb645c511f0f8104c2190faa4056d5c0aecc0dbea4c31e60f27db4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/84804ade3443f25a1664cb639bf282ef7e93ca2a58290c5339b700615188f2da.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "7e412acd8fe2e4d628f55f17ce68292f4bdb8ad82787bf99ae565dcfd675ded9",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/898a6b9036715232fdbee964c1e6cb7986e1fc1bf5c8b9a7533482c5921bd9c2.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "dcb426c83f0df33337e236a72a95af3730fd0c03311322852d2834c74746cae9",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/8ea86579c21e0b21213188d8f53828daf5b78f3f2069306f3ffff579376ea442.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "b01e6dcd10f8a8495b451be5f117b046c9c6009c1ee693fd81a7ab9cfa815261",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/bec7d186e0d4bbc254d1048de265f542c758390916cb79eddd51a964f83c265a.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "874de004f903f1de915aa2894079ef28bd247eb119cbaf09a9230c58b2afc728",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/f84452300fa64be48cbc84ae652d892f7b554e0f5ba5b07ff12f5ff068c4daad.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "e9ab1b7c0fd44d82b55aeaaa129be0d354f3b8281464a97158242426037fb432",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/09e869cccb5de77dd1040a12423f28496f572059a31b7b6a211fef204883d0f9.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "17201bc7c29b17810ce43b76928003f12b3e361fb57dd032dda72e9379c9463d",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/2e9cb6cdff3bbac465d8a5da2633f3ae2a00da2b6f8be6fbc9c3ed52f03e8463.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "5800afddacf73d3ca6b7e9b490636d8f11e26171b6c1fbb6db6dfafc5fffea9f",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/3b5e5df0fd94bae5b532dd52d921c49139a858072ff367575cfc0698064d4aa6.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "062fdd216d1e06573656bdffa2645d2f422f088a971e3f4776a41035fc2319d2",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/49f99c1aeaafd07fcf18a6c0bc158c145e9c868988602cf4cc476aaa7199e970.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "250e04ccf996825162708d3c7ad3386c0b39df7885f047d383ebc59da9e8901f",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/5dff7f60594a0d5ffd6c37a8ba95e598377436c0cb81c2c1da5a7510cd28c868.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "935f37f3001d78f5c4a0ba2d4a272be34cfcb22649f28d83e57b315cd4def3b2",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/9ee4471054144284a49f38e5838d9ca7d717b7c407630cc84bdf5504eadd3005.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "579387bb64abd63a5fc69030a4ed60393f677d55d679a3e98311efe0cd24295f",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/a0b6c5288fcc34e306799b6b13c3160b217a24bc31c7d5d037ad1442407bb4ac.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "cc72bdce5153718a716f91948e740054f88dc4729970d5dce212c8a6682a279d",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/dba9e737fc720292cc775964285f8906f05dd74440e7fa5067a066ffa781c0c7.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "c2d29f5d17c1843cfcfc89637a2929b6f1d7cb98c9b2900b5e956f9ef08b7c4b",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/fa03aac77ab7a50939314a4ed064ae379bc2f138d077b0cc4461883e77749823.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "58173269dfd13312bd659a6614f0abbf418bdf5f771b002d629d55a25df33310",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/2d14b8d5e9ca899649841a599d42cc92bbc88a701a227e65feab6febc702a049.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "041d5d7594af931d8734efe314dfd21a484c47ddb2844a5af96d34023096f282",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/39e14a20d8bb3cd0c4889b5217dbf7f86acbc93098d99c8271ca019cc491c81b.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "f0df64e1d1cb645c511f0f8104c2190faa4056d5c0aecc0dbea4c31e60f27db4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/898a6b9036715232fdbee964c1e6cb7986e1fc1bf5c8b9a7533482c5921bd9c2.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "dcb426c83f0df33337e236a72a95af3730fd0c03311322852d2834c74746cae9",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/8ea86579c21e0b21213188d8f53828daf5b78f3f2069306f3ffff579376ea442.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "b01e6dcd10f8a8495b451be5f117b046c9c6009c1ee693fd81a7ab9cfa815261",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/f84452300fa64be48cbc84ae652d892f7b554e0f5ba5b07ff12f5ff068c4daad.json",
+      "category": "recorded_benchmark_request",
+      "reason": "Exact multilingual candidate descriptions and request evidence; translation would alter the evaluated input.",
+      "sha256": "e9ab1b7c0fd44d82b55aeaaa129be0d354f3b8281464a97158242426037fb432",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/data/queries/train.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "9b23d11e7c0654f3969718a54511c30b679b0f0b92a7357c7679a56ff42478f6",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/jina_rerank_35/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "4e95945ab0cef486709f760b81efcc7a6e75747f9165d13ead29159737455803",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/jina_rerank_35/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/qwen_embed_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/qwen_embed_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/r3_rerank_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "4ea9e138e0805971156081d68100cc439b1ce91024eb7f43ecfbd9b0dda858bd",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/r3_rerank_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/r3_rerank_fp16_local/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "4ea9e138e0805971156081d68100cc439b1ce91024eb7f43ecfbd9b0dda858bd",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/r3_rerank_fp16_local/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillreason_embed_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillreason_embed_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillreason_rerank_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillreason_rerank_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillret_embed_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "db74fda9dc5dbe348cb79bda440c969b3ac982a78358d8d884f64ce92098b104",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillret_rerank_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillret_rerank_06_fp16_local/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillrouter_embed_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillrouter_embed_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillrouter_rerank_06/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ab19c66299579df20542864f9e27b79898ca05f35acc97fd9259aee385a07d4a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/models/skillrouter_rerank_06/vocab.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-reranker-study/reference_run/baselines/metadata.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "dca40f3d68edb14d802803ac032a3d155d701e136704f725b5a96cfbd151052a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-reranker-study/reference_run/clm/inputs.json",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "b17d87743ec0f497913a09b3f8618c7e11455c3faaa32fe36f9445af6de4ce13",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-embeddinggemma2-pilot/fixtures/qwen-small-fixtures.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "617a38bec2634ec1153fec02287e2241995a477894b1791d5734d0c27faa47f4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-embeddinggemma2-pilot/fixtures/qwen-small-quality.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "709f938d0cc1ae397ae63aad681ed879dde10ac268283afd152c194fab096f94",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-embeddinggemma2-pilot/fixtures/qwen-small-summary.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "e756330c7cdbdb443ad36199092b600ac9646dcdcd6ece70b84a032b3353f2fc",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-embeddinggemma2-pilot/model/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "4d777ef5bdc1aa36227abdfb77c3e49e7b9c892d16e1b6bda41c393504828be4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-jina-nano-pilot/fixtures/qwen-small-fixtures.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "617a38bec2634ec1153fec02287e2241995a477894b1791d5734d0c27faa47f4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-jina-nano-pilot/fixtures/qwen-small-quality.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "709f938d0cc1ae397ae63aad681ed879dde10ac268283afd152c194fab096f94",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-jina-nano-pilot/fixtures/qwen-small-summary.json",
+      "category": "frozen_multilingual_test_fixture",
+      "reason": "Measured synthetic query fixture or its recorded outputs; translation would change the tested inputs.",
+      "sha256": "e756330c7cdbdb443ad36199092b600ac9646dcdcd6ece70b84a032b3353f2fc",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-jina-nano-pilot/model/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "98d4a1d32152d6cedf85b5e88f3b205106dca1fe72aaab34e0ac13c238421069",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/pilots/skillret-jina-nano-pilot/review/tokenizer.json",
+      "category": "external_multilingual_tokenizer",
+      "reason": "Vocabulary entries are model artifacts, not authored prose; translation would corrupt tokenization.",
+      "sha256": "98d4a1d32152d6cedf85b5e88f3b205106dca1fe72aaab34e0ac13c238421069",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/documents.json",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "5d55d2ff7c8b05cd612b3b65344c4a44de6ddee4821ba1e1ffcb6447d44eb7cb",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs/skills-metadata.jsonl",
+      "category": "external_or_derived_benchmark_data",
+      "reason": "Multilingual source skill descriptions, training queries or their exact derived representations.",
+      "sha256": "74819f4f683cb4dfcfc34085f6caa610202e78c49e8e32a2f5045a825addeb2f",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/demo.html",
+      "category": "embedded_recorded_query_data",
+      "reason": "Historical demo embeds raw multilingual query fixtures; its authored UI is English.",
+      "sha256": "cadf3543ca052ae072c870a6d0d00c5724b98657502ffa6e6ac56e645d324799",
+      "unchanged_from_base": true
+    }
+  ],
+  "exceptions_by_category": {
+    "external_or_derived_benchmark_data": 8,
+    "exact_executed_source_snapshot": 2,
+    "recorded_benchmark_request": 32,
+    "external_multilingual_tokenizer": 22,
+    "frozen_multilingual_test_fixture": 6,
+    "embedded_recorded_query_data": 1
+  },
+  "pdf_text_audit": [
+    {
+      "path": "experiments/benchmarks/skillret-cpu-benchmark/reference_run/report/SkillRet_CPU_Benchmark.pdf",
+      "pages": 4,
+      "text_characters": 8501,
+      "text_empty_pages": [],
+      "french_signal_matches": 0
+    },
+    {
+      "path": "experiments/benchmarks/skillret-full-catalog-runpod/REPORT.pdf",
+      "pages": 7,
+      "text_characters": 6891,
+      "text_empty_pages": [],
+      "french_signal_matches": 0
+    },
+    {
+      "path": "experiments/benchmarks/skillret-gap-closure-20261024/report/MIA5150_Gap_Analysis_and_Results_2026-10-24.pdf",
+      "pages": 10,
+      "text_characters": 20461,
+      "text_empty_pages": [],
+      "french_signal_matches": 0
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/plan/SkillRet_Research_Codex_Plan/inputs/proposal_1.pdf",
+      "pages": 4,
+      "text_characters": 10452,
+      "text_empty_pages": [],
+      "french_signal_matches": 0
+    },
+    {
+      "path": "experiments/pilots/skillret-pilot/reference_run/MIA5150_SkillRet_Short_Report.pdf",
+      "pages": 3,
+      "text_characters": 5252,
+      "text_empty_pages": [],
+      "french_signal_matches": 0
+    }
+  ],
+  "compressed_evidence": [
+    {
+      "path": "experiments/benchmarks/skillret-gap-closure-20261024/catalogs.json.gz",
+      "expanded_bytes": 9005332,
+      "entries": null
+    },
+    {
+      "path": "experiments/benchmarks/skillret-gap-closure-20261024/protocol-history/v1-catalogs.json.gz",
+      "expanded_bytes": 26996942,
+      "entries": null
+    },
+    {
+      "path": "experiments/benchmarks/skillret-gap-closure-20261024/results/retrieval.jsonl.gz",
+      "expanded_bytes": 91864324,
+      "entries": null
+    },
+    {
+      "path": "experiments/pilots/skillret-pilot/reference_run/MIA5150_skillret_handoff.zip",
+      "expanded_bytes": null,
+      "entries": 447
+    }
+  ],
+  "historical_zip_text_candidates": 0,
+  "authored_prose_remaining_french_findings": 0,
+  "method": "Full inventory, UTF-8 content heuristics including raw-body and SVG files, gzip expansion, ZIP text-member scan, PDF text extraction, manual classification, modified-prose accent/common-word review and chart-source review. Regenerated charts visually reviewed.",
+  "limits": "Heuristic language identification is not a proof of absence. Binary models/arrays/SQLite are evidence; 13 LFS pointers were not hydrated. PDF extraction is not OCR. Historical evidence and Git history are deliberately unchanged.",
+  "new_inference_calls": 0
+}

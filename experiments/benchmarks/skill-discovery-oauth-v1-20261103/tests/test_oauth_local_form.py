@@ -89,7 +89,7 @@ class LocalFormTests(unittest.TestCase):
             self.assertIn(CSRF, body)
             origin = browser_origin_for_same_origin_form(headers['Referrer-Policy'])
             code, redirect, body = exchange(handler, server, method='POST', origin=origin)
-            self.assertEqual(code, 303, body)  # Before fix: 400, Origine refusée.
+            self.assertEqual(code, 303, body)  # Before fix: 400, Origin rejected.
             self.assertTrue(redirect['Location'].startswith(oauth.AUTHORIZE+'?'))
             self.assertEqual(redirect['Referrer-Policy'], 'no-referrer')
         self.assertEqual(self.inside_synthetic_listener(scenario), 1)  # Mocked host-ID write only.
@@ -125,7 +125,7 @@ class LocalFormTests(unittest.TestCase):
             self.assertEqual(code, 303)
             code, _, repeated = exchange(handler, server, method='POST', origin=ORIGIN)
             self.assertEqual(code, 200)
-            self.assertIn('Connexion déjà démarrée', repeated)
+            self.assertIn('Connection already started', repeated)
             import html
             self.assertIn(first['Location'], html.unescape(repeated))
             code, _, _ = exchange(handler, server, method='POST', origin='null')

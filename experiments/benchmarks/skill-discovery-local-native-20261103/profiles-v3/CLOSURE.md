@@ -1,7 +1,6 @@
-# Clôture des accès non exécutés
+# Closure of unexecuted gated models
 
-Le travail se termine avec les mesures disponibles. Llama 3.2 et Gemma 3 n'ont pas
-été exécutés et ne sont pas poursuivis à la demande de l'utilisateur. Leurs blocages
-historiques restent documentés, sans leur attribuer un score de qualité mesuré.
-Aucune acceptation de conditions, connexion, substitution ou tentative d'accès
-supplémentaire n'a été effectuée pour cette intégration.
+The study closes with the available measurements. Llama 3.2 and Gemma 3 were not
+executed and are not pursued further, as requested by the user. Historical access
+blocks remain documented without assigning a measured quality score. No additional
+terms acceptance, login, substitution or access attempt was made for this integration.

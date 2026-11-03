@@ -188,12 +188,12 @@ def plot(coverage):
             else:
                 text='0/20 B'
             right.text(j,i,text,ha='center',va='center',fontsize=8.5)
-    labels=[({'OAuth':'OAuth','local':'Local 32K','v3 f16':'V3 f16 ajusté','v3 q8_0':'V3 KV Q8'}[route]+' · ')+model for route,model in order]
+    labels=[({'OAuth':'OAuth','local':'Local 32K','v3 f16':'V3 adjusted f16','v3 q8_0':'V3 Q8 KV'}[route]+' · ')+model for route,model in order]
     left.set_yticks(range(len(order)),labels=labels,fontsize=9)
     right.set_yticks(range(len(order)),labels=['']*len(order))
     for ax in (left,right):
         ax.set_xticks(range(len(bench.SIZES)),labels=[str(n) for n in bench.SIZES])
-        ax.set_xlabel('Nombre de skills (IDs)')
+        ax.set_xlabel('Number of skills (IDs)')
         ax.set_xticks(np.arange(-.5,len(bench.SIZES),1),minor=True)
         ax.set_yticks(np.arange(-.5,len(order),1),minor=True)
         ax.grid(which='minor',color='white',linewidth=1)
@@ -201,43 +201,43 @@ def plot(coverage):
         ax.axhline(2.5,color='#405061',linewidth=2)
         if profile_file.exists():
             ax.axhline(20.5,color='#405061',linewidth=2)
-    left.set_title('Top-1 exact / réponses réellement mesurées',fontsize=12)
-    right.set_title('Couverture : réponses mesurées / 20 prévues',fontsize=12)
+    left.set_title('Exact top-1 / actually measured responses',fontsize=12)
+    right.set_title('Coverage: measured responses / 20 planned',fontsize=12)
     bar=fig.colorbar(image,ax=left,location='bottom',shrink=.75,pad=.045)
-    bar.set_ticks([0,.25,.5,.75,1],labels=['0 %','25 %','50 %','75 %','100 %'])
-    fig.suptitle('Skill discovery, clôture · séries OAuth, local 32K et v3 contexte/KV distinctes\n20 mêmes questions répétées ; golds toujours aux positions 1–20',fontsize=14)
-    fig.supxlabel('C : exclusion estimée · B : accès gated ou VRAM · H : 1 rejet HTTP + 19 non exécutées · NP : non prévu dans cette série\nLe zéro de Nanbeige est mesuré. Les cases grises sans score ne sont pas des échecs mesurés. Les contrôles de contexte/sortie diffèrent.',fontsize=10)
+    bar.set_ticks([0,.25,.5,.75,1],labels=['0%','25%','50%','75%','100%'])
+    fig.suptitle('Skill discovery, final results · distinct OAuth, local 32K and v3 context/KV series\nThe same 20 questions repeat; golds always occupy positions 1–20',fontsize=14)
+    fig.supxlabel('C: estimated exclusion · B: gated access or VRAM · H: 1 HTTP rejection + 19 unattempted · NP: not planned in this series\nNanbeige has a measured zero. Gray cells without scores are not measured failures. Context/output controls differ.',fontsize=10)
     (ROOT/'figures').mkdir(exist_ok=True)
     fig.savefig(ROOT/'figures/coverage-comparison.png',dpi=165)
     plt.close(fig)
 
 
 def report(summary):
-    lines=["# Comparaison descriptive : bibliothèque identique, conditions d'inférence distinctes",'',
-        "Les nouvelles copies publiques préservent les réponses mesurées. Cette comparaison ne valide pas une équivalence API/OAuth/local : les locaux sont quantifiés, limités à 32K et 500 tokens de sortie, avec un adaptateur de réponse finale natif ; OAuth omet température/plafond de sortie et rapporte un raisonnement medium. Aucun nouveau modèle n'a été appelé.",'',
-        '![Qualité mesurée et couverture](figures/coverage-comparison.png)','',
-        'Le graphique utilise les mêmes 20 questions à chaque taille. Chaque zéro coloré résulte de réponses effectivement mesurées ; les cases sans score signalent une exclusion, un blocage ou une taille non exécutée. Les erreurs de format et raisonnements sans réponse finale restent dans le dénominateur des sorties locales mesurées.','',
-        '## Panneau commun N = 50, 100, 250, 500','',
-        "Les scores ci-dessous utilisent 80 mesures par modèle exécuté, issues de 20 questions répétées sur quatre tailles. Les intervalles rééchantillonnent 20 blocs question avec leurs quatre tailles, 10 000 fois, graine 20261103. Ils sont descriptifs et conditionnels aux listes biaisées, sans interprétation comme 80 essais indépendants. Aucun intervalle n'est fourni aux modèles bloqués.",'',
-        '| Voie | Modèle | Mesures | Top-1 exact | Bootstrap par question, 95 % | Sorties sans erreur | Médiane LLM (s) |',
+    lines=['# Descriptive comparison: identical libraries, distinct inference conditions','',
+        'The public copies preserve measured outcomes. This comparison does not establish API/OAuth/local equivalence: local models are quantized, use a 32K window and 500-token output cap, and have a native final-answer adapter; OAuth omits temperature/output controls and reports medium reasoning. No new model calls were made for the comparison.','',
+        '![Measured quality and coverage](figures/coverage-comparison.png)','',
+        'The plot uses the same 20 questions at each size. Every colored zero comes from actual measured outputs; missing scores indicate exclusions, blocks or unattempted sizes. Format errors and reasoning without final answers stay in the denominator of measured local outputs.','',
+        '## Shared panel: N = 50, 100, 250, 500','',
+        'These scores use 80 measurements per executed model: 20 questions repeated at four sizes. Intervals resample 20 question clusters with all four sizes together, 10,000 times, seed 20261103. They are descriptive and conditional on the biased lists, rather than treating 80 cases as independent. Blocked models receive no interval.','',
+        '| Route | Model | Measurements | Top-1 exact | Question-cluster bootstrap, 95% | Outputs without errors | Median LLM (s) |',
         '| --- | --- | ---: | ---: | --- | ---: | ---: |']
     for s in summary:
         n=s['measured_common_sizes'];ci=s['query_cluster_percentile95']
-        rate=f"{s['correct_top1']}/{n} ({s['top1_measured']:.1%})" if n else 'Non mesuré'
-        interval=f'{ci[0]:.1%} à {ci[1]:.1%}' if ci else '—'
+        rate=f"{s['correct_top1']}/{n} ({s['top1_measured']:.1%})" if n else 'Not measured'
+        interval=f'{ci[0]:.1%} to {ci[1]:.1%}' if ci else '—'
         latency=f"{s['median_llm_s_common']:.3f}" if n else '—'
         lines.append(f"| {s['route']} | {s['model']} | {n} | {rate} | {interval} | {s['valid_nonerror_common']} | {latency} |")
-    lines += ['', '## Limites et preuves','',
-        '- **Biais de position :** tous les golds sont aux positions 1–20, avec la même graine que la sélection des questions. Les différences ne généralisent pas à des positions aléatoires ou centrales.',
-        '- **Couverture locale :** 14 modèles exécutés, 1 120 réponses avec usage réel ; quatre modèles sans inférence. Les 1 080 lignes de contexte estimé ne mesurent pas la fenêtre native maximale de chaque modèle.',
-        '- **Couverture OAuth :** 360 réponses mesurées à N ≤ 2000 ; N=5000 compte un rejet de longueur de chaîne HTTP et 19 non-exécutions par modèle, pas une limite de contexte en tokens établie.',
-        '- **Nanbeige :** ses 80 sorties mesurées restent sans réponse finale dans le budget 500 ; son zéro ne signifie pas une incapacité sémantique générale.',
-        '- **Matériel local :** transformer, sortie et KV sur CUDA, mais poids d’entrée/embeddings CPU_Mapped et préparation CPU conservés par llama.cpp b11960. Ce profil ne prouve pas une absence totale de calcul CPU. Voir [la portée matérielle](evidence/NATIVE_GPU_SCOPE.md).',
-        '- **Latence :** les temps locaux et HTTP OAuth incluent des travaux et longueurs de sortie différents. Aucun ratio de vitesse matérielle n’est revendiqué.',
-        '- **Définition native-v2 :** correction du parsing du raisonnement ; le protocole scientifique biaisé v1 reste inchangé. La v2 scientifique proposée dans le rapport OAuth n’a pas été exécutée.',
-        '- **Comparabilité externe :** la concordance avec le runner cloud de référence reste non vérifiée ; les noms dupliqués et indices lexicaux des questions demeurent.',
-        '', '[Rapport local](LOCAL_REPORT.md) · [Rapport OAuth](../skill-discovery-oauth-v1-20261103/REPORT.md) · [Validation hors ligne](validation/public-validation.json) · [Résumé du panneau commun](validation/common-panel-summary.csv)', '',
-        'Les CSV sont inchangés ; les bases distribuées sont des exports d’audit non reprisables. Les sorties HTTP privées complètes ne sont pas redistribuées, donc les vérifications publiques recalculent rangs/métriques/persistance sans rejouer chaque normalisation depuis le texte brut. Voir les transformations et empreintes pour les adaptations de confidentialité.']
+    lines += ['', '## Limitations and evidence','',
+        '- **Position bias:** all golds occupy positions 1–20, using the same seed as question selection. Differences cannot be generalized to random or central positions.',
+        '- **Initial local coverage:** 14 models executed, 1,120 outputs with actual usage; four models without inference. The 1,080 estimated-context rows do not measure native maximum model windows.',
+        '- **OAuth coverage:** 360 measured responses at N≤2000. At N=5000 each model has one HTTP string-length rejection and 19 unattempted cases, rather than an established token-context limit.',
+        '- **Nanbeige:** all 80 measured outputs lack a final answer within the 500-token budget. Its zero does not establish a general semantic inability.',
+        '- **Local hardware:** transformer/output layers and KV are on CUDA, but llama.cpp b11960 retains CPU_Mapped input/embedding weights and CPU preparation. This profile does not demonstrate zero CPU participation. See [hardware scope](evidence/NATIVE_GPU_SCOPE.md).',
+        '- **Latency:** local and OAuth HTTP timings include different work and output lengths. No hardware-speed ratio is claimed.',
+        '- **Native-v2 definition:** this corrects reasoning parsing; the biased scientific v1 protocol is unchanged. The scientific v2 proposed in the OAuth report was not executed.',
+        '- **External comparability:** agreement with the reference cloud runner remains unverified; duplicate names and lexical query hints remain.',
+        '', '[Local report](LOCAL_REPORT.md) · [OAuth report](../skill-discovery-oauth-v1-20261103/REPORT.md) · [Offline validation](validation/public-validation.json) · [Shared-panel summary](validation/common-panel-summary.csv)', '',
+        'CSV bytes are unchanged. Distributed databases are nonresumable audit exports. Full private HTTP outputs are not redistributed, so public validation recomputes ranking metrics and persistence without replaying every normalization from raw text. Transformation records and hashes describe privacy adaptations.']
     if (ROOT/'PROFILE_COMPLEMENT.md').exists():
         lines += ['',(ROOT/'PROFILE_COMPLEMENT.md').read_text(encoding='utf-8')]
     (ROOT/'COMPARISON.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
