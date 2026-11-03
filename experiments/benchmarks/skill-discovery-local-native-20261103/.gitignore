@@ -1,0 +1,11 @@
+.venv/
+private/
+private-responses/
+runtime/
+models/
+tools/
+downloads/
+__pycache__/
+*.pyc
+.test-tmp/
+results-new*/

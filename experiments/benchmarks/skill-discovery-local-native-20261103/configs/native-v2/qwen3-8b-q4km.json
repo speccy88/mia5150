@@ -1,0 +1,29 @@
+{
+  "backend": "llama",
+  "model": "qwen3-8b-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M",
+  "gpu_proof": "runtime/qwen3-8b-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Qwen3-8B",
+    "alias": "qwen3-8b-q4km",
+    "path": "models/Qwen3-8B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "Qwen/Qwen3-8B-GGUF"
+  },
+  "raw_response_dir": "private-responses/new-run/qwen3-8b-q4km",
+  "startup_error": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+  "admission_evidence": {
+    "declared_cuda_buffers_mib": 9097.34,
+    "physical_vram_mib": 8192,
+    "diagnostic_result_folder": "results\\diagnostic-vram-oversubscription\\qwen3-8b-q4km",
+    "diagnostic_acquired_rows": 21,
+    "pending_intents_not_replayed": [
+      "100:1"
+    ],
+    "no_inference_in_capacity_rejection_ledger": true
+  }
+}

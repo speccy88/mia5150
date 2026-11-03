@@ -1,0 +1,234 @@
+[
+  {
+    "model": "qwen3-0.6b-q8",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in message.content %}",
+      "                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}",
+      "                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}"
+    ]
+  },
+  {
+    "model": "qwen3-1.7b-q8",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in message.content %}",
+      "                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}",
+      "                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}"
+    ]
+  },
+  {
+    "model": "qwen3.5-4b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "ling-3.0-tiny-q4km",
+    "reasoning_related_template_lines": [
+      "{#- Supports: thinking option, tool calling -#}",
+      "{#- ==================== thinking option normalization ==================== -#}",
+      "{%- if enable_thinking is defined %}",
+      "{%- if enable_thinking %}",
+      "{%- set thinking_option = 'on' %}",
+      "{%- set thinking_option = 'off' %}",
+      "{%- elif thinking_option is not defined %}",
+      "{%- set thinking_option = 'on' %}",
+      "{#- ==================== preserved thinking  ==================== -#}",
+      "{% set preserved_thinking = true %}",
+      "    {%- if messages[0].role == 'system' and messages[0].content is string and ('detailed thinking on' in messages[0].content or 'detailed thinking off' in messages[0].content) %}",
+      "        {{- 'detailed thinking ' + thinking_option + '<|role_end|>' }}",
+      "        {%- if 'detailed thinking on' in messages[0].content or 'detailed thinking off' in messages[0].content %}",
+      "            {{- 'detailed thinking ' + thinking_option + '<|role_end|>' }}",
+      "        {{- 'detailed thinking ' + thinking_option + '<|role_end|>' }}",
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "        {%- if preserved_thinking or loop.index0 > ns.last_query_index %}",
+      "                {{- '<role>ASSISTANT</role>' + '\\n<think>' + reasoning_content.strip('\\n') + '</think>' + content.lstrip('\\n') }}",
+      "                {{- '<role>ASSISTANT</role>\\n<think></think>' + content }}",
+      "            {{- '<role>ASSISTANT</role>\\n<think></think>' + content }}",
+      "    {%- if thinking_option == 'on' %}",
+      "        {{- '\\n<think>' }}",
+      "    {%- elif thinking_option == 'off' %}",
+      "        {{- '\\n<think></think>' }}"
+    ]
+  },
+  {
+    "model": "qwen3.5-9b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "h2o-lightning-4b-stock-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "gemma-4-e2b-it-q4",
+    "reasoning_related_template_lines": [
+      "  Context: Fixed tool-calling loops, turn closures, and thinking content-ordering.",
+      "{%- macro strip_thinking(text) -%}",
+      "    {%- for part in text.split('<channel|>') -%}",
+      "        {%- if '<|channel>' in part -%}",
+      "            {%- set ns.result = ns.result + part.split('<|channel>')[0] -%}",
+      "{%- set enable_thinking = enable_thinking | default(false) -%}",
+      "{%- set preserve_thinking = preserve_thinking | default(false) -%}",
+      "{%- if enable_thinking or tools or (messages and messages[0]['role'] in ['system', 'developer']) -%}",
+      "    {#- Inject Thinking token at the very top of the FIRST system turn -#}",
+      "    {%- if enable_thinking -%}",
+      "        {{- '<|think|>\\n' -}}",
+      "        {%- set ns.prev_message_type = 'think' -%}",
+      "    {#- Render reasoning/reasoning_content as thinking channel -#}",
+      "    {%- set thinking_text = message.get('reasoning') or message.get('reasoning_content') -%}",
+      "    {%- set thinking_gate = (loop.index0 > ns_turn.last_user_idx) or (preserve_thinking and message.get('tool_calls')) -%}",
+      "    {%- if thinking_text and thinking_gate -%}",
+      "        {{- '<|channel>thought\\n' + thinking_text + '\\n<channel|>' -}}",
+      "                    {{- strip_thinking(message['content']) -}}",
+      "                            {{- strip_thinking(item['text']) -}}",
+      "    {%- elif ns.prev_message_type == 'tool_response' and enable_thinking -%}",
+      "        {{- '<|channel>thought\\n' -}}"
+    ]
+  },
+  {
+    "model": "qwen3-8b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in message.content %}",
+      "                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}",
+      "                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}"
+    ]
+  },
+  {
+    "model": "neohorse-1-9b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "ornith-1.5-9b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "        {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "nemotron-3.5-bolt-e4b-q4km",
+    "reasoning_related_template_lines": [
+      "           Gemma 4 generation prompt when enable_thinking=false.",
+      "{%- macro strip_thinking(text) -%}",
+      "    {%- for part in text.split('<channel|>') -%}",
+      "        {%- if '<|channel>' in part -%}",
+      "            {%- set ns.result = ns.result + part.split('<|channel>')[0] -%}",
+      "{%- set enable_thinking = enable_thinking | default(false) -%}",
+      "{%- set preserve_thinking = preserve_thinking | default(false) -%}",
+      "{%- if enable_thinking or tools or (messages and messages[0]['role'] in ['system', 'developer']) -%}",
+      "    {#- Inject Thinking token at the very top of the FIRST system turn -#}",
+      "    {%- if enable_thinking -%}",
+      "        {{- '<|think|>\\n' -}}",
+      "        {%- set ns.prev_message_type = 'think' -%}",
+      "    {#- Render reasoning/reasoning_content as thinking channel -#}",
+      "    {%- set thinking_text = message.get('reasoning') or message.get('reasoning_content') -%}",
+      "    {%- set thinking_gate = (loop.index0 > ns_turn.last_user_idx) or (preserve_thinking and message.get('tool_calls')) -%}",
+      "    {%- if thinking_text and thinking_gate -%}",
+      "        {{- '<|channel>thought\\n' + thinking_text + '\\n<channel|>' -}}",
+      "                    {{- strip_thinking(message['content']) -}}",
+      "                            {{- strip_thinking(item['text']) -}}",
+      "    {%- elif ns.prev_message_type == 'tool_response' and enable_thinking -%}",
+      "        {{- '<|channel>thought\\n' -}}"
+    ]
+  },
+  {
+    "model": "ternary-bonsai-2-9b-q2",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}",
+      "            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>\\n\\n</think>\\n\\n' }}",
+      "        {{- '<think>\\n' }}"
+    ]
+  },
+  {
+    "model": "lfm3-omni-2b-q4km",
+    "reasoning_related_template_lines": [
+      "{%- set preserve_thinking = preserve_thinking | default(false) -%}",
+      "{%- set enable_thinking = enable_thinking | default(false) -%}",
+      "        {%- set thinking = message.thinking if message.thinking is defined else message.reasoning if message.reasoning is defined else message.reasoning_content -%}",
+      "        {%- set keep_thinking = preserve_thinking or loop.index0 > ns.last_user_index -%}",
+      "        {%- if thinking is defined and keep_thinking -%}",
+      "            {{- \"<think>\" + (thinking or \"\") + \"</think>\" -}}",
+      "        {%- elif keep_thinking and \"</think>\" not in (message.get(\"content\") if message.get(\"content\") is string else \"\") -%}",
+      "            {{- \"<think></think>\" -}}",
+      "        {%- set _cfm_tag = \"CONTINUE_FINAL_MESSAGE_TAG \" -%}",
+      "        {%- if not keep_thinking -%}",
+      "            {%- if \"</think>\" in content -%}",
+      "                {%- set content = content.split(\"</think>\")[-1] | trim -%}",
+      "            {%- set content = \"<think></think>\" + content -%}",
+      "    {%- if enable_thinking -%}",
+      "        {{- \"<think>\" -}}",
+      "        {{- \"<think></think>\" -}}"
+    ]
+  },
+  {
+    "model": "phi-4-mini-instruct-q4km",
+    "reasoning_related_template_lines": []
+  },
+  {
+    "model": "mistral-7b-instruct-v03-q4km",
+    "reasoning_related_template_lines": []
+  },
+  {
+    "model": "nanbeige4.2-3b-q4km",
+    "reasoning_related_template_lines": [
+      "            {%- if '</think>' in content %}",
+      "                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}",
+      "                {%- set content = content.split('</think>')[-1].lstrip('\\n').rstrip('\\n') %}",
+      "        {%- if (preserve_thinking is defined and preserve_thinking is false) and (loop.index0 < ns.last_query_index) %}",
+      "            {{- '<|im_start|>' + message.get('role', '') + '\\n<think>\\n\\n</think>\\n\\n' + content }}",
+      "            {{- '<|im_start|>' + message.get('role', '') + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}",
+      "    {%- if enable_thinking is defined and enable_thinking is false %}",
+      "        {{- '<think>",
+      "</think>",
+      "        {{- '<think>"
+    ]
+  }
+]

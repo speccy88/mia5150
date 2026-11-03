@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "qwen3-1.7b-q8-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q8_0",
+  "gpu_proof": "runtime/qwen3-1.7b-q8-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Qwen3-1.7B",
+    "alias": "qwen3-1.7b-q8",
+    "path": "models/Qwen3-1.7B-Q8_0.gguf",
+    "quantization": "Q8_0",
+    "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+    "source": "Qwen/Qwen3-1.7B-GGUF"
+  },
+  "raw_response_dir": "private-responses/new-run/qwen3-1.7b-q8"
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "selected new study bytes including reconstructed SQLite; no history scan",
+  "files_scanned": 313,
+  "rules": [
+    "windows_personal_home",
+    "email",
+    "openai_key",
+    "github_token",
+    "aws_key",
+    "jwt",
+    "private_key",
+    "review_url",
+    "installation_id"
+  ],
+  "findings_without_values": [],
+  "passed": true,
+  "limitation": "Pattern/path check plus selected-file export; not a guarantee against arbitrary sensitive text."
+}

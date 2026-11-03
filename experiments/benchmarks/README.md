@@ -4,6 +4,8 @@
 
 | Study | Start here |
 | --- | --- |
+| Skill discovery listing, OAuth variant | [skill-discovery-oauth-v1-20261103/REPORT.md](skill-discovery-oauth-v1-20261103/REPORT.md) |
+| Skill discovery, local native answer parsing | [skill-discovery-local-native-20261103/README.md](skill-discovery-local-native-20261103/README.md) and [comparison with coverage](skill-discovery-local-native-20261103/COMPARISON.md) |
 | BM25 retrieval and full listing | [benchmark_bm25/](benchmark_bm25/) |
 | Full-catalog RunPod retrieval and CLM head adaptation | [skillret-full-catalog-runpod/README.md](skillret-full-catalog-runpod/README.md) |
 | CPU-only pipelines and catalog sizes | [skillret-cpu-benchmark/README.md](skillret-cpu-benchmark/README.md) |

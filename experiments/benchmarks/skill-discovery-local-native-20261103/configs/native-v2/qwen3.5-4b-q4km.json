@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "qwen3.5-4b-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M",
+  "gpu_proof": "runtime/qwen3.5-4b-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Qwen3.5-4B",
+    "alias": "qwen3.5-4b-q4km",
+    "path": "models/sha256-a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+    "quantization": "Q4_K_M",
+    "sha256": "a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+    "source": "Installed Ollama qwen3.5:4b-q4_K_M; publisher identity Qwen/Qwen3.5-4B; not an official Qwen GGUF"
+  },
+  "raw_response_dir": "private-responses/new-run/qwen3.5-4b-q4km"
+}

@@ -1,0 +1,221 @@
+{
+  "all_csv_bytes_unchanged": true,
+  "files": [
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/diagnostic-vram-oversubscription/qwen3-8b-q4km/details.csv",
+      "sha256": "4d9456d344ada3ee2686b5f0ad797a4f779f027cb209160574f37df5e8413b89",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/gemma-3-4b-it/details.csv",
+      "sha256": "d80107f5333dcd6e923044dc46c91cddb68ca856838ad6b1cd35512d3823df12",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/gemma-4-e2b-it-q4/details.csv",
+      "sha256": "cabe0db6e9f0a84141fff71c1aeefbcda6d2301f3da9f7e8ac59c1f79f2db408",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/h2o-lightning-4b-stock-q4km/details.csv",
+      "sha256": "d955c0af4f1e6ffe9d066c64a63cb71ba5295ebcaa1b1b8aea685cf2c67dee5e",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/lfm3-omni-2b-q4km/details.csv",
+      "sha256": "80af727abb4a02f1193a2231625cb48bf0d79e758c85a1c8c19102770bff336b",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/ling-3.0-tiny-q4km/details.csv",
+      "sha256": "ca6d6f71ae193e88f9740a547db7cc2b805329186da507ea809397c9357a52c9",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/llama-3.2-3b-instruct/details.csv",
+      "sha256": "0bf451757a5147d4519c178ab45f986d314923911ae2c429ce8f84bc0dae173c",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/mistral-7b-instruct-v03-q4km/details.csv",
+      "sha256": "8adb9b2673e2caca427f641a6bf3962ff1cc762b5d402eb7cadcc0dfe5941349",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/nanbeige4.2-3b-q4km/details.csv",
+      "sha256": "01b8ad4e154276b84615779c19882e2442326dae4a709bb46a3c226786f41039",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/nemotron-3.5-bolt-e4b-q4km/details.csv",
+      "sha256": "526112caade29435e1e875132275d3a86a13aff3668eb1703180e31c760819c6",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/neohorse-1-9b-q4km/details.csv",
+      "sha256": "bc0e4c0c29315843060235846c444515de795f855fb3880b6dda2fe253006e6f",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/ornith-1.5-9b-q4km/details.csv",
+      "sha256": "f110ebceee4501890136f5bc010452c60dcfa13937563b2128f74b0fa5110ded",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/phi-4-mini-instruct-q4km/details.csv",
+      "sha256": "2b0f6f038b3e814fdd40f21a93b047e4b55d5f1080df611eec4b65a07bed8c83",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/qwen3-0.6b-q8/details.csv",
+      "sha256": "ec8560fa56d43e6fa1c8719bfb17dab8407919a100b434ad12717c79bef5a1be",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/qwen3-1.7b-q8/details.csv",
+      "sha256": "6971a8d4fdc96164f5270523a812b151ff1d8d07be439f8dac2ae6c015e4e181",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/qwen3-8b-q4km/details.csv",
+      "sha256": "88925d4d4594e234d671f9fe5a738ad65a9aadef5cf0b0717261b9297c72d2a1",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/qwen3.5-4b-q4km/details.csv",
+      "sha256": "b199fa0d8fa41ffbcb42c085d6f0cdf807d26fb375964130f0375eccc8c1b346",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/qwen3.5-9b-q4km/details.csv",
+      "sha256": "c20ac048b1873f09a0c9ebe57cf5ac42fcad85cc5e14914fd91042f759b59c07",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-native-v2/ternary-bonsai-2-9b-q2/details.csv",
+      "sha256": "0df33d92d0d4dffb8bff1df434b5a4557f4fad0702b31629b71f2a3f7968221f",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-v1/ling-3.0-tiny-q4km/details.csv",
+      "sha256": "5b3ed808c0eb769f4c4b7836357bebbdf3fae9cafe968d786ec35d24a1ff4eda",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-v1/qwen3-0.6b-q8/details.csv",
+      "sha256": "9174a1f1cd0e2844012829ced213a4eda9d043580fdca4ce0ec021ceaeb931df",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-v1/qwen3-1.7b-q8/details.csv",
+      "sha256": "9379bc93ad038cfc1ff80eefe78720d1c2e71de0d3d14ca2c788d3777a4e1685",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-local-native-20261103",
+      "path": "results/local-v1/qwen3.5-4b-q4km/details.csv",
+      "sha256": "a58ed1ad82194b77dfec0511bade01c322c2dc5e5c65307a1a79fe75cbf182a7",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
+      "sha256": "8f0ce08029ff3c09ee8f9a55550bf01e7de0e4e4bb973b9383e2368ca36a84af",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/details.csv",
+      "sha256": "e44536f49cb4592c80e7401ecbee45354b74f1bc03d4006246b9b866bc4b1850",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/details.csv",
+      "sha256": "f19af5e04c691cbd4e76dc7414ecd2eca5d06724ebbdb9508598384993598ee5",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/details.csv",
+      "sha256": "c7a5e9c2e09b149775ba39730d8dae9d77cf22d83e7e996f2821b4b02fa1b297",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/details.csv",
+      "sha256": "a87cefd6ab66f483dc787f953ba457cbb7e0451aadcf866eb5cec281c880339d",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/qwen3-8b-q4km-f16-adjusted-n100/details.csv",
+      "sha256": "8dc6b4de0eac3947c9c9117d3d710c41fcc4edcd665e287f7304be796d0c983d",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/qwen3-8b-q4km-f16-adjusted-n250/details.csv",
+      "sha256": "f4100d4685cf04211a519b6188f53b7bde8e058f87104bcb5dce9285e86d416c",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/qwen3-8b-q4km-f16-adjusted-n50/details.csv",
+      "sha256": "704b95381a290a67b18b2ca06c72a513cd1307f940d68f3972e61cb9a1727639",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/qwen3-8b-q4km-f16-adjusted-n500/details.csv",
+      "sha256": "6926aa04bd973f155892b0c7b761a32e8b57bf1a6ff5d838273502832eba6550",
+      "unchanged": true
+    },
+    {
+      "study": "profiles-v3",
+      "path": "results/qwen3-8b-q4km-q8-adjusted-n500/details.csv",
+      "sha256": "f2c71990e97117b29d691e40465552f4507e34a563abcdb947f71e0c45eebe29",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-oauth-v1-20261103",
+      "path": "results/gpt-6-luna/details.csv",
+      "sha256": "9309b2bd8127ae254aa889ff258f7b4b29c8537c7f39c77af1a0ad0be46c2389",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-oauth-v1-20261103",
+      "path": "results/gpt-6.1-sol/details.csv",
+      "sha256": "ac7877e18908f9ddfeff9205d0e3b2b814b329cbc82bb96a62ef0644577a5be8",
+      "unchanged": true
+    },
+    {
+      "study": "skill-discovery-oauth-v1-20261103",
+      "path": "results/gpt-6.1-terra/details.csv",
+      "sha256": "01ef4827a9023a4e6dbe3d2f1dcbeeae26132c86484b10d89c56bf6889d8016a",
+      "unchanged": true
+    }
+  ]
+}

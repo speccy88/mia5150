@@ -1,0 +1,9 @@
+{
+  "model": "mistral-7b-instruct-v03-q4km-f16-adjusted-n500",
+  "protocol": "v3-local-context-kv-real-token-gate",
+  "recorded_trials": 20,
+  "planned_trials": 20,
+  "not_run_trials": 0,
+  "stop": null,
+  "complete": true
+}

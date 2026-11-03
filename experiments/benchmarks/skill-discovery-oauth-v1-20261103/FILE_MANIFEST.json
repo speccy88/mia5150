@@ -1,0 +1,392 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 134,
+      "sha256": "0eac50bada86fb5d62acc3faca9f150cca5474e8de7a2cc79cdfaaa328018019"
+    },
+    {
+      "path": "admission.py",
+      "bytes": 3290,
+      "sha256": "4a441eb95840faa2c110ed3e342e5363fb2c18a1904e12729569034626af7543"
+    },
+    {
+      "path": "analyze_public.py",
+      "bytes": 6223,
+      "sha256": "93c089445e1797042ea2100db6a579df851b8c04d209cb367d822686e61bc216"
+    },
+    {
+      "path": "analyze_results.py",
+      "bytes": 12898,
+      "sha256": "452c66451cf5eeff1ce1c67007d107b54f02e6375d3ce21d049b2533193c7bde"
+    },
+    {
+      "path": "bench.py",
+      "bytes": 36322,
+      "sha256": "e0280520a3910b53c0cd23f754c246c59b124b9ded5f47fc55d903c44864d3f7"
+    },
+    {
+      "path": "configs/chatgpt-oauth.example.json",
+      "bytes": 172,
+      "sha256": "657558cf1cfbb3307a43fd241e01c522a05c91cfb51069e69a9e8ba62bed4710"
+    },
+    {
+      "path": "configs/hosted-api.example.json",
+      "bytes": 208,
+      "sha256": "5ac0910f360603c3ac93ad810f7f741e0fce509d16b8994ec4f6c16118a96c9a"
+    },
+    {
+      "path": "configs/local-qwen3-06b.json",
+      "bytes": 227,
+      "sha256": "6831e4cca6628bb0a007b50e21bb8dbc8b44ac9a5ea10354b2861d05ddb0dd67"
+    },
+    {
+      "path": "configs/local-qwen3-4b.json",
+      "bytes": 229,
+      "sha256": "e01ec18c978e95fe2efd7c46dbe883b3d556bf2f8c8f68778f03124a29aa17e8"
+    },
+    {
+      "path": "configs/oauth-gpt-6-luna.json",
+      "bytes": 461,
+      "sha256": "2b27929a3a6e100912243225c4d0979c9abc5f801bf3238d47c36e1859608e80"
+    },
+    {
+      "path": "configs/oauth-gpt-6.1-sol.json",
+      "bytes": 462,
+      "sha256": "53fd752ad888b4d44bbf1722687b67d3a0d3724f0c98f1117d5e0a0d72e31c39"
+    },
+    {
+      "path": "configs/oauth-gpt-6.1-terra.json",
+      "bytes": 464,
+      "sha256": "617abbe6e2a87302720fc05b11a2c770b9d197be7f657e1cfff6a7aa4e2299d7"
+    },
+    {
+      "path": "Connect-ChatGPT.ps1",
+      "bytes": 2073,
+      "sha256": "e24604284514e3c99cab6b76979435044e81f897964c422a1800de8478abd6a5"
+    },
+    {
+      "path": "data/ATTRIBUTION.md",
+      "bytes": 828,
+      "sha256": "25f1697cee29a073b5795538cf44859005de0bbccd0dcfd1e3decef1ae418ead"
+    },
+    {
+      "path": "data/ATTRIBUTIONS.jsonl",
+      "bytes": 2094425,
+      "sha256": "bd8abd9e25a4807cf54bd1e03381a126841c8efeca0f5d7cb6456f186b7adddf"
+    },
+    {
+      "path": "data/PROVENANCE.json",
+      "bytes": 652,
+      "sha256": "99d41b05d219f4eff904943c925cf4679eacabc4885e4ea9fb01e1f32478d63c"
+    },
+    {
+      "path": "data/test.jsonl",
+      "bytes": 1707550,
+      "sha256": "f53aad53cfb44c7a3a26edb8550e8a64080b0b9916c17d8e61bb79f60c6617c5"
+    },
+    {
+      "path": "data/test_queries.json",
+      "bytes": 5415,
+      "sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b"
+    },
+    {
+      "path": "data/validation.json",
+      "bytes": 264,
+      "sha256": "9ca4731586f9a426e50f74c3ebe8dd64c0b08f71c05445e2c14b9c9cc3156248"
+    },
+    {
+      "path": "Download-Models.ps1",
+      "bytes": 2000,
+      "sha256": "b3af30e94e9d4638bf8d55e77bf59609993e50452c305c171e92eee5a7b5b2c5"
+    },
+    {
+      "path": "environment-versions.json",
+      "bytes": 118,
+      "sha256": "10d9f8c742bff9001159400569e7ea83d7daae2480817115fefeab2d93997775"
+    },
+    {
+      "path": "evidence/selected-model-metadata.json",
+      "bytes": 322,
+      "sha256": "30480c78b49906feb2bfe5d0c2c2f142a678c172452207b7304d3f534091f449"
+    },
+    {
+      "path": "figures/scaling.png",
+      "bytes": 164802,
+      "sha256": "179f96c1033070c77fe5fec08d425ae17240b26636daee81e7202149761a2425"
+    },
+    {
+      "path": "Install-LocalRuntime.ps1",
+      "bytes": 1892,
+      "sha256": "b682e65a786a70c4c367248a96529f4354c33396fce6e584b7955bee85c6b58e"
+    },
+    {
+      "path": "INTEGRATION_NOTES.md",
+      "bytes": 596,
+      "sha256": "ce4d65b8a5a0bb07c8bfa6bf5f794737f4d83043d9d04f63e93a10b265463fc4"
+    },
+    {
+      "path": "oauth_chatgpt.py",
+      "bytes": 21123,
+      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4471,
+      "sha256": "bee135ccf16d12b0588a60f40e933bb9c5cd3b5e10ab2d0b42fcd2328eef9c78"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 22808,
+      "sha256": "7c00f5492338c72b7fd4507e1e6ae7b044253c169cab44b760859e2736770851"
+    },
+    {
+      "path": "requirements-analysis.txt",
+      "bytes": 36,
+      "sha256": "ea7a8b0b40d3300f07d53b0155c8f37dad33c526e504e69fe69884cd4aafda2d"
+    },
+    {
+      "path": "requirements-oauth.txt",
+      "bytes": 25,
+      "sha256": "8f903029fab2ea1aec53dca6c647709c4b6a4edf89896ff284f5c34595ec2b74"
+    },
+    {
+      "path": "requirements-plots.txt",
+      "bytes": 19,
+      "sha256": "47efd43c1214958d9a6dd5fb235a3c34db3a0d12c82897ea04af8374c7b21935"
+    },
+    {
+      "path": "results/admission.json",
+      "bytes": 1669,
+      "sha256": "29f87c09f72e3723e572d09c6f4ed64cc005a528075018c9dd2283a894be583e"
+    },
+    {
+      "path": "results/analysis.json",
+      "bytes": 20760,
+      "sha256": "49cfddfa32758000f965bda8a3450d123690e3ea191dd4b0995604784fc1443c"
+    },
+    {
+      "path": "results/data-validation.json",
+      "bytes": 264,
+      "sha256": "7afc1e1c5e4da9f17b2b89534594f77610a0316adb8b2b6b9cc9db0d8e667fac"
+    },
+    {
+      "path": "results/gpt-6-luna/details.csv",
+      "bytes": 65085,
+      "sha256": "9309b2bd8127ae254aa889ff258f7b4b29c8537c7f39c77af1a0ad0be46c2389"
+    },
+    {
+      "path": "results/gpt-6-luna/manifest.json",
+      "bytes": 8572054,
+      "sha256": "b61ed90e91cdbce3f5c6e1795c59f89aaefeb795d2736bbef1f4b1264f720cd1"
+    },
+    {
+      "path": "results/gpt-6-luna/notes.md",
+      "bytes": 4328,
+      "sha256": "1ebd87a31290b00c8af33d75ae0d05ad968ad039896046431b801bd1cf6aebd4"
+    },
+    {
+      "path": "results/gpt-6-luna/response-audit.jsonl",
+      "bytes": 34001,
+      "sha256": "e8a1b5f1543428624947ab1157843c325cbf4c5cba5ddfa3444926c0c7782451"
+    },
+    {
+      "path": "results/gpt-6-luna/status.json",
+      "bytes": 347,
+      "sha256": "275ba61720809f849721a9b8043b5354aa61b9e6b90b00be588af21f7a301b49"
+    },
+    {
+      "path": "results/gpt-6-luna/stop.json",
+      "bytes": 164,
+      "sha256": "6a578a054dfd0484ba13c6b7b09ffe14c4fda40fd9cbb771ef3f65db248a70ae"
+    },
+    {
+      "path": "results/gpt-6.1-sol/details.csv",
+      "bytes": 62843,
+      "sha256": "ac7877e18908f9ddfeff9205d0e3b2b814b329cbc82bb96a62ef0644577a5be8"
+    },
+    {
+      "path": "results/gpt-6.1-sol/manifest.json",
+      "bytes": 8572055,
+      "sha256": "c45eb3668d572b2919c99eff91bca82e8d4412f9105cca60f2d1febe812ef81f"
+    },
+    {
+      "path": "results/gpt-6.1-sol/notes.md",
+      "bytes": 4329,
+      "sha256": "f86380530962f6dd0e065987f0ca66c3e98015286c93162990420c04d5165f40"
+    },
+    {
+      "path": "results/gpt-6.1-sol/response-audit.jsonl",
+      "bytes": 33773,
+      "sha256": "af0afc08512a561efaedffd33fbc76d03187a2d83b542dc2f209b0f13e96af04"
+    },
+    {
+      "path": "results/gpt-6.1-sol/status.json",
+      "bytes": 348,
+      "sha256": "3d018feb617454a5421c5edf7b6a5389312ea783bad07b524dd75dc157f8a24e"
+    },
+    {
+      "path": "results/gpt-6.1-sol/stop.json",
+      "bytes": 164,
+      "sha256": "6a578a054dfd0484ba13c6b7b09ffe14c4fda40fd9cbb771ef3f65db248a70ae"
+    },
+    {
+      "path": "results/gpt-6.1-terra/details.csv",
+      "bytes": 58387,
+      "sha256": "01ef4827a9023a4e6dbe3d2f1dcbeeae26132c86484b10d89c56bf6889d8016a"
+    },
+    {
+      "path": "results/gpt-6.1-terra/manifest.json",
+      "bytes": 8572057,
+      "sha256": "343513550fa75a35b1286926ab13f3e4d2c47a6c32576d9de275b05674cc0d99"
+    },
+    {
+      "path": "results/gpt-6.1-terra/notes.md",
+      "bytes": 4331,
+      "sha256": "8d42b70cb7cbcbd60f13ba9ce93018804edbd76a1c557f5f75f9610e5e372199"
+    },
+    {
+      "path": "results/gpt-6.1-terra/response-audit.jsonl",
+      "bytes": 33947,
+      "sha256": "7b6caff4e52e2a5e8bbb3a23aea56b778f7c348f302f4458a258cf40e922c9b7"
+    },
+    {
+      "path": "results/gpt-6.1-terra/status.json",
+      "bytes": 350,
+      "sha256": "d1e88df2179f1b3a74dfd8c9faaf4162c19767928ce562a82b52d24c88653c37"
+    },
+    {
+      "path": "results/gpt-6.1-terra/stop.json",
+      "bytes": 164,
+      "sha256": "6a578a054dfd0484ba13c6b7b09ffe14c4fda40fd9cbb771ef3f65db248a70ae"
+    },
+    {
+      "path": "results/METHODOLOGY_WARNING.json",
+      "bytes": 3402,
+      "sha256": "7b5991605933812fa38b4165851b26fd44c25b697419f7e2a7519e8776ec92c1"
+    },
+    {
+      "path": "results/protocol-audit.json",
+      "bytes": 3726,
+      "sha256": "94e4598089b3317896fd305148b6a82ce51383ff999a82c080eab142eda0b8d2"
+    },
+    {
+      "path": "results/sources.json",
+      "bytes": 1330,
+      "sha256": "3d763d2f3ecb9fa639138031d8965508ba4517f157bbcb631624fa2534c5908d"
+    },
+    {
+      "path": "results/suite-status.json",
+      "bytes": 1409,
+      "sha256": "bb473d487659bac99dbe07e7a9d7835a43a18652201151750e56698ae6b84bc0"
+    },
+    {
+      "path": "results/summary_by_size.csv",
+      "bytes": 7177,
+      "sha256": "798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3"
+    },
+    {
+      "path": "Run-Local.ps1",
+      "bytes": 637,
+      "sha256": "1c778e8963570ddb81ec96b025fb6c102225e867d087e4e72eeb7353b5d6e0dd"
+    },
+    {
+      "path": "run_oauth_suite.py",
+      "bytes": 2090,
+      "sha256": "42da88244d5ccf27548da3462e09a087650328c4677e3aa4389354569b00ea9f"
+    },
+    {
+      "path": "Setup.ps1",
+      "bytes": 1847,
+      "sha256": "e235dedf855df7f456dbefb20379dde690a34bd5971da48b338c22d2b97b2ba7"
+    },
+    {
+      "path": "source-original/admission.py",
+      "bytes": 3290,
+      "sha256": "4a441eb95840faa2c110ed3e342e5363fb2c18a1904e12729569034626af7543"
+    },
+    {
+      "path": "source-original/bench.py",
+      "bytes": 35240,
+      "sha256": "992ac9549bcada4ba29018ede5e7c932a78a98578092eaab4d10792a8d378e9c"
+    },
+    {
+      "path": "source-original/oauth_chatgpt.py",
+      "bytes": 21123,
+      "sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+    },
+    {
+      "path": "source-original/run_oauth_suite.py",
+      "bytes": 2090,
+      "sha256": "42da88244d5ccf27548da3462e09a087650328c4677e3aa4389354569b00ea9f"
+    },
+    {
+      "path": "source-original/summarize.py",
+      "bytes": 4065,
+      "sha256": "f4ae14dd35fe0b9ccd580ef336456e237c0b7e2876f37a65b4631a8140fc93c0"
+    },
+    {
+      "path": "Start-LocalServer.ps1",
+      "bytes": 6425,
+      "sha256": "405c89561e29090c83f81dcd7670c8e55634083bbd3cc3ecaa152285fe889de5"
+    },
+    {
+      "path": "summarize.py",
+      "bytes": 4065,
+      "sha256": "f4ae14dd35fe0b9ccd580ef336456e237c0b7e2876f37a65b4631a8140fc93c0"
+    },
+    {
+      "path": "tests/test_benchmark.py",
+      "bytes": 13397,
+      "sha256": "609eb99280e6eaf5daec3102bd96cd8f71bcd5c535994947b64ef63e7bf8156f"
+    },
+    {
+      "path": "tests/test_oauth_local_form.py",
+      "bytes": 7292,
+      "sha256": "fc23e6aa8777c88116453cca20b56e5302d661be4212e4a08de32b183d91b823"
+    },
+    {
+      "path": "tests/test_oauth_run_controls.py",
+      "bytes": 3932,
+      "sha256": "ca8c56358d2c6efdc0b7593094ca35f8e9f9638b555ad8593f2ef51ca7233554"
+    },
+    {
+      "path": "validation/code-adaptations.json",
+      "bytes": 527,
+      "sha256": "8947190e4c472bc9f50bb48042fa5c2ab7583b5747fe669efd19f7998285ca47"
+    },
+    {
+      "path": "validation/integration-tests.json",
+      "bytes": 265,
+      "sha256": "c940e568132ede480d694fa1545996b696a192cd8f804b43df9ef04d6f7ebb07"
+    },
+    {
+      "path": "validation/markdown-links.json",
+      "bytes": 129,
+      "sha256": "9fd4f845d6d3af33482ba2f7708330fba6d61195c511aeb17a67773e5f1b838a"
+    },
+    {
+      "path": "validation/public-reproduction.json",
+      "bytes": 796,
+      "sha256": "1c7320003c38c1066f02ab89de3a2fad5265df4f7c74df1309a47ee0a7e44892"
+    },
+    {
+      "path": "validation/results-validation.json",
+      "bytes": 1260,
+      "sha256": "b89de794729434e8d83b6d90d15cae4d03d1faa5010a0811848fd55ebd8c0843"
+    },
+    {
+      "path": "validation/secret-scan.json",
+      "bytes": 692,
+      "sha256": "4823d0ddef8e60db103b0de73b9f78c0d550a415ff79db2942f031075bdf99d4"
+    },
+    {
+      "path": "validation/tests.json",
+      "bytes": 311,
+      "sha256": "4b284c4638b2a4fee8423a48e333e3e1b56d7bbda2e36332bc9f718f80f3a812"
+    }
+  ],
+  "file_count": 77,
+  "total_bytes": 30258446,
+  "self_and_SHA256SUMS_excluded": true
+}

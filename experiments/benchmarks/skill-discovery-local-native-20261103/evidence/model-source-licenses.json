@@ -1,0 +1,188 @@
+{
+  "weights_not_distributed": true,
+  "cards_not_redistributed": true,
+  "source_cards": [
+    {
+      "repository": "LiquidAI/LFM3-Omni-2B-GGUF",
+      "model_card_url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF",
+      "received_license_label": "other",
+      "received_license_link": "LICENSE",
+      "archived_card_sha256": "9ec858c7e6597c8679dc2a72af15f7dbaf6a5e238cecad6492174514cdbbcd6d"
+    },
+    {
+      "repository": "LiquidAI/LFM3-Omni-2B",
+      "model_card_url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+      "received_license_label": "other",
+      "received_license_link": "LICENSE",
+      "archived_card_sha256": "2574663e12ee8b2780a67fe0435d10a5f545c21e40ee5c8cc68024ca1ed50df6"
+    },
+    {
+      "repository": "Nanbeige/Nanbeige4.2-3B",
+      "model_card_url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "18a2b0079a823db40ff9ef5b527f37ca1bc0deec2be913e2c22a54dc376096dc"
+    },
+    {
+      "repository": "Qwen/Qwen3-0.6B-GGUF",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/blob/main/LICENSE",
+      "archived_card_sha256": "44adabae2153c3a7bb741b86fbffd48736bc95118831935fdfc4d3cc1854f2f5"
+    },
+    {
+      "repository": "Qwen/Qwen3-0.6B",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-0.6B/blob/main/LICENSE",
+      "archived_card_sha256": "1ab64a26fcb3b461423b89a433a8c858f1bf8d4086f979cbb3ff878d47cf20e9"
+    },
+    {
+      "repository": "Qwen/Qwen3-1.7B-GGUF",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/blob/main/LICENSE",
+      "archived_card_sha256": "60706b0c6aa38e0d1e73a7b21f98e50cad82ee1eaea636fd1f3a49617bccdb0d"
+    },
+    {
+      "repository": "Qwen/Qwen3-1.7B",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-1.7B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-1.7B/blob/main/LICENSE",
+      "archived_card_sha256": "257e52c419dac2258852643f18af6c974f21f8c6c1b6f371b6cca6201cf29091"
+    },
+    {
+      "repository": "Qwen/Qwen3-8B-GGUF",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B-GGUF",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/blob/main/LICENSE",
+      "archived_card_sha256": "913fd918b4afb4511accca0874f701248b024013e804fa7a463639ead74e4dcb"
+    },
+    {
+      "repository": "Qwen/Qwen3-8B",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE",
+      "archived_card_sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6"
+    },
+    {
+      "repository": "Qwen/Qwen3.5-4B",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3.5-4B/blob/main/LICENSE",
+      "archived_card_sha256": "1406be1b6b8fd8a6545870da516912804756593628a1d0fb0a7965211e82a7bb"
+    },
+    {
+      "repository": "Qwen/Qwen3.5-9B",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/main/LICENSE",
+      "archived_card_sha256": "c5f5a8c2dddab69cfbf05279235aa5fddb137939a06539c4c7637aa900fef6d0"
+    },
+    {
+      "repository": "TokenRhythm/NeoHorse-1-9B-GGUF",
+      "model_card_url": "https://huggingface.co/TokenRhythm/NeoHorse-1-9B-GGUF",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "b575e2dc75ff710bab81beaf557c07dc05aa4aed7c4c2d5fc576abe361dcb8ce"
+    },
+    {
+      "repository": "TokenRhythm/NeoHorse-1-9B",
+      "model_card_url": "https://huggingface.co/TokenRhythm/NeoHorse-1-9B",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "510de79af3e000f9676f033e1691568a087a62500f65074748303fad984c1011"
+    },
+    {
+      "repository": "google/gemma-4-E2B-it-qat-q4_0-gguf",
+      "model_card_url": "https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://ai.google.dev/gemma/docs/gemma_4_license",
+      "archived_card_sha256": "942e93b96c2f7f2b5fdd8d5578f0f1215e4a354f12e202999b4fbc864bb02ef5"
+    },
+    {
+      "repository": "google/gemma-4-E2B-it",
+      "model_card_url": "https://huggingface.co/google/gemma-4-E2B-it",
+      "received_license_label": "apache-2.0",
+      "received_license_link": "https://ai.google.dev/gemma/docs/gemma_4_license",
+      "archived_card_sha256": "3e0608a6be80e3eb040a5aa6c76707809503deb85be6360184a118fb6156526c"
+    },
+    {
+      "repository": "h2oai/h2o-lightning-4b-gguf",
+      "model_card_url": "https://huggingface.co/h2oai/h2o-lightning-4b-gguf",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "8c101331bc19366f795dcfff58c437b89d7945f311be16273f885d6c26db0947"
+    },
+    {
+      "repository": "h2oai/h2o-lightning-4b",
+      "model_card_url": "https://huggingface.co/h2oai/h2o-lightning-4b",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "cd1382b2475731866df744d0d6bc3f3d6c4ece1e1724eb02f100b676a7dd7b79"
+    },
+    {
+      "repository": "inclusionAI/Ling-3.0-tiny-GGUF",
+      "model_card_url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny-GGUF",
+      "received_license_label": "mit",
+      "received_license_link": null,
+      "archived_card_sha256": "b7d7d03ff0c699d9fca01c789899211b4a0dbc0af03e9e2f133c16aff5c3d050"
+    },
+    {
+      "repository": "inclusionAI/Ling-3.0-tiny",
+      "model_card_url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny",
+      "received_license_label": "mit",
+      "received_license_link": null,
+      "archived_card_sha256": "f86dd6517632df8cc98eaf3599d8524ccf63ba345413251a826d8ef450c0ffb5"
+    },
+    {
+      "repository": "microsoft/Phi-4-mini-instruct",
+      "model_card_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "received_license_label": "mit",
+      "received_license_link": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/LICENSE",
+      "archived_card_sha256": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd"
+    },
+    {
+      "repository": "mistralai/Mistral-7B-Instruct-v0.3",
+      "model_card_url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba"
+    },
+    {
+      "repository": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+      "model_card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+      "received_license_label": "other",
+      "received_license_link": "https://openmdw.ai/license/1-1/",
+      "archived_card_sha256": "8a06cc67a204a173512f631b7eb8325c220236c543ee5007ecbecddeec272b20"
+    },
+    {
+      "repository": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16",
+      "model_card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16",
+      "received_license_label": "other",
+      "received_license_link": "https://openmdw.ai/license/1-1/",
+      "archived_card_sha256": "5b6689e7b829b0e79a78802b9581c6c01529a23f87b39925e0b57f3eaeacbfac"
+    },
+    {
+      "repository": "ornith-ai/Ornith-1.5-9B-GGUF",
+      "model_card_url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF",
+      "received_license_label": "mit",
+      "received_license_link": "https://huggingface.co/ornith-ai/Ornith-1.5-9B/blob/main/LICENSE",
+      "archived_card_sha256": "73fea91dc1a115240c564071eb05738832837bb5e51eb043b817739b8c86f2ca"
+    },
+    {
+      "repository": "ornith-ai/Ornith-1.5-9B",
+      "model_card_url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B",
+      "received_license_label": "mit",
+      "received_license_link": "https://huggingface.co/ornith-ai/Ornith-1.5-9B/blob/main/LICENSE",
+      "archived_card_sha256": "7a03f9b2b2d7e12e740df3bb5af43c82837aad9dd9b945de7c0a67ac4ee5998f"
+    },
+    {
+      "repository": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "model_card_url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "received_license_label": "apache-2.0",
+      "received_license_link": null,
+      "archived_card_sha256": "8d3ded5e60fc9bf1efab26004deccdfc95cb67e761ed237df6f7f8290c0d7cd2"
+    }
+  ]
+}

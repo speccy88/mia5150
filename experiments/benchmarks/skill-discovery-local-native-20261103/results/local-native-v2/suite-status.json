@@ -1,0 +1,157 @@
+{
+  "started_utc": "2026-11-03T04:44:03.192099+00:00",
+  "state": "completed",
+  "protocol": "v1-native-final-answer-parser-v2",
+  "models": [
+    {
+      "alias": "qwen3-0.6b-q8",
+      "requested": "Qwen3-0.6B",
+      "started_utc": "2026-11-03T04:44:04.644130+00:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3-0.6b-q8-native-v2\\launch-20261103T044406809-e9281253",
+      "finished_utc": "2026-11-03T04:51:30.359877+00:00"
+    },
+    {
+      "alias": "qwen3-1.7b-q8",
+      "requested": "Qwen3-1.7B",
+      "started_utc": "2026-11-03T04:51:30.359877+00:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3-1.7b-q8-native-v2\\launch-20261103T045136314-2b78225d",
+      "finished_utc": "2026-11-03T05:02:59.957683+00:00"
+    },
+    {
+      "alias": "qwen3.5-4b-q4km",
+      "requested": "Qwen3.5-4B",
+      "started_utc": "2026-11-03T05:02:59.962556+00:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3.5-4b-q4km-native-v2\\launch-20261103T050308705-af21a973",
+      "finished_utc": "2026-11-03T05:20:16.751937+00:00"
+    },
+    {
+      "alias": "ling-3.0-tiny-q4km",
+      "requested": "Ling-3.0-tiny",
+      "started_utc": "2026-11-03T05:20:16.751937+00:00",
+      "state": "completed",
+      "launch": "runtime\\ling-3.0-tiny-q4km-native-v2\\launch-20261103T052032503-803628ef",
+      "finished_utc": "2026-11-03T05:35:39.500744+00:00"
+    },
+    {
+      "alias": "qwen3.5-9b-q4km",
+      "requested": "Qwen3.5-9B",
+      "started_utc": "2026-11-03T05:35:39.519919+00:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3.5-9b-q4km-native-v2\\launch-20261103T053556898-73a36e46",
+      "finished_utc": "2026-11-03T06:00:16.313186+00:00"
+    },
+    {
+      "alias": "llama-3.2-3b-instruct",
+      "requested": "Llama 3.2 3B",
+      "started_utc": "2026-11-03T06:00:16.317196+00:00",
+      "state": "blocked",
+      "reason": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "finished_utc": "2026-11-03T06:00:19.549924+00:00"
+    },
+    {
+      "alias": "gemma-3-4b-it",
+      "requested": "Gemma 3 4B",
+      "started_utc": "2026-11-03T06:00:19.554717+00:00",
+      "state": "blocked",
+      "reason": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "finished_utc": "2026-11-03T06:00:22.703148+00:00"
+    },
+    {
+      "alias": "h2o-lightning-4b-stock-q4km",
+      "requested": "H2O-Lightning-4B",
+      "started_utc": "2026-11-03T06:00:22.703148+00:00",
+      "state": "completed",
+      "launch": "runtime\\h2o-lightning-4b-stock-q4km-native-v2\\launch-20261103T060024015-ca59f7d4",
+      "finished_utc": "2026-11-03T06:15:10.494006+00:00"
+    },
+    {
+      "alias": "gemma-4-e2b-it-q4",
+      "requested": "Gemma 4 E2B",
+      "started_utc": "2026-11-03T06:15:10.499009+00:00",
+      "state": "completed",
+      "launch": "runtime\\gemma-4-e2b-it-q4-native-v2\\launch-20261103T061511961-afe8ca0c",
+      "finished_utc": "2026-11-03T06:27:40.053936+00:00"
+    },
+    {
+      "alias": "qwen3-8b-q4km",
+      "requested": "Qwen3-8B",
+      "started_utc": "2026-11-03T06:27:40.063552+00:00",
+      "state": "blocked",
+      "launch": "runtime\\qwen3-8b-q4km-native-v2\\launch-20261103T062741067-e126794d",
+      "reason": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "diagnostic_folder": "results\\diagnostic-vram-oversubscription\\qwen3-8b-q4km",
+      "diagnostic_acquired_rows": 21
+    },
+    {
+      "alias": "neohorse-1-9b-q4km",
+      "requested": "NeoHorse-1-9B",
+      "started_utc": "2026-11-03T06:56:00.117196+00:00",
+      "state": "completed",
+      "launch": "runtime\\neohorse-1-9b-q4km-native-v2\\launch-20261103T065601197-997bfd56",
+      "finished_utc": "2026-11-03T07:17:29.970260+00:00"
+    },
+    {
+      "alias": "ornith-1.5-9b-q4km",
+      "requested": "Ornith-1.5-9B",
+      "started_utc": "2026-11-03T07:17:29.988156+00:00",
+      "state": "completed",
+      "launch": "runtime\\ornith-1.5-9b-q4km-native-v2\\launch-20261103T071731142-1d5986ee",
+      "finished_utc": "2026-11-03T07:39:16.389257+00:00"
+    },
+    {
+      "alias": "nemotron-3.5-bolt-e4b-q4km",
+      "requested": "Nemotron 3.5 Bolt E4B",
+      "started_utc": "2026-11-03T07:39:16.396553+00:00",
+      "state": "completed",
+      "launch": "runtime\\nemotron-3.5-bolt-e4b-q4km-native-v2\\launch-20261103T073917871-cf947b40",
+      "finished_utc": "2026-11-03T07:57:46.329487+00:00"
+    },
+    {
+      "alias": "ternary-bonsai-2-9b-q2",
+      "requested": "Ternary Bonsai 2 9B",
+      "started_utc": "2026-11-03T07:57:46.344837+00:00",
+      "state": "completed",
+      "launch": "runtime\\ternary-bonsai-2-9b-q2-native-v2\\launch-20261103T075747463-c9a33cca",
+      "finished_utc": "2026-11-03T08:18:35.898643+00:00"
+    },
+    {
+      "alias": "lfm3-omni-2b-q4km",
+      "requested": "LFM3-Omni-2B",
+      "started_utc": "2026-11-03T08:18:35.903694+00:00",
+      "state": "completed",
+      "launch": "runtime\\lfm3-omni-2b-q4km-native-v2\\launch-20261103T081836899-a01ba8e2",
+      "finished_utc": "2026-11-03T08:23:03.182744+00:00"
+    },
+    {
+      "alias": "phi-4-mini-instruct-q4km",
+      "requested": "Phi-4 Mini 3.8B",
+      "started_utc": "2026-11-03T08:23:03.189259+00:00",
+      "state": "completed",
+      "launch": "runtime\\phi-4-mini-instruct-q4km-native-v2\\launch-20261103T082304216-70ec912d",
+      "finished_utc": "2026-11-03T08:33:41.130052+00:00"
+    },
+    {
+      "alias": "mistral-7b-instruct-v03-q4km",
+      "requested": "Mistral 7B Instruct",
+      "started_utc": "2026-11-03T08:33:41.142825+00:00",
+      "state": "blocked",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-native-v2\\launch-20261103T083341848-6ad12463",
+      "reason": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "finished_utc": "2026-11-03T08:33:53.787310+00:00"
+    },
+    {
+      "alias": "nanbeige4.2-3b-q4km",
+      "requested": "Nanbeige 4.2 3B",
+      "started_utc": "2026-11-03T08:33:53.794034+00:00",
+      "state": "completed",
+      "launch": "runtime\\nanbeige4.2-3b-q4km-native-v2\\launch-20261103T083354703-493d765e",
+      "finished_utc": "2026-11-03T09:50:57.687481+00:00"
+    }
+  ],
+  "continued_utc": "2026-11-03T06:55:59.422019+00:00",
+  "continuation_reason": "Physical VRAM admission after preserved Qwen3-8B diagnostic",
+  "finished_utc": "2026-11-03T09:50:57.687481+00:00"
+}

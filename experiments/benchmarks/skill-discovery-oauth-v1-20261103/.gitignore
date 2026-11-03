@@ -1,0 +1,12 @@
+.venv/
+private/
+runtime/
+__pycache__/
+*.pyc
+.pytest_cache/
+.test-tmp/
+.setup-tmp/
+downloads/
+models/
+tools/
+results-new*/

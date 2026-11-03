@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "h2o-lightning-4b-stock-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M, official stock ordinary-chat export",
+  "gpu_proof": "runtime/h2o-lightning-4b-stock-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "H2O-Lightning-4B",
+    "alias": "h2o-lightning-4b-stock-q4km",
+    "path": "models/h2o-lightning-4b-stock-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, official stock ordinary-chat export",
+    "source": "h2oai/h2o-lightning-4b-gguf",
+    "note": "The original numbered-name prompt is unchanged; no typed-decision shim or probability API"
+  },
+  "raw_response_dir": "private-responses/new-run/h2o-lightning-4b-stock-q4km"
+}

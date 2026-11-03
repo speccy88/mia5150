@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "ternary-bonsai-2-9b-q2-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Official ternary Q2_0 packing, not Q4",
+  "gpu_proof": "runtime/ternary-bonsai-2-9b-q2-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Ternary Bonsai 2 9B",
+    "alias": "ternary-bonsai-2-9b-q2",
+    "path": "models/Ternary-Bonsai-2-9B-Q2_0.gguf",
+    "quantization": "Official ternary Q2_0 packing, not Q4",
+    "source": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+    "note": "Publisher supports upstream llama.cpp for Q2_0; PQ2_0/PTQ1_0 require its fork"
+  },
+  "raw_response_dir": "private-responses/new-run/ternary-bonsai-2-9b-q2"
+}

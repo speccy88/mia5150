@@ -1,0 +1,56 @@
+[
+  {
+    "model": "gpt-6-luna",
+    "protocol": "v1-oauth-variant",
+    "recorded_trials": 121,
+    "planned_trials": 140,
+    "not_run_trials": 19,
+    "stop": {
+      "error": "HTTP_400",
+      "at_trial": "5000:0",
+      "http_status": 400,
+      "provider_code": "string_above_max_length",
+      "request_id": null,
+      "retry_after_s": null
+    },
+    "complete": false,
+    "wall_time_s": 470.962587,
+    "finished_utc": "2026-11-03T03:45:50.954771+00:00"
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "protocol": "v1-oauth-variant",
+    "recorded_trials": 121,
+    "planned_trials": 140,
+    "not_run_trials": 19,
+    "stop": {
+      "error": "HTTP_400",
+      "at_trial": "5000:0",
+      "http_status": 400,
+      "provider_code": "string_above_max_length",
+      "request_id": null,
+      "retry_after_s": null
+    },
+    "complete": false,
+    "wall_time_s": 840.78866,
+    "finished_utc": "2026-11-03T03:59:51.750511+00:00"
+  },
+  {
+    "model": "gpt-6.1-terra",
+    "protocol": "v1-oauth-variant",
+    "recorded_trials": 121,
+    "planned_trials": 140,
+    "not_run_trials": 19,
+    "stop": {
+      "error": "HTTP_400",
+      "at_trial": "5000:0",
+      "http_status": 400,
+      "provider_code": "string_above_max_length",
+      "request_id": null,
+      "retry_after_s": null
+    },
+    "complete": false,
+    "wall_time_s": 495.370667,
+    "finished_utc": "2026-11-03T04:08:07.136449+00:00"
+  }
+]

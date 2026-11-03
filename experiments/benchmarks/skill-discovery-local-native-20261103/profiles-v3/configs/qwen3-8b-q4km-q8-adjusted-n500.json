@@ -1,0 +1,23 @@
+{
+  "backend": "llama",
+  "model": "qwen3-8b-q4km-q8-adjusted-n500",
+  "context_window": 23552,
+  "kv_type": "q8_0",
+  "base_url": "http://127.0.0.1:28085",
+  "quantization": "Q4_K_M",
+  "gpu_proof": "runtime/qwen3-8b-q4km-q8-adjusted-n500/gpu-proof.json",
+  "library_sizes": [
+    500
+  ],
+  "raw_response_dir": "private-responses/new-run/qwen3-8b-q4km-q8-adjusted-n500",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Qwen3-8B",
+    "alias": "qwen3-8b-q4km",
+    "path": "../models/Qwen3-8B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "Qwen/Qwen3-8B-GGUF",
+    "sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785"
+  }
+}

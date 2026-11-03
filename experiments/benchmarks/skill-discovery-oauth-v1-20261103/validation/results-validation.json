@@ -1,0 +1,49 @@
+{
+  "rows": 420,
+  "columns": 45,
+  "completed_responses": 360,
+  "http_400_rejections": 3,
+  "not_run": 57,
+  "per_model": {
+    "gpt-6-luna": {
+      "planned_rows": 140,
+      "recorded_rows": 121,
+      "not_run_rows": 19,
+      "schema_columns": 45,
+      "csv_matches_sqlite": true,
+      "metric_arithmetic_checked": true
+    },
+    "gpt-6.1-sol": {
+      "planned_rows": 140,
+      "recorded_rows": 121,
+      "not_run_rows": 19,
+      "schema_columns": 45,
+      "csv_matches_sqlite": true,
+      "metric_arithmetic_checked": true
+    },
+    "gpt-6.1-terra": {
+      "planned_rows": 140,
+      "recorded_rows": 121,
+      "not_run_rows": 19,
+      "schema_columns": 45,
+      "csv_matches_sqlite": true,
+      "metric_arithmetic_checked": true
+    }
+  },
+  "measured_source_archive_checks": [
+    {
+      "model": "gpt-6-luna",
+      "measured_source_hashes_match_manifest": true
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "measured_source_hashes_match_manifest": true
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "measured_source_hashes_match_manifest": true
+    }
+  ],
+  "minimal_data_all_140_prompt_hashes_identical": true,
+  "normalization_of_full_raw_response_text_reaudited": false
+}

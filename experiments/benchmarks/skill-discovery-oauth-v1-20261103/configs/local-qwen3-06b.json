@@ -1,0 +1,9 @@
+{
+  "backend": "llama",
+  "model": "qwen3-0.6b-q8-v1",
+  "base_url": "http://127.0.0.1:18080",
+  "context_window": 32768,
+  "quantization": "Q8_0",
+  "gpu_proof": "runtime/qwen3-0.6b-q8-v1/gpu-proof.json",
+  "timeout_s": 600
+}

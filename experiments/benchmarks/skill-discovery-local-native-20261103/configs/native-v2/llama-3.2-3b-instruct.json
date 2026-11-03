@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "llama-3.2-3b-instruct-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "not loaded",
+  "gpu_proof": "runtime/llama-3.2-3b-instruct-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Llama 3.2 3B",
+    "alias": "llama-3.2-3b-instruct",
+    "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+    "source": "meta-llama/Llama-3.2-3B-Instruct",
+    "note": "No acceptance, credentials or third-party ungated substitute used"
+  },
+  "raw_response_dir": "private-responses/new-run/llama-3.2-3b-instruct",
+  "startup_error": "ACCESS_GATED_ACCEPTANCE_REQUIRED"
+}

@@ -1,0 +1,7 @@
+{
+  "backend": "chatgpt-oauth",
+  "model": "REPLACE_WITH_ACCOUNT_CATALOG_SLUG",
+  "base_url": "https://api.openai.com/v1",
+  "context_window": 128000,
+  "timeout_s": 300
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "new public study bytes including all 33 SQLite audit exports, no complete-history scan",
+  "files_scanned": 417,
+  "findings_without_values": [],
+  "passed": true,
+  "private_raw_archives_read": false,
+  "limitation": "Selected-file and pattern scan plus staged Gitleaks; not proof against arbitrary sensitive prose."
+}

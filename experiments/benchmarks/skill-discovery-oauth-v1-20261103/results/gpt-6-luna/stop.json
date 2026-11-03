@@ -1,0 +1,8 @@
+{
+  "error": "HTTP_400",
+  "at_trial": "5000:0",
+  "http_status": 400,
+  "provider_code": "string_above_max_length",
+  "request_id": null,
+  "retry_after_s": null
+}

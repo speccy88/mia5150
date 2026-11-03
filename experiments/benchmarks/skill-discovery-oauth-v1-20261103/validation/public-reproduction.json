@@ -1,0 +1,30 @@
+{
+  "offline_csv_validation": true,
+  "models": [
+    {
+      "model": "gpt-6-luna",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_arithmetic_and_saved_summaries_match": true,
+      "all_140_prompt_hashes_match": true
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_arithmetic_and_saved_summaries_match": true,
+      "all_140_prompt_hashes_match": true
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_arithmetic_and_saved_summaries_match": true,
+      "all_140_prompt_hashes_match": true
+    }
+  ],
+  "query_cluster_bootstrap_reproduced": true,
+  "sqlite_rechecked_in_public_package": false,
+  "model_calls": 0,
+  "credentials_required": false
+}

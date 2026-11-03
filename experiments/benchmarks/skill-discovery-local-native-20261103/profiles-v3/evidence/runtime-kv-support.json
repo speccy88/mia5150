@@ -1,0 +1,90 @@
+{
+  "runtime_build": "llama.cpp b11960 CUDA12.4",
+  "commit": "8642541b255bfb5dc39cd351a178be09013a55d6",
+  "cli_cache_types": [
+    "f32",
+    "f16",
+    "bf16",
+    "q8_0",
+    "q4_0",
+    "q4_1",
+    "iq4_nl",
+    "q5_0",
+    "q5_1"
+  ],
+  "selected": "q8_0 for K and V only; no low-bit sweep",
+  "cuda_fa_source_instances": [
+    {
+      "file": "ggml/src/ggml-cuda/fattn-common.cuh",
+      "sha256": "d47e737d80329f4b0862e92109b060a4ef7031041165b812ce0d6792b9466679"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/fattn-vec.cuh",
+      "sha256": "70e35f944d7d13118cae4d8a782525771de0ef4f557d2841360c7187dace2be4"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/fattn.cu",
+      "sha256": "b286c1ac71064d43003d34d8cebfe2fa9627657d22a5ca4eb83f60d0ef0fd44e"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-bf16-q8_0.cu",
+      "sha256": "9717723d82d34461fe3b81ace35f35ea646dd5e605338efce2f854f4d0be913f"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-f16-q8_0.cu",
+      "sha256": "c590a9c33bd34d4cef8ae3f597dc0facaca335ce78a22945be14485bcdb9570f"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q4_0-q8_0.cu",
+      "sha256": "9e4d60ed5343911d73257fff88e3a246d33e6a6ede5423a3f8c0a19f3e7b4f50"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q4_1-q8_0.cu",
+      "sha256": "e56d7a55ab855f590c727f49ad63344bf95a4cbb2c81f87ff89c5caca9b38ad2"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q5_0-q8_0.cu",
+      "sha256": "4da72bf724aeaaf1646ebf9fb29f35d39db43744c46de9f696db9c47d48c6ead"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q5_1-q8_0.cu",
+      "sha256": "7a9f1283ad89550cc58bdf53230228a18e6ee0101808f9138b47a16669d8a2bd"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-bf16.cu",
+      "sha256": "0bd85f28352f8504debaed9f06722e87c9e546c1f6974aa55b059aa47085e4a5"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-f16.cu",
+      "sha256": "1d80936c45fac29c7c0681152525bc6252c8f1cbca65c063d7c1cd263d47eec1"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q4_0.cu",
+      "sha256": "a56d98b1f9df2aa39da3c8f1e1e81c90cd9afa3b5357d9b18ecc364593b0d3a6"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q4_1.cu",
+      "sha256": "315761765078497915ceee0c4607459321e0579bf65a3ef6d0a9ab39d331c848"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q5_0.cu",
+      "sha256": "5e05e34d536a53e24f936e65505db480c2944ba21ca07ccc8286b3a0e2c41ddd"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q5_1.cu",
+      "sha256": "c8d72aa4f033ebaacf07e78d644c4a9bae7a41f56f6ce62e95dd9366a7d916ef"
+    },
+    {
+      "file": "ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q8_0.cu",
+      "sha256": "482a63647edc7ce0cafd92548bb188131f5c5aa72db162647f93d6bfa9378923"
+    }
+  ],
+  "quant_block_source": "ggml/src/ggml-common.h",
+  "quant_block_source_sha256": "0061131b615c5721fc88a78feeb22c1f8c450f1c2646a317d80796a653bf595c",
+  "q8_0_definition": "#define QK8_0 32\ntypedef struct {\n    ggml_half d;       // delta\n    int8_t  qs[QK8_0]; // quants\n} block_q8_0;\nstatic_assert(sizeof(block_q8_0) == sizeof(ggml_half) + QK8_0, \"wrong q8_0 block size/padding\");",
+  "memory_bits_per_value": 8.5,
+  "f16_bits_per_value": 16,
+  "theoretical_kv_bytes_ratio": 0.53125,
+  "quality_reference": "https://github.com/ggml-org/llama.cpp/pull/7412",
+  "quality_scope": "Historical upstream experiments are motivation only; current same-query comparisons are measured independently. Runtime checks require actual requested K/V types, enabled Flash Attention and CUDA allocation proofs."
+}

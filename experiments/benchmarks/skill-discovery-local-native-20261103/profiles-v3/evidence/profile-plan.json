@@ -1,0 +1,12 @@
+{
+  "base": "./",
+  "original_bench_sha256": "2129b561ab0b9b0d1430ab239056a095a74ed3b967c4b966f2d6591444d40922",
+  "base_archives_preserved": true,
+  "max_generation_calls": 200,
+  "profile_plan": [
+    "f16 adjusted by real token maxima: 20 queries x4 N x2 models",
+    "q8_0 at identical N500 adjusted context:20 queries x2 models",
+    "q8_0 32768 startup-only admission:zero generation"
+  ],
+  "new_gate": "real tokenizer input+500; old estimate gate retained unchanged in original suite"
+}

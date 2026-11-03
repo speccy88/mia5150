@@ -1,0 +1,24 @@
+{
+  "backend": "llama",
+  "model": "mistral-7b-instruct-v03-q4km-q8-adjusted-n500",
+  "context_window": 27392,
+  "kv_type": "q8_0",
+  "base_url": "http://127.0.0.1:28085",
+  "quantization": "Q4_K_M, local conversion of pinned official weights",
+  "gpu_proof": "runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/gpu-proof.json",
+  "library_sizes": [
+    500
+  ],
+  "raw_response_dir": "private-responses/new-run/mistral-7b-instruct-v03-q4km-q8-adjusted-n500",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Mistral 7B Instruct",
+    "alias": "mistral-7b-instruct-v03-q4km",
+    "path": "../models/Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "mistralai/Mistral-7B-Instruct-v0.3",
+    "note": "v0.3 explicitly selected for the unspecified Instruct version",
+    "sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f"
+  }
+}

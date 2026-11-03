@@ -1,0 +1,18 @@
+{
+  "backend": "llama",
+  "model": "gemma-4-e2b-it-q4-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Official QAT Q4_0",
+  "gpu_proof": "runtime/gemma-4-e2b-it-q4-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Gemma 4 E2B",
+    "alias": "gemma-4-e2b-it-q4",
+    "path": "models/gemma-4-E2B_q4_0-it.gguf",
+    "quantization": "Official QAT Q4_0",
+    "source": "google/gemma-4-E2B-it-qat-q4_0-gguf"
+  },
+  "raw_response_dir": "private-responses/new-run/gemma-4-e2b-it-q4"
+}

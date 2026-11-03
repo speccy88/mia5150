@@ -1,0 +1,142 @@
+[
+  {
+    "query": "I need to deploy a infrastructure using skriptoteket devops",
+    "gold_skill": "skriptoteket-devops",
+    "gold_id": "d198610e-4354-4e8d-aa56-b0f9b2f234fc",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "building owner is negotiating with telecom providers, reviewing carrier access rights, structuring equipment room licenses, analyzing riser and conduit rights, evaluating CRTC (Canadian Radio-television and Telecommunications Commission) compliance requirements, negotiating license fees and revenue sharing, or managing multiple competing carriers in one building",
+    "gold_skill": "telecom-licensing-expert",
+    "gold_id": "8531b70c-11c7-44f1-a371-0a007a19fc12",
+    "gold_domain": "business_ops",
+    "gold_major": "Business & Planning"
+  },
+  {
+    "query": "I'm looking for a tool to test a test_suite",
+    "gold_skill": "web3-testing",
+    "gold_id": "e1d9095e-04f6-4068-8d86-488cc7ff96f6",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "writing tests with Swift Testing (@Test, #expect, #require), migrating from XCTest, implementing async tests, or parameterizing tests.",
+    "gold_skill": "swift-testing",
+    "gold_id": "10ca6c8b-c59e-471e-b940-3ccb396d3c10",
+    "gold_domain": "mobile",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Can you help with advanced features 2025?",
+    "gold_skill": "advanced-features-2025",
+    "gold_id": "a1b528bd-17b5-4c27-95ff-8fa2a4469ba0",
+    "gold_domain": "ai_agents",
+    "gold_major": "AI Agents"
+  },
+  {
+    "query": "adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building conversation dashboards",
+    "gold_skill": "chatbot-analytics",
+    "gold_id": "a5e75fa1-be3d-42fc-b278-a37de3c7c26e",
+    "gold_domain": "ai_agents",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "I need to implement a documentation using ring:writing plans",
+    "gold_skill": "ring:writing-plans",
+    "gold_id": "037c03db-e42a-4c50-a1bd-953df515d6b9",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Help me configure pipeline",
+    "gold_skill": "ci-cd",
+    "gold_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to test my test_suite",
+    "gold_skill": "run-tests",
+    "gold_id": "9f488149-ebf7-4118-9d61-1acc44e9cb92",
+    "gold_domain": "testing_qa",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "creating workflow editors, data flow diagrams, organizational charts, mindmaps, process visualizations, DAG editors, or any interactive node-graph UI",
+    "gold_skill": "svelte-flow",
+    "gold_id": "22d0b096-b677-4f9a-9b18-5c469f693e75",
+    "gold_domain": "web_frontend",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "the user asks to open or prepare a PR.",
+    "gold_skill": "create-pr",
+    "gold_id": "68dc56d4-9b36-4c75-b552-8a6aa7a172bc",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to implement my api",
+    "gold_skill": "dotnet-cqrs-api",
+    "gold_id": "991eaec7-1aad-45ef-b780-3f3486057ff1",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "planning how to navigate websites, determining reading depth, or finding the right selectors for Playwright MCP commands.",
+    "gold_skill": "web-navigation-strategies",
+    "gold_id": "d2b70a83-88ee-48cf-a7b8-f59fe13d78ab",
+    "gold_domain": "ai_agents",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "asked to format, lint, or clean up code before committing or creating a PR.",
+    "gold_skill": "code-formatting",
+    "gold_id": "e2364347-7326-42ca-9c96-3f4d58e00891",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to generate my database",
+    "gold_skill": "schema-visualizer",
+    "gold_id": "bf5420c0-cf07-4ef6-bd1c-fddac381adaf",
+    "gold_domain": "database",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I'm looking for a tool to configure a infrastructure",
+    "gold_skill": "prometheus-monitoring",
+    "gold_id": "a440e4d2-1450-4936-8983-b232cbdf526b",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "I want to analyze my data",
+    "gold_skill": "data-validator",
+    "gold_id": "31dbf77e-b0fc-4d7b-98c4-e6e7b14a0146",
+    "gold_domain": "data_ml",
+    "gold_major": "Data & ML"
+  },
+  {
+    "query": "Can you help with email service integration?",
+    "gold_skill": "email-service-integration",
+    "gold_id": "64f16153-619e-453a-a882-314ab6b0d98e",
+    "gold_domain": "backend_api",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "\"artifact publishing\", \"SBOM generation\", \"supply chain security\", or \"build provenance\".",
+    "gold_skill": "artifact-sbom-publisher",
+    "gold_id": "e4ea1900-d33b-4c12-af1d-1489e6afc0b2",
+    "gold_domain": "devops_infra",
+    "gold_major": "Software Engineering"
+  },
+  {
+    "query": "Can you help with ts quality?",
+    "gold_skill": "ts-quality",
+    "gold_id": "3b730112-cd94-4ee3-a60e-9c3edfba97f0",
+    "gold_domain": "developer_tools",
+    "gold_major": "Software Engineering"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "functions": {
+    "make_plan": {
+      "ast_identical": true,
+      "function_ast_sha256": "18b0721409b10264c5f619fdf7f7d2d68f98b4835b50dcad9d1f3525c6aa148e"
+    },
+    "infer": {
+      "ast_identical": true,
+      "function_ast_sha256": "72f83cdf4ffb455574574e61f68c943e88f1893b00bcb52b73b6674fdc9eb468"
+    },
+    "parse_ranked": {
+      "ast_identical": true,
+      "function_ast_sha256": "124b0561db87a5e445b10571c877755a1d4c06191269c3c9877486127bc9f609"
+    },
+    "final_answer": {
+      "ast_identical": true,
+      "function_ast_sha256": "3ea120f3b1906dbe21e9e7df6e2b3c35cb0b82c52b0ae7c3385d4ecf318b1e14"
+    },
+    "score": {
+      "ast_identical": true,
+      "function_ast_sha256": "dde1bdf23d865e8f7ba991b9a58a1868505175e64badf770ae8a3a1d9c166aaa"
+    },
+    "reasoning_prefix": {
+      "ast_identical": true,
+      "function_ast_sha256": "432cc34613ce36e2c9d8b74834820c666e6a483a36efa97f29c114839e54781e"
+    },
+    "empty_row": {
+      "ast_identical": true,
+      "function_ast_sha256": "9e09abebf4dd403982d910f9f279207390857903491644d48604c39c195069ad"
+    }
+  },
+  "intentional_changes": [
+    "protocol version",
+    "selected sizes per run",
+    "estimated90% gate replaced by real token gate",
+    "KV type proof check",
+    "run notes and counts"
+  ],
+  "sampler_prompt_data_validation": "evidence/candidate-comparison.json",
+  "new_inference_calls": 0
+}

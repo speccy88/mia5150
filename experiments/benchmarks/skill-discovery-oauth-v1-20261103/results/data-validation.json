@@ -1,0 +1,8 @@
+{
+  "records": 6006,
+  "unique_names": 5801,
+  "queries": 20,
+  "gold_ids_valid": true,
+  "dataset_sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+  "queries_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b"
+}

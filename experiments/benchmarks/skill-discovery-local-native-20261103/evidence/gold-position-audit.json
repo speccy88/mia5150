@@ -1,0 +1,1358 @@
+{
+  "local_positions": [
+    {
+      "key": "50:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "50:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "50:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "50:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "50:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "50:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "50:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "50:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "50:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "50:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "50:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "50:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "50:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "50:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "50:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "50:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "50:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "50:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "50:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "50:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "100:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "100:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "100:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "100:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "100:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "100:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "100:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "100:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "100:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "100:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "100:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "100:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "100:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "100:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "100:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "100:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "100:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "100:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "100:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "100:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "250:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "250:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "250:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "250:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "250:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "250:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "250:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "250:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "250:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "250:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "250:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "250:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "250:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "250:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "250:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "250:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "250:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "250:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "250:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "250:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "500:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "500:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "500:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "500:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "500:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "500:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "500:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "500:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "500:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "500:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "500:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "500:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "500:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "500:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "500:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "500:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "500:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "500:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "500:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "500:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "1000:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "2000:19",
+      "gold_position": 20,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:0",
+      "gold_position": 1,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:1",
+      "gold_position": 2,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:2",
+      "gold_position": 3,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:3",
+      "gold_position": 4,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:4",
+      "gold_position": 5,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:5",
+      "gold_position": 6,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:6",
+      "gold_position": 7,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:7",
+      "gold_position": 8,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:8",
+      "gold_position": 9,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:9",
+      "gold_position": 10,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:10",
+      "gold_position": 11,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:11",
+      "gold_position": 12,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:12",
+      "gold_position": 13,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:13",
+      "gold_position": 14,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:14",
+      "gold_position": 15,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:15",
+      "gold_position": 16,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:16",
+      "gold_position": 17,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:17",
+      "gold_position": 18,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:18",
+      "gold_position": 19,
+      "replaced_last": false
+    },
+    {
+      "key": "5000:19",
+      "gold_position": 20,
+      "replaced_last": false
+    }
+  ],
+  "manifest_audits": {
+    "local": {
+      "implementation_sha256": {
+        "bench.py": "992ac9549bcada4ba29018ede5e7c932a78a98578092eaab4d10792a8d378e9c",
+        "oauth_chatgpt.py": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      },
+      "same_candidate_and_prompt_plan_as_local": true,
+      "positions_by_size": {
+        "50": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "100": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "250": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "500": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "1000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "2000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "5000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    "gpt-6-luna": {
+      "implementation_sha256": {
+        "bench.py": "992ac9549bcada4ba29018ede5e7c932a78a98578092eaab4d10792a8d378e9c",
+        "oauth_chatgpt.py": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      },
+      "same_candidate_and_prompt_plan_as_local": true,
+      "positions_by_size": {
+        "50": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "100": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "250": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "500": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "1000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "2000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "5000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    "gpt-6.1-sol": {
+      "implementation_sha256": {
+        "bench.py": "992ac9549bcada4ba29018ede5e7c932a78a98578092eaab4d10792a8d378e9c",
+        "oauth_chatgpt.py": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      },
+      "same_candidate_and_prompt_plan_as_local": true,
+      "positions_by_size": {
+        "50": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "100": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "250": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "500": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "1000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "2000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "5000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    "gpt-6.1-terra": {
+      "implementation_sha256": {
+        "bench.py": "992ac9549bcada4ba29018ede5e7c932a78a98578092eaab4d10792a8d378e9c",
+        "oauth_chatgpt.py": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8"
+      },
+      "same_candidate_and_prompt_plan_as_local": true,
+      "positions_by_size": {
+        "50": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "100": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "250": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "500": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "1000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "2000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "5000": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    }
+  }
+}

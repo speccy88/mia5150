@@ -1,0 +1,9 @@
+{
+  "model": "ornith-1.5-9b-q4km-native-v2",
+  "protocol": "v1-native-final-answer-parser-v2",
+  "recorded_trials": 140,
+  "planned_trials": 140,
+  "not_run_trials": 0,
+  "stop": null,
+  "complete": true
+}

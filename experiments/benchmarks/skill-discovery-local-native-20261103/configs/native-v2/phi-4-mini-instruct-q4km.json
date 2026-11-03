@@ -1,0 +1,18 @@
+{
+  "backend": "llama",
+  "model": "phi-4-mini-instruct-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M, local conversion of pinned official weights",
+  "gpu_proof": "runtime/phi-4-mini-instruct-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Phi-4 Mini 3.8B",
+    "alias": "phi-4-mini-instruct-q4km",
+    "path": "models/Phi-4-mini-instruct-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "microsoft/Phi-4-mini-instruct"
+  },
+  "raw_response_dir": "private-responses/new-run/phi-4-mini-instruct-q4km"
+}

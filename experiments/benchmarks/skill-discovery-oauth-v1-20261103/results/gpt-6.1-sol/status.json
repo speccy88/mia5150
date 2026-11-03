@@ -1,0 +1,16 @@
+{
+  "model": "gpt-6.1-sol",
+  "protocol": "v1-oauth-variant",
+  "recorded_trials": 121,
+  "planned_trials": 140,
+  "not_run_trials": 19,
+  "stop": {
+    "error": "HTTP_400",
+    "at_trial": "5000:0",
+    "http_status": 400,
+    "provider_code": "string_above_max_length",
+    "request_id": null,
+    "retry_after_s": null
+  },
+  "complete": false
+}

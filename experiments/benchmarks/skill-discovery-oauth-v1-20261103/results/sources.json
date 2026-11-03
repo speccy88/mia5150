@@ -1,0 +1,28 @@
+{
+  "retrieved_utc": "2026-11-03T03:37:28.890034+00:00",
+  "catalog": "Authenticated GET https://api.openai.com/v1/models",
+  "selected_context_windows": {
+    "gpt-6.1-sol": 500000,
+    "gpt-6.1-terra": 500000,
+    "gpt-6-luna": 272000
+  },
+  "usage_token_source": "response.completed.usage, returned by the serving tokenizer; estimates are not substituted",
+  "public_api_context_maximum": 1050000,
+  "public_api_maximum_is_not_used_for_oauth": true,
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+    "https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference",
+    "https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations"
+  ],
+  "protocol": "v1-oauth-variant",
+  "unsupported_controls_omitted": [
+    "temperature",
+    "max_output_tokens"
+  ],
+  "model_effort": "Not set in request. Admission responses report medium for all three models.",
+  "cash_api_fallback": false,
+  "cost_usd": "unknown/not separately priced; leave CSV blank",
+  "pacing": "Sequential, one second between completed requests; stop immediately on model error and stop entire suite on shared usage/quota error."
+}

@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "nanbeige4.2-3b-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M, local conversion of pinned official weights",
+  "gpu_proof": "runtime/nanbeige4.2-3b-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Nanbeige 4.2 3B",
+    "alias": "nanbeige4.2-3b-q4km",
+    "path": "models/Nanbeige4.2-3B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "Nanbeige/Nanbeige4.2-3B",
+    "note": "4B total / 3B non-embedding; looped architecture supported by pinned upstream converter"
+  },
+  "raw_response_dir": "private-responses/new-run/nanbeige4.2-3b-q4km"
+}

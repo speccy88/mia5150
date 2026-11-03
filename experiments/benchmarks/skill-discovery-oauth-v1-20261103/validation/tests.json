@@ -1,0 +1,11 @@
+{
+  "command": "python -m unittest discover -s tests -v",
+  "tests": 28,
+  "passed": 28,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 13.718,
+  "scope": "Distributed package, synthetic inputs and mocked endpoints only",
+  "model_calls": 0,
+  "separate_original_workspace_suite_also_passed": true
+}

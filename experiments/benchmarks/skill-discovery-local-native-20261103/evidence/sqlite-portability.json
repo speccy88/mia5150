@@ -1,0 +1,17 @@
+{
+  "exports": [
+    {
+      "source": "results\\diagnostic-vram-oversubscription\\qwen3-8b-q4km\\state.sqlite3",
+      "original_sha256": "42f67cde08aaa4db17432058fdd3521a7199a1dfd4afe740ca486d6b49226302",
+      "original_wal_sha256": "85ae37c46ba634f53e269f55ba2ed3c6878d8d8667e0d8027441335aa7287e83",
+      "portable": "results\\diagnostic-vram-oversubscription\\qwen3-8b-q4km\\state.portable.sqlite3",
+      "portable_sha256": "5a35c542cc6d2f886cf095e0d3dee4398cdcffd65dea5307509038cfc4e4d123",
+      "trial_intents": 22,
+      "recorded_rows": 21,
+      "unresolved_intents": 1,
+      "integrity": "ok",
+      "original_bytes_preserved": true
+    }
+  ],
+  "instructions": "Original SQLite/WAL/SHM evidence is preserved. state.portable.sqlite3 is a standalone diagnostic copy including committed WAL data and unresolved intents; it needs no WAL sidecar. Completed canonical databases have no nonempty WAL at handoff."
+}

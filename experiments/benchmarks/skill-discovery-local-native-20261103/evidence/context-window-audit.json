@@ -1,0 +1,339 @@
+{
+  "utc": "2026-11-03T09:52:28.402879+00:00",
+  "threshold_tokens": 29491.2,
+  "estimates": {
+    "50": 2425.0,
+    "100": 4650.0,
+    "250": 11325.0,
+    "500": 22450.0,
+    "1000": 44700.0,
+    "2000": 89200.0,
+    "5000": 222700.0
+  },
+  "why_sixty": "For every 32768-token configuration, N=1000,2000,5000 exceed the v1 90% estimate threshold. Three sizes times twenty questions gives sixty rows, regardless of larger published native windows.",
+  "hardware_limit_not_explored": "No search for maximum feasible n_ctx was performed. A 32768 configuration is not a demonstrated VRAM ceiling.",
+  "models": [
+    {
+      "model": "Qwen3-0.6B",
+      "source_repo": "Qwen/Qwen3-0.6B",
+      "source_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "published_statement": {
+        "native": 32768,
+        "note": "Publisher README; released config and GGUF additionally contain 40960."
+      },
+      "released_config_limits": {
+        "max_position_embeddings": 40960
+      },
+      "gguf_context_metadata": {
+        "qwen3.context_length": 40960
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Qwen3-1.7B",
+      "source_repo": "Qwen/Qwen3-1.7B",
+      "source_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "published_statement": {
+        "native": 32768,
+        "note": "Publisher README; released config and GGUF additionally contain 40960."
+      },
+      "released_config_limits": {
+        "max_position_embeddings": 40960
+      },
+      "gguf_context_metadata": {
+        "qwen3.context_length": 40960
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Qwen3.5-4B",
+      "source_repo": "Qwen/Qwen3.5-4B",
+      "source_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "published_statement": {
+        "native": 262144,
+        "extension": 1010000,
+        "note": "Publisher README distinguishes native from RoPE/YaRN extension."
+      },
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Ling-3.0-tiny",
+      "source_repo": "inclusionAI/Ling-3.0-tiny",
+      "source_revision": "9a98e35fe1c9ee255f78dd64771c7ae15a799481",
+      "published_statement": {
+        "native": 131072,
+        "extension": 262144,
+        "note": "Released max_position_embeddings/original YaRN length=131072; README recipe extends to 262144."
+      },
+      "released_config_limits": {
+        "max_position_embeddings": 131072
+      },
+      "gguf_context_metadata": {
+        "bailingmoe3.context_length": 131072
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Qwen3.5-9B",
+      "source_repo": "Qwen/Qwen3.5-9B",
+      "source_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "published_statement": {
+        "native": 262144,
+        "extension": 1010000,
+        "note": "Publisher README distinguishes native from RoPE/YaRN extension."
+      },
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Llama 3.2 3B",
+      "source_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "source_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "published_statement": null,
+      "released_config_limits": {},
+      "gguf_context_metadata": {},
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": null,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Gemma 3 4B",
+      "source_repo": "google/gemma-3-4b-it",
+      "source_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "published_statement": null,
+      "released_config_limits": {},
+      "gguf_context_metadata": {},
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": null,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "H2O-Lightning-4B",
+      "source_repo": "h2oai/h2o-lightning-4b",
+      "source_revision": "659fc412de8486dbc2477b0d1cb4121e97e72471",
+      "published_statement": null,
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Gemma 4 E2B",
+      "source_repo": "google/gemma-4-E2B-it",
+      "source_revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+      "published_statement": null,
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 131072,
+        "vision_config.max_position_embeddings": 131072
+      },
+      "gguf_context_metadata": {
+        "gemma4.context_length": 131072
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Qwen3-8B",
+      "source_repo": "Qwen/Qwen3-8B",
+      "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "published_statement": null,
+      "released_config_limits": {
+        "max_position_embeddings": 40960
+      },
+      "gguf_context_metadata": {
+        "qwen3.context_length": 40960
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": null,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "NeoHorse-1-9B",
+      "source_repo": "TokenRhythm/NeoHorse-1-9B",
+      "source_revision": "ba5b6e40d88a6ddf4591e176738254a3bc715765",
+      "published_statement": null,
+      "released_config_limits": {
+        "max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Ornith-1.5-9B",
+      "source_repo": "ornith-ai/Ornith-1.5-9B",
+      "source_revision": "489cb97981b8654bcfcf30ce1f94ed1b62e07b53",
+      "published_statement": null,
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Nemotron 3.5 Bolt E4B",
+      "source_repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16",
+      "source_revision": "49843eed8db1f1c616c47af75cfd36e07aec0667",
+      "published_statement": null,
+      "released_config_limits": {
+        "text_config.max_position_embeddings": 65536,
+        "vision_config.max_position_embeddings": 131072
+      },
+      "gguf_context_metadata": {
+        "gemma4.context_length": 65536
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Ternary Bonsai 2 9B",
+      "source_repo": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "source_revision": "5b2abb02362efbed46bbe204014b02837778b2c2",
+      "published_statement": {
+        "native": 262144,
+        "note": "Publisher model card states inherited Qwen3.5 native context."
+      },
+      "released_config_limits": {},
+      "gguf_context_metadata": {
+        "qwen35.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "LFM3-Omni-2B",
+      "source_repo": "LiquidAI/LFM3-Omni-2B",
+      "source_revision": "5797d07c125503bd4f4c0e7f915ae2d3d703e8de",
+      "published_statement": null,
+      "released_config_limits": {
+        "audio_encoder_config.text_config.max_position_embeddings": 128000,
+        "depth_config.max_position_embeddings": 12,
+        "text_config.max_position_embeddings": 128000
+      },
+      "gguf_context_metadata": {
+        "lfm3.context_length": 128000
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Phi-4 Mini 3.8B",
+      "source_repo": "microsoft/Phi-4-mini-instruct",
+      "source_revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "published_statement": null,
+      "released_config_limits": {
+        "max_position_embeddings": 131072,
+        "original_max_position_embeddings": 4096
+      },
+      "gguf_context_metadata": {
+        "phi3.context_length": 131072
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Mistral 7B Instruct",
+      "source_repo": "mistralai/Mistral-7B-Instruct-v0.3",
+      "source_revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "published_statement": null,
+      "released_config_limits": {
+        "max_position_embeddings": 32768
+      },
+      "gguf_context_metadata": {
+        "llama.context_length": 32768
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": null,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    },
+    {
+      "model": "Nanbeige 4.2 3B",
+      "source_repo": "Nanbeige/Nanbeige4.2-3B",
+      "source_revision": "b82e54bd609793562a75cbf9337970a93369eab5",
+      "published_statement": null,
+      "released_config_limits": {
+        "max_position_embeddings": 262144
+      },
+      "gguf_context_metadata": {
+        "nanbeige.context_length": 262144
+      },
+      "configured_n_ctx": 32768,
+      "observed_effective_n_ctx": 32768,
+      "configuration_reason": "Uniform conservative local profile inherited from preparation; not a measured per-model VRAM maximum.",
+      "estimated_context_rows_recorded": 60,
+      "context_skip_interpretation": "Estimate gate against configured window; no tokenizer/inference observation at skipped sizes; not evidence of intrinsic model context limit."
+    }
+  ]
+}

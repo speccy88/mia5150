@@ -1,0 +1,19 @@
+{
+  "backend": "llama",
+  "model": "gemma-3-4b-it-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "not loaded",
+  "gpu_proof": "runtime/gemma-3-4b-it-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Gemma 3 4B",
+    "alias": "gemma-3-4b-it",
+    "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+    "source": "google/gemma-3-4b-it",
+    "note": "No acceptance, credentials or third-party ungated substitute used"
+  },
+  "raw_response_dir": "private-responses/new-run/gemma-3-4b-it",
+  "startup_error": "ACCESS_GATED_ACCEPTANCE_REQUIRED"
+}

@@ -1,0 +1,382 @@
+{
+  "historical_only": true,
+  "not_live_admission_proof": true,
+  "stages": [
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "cuda_mib": 5058.34,
+      "wddm_mib": 5242.91796875,
+      "kv_mib": 576.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.07.359.909 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 0,
+      "sampled_wddm_peak_mib": null,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "602764795114a8612d52da287f4014a60f073a7b4c2ef85addfb786b8db4a576",
+      "source_proof_sha256": "553d2bec89b2ea4032dee9c51d3f267aac34c59b2c442d434aa16712bfc1ea9b",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "cuda_mib": 7049.42,
+      "wddm_mib": 7242.94921875,
+      "kv_mib": 2448.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.129.015 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 1,
+      "sampled_wddm_peak_mib": 7242.94921875,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "54edcd38197002bb014c44c743698d53d9d531c75c2b7172091d5bdfb6987551",
+      "source_proof_sha256": "67e148412bb525f82576ae4edea62977e8cff4040823d48c9385d08e2ebe69dc",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 2816,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 4878.03,
+      "wddm_mib": 5062.9140625,
+      "kv_mib": 396.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.014.786 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 3,
+      "sampled_wddm_peak_mib": 5078.9140625,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "c4e0f06efb9d08497c02e5c1d57d8143622b7ca641ef2fb6c61f416dd5106418",
+      "source_proof_sha256": "e0a0d9e8247432f97d57df3a874eda83e777f50a4e4a8a198cbe596099dced6c",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5120,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 5202.59,
+      "wddm_mib": 5386.91796875,
+      "kv_mib": 720.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.024.382 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 7,
+      "sampled_wddm_peak_mib": 5402.91796875,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "9784203a33abe06070b34b702805a9e04248b7359288339913dfa8cecbb202f2",
+      "source_proof_sha256": "3bd04b6222e9f2d0b277a71fa67e11ce27fc6a68c1e5c280a3c0de953f81bebb",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 12032,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 6176.28,
+      "wddm_mib": 6362.9296875,
+      "kv_mib": 1692.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.001.540 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 10,
+      "sampled_wddm_peak_mib": 6378.9296875,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "f68eda9539a12d6f6bc6bc6820205fbdcc73b3554d4d50c0d8f50c75a9fbcca0",
+      "source_proof_sha256": "e83b458a6f0d4174a57f5f808aced79ce5b44dbdaf6a6191f81d79bf33be1cb0",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 23552,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 7799.09,
+      "wddm_mib": 7986.94921875,
+      "kv_mib": 3312.0,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.281.279 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 17,
+      "sampled_wddm_peak_mib": 8002.94921875,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "3123418738239ceecff43bf57fe4085d8d565c2d16e2f617bafaab21e6a5c1c9",
+      "source_proof_sha256": "da9000f6894e14fa113254636a7e83f0cea8a119f0cf813c60a5f1b336146ae6",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 23552,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 6322.67,
+      "wddm_mib": 6510.93359375,
+      "kv_mib": 1759.5,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.055.466 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 20,
+      "sampled_wddm_peak_mib": 6532.93359375,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "007f79f9c867465ea74d4afa556aba2ff50716c676fe7f07f8dc341febbdd4b7",
+      "source_proof_sha256": "8153e0507b19d4dea2d7dd98ee9c9b80817f432a6034509fcca8b1eaf80d814d",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "cuda_mib": 4639.52,
+      "wddm_mib": 4824.9140625,
+      "kv_mib": 512.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.03.777.375 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 0,
+      "sampled_wddm_peak_mib": null,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "3b3e22f713c3dd9fba46ae5f58354d5e51715d33ab742770a669117fac653ba3",
+      "source_proof_sha256": "35cddbae591ae9ff4cdbe09fdc5acf3244f680e21719a7cd165b89f548417c44",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "cuda_mib": 6419.6,
+      "wddm_mib": 6612.94140625,
+      "kv_mib": 2176.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.800.389 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 1,
+      "sampled_wddm_peak_mib": 6612.94140625,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "588e4857877a603bd87a5e7f18193576695af0d0ee7225e038a8fd114de0bb63",
+      "source_proof_sha256": "afa249983a9b9e15301d6bc84c18aa3e16e30a648879636e702e0372e4b91d0a",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 3328,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 4543.34,
+      "wddm_mib": 4726.9140625,
+      "kv_mib": 416.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.791.360 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 4,
+      "sampled_wddm_peak_mib": 4742.9140625,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "594de26d9f4e395d2659fdfa8e8b32bf2e1578bc04074252c6c2227bd6bb971c",
+      "source_proof_sha256": "158a7cbaa92395ed39b0940bd33c869b31925026451fd1af44eac7508882b876",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5888,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 4863.96,
+      "wddm_mib": 5048.9140625,
+      "kv_mib": 736.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.817.225 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 6,
+      "sampled_wddm_peak_mib": 5064.9140625,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "dd89b952e3ef5ef8d2bc000f725ce41ecb9fe465110ba76168508c0f930b7db0",
+      "source_proof_sha256": "307599207743f63b2e8592463f4aae3213ecb9a146cd9154ea53682c71fd5ed5",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 14080,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 5889.96,
+      "wddm_mib": 6076.92578125,
+      "kv_mib": 1760.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.783.368 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 10,
+      "sampled_wddm_peak_mib": 6092.92578125,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "9c362bf353e3776a86f0b3e71e2bc38c5671031d850e484d91b1e595f6a8d224",
+      "source_proof_sha256": "a457003059de42d852c50a91e0b1fde7f0d5b768083f0e741fc56e0180f46b35",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 27392,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 7557.21,
+      "wddm_mib": 7746.94921875,
+      "kv_mib": 3424.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.828.525 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 18,
+      "sampled_wddm_peak_mib": 7762.94921875,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "d8bf71ddce7fcd6c2130e71b3c4430bd7b0ad7540131568dd5481b0648c6cd46",
+      "source_proof_sha256": "a70b059da63098f4df48a9243d4aa3cc9a3389efad0bb9f1d97ab0a4b91bc376",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 27392,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "cuda_mib": 6040.290000000001,
+      "wddm_mib": 6230.9375,
+      "kv_mib": 1819.0,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.793.366 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 21,
+      "sampled_wddm_peak_mib": 6248.9375,
+      "sealed_log_prefix_hash_verified": true,
+      "log_sha256": "cc41313309fbefad01f6fd5e8766c2f7189ea85356d977f1da1fd839c6ff57ce",
+      "source_proof_sha256": "bc2a3630dc82aae13a11f4ba5d9521fc389a8e861c63fd7c09b9b0a00127b446",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    }
+  ]
+}

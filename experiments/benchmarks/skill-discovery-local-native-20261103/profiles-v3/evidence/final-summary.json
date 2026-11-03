@@ -1,0 +1,273 @@
+{
+  "utc": "2026-11-03T11:32:22.012073+00:00",
+  "protocol": "v3-local-context-kv-real-token-gate",
+  "benchmark_sha256": "e3d9589d3902db616a84a080a86726b2314e549fc1a6e9ecaf6bc84e6b2d2031",
+  "columns": 45,
+  "measured_total": 200,
+  "raw_responses_verified": 200,
+  "profiles": [
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "sizes": [
+        50
+      ],
+      "context": 2816,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 10,
+      "issues": {
+        "OK": 10,
+        "REASONING_NO_FINAL_ANSWER": 10
+      },
+      "median_llm_s": 9.9384485,
+      "input_min": 2199,
+      "input_max": 2252,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "sizes": [
+        100
+      ],
+      "context": 5120,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "issues": {
+        "OK": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 11.936898,
+      "input_min": 4334,
+      "input_max": 4387,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "sizes": [
+        250
+      ],
+      "context": 12032,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 12,
+        "OK": 8
+      },
+      "median_llm_s": 19.5570505,
+      "input_min": 11473,
+      "input_max": 11526,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 23552,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 9.0,
+      "valid": 10,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 10,
+        "OK": 10
+      },
+      "median_llm_s": 34.464785500000005,
+      "input_min": 22878,
+      "input_max": 22931,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 23552,
+      "kv": "q8_0",
+      "rows": 20,
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 11,
+      "issues": {
+        "OK": 11,
+        "REASONING_NO_FINAL_ANSWER": 8,
+        "EMPTY_OUTPUT": 1
+      },
+      "median_llm_s": 42.22104,
+      "input_min": 22878,
+      "input_max": 22931,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "sizes": [
+        50
+      ],
+      "context": 3328,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 16,
+      "top10": 20.0,
+      "valid": 20,
+      "issues": {
+        "OK": 20
+      },
+      "median_llm_s": 5.85443,
+      "input_min": 2542,
+      "input_max": 2609,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "sizes": [
+        100
+      ],
+      "context": 5888,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 9,
+      "top10": 15.0,
+      "valid": 20,
+      "issues": {
+        "OK": 20
+      },
+      "median_llm_s": 11.550057500000001,
+      "input_min": 5071,
+      "input_max": 5138,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "sizes": [
+        250
+      ],
+      "context": 14080,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 12.0,
+      "valid": 19,
+      "issues": {
+        "OK": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 20.0814775,
+      "input_min": 13354,
+      "input_max": 13421,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 27392,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 3,
+      "top10": 10.0,
+      "valid": 19,
+      "issues": {
+        "OK": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 37.3950305,
+      "input_min": 26706,
+      "input_max": 26773,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 27392,
+      "kv": "q8_0",
+      "rows": 20,
+      "measured": 20,
+      "top1": 3,
+      "top10": 8.0,
+      "valid": 18,
+      "issues": {
+        "OK": 18,
+        "INVALID_OUTPUT": 2
+      },
+      "median_llm_s": 46.022037999999995,
+      "input_min": 26706,
+      "input_max": 26773,
+      "unresolved_intents": [],
+      "checks_passed": true
+    }
+  ],
+  "paired_quality": [
+    {
+      "model": "qwen3-8b-q4km",
+      "size": 500,
+      "context": 23552,
+      "paired_queries": 20,
+      "f16_top1": 8,
+      "q8_top1": 10,
+      "f16_top10": 9.0,
+      "q8_top10": 10.0,
+      "identical_raw_texts": 0,
+      "f16_hit_q8_miss": 1,
+      "q8_hit_f16_miss": 3,
+      "same_candidate_prompt_plans": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "size": 500,
+      "context": 27392,
+      "paired_queries": 20,
+      "f16_top1": 3,
+      "q8_top1": 3,
+      "f16_top10": 10.0,
+      "q8_top10": 8.0,
+      "identical_raw_texts": 11,
+      "f16_hit_q8_miss": 0,
+      "q8_hit_f16_miss": 0,
+      "same_candidate_prompt_plans": true
+    }
+  ],
+  "baseline_archives_and_code_preserved": true,
+  "scope": "N=50/100/250/500 only, same twenty queries, prompts, seed42 and output500. No automatic transformer CPU fallback; default input CPU_Mapped explicitly retained.",
+  "access": "Official links and user-only instructions prepared; no login, acceptance or bypass performed.",
+  "publication": "No push or email performed."
+}

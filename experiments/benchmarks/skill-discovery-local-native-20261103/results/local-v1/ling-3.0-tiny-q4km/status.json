@@ -1,0 +1,9 @@
+{
+  "model": "ling-3.0-tiny-q4km-v1",
+  "protocol": "v1",
+  "recorded_trials": 140,
+  "planned_trials": 140,
+  "not_run_trials": 0,
+  "stop": null,
+  "complete": true
+}

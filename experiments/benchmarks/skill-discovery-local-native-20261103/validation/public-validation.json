@@ -1,0 +1,2583 @@
+{
+  "offline_only": true,
+  "new_inference_calls": 0,
+  "checks": [
+    {
+      "suite": "local-native-v2",
+      "model": "gemma-3-4b-it",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "gemma-4-e2b-it-q4",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "lfm3-omni-2b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ling-3.0-tiny-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "llama-3.2-3b-instruct",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "nanbeige4.2-3b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "neohorse-1-9b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ornith-1.5-9b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "phi-4-mini-instruct-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-0.6b-q8",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-1.7b-q8",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-8b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3.5-4b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3.5-9b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ternary-bonsai-2-9b-q2",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-v1",
+      "model": "ling-3.0-tiny-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-v1",
+      "model": "qwen3-0.6b-q8",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-v1",
+      "model": "qwen3-1.7b-q8",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "local-v1",
+      "model": "qwen3.5-4b-q4km",
+      "rows": 140,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 140,
+      "unresolved_intents": 0
+    },
+    {
+      "suite": "diagnostic-vram-oversubscription",
+      "model": "qwen3-8b-q4km",
+      "rows": 21,
+      "schema_columns": 45,
+      "csv_matches_exported_sqlite": true,
+      "metrics_recomputed": true,
+      "all_140_candidate_and_prompt_hashes_match": true,
+      "trial_intents": 22,
+      "unresolved_intents": 1
+    }
+  ],
+  "canonical_error_counts": {
+    "ACCESS_GATED_ACCEPTANCE_REQUIRED": 160,
+    "CONTEXT_LIMIT_ESTIMATED": 1080,
+    "REASONING_NO_FINAL_ANSWER": 532,
+    "SUCCESS": 542,
+    "INVALID_OUTPUT": 42,
+    "MALFORMED_REASONING_BOUNDARY": 4,
+    "HARDWARE_VRAM_CAPACITY_EXCEEDED": 160
+  },
+  "common_sizes": [
+    50,
+    100,
+    250,
+    500
+  ],
+  "common_summary": [
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "measured_common_sizes": 0,
+      "correct_top1": 0,
+      "top1_measured": null,
+      "query_cluster_percentile95": null,
+      "unique_question_clusters": 0,
+      "valid_nonerror_common": 0,
+      "median_llm_s_common": null,
+      "input_tokens_common": null,
+      "output_tokens_common": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "measured_common_sizes": 80,
+      "correct_top1": 34,
+      "top1_measured": 0.425,
+      "query_cluster_percentile95": [
+        0.25,
+        0.6125
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 34,
+      "median_llm_s_common": 7.2915980000000005,
+      "input_tokens_common": 841136,
+      "output_tokens_common": 32723
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 47,
+      "top1_measured": 0.5875,
+      "query_cluster_percentile95": [
+        0.4,
+        0.7625
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 50,
+      "median_llm_s_common": 8.361804500000002,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 25981
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 57,
+      "top1_measured": 0.7125,
+      "query_cluster_percentile95": [
+        0.5375,
+        0.875
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 75,
+      "median_llm_s_common": 2.0359235,
+      "input_tokens_common": 830848,
+      "output_tokens_common": 2961
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 38,
+      "top1_measured": 0.475,
+      "query_cluster_percentile95": [
+        0.3125,
+        0.6375
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 40,
+      "median_llm_s_common": 7.9761755,
+      "input_tokens_common": 834792,
+      "output_tokens_common": 29420
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "measured_common_sizes": 0,
+      "correct_top1": 0,
+      "top1_measured": null,
+      "query_cluster_percentile95": null,
+      "unique_question_clusters": 0,
+      "valid_nonerror_common": 0,
+      "median_llm_s_common": null,
+      "input_tokens_common": null,
+      "output_tokens_common": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "measured_common_sizes": 0,
+      "correct_top1": 0,
+      "top1_measured": null,
+      "query_cluster_percentile95": null,
+      "unique_question_clusters": 0,
+      "valid_nonerror_common": 0,
+      "median_llm_s_common": null,
+      "input_tokens_common": null,
+      "output_tokens_common": null
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 0,
+      "top1_measured": 0.0,
+      "query_cluster_percentile95": [
+        0.0,
+        0.0
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 0,
+      "median_llm_s_common": 44.271432,
+      "input_tokens_common": 849964,
+      "output_tokens_common": 40000
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 21,
+      "top1_measured": 0.2625,
+      "query_cluster_percentile95": [
+        0.15,
+        0.3875
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 21,
+      "median_llm_s_common": 9.6370155,
+      "input_tokens_common": 841136,
+      "output_tokens_common": 34798
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 45,
+      "top1_measured": 0.5625,
+      "query_cluster_percentile95": [
+        0.3625,
+        0.75
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 46,
+      "median_llm_s_common": 12.6550225,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 27772
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 50,
+      "top1_measured": 0.625,
+      "query_cluster_percentile95": [
+        0.4625,
+        0.775
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 57,
+      "median_llm_s_common": 12.613989,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 28576
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 52,
+      "top1_measured": 0.65,
+      "query_cluster_percentile95": [
+        0.4625,
+        0.825
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 58,
+      "median_llm_s_common": 5.7183165,
+      "input_tokens_common": 785240,
+      "output_tokens_common": 10874
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "measured_common_sizes": 80,
+      "correct_top1": 49,
+      "top1_measured": 0.6125,
+      "query_cluster_percentile95": [
+        0.4875,
+        0.725
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 57,
+      "median_llm_s_common": 3.6889555,
+      "input_tokens_common": 818572,
+      "output_tokens_common": 27525
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "measured_common_sizes": 80,
+      "correct_top1": 19,
+      "top1_measured": 0.2375,
+      "query_cluster_percentile95": [
+        0.1125,
+        0.375
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 20,
+      "median_llm_s_common": 5.482608,
+      "input_tokens_common": 818572,
+      "output_tokens_common": 37565
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "measured_common_sizes": 0,
+      "correct_top1": 0,
+      "top1_measured": null,
+      "query_cluster_percentile95": null,
+      "unique_question_clusters": 0,
+      "valid_nonerror_common": 0,
+      "median_llm_s_common": null,
+      "input_tokens_common": null,
+      "output_tokens_common": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 28,
+      "top1_measured": 0.35,
+      "query_cluster_percentile95": [
+        0.225,
+        0.475
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 32,
+      "median_llm_s_common": 8.853521,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 37725
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "measured_common_sizes": 80,
+      "correct_top1": 25,
+      "top1_measured": 0.3125,
+      "query_cluster_percentile95": [
+        0.175,
+        0.4625
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 27,
+      "median_llm_s_common": 13.490366999999999,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 36268
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "measured_common_sizes": 80,
+      "correct_top1": 23,
+      "top1_measured": 0.2875,
+      "query_cluster_percentile95": [
+        0.175,
+        0.4
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 25,
+      "median_llm_s_common": 10.924501500000002,
+      "input_tokens_common": 830164,
+      "output_tokens_common": 35595
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "measured_common_sizes": 80,
+      "correct_top1": 62,
+      "top1_measured": 0.775,
+      "query_cluster_percentile95": [
+        0.6,
+        0.925
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 80,
+      "median_llm_s_common": 2.5931155,
+      "input_tokens_common": 785640,
+      "output_tokens_common": 7584
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "measured_common_sizes": 80,
+      "correct_top1": 60,
+      "top1_measured": 0.75,
+      "query_cluster_percentile95": [
+        0.5625,
+        0.9125
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 80,
+      "median_llm_s_common": 5.239037,
+      "input_tokens_common": 785640,
+      "output_tokens_common": 7585
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "measured_common_sizes": 80,
+      "correct_top1": 63,
+      "top1_measured": 0.7875,
+      "query_cluster_percentile95": [
+        0.6125,
+        0.95
+      ],
+      "unique_question_clusters": 20,
+      "valid_nonerror_common": 80,
+      "median_llm_s_common": 2.7584660000000003,
+      "input_tokens_common": 785640,
+      "output_tokens_common": 3003
+    }
+  ],
+  "coverage": [
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-3-4b-it",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 10,
+      "top1_measured": 0.5,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 9,
+        "SUCCESS": 10,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 4.9835055
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.45,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 11,
+        "SUCCESS": 9
+      },
+      "median_llm_s": 5.8826564999999995
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 8,
+      "top1_measured": 0.4,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 12,
+        "SUCCESS": 8
+      },
+      "median_llm_s": 8.5852865
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 7,
+      "top1_measured": 0.35,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 12,
+        "SUCCESS": 7,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 13.934059
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "gemma-4-e2b-it-q4",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.45,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 7,
+        "SUCCESS": 9,
+        "MALFORMED_REASONING_BOUNDARY": 2,
+        "INVALID_OUTPUT": 2
+      },
+      "median_llm_s": 7.095798
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 14,
+      "top1_measured": 0.6,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 5,
+        "SUCCESS": 14,
+        "MALFORMED_REASONING_BOUNDARY": 1
+      },
+      "median_llm_s": 6.700258
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.65,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 6,
+        "SUCCESS": 13,
+        "MALFORMED_REASONING_BOUNDARY": 1
+      },
+      "median_llm_s": 10.938412
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 14,
+      "top1_measured": 0.65,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 6,
+        "SUCCESS": 14
+      },
+      "median_llm_s": 20.71147
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 19,
+      "top1_measured": 0.8,
+      "errors": {
+        "SUCCESS": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 0.591156
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.75,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 1.09862
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 19,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 2.9586465000000004
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 17,
+      "top1_measured": 0.6,
+      "errors": {
+        "SUCCESS": 17,
+        "INVALID_OUTPUT": 3
+      },
+      "median_llm_s": 5.9649095
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "lfm3-omni-2b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.6,
+      "errors": {
+        "SUCCESS": 13,
+        "REASONING_NO_FINAL_ANSWER": 7
+      },
+      "median_llm_s": 3.3135804999999996
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 10,
+      "top1_measured": 0.45,
+      "errors": {
+        "SUCCESS": 10,
+        "REASONING_NO_FINAL_ANSWER": 10
+      },
+      "median_llm_s": 6.46615
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 8,
+      "top1_measured": 0.4,
+      "errors": {
+        "SUCCESS": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 11.8904305
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.45,
+      "errors": {
+        "SUCCESS": 9,
+        "REASONING_NO_FINAL_ANSWER": 10,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 21.548339
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ling-3.0-tiny-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "llama-3.2-3b-instruct",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 0,
+      "top1_measured": 0.0,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 20
+      },
+      "median_llm_s": 17.297387
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 0,
+      "top1_measured": 0.0,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 20
+      },
+      "median_llm_s": 27.211289
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 0,
+      "top1_measured": 0.0,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 20
+      },
+      "median_llm_s": 61.307424999999995
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 0,
+      "top1_measured": 0.0,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 20
+      },
+      "median_llm_s": 121.999037
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nanbeige4.2-3b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 6,
+      "top1_measured": 0.3,
+      "errors": {
+        "SUCCESS": 6,
+        "REASONING_NO_FINAL_ANSWER": 14
+      },
+      "median_llm_s": 8.228169000000001
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.45,
+      "errors": {
+        "SUCCESS": 9,
+        "REASONING_NO_FINAL_ANSWER": 11
+      },
+      "median_llm_s": 9.5726275
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 4,
+      "top1_measured": 0.2,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 16,
+        "SUCCESS": 4
+      },
+      "median_llm_s": 14.2992505
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 2,
+      "top1_measured": 0.1,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 18,
+        "SUCCESS": 2
+      },
+      "median_llm_s": 22.7339075
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 13,
+        "REASONING_NO_FINAL_ANSWER": 6,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 6.433863
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 11,
+      "top1_measured": 0.55,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 9,
+        "SUCCESS": 11
+      },
+      "median_llm_s": 7.5356745
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 12,
+      "top1_measured": 0.6,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 8,
+        "SUCCESS": 12
+      },
+      "median_llm_s": 16.4613055
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 10,
+      "top1_measured": 0.45,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 10,
+        "SUCCESS": 10
+      },
+      "median_llm_s": 29.7421185
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "neohorse-1-9b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 17,
+      "top1_measured": 0.75,
+      "errors": {
+        "SUCCESS": 17,
+        "REASONING_NO_FINAL_ANSWER": 2,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 7.6945945
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 16,
+      "top1_measured": 0.7,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 4,
+        "SUCCESS": 16
+      },
+      "median_llm_s": 9.3874125
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 11,
+      "top1_measured": 0.55,
+      "errors": {
+        "SUCCESS": 11,
+        "REASONING_NO_FINAL_ANSWER": 9
+      },
+      "median_llm_s": 18.6252105
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.5,
+      "errors": {
+        "SUCCESS": 13,
+        "REASONING_NO_FINAL_ANSWER": 7
+      },
+      "median_llm_s": 29.4878055
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ornith-1.5-9b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.85,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 1.5558945
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 15,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 15,
+        "INVALID_OUTPUT": 5
+      },
+      "median_llm_s": 2.332612
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 12,
+      "top1_measured": 0.55,
+      "errors": {
+        "SUCCESS": 12,
+        "INVALID_OUTPUT": 8
+      },
+      "median_llm_s": 6.2819385
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 11,
+      "top1_measured": 0.55,
+      "errors": {
+        "SUCCESS": 11,
+        "INVALID_OUTPUT": 9
+      },
+      "median_llm_s": 14.5123025
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "phi-4-mini-instruct-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 15,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 15,
+        "REASONING_NO_FINAL_ANSWER": 4,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 1.9151005
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.6,
+      "errors": {
+        "SUCCESS": 13,
+        "REASONING_NO_FINAL_ANSWER": 6,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 2.3621030000000003
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 13,
+      "top1_measured": 0.5,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 6,
+        "SUCCESS": 13,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 4.938635
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 16,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 16,
+        "REASONING_NO_FINAL_ANSWER": 2,
+        "INVALID_OUTPUT": 2
+      },
+      "median_llm_s": 9.478182
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-0.6b-q8",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 4,
+      "top1_measured": 0.2,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 16,
+        "SUCCESS": 4
+      },
+      "median_llm_s": 4.4999199999999995
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 5,
+      "top1_measured": 0.25,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 15,
+        "SUCCESS": 5
+      },
+      "median_llm_s": 5.2654975
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 7,
+      "top1_measured": 0.3,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 13,
+        "SUCCESS": 7
+      },
+      "median_llm_s": 8.3132315
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 4,
+      "top1_measured": 0.2,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 15,
+        "SUCCESS": 4,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 14.317423000000002
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-1.7b-q8",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3-8b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 1,
+      "top1_measured": 0.05,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 19,
+        "SUCCESS": 1
+      },
+      "median_llm_s": 7.0827275
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 12,
+      "top1_measured": 0.5,
+      "errors": {
+        "SUCCESS": 12,
+        "REASONING_NO_FINAL_ANSWER": 8
+      },
+      "median_llm_s": 8.2703895
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 8,
+      "top1_measured": 0.4,
+      "errors": {
+        "SUCCESS": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 12.6957705
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 11,
+      "top1_measured": 0.45,
+      "errors": {
+        "SUCCESS": 11,
+        "REASONING_NO_FINAL_ANSWER": 8,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 20.616836
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-4b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 7,
+      "top1_measured": 0.35,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 13,
+        "SUCCESS": 7
+      },
+      "median_llm_s": 10.847523
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 7,
+      "top1_measured": 0.35,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 13,
+        "SUCCESS": 7
+      },
+      "median_llm_s": 12.6130295
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 4,
+      "top1_measured": 0.2,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 16,
+        "SUCCESS": 4
+      },
+      "median_llm_s": 18.884498
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.35,
+      "errors": {
+        "SUCCESS": 9,
+        "REASONING_NO_FINAL_ANSWER": 11
+      },
+      "median_llm_s": 29.806254000000003
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "qwen3.5-9b-q4km",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 0,
+      "top1_measured": 0.0,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 20
+      },
+      "median_llm_s": 8.8587665
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 8,
+      "top1_measured": 0.3,
+      "errors": {
+        "SUCCESS": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 10.509103
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 8,
+      "top1_measured": 0.4,
+      "errors": {
+        "SUCCESS": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 16.281267999999997
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 9,
+      "top1_measured": 0.45,
+      "errors": {
+        "INVALID_OUTPUT": 1,
+        "SUCCESS": 9,
+        "REASONING_NO_FINAL_ANSWER": 10
+      },
+      "median_llm_s": 26.57273
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "local",
+      "model": "ternary-bonsai-2-9b-q2",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "CONTEXT_LIMIT_ESTIMATED": 20
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.85,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.2565485
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.8,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.455209
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.75,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.6816515
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.893132
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.942462
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 3.3316685
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6-luna",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HTTP_400": 1,
+        "NOT_RUN_AFTER_MODEL_STOP": 19
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.9,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 3.9006255
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 4.9691995
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 6.102415000000001
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 7.066940000000001
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 6.0140355
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 7.1904015
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-sol",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HTTP_400": 1,
+        "NOT_RUN_AFTER_MODEL_STOP": 19
+      },
+      "median_llm_s": null
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 50,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.85,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.3713594999999996
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 100,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.75,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.658368
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 250,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.75,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.769938
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 500,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.8,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 3.5262655
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 1000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.65,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 2.9098935
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 2000,
+      "planned": 20,
+      "measured_with_usage": 20,
+      "valid_nonerror": 20,
+      "top1_measured": 0.7,
+      "errors": {
+        "SUCCESS": 20
+      },
+      "median_llm_s": 3.240989
+    },
+    {
+      "route": "OAuth",
+      "model": "gpt-6.1-terra",
+      "N": 5000,
+      "planned": 20,
+      "measured_with_usage": 0,
+      "valid_nonerror": 0,
+      "top1_measured": null,
+      "errors": {
+        "HTTP_400": 1,
+        "NOT_RUN_AFTER_MODEL_STOP": 19
+      },
+      "median_llm_s": null
+    }
+  ],
+  "uncertainty": "10000 paired question-cluster resamples, seed 20261103; descriptive, conditional on biased fixed lists; no iid n=80 claim.",
+  "full_raw_response_normalization_replayed": false
+}

@@ -1,0 +1,316 @@
+{
+  "utc": "2026-11-03T09:52:39.810395+00:00",
+  "models": [
+    {
+      "requested": "Qwen3-0.6B",
+      "alias": "qwen3-0.6b-q8",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 49,
+      "strict_top10_hits": 51.0,
+      "top1_rate_measured": 0.6125,
+      "top10_rate_measured": 0.6375,
+      "valid_nonerror_rows": 57,
+      "issues": {
+        "OK": 57,
+        "REASONING_NO_FINAL_ANSWER": 18,
+        "INVALID_OUTPUT": 5,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Qwen3-1.7B",
+      "alias": "qwen3-1.7b-q8",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 19,
+      "strict_top10_hits": 19.0,
+      "top1_rate_measured": 0.2375,
+      "top10_rate_measured": 0.2375,
+      "valid_nonerror_rows": 20,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 59,
+        "OK": 20,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Qwen3.5-4B",
+      "alias": "qwen3.5-4b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 28,
+      "strict_top10_hits": 30.0,
+      "top1_rate_measured": 0.35,
+      "top10_rate_measured": 0.375,
+      "valid_nonerror_rows": 32,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 47,
+        "OK": 32,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Ling-3.0-tiny",
+      "alias": "ling-3.0-tiny-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 38,
+      "strict_top10_hits": 40.0,
+      "top1_rate_measured": 0.475,
+      "top10_rate_measured": 0.5,
+      "valid_nonerror_rows": 40,
+      "issues": {
+        "OK": 40,
+        "REASONING_NO_FINAL_ANSWER": 39,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Qwen3.5-9B",
+      "alias": "qwen3.5-9b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 25,
+      "strict_top10_hits": 25.0,
+      "top1_rate_measured": 0.3125,
+      "top10_rate_measured": 0.3125,
+      "valid_nonerror_rows": 27,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 53,
+        "OK": 27,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Llama 3.2 3B",
+      "alias": "llama-3.2-3b-instruct",
+      "state": "blocked: ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "recorded_rows": 140,
+      "measured_responses": 0,
+      "strict_top1_hits": 0,
+      "strict_top10_hits": 0,
+      "top1_rate_measured": null,
+      "top10_rate_measured": null,
+      "valid_nonerror_rows": 0,
+      "issues": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 80,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Gemma 3 4B",
+      "alias": "gemma-3-4b-it",
+      "state": "blocked: ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "recorded_rows": 140,
+      "measured_responses": 0,
+      "strict_top1_hits": 0,
+      "strict_top10_hits": 0,
+      "top1_rate_measured": null,
+      "top10_rate_measured": null,
+      "valid_nonerror_rows": 0,
+      "issues": {
+        "ACCESS_GATED_ACCEPTANCE_REQUIRED": 80,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "H2O-Lightning-4B",
+      "alias": "h2o-lightning-4b-stock-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 47,
+      "strict_top10_hits": 49.0,
+      "top1_rate_measured": 0.5875,
+      "top10_rate_measured": 0.6125,
+      "valid_nonerror_rows": 50,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 24,
+        "OK": 50,
+        "MALFORMED_REASONING_BOUNDARY": 4,
+        "INVALID_OUTPUT": 2,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Gemma 4 E2B",
+      "alias": "gemma-4-e2b-it-q4",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 34,
+      "strict_top10_hits": 34.0,
+      "top1_rate_measured": 0.425,
+      "top10_rate_measured": 0.425,
+      "valid_nonerror_rows": 34,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 44,
+        "OK": 34,
+        "INVALID_OUTPUT": 2,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Qwen3-8B",
+      "alias": "qwen3-8b-q4km",
+      "state": "blocked: HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "recorded_rows": 140,
+      "measured_responses": 0,
+      "strict_top1_hits": 0,
+      "strict_top10_hits": 0,
+      "top1_rate_measured": null,
+      "top10_rate_measured": null,
+      "valid_nonerror_rows": 0,
+      "issues": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 80,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "NeoHorse-1-9B",
+      "alias": "neohorse-1-9b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 45,
+      "strict_top10_hits": 45.0,
+      "top1_rate_measured": 0.5625,
+      "top10_rate_measured": 0.5625,
+      "valid_nonerror_rows": 46,
+      "issues": {
+        "OK": 46,
+        "REASONING_NO_FINAL_ANSWER": 33,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Ornith-1.5-9B",
+      "alias": "ornith-1.5-9b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 50,
+      "strict_top10_hits": 54.0,
+      "top1_rate_measured": 0.625,
+      "top10_rate_measured": 0.675,
+      "valid_nonerror_rows": 57,
+      "issues": {
+        "OK": 57,
+        "REASONING_NO_FINAL_ANSWER": 22,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Nemotron 3.5 Bolt E4B",
+      "alias": "nemotron-3.5-bolt-e4b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 21,
+      "strict_top10_hits": 21.0,
+      "top1_rate_measured": 0.2625,
+      "top10_rate_measured": 0.2625,
+      "valid_nonerror_rows": 21,
+      "issues": {
+        "OK": 21,
+        "REASONING_NO_FINAL_ANSWER": 59,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Ternary Bonsai 2 9B",
+      "alias": "ternary-bonsai-2-9b-q2",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 23,
+      "strict_top10_hits": 25.0,
+      "top1_rate_measured": 0.2875,
+      "top10_rate_measured": 0.3125,
+      "valid_nonerror_rows": 25,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 54,
+        "OK": 25,
+        "INVALID_OUTPUT": 1,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "LFM3-Omni-2B",
+      "alias": "lfm3-omni-2b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 57,
+      "strict_top10_hits": 61.0,
+      "top1_rate_measured": 0.7125,
+      "top10_rate_measured": 0.7625,
+      "valid_nonerror_rows": 75,
+      "issues": {
+        "OK": 75,
+        "INVALID_OUTPUT": 5,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Phi-4 Mini 3.8B",
+      "alias": "phi-4-mini-instruct-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 52,
+      "strict_top10_hits": 53.0,
+      "top1_rate_measured": 0.65,
+      "top10_rate_measured": 0.6625,
+      "valid_nonerror_rows": 58,
+      "issues": {
+        "OK": 58,
+        "INVALID_OUTPUT": 22,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Mistral 7B Instruct",
+      "alias": "mistral-7b-instruct-v03-q4km",
+      "state": "blocked: HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "recorded_rows": 140,
+      "measured_responses": 0,
+      "strict_top1_hits": 0,
+      "strict_top10_hits": 0,
+      "top1_rate_measured": null,
+      "top10_rate_measured": null,
+      "valid_nonerror_rows": 0,
+      "issues": {
+        "HARDWARE_VRAM_CAPACITY_EXCEEDED": 80,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    },
+    {
+      "requested": "Nanbeige 4.2 3B",
+      "alias": "nanbeige4.2-3b-q4km",
+      "state": "completed",
+      "recorded_rows": 140,
+      "measured_responses": 80,
+      "strict_top1_hits": 0,
+      "strict_top10_hits": 0.0,
+      "top1_rate_measured": 0.0,
+      "top10_rate_measured": 0.0,
+      "valid_nonerror_rows": 0,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 80,
+        "CONTEXT_LIMIT_ESTIMATED": 60
+      }
+    }
+  ]
+}

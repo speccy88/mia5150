@@ -1,0 +1,210 @@
+{
+  "checked_utc": "2026-11-03T04:08:55.974541+00:00",
+  "supplied_recipe_match": true,
+  "manifest_checks": [
+    {
+      "model": "gpt-6-luna",
+      "all_candidate_sequences_match": true,
+      "all_prompt_hashes_match": true
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "all_candidate_sequences_match": true,
+      "all_prompt_hashes_match": true
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "all_candidate_sequences_match": true,
+      "all_prompt_hashes_match": true
+    }
+  ],
+  "gold_ids_equal_seed42_sample20_in_query_order": true,
+  "by_size": [
+    {
+      "N": 50,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 100,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 250,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 500,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 1000,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 2000,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 5000,
+      "replacements": 0,
+      "gold_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ],
+  "classification": "Construction matches the literal supplied recipe, but the received gold-query order is coupled to the seeded samples: all golds are at positions 1-20. Critical positional bias affects the run.",
+  "vincent_cloud_comparability": "UNVERIFIED: original runner RNG scope and exact candidate sequences were not supplied.",
+  "raw_runs_modified": false,
+  "rerun_started": false
+}

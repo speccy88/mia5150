@@ -1,0 +1,13 @@
+{
+  "backend": "chatgpt-oauth",
+  "model": "gpt-6.1-terra",
+  "base_url": "https://api.openai.com/v1",
+  "context_window": 500000,
+  "context_window_source": "Authenticated GET /v1/models, selected-model-metadata.json",
+  "timeout_s": 300,
+  "quantization": "provider managed / unknown",
+  "reasoning_setting": "omitted; server default, recorded when returned",
+  "stop_on_any_error": true,
+  "inter_request_delay_s": 1,
+  "require_token_usage": true
+}

@@ -1,0 +1,243 @@
+{
+  "state": "completed",
+  "started_utc": "2026-11-03T10:07:27.270628+00:00",
+  "max_generation_calls": 200,
+  "stages": [
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:07:27.272644+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-preflight-f16-4096\\launch-20261103T100728015-e4aa4285",
+      "config": "configs\\qwen3-8b-q4km-preflight-f16-4096.json",
+      "finished_utc": "2026-11-03T10:08:08.674700+00:00",
+      "adjusted_contexts": {
+        "50": 2816,
+        "100": 5120,
+        "250": 12032,
+        "500": 23552
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:08:09.260589+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-q8-32768-admission-only\\launch-20261103T100810076-8417c412",
+      "config": "configs\\qwen3-8b-q4km-q8-32768-admission-only.json",
+      "finished_utc": "2026-11-03T10:08:37.356272+00:00"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 2816,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:08:37.362562+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n50\\launch-20261103T100837998-a3184f4d",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n50.json",
+      "finished_utc": "2026-11-03T10:12:09.439809+00:00"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5120,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:12:09.961952+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n100\\launch-20261103T101210584-5b0e9750",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n100.json",
+      "finished_utc": "2026-11-03T10:16:33.851001+00:00"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 12032,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:16:34.438573+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n250\\launch-20261103T101635063-b6008d4a",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n250.json",
+      "finished_utc": "2026-11-03T10:23:12.344380+00:00"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 23552,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:23:12.940902+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n500\\launch-20261103T102313595-65bc6e63",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n500.json",
+      "finished_utc": "2026-11-03T10:35:06.478472+00:00"
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 23552,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:35:07.022191+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-q8-adjusted-n500\\launch-20261103T103507660-004b58cd",
+      "config": "configs\\qwen3-8b-q4km-q8-adjusted-n500.json",
+      "finished_utc": "2026-11-03T10:49:18.063352+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:49:18.594202+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-preflight-f16-4096\\launch-20261103T104919239-99468482",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-preflight-f16-4096.json",
+      "finished_utc": "2026-11-03T10:49:53.141570+00:00",
+      "adjusted_contexts": {
+        "50": 3328,
+        "100": 5888,
+        "250": 14080,
+        "500": 27392
+      }
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:49:53.694243+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-q8-32768-admission-only\\launch-20261103T104954343-bb2a5104",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-q8-32768-admission-only.json",
+      "finished_utc": "2026-11-03T10:50:18.014241+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 3328,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:50:18.023092+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n50\\launch-20261103T105018668-f8fc074b",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n50.json",
+      "finished_utc": "2026-11-03T10:52:53.499449+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5888,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:52:54.052755+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n100\\launch-20261103T105254681-dedc0289",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
+      "finished_utc": "2026-11-03T10:56:45.989135+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 14080,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:56:46.614146+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n250\\launch-20261103T105647276-f8c8732c",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n250.json",
+      "finished_utc": "2026-11-03T11:03:13.032447+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 27392,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T11:03:13.578003+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n500\\launch-20261103T110314209-dd4bd0d8",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n500.json",
+      "finished_utc": "2026-11-03T11:15:49.097758+00:00"
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 27392,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T11:15:49.666370+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-q8-adjusted-n500\\launch-20261103T111550340-bdded3c8",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-q8-adjusted-n500.json",
+      "finished_utc": "2026-11-03T11:31:05.789331+00:00"
+    }
+  ],
+  "original_archives_untouched": true,
+  "finished_utc": "2026-11-03T11:31:06.329120+00:00"
+}

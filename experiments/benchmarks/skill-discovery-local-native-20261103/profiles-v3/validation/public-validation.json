@@ -1,0 +1,327 @@
+{
+  "offline_only": true,
+  "new_inference_calls": 0,
+  "measured_total": 200,
+  "checks": [
+    {
+      "profile": "mistral-7b-instruct-v03-q4km-f16-adjusted-n100",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "mistral-7b-instruct-v03-q4km-f16-adjusted-n250",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "mistral-7b-instruct-v03-q4km-f16-adjusted-n50",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "mistral-7b-instruct-v03-q4km-f16-adjusted-n500",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "mistral-7b-instruct-v03-q4km-q8-adjusted-n500",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "qwen3-8b-q4km-f16-adjusted-n100",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "qwen3-8b-q4km-f16-adjusted-n250",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "qwen3-8b-q4km-f16-adjusted-n50",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "qwen3-8b-q4km-f16-adjusted-n500",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    },
+    {
+      "profile": "qwen3-8b-q4km-q8-adjusted-n500",
+      "rows": 20,
+      "columns": 45,
+      "csv_matches_sqlite": true,
+      "metrics_recomputed": true,
+      "real_token_preflight_matches": true,
+      "tokens_plus_500_within_context": true,
+      "original_runner_hash_matches": true,
+      "candidate_and_prompt_hashes_match": true
+    }
+  ],
+  "summary": [
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "N": 100,
+      "context": 5888,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 9,
+      "top10": 15.0,
+      "valid": 20,
+      "median_llm_s": 11.550057500000001,
+      "input_tokens": 101678,
+      "output_tokens": 7594,
+      "errors": {
+        "SUCCESS": 20
+      }
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "N": 250,
+      "context": 14080,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 8,
+      "top10": 12.0,
+      "valid": 19,
+      "median_llm_s": 20.0814775,
+      "input_tokens": 267338,
+      "output_tokens": 7011,
+      "errors": {
+        "SUCCESS": 19,
+        "INVALID_OUTPUT": 1
+      }
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "N": 50,
+      "context": 3328,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 16,
+      "top10": 20.0,
+      "valid": 20,
+      "median_llm_s": 5.85443,
+      "input_tokens": 51098,
+      "output_tokens": 5397,
+      "errors": {
+        "SUCCESS": 20
+      }
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "N": 500,
+      "context": 27392,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 3,
+      "top10": 10.0,
+      "valid": 19,
+      "median_llm_s": 37.3950305,
+      "input_tokens": 534378,
+      "output_tokens": 8534,
+      "errors": {
+        "SUCCESS": 19,
+        "INVALID_OUTPUT": 1
+      }
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "N": 500,
+      "context": 27392,
+      "kv": "q8_0",
+      "measured": 20,
+      "top1": 3,
+      "top10": 8.0,
+      "valid": 18,
+      "median_llm_s": 46.022037999999995,
+      "input_tokens": 534378,
+      "output_tokens": 8734,
+      "errors": {
+        "SUCCESS": 18,
+        "INVALID_OUTPUT": 2
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "N": 100,
+      "context": 5120,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "median_llm_s": 11.936898,
+      "input_tokens": 86903,
+      "output_tokens": 8986,
+      "errors": {
+        "SUCCESS": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "N": 250,
+      "context": 12032,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "median_llm_s": 19.5570505,
+      "input_tokens": 229683,
+      "output_tokens": 8211,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 12,
+        "SUCCESS": 8
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "N": 50,
+      "context": 2816,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 10,
+      "median_llm_s": 9.9384485,
+      "input_tokens": 44203,
+      "output_tokens": 8249,
+      "errors": {
+        "SUCCESS": 10,
+        "REASONING_NO_FINAL_ANSWER": 10
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "N": 500,
+      "context": 23552,
+      "kv": "f16",
+      "measured": 20,
+      "top1": 8,
+      "top10": 9.0,
+      "valid": 10,
+      "median_llm_s": 34.464785500000005,
+      "input_tokens": 457783,
+      "output_tokens": 9181,
+      "errors": {
+        "REASONING_NO_FINAL_ANSWER": 10,
+        "SUCCESS": 10
+      }
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "N": 500,
+      "context": 23552,
+      "kv": "q8_0",
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 11,
+      "median_llm_s": 42.22104,
+      "input_tokens": 457783,
+      "output_tokens": 8759,
+      "errors": {
+        "SUCCESS": 11,
+        "REASONING_NO_FINAL_ANSWER": 8,
+        "EMPTY_OUTPUT": 1
+      }
+    }
+  ],
+  "paired_quality": [
+    {
+      "model": "qwen3-8b-q4km",
+      "N": 500,
+      "paired_queries": 20,
+      "f16_top1": 8,
+      "q8_top1": 10,
+      "f16_top10": 9.0,
+      "q8_top10": 10.0,
+      "f16_hit_q8_miss": 1,
+      "q8_hit_f16_miss": 3
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "N": 500,
+      "paired_queries": 20,
+      "f16_top1": 3,
+      "q8_top1": 3,
+      "f16_top10": 10.0,
+      "q8_top10": 8.0,
+      "f16_hit_q8_miss": 0,
+      "q8_hit_f16_miss": 0
+    }
+  ],
+  "original_benchmark_sha256": "e3d9589d3902db616a84a080a86726b2314e549fc1a6e9ecaf6bc84e6b2d2031",
+  "full_private_raw_normalization_replayed": false,
+  "historical_private_capture_audit_reports_verified": 200,
+  "context_deviation": "real tokenizer input +500, no original 10% estimate margin; separate v3 series",
+  "Llama_Gemma_final_state": "not executed; user declined further work"
+}

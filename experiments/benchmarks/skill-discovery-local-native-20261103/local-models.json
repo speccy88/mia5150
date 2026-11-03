@@ -1,0 +1,138 @@
+[
+  {
+    "requested": "Qwen3-0.6B",
+    "alias": "qwen3-0.6b-q8",
+    "path": "models/Qwen3-0.6B-Q8_0.gguf",
+    "quantization": "Q8_0",
+    "source": "Qwen/Qwen3-0.6B-GGUF"
+  },
+  {
+    "requested": "Qwen3-1.7B",
+    "alias": "qwen3-1.7b-q8",
+    "path": "models/Qwen3-1.7B-Q8_0.gguf",
+    "quantization": "Q8_0",
+    "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+    "source": "Qwen/Qwen3-1.7B-GGUF"
+  },
+  {
+    "requested": "Qwen3.5-4B",
+    "alias": "qwen3.5-4b-q4km",
+    "path": "models/sha256-a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+    "quantization": "Q4_K_M",
+    "sha256": "a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+    "source": "Installed Ollama qwen3.5:4b-q4_K_M; publisher identity Qwen/Qwen3.5-4B; not an official Qwen GGUF"
+  },
+  {
+    "requested": "Ling-3.0-tiny",
+    "alias": "ling-3.0-tiny-q4km",
+    "path": "models/sha256-246d67d45f5b0c7447ca0ce0bdb8b46b8a47b593c5068635dc16422c051d7be9",
+    "quantization": "Q4_K_M",
+    "sha256": "246d67d45f5b0c7447ca0ce0bdb8b46b8a47b593c5068635dc16422c051d7be9",
+    "source": "inclusionAI/Ling-3.0-tiny-GGUF; installed bytes match publisher SHA-256"
+  },
+  {
+    "requested": "Qwen3.5-9B",
+    "alias": "qwen3.5-9b-q4km",
+    "path": "models/sha256-02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+    "quantization": "Q4_K_M",
+    "sha256": "02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+    "source": "Installed Ollama qwen3.5:9b-q4_K_M; publisher identity Qwen/Qwen3.5-9B; not an official Qwen GGUF"
+  },
+  {
+    "requested": "Llama 3.2 3B",
+    "alias": "llama-3.2-3b-instruct",
+    "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+    "source": "meta-llama/Llama-3.2-3B-Instruct",
+    "note": "No acceptance, credentials or third-party ungated substitute used"
+  },
+  {
+    "requested": "Gemma 3 4B",
+    "alias": "gemma-3-4b-it",
+    "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+    "source": "google/gemma-3-4b-it",
+    "note": "No acceptance, credentials or third-party ungated substitute used"
+  },
+  {
+    "requested": "H2O-Lightning-4B",
+    "alias": "h2o-lightning-4b-stock-q4km",
+    "path": "models/h2o-lightning-4b-stock-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, official stock ordinary-chat export",
+    "source": "h2oai/h2o-lightning-4b-gguf",
+    "note": "The original numbered-name prompt is unchanged; no typed-decision shim or probability API"
+  },
+  {
+    "requested": "Gemma 4 E2B",
+    "alias": "gemma-4-e2b-it-q4",
+    "path": "models/gemma-4-E2B_q4_0-it.gguf",
+    "quantization": "Official QAT Q4_0",
+    "source": "google/gemma-4-E2B-it-qat-q4_0-gguf"
+  },
+  {
+    "requested": "Qwen3-8B",
+    "alias": "qwen3-8b-q4km",
+    "path": "models/Qwen3-8B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "Qwen/Qwen3-8B-GGUF"
+  },
+  {
+    "requested": "NeoHorse-1-9B",
+    "alias": "neohorse-1-9b-q4km",
+    "path": "models/NeoHorse-1-9B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "TokenRhythm/NeoHorse-1-9B-GGUF"
+  },
+  {
+    "requested": "Ornith-1.5-9B",
+    "alias": "ornith-1.5-9b-q4km",
+    "path": "models/Ornith-1.5-9B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "ornith-ai/Ornith-1.5-9B-GGUF"
+  },
+  {
+    "requested": "Nemotron 3.5 Bolt E4B",
+    "alias": "nemotron-3.5-bolt-e4b-q4km",
+    "path": "models/Nemotron-3.5-Bolt-E4B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "note": "8B total / 4B effective, official GGUF file is 6.18 GB; 4GB name is not the artifact size"
+  },
+  {
+    "requested": "Ternary Bonsai 2 9B",
+    "alias": "ternary-bonsai-2-9b-q2",
+    "path": "models/Ternary-Bonsai-2-9B-Q2_0.gguf",
+    "quantization": "Official ternary Q2_0 packing, not Q4",
+    "source": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+    "note": "Publisher supports upstream llama.cpp for Q2_0; PQ2_0/PTQ1_0 require its fork"
+  },
+  {
+    "requested": "LFM3-Omni-2B",
+    "alias": "lfm3-omni-2b-q4km",
+    "path": "models/LFM3-Omni-2B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "LiquidAI/LFM3-Omni-2B-GGUF",
+    "note": "Text only; no audio/vision projector loaded"
+  },
+  {
+    "requested": "Phi-4 Mini 3.8B",
+    "alias": "phi-4-mini-instruct-q4km",
+    "path": "models/Phi-4-mini-instruct-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "microsoft/Phi-4-mini-instruct"
+  },
+  {
+    "requested": "Mistral 7B Instruct",
+    "alias": "mistral-7b-instruct-v03-q4km",
+    "path": "models/Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "mistralai/Mistral-7B-Instruct-v0.3",
+    "note": "v0.3 explicitly selected for the unspecified Instruct version"
+  },
+  {
+    "requested": "Nanbeige 4.2 3B",
+    "alias": "nanbeige4.2-3b-q4km",
+    "path": "models/Nanbeige4.2-3B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M, local conversion of pinned official weights",
+    "source": "Nanbeige/Nanbeige4.2-3B",
+    "note": "4B total / 3B non-embedding; looped architecture supported by pinned upstream converter"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "model": "gpt-6-luna",
+    "state": "completed",
+    "started_utc": "2026-11-03T03:34:03.885877+00:00",
+    "admitted": true,
+    "latency_s": 2.154097,
+    "input_tokens": 143,
+    "output_tokens": 32,
+    "selected_skill": "arith-add",
+    "exact_match": true,
+    "error": "",
+    "response_sha256": "71104f92af2abb4a380fd1cf38478fe5697da9ad3a7c3c52a3403ded3d7b7a37",
+    "response_audit": {
+      "server_model": "gpt-6-luna",
+      "reasoning_effort": "medium",
+      "token_source": "response.completed.usage"
+    }
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "state": "completed",
+    "started_utc": "2026-11-03T03:34:06.069436+00:00",
+    "admitted": true,
+    "latency_s": 2.009854,
+    "input_tokens": 143,
+    "output_tokens": 9,
+    "selected_skill": "arith-add",
+    "exact_match": true,
+    "error": "",
+    "response_sha256": "71104f92af2abb4a380fd1cf38478fe5697da9ad3a7c3c52a3403ded3d7b7a37",
+    "response_audit": {
+      "server_model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "token_source": "response.completed.usage"
+    }
+  },
+  {
+    "model": "gpt-6.1-terra",
+    "state": "completed",
+    "started_utc": "2026-11-03T03:34:08.104737+00:00",
+    "admitted": true,
+    "latency_s": 2.03755,
+    "input_tokens": 143,
+    "output_tokens": 9,
+    "selected_skill": "arith-add",
+    "exact_match": true,
+    "error": "",
+    "response_sha256": "71104f92af2abb4a380fd1cf38478fe5697da9ad3a7c3c52a3403ded3d7b7a37",
+    "response_audit": {
+      "server_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "token_source": "response.completed.usage"
+    }
+  }
+]

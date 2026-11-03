@@ -1,0 +1,10 @@
+{
+  "tests": 28,
+  "passed": 28,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 13.588,
+  "command": "python -m unittest discover -s tests -v",
+  "scope": "public integration copy; synthetic inputs and mocked endpoints only",
+  "new_inference_calls": 0
+}

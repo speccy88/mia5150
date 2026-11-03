@@ -1,0 +1,13 @@
+{
+  "original_dataset_bytes": 117606037,
+  "original_dataset_sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+  "queries_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b",
+  "distributed_dataset_sha256": "f53aad53cfb44c7a3a26edb8550e8a64080b0b9916c17d8e61bb79f60c6617c5",
+  "distributed_dataset_bytes": 1707550,
+  "records": 6006,
+  "source_order_preserved": true,
+  "deduplication": false,
+  "transformation": "Keep id, name, description[:300]; remove unused bodies and metadata fields.",
+  "all_140_logical_prompt_hashes_identical": true,
+  "original_full_dataset_included": false
+}

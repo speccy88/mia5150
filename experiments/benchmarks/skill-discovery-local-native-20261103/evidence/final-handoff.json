@@ -1,0 +1,67 @@
+{
+  "utc": "2026-11-03T09:53:10.907417+00:00",
+  "requested_models": 18,
+  "protocol": "v1-native-final-answer-parser-v2",
+  "implementation_sha256": "2129b561ab0b9b0d1430ab239056a095a74ed3b967c4b966f2d6591444d40922",
+  "runtime": {
+    "build": "llama.cpp b11960 CUDA 12.4",
+    "commit": "8642541b255bfb5dc39cd351a178be09013a55d6"
+  },
+  "validated_data": {
+    "skills": 6006,
+    "distinct_names": 5801,
+    "queries": 20,
+    "sha256": {
+      "test.jsonl": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+      "test_queries.json": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b"
+    }
+  },
+  "canonical_rows": 2520,
+  "columns": 45,
+  "models_with_measured_responses": 14,
+  "canonical_measured_responses": 1120,
+  "models_without_measured_responses": [
+    {
+      "model": "Llama 3.2 3B",
+      "reason": "blocked: ACCESS_GATED_ACCEPTANCE_REQUIRED"
+    },
+    {
+      "model": "Gemma 3 4B",
+      "reason": "blocked: ACCESS_GATED_ACCEPTANCE_REQUIRED"
+    },
+    {
+      "model": "Qwen3-8B",
+      "reason": "blocked: HARDWARE_VRAM_CAPACITY_EXCEEDED"
+    },
+    {
+      "model": "Mistral 7B Instruct",
+      "reason": "blocked: HARDWARE_VRAM_CAPACITY_EXCEEDED"
+    }
+  ],
+  "diagnostic_response_accounting": [
+    {
+      "suite": "diagnostic-vram-oversubscription",
+      "model": "qwen3-8b-q4km",
+      "recorded_rows": 21,
+      "captured_generation_responses": 21,
+      "unresolved_intents": [
+        "100:1"
+      ],
+      "capture_checks_passed": true
+    }
+  ],
+  "checks": "All 18 ledgers complete; CSV/SQLite/rank/token/candidate review passed; raw response links and source/model/log hashes checked; accepted CUDA footprints fit physical capacity.",
+  "profile": "32768 configured context, f16 KV, default CPU_Mapped input embeddings; no transformer fallback or automatic fitting. Not absolute GPU-only.",
+  "context_exclusions": "60 per model from configured-window estimate, not intrinsic context limits or measured generation failures.",
+  "delivery": [
+    "LOCAL_REPORT.md",
+    "HIGH_CONTEXT_PROPOSAL.md",
+    "results/local-native-v2/",
+    "evidence/model-scorecard.json",
+    "evidence/model-artifact-provenance.json",
+    "evidence/native-buffer-audit.json",
+    "evidence/response-capture-audit.json",
+    "evidence/sqlite-portability.json"
+  ],
+  "publication": "No email or push performed by this worker; parent coordinates common report and repository integration."
+}

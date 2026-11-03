@@ -1,0 +1,11 @@
+{
+  "local_reader_link_targets_exist": true,
+  "files": [
+    "experiments/benchmarks/skill-discovery-local-native-20261103/README.md",
+    "experiments/benchmarks/skill-discovery-local-native-20261103/COMPARISON.md",
+    "experiments/benchmarks/skill-discovery-oauth-v1-20261103/README.md",
+    "experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md",
+    "experiments/benchmarks/skill-discovery-oauth-v1-20261103/INTEGRATION_NOTES.md"
+  ],
+  "graph_visually_reviewed": true
+}

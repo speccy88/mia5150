@@ -19,3 +19,7 @@
 # Publish model checkpoints through Git LFS.
 *.safetensors filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
+
+# November skill-discovery evidence; preserve source/export bytes.
+/experiments/benchmarks/skill-discovery-oauth-v1-20261103/** -text
+/experiments/benchmarks/skill-discovery-local-native-20261103/** -text

@@ -1,0 +1,11 @@
+{
+  "rows_sampled": 25,
+  "errors": {
+    "REASONING_NO_FINAL_ANSWER": 12,
+    "OK": 12,
+    "INVALID_OUTPUT": 1
+  },
+  "duplicate_bos_warning_count": 0,
+  "gemma_thought_channel_responses": 25,
+  "channel_closures": 13
+}

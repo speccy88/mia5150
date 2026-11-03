@@ -1,0 +1,779 @@
+{
+  "utc": "2026-11-03T09:52:29.035872+00:00",
+  "physical_vram_mib": 8192,
+  "models": [
+    {
+      "alias": "qwen3-0.6b-q8",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\qwen3-0.6b-q8-native-v2\\launch-20261103T044406809-e9281253",
+      "declared_cuda_buffers_mib": 4202.65,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 604.15,
+          "line": "CUDA0 model buffer size =   604.15 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 3584.0,
+          "line": "CUDA0 KV buffer size =  3584.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 14.5,
+          "line": "CUDA0 compute buffer size =    14.50 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.02.454.765 I load_tensors:   CPU_Mapped model buffer size =   157.65 MiB",
+        "0.02.454.766 I load_tensors:        CUDA0 model buffer size =   604.15 MiB",
+        "0.02.999.675 I llama_kv_cache:      CUDA0 KV buffer size =  3584.00 MiB",
+        "0.03.038.096 I sched_reserve:      CUDA0 compute buffer size =    14.50 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "qwen3-1.7b-q8",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\qwen3-1.7b-q8-native-v2\\launch-20261103T045136314-2b78225d",
+      "declared_cuda_buffers_mib": 5348.77,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 1743.77,
+          "line": "CUDA0 model buffer size =  1743.77 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 3584.0,
+          "line": "CUDA0 KV buffer size =  3584.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 21.0,
+          "line": "CUDA0 compute buffer size =    21.00 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.00.874.498 I load_tensors:   CPU_Mapped model buffer size =   315.30 MiB",
+        "0.00.874.500 I load_tensors:        CUDA0 model buffer size =  1743.77 MiB",
+        "0.02.099.848 I llama_kv_cache:      CUDA0 KV buffer size =  3584.00 MiB",
+        "0.02.111.159 I sched_reserve:      CUDA0 compute buffer size =    21.00 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "qwen3.5-4b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\qwen3.5-4b-q4km-native-v2\\launch-20261103T050308705-af21a973",
+      "declared_cuda_buffers_mib": 3616.2,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 2515.44,
+          "line": "CUDA0 model buffer size =  2515.44 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 26.51,
+          "line": "CUDA0 compute buffer size =    26.51 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.05.973.993 I load_tensors:   CPU_Mapped model buffer size =   497.31 MiB",
+        "0.05.973.994 I load_tensors:        CUDA0 model buffer size =  2515.44 MiB",
+        "0.07.445.731 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.07.449.193 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.07.466.604 I sched_reserve:      CUDA0 compute buffer size =    26.51 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "ling-3.0-tiny-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\ling-3.0-tiny-q4km-native-v2\\launch-20261103T052032503-803628ef",
+      "declared_cuda_buffers_mib": 4728.97,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4464.7,
+          "line": "CUDA0 model buffer size =  4464.70 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 216.0,
+          "line": "CUDA0 KV buffer size =   216.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 19.27,
+          "line": "CUDA0 RS buffer size =    19.27 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 29.0,
+          "line": "CUDA0 compute buffer size =    29.00 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.11.976.648 I load_tensors:   CPU_Mapped model buffer size =   129.52 MiB",
+        "0.11.976.650 I load_tensors:        CUDA0 model buffer size =  4464.70 MiB",
+        "0.14.290.558 I llama_kv_cache:      CUDA0 KV buffer size =   216.00 MiB",
+        "0.14.291.974 I llama_memory_recurrent:      CUDA0 RS buffer size =    19.27 MiB",
+        "0.14.311.846 I sched_reserve:      CUDA0 compute buffer size =    29.00 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "246d67d45f5b0c7447ca0ce0bdb8b46b8a47b593c5068635dc16422c051d7be9",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "qwen3.5-9b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\qwen3.5-9b-q4km-native-v2\\launch-20261103T053556898-73a36e46",
+      "declared_cuda_buffers_mib": 5920.51,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4812.25,
+          "line": "CUDA0 model buffer size =  4812.25 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 34.01,
+          "line": "CUDA0 compute buffer size =    34.01 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.13.865.697 I load_tensors:   CPU_Mapped model buffer size =   545.62 MiB",
+        "0.13.865.698 I load_tensors:        CUDA0 model buffer size =  4812.25 MiB",
+        "0.16.764.607 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.16.768.074 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.16.782.088 I sched_reserve:      CUDA0 compute buffer size =    34.01 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "llama-3.2-3b-instruct",
+      "state": "blocked",
+      "reason": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "allocation_observed": false
+    },
+    {
+      "alias": "gemma-3-4b-it",
+      "state": "blocked",
+      "reason": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "allocation_observed": false
+    },
+    {
+      "alias": "h2o-lightning-4b-stock-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\h2o-lightning-4b-stock-q4km-native-v2\\launch-20261103T060024015-ca59f7d4",
+      "declared_cuda_buffers_mib": 3673.62,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 2572.86,
+          "line": "CUDA0 model buffer size =  2572.86 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 26.51,
+          "line": "CUDA0 compute buffer size =    26.51 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.21.138.029 I load_tensors:   CPU_Mapped model buffer size =   497.31 MiB",
+        "0.21.138.108 I load_tensors:        CUDA0 model buffer size =  2572.86 MiB",
+        "0.22.925.496 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.22.928.746 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.22.942.290 I sched_reserve:      CUDA0 compute buffer size =    26.51 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "aead1041598e552024ed7047a4d8be4b48333ea2647c05785c46feab2d301438",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "gemma-4-e2b-it-q4",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\gemma-4-e2b-it-q4-native-v2\\launch-20261103T061511961-afe8ca0c",
+      "declared_cuda_buffers_mib": 1580.72,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 1341.78,
+          "line": "CUDA0 model buffer size =  1341.78 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 192.0,
+          "line": "CUDA0 KV buffer size =   192.00 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 9.0,
+          "line": "CUDA0 KV buffer size =     9.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 37.94,
+          "line": "CUDA0 compute buffer size =    37.94 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.03.469.243 I load_tensors:   CPU_Mapped model buffer size =  1837.50 MiB",
+        "0.03.469.244 I load_tensors:   CPU_Mapped model buffer size =   315.00 MiB",
+        "0.03.469.245 I load_tensors:        CUDA0 model buffer size =  1341.78 MiB",
+        "0.04.247.294 I llama_kv_cache:      CUDA0 KV buffer size =   192.00 MiB",
+        "0.04.248.600 I llama_kv_cache:      CUDA0 KV buffer size =     9.00 MiB",
+        "0.04.261.303 I sched_reserve:      CUDA0 compute buffer size =    37.94 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "fa401b55b07ee70a54c6dae3903c783a6e65064312529ea57175cb5f8dec6634",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "qwen3-8b-q4km",
+      "state": "blocked",
+      "reason": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "diagnostic_folder": "results\\diagnostic-vram-oversubscription\\qwen3-8b-q4km",
+      "allocation_observed": true,
+      "launch": "runtime\\qwen3-8b-q4km-native-v2\\launch-20261103T062741067-e126794d",
+      "declared_cuda_buffers_mib": 9097.34,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": true,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4455.34,
+          "line": "CUDA0 model buffer size =  4455.34 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 4608.0,
+          "line": "CUDA0 KV buffer size =  4608.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 34.0,
+          "line": "CUDA0 compute buffer size =    34.00 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.04.525.036 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB",
+        "0.04.525.037 I load_tensors:        CUDA0 model buffer size =  4455.34 MiB",
+        "0.08.831.762 I llama_kv_cache:      CUDA0 KV buffer size =  4608.00 MiB",
+        "0.08.846.047 I sched_reserve:      CUDA0 compute buffer size =    34.00 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": false
+    },
+    {
+      "alias": "neohorse-1-9b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\neohorse-1-9b-q4km-native-v2\\launch-20261103T065601197-997bfd56",
+      "declared_cuda_buffers_mib": 5920.51,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4812.25,
+          "line": "CUDA0 model buffer size =  4812.25 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 34.01,
+          "line": "CUDA0 compute buffer size =    34.01 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.05.098.429 I load_tensors:   CPU_Mapped model buffer size =   545.62 MiB",
+        "0.05.098.430 I load_tensors:        CUDA0 model buffer size =  4812.25 MiB",
+        "0.07.885.053 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.07.888.245 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.07.903.771 I sched_reserve:      CUDA0 compute buffer size =    34.01 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "a412add5457474d898ef0bf0cdbc057f7ffc3ea5cedba997c5123d36f116a957",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "ornith-1.5-9b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\ornith-1.5-9b-q4km-native-v2\\launch-20261103T071731142-1d5986ee",
+      "declared_cuda_buffers_mib": 5920.51,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4812.25,
+          "line": "CUDA0 model buffer size =  4812.25 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 34.01,
+          "line": "CUDA0 compute buffer size =    34.01 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.05.178.281 I load_tensors:   CPU_Mapped model buffer size =   545.62 MiB",
+        "0.05.178.283 I load_tensors:        CUDA0 model buffer size =  4812.25 MiB",
+        "0.08.054.020 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.08.057.263 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.08.071.448 I sched_reserve:      CUDA0 compute buffer size =    34.01 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "70c112196e0b7023803c9762752e46d29e612a92c83f995bc3ba1ceb07e8fab6",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "nemotron-3.5-bolt-e4b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\nemotron-3.5-bolt-e4b-q4km-native-v2\\launch-20261103T073917871-cf947b40",
+      "declared_cuda_buffers_mib": 3604.99,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 3023.05,
+          "line": "CUDA0 model buffer size =  3023.05 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 512.0,
+          "line": "CUDA0 KV buffer size =   512.00 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 30.0,
+          "line": "CUDA0 KV buffer size =    30.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 39.94,
+          "line": "CUDA0 compute buffer size =    39.94 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.05.700.170 I load_tensors:   CPU_Mapped model buffer size =  2856.00 MiB",
+        "0.05.700.171 I load_tensors:   CPU_Mapped model buffer size =   680.00 MiB",
+        "0.05.700.173 I load_tensors:        CUDA0 model buffer size =  3023.05 MiB",
+        "0.07.456.868 I llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+        "0.07.458.973 I llama_kv_cache:      CUDA0 KV buffer size =    30.00 MiB",
+        "0.07.473.970 I sched_reserve:      CUDA0 compute buffer size =    39.94 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "c8af2b8aea10a690a1d9491db744a9446660173cb38fc489612b556615a69612",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "ternary-bonsai-2-9b-q2",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\ternary-bonsai-2-9b-q2-native-v2\\launch-20261103T075747463-c9a33cca",
+      "declared_cuda_buffers_mib": 3263.12,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 2154.86,
+          "line": "CUDA0 model buffer size =  2154.86 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 1024.0,
+          "line": "CUDA0 KV buffer size =  1024.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 50.25,
+          "line": "CUDA0 RS buffer size =    50.25 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 34.01,
+          "line": "CUDA0 compute buffer size =    34.01 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.02.999.777 I load_tensors:   CPU_Mapped model buffer size =   272.81 MiB",
+        "0.02.999.780 I load_tensors:        CUDA0 model buffer size =  2154.86 MiB",
+        "0.04.385.466 I llama_kv_cache:      CUDA0 KV buffer size =  1024.00 MiB",
+        "0.04.388.803 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+        "0.04.406.348 I sched_reserve:      CUDA0 compute buffer size =    34.01 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "1f884aa56aacd2bbbb2e4b7abaead2b1102b74a9c75a23fc33dab916813a384d",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "lfm3-omni-2b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\lfm3-omni-2b-q4km-native-v2\\launch-20261103T081836899-a01ba8e2",
+      "declared_cuda_buffers_mib": 1453.86,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 1040.82,
+          "line": "CUDA0 model buffer size =  1040.82 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 384.0,
+          "line": "CUDA0 KV buffer size =   384.00 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 5.0,
+          "line": "CUDA0 KV buffer size =     5.00 MiB"
+        },
+        {
+          "kind": "RS",
+          "mib": 0.61,
+          "line": "CUDA0 RS buffer size =     0.61 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 23.43,
+          "line": "CUDA0 compute buffer size =    23.43 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.01.385.902 I load_tensors:   CPU_Mapped model buffer size =   205.08 MiB",
+        "0.01.385.904 I load_tensors:        CUDA0 model buffer size =  1040.82 MiB",
+        "0.02.007.366 I llama_kv_cache:      CUDA0 KV buffer size =   384.00 MiB",
+        "0.02.008.616 I llama_kv_cache:      CUDA0 KV buffer size =     5.00 MiB",
+        "0.02.009.513 I llama_memory_recurrent:      CUDA0 RS buffer size =     0.61 MiB",
+        "0.02.019.478 I sched_reserve:      CUDA0 compute buffer size =    23.43 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "9f8d30e9d4fd7a9349d586e077988229b3ca0a0e4ad730897563d1eccc9893e2",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "phi-4-mini-instruct-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\phi-4-mini-instruct-q4km-native-v2\\launch-20261103T082304216-70ec912d",
+      "declared_cuda_buffers_mib": 6492.44,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 2370.44,
+          "line": "CUDA0 model buffer size =  2370.44 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 4096.0,
+          "line": "CUDA0 KV buffer size =  4096.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 26.0,
+          "line": "CUDA0 compute buffer size =    26.00 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.02.536.321 I load_tensors:   CPU_Mapped model buffer size =   480.81 MiB",
+        "0.02.536.323 I load_tensors:        CUDA0 model buffer size =  2370.44 MiB",
+        "0.03.961.311 I llama_kv_cache:      CUDA0 KV buffer size =  4096.00 MiB",
+        "0.03.970.278 I sched_reserve:      CUDA0 compute buffer size =    26.00 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "8fb41ed11aa38ee57e8fbaf3a5b8961c3f1e2090f74eaae7424ae1abccedfd2b",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    },
+    {
+      "alias": "mistral-7b-instruct-v03-q4km",
+      "state": "blocked",
+      "reason": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+      "allocation_observed": true,
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-native-v2\\launch-20261103T083341848-6ad12463",
+      "declared_cuda_buffers_mib": 8230.52,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": true,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 4097.52,
+          "line": "CUDA0 model buffer size =  4097.52 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 4096.0,
+          "line": "CUDA0 KV buffer size =  4096.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 37.0,
+          "line": "CUDA0 compute buffer size =    37.00 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.03.741.309 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB",
+        "0.03.741.310 I load_tensors:        CUDA0 model buffer size =  4097.52 MiB",
+        "0.06.761.492 I llama_kv_cache:      CUDA0 KV buffer size =  4096.00 MiB",
+        "0.06.783.766 I sched_reserve:      CUDA0 compute buffer size =    37.00 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "startup_admission": {
+        "kind": "HARDWARE_VRAM_CAPACITY_EXCEEDED",
+        "declared_cuda_buffers_mib": 8230.52,
+        "physical_vram_mib": 8192.0,
+        "buffers": [
+          {
+            "kind": "model",
+            "mib": 4097.52,
+            "line": "CUDA0 model buffer size =  4097.52 MiB"
+          },
+          {
+            "kind": "KV",
+            "mib": 4096.0,
+            "line": "CUDA0 KV buffer size =  4096.00 MiB"
+          },
+          {
+            "kind": "compute",
+            "mib": 37.0,
+            "line": "CUDA0 compute buffer size =    37.00 MiB"
+          }
+        ],
+        "inference_attempted": false,
+        "interpretation": "Declared CUDA footprint exceeds physical GPU memory; WDDM allocation success is not proof of residency."
+      },
+      "comparative_measures_admissible": false
+    },
+    {
+      "alias": "nanbeige4.2-3b-q4km",
+      "state": "completed",
+      "allocation_observed": true,
+      "launch": "runtime\\nanbeige4.2-3b-q4km-native-v2\\launch-20261103T083354703-493d765e",
+      "declared_cuda_buffers_mib": 7839.7,
+      "physical_vram_mib": 8192,
+      "physical_capacity_exceeded": false,
+      "cuda_buffer_records": [
+        {
+          "kind": "model",
+          "mib": 2177.95,
+          "line": "CUDA0 model buffer size =  2177.95 MiB"
+        },
+        {
+          "kind": "KV",
+          "mib": 5632.0,
+          "line": "CUDA0 KV buffer size =  5632.00 MiB"
+        },
+        {
+          "kind": "compute",
+          "mib": 29.75,
+          "line": "CUDA0 compute buffer size =    29.75 MiB"
+        }
+      ],
+      "buffer_log_lines": [
+        "0.02.430.008 I load_tensors:   CPU_Mapped model buffer size =   273.80 MiB",
+        "0.02.430.009 I load_tensors:        CUDA0 model buffer size =  2177.95 MiB",
+        "0.04.011.472 I llama_kv_cache:      CUDA0 KV buffer size =  5632.00 MiB",
+        "0.04.024.921 I sched_reserve:      CUDA0 compute buffer size =    29.75 MiB"
+      ],
+      "interpretation": "Declared buffers are a necessary capacity check, not a proof of physical residency or zero CPU participation.",
+      "context": 32768,
+      "kv_type": "f16",
+      "all_layers_gpu": true,
+      "kv_gpu": true,
+      "sealed_startup_hash_valid": true,
+      "artifact_hash_matches_verified_source": true,
+      "artifact_sha256": "6c3630bf7f5a4860a29aa99768e9e89e0c4c2345cf57d8f7f2e0f09acb59d122",
+      "executable_sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8",
+      "comparative_measures_admissible": true
+    }
+  ],
+  "scope": "Transformer/output layers and KV/recurrent states on CUDA. Default input embeddings remain CPU_Mapped. No automatic transformer offload or context fitting.",
+  "oversubscription_diagnostics": "results/diagnostic-vram-oversubscription/"
+}

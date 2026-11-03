@@ -1,0 +1,18 @@
+{
+  "backend": "llama",
+  "model": "ornith-1.5-9b-q4km-native-v2",
+  "base_url": "http://127.0.0.1:28085",
+  "context_window": 32768,
+  "quantization": "Q4_K_M",
+  "gpu_proof": "runtime/ornith-1.5-9b-q4km-native-v2/gpu-proof.json",
+  "timeout_s": 1200,
+  "require_token_usage": true,
+  "source": {
+    "requested": "Ornith-1.5-9B",
+    "alias": "ornith-1.5-9b-q4km",
+    "path": "models/Ornith-1.5-9B-Q4_K_M.gguf",
+    "quantization": "Q4_K_M",
+    "source": "ornith-ai/Ornith-1.5-9B-GGUF"
+  },
+  "raw_response_dir": "private-responses/new-run/ornith-1.5-9b-q4km"
+}

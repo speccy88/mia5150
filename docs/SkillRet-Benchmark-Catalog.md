@@ -1,6 +1,6 @@
 # SkillRet benchmark catalog
 
-This catalog covers **17 studies and bounded pilots**, including the new matched proposal study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
+This catalog covers **19 studies and bounded pilots**, including the new matched proposal study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
 Historical table reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare that historical table. The added row 17 records new local inference on 24 October.
 
@@ -45,6 +45,32 @@ The authoritative [implemented/incomplete/unrun section][index] and metadata [ex
 [Study source and reproduction](../experiments/benchmarks/skillret-gap-closure-20261024/README.md) · [audited primary report](../experiments/benchmarks/skillret-gap-closure-20261024/report/RESEARCH_DRAFT.md) · [closure matrix](../experiments/benchmarks/skillret-gap-closure-20261024/GAP_CLOSURE.md)
 
 Local Windows/WSL, RTX 2060 SUPER 8 GB, Qwen3-0.6B Q8 and separate Qwen3.5-4B Q4 sensitivity. The completed primary grid uses 200 exposed official queries, all five methods and 10/100/1,000/6,006 gold-conditioned per-query catalogs. Primary final selection at full catalog: BM25 9/200, vector 7/200, hybrid 11/200; hybrid's paired interval spans zero. BGE-small metadata Recall@5 is reported separately from final selection. All context exclusions and failures remain in planned denominators. Model/seed sensitivity is complete; full-query retrieval is a separate stage; hosted access and human adjudication remain pending. This is direct strict-ID metadata selection, with no new native activation or skill execution claim. The original 16-study historical catalog below retains its reviewed basis.
+
+## 18. Skill discovery, ChatGPT OAuth variant — 3 November 2026
+
+[Report](../experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md).
+Twenty received single-gold tasks, 6,006 metadata records, seven planned sizes
+50/100/250/500/1000/2000/5000; descriptions capped at 300 characters. Three models
+complete 360 responses through N=2000. Three HTTP input-string rejections at N=5000
+leave 57 unattempted cases. All golds occupy positions 1-20; original-cloud-runner
+comparability is unverified. OAuth controls differ from strict API v1.
+
+## 19. Skill discovery, local native final-answer adapter — 3 November 2026
+
+[Local report](../experiments/benchmarks/skill-discovery-local-native-20261103/LOCAL_REPORT.md)
+and [coverage comparison](../experiments/benchmarks/skill-discovery-local-native-20261103/COMPARISON.md).
+Fourteen configurations execute 1,120 responses across N=50/100/250/500 on the same
+20 exposed tasks; four configurations are gated/VRAM blocked. Of 2,520 CSV rows,
+1,080 are estimated-context exclusions and 320 are startup/access blocks. Native-v2
+fixes reasoning/final-answer parsing without correcting the scientific position bias.
+Transformer/output/KV use CUDA on RTX 2060 SUPER 8 GB, with documented CPU_Mapped
+input weights. Different quantization, 500-token output cap and OAuth conditions
+prevent a strict causal model-speed or model-quality comparison. No new inference
+was performed while integrating these recorded studies. The separately acquired context/KV v3
+supplement adds 200 Qwen8/Mistral responses, retaining the original 32K blocks.
+Sixteen distinct local models now have measurements across the series; Llama/Gemma
+remain unexecuted at closure. See the linked comparison for the explicit real-token
+gate deviation and the separate KV profiles.
 
 ## Source snapshot
 

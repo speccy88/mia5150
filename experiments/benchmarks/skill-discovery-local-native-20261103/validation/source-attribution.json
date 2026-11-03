@@ -1,0 +1,11 @@
+{
+  "records": 6006,
+  "id_order_matches_prompt_data": true,
+  "received_license_counts": {
+    "mit": 5270,
+    "apache-2.0": 736
+  },
+  "prompt_data_unchanged": true,
+  "attribution_in_model_input": false,
+  "companion_sha256": "bd8abd9e25a4807cf54bd1e03381a126841c8efeca0f5d7cb6456f186b7adddf"
+}

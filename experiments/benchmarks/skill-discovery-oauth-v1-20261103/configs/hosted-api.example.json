@@ -1,0 +1,8 @@
+{
+  "backend": "openai-compatible",
+  "model": "REPLACE_WITH_VERIFIED_MODEL_ID",
+  "base_url": "https://api.openai.com/v1",
+  "api_key_env": "OPENAI_API_KEY",
+  "context_window": 128000,
+  "timeout_s": 300
+}

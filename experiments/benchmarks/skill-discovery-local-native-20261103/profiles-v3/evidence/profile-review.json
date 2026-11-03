@@ -1,0 +1,645 @@
+{
+  "utc": "2026-11-03T11:32:21.712806+00:00",
+  "suite_state": "completed",
+  "summary": [
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "sizes": [
+        50
+      ],
+      "context": 2816,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 10,
+      "issues": {
+        "OK": 10,
+        "REASONING_NO_FINAL_ANSWER": 10
+      },
+      "median_llm_s": 9.9384485,
+      "input_min": 2199,
+      "input_max": 2252,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "sizes": [
+        100
+      ],
+      "context": 5120,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "issues": {
+        "OK": 8,
+        "REASONING_NO_FINAL_ANSWER": 12
+      },
+      "median_llm_s": 11.936898,
+      "input_min": 4334,
+      "input_max": 4387,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "sizes": [
+        250
+      ],
+      "context": 12032,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 8.0,
+      "valid": 8,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 12,
+        "OK": 8
+      },
+      "median_llm_s": 19.5570505,
+      "input_min": 11473,
+      "input_max": 11526,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 23552,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 9.0,
+      "valid": 10,
+      "issues": {
+        "REASONING_NO_FINAL_ANSWER": 10,
+        "OK": 10
+      },
+      "median_llm_s": 34.464785500000005,
+      "input_min": 22878,
+      "input_max": 22931,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 23552,
+      "kv": "q8_0",
+      "rows": 20,
+      "measured": 20,
+      "top1": 10,
+      "top10": 10.0,
+      "valid": 11,
+      "issues": {
+        "OK": 11,
+        "REASONING_NO_FINAL_ANSWER": 8,
+        "EMPTY_OUTPUT": 1
+      },
+      "median_llm_s": 42.22104,
+      "input_min": 22878,
+      "input_max": 22931,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "sizes": [
+        50
+      ],
+      "context": 3328,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 16,
+      "top10": 20.0,
+      "valid": 20,
+      "issues": {
+        "OK": 20
+      },
+      "median_llm_s": 5.85443,
+      "input_min": 2542,
+      "input_max": 2609,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "sizes": [
+        100
+      ],
+      "context": 5888,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 9,
+      "top10": 15.0,
+      "valid": 20,
+      "issues": {
+        "OK": 20
+      },
+      "median_llm_s": 11.550057500000001,
+      "input_min": 5071,
+      "input_max": 5138,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "sizes": [
+        250
+      ],
+      "context": 14080,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 8,
+      "top10": 12.0,
+      "valid": 19,
+      "issues": {
+        "OK": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 20.0814775,
+      "input_min": 13354,
+      "input_max": 13421,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 27392,
+      "kv": "f16",
+      "rows": 20,
+      "measured": 20,
+      "top1": 3,
+      "top10": 10.0,
+      "valid": 19,
+      "issues": {
+        "OK": 19,
+        "INVALID_OUTPUT": 1
+      },
+      "median_llm_s": 37.3950305,
+      "input_min": 26706,
+      "input_max": 26773,
+      "unresolved_intents": [],
+      "checks_passed": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "sizes": [
+        500
+      ],
+      "context": 27392,
+      "kv": "q8_0",
+      "rows": 20,
+      "measured": 20,
+      "top1": 3,
+      "top10": 8.0,
+      "valid": 18,
+      "issues": {
+        "OK": 18,
+        "INVALID_OUTPUT": 2
+      },
+      "median_llm_s": 46.022037999999995,
+      "input_min": 26706,
+      "input_max": 26773,
+      "unresolved_intents": [],
+      "checks_passed": true
+    }
+  ],
+  "stages": [
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:07:27.272644+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-preflight-f16-4096\\launch-20261103T100728015-e4aa4285",
+      "config": "configs\\qwen3-8b-q4km-preflight-f16-4096.json",
+      "finished_utc": "2026-11-03T10:08:08.674700+00:00",
+      "adjusted_contexts": {
+        "50": 2816,
+        "100": 5120,
+        "250": 12032,
+        "500": 23552
+      },
+      "cuda_mib": 5058.34,
+      "wddm_mib": 5242.91796875,
+      "kv_mib": 576.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.07.359.909 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 0,
+      "sampled_wddm_peak_mib": null
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:08:09.260589+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-q8-32768-admission-only\\launch-20261103T100810076-8417c412",
+      "config": "configs\\qwen3-8b-q4km-q8-32768-admission-only.json",
+      "finished_utc": "2026-11-03T10:08:37.356272+00:00",
+      "cuda_mib": 7049.42,
+      "wddm_mib": 7242.94921875,
+      "kv_mib": 2448.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.129.015 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 1,
+      "sampled_wddm_peak_mib": 7242.94921875
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 2816,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:08:37.362562+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n50\\launch-20261103T100837998-a3184f4d",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n50.json",
+      "finished_utc": "2026-11-03T10:12:09.439809+00:00",
+      "cuda_mib": 4878.03,
+      "wddm_mib": 5062.9140625,
+      "kv_mib": 396.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.014.786 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 3,
+      "sampled_wddm_peak_mib": 5078.9140625
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5120,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:12:09.961952+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n100\\launch-20261103T101210584-5b0e9750",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n100.json",
+      "finished_utc": "2026-11-03T10:16:33.851001+00:00",
+      "cuda_mib": 5202.59,
+      "wddm_mib": 5386.91796875,
+      "kv_mib": 720.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.024.382 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 7,
+      "sampled_wddm_peak_mib": 5402.91796875
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 12032,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:16:34.438573+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n250\\launch-20261103T101635063-b6008d4a",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n250.json",
+      "finished_utc": "2026-11-03T10:23:12.344380+00:00",
+      "cuda_mib": 6176.28,
+      "wddm_mib": 6362.9296875,
+      "kv_mib": 1692.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.001.540 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 10,
+      "sampled_wddm_peak_mib": 6378.9296875
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 23552,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:23:12.940902+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-f16-adjusted-n500\\launch-20261103T102313595-65bc6e63",
+      "config": "configs\\qwen3-8b-q4km-f16-adjusted-n500.json",
+      "finished_utc": "2026-11-03T10:35:06.478472+00:00",
+      "cuda_mib": 7799.09,
+      "wddm_mib": 7986.94921875,
+      "kv_mib": 3312.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.281.279 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 17,
+      "sampled_wddm_peak_mib": 8002.94921875
+    },
+    {
+      "model": "qwen3-8b-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 23552,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:35:07.022191+00:00",
+      "launch": "runtime\\qwen3-8b-q4km-q8-adjusted-n500\\launch-20261103T103507660-004b58cd",
+      "config": "configs\\qwen3-8b-q4km-q8-adjusted-n500.json",
+      "finished_utc": "2026-11-03T10:49:18.063352+00:00",
+      "cuda_mib": 6322.67,
+      "wddm_mib": 6510.93359375,
+      "kv_mib": 1759.5,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+      "cpu_mapped_lines": [
+        "0.01.055.466 I load_tensors:   CPU_Mapped model buffer size =   333.84 MiB"
+      ],
+      "wddm_sample_count": 20,
+      "sampled_wddm_peak_mib": 6532.93359375
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "preflight-f16-4096",
+      "context": 4096,
+      "kv": "f16",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:49:18.594202+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-preflight-f16-4096\\launch-20261103T104919239-99468482",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-preflight-f16-4096.json",
+      "finished_utc": "2026-11-03T10:49:53.141570+00:00",
+      "adjusted_contexts": {
+        "50": 3328,
+        "100": 5888,
+        "250": 14080,
+        "500": 27392
+      },
+      "cuda_mib": 4639.52,
+      "wddm_mib": 4824.9140625,
+      "kv_mib": 512.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.03.777.375 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 0,
+      "sampled_wddm_peak_mib": null
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-32768-admission-only",
+      "context": 32768,
+      "kv": "q8_0",
+      "sizes": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "generation_planned": false,
+      "state": "completed_no_generation",
+      "started_utc": "2026-11-03T10:49:53.694243+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-q8-32768-admission-only\\launch-20261103T104954343-bb2a5104",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-q8-32768-admission-only.json",
+      "finished_utc": "2026-11-03T10:50:18.014241+00:00",
+      "cuda_mib": 6419.6,
+      "wddm_mib": 6612.94140625,
+      "kv_mib": 2176.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.800.389 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 1,
+      "sampled_wddm_peak_mib": 6612.94140625
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n50",
+      "context": 3328,
+      "kv": "f16",
+      "sizes": [
+        50
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:50:18.023092+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n50\\launch-20261103T105018668-f8fc074b",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n50.json",
+      "finished_utc": "2026-11-03T10:52:53.499449+00:00",
+      "cuda_mib": 4543.34,
+      "wddm_mib": 4726.9140625,
+      "kv_mib": 416.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.791.360 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 4,
+      "sampled_wddm_peak_mib": 4742.9140625
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n100",
+      "context": 5888,
+      "kv": "f16",
+      "sizes": [
+        100
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:52:54.052755+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n100\\launch-20261103T105254681-dedc0289",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
+      "finished_utc": "2026-11-03T10:56:45.989135+00:00",
+      "cuda_mib": 4863.96,
+      "wddm_mib": 5048.9140625,
+      "kv_mib": 736.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.817.225 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 6,
+      "sampled_wddm_peak_mib": 5064.9140625
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n250",
+      "context": 14080,
+      "kv": "f16",
+      "sizes": [
+        250
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T10:56:46.614146+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n250\\launch-20261103T105647276-f8c8732c",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n250.json",
+      "finished_utc": "2026-11-03T11:03:13.032447+00:00",
+      "cuda_mib": 5889.96,
+      "wddm_mib": 6076.92578125,
+      "kv_mib": 1760.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.783.368 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 10,
+      "sampled_wddm_peak_mib": 6092.92578125
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "f16-adjusted-n500",
+      "context": 27392,
+      "kv": "f16",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T11:03:13.578003+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-f16-adjusted-n500\\launch-20261103T110314209-dd4bd0d8",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-f16-adjusted-n500.json",
+      "finished_utc": "2026-11-03T11:15:49.097758+00:00",
+      "cuda_mib": 7557.21,
+      "wddm_mib": 7746.94921875,
+      "kv_mib": 3424.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.828.525 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 18,
+      "sampled_wddm_peak_mib": 7762.94921875
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "profile": "q8-adjusted-n500",
+      "context": 27392,
+      "kv": "q8_0",
+      "sizes": [
+        500
+      ],
+      "generation_planned": true,
+      "state": "completed",
+      "started_utc": "2026-11-03T11:15:49.666370+00:00",
+      "launch": "runtime\\mistral-7b-instruct-v03-q4km-q8-adjusted-n500\\launch-20261103T111550340-bdded3c8",
+      "config": "configs\\mistral-7b-instruct-v03-q4km-q8-adjusted-n500.json",
+      "finished_utc": "2026-11-03T11:31:05.789331+00:00",
+      "cuda_mib": 6040.290000000001,
+      "wddm_mib": 6230.9375,
+      "kv_mib": 1819.0,
+      "sealed_log_hash_valid": true,
+      "artifact_sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+      "cpu_mapped_lines": [
+        "0.00.793.366 I load_tensors:   CPU_Mapped model buffer size =    72.00 MiB"
+      ],
+      "wddm_sample_count": 21,
+      "sampled_wddm_peak_mib": 6248.9375
+    }
+  ],
+  "paired_quality": [
+    {
+      "model": "qwen3-8b-q4km",
+      "size": 500,
+      "context": 23552,
+      "paired_queries": 20,
+      "f16_top1": 8,
+      "q8_top1": 10,
+      "f16_top10": 9.0,
+      "q8_top10": 10.0,
+      "identical_raw_texts": 0,
+      "f16_hit_q8_miss": 1,
+      "q8_hit_f16_miss": 3,
+      "same_candidate_prompt_plans": true
+    },
+    {
+      "model": "mistral-7b-instruct-v03-q4km",
+      "size": 500,
+      "context": 27392,
+      "paired_queries": 20,
+      "f16_top1": 3,
+      "q8_top1": 3,
+      "f16_top10": 10.0,
+      "q8_top10": 8.0,
+      "identical_raw_texts": 11,
+      "f16_hit_q8_miss": 0,
+      "q8_hit_f16_miss": 0,
+      "same_candidate_prompt_plans": true
+    }
+  ],
+  "raw_responses_verified": 200,
+  "columns": 45,
+  "generation_cap": 200,
+  "measured_total": 200
+}

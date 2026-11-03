@@ -1,0 +1,161 @@
+{
+  "models": [
+    {
+      "suite": "local-native-v2",
+      "model": "gemma-3-4b-it",
+      "recorded_rows": 140,
+      "captured_generation_responses": 0,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "gemma-4-e2b-it-q4",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "h2o-lightning-4b-stock-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "lfm3-omni-2b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ling-3.0-tiny-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "llama-3.2-3b-instruct",
+      "recorded_rows": 140,
+      "captured_generation_responses": 0,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "mistral-7b-instruct-v03-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 0,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "nanbeige4.2-3b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "nemotron-3.5-bolt-e4b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "neohorse-1-9b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ornith-1.5-9b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "phi-4-mini-instruct-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-0.6b-q8",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-1.7b-q8",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3-8b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 0,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3.5-4b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "qwen3.5-9b-q4km",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "local-native-v2",
+      "model": "ternary-bonsai-2-9b-q2",
+      "recorded_rows": 140,
+      "captured_generation_responses": 80,
+      "unresolved_intents": [],
+      "capture_checks_passed": true
+    },
+    {
+      "suite": "diagnostic-vram-oversubscription",
+      "model": "qwen3-8b-q4km",
+      "recorded_rows": 21,
+      "captured_generation_responses": 21,
+      "unresolved_intents": [
+        "100:1"
+      ],
+      "capture_checks_passed": true
+    }
+  ],
+  "new_inference_calls": 0,
+  "verification": "Every measured native-v2 response is linked to its captured text SHA-256, parsed-final hash, reasoning status and real token usage. Only counts/hashes are exported, no raw text.",
+  "diagnostic_policy": "VRAM oversubscription responses remain excluded from comparative results; unresolved intents are preserved and never automatically replayed."
+}

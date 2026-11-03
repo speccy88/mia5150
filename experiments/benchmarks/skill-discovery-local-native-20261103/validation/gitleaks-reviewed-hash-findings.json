@@ -1,0 +1,158 @@
+{
+  "reviewed_findings": 30,
+  "reviewed_sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8",
+  "independent_source_bytes_hashed": true,
+  "actual_credential_exceptions_added": false,
+  "findings": [
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/evidence/gold-position-audit.json",
+      "line": 708,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/evidence/gold-position-audit.json",
+      "line": 871,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/evidence/gold-position-audit.json",
+      "line": 1034,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/evidence/gold-position-audit.json",
+      "line": 1197,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/diagnostic-vram-oversubscription/qwen3-8b-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/gemma-3-4b-it/manifest.json",
+      "line": 26,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/gemma-4-e2b-it-q4/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/h2o-lightning-4b-stock-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/llama-3.2-3b-instruct/manifest.json",
+      "line": 26,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/lfm3-omni-2b-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/nemotron-3.5-bolt-e4b-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/ling-3.0-tiny-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/mistral-7b-instruct-v03-q4km/manifest.json",
+      "line": 52,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/nanbeige4.2-3b-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/ornith-1.5-9b-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/neohorse-1-9b-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/qwen3-1.7b-q8/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/qwen3-0.6b-q8/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/phi-4-mini-instruct-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/qwen3-8b-q4km/manifest.json",
+      "line": 36,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-v1/qwen3-1.7b-q8/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/qwen3.5-4b-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/qwen3.5-9b-q4km/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-native-v2/ternary-bonsai-2-9b-q2/manifest.json",
+      "line": 32,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-v1/ling-3.0-tiny-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-v1/qwen3-0.6b-q8/manifest.json",
+      "line": 23,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-local-native-20261103/results/local-v1/qwen3.5-4b-q4km/manifest.json",
+      "line": 31,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6-luna/manifest.json",
+      "line": 20,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-sol/manifest.json",
+      "line": 20,
+      "classification": "verified public source-file SHA-256, not a credential"
+    },
+    {
+      "path": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/results/gpt-6.1-terra/manifest.json",
+      "line": 20,
+      "classification": "verified public source-file SHA-256, not a credential"
+    }
+  ]
+}

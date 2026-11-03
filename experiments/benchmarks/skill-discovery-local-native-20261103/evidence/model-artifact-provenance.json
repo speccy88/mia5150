@@ -1,0 +1,463 @@
+{
+  "exported_utc": "2026-11-03T09:52:29.259711+00:00",
+  "artifacts": [
+    {
+      "requested": "Qwen3-0.6B",
+      "alias": "qwen3-0.6b-q8",
+      "source": "Qwen/Qwen3-0.6B-GGUF",
+      "quantization": "Q8_0",
+      "artifact_filename": "Qwen3-0.6B-Q8_0.gguf",
+      "artifact_size": 639446688,
+      "verified_manifest": {
+        "size": "0.6B",
+        "bytes": 639446688,
+        "file": "Qwen3-0.6B-Q8_0.gguf",
+        "repo": "Qwen/Qwen3-0.6B-GGUF",
+        "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+        "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+      }
+    },
+    {
+      "requested": "Qwen3-1.7B",
+      "alias": "qwen3-1.7b-q8",
+      "source": "Qwen/Qwen3-1.7B-GGUF",
+      "quantization": "Q8_0",
+      "artifact_filename": "Qwen3-1.7B-Q8_0.gguf",
+      "artifact_size": 1834426016,
+      "verified_manifest": {
+        "repo": "Qwen/Qwen3-1.7B-GGUF",
+        "revision": "90862c4b9d2787eaed51d12237eafdfe7c5f6077",
+        "file": "Qwen3-1.7B-Q8_0.gguf",
+        "size": 1834426016,
+        "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "Qwen3.5-4B",
+      "alias": "qwen3.5-4b-q4km",
+      "source": "Installed Ollama qwen3.5:4b-q4_K_M; publisher identity Qwen/Qwen3.5-4B; not an official Qwen GGUF",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "sha256-a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+      "artifact_size": 2648593216,
+      "sha256": "a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+      "official_ollama_tag": "4b-q4_K_M",
+      "official_ollama_model_layer": {
+        "mediaType": "application/vnd.ollama.image.model",
+        "digest": "sha256:a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+        "size": 2648593216,
+        "from": "model.gguf"
+      },
+      "official_qwen_gguf": false
+    },
+    {
+      "requested": "Ling-3.0-tiny",
+      "alias": "ling-3.0-tiny-q4km",
+      "source": "inclusionAI/Ling-3.0-tiny-GGUF; installed bytes match publisher SHA-256",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "sha256-246d67d45f5b0c7447ca0ce0bdb8b46b8a47b593c5068635dc16422c051d7be9",
+      "artifact_size": 4823894944,
+      "sha256": "246d67d45f5b0c7447ca0ce0bdb8b46b8a47b593c5068635dc16422c051d7be9",
+      "byte_identity": "Installed Ling bytes match official publisher GGUF LFS SHA-256."
+    },
+    {
+      "requested": "Qwen3.5-9B",
+      "alias": "qwen3.5-9b-q4km",
+      "source": "Installed Ollama qwen3.5:9b-q4_K_M; publisher identity Qwen/Qwen3.5-9B; not an official Qwen GGUF",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "sha256-02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+      "artifact_size": 5629109120,
+      "sha256": "02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+      "official_ollama_tag": "9b-q4_K_M",
+      "official_ollama_model_layer": {
+        "mediaType": "application/vnd.ollama.image.model",
+        "digest": "sha256:02d45dc1cf451ba2475ac33b301c2dd8f985abe4c182ce04a1f2f5bf0260278d",
+        "size": 5629109120,
+        "from": "model.gguf"
+      },
+      "official_qwen_gguf": false
+    },
+    {
+      "requested": "Llama 3.2 3B",
+      "alias": "llama-3.2-3b-instruct",
+      "source": "meta-llama/Llama-3.2-3B-Instruct",
+      "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "note": "No acceptance, credentials or third-party ungated substitute used"
+    },
+    {
+      "requested": "Gemma 3 4B",
+      "alias": "gemma-3-4b-it",
+      "source": "google/gemma-3-4b-it",
+      "blocked": "ACCESS_GATED_ACCEPTANCE_REQUIRED",
+      "note": "No acceptance, credentials or third-party ungated substitute used"
+    },
+    {
+      "requested": "H2O-Lightning-4B",
+      "alias": "h2o-lightning-4b-stock-q4km",
+      "source": "h2oai/h2o-lightning-4b-gguf",
+      "quantization": "Q4_K_M, official stock ordinary-chat export",
+      "note": "The original numbered-name prompt is unchanged; no typed-decision shim or probability API",
+      "artifact_filename": "h2o-lightning-4b-stock-Q4_K_M.gguf",
+      "artifact_size": 2708804640,
+      "verified_manifest": {
+        "repo": "h2oai/h2o-lightning-4b-gguf",
+        "revision": "61f8d8b7a8c2d84426d0d143ca187f65d235934b",
+        "file": "h2o-lightning-4b-stock-Q4_K_M.gguf",
+        "size": 2708804640,
+        "sha256": "aead1041598e552024ed7047a4d8be4b48333ea2647c05785c46feab2d301438",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "Gemma 4 E2B",
+      "alias": "gemma-4-e2b-it-q4",
+      "source": "google/gemma-4-E2B-it-qat-q4_0-gguf",
+      "quantization": "Official QAT Q4_0",
+      "artifact_filename": "gemma-4-E2B_q4_0-it.gguf",
+      "artifact_size": 3349516256,
+      "verified_manifest": {
+        "repo": "google/gemma-4-E2B-it-qat-q4_0-gguf",
+        "revision": "675cff42a74c774d6cb76f76d8eacb49b48c9b93",
+        "file": "gemma-4-E2B_q4_0-it.gguf",
+        "size": 3349516256,
+        "sha256": "fa401b55b07ee70a54c6dae3903c783a6e65064312529ea57175cb5f8dec6634",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "Qwen3-8B",
+      "alias": "qwen3-8b-q4km",
+      "source": "Qwen/Qwen3-8B-GGUF",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "Qwen3-8B-Q4_K_M.gguf",
+      "artifact_size": 5027783488,
+      "verified_manifest": {
+        "repo": "Qwen/Qwen3-8B-GGUF",
+        "revision": "7c41481f57cb95916b40956ab2f0b139b296d974",
+        "file": "Qwen3-8B-Q4_K_M.gguf",
+        "size": 5027783488,
+        "sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "NeoHorse-1-9B",
+      "alias": "neohorse-1-9b-q4km",
+      "source": "TokenRhythm/NeoHorse-1-9B-GGUF",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "NeoHorse-1-9B-Q4_K_M.gguf",
+      "artifact_size": 5629109056,
+      "verified_manifest": {
+        "repo": "TokenRhythm/NeoHorse-1-9B-GGUF",
+        "revision": "ddcb4c939b5392c86a9d2733c7c0ed30db2554fd",
+        "file": "NeoHorse-1-9B-Q4_K_M.gguf",
+        "size": 5629109056,
+        "sha256": "a412add5457474d898ef0bf0cdbc057f7ffc3ea5cedba997c5123d36f116a957",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "Ornith-1.5-9B",
+      "alias": "ornith-1.5-9b-q4km",
+      "source": "ornith-ai/Ornith-1.5-9B-GGUF",
+      "quantization": "Q4_K_M",
+      "artifact_filename": "Ornith-1.5-9B-Q4_K_M.gguf",
+      "artifact_size": 5780090816,
+      "verified_manifest": {
+        "repo": "ornith-ai/Ornith-1.5-9B-GGUF",
+        "revision": "abdd624b12ebf020b767fff532ff44fe552b28c3",
+        "file": "Ornith-1.5-9B-Q4_K_M.gguf",
+        "size": 5780090816,
+        "sha256": "70c112196e0b7023803c9762752e46d29e612a92c83f995bc3ba1ceb07e8fab6",
+        "license": "mit"
+      }
+    },
+    {
+      "requested": "Nemotron 3.5 Bolt E4B",
+      "alias": "nemotron-3.5-bolt-e4b-q4km",
+      "source": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+      "quantization": "Q4_K_M",
+      "note": "8B total / 4B effective, official GGUF file is 6.18 GB; 4GB name is not the artifact size",
+      "artifact_filename": "Nemotron-3.5-Bolt-E4B-Q4_K_M.gguf",
+      "artifact_size": 6180446208,
+      "verified_manifest": {
+        "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+        "revision": "1db54d5b12533ff1bcaa8e42cf4c667988a1f1be",
+        "file": "Nemotron-3.5-Bolt-E4B-Q4_K_M.gguf",
+        "size": 6180446208,
+        "sha256": "c8af2b8aea10a690a1d9491db744a9446660173cb38fc489612b556615a69612",
+        "license": "other"
+      }
+    },
+    {
+      "requested": "Ternary Bonsai 2 9B",
+      "alias": "ternary-bonsai-2-9b-q2",
+      "source": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "quantization": "Official ternary Q2_0 packing, not Q4",
+      "note": "Publisher supports upstream llama.cpp for Q2_0; PQ2_0/PTQ1_0 require its fork",
+      "artifact_filename": "Ternary-Bonsai-2-9B-Q2_0.gguf",
+      "artifact_size": 2556640128,
+      "verified_manifest": {
+        "repo": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+        "revision": "5b2abb02362efbed46bbe204014b02837778b2c2",
+        "file": "Ternary-Bonsai-2-9B-Q2_0.gguf",
+        "size": 2556640128,
+        "sha256": "1f884aa56aacd2bbbb2e4b7abaead2b1102b74a9c75a23fc33dab916813a384d",
+        "license": "apache-2.0"
+      }
+    },
+    {
+      "requested": "LFM3-Omni-2B",
+      "alias": "lfm3-omni-2b-q4km",
+      "source": "LiquidAI/LFM3-Omni-2B-GGUF",
+      "quantization": "Q4_K_M",
+      "note": "Text only; no audio/vision projector loaded",
+      "artifact_filename": "LFM3-Omni-2B-Q4_K_M.gguf",
+      "artifact_size": 1099630080,
+      "verified_manifest": {
+        "repo": "LiquidAI/LFM3-Omni-2B-GGUF",
+        "revision": "3d29af2ad166f8299c2d820937e47dc0add20ffc",
+        "file": "LFM3-Omni-2B-Q4_K_M.gguf",
+        "size": 1099630080,
+        "sha256": "9f8d30e9d4fd7a9349d586e077988229b3ca0a0e4ad730897563d1eccc9893e2",
+        "license": "other"
+      }
+    },
+    {
+      "requested": "Phi-4 Mini 3.8B",
+      "alias": "phi-4-mini-instruct-q4km",
+      "source": "microsoft/Phi-4-mini-instruct",
+      "quantization": "Q4_K_M, local conversion of pinned official weights",
+      "artifact_filename": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "artifact_size": 2493840224,
+      "verified_manifest": {
+        "official_source": {
+          "repo": "microsoft/Phi-4-mini-instruct",
+          "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+          "files": [
+            {
+              "file": "LICENSE",
+              "sha256": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d",
+              "size": 1084
+            },
+            {
+              "file": "added_tokens.json",
+              "sha256": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486",
+              "size": 249
+            },
+            {
+              "file": "config.json",
+              "sha256": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b",
+              "size": 2504
+            },
+            {
+              "file": "merges.txt",
+              "sha256": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad",
+              "size": 2418348
+            },
+            {
+              "file": "model-00001-of-00002.safetensors",
+              "sha256": "bc703090b63eda16f639fa4de7ac54635c23105ab1da2f6ec4d3403151d38ee6",
+              "size": 4903637712
+            },
+            {
+              "file": "model-00002-of-00002.safetensors",
+              "sha256": "7ff79b9d2d31076bac2663393451f6530f4fc8ca49b09002116c92c373dba983",
+              "size": 2768428504
+            },
+            {
+              "file": "model.safetensors.index.json",
+              "sha256": "613a98d5e5716ca96fa75931abedc9c5a5d95f488ce4d62df71e639fe3ac6c59",
+              "size": 16273
+            },
+            {
+              "file": "special_tokens_map.json",
+              "sha256": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3",
+              "size": 587
+            },
+            {
+              "file": "tokenizer.json",
+              "sha256": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea",
+              "size": 15524095
+            },
+            {
+              "file": "tokenizer_config.json",
+              "sha256": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db",
+              "size": 2932
+            },
+            {
+              "file": "vocab.json",
+              "sha256": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd",
+              "size": 3910310
+            }
+          ]
+        },
+        "converter": {
+          "commit": "8642541b255bfb5dc39cd351a178be09013a55d6",
+          "archive_sha256": "2f0805273e93ce4f140a8e9d3bf8864e2eafbb0b2edb468b4b2d520a258aba42"
+        },
+        "intermediate_sha256": "45e3d8f33cb8e2acd477842ae7f41a46c85dd1d4b70cbac55e2ecea5caa2ee80",
+        "quantizer_sha256": "3c045bd055736deba6713cd577552917e556e90f4de8757beb42396891cb91d0",
+        "quantization": "Q4_K_M",
+        "sha256": "8fb41ed11aa38ee57e8fbaf3a5b8961c3f1e2090f74eaae7424ae1abccedfd2b",
+        "size": 2493840224,
+        "conversion_and_quantization_device": "CPU; no model inference"
+      }
+    },
+    {
+      "requested": "Mistral 7B Instruct",
+      "alias": "mistral-7b-instruct-v03-q4km",
+      "source": "mistralai/Mistral-7B-Instruct-v0.3",
+      "quantization": "Q4_K_M, local conversion of pinned official weights",
+      "note": "v0.3 explicitly selected for the unspecified Instruct version",
+      "artifact_filename": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "artifact_size": 4372815616,
+      "verified_manifest": {
+        "official_source": {
+          "repo": "mistralai/Mistral-7B-Instruct-v0.3",
+          "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+          "files": [
+            {
+              "file": "config.json",
+              "sha256": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+              "size": 601
+            },
+            {
+              "file": "model-00001-of-00003.safetensors",
+              "sha256": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+              "size": 4949453792
+            },
+            {
+              "file": "model-00002-of-00003.safetensors",
+              "sha256": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+              "size": 4999819336
+            },
+            {
+              "file": "model-00003-of-00003.safetensors",
+              "sha256": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+              "size": 4546807800
+            },
+            {
+              "file": "model.safetensors.index.json",
+              "sha256": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+              "size": 23950
+            },
+            {
+              "file": "params.json",
+              "sha256": "8a64b8657de37af1f828eef1517dc186247938d66e7fea2c78c31d5b9071efe6",
+              "size": 202
+            },
+            {
+              "file": "special_tokens_map.json",
+              "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+              "size": 414
+            },
+            {
+              "file": "tokenizer.json",
+              "sha256": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+              "size": 1961548
+            },
+            {
+              "file": "tokenizer.model",
+              "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+              "size": 587404
+            },
+            {
+              "file": "tokenizer_config.json",
+              "sha256": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2",
+              "size": 140874
+            }
+          ]
+        },
+        "converter": {
+          "commit": "8642541b255bfb5dc39cd351a178be09013a55d6",
+          "archive_sha256": "2f0805273e93ce4f140a8e9d3bf8864e2eafbb0b2edb468b4b2d520a258aba42"
+        },
+        "intermediate_sha256": "af8ae666ba9e32c1c2883e0deeb96e51509fea61cfbc28ce06b4fa7f2d2258bb",
+        "quantizer_sha256": "3c045bd055736deba6713cd577552917e556e90f4de8757beb42396891cb91d0",
+        "quantization": "Q4_K_M",
+        "sha256": "c02f475d2f39afdac6fa298954dd3f9acf98aec7a5cdb4f4a27838f600b35e3f",
+        "size": 4372815616,
+        "conversion_and_quantization_device": "CPU; no model inference"
+      }
+    },
+    {
+      "requested": "Nanbeige 4.2 3B",
+      "alias": "nanbeige4.2-3b-q4km",
+      "source": "Nanbeige/Nanbeige4.2-3B",
+      "quantization": "Q4_K_M, local conversion of pinned official weights",
+      "note": "4B total / 3B non-embedding; looped architecture supported by pinned upstream converter",
+      "artifact_filename": "Nanbeige4.2-3B-Q4_K_M.gguf",
+      "artifact_size": 2574807488,
+      "verified_manifest": {
+        "official_source": {
+          "repo": "Nanbeige/Nanbeige4.2-3B",
+          "revision": "b82e54bd609793562a75cbf9337970a93369eab5",
+          "files": [
+            {
+              "file": "added_tokens.json",
+              "sha256": "9e3b127a27647df2c353cc1e5500826f7cdbe8bd15a458e368bba8422e9719cf",
+              "size": 174
+            },
+            {
+              "file": "config.json",
+              "sha256": "f6cb15b22847664f3a6049dc4b58fdd10f1650d112ac99a1da3d051f17c2ca19",
+              "size": 1019
+            },
+            {
+              "file": "model-00001-of-00002.safetensors",
+              "sha256": "09d265d5ec837bc64462796b7f8c110be9a135a55ed7a6eb5d07e0e90c976a94",
+              "size": 4973547960
+            },
+            {
+              "file": "model-00002-of-00002.safetensors",
+              "sha256": "31019e7870a044f44bc3f7e981f8c5ecd42d341e5ca6cfdbfd07fb95d95be389",
+              "size": 3366076760
+            },
+            {
+              "file": "model.safetensors.index.json",
+              "sha256": "30d8da0fa8b97abc6d9eddfd017a0cb7a649bcbd58caa57804c56c767db5c0f1",
+              "size": 16519
+            },
+            {
+              "file": "special_tokens_map.json",
+              "sha256": "b718fce2b7a8940ffeddc1e67f3b092cc0d13ac885c63a021528786f8c4cf6c0",
+              "size": 623
+            },
+            {
+              "file": "tokenizer.json",
+              "sha256": "1d858a0fc007f22af6ae18bfa1ae52d30e398aa9cd1ea06e7777176869346a3f",
+              "size": 18450979
+            },
+            {
+              "file": "tokenizer.model",
+              "sha256": "fb41d04798b714520a9b075727b0226538b7330254299062742c50ec8374bc36",
+              "size": 2782298
+            },
+            {
+              "file": "tokenizer_config.json",
+              "sha256": "3edfa64a0826a77e9412b9008f1febf3fe906a68fd616b6de4cd15897a8c8518",
+              "size": 10990
+            }
+          ]
+        },
+        "converter": {
+          "commit": "8642541b255bfb5dc39cd351a178be09013a55d6",
+          "archive_sha256": "2f0805273e93ce4f140a8e9d3bf8864e2eafbb0b2edb468b4b2d520a258aba42"
+        },
+        "intermediate_sha256": "f147a038e2cba7c21f99606bef8a88e9774833717ed8de72b0172f314bc8bb82",
+        "quantizer_sha256": "3c045bd055736deba6713cd577552917e556e90f4de8757beb42396891cb91d0",
+        "quantization": "Q4_K_M",
+        "sha256": "6c3630bf7f5a4860a29aa99768e9e89e0c4c2345cf57d8f7f2e0f09acb59d122",
+        "size": 2574807488,
+        "conversion_and_quantization_device": "CPU; no model inference"
+      }
+    }
+  ],
+  "verification": "Hashes and source revisions were checked at download/conversion/startup. This offline export does not reread all model weights while inference runs.",
+  "sources": [
+    "evidence/source-inventory.json",
+    "evidence/ollama-qwen35-official-registry.json",
+    "evidence/conversion-status.json"
+  ]
+}

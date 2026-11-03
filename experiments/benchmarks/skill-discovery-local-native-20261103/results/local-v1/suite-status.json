@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-11-02T23:00:53.485635-05:00",
+  "state": "paused_native_parser_v1_preserved",
+  "models": [
+    {
+      "alias": "qwen3-1.7b-q8",
+      "requested": "Qwen3-1.7B",
+      "started_utc": "2026-11-02T23:00:59.864264-05:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3-1.7b-q8-v1\\launch-20261103T040105808-7258a639",
+      "finished_utc": "2026-11-02T23:09:24.511896-05:00"
+    },
+    {
+      "alias": "qwen3.5-4b-q4km",
+      "requested": "Qwen3.5-4B",
+      "started_utc": "2026-11-02T23:09:24.517921-05:00",
+      "state": "completed",
+      "launch": "runtime\\qwen3.5-4b-q4km-v1\\launch-20261103T040934268-27c33985",
+      "finished_utc": "2026-11-02T23:27:18.486681-05:00"
+    },
+    {
+      "alias": "ling-3.0-tiny-q4km",
+      "requested": "Ling-3.0-tiny",
+      "started_utc": "2026-11-02T23:27:18.486681-05:00",
+      "state": "completed",
+      "launch": "runtime\\ling-3.0-tiny-q4km-v1\\launch-20261103T042734282-d6b3442d"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "measured_source": "source-original/",
+  "changes_after_measurement": [
+    "Accept the distributed metadata-only dataset checksum.",
+    "Bounded retry of atomic filesystem replacement on transient PermissionError; no HTTP retry."
+  ],
+  "sampling_prompts_parser_metrics_changed": false,
+  "raw_results_changed": false,
+  "new_model_calls": 0,
+  "packaging_files": "CSV-only offline reproduction helper, public gitignore permits historical data/results, local preparation scripts included without execution."
+}

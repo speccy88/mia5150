@@ -1,0 +1,1530 @@
+{
+  "source_archive": "profile-code-results-20261103T113223Z.zip",
+  "source_archive_sha256": "5456b43a3046b9508d2f2d9c0f34f2af0cad208f6e3d5f57c22b2861dbbfd3e3",
+  "source_archive_manifest_entries_checked": 233,
+  "original_archive_crc_and_hashes_checked": true,
+  "private_response_archive_read": false,
+  "new_inference_calls": 0,
+  "files": [
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/bench_profiles_v3.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/bench_profiles_v3.py",
+      "original_sha256": "e3d9589d3902db616a84a080a86726b2314e549fc1a6e9ecaf6bc84e6b2d2031",
+      "public_sha256": "f750b3dc200af421bdb4cb368838a6c1dad5b4d9d3e2ccb81122d9d90ebb702a",
+      "original_bytes": 34356,
+      "public_bytes": 33656,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n100.json",
+      "original_sha256": "bce652e47e3f963882dab15b9e185c8fdf4cf4a054fbc344da27ef290c7f1051",
+      "public_sha256": "884178c674aa4e93cb65ace3aecbda33b7fdafda8aef4ac28be27bd38e1dc994",
+      "original_bytes": 1183,
+      "public_bytes": 968,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n250.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n250.json",
+      "original_sha256": "fd8ca93edbc2a657c2321737700c76df7705428bc206ad65958726a76a4db6ac",
+      "public_sha256": "62adb605986eeb2cd4603bb3b78e3e9e613c00d74dfb44329ec9ca3e080f3c9c",
+      "original_bytes": 1184,
+      "public_bytes": 969,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n50.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n50.json",
+      "original_sha256": "ae2d1619cf9b1d93f5411b8ff9eb61eb0506f337c332a68c6caa219b839ac09e",
+      "public_sha256": "a0af000ce6145add59971adfd14e598bfeeff18cb32c1fc0f427c8ec543cb4c2",
+      "original_bytes": 1179,
+      "public_bytes": 964,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n500.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-f16-adjusted-n500.json",
+      "original_sha256": "829d8409280352194d0d0466a6f5d2fb328c002421e3322559762558b653a3f1",
+      "public_sha256": "0ea7b034339eb7cfb1ca83b1c02252eacd4f9aa76d0bd79e25b5585c4e229e09",
+      "original_bytes": 1184,
+      "public_bytes": 969,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-preflight-f16-4096.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-preflight-f16-4096.json",
+      "original_sha256": "23b601cdd360b0d61dbc2d114ca197d459e090b1c226285d2f0c7337216363f4",
+      "public_sha256": "9a2f4f530fbccb104c63ce2c4f485674e73cebef0ad8878f70097205f9b6c23a",
+      "original_bytes": 1212,
+      "public_bytes": 997,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-q8-32768-admission-only.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-q8-32768-admission-only.json",
+      "original_sha256": "0f7e26f4f8b38d4ff7843c5cae5c9ab26231511b27c695b0c36e08bd5786fafa",
+      "public_sha256": "9d8782369a066c7b7b3fe3b1191dca8dd7235a72012c8bad8c25ef89db99b299",
+      "original_bytes": 1229,
+      "public_bytes": 1014,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/mistral-7b-instruct-v03-q4km-q8-adjusted-n500.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/mistral-7b-instruct-v03-q4km-q8-adjusted-n500.json",
+      "original_sha256": "b667061c756083aede88d0b9bf1fe93a1d517207e133c5c69ef7e1432c353972",
+      "public_sha256": "7b85d33cf8766b514d1cc7b02166911da0ab98e4e7c775413461a7ce83e9a105",
+      "original_bytes": 1182,
+      "public_bytes": 967,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-f16-adjusted-n100.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-f16-adjusted-n100.json",
+      "original_sha256": "7600ff384613aeac9eb1d22c5fe4968cabfabf6efa3c5d71f095531aba0fd6da",
+      "public_sha256": "6f8a40170572379bff824cf26b6688e62d682f03de0be6ee1eb99adf8a256c3c",
+      "original_bytes": 913,
+      "public_bytes": 698,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-f16-adjusted-n250.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-f16-adjusted-n250.json",
+      "original_sha256": "93998ede0949ee0f9da003e69b5609f8da994545e2e41db8231ad2d6949c1656",
+      "public_sha256": "f2e9fa22fbc461a5cc58cf0ce96cbb02dd5909a8f4ad741ef13dd54367a3f6a3",
+      "original_bytes": 914,
+      "public_bytes": 699,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-f16-adjusted-n50.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-f16-adjusted-n50.json",
+      "original_sha256": "86c32d634731ff7ccda2c99f763a7198e08088387e146b39b68de907131d7b03",
+      "public_sha256": "c9faa56699607a4bf096e9487058b1856d2cf0dec685a602493bf753ec5ede3a",
+      "original_bytes": 909,
+      "public_bytes": 694,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-f16-adjusted-n500.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-f16-adjusted-n500.json",
+      "original_sha256": "ad2d5902bfc6de4166be8c78068d9fb99cab93b3fc83642d696725634cd1f1c6",
+      "public_sha256": "616d85533f41cb6434bc6a32c04b6e6569c36a7a38c680ea526154f2151b0067",
+      "original_bytes": 914,
+      "public_bytes": 699,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-preflight-f16-4096.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-preflight-f16-4096.json",
+      "original_sha256": "3fe2f5bba4dfcd90ea78e077e2ffa1b3da71925baa0c749b3412ea879e7cc648",
+      "public_sha256": "6fd45c2c41b14609bc78914a2aa6abcb21306678a959113f096c75ccc219949e",
+      "original_bytes": 942,
+      "public_bytes": 727,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-q8-32768-admission-only.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-q8-32768-admission-only.json",
+      "original_sha256": "3e68df484713e6fd392b0484e4cc8a8ed9bff9f3723f38de8dd29867c0c71a9a",
+      "public_sha256": "b1cacdd97a95b55fbf5c374fb86341d5c53f091dc6901ced83e8b76bd6c48134",
+      "original_bytes": 959,
+      "public_bytes": 744,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/configs/qwen3-8b-q4km-q8-adjusted-n500.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/configs/qwen3-8b-q4km-q8-adjusted-n500.json",
+      "original_sha256": "7085862ae51101a2b56e40336ec1d54ba4b69ee6da569c7e0911731346b54d66",
+      "public_sha256": "bb8d66a8a96ca123bd729a0d6faa854c09fb3f191e6f36b100d297879675fd2d",
+      "original_bytes": 912,
+      "public_bytes": 697,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/bench-v3-changes.diff",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/bench-v3-changes.diff",
+      "original_sha256": "8ad94d712ee9a62668ffb0d26b942f3e3776dd4ea7724883dde6dd48b212ed2f",
+      "public_sha256": "8ad94d712ee9a62668ffb0d26b942f3e3776dd4ea7724883dde6dd48b212ed2f",
+      "original_bytes": 9106,
+      "public_bytes": 9106,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/candidate-comparison.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/candidate-comparison.json",
+      "original_sha256": "d31a0ef53a2a7eb243fa2d2f7f7ed9bed09e7ef5be53e50204928240d588f958",
+      "public_sha256": "d31a0ef53a2a7eb243fa2d2f7f7ed9bed09e7ef5be53e50204928240d588f958",
+      "original_bytes": 113,
+      "public_bytes": 113,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/final-summary.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/final-summary.json",
+      "original_sha256": "7184cfba0eba7d67c378f5c2162179ded25717a47c21b625633e6fcc56fd6019",
+      "public_sha256": "7184cfba0eba7d67c378f5c2162179ded25717a47c21b625633e6fcc56fd6019",
+      "original_bytes": 6548,
+      "public_bytes": 6548,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-token-preflight.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/mistral-7b-instruct-v03-q4km-token-preflight.json",
+      "original_sha256": "658b739cd045a5a64cbff84c39c61cec9041cff910b4833ff58b13e1875a1bef",
+      "public_sha256": "658b739cd045a5a64cbff84c39c61cec9041cff910b4833ff58b13e1875a1bef",
+      "original_bytes": 31845,
+      "public_bytes": 31845,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/profile-plan.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/profile-plan.json",
+      "original_sha256": "8906f892084285b4e744fc39630c93d25ff992e679fd12754b5324f7cb22e2f2",
+      "public_sha256": "42fdd2767795b1492cb2086460f9c251962d8a885948f7a2f5e67aed8e521d3b",
+      "original_bytes": 574,
+      "public_bytes": 495,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/profile-review.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/profile-review.json",
+      "original_sha256": "40d985645437325a44380855f0ab6f4bf31a905eec72e12b015d8f068c095fe9",
+      "public_sha256": "40d985645437325a44380855f0ab6f4bf31a905eec72e12b015d8f068c095fe9",
+      "original_bytes": 19379,
+      "public_bytes": 19379,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/profile-status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/profile-status.json",
+      "original_sha256": "e0799ee4c045a9c7ec9c89d4e45ed5c027a94defe1c82e78505c63637e8b7feb",
+      "public_sha256": "e0799ee4c045a9c7ec9c89d4e45ed5c027a94defe1c82e78505c63637e8b7feb",
+      "original_bytes": 8032,
+      "public_bytes": 8032,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-token-preflight.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/qwen3-8b-q4km-token-preflight.json",
+      "original_sha256": "f3f3599f37deb4cd63b881a67c6fe5add6dd2164d92964df09ea68b1e232ef35",
+      "public_sha256": "f3f3599f37deb4cd63b881a67c6fe5add6dd2164d92964df09ea68b1e232ef35",
+      "original_bytes": 31845,
+      "public_bytes": 31845,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/runtime-kv-support.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/runtime-kv-support.json",
+      "original_sha256": "1dc1c5317551a073d8145d4a2f8b84fa6aaab001adeb743c05235c261557582e",
+      "public_sha256": "1dc1c5317551a073d8145d4a2f8b84fa6aaab001adeb743c05235c261557582e",
+      "original_bytes": 4038,
+      "public_bytes": 4038,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/evidence/shared-code-comparison.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/evidence/shared-code-comparison.json",
+      "original_sha256": "762873823deb57c8cc4279c334e2f472daf757312d0081a2970c0d1b4a7f628f",
+      "public_sha256": "762873823deb57c8cc4279c334e2f472daf757312d0081a2970c0d1b4a7f628f",
+      "original_bytes": 1420,
+      "public_bytes": 1420,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/inspect_gguf.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/inspect_gguf.py",
+      "original_sha256": "210505ec17ebdf4874a4862cc544fa622883860e8047451572d7ee1f87b2dc7a",
+      "public_sha256": "210505ec17ebdf4874a4862cc544fa622883860e8047451572d7ee1f87b2dc7a",
+      "original_bytes": 1630,
+      "public_bytes": 1630,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/oauth_chatgpt.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/oauth_chatgpt.py",
+      "original_sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8",
+      "public_sha256": "723a7fe7c78f3ba59283daa3df89d994f43e98d8aaad5f661bf52018b1ccbcd8",
+      "original_bytes": 21123,
+      "public_bytes": 21123,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/package_profiles.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/package_profiles.py",
+      "original_sha256": "3cd4d7b630869b796da08db7c446564c0cc6bcee55e690334f3682cfb76f05da",
+      "public_sha256": "3cd4d7b630869b796da08db7c446564c0cc6bcee55e690334f3682cfb76f05da",
+      "original_bytes": 6363,
+      "public_bytes": 6363,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/PROFILE_REPORT.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/PROFILE_REPORT.md",
+      "original_sha256": "c75df02924b936acda05c7ed0130af16963da0c6437feab600c40543328c1c5f",
+      "public_sha256": "b3eeea0d5a8aa950c2432cdd9bd145937c1c21893e3bb4bac317e75b4bd8ed46",
+      "original_bytes": 8348,
+      "public_bytes": 8417,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/details.csv",
+      "original_sha256": "8f0ce08029ff3c09ee8f9a55550bf01e7de0e4e4bb973b9383e2368ca36a84af",
+      "public_sha256": "8f0ce08029ff3c09ee8f9a55550bf01e7de0e4e4bb973b9383e2368ca36a84af",
+      "original_bytes": 12732,
+      "public_bytes": 12732,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/manifest.json",
+      "original_sha256": "adabc21eb0308857685a45ac6b97efa835c520d4125a77f2159a6def5ba98349",
+      "public_sha256": "d8e0301ee1d03fb2972ff500c5fcd3f5fbe8dd8e40eb8d436112de516ed7c2a7",
+      "original_bytes": 101906,
+      "public_bytes": 101690,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/notes.md",
+      "original_sha256": "a9c2f8e0d9784c42fa7cde49cb100cc194f4cebaf7d8ef516cc6699c7e87c209",
+      "public_sha256": "a9c2f8e0d9784c42fa7cde49cb100cc194f4cebaf7d8ef516cc6699c7e87c209",
+      "original_bytes": 787,
+      "public_bytes": 787,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/state.sqlite3",
+      "original_sha256": "e719cb9db4f5a59036497b3c91cc902bfca7ca8dbfc3131147b94410f59cf351",
+      "public_sha256": "daba4c95fbb12bfbd46adb4b4f216037d2f31223cea9ecc2e2a21460823d5977",
+      "original_bytes": 57344,
+      "public_bytes": 57344,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/status.json",
+      "original_sha256": "39d67aee1ded7c5afa7be15e29fdb67274ee023ea65e9af6157eb73e379f6a16",
+      "public_sha256": "39d67aee1ded7c5afa7be15e29fdb67274ee023ea65e9af6157eb73e379f6a16",
+      "original_bytes": 224,
+      "public_bytes": 224,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/details.csv",
+      "original_sha256": "e44536f49cb4592c80e7401ecbee45354b74f1bc03d4006246b9b866bc4b1850",
+      "public_sha256": "e44536f49cb4592c80e7401ecbee45354b74f1bc03d4006246b9b866bc4b1850",
+      "original_bytes": 13479,
+      "public_bytes": 13479,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/manifest.json",
+      "original_sha256": "dea56d80d391df7989ad2a9397d6f29b63cf834eb5f14c7b6968518b4c34dec8",
+      "public_sha256": "220c7f0d470acfb636b30d38e51491463869d522c6e677ad74049b2a05e59c14",
+      "original_bytes": 245907,
+      "public_bytes": 245691,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/notes.md",
+      "original_sha256": "853d9ec52b0a0215d4c02c8de49f6b141867e63fc95394496044d694e0b011b8",
+      "public_sha256": "853d9ec52b0a0215d4c02c8de49f6b141867e63fc95394496044d694e0b011b8",
+      "original_bytes": 788,
+      "public_bytes": 788,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/state.sqlite3",
+      "original_sha256": "da3931a4842c000b471fa717c3e1973afb681d8e2a581cf695c671018e610f95",
+      "public_sha256": "053de72b4825828738602593ad7939d543c6d3e6c190b937b9e0f1436c788f71",
+      "original_bytes": 57344,
+      "public_bytes": 57344,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/status.json",
+      "original_sha256": "65f5e081c653dfeb5a748e2b2a08d6b24d63d360d0168a6dbda5b2c23ebfb407",
+      "public_sha256": "65f5e081c653dfeb5a748e2b2a08d6b24d63d360d0168a6dbda5b2c23ebfb407",
+      "original_bytes": 224,
+      "public_bytes": 224,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/details.csv",
+      "original_sha256": "f19af5e04c691cbd4e76dc7414ecd2eca5d06724ebbdb9508598384993598ee5",
+      "public_sha256": "f19af5e04c691cbd4e76dc7414ecd2eca5d06724ebbdb9508598384993598ee5",
+      "original_bytes": 15040,
+      "public_bytes": 15040,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/manifest.json",
+      "original_sha256": "a4744e78aaa47eb4dc9a417b986e8adf9e8b98cecded083f5a3eb3bbfda4f1d0",
+      "public_sha256": "6778631ec1037531d4c2523eeafebe550a2a605a7d3c68b74ae64b1e47f4728b",
+      "original_bytes": 53882,
+      "public_bytes": 53666,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/notes.md",
+      "original_sha256": "621faeb3e72eb40228d38001f57afd2ee68e5cd84a1880a88e3fe896abb1034b",
+      "public_sha256": "621faeb3e72eb40228d38001f57afd2ee68e5cd84a1880a88e3fe896abb1034b",
+      "original_bytes": 786,
+      "public_bytes": 786,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/state.sqlite3",
+      "original_sha256": "eb11a96742889dfdf68e6bda36c1ca0f67ba7140c1ed364e6d3ea508b16cdb46",
+      "public_sha256": "db0eb9862b5830ba179184ae11c0d34b6aeafa89f2646b4bf03847340ff306cd",
+      "original_bytes": 61440,
+      "public_bytes": 61440,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/status.json",
+      "original_sha256": "39a407dc2c3b17fa32ab61119760f73d53c2d4d34fd4ecfff080ba12a2016d58",
+      "public_sha256": "39a407dc2c3b17fa32ab61119760f73d53c2d4d34fd4ecfff080ba12a2016d58",
+      "original_bytes": 223,
+      "public_bytes": 223,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/details.csv",
+      "original_sha256": "c7a5e9c2e09b149775ba39730d8dae9d77cf22d83e7e996f2821b4b02fa1b297",
+      "public_sha256": "c7a5e9c2e09b149775ba39730d8dae9d77cf22d83e7e996f2821b4b02fa1b297",
+      "original_bytes": 18494,
+      "public_bytes": 18494,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/manifest.json",
+      "original_sha256": "af5ba482612f9a57f9a5411fef1d856557b8ab50f7af2480232c3c13c3da1816",
+      "public_sha256": "e277f0d47fc7a1eecdd8af762d842a8720c6b43849ab52eab1acd84b39b487f9",
+      "original_bytes": 485907,
+      "public_bytes": 485691,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/notes.md",
+      "original_sha256": "7f937d8206de91c4c2bf11f6b1c80e258ac36dc09abd35ae3c4d778294940a11",
+      "public_sha256": "7f937d8206de91c4c2bf11f6b1c80e258ac36dc09abd35ae3c4d778294940a11",
+      "original_bytes": 788,
+      "public_bytes": 788,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/state.sqlite3",
+      "original_sha256": "5e919cb879f378c991d2fc375040c3f22d57726a2a1504464b23b4c8744d23b5",
+      "public_sha256": "52886d62a64e64654678f8367fb15f37d1f5d16d68507d3d9edc919b71487029",
+      "original_bytes": 65536,
+      "public_bytes": 61440,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/status.json",
+      "original_sha256": "d47c44fb76a871aeda627b867f9c9e2a6e870a3ec2a7cae378316360c369626c",
+      "public_sha256": "d47c44fb76a871aeda627b867f9c9e2a6e870a3ec2a7cae378316360c369626c",
+      "original_bytes": 224,
+      "public_bytes": 224,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/details.csv",
+      "original_sha256": "a87cefd6ab66f483dc787f953ba457cbb7e0451aadcf866eb5cec281c880339d",
+      "public_sha256": "a87cefd6ab66f483dc787f953ba457cbb7e0451aadcf866eb5cec281c880339d",
+      "original_bytes": 18586,
+      "public_bytes": 18586,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/manifest.json",
+      "original_sha256": "bb4626631276a482a6ba55f449de3a44a14a87814dc77d21b1b8849a54c6c363",
+      "public_sha256": "4f6296209ae390d38b5547528b2726316b97e661646258139264985abd4e267e",
+      "original_bytes": 485906,
+      "public_bytes": 485690,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/notes.md",
+      "original_sha256": "ac38328eb789b2335023fe70502f4c5a2171d4c901580860570e19cccea223b2",
+      "public_sha256": "ac38328eb789b2335023fe70502f4c5a2171d4c901580860570e19cccea223b2",
+      "original_bytes": 789,
+      "public_bytes": 789,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/state.sqlite3",
+      "original_sha256": "c1e4c9341e5f1487ab8b7781d36e4baa2bd4d46cb7ab19147a4580dd9c8e6bf7",
+      "public_sha256": "3ad5722eed71d0414a1fb290c30d5ff7b7ed3b9c3993d0403d2d3fb00e058ff7",
+      "original_bytes": 65536,
+      "public_bytes": 65536,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/status.json",
+      "original_sha256": "53468b77f5d3f064357e0edbee3eb4bde113aa0437194d3a47ca94358c94dcb4",
+      "public_sha256": "53468b77f5d3f064357e0edbee3eb4bde113aa0437194d3a47ca94358c94dcb4",
+      "original_bytes": 223,
+      "public_bytes": 223,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n100/details.csv",
+      "original_sha256": "8dc6b4de0eac3947c9c9117d3d710c41fcc4edcd665e287f7304be796d0c983d",
+      "public_sha256": "8dc6b4de0eac3947c9c9117d3d710c41fcc4edcd665e287f7304be796d0c983d",
+      "original_bytes": 7516,
+      "public_bytes": 7516,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n100/manifest.json",
+      "original_sha256": "95a3a846b08c5cef4071e60b52c941e55a422cc98ed3aaa2f44de57512c1468d",
+      "public_sha256": "a64e41f3c7e505501eda561f8239418baeb2b65d708d8a8e186e7c9f4960d80e",
+      "original_bytes": 101589,
+      "public_bytes": 101373,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n100/notes.md",
+      "original_sha256": "ad434634179efbb3a5c398553cd53f1be3188376aec211716e7d14dd2acc7958",
+      "public_sha256": "ad434634179efbb3a5c398553cd53f1be3188376aec211716e7d14dd2acc7958",
+      "original_bytes": 742,
+      "public_bytes": 742,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n100/state.sqlite3",
+      "original_sha256": "0340a7a1183534d356b149377b703d0d322d29d8b194cae3e62f92036275ebef",
+      "public_sha256": "af570fd5846e658088f0d6f3c456e8deb867737faa77134545176dc963ad6620",
+      "original_bytes": 57344,
+      "public_bytes": 45056,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n100/status.json",
+      "original_sha256": "96766bd0d059981e5ea1b025406206f210f0f7dd5c42bc982f23ebd2ca8883b4",
+      "public_sha256": "96766bd0d059981e5ea1b025406206f210f0f7dd5c42bc982f23ebd2ca8883b4",
+      "original_bytes": 209,
+      "public_bytes": 209,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n250/details.csv",
+      "original_sha256": "f4100d4685cf04211a519b6188f53b7bde8e058f87104bcb5dce9285e86d416c",
+      "public_sha256": "f4100d4685cf04211a519b6188f53b7bde8e058f87104bcb5dce9285e86d416c",
+      "original_bytes": 7326,
+      "public_bytes": 7326,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n250/manifest.json",
+      "original_sha256": "c9b238a94bb5e189fe0ad2de1c6cb4728699c43d09829932989b62c409d84fc9",
+      "public_sha256": "0c32337e209b8591fc4ef0148c8d74b2107441b2608164bdc4056f28cfa591f1",
+      "original_bytes": 245590,
+      "public_bytes": 245374,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n250/notes.md",
+      "original_sha256": "41570e5a401c79103e6b7be8803310b3ac24ae18aff1ab961cce90d0b9edd12c",
+      "public_sha256": "41570e5a401c79103e6b7be8803310b3ac24ae18aff1ab961cce90d0b9edd12c",
+      "original_bytes": 743,
+      "public_bytes": 743,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n250/state.sqlite3",
+      "original_sha256": "945ec4ea36c314dc8571eefe7cd8fe7b061e572bdb49a0ce228a68c10fb0893f",
+      "public_sha256": "10fafe62fdff6dfc7c26c56d74505519fee69a2ed2a56684ae727b3183daf77b",
+      "original_bytes": 57344,
+      "public_bytes": 45056,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n250/status.json",
+      "original_sha256": "9bbe255cb8634a8457c018f5e6a724e9c928dd9b0f4005ac91d8b71bd291c287",
+      "public_sha256": "9bbe255cb8634a8457c018f5e6a724e9c928dd9b0f4005ac91d8b71bd291c287",
+      "original_bytes": 209,
+      "public_bytes": 209,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n50/details.csv",
+      "original_sha256": "704b95381a290a67b18b2ca06c72a513cd1307f940d68f3972e61cb9a1727639",
+      "public_sha256": "704b95381a290a67b18b2ca06c72a513cd1307f940d68f3972e61cb9a1727639",
+      "original_bytes": 7312,
+      "public_bytes": 7312,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n50/manifest.json",
+      "original_sha256": "fbaa382177f2f7ad0d2e829000ae1d288225bed3e4f7335e475b90cd1c0af954",
+      "public_sha256": "3ab518e3bf44e4addae807f58535fd271c7b30e71bb0af5337ccd4149325ec65",
+      "original_bytes": 53565,
+      "public_bytes": 53349,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n50/notes.md",
+      "original_sha256": "a8807a465479a5d904c803feaee3067b29ab6aa34da38139c7c0e9e796750434",
+      "public_sha256": "a8807a465479a5d904c803feaee3067b29ab6aa34da38139c7c0e9e796750434",
+      "original_bytes": 741,
+      "public_bytes": 741,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n50/state.sqlite3",
+      "original_sha256": "27ff88365eb4b0b6bd04ef9ff4ea8e2188ae4130460f2c6fba6aadaac3a77646",
+      "public_sha256": "078b0e2dd39a062c95f76de759bcf2916c7f3de3be0f2310fbd77e7838e4bcda",
+      "original_bytes": 57344,
+      "public_bytes": 45056,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n50/status.json",
+      "original_sha256": "3062d8bedadac6a5db4fa5cd626bb32528632d0219d523f4d62a04d03c5b0ca6",
+      "public_sha256": "3062d8bedadac6a5db4fa5cd626bb32528632d0219d523f4d62a04d03c5b0ca6",
+      "original_bytes": 208,
+      "public_bytes": 208,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n500/details.csv",
+      "original_sha256": "6926aa04bd973f155892b0c7b761a32e8b57bf1a6ff5d838273502832eba6550",
+      "public_sha256": "6926aa04bd973f155892b0c7b761a32e8b57bf1a6ff5d838273502832eba6550",
+      "original_bytes": 7943,
+      "public_bytes": 7943,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n500/manifest.json",
+      "original_sha256": "a96a3f65296a33110e82f5171a1e3c86c11813591c26192e41ab548d74244b12",
+      "public_sha256": "8a7a340896d61623fd17092c45eb5503efcdce345aa3e2cdde9bfb04076f33ef",
+      "original_bytes": 485590,
+      "public_bytes": 485374,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n500/notes.md",
+      "original_sha256": "36c7f5568655d2e19ce18db0d3378c1387fbb6b13daca34fe83f0f2f389e723d",
+      "public_sha256": "36c7f5568655d2e19ce18db0d3378c1387fbb6b13daca34fe83f0f2f389e723d",
+      "original_bytes": 743,
+      "public_bytes": 743,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n500/state.sqlite3",
+      "original_sha256": "e8d8b56203494701cfebe4583d8d88206f1200332b2826111aab82bf6b603554",
+      "public_sha256": "56432f70b5bac72895c013e1d71dc1ff509da93f53dfb74ac904422ac780a738",
+      "original_bytes": 57344,
+      "public_bytes": 49152,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-f16-adjusted-n500/status.json",
+      "original_sha256": "57edf00851778522b2d6388b5323fa3bf6e6b406261302dd215f3ce57de82606",
+      "public_sha256": "57edf00851778522b2d6388b5323fa3bf6e6b406261302dd215f3ce57de82606",
+      "original_bytes": 209,
+      "public_bytes": 209,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/details.csv",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-q8-adjusted-n500/details.csv",
+      "original_sha256": "f2c71990e97117b29d691e40465552f4507e34a563abcdb947f71e0c45eebe29",
+      "public_sha256": "f2c71990e97117b29d691e40465552f4507e34a563abcdb947f71e0c45eebe29",
+      "original_bytes": 8667,
+      "public_bytes": 8667,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/manifest.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-q8-adjusted-n500/manifest.json",
+      "original_sha256": "30be716ef7501a5a96071bba4132f2cf003c365e0a078bf5b18d151a51031c8b",
+      "public_sha256": "0ae404b7c49001fbb089daa093f1e78fe177c2701f384d41f86b73c5a5170b58",
+      "original_bytes": 485589,
+      "public_bytes": 485373,
+      "transformation": "remove local paths/process or response identifiers"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/notes.md",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-q8-adjusted-n500/notes.md",
+      "original_sha256": "8ecf7dd132ecefd219548201d07efb033a0f82cbdce4b121d7d6579da6e89656",
+      "public_sha256": "8ecf7dd132ecefd219548201d07efb033a0f82cbdce4b121d7d6579da6e89656",
+      "original_bytes": 744,
+      "public_bytes": 744,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/state.sqlite3",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-q8-adjusted-n500/state.sqlite3",
+      "original_sha256": "dcf7fa529367b0e017724f2f915e5430ac616ed5c345dd436d33b709a576b5ba",
+      "public_sha256": "99ea2d7f479c75736b675812d80d308a813ae436ae02cdda90f75db0585540ee",
+      "original_bytes": 61440,
+      "public_bytes": 45056,
+      "transformation": "rebuild standalone SQLite from committed snapshot; row_json byte-identical; sanitize audits; replace resume fingerprint; VACUUM; no WAL/SHM",
+      "trial_intents": 20,
+      "recorded_rows": 20,
+      "changed_audits": 20
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/status.json",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/results/qwen3-8b-q4km-q8-adjusted-n500/status.json",
+      "original_sha256": "b1a499bd213edb74bb5e4bdf872d8f873ef54674922439fcda15360783c0c239",
+      "public_sha256": "b1a499bd213edb74bb5e4bdf872d8f873ef54674922439fcda15360783c0c239",
+      "original_bytes": 208,
+      "public_bytes": 208,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/review_profiles.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/review_profiles.py",
+      "original_sha256": "5c24184e4b8352faa6b50795e38950aaf0bf0b25b34cb8d9d1a6b34742c70171",
+      "public_sha256": "5c24184e4b8352faa6b50795e38950aaf0bf0b25b34cb8d9d1a6b34742c70171",
+      "original_bytes": 16135,
+      "public_bytes": 16135,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/run_profiles.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/run_profiles.py",
+      "original_sha256": "55e906fee111aaaf2f203ce24a0a754780310016fa6419b4d0e25adb1297ce36",
+      "public_sha256": "3178e5c39d7ec775fa1bb3d0b04752e3f8b9726040209104372886e43350b23d",
+      "original_bytes": 9806,
+      "public_bytes": 9788,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/sample_wddm_memory.ps1",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/sample_wddm_memory.ps1",
+      "original_sha256": "86011dc8b584a1ca13f53f3bb1fde97da02164f16cb3f3e20771913b1de53d2d",
+      "public_sha256": "86011dc8b584a1ca13f53f3bb1fde97da02164f16cb3f3e20771913b1de53d2d",
+      "original_bytes": 855,
+      "public_bytes": 855,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/Start-ProfileServer.ps1",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/Start-ProfileServer.ps1",
+      "original_sha256": "6525c43f1822ac265cd0f682a75e58b1738353b620765bae7cbb14d4f4f9ec4e",
+      "public_sha256": "6525c43f1822ac265cd0f682a75e58b1738353b620765bae7cbb14d4f4f9ec4e",
+      "original_bytes": 10983,
+      "public_bytes": 10983,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/stop_owned.ps1",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/stop_owned.ps1",
+      "original_sha256": "8b1eb9c178447e85922c4aa6cc97a2c30d3f28a2d9a8eb34f2a23ca04ba1f434",
+      "public_sha256": "8b1eb9c178447e85922c4aa6cc97a2c30d3f28a2d9a8eb34f2a23ca04ba1f434",
+      "original_bytes": 247,
+      "public_bytes": 247,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/tests/test_profile_gate.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/tests/test_profile_gate.py",
+      "original_sha256": "c219ac15d19554a29613dfda62476e82068ce37bfde907ae2100633a6f155e6d",
+      "public_sha256": "c219ac15d19554a29613dfda62476e82068ce37bfde907ae2100633a6f155e6d",
+      "original_bytes": 1460,
+      "public_bytes": 1460,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/watch_profiles.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/watch_profiles.py",
+      "original_sha256": "38d68ef54bf5025d9747dc697e97a375aad41b2143ec663ccfcd2e88cf0cf0f3",
+      "public_sha256": "38d68ef54bf5025d9747dc697e97a375aad41b2143ec663ccfcd2e88cf0cf0f3",
+      "original_bytes": 1806,
+      "public_bytes": 1806,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/bench_profiles_v3.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/source-measured/bench_profiles_v3.py",
+      "original_sha256": "e3d9589d3902db616a84a080a86726b2314e549fc1a6e9ecaf6bc84e6b2d2031",
+      "public_sha256": "e3d9589d3902db616a84a080a86726b2314e549fc1a6e9ecaf6bc84e6b2d2031",
+      "original_bytes": 34356,
+      "public_bytes": 34356,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/Start-ProfileServer.ps1",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/source-measured/Start-ProfileServer.ps1",
+      "original_sha256": "6525c43f1822ac265cd0f682a75e58b1738353b620765bae7cbb14d4f4f9ec4e",
+      "public_sha256": "6525c43f1822ac265cd0f682a75e58b1738353b620765bae7cbb14d4f4f9ec4e",
+      "original_bytes": 10983,
+      "public_bytes": 10983,
+      "transformation": "byte-identical"
+    },
+    {
+      "source_archive": "local",
+      "source_entry": "profile-benchmark/run_profiles.py",
+      "destination": "experiments/benchmarks/skill-discovery-local-native-20261103/profiles-v3/source-measured/run_profiles.py",
+      "original_sha256": "55e906fee111aaaf2f203ce24a0a754780310016fa6419b4d0e25adb1297ce36",
+      "public_sha256": "55e906fee111aaaf2f203ce24a0a754780310016fa6419b4d0e25adb1297ce36",
+      "original_bytes": 9806,
+      "public_bytes": 9806,
+      "transformation": "byte-identical"
+    }
+  ],
+  "exclusions": [
+    {
+      "source_entry": "profile-benchmark/.gitignore",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/ACCESS_LLAMA_GEMMA.md",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/baseline-delivery-reference.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/baseline-preservation-after.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/baseline-preservation-before.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/cleanup-status.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/live-status.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n100-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n100-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n250-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n250-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n50-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n50-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n500-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-f16-adjusted-n500-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-preflight-f16-4096-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-q8-32768-admission-only-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-q8-adjusted-n500-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/mistral-7b-instruct-v03-q4km-q8-adjusted-n500-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/profile-gate-tests.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/profiles-console.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n100-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n100-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n250-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n250-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n50-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n50-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n500-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-f16-adjusted-n500-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-preflight-f16-4096-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-q8-32768-admission-only-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-q8-adjusted-n500-benchmark.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/qwen3-8b-q4km-q8-adjusted-n500-launcher.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/evidence/wddm-telemetry.jsonl",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/README.md",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n100/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n250/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n50/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-f16-adjusted-n500/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/state.sqlite3-shm",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/results/qwen3-8b-q4km-q8-adjusted-n500/state.sqlite3-wal",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n100/launch-20261103T105254681-dedc0289/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n250/launch-20261103T105647276-f8c8732c/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n50/launch-20261103T105018668-f8fc074b/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-f16-adjusted-n500/launch-20261103T110314209-dd4bd0d8/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-preflight-f16-4096/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-preflight-f16-4096/launch-20261103T104919239-99468482/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-preflight-f16-4096/launch-20261103T104919239-99468482/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-preflight-f16-4096/launch-20261103T104919239-99468482/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-preflight-f16-4096/launch-20261103T104919239-99468482/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/launch-20261103T104954343-bb2a5104/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/launch-20261103T104954343-bb2a5104/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/launch-20261103T104954343-bb2a5104/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/launch-20261103T104954343-bb2a5104/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-32768-admission-only/launch-20261103T104954343-bb2a5104/wddm-admission-only.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/mistral-7b-instruct-v03-q4km-q8-adjusted-n500/launch-20261103T111550340-bdded3c8/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n100/launch-20261103T101210584-5b0e9750/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n250/launch-20261103T101635063-b6008d4a/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n50/launch-20261103T100837998-a3184f4d/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-f16-adjusted-n500/launch-20261103T102313595-65bc6e63/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-preflight-f16-4096/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-preflight-f16-4096/launch-20261103T100728015-e4aa4285/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-preflight-f16-4096/launch-20261103T100728015-e4aa4285/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-preflight-f16-4096/launch-20261103T100728015-e4aa4285/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-preflight-f16-4096/launch-20261103T100728015-e4aa4285/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/launch-20261103T100810076-8417c412/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/launch-20261103T100810076-8417c412/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/launch-20261103T100810076-8417c412/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/launch-20261103T100810076-8417c412/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-32768-admission-only/launch-20261103T100810076-8417c412/wddm-admission-only.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/gpu-proof.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/owned-process.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/server.stderr.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/server.stdout.log",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/wddm-after-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/runtime/qwen3-8b-q4km-q8-adjusted-n500/launch-20261103T103507660-004b58cd/wddm-before-generation.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    },
+    {
+      "source_entry": "profile-benchmark/ARCHIVE_CONTENTS.json",
+      "reason": "unneeded log/runtime/process/temporary sidecar, access instructions closed by user, or redundant inventory; private raw archive never read"
+    }
+  ],
+  "adaptations": [
+    "Paths portable and personal/process identifiers removed.",
+    "Standalone nonresumable SQLite audit exports; row_json unchanged.",
+    "Minimal dataset checksum accepted; prompts identical.",
+    "Llama/Gemma access steps replaced by explicit user closure."
+  ]
+}

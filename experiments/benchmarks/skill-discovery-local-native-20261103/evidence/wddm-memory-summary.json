@@ -1,0 +1,174 @@
+{
+  "models": [
+    {
+      "model": "ornith-1.5-9b-q4km-native-v2",
+      "sample_count": 14,
+      "first_utc": "2026-11-03T07:28:19.4867592Z",
+      "last_utc": "2026-11-03T07:38:33.2904676Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 98.0,
+          "max": 98.0
+        },
+        "dedicated usage": {
+          "min": 6036.9375,
+          "max": 6036.9375
+        },
+        "non local usage": {
+          "min": 98.0,
+          "max": 98.0
+        },
+        "local usage": {
+          "min": 6036.9375,
+          "max": 6036.9375
+        },
+        "total committed": {
+          "min": 6134.9375,
+          "max": 6134.9375
+        }
+      }
+    },
+    {
+      "model": "nemotron-3.5-bolt-e4b-q4km-native-v2",
+      "sample_count": 23,
+      "first_utc": "2026-11-03T07:40:05.6405051Z",
+      "last_utc": "2026-11-03T07:57:26.0362510Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 100.0,
+          "max": 100.0
+        },
+        "dedicated usage": {
+          "min": 3844.92578125,
+          "max": 3846.92578125
+        },
+        "non local usage": {
+          "min": 100.0,
+          "max": 100.0
+        },
+        "local usage": {
+          "min": 3844.92578125,
+          "max": 3846.92578125
+        },
+        "total committed": {
+          "min": 3944.92578125,
+          "max": 3946.92578125
+        }
+      }
+    },
+    {
+      "model": "ternary-bonsai-2-9b-q2-native-v2",
+      "sample_count": 26,
+      "first_utc": "2026-11-03T07:58:13.3616749Z",
+      "last_utc": "2026-11-03T08:17:54.4337653Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 98.0,
+          "max": 98.0
+        },
+        "dedicated usage": {
+          "min": 3426.91796875,
+          "max": 3460.91796875
+        },
+        "non local usage": {
+          "min": 98.0,
+          "max": 98.0
+        },
+        "local usage": {
+          "min": 3426.91796875,
+          "max": 3460.91796875
+        },
+        "total committed": {
+          "min": 3524.91796875,
+          "max": 3558.91796875
+        }
+      }
+    },
+    {
+      "model": "lfm3-omni-2b-q4km-native-v2",
+      "sample_count": 5,
+      "first_utc": "2026-11-03T08:19:26.6644697Z",
+      "last_utc": "2026-11-03T08:22:35.7108947Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 94.0,
+          "max": 94.0
+        },
+        "dedicated usage": {
+          "min": 1564.8984375,
+          "max": 1564.8984375
+        },
+        "non local usage": {
+          "min": 94.0,
+          "max": 94.0
+        },
+        "local usage": {
+          "min": 1564.8984375,
+          "max": 1564.8984375
+        },
+        "total committed": {
+          "min": 1658.8984375,
+          "max": 1658.8984375
+        }
+      }
+    },
+    {
+      "model": "phi-4-mini-instruct-q4km-native-v2",
+      "sample_count": 14,
+      "first_utc": "2026-11-03T08:23:22.9464869Z",
+      "last_utc": "2026-11-03T08:33:36.7082639Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 96.0,
+          "max": 96.0
+        },
+        "dedicated usage": {
+          "min": 6598.9375,
+          "max": 6600.9375
+        },
+        "non local usage": {
+          "min": 96.0,
+          "max": 96.0
+        },
+        "local usage": {
+          "min": 6598.9375,
+          "max": 6600.9375
+        },
+        "total committed": {
+          "min": 6694.9375,
+          "max": 6696.9375
+        }
+      }
+    },
+    {
+      "model": "nanbeige4.2-3b-q4km-native-v2",
+      "sample_count": 98,
+      "first_utc": "2026-11-03T08:34:24.0705743Z",
+      "last_utc": "2026-11-03T09:50:43.5730620Z",
+      "mib_ranges": {
+        "shared usage": {
+          "min": 150.0,
+          "max": 150.0
+        },
+        "dedicated usage": {
+          "min": 7897.0546875,
+          "max": 7901.0546875
+        },
+        "non local usage": {
+          "min": 150.0,
+          "max": 150.0
+        },
+        "local usage": {
+          "min": 7897.0546875,
+          "max": 7901.0546875
+        },
+        "total committed": {
+          "min": 8047.0546875,
+          "max": 8051.0546875
+        }
+      }
+    }
+  ],
+  "scope": "Sampling began during Ornith, not for earlier models or startup-rejected models. PID/start/executable verified before each sample.",
+  "interpretation": "Dedicated/shared/non-local/local/committed WDDM process counters are reported directly. Shared memory can include host allocations and driver staging; nonzero shared usage alone neither proves transformer CPU offload nor identifies which CUDA buffer was paged. Sampling is not a complete residency trace."
+}
