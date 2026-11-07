@@ -1,0 +1,244 @@
+{
+  "created": "2026-11-05T23:59:38.349389",
+  "provider": "openrouter",
+  "models": [
+    "deepseek/deepseek-v4-flash-0731",
+    "moonshotai/kimi-k2.5",
+    "qwen/qwen3.8-flash",
+    "openai/gpt-6-luna",
+    "openai/gpt-6.1-terra",
+    "google/gemini-2.5-flash",
+    "anthropic/claude-sonnet-5.5",
+    "moonshotai/kimi-k3.1-pro",
+    "deepseek/deepseek-v4.1-flash-1017"
+  ],
+  "library_sizes": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000
+  ],
+  "num_queries": 20,
+  "seed": 42,
+  "top_k": 10,
+  "delay": 1.0,
+  "dataset": "dataset_skills/test.jsonl",
+  "desc_max_chars": 1024,
+  "runs": [
+    {
+      "started": "2026-11-05T23:59:38.791701",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:50",
+        "deepseek/deepseek-v4-flash-0731:100",
+        "deepseek/deepseek-v4-flash-0731:250",
+        "deepseek/deepseek-v4-flash-0731:500",
+        "deepseek/deepseek-v4-flash-0731:1000",
+        "deepseek/deepseek-v4-flash-0731:2000",
+        "deepseek/deepseek-v4-flash-0731:5000"
+      ],
+      "combos_done": 7,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T00:04:51.024827"
+    },
+    {
+      "started": "2026-11-06T00:31:04.521370",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:50",
+        "moonshotai/kimi-k2.5:100",
+        "moonshotai/kimi-k2.5:250",
+        "moonshotai/kimi-k2.5:500",
+        "moonshotai/kimi-k2.5:1000",
+        "moonshotai/kimi-k2.5:2000",
+        "moonshotai/kimi-k2.5:5000"
+      ],
+      "combos_done": 8,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T02:15:04.660245"
+    },
+    {
+      "started": "2026-11-06T06:33:30.806869",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "qwen/qwen3.8-flash:50",
+        "qwen/qwen3.8-flash:100",
+        "qwen/qwen3.8-flash:250",
+        "qwen/qwen3.8-flash:500",
+        "qwen/qwen3.8-flash:1000",
+        "qwen/qwen3.8-flash:2000",
+        "qwen/qwen3.8-flash:5000"
+      ],
+      "combos_done": 9,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T06:43:11.594229"
+    },
+    {
+      "started": "2026-11-06T06:46:55.568298",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "openai/gpt-6-luna:50",
+        "openai/gpt-6-luna:100",
+        "openai/gpt-6-luna:250",
+        "openai/gpt-6-luna:500",
+        "openai/gpt-6-luna:1000",
+        "openai/gpt-6-luna:2000",
+        "openai/gpt-6-luna:5000"
+      ],
+      "combos_done": 9,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T06:53:15.672401"
+    },
+    {
+      "started": "2026-11-06T07:13:16.728608",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "openai/gpt-6.1-terra:50",
+        "openai/gpt-6.1-terra:100",
+        "openai/gpt-6.1-terra:250",
+        "openai/gpt-6.1-terra:500",
+        "openai/gpt-6.1-terra:1000",
+        "openai/gpt-6.1-terra:2000",
+        "openai/gpt-6.1-terra:5000"
+      ],
+      "combos_done": 9,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T07:20:27.695570"
+    },
+    {
+      "started": "2026-11-06T14:03:56.550673",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "google/gemini-2.5-flash:50",
+        "google/gemini-2.5-flash:100",
+        "google/gemini-2.5-flash:250",
+        "google/gemini-2.5-flash:500",
+        "google/gemini-2.5-flash:1000",
+        "google/gemini-2.5-flash:2000",
+        "google/gemini-2.5-flash:5000"
+      ],
+      "combos_done": 9,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T14:09:13.293666"
+    },
+    {
+      "started": "2026-11-06T14:39:11.539338",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "anthropic/claude-sonnet-5.5:50",
+        "anthropic/claude-sonnet-5.5:100",
+        "anthropic/claude-sonnet-5.5:250",
+        "anthropic/claude-sonnet-5.5:500",
+        "anthropic/claude-sonnet-5.5:1000",
+        "anthropic/claude-sonnet-5.5:2000",
+        "anthropic/claude-sonnet-5.5:5000"
+      ],
+      "combos_done": 6,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T14:44:08.312950"
+    },
+    {
+      "started": "2026-11-06T14:50:08.618441",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "anthropic/claude-sonnet-5.5:5000"
+      ],
+      "combos_done": 2,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T14:51:19.203629"
+    },
+    {
+      "started": "2026-11-06T14:57:00.507698",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000"
+      ],
+      "combos_done": 2,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T14:57:00.517764"
+    },
+    {
+      "started": "2026-11-06T14:59:39.270203",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "anthropic/claude-sonnet-5.5:2000"
+      ],
+      "combos_done": 2,
+      "stop_reason": "completed",
+      "finished": "2026-11-06T15:00:09.064443"
+    },
+    {
+      "started": "2026-11-07T16:28:47.457195",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "moonshotai/kimi-k3.1-pro:50",
+        "moonshotai/kimi-k3.1-pro:100",
+        "moonshotai/kimi-k3.1-pro:250",
+        "moonshotai/kimi-k3.1-pro:500",
+        "moonshotai/kimi-k3.1-pro:1000",
+        "moonshotai/kimi-k3.1-pro:2000",
+        "moonshotai/kimi-k3.1-pro:5000"
+      ],
+      "combos_done": 6,
+      "stop_reason": "completed",
+      "finished": "2026-11-07T16:49:59.073566"
+    },
+    {
+      "started": "2026-11-07T16:53:17.289812",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000",
+        "moonshotai/kimi-k3.1-pro:1000",
+        "moonshotai/kimi-k3.1-pro:2000",
+        "moonshotai/kimi-k3.1-pro:5000"
+      ],
+      "combos_done": 4,
+      "stop_reason": "completed",
+      "finished": "2026-11-07T17:12:41.839940"
+    },
+    {
+      "started": "2026-11-07T17:30:55.405927",
+      "combos_attempted": [
+        "deepseek/deepseek-v4-flash-0731:5000",
+        "moonshotai/kimi-k2.5:5000"
+      ],
+      "combos_done": 2,
+      "stop_reason": "completed",
+      "finished": "2026-11-07T17:30:55.415470"
+    },
+    {
+      "started": "2026-11-07T17:40:42.165061",
+      "combos_attempted": [
+        "moonshotai/kimi-k3.1-pro:5000"
+      ],
+      "combos_done": 1,
+      "stop_reason": "completed",
+      "finished": "2026-11-07T17:47:10.840292"
+    },
+    {
+      "started": "2026-11-07T17:48:01.378539",
+      "combos_attempted": [
+        "deepseek/deepseek-v4.1-flash-1017:50",
+        "deepseek/deepseek-v4.1-flash-1017:100",
+        "deepseek/deepseek-v4.1-flash-1017:250",
+        "deepseek/deepseek-v4.1-flash-1017:500",
+        "deepseek/deepseek-v4.1-flash-1017:1000",
+        "deepseek/deepseek-v4.1-flash-1017:2000",
+        "deepseek/deepseek-v4.1-flash-1017:5000"
+      ],
+      "combos_done": 7,
+      "stop_reason": "completed",
+      "finished": "2026-11-07T17:53:54.517934"
+    }
+  ]
+}

@@ -1,0 +1,3282 @@
+{
+  "run_info": {
+    "provider": "openrouter",
+    "method": "listing_multi_model",
+    "top_k": 10,
+    "models": [
+      "deepseek/deepseek-v4-flash-0731",
+      "moonshotai/kimi-k2.5",
+      "qwen/qwen3.8-flash",
+      "openai/gpt-6-luna",
+      "openai/gpt-6.1-terra",
+      "google/gemini-2.5-flash",
+      "anthropic/claude-sonnet-5.5",
+      "moonshotai/kimi-k3.1-pro",
+      "deepseek/deepseek-v4.1-flash-1017"
+    ],
+    "num_queries": 20,
+    "seed": 42,
+    "library_sizes": [
+      50,
+      100,
+      250,
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "delay_s": 1.0,
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "desc_max_chars": 1024,
+    "model_context_windows": {
+      "deepseek/deepseek-v4-flash-0731": 163840,
+      "moonshotai/kimi-k2.5": 262144,
+      "qwen/qwen3.8-flash": 1000000,
+      "openai/gpt-6-luna": 1050000,
+      "openai/gpt-6.1-terra": 1050000,
+      "google/gemini-2.5-flash": 1048576,
+      "anthropic/claude-sonnet-5.5": 1000000,
+      "moonshotai/kimi-k3.1-pro": 1048576,
+      "deepseek/deepseek-v4.1-flash-1017": 1048576
+    },
+    "completion": "60/63",
+    "completed_combos": [
+      [
+        "anthropic/claude-sonnet-5.5",
+        50
+      ],
+      [
+        "anthropic/claude-sonnet-5.5",
+        100
+      ],
+      [
+        "anthropic/claude-sonnet-5.5",
+        250
+      ],
+      [
+        "anthropic/claude-sonnet-5.5",
+        500
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        50
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        100
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        250
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        500
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        1000
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        2000
+      ],
+      [
+        "deepseek/deepseek-v4-flash-0731",
+        5000
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        50
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        100
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        250
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        500
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        1000
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        2000
+      ],
+      [
+        "deepseek/deepseek-v4.1-flash-1017",
+        5000
+      ],
+      [
+        "google/gemini-2.5-flash",
+        50
+      ],
+      [
+        "google/gemini-2.5-flash",
+        100
+      ],
+      [
+        "google/gemini-2.5-flash",
+        250
+      ],
+      [
+        "google/gemini-2.5-flash",
+        500
+      ],
+      [
+        "google/gemini-2.5-flash",
+        1000
+      ],
+      [
+        "google/gemini-2.5-flash",
+        2000
+      ],
+      [
+        "google/gemini-2.5-flash",
+        5000
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        50
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        100
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        250
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        500
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        1000
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        2000
+      ],
+      [
+        "moonshotai/kimi-k2.5",
+        5000
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        50
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        100
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        250
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        500
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        1000
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        2000
+      ],
+      [
+        "moonshotai/kimi-k3.1-pro",
+        5000
+      ],
+      [
+        "openai/gpt-6-luna",
+        50
+      ],
+      [
+        "openai/gpt-6-luna",
+        100
+      ],
+      [
+        "openai/gpt-6-luna",
+        250
+      ],
+      [
+        "openai/gpt-6-luna",
+        500
+      ],
+      [
+        "openai/gpt-6-luna",
+        1000
+      ],
+      [
+        "openai/gpt-6-luna",
+        2000
+      ],
+      [
+        "openai/gpt-6-luna",
+        5000
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        50
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        100
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        250
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        500
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        1000
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        2000
+      ],
+      [
+        "openai/gpt-6.1-terra",
+        5000
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        50
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        100
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        250
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        500
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        1000
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        2000
+      ],
+      [
+        "qwen/qwen3.8-flash",
+        5000
+      ]
+    ],
+    "total_est_cost_usd": 35.1409,
+    "runs": [
+      {
+        "started": "2026-11-05T23:59:38.791701",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:50",
+          "deepseek/deepseek-v4-flash-0731:100",
+          "deepseek/deepseek-v4-flash-0731:250",
+          "deepseek/deepseek-v4-flash-0731:500",
+          "deepseek/deepseek-v4-flash-0731:1000",
+          "deepseek/deepseek-v4-flash-0731:2000",
+          "deepseek/deepseek-v4-flash-0731:5000"
+        ],
+        "combos_done": 7,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T00:04:51.024827"
+      },
+      {
+        "started": "2026-11-06T00:31:04.521370",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:50",
+          "moonshotai/kimi-k2.5:100",
+          "moonshotai/kimi-k2.5:250",
+          "moonshotai/kimi-k2.5:500",
+          "moonshotai/kimi-k2.5:1000",
+          "moonshotai/kimi-k2.5:2000",
+          "moonshotai/kimi-k2.5:5000"
+        ],
+        "combos_done": 8,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T02:15:04.660245"
+      },
+      {
+        "started": "2026-11-06T06:33:30.806869",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "qwen/qwen3.8-flash:50",
+          "qwen/qwen3.8-flash:100",
+          "qwen/qwen3.8-flash:250",
+          "qwen/qwen3.8-flash:500",
+          "qwen/qwen3.8-flash:1000",
+          "qwen/qwen3.8-flash:2000",
+          "qwen/qwen3.8-flash:5000"
+        ],
+        "combos_done": 9,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T06:43:11.594229"
+      },
+      {
+        "started": "2026-11-06T06:46:55.568298",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "openai/gpt-6-luna:50",
+          "openai/gpt-6-luna:100",
+          "openai/gpt-6-luna:250",
+          "openai/gpt-6-luna:500",
+          "openai/gpt-6-luna:1000",
+          "openai/gpt-6-luna:2000",
+          "openai/gpt-6-luna:5000"
+        ],
+        "combos_done": 9,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T06:53:15.672401"
+      },
+      {
+        "started": "2026-11-06T07:13:16.728608",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "openai/gpt-6.1-terra:50",
+          "openai/gpt-6.1-terra:100",
+          "openai/gpt-6.1-terra:250",
+          "openai/gpt-6.1-terra:500",
+          "openai/gpt-6.1-terra:1000",
+          "openai/gpt-6.1-terra:2000",
+          "openai/gpt-6.1-terra:5000"
+        ],
+        "combos_done": 9,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T07:20:27.695570"
+      },
+      {
+        "started": "2026-11-06T14:03:56.550673",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "google/gemini-2.5-flash:50",
+          "google/gemini-2.5-flash:100",
+          "google/gemini-2.5-flash:250",
+          "google/gemini-2.5-flash:500",
+          "google/gemini-2.5-flash:1000",
+          "google/gemini-2.5-flash:2000",
+          "google/gemini-2.5-flash:5000"
+        ],
+        "combos_done": 9,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T14:09:13.293666"
+      },
+      {
+        "started": "2026-11-06T14:39:11.539338",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "anthropic/claude-sonnet-5.5:50",
+          "anthropic/claude-sonnet-5.5:100",
+          "anthropic/claude-sonnet-5.5:250",
+          "anthropic/claude-sonnet-5.5:500",
+          "anthropic/claude-sonnet-5.5:1000",
+          "anthropic/claude-sonnet-5.5:2000",
+          "anthropic/claude-sonnet-5.5:5000"
+        ],
+        "combos_done": 6,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T14:44:08.312950"
+      },
+      {
+        "started": "2026-11-06T14:50:08.618441",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "anthropic/claude-sonnet-5.5:5000"
+        ],
+        "combos_done": 2,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T14:51:19.203629"
+      },
+      {
+        "started": "2026-11-06T14:57:00.507698",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000"
+        ],
+        "combos_done": 2,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T14:57:00.517764"
+      },
+      {
+        "started": "2026-11-06T14:59:39.270203",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "anthropic/claude-sonnet-5.5:2000"
+        ],
+        "combos_done": 2,
+        "stop_reason": "completed",
+        "finished": "2026-11-06T15:00:09.064443"
+      },
+      {
+        "started": "2026-11-07T16:28:47.457195",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "moonshotai/kimi-k3.1-pro:50",
+          "moonshotai/kimi-k3.1-pro:100",
+          "moonshotai/kimi-k3.1-pro:250",
+          "moonshotai/kimi-k3.1-pro:500",
+          "moonshotai/kimi-k3.1-pro:1000",
+          "moonshotai/kimi-k3.1-pro:2000",
+          "moonshotai/kimi-k3.1-pro:5000"
+        ],
+        "combos_done": 6,
+        "stop_reason": "completed",
+        "finished": "2026-11-07T16:49:59.073566"
+      },
+      {
+        "started": "2026-11-07T16:53:17.289812",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000",
+          "moonshotai/kimi-k3.1-pro:1000",
+          "moonshotai/kimi-k3.1-pro:2000",
+          "moonshotai/kimi-k3.1-pro:5000"
+        ],
+        "combos_done": 4,
+        "stop_reason": "completed",
+        "finished": "2026-11-07T17:12:41.839940"
+      },
+      {
+        "started": "2026-11-07T17:30:55.405927",
+        "combos_attempted": [
+          "deepseek/deepseek-v4-flash-0731:5000",
+          "moonshotai/kimi-k2.5:5000"
+        ],
+        "combos_done": 2,
+        "stop_reason": "completed",
+        "finished": "2026-11-07T17:30:55.415470"
+      },
+      {
+        "started": "2026-11-07T17:40:42.165061",
+        "combos_attempted": [
+          "moonshotai/kimi-k3.1-pro:5000"
+        ],
+        "combos_done": 1,
+        "stop_reason": "completed",
+        "finished": "2026-11-07T17:47:10.840292"
+      },
+      {
+        "started": "2026-11-07T17:48:01.378539",
+        "combos_attempted": [
+          "deepseek/deepseek-v4.1-flash-1017:50",
+          "deepseek/deepseek-v4.1-flash-1017:100",
+          "deepseek/deepseek-v4.1-flash-1017:250",
+          "deepseek/deepseek-v4.1-flash-1017:500",
+          "deepseek/deepseek-v4.1-flash-1017:1000",
+          "deepseek/deepseek-v4.1-flash-1017:2000",
+          "deepseek/deepseek-v4.1-flash-1017:5000"
+        ],
+        "combos_done": 7,
+        "stop_reason": "completed",
+        "finished": "2026-11-07T17:53:54.517934"
+      }
+    ]
+  },
+  "per_model_size": [
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 1000,
+      "num_queries": 13,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8461538461538461,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0769
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 2000,
+      "num_queries": 6,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8333333333333334,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1667
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "model_display": "Claude Sonnet 5.5",
+      "library_size": 5000,
+      "num_queries": 5,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.2
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.15
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.4
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "model_display": "DeepSeek V4 Flash",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.0,
+        "precision": 0,
+        "recall": 0,
+        "f1_score": 0,
+        "macro_f1": 0,
+        "micro_f1": 0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 1.0,
+        "error_rate": 0.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.15
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_display": "DeepSeek V4.1 Flash",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.55,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.15
+      }
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "model_display": "Gemini 2.5 Flash",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.55,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.2
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "model_display": "Kimi K2.5",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.0,
+        "precision": 0,
+        "recall": 0,
+        "f1_score": 0,
+        "macro_f1": 0,
+        "micro_f1": 0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 1.0,
+        "error_rate": 0.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.25
+      }
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "model_display": "GPT-6 Luna",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.2
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "model_display": "GPT-6.1 Terra",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 50,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 100,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 250,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.0
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 500,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.1
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 1000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.05
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 2000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.25
+      }
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "model_display": "Qwen 3.8 Flash",
+      "library_size": 5000,
+      "num_queries": 20,
+      "num_valid": 0,
+      "selection_quality": {
+        "exact_set_accuracy": 0.65,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "macro_f1": 0,
+        "micro_f1": 1.0
+      },
+      "retrieval_quality": {},
+      "efficiency": {
+        "avg_input_tokens": 0,
+        "avg_output_tokens": 0,
+        "avg_total_tokens": 0,
+        "avg_llm_latency_s": 0,
+        "avg_e2e_latency_s": 0,
+        "avg_cost_per_query_usd": 0,
+        "total_cost_usd": 0
+      },
+      "reliability": {
+        "valid_output_rate": 0.0,
+        "context_overflow_rate": 0.0,
+        "error_rate": 1.0,
+        "rate_limit_rate": 0.0,
+        "invalid_skill_id_rate": 0.2
+      }
+    }
+  ],
+  "summary_table": [
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 50,
+      "exact_match": 0.9,
+      "fuzzy_match": 0.9,
+      "avg_latency": 1.2031,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 1.6059,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 250,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 1.61025,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 500,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 1.57325,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 1000,
+      "exact_match": 0.8461538462,
+      "fuzzy_match": 0.8461538462,
+      "avg_latency": 1.9064615385,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 13,
+      "total_queries": 13,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 2000,
+      "exact_match": 0.8333333333,
+      "fuzzy_match": 0.8333333333,
+      "avg_latency": 3.9545,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 6,
+      "total_queries": 6,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "library_size": 5000,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 8.3968,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 5,
+      "total_queries": 5,
+      "model_display": "Claude Sonnet 5.5"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 50,
+      "exact_match": 0.9,
+      "fuzzy_match": 0.9,
+      "avg_latency": 0.7749,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 0.7225,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 250,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 1.0465,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 500,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 1.6858,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 1000,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 1.9111,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 2000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 3.7393,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "library_size": 5000,
+      "exact_match": 0.0,
+      "fuzzy_match": 0.0,
+      "avg_latency": 0.0,
+      "context_limited": 20,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 50,
+      "exact_match": 0.9,
+      "fuzzy_match": 0.9,
+      "avg_latency": 0.71255,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 0.9022,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 250,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 0.90605,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 500,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 1.34815,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 1000,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 1.43475,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 2000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 2.1723,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "library_size": 5000,
+      "exact_match": 0.55,
+      "fuzzy_match": 0.55,
+      "avg_latency": 3.4828,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "DeepSeek V4.1 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 50,
+      "exact_match": 0.9,
+      "fuzzy_match": 0.9,
+      "avg_latency": 0.7316,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 0.76525,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 250,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 0.8754,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 500,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 0.9961,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 1000,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 1.14895,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 2000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 2.12385,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "library_size": 5000,
+      "exact_match": 0.55,
+      "fuzzy_match": 0.55,
+      "avg_latency": 2.50205,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Gemini 2.5 Flash"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 50,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 61.15085,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 100,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 63.9007,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 250,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 38.6629,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 500,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 46.0113,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 1000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 42.26455,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 2000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 54.2525,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k2.5",
+      "library_size": 5000,
+      "exact_match": 0.0,
+      "fuzzy_match": 0.0,
+      "avg_latency": 0.0,
+      "context_limited": 20,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K2.5"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 50,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 8.73665,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 10.69705,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 250,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 11.88505,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 500,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 14.0393,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 1000,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 17.33505,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 2000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 25.4191,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "library_size": 5000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 31.01775,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Kimi K3.1 Pro"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 50,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 1.29755,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 1.58715,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 250,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 1.66355,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 500,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 1.62445,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 1000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 1.9374,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 2000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 1.7112,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "library_size": 5000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 2.4845,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6 Luna"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 50,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 1.3953,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 100,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 1.55655,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 250,
+      "exact_match": 0.7,
+      "fuzzy_match": 0.7,
+      "avg_latency": 1.90165,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 500,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 1.88245,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 1000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 2.13515,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 2000,
+      "exact_match": 0.6,
+      "fuzzy_match": 0.6,
+      "avg_latency": 2.52375,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "openai/gpt-6.1-terra",
+      "library_size": 5000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 3.4578,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "GPT-6.1 Terra"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 50,
+      "exact_match": 0.9,
+      "fuzzy_match": 0.9,
+      "avg_latency": 3.75235,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 100,
+      "exact_match": 0.85,
+      "fuzzy_match": 0.85,
+      "avg_latency": 3.15585,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 250,
+      "exact_match": 0.8,
+      "fuzzy_match": 0.8,
+      "avg_latency": 2.50465,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 500,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 3.0201,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 1000,
+      "exact_match": 0.75,
+      "fuzzy_match": 0.75,
+      "avg_latency": 2.40535,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 2000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 3.0973,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "library_size": 5000,
+      "exact_match": 0.65,
+      "fuzzy_match": 0.65,
+      "avg_latency": 4.40595,
+      "context_limited": 0,
+      "rate_limited": 0,
+      "errors": 20,
+      "total_queries": 20,
+      "model_display": "Qwen 3.8 Flash"
+    }
+  ]
+}
