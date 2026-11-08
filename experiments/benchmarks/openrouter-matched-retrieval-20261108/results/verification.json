@@ -1,0 +1,20 @@
+{
+  "tests": 11,
+  "passed": 11,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    "Pinned corpus/model/tokenizer hashes",
+    "Exact source AST library versus independent transcription at7 sizes",
+    "560 unique method-size-query rows",
+    "112 summary cells rescored from top20",
+    "Name-equivalent label treated as one target",
+    "No gold labels in560 unsent reranker plans",
+    "Reranker provenance/model/schema/duplicate/out-of-pool validation",
+    "Unknown reranker outcomes retain null metrics",
+    "Synthetic BM25 formula matches prior frozen core on4 fixtures"
+  ],
+  "paid_api_calls": 0,
+  "historical_evidence_modified": false,
+  "privacy_scan": "Integration staged-only Gitleaks 8.30.1 scan passed. Three matches were the independently verified SHA-256 of the pinned public tokenizer; the exact hash is excepted only in its three evidence paths. No credential exception was added."
+}

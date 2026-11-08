@@ -1,0 +1,56 @@
+{
+  "snapshot": "3fb7e66a1a219bc43d7c2057dca3d1c70a3c6c45",
+  "source_dataset": {
+    "repository": "ThakiCloud/SKILLRET",
+    "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+    "path": "data/skills/test.jsonl",
+    "sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "bytes": 117606037
+  },
+  "query_file": "benchmark_openrouter/tests_openrouter/test_queries.json",
+  "query_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b",
+  "builder_source": "benchmark_openrouter/benchmark_models_testplan_openrouter.py",
+  "builder_sha256": "6743c3e933d730bbe88073b102de47725114502795d5d66cbe2d46c72472d3c9",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "script_sha256": "e34da291f2b155804840836b14d8423c99d57b08aaeba8e29faf844588d40c19",
+  "seed": 42,
+  "sizes": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000
+  ],
+  "top_k": [
+    5,
+    10
+  ],
+  "data_exposure": "20 synthetic single-target tasks; not official held-out query panel",
+  "comparison_status": "new internally matched reconstructed-input panel; historical prompt equivalence conditional",
+  "historical_identity_gaps": [
+    "benchmark_models.py imported loader/cleaner missing",
+    "Original hosted run has no dataset hash or ordered catalog/prompt hash",
+    "Pinned official corpus matches other preserved source receipts; does not prove historical loading semantics"
+  ],
+  "document_view": "name | whitespace-normalized description[:1024]; same field/cap but unavailable historical cleaner not claimed identical",
+  "tie_break": "descending score then UUID; original candidate order retained in manifests, not used as relevance tie-break",
+  "domain_supplement": "nearest normalized mean document-embedding category centroid; constructed within each catalog; no gold labels or query outcomes used; not original LLM-routed domain_vector",
+  "original_domain_vector_status": "not_run: exact original query router outputs and local router runtime absent",
+  "hybrid": "equal RRF60 on BM25 top100 and vector top100; top100 result retained; no tuning",
+  "gold_name_records_preserved": 26,
+  "nonunique_gold_names": {
+    "swift-testing": 3,
+    "run-tests": 2,
+    "create-pr": 4
+  },
+  "label_contracts": [
+    "uuid_single_target",
+    "name_equivalent_single_target"
+  ],
+  "name_scoring": "First occurrence of any ID with gold_skill name is one target; duplicates never add recall credit",
+  "new_api_calls": 0,
+  "new_api_cost_usd": 0
+}

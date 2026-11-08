@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "base_commit": "3fb7e66a1a219bc43d7c2057dca3d1c70a3c6c45",
+  "summary_sha256": "781bca05ab60a00f1e866459e1b72e68c3bb6b5d8b740eb1d0b9f923bfd8782f",
+  "config_sha256": "2263387781d31bd6cf31817879e3cf99aea4cfdcf02c7b2fc44d74e943a37aac",
+  "common_summary_sha256": "755bb24530d20b7224f7e4d2a2b0141e35df4f642452f3bfdf0f453ef170c5e5",
+  "primary_cohort": "no_reported_invalid",
+  "sensitivity_cohort": "retained_ranking",
+  "format": "16:9 PNG and editable-text SVG",
+  "figures": [
+    {
+      "name": "01_accuracy_by_size",
+      "png": "01_accuracy_by_size.png",
+      "svg": "01_accuracy_by_size.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "36281e979204db8b97e3e176ea9317f194ff94aeb842757d1597942f6e2a5831",
+      "svg_sha256": "20a3a93ef6c4f201434b06e68efe6a5a652154cc7789a0bf9ffc18df36bba10a"
+    },
+    {
+      "name": "02_recall_ndcg_at5",
+      "png": "02_recall_ndcg_at5.png",
+      "svg": "02_recall_ndcg_at5.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "6d80b436bb3340172633ecbf4fb61edc413f5d77131420da1357efd828199b03",
+      "svg_sha256": "e19da3e25398b8b6932c2d2532787d158988d14508be22488fe862f58d998860"
+    },
+    {
+      "name": "04_quality_estimated_cost",
+      "png": "04_quality_estimated_cost.png",
+      "svg": "04_quality_estimated_cost.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "1e91b7126cc3803410b26368f22ddc8bf2ddac9eee7c785f3146d4b9073e1e91",
+      "svg_sha256": "4a64b47253edcb5a9f29ce53b85f82f620cab9ba74512fb5b4d270cba78385f8"
+    },
+    {
+      "name": "05_latency_median_p95",
+      "png": "05_latency_median_p95.png",
+      "svg": "05_latency_median_p95.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "03c29ae709e1bb27dec884d8066bcf836f48b7105e17d6ee31889746cc56ed31",
+      "svg_sha256": "ccf074bd480565a1b515c9d3ff9cb637c94ea8c06cab603bd0048f432fd8999e"
+    },
+    {
+      "name": "06_coverage_grid",
+      "png": "06_coverage_grid.png",
+      "svg": "06_coverage_grid.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "49896c1f5ffb8d57c73532997cc42d88cecf44bd67e8cf73868728beb6e84f96",
+      "svg_sha256": "40392c40449f027c80f41a65abfd08470c986a253c7bef3fa59cac4faed13fbc"
+    },
+    {
+      "name": "07_ranking_quality_k5_k10",
+      "png": "07_ranking_quality_k5_k10.png",
+      "svg": "07_ranking_quality_k5_k10.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "e2bd52e8f76663f068104fac0fbfa389244f7790dc1ef88749ce9e2ea1036b80",
+      "svg_sha256": "9fcf87ee717997d94a5a574676be49b377ec8fe239f5c2d2e6b8d1cecd55dc73"
+    },
+    {
+      "name": "03a_matched_recall5",
+      "png": "03a_matched_recall5.png",
+      "svg": "03a_matched_recall5.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "999de592ecef8689e5edbbb774cffe6e1c9bd94d8d40fcd5cdf28bfdeee03bd1",
+      "svg_sha256": "eaa6e9232cab3a638e81f220795e6d8a74a4a1135f97dc3221319b765c411684"
+    },
+    {
+      "name": "03b_matched_ndcg5",
+      "png": "03b_matched_ndcg5.png",
+      "svg": "03b_matched_ndcg5.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "2616a0398948f38946316d90a665291217e1aae653718fb7a29f60774664415a",
+      "svg_sha256": "fde27805a04222f13ad48a64d130c6fc43d46d57618ed159755c6d13488f79f9"
+    },
+    {
+      "name": "08_jev_evidence_gap",
+      "png": "08_jev_evidence_gap.png",
+      "svg": "08_jev_evidence_gap.svg",
+      "width_px": 1920,
+      "height_px": 1080,
+      "png_sha256": "e324b6323a2935652f2470bd27d93181d0d7541e9ef6c6d609f8d60c5922d53c",
+      "svg_sha256": "a1b8d71d36e3027019e5d9e87bb7ceae3d8196474ccd656734315717920f4b56"
+    }
+  ],
+  "comparison_sources": {
+    "retrieval_metrics_sha256": "634d91b43e7cb6c3d019b3b8f6c6f7be39a0ec3f1847def932533a5d623afd0e",
+    "retrieval_provenance_sha256": "d12b3d147cae73d1336c31dac93c4d66e4358c93b069ec794825f4e7bbf9fa02",
+    "prompt_rows_sha256": "5c529276467f45bed15145271c0f78194eb4eaf2b9d67f3fbdc78c1f36846ea5",
+    "jev_audit_sha256": "a8a7850e4c4617f52c89f765a11b4be34ad9c2e3b82765eabc78c7ea44dbc9d8"
+  },
+  "notes": [
+    "No raw-order reconstruction is claimed.",
+    "Missing measures remain absent, never zero.",
+    "Plot sources are independent audit outputs, not historical report aggregates."
+  ]
+}

@@ -7,6 +7,20 @@ requests retrieve and select agent skills. Start with the
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
 
+## Nine-model OpenRouter audit (8 November 2026)
+
+The [audited prompt-results report](experiments/benchmarks/openrouter-prompt-audit-20261108/results/REPORT.md)
+recomputes all saved rankings from commit `3fb7e66`: 1,184 completed responses,
+40 preflight context exclusions and 36 absent cases across nine models.
+Raw data are unchanged. Seventy-two responses lack recoverable invalid-entry
+positions, so identifiable and parser-filtered views are separated, with
+paired question-cluster intervals. Recorded list-price estimates total
+US$35.140929; actual billed spend and cache savings are unverified.
+See [reproduction and figures](experiments/benchmarks/openrouter-prompt-audit-20261108/README.md)
+and the [conditional offline retrieval comparison](experiments/benchmarks/openrouter-matched-retrieval-20261108/README.md).
+No new paid calls were made. Results are exposed, single-gold and not a
+fair unqualified leaderboard across unequal coverage.
+
 ## Skill discovery listing studies (3 November 2026)
 
 [Compare measured accuracy and coverage](experiments/benchmarks/skill-discovery-local-native-20261103/COMPARISON.md):

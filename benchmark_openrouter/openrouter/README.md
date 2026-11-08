@@ -1,5 +1,7 @@
 # OpenRouter Benchmark
 
+> **Current audited results:** [nine-model report](../../experiments/benchmarks/openrouter-prompt-audit-20261108/results/REPORT.md) and [offline reproduction](../../experiments/benchmarks/openrouter-prompt-audit-20261108/README.md). The instructions below describe the historical paid runner. Its shared `benchmark_models.py` dependency and original dataset path are absent from this snapshot. Do not run the paid runner to reproduce the audit. The original report generator is historical; use the independent offline audit/plot scripts instead.
+
 Skill discovery benchmark using the [OpenRouter](https://openrouter.ai) API.
 Two scripts work together: a **runner** that sends queries to LLMs and
 accumulates results, and a **report generator** that produces plots and
@@ -50,7 +52,7 @@ python benchmark_models_testplan_openrouter.py tests_openrouter \
 
 Each `--models` call merges new models into the existing run config.
 Already-completed combos (model + library size) are skipped automatically.
-Previous results are never overwritten.
+Clean completed rows are normally retained; dirty rows may be removed during resume and `--rerun` explicitly replaces rows. The CSV is not an append-only attempt ledger.
 
 ```bash
 # Session 1
@@ -198,6 +200,8 @@ Find model specs and pricing at https://openrouter.ai/models.
 | Qwen 3.8 Flash | `qwen/qwen3.8-flash` | 1M | $0.15 | $0.47 |
 | GPT-6 Luna | `openai/gpt-6-luna` | 1M | $0.10 | $0.50 |
 | GPT-6.1 Terra | `openai/gpt-6.1-terra` | 1M | $1.00 | $5.00 |
+| Kimi K3.1 Pro | `moonshotai/kimi-k3.1-pro` | 1M | $0.40 | $7.88 |
+| DeepSeek V4.1 Flash | `deepseek/deepseek-v4.1-flash-1017` | 1M | $0.15 | $0.60 |
 | Gemini 2.5 Flash | `google/gemini-2.5-flash` | 1M | $0.30 | $2.50 |
 | Claude Sonnet 5.5 | `anthropic/claude-sonnet-5.5` | 1M | $2.00 | $10.00 |
 
@@ -222,19 +226,13 @@ tests_openrouter/
 
 ## Cost notes
 
-- **Prompt caching**: OpenRouter automatically caches repeated prompts.
-  Since all 20 queries per combo share the same system prompt (the skill
-  listing), 19 of 20 queries typically hit the cache. Observed cache hit
-  rate: ~84%, reducing actual costs to roughly 1/3 of the estimated price.
-
-- **Reasoning tokens**: Models with mandatory reasoning (e.g. Claude
-  Sonnet 5.5) bill thinking tokens as output tokens. This significantly
-  increases cost for large library sizes.
-
-- **Spending limits**: Set a limit on your OpenRouter API key to avoid
-  unexpected charges. The runner handles 402/403 limit errors gracefully
-  (marks them as errors in the CSV). Clean error rows and re-run to
-  resume after increasing the limit.
+The nine-model CSV contains US$35.140929 of list-price estimates, computed
+from its recorded token fields and the historical registry. Input tokens
+can include a fallback estimate. No invoice, raw billed-usage export,
+cache-token counts or complete retry ledger is included. Actual total spend,
+caching savings and reasoning-token billing are therefore **unverified**.
+The earlier US$17 and 83.9% cache-hit statements are not used by the audit.
+Model-specific historical list prices above are not verified current prices.
 
 ---
 

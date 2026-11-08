@@ -1,118 +1,62 @@
-# OpenRouter Benchmark Report
+# OpenRouter Benchmark Report: audited update
 
-**Date:** November 2026
-**Test parameters:** 20 queries per combo, 7 library sizes (N=50 to N=5000), seed=42
-**Descriptions:** Full (up to 1024 chars, not truncated)
+This replaces the stale seven-model narrative with the nine-model audit of
+commit `3fb7e66a1a219bc43d7c2057dca3d1c70a3c6c45`.
+Read the [full audited report](../../experiments/benchmarks/openrouter-prompt-audit-20261108/results/REPORT.md),
+[reproduction instructions and figures](../../experiments/benchmarks/openrouter-prompt-audit-20261108/README.md),
+and [conditional retrieval comparison](../../experiments/benchmarks/openrouter-matched-retrieval-20261108/README.md).
+The [historical report](../../experiments/benchmarks/openrouter-prompt-audit-20261108/source/historical_REPORT.md)
+is preserved separately. All original raw result files remain unchanged.
 
----
+## Independent count
 
-## Model Summary
+- Planned: 1,260 model × size × question cells, nine models, seven sizes, 20 repeated questions.
+- Retained CSV: 1,224 unique rows, no duplicate evaluation keys.
+- Completed: 1,184 error-free response records, including six empty parsed lists.
+- Not attempted due to estimated context: 40 placeholder rows, not measured quality zeros.
+- Missing: 36 Claude cases (7 at 1,000; 14 at 2,000; 15 at 5,000).
+- Invalid positions unavailable: 72 responses. No raw response bodies or original parser module were saved in this snapshot.
+- Recorded list-price estimates: **US$35.140929**. Actual billed spend: **unverified**.
 
-| Model | Context Limit | Sizes Completed | Avg Accuracy | Avg Latency | Queries | Est. Cost | Actual Cost | Savings |
-|-------|--------------|-----------------|-------------|-------------|---------|-----------|-------------|---------|
-| Qwen 3.8 Flash | 1,000,000 | 50-5000 (all 7) | 76.4% | 3.19s | 140 | $1.39 | $0.22 | 84% |
-| DeepSeek V4 Flash | 163,840 | 50-2000 (6 of 7) | 79.2%* | 1.65s | 140 | $0.79 | $0.22 | 72% |
-| Claude Sonnet 5.5 | 1,000,000 | 50-5000 (all 7)** | 81.7%** | 2.02s | 104 | $11.55 | $11.90 | -3% |
-| Gemini 2.5 Flash | 1,048,576 | 50-5000 (all 7) | 74.3% | 1.31s | 140 | $2.84 | $1.14 | 60% |
-| GPT-6 Luna | 1,050,000 | 50-5000 (all 7) | 72.1% | 1.76s | 140 | $0.88 | $0.14 | 84% |
-| GPT-6.1 Terra | 1,050,000 | 50-5000 (all 7) | 66.4% | 2.12s | 140 | $8.80 | $1.00 | 89% |
-| Kimi K2.5 | 262,144 | 50-2000 (6 of 7) | 71.7%* | 51.04s | 140 | $2.39 | $2.36 | 1% |
-| **Total** | | | | | **944** | **$28.65** | **$17.00** | **41%** |
+The saved per-query rank metrics reproduce arithmetically. The preserved
+metrics.json aggregates do not: all 63 cells claim zero valid responses and
+zero efficiency, with empty retrieval summaries; exact_set_accuracy is
+actually top-1. Corrected aggregates are provided separately in the audit. Original response-order
+metrics cannot be recovered by moving the separately stored invalid entries
+back into guessed positions. The audit separates the 1,112 no-reported-invalid
+responses from the 1,184-response parser-filtered sensitivity and conditional
+invalid-insertion bounds. Empty completed outputs are retrieval failures;
+unattempted and context-excluded cases remain NA.
 
-\* Accuracy computed over non-context-limited queries only. DeepSeek and Kimi hit their context limit at N=5000 (20 queries each auto-skipped).
-\*\* Claude Sonnet 5.5 has partial data: 20 queries for N=50-500, 13 for N=1000, 6 for N=2000, 5 for N=5000 (spending limit hit mid-run).
+## Nine-model summary
 
----
+Metrics below use the retained-ranking sensitivity for comparability with saved output. The identifiable subset size and its top-1 value are shown separately. Aggregate sizes differ, so this is **not a leaderboard**.
 
-## Estimated vs Actual Cost
+| Model | Completed/planned | No-invalid n | Top-1, retained | Top-1, no-invalid | Recall@5 | NDCG@5 | Median / p95 s | Est. US$ | Actual US$ |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| DeepSeek V4 Flash | 120/140 | 105 | 0.792 | 0.829 | 0.900 | 0.849 | 1.196 / 3.678 | 0.791199 | NA |
+| Kimi K2.5 | 120/140 | 115 | 0.717 | 0.722 | 0.833 | 0.780 | 31.244 / 144.774 | 2.391340 | NA |
+| Qwen 3.8 Flash | 140/140 | 126 | 0.764 | 0.770 | 0.864 | 0.813 | 1.985 / 7.370 | 1.394393 | NA |
+| GPT-6 Luna | 140/140 | 127 | 0.721 | 0.740 | 0.843 | 0.784 | 1.539 / 3.109 | 0.880663 | NA |
+| GPT-6.1 Terra | 140/140 | 138 | 0.664 | 0.667 | 0.814 | 0.740 | 1.981 / 3.402 | 8.796055 | NA |
+| Gemini 2.5 Flash | 140/140 | 131 | 0.743 | 0.748 | 0.843 | 0.794 | 0.964 / 2.971 | 2.840658 | NA |
+| Claude Sonnet 5.5 | 104/140 | 99 | 0.817 | 0.818 | 0.913 | 0.867 | 1.387 / 4.898 | 11.554796 | NA |
+| Kimi K3.1 Pro | 140/140 | 140 | 0.721 | 0.721 | 0.821 | 0.775 | 14.652 / 37.334 | 5.138800 | NA |
+| DeepSeek V4.1 Flash | 140/140 | 131 | 0.757 | 0.756 | 0.850 | 0.806 | 0.819 / 5.918 | 1.353025 | NA |
 
-The estimated cost is calculated by the runner script using list prices from the
-OpenRouter model registry (per 1M input/output tokens). The actual cost is what
-OpenRouter billed, as shown on the dashboard.
+## Scientific interpretation
 
-| Model | Input $/M | Output $/M | Est. Cost | Actual Cost | Ratio |
-|-------|-----------|------------|-----------|-------------|-------|
-| Qwen 3.8 Flash | $0.15 | $0.47 | $1.39 | $0.22 | 0.16x |
-| DeepSeek V4 Flash | $0.20 | $0.60 | $0.79 | $0.22 | 0.28x |
-| Gemini 2.5 Flash | $0.30 | $2.50 | $2.84 | $1.14 | 0.40x |
-| GPT-6 Luna | $0.10 | $0.50 | $0.88 | $0.14 | 0.16x |
-| GPT-6.1 Terra | $1.00 | $5.00 | $8.80 | $1.00 | 0.11x |
-| Kimi K2.5 | $0.49 | $2.50 | $2.39 | $2.36 | 0.99x |
-| Claude Sonnet 5.5 | $2.00 | $10.00 | $11.55 | $11.90 | 1.03x |
-| **Total** | | | **$28.65** | **$17.00** | **0.59x** |
+One gold label per question makes Recall, Hit and Completeness identical at
+each K; MAP equals MRR. Precision uses a fixed K denominator. Top-1 accuracy
+and exact-set match are different. Full K=1/3/5/10 metrics and exploratory
+95% paired query-cluster intervals are in the full report and CSVs.
+The same 20 questions recur across sizes: treating all rows as independent
+would overstate certainty. Compare matched cells, not unequal raw averages.
 
-### Why actual cost is lower than estimated
-
-**Prompt caching** is the primary factor. OpenRouter automatically caches
-repeated prompts. In this benchmark, all 20 queries per combo share the
-identical system prompt (the skill listing), so 19 of 20 queries hit the
-cache. The observed cache hit rate was **83.9%** across all models.
-
-Cached input tokens are billed at a fraction of the full price (typically
-1/10th). For a model like GPT-6.1 Terra ($1.00/M input, $0.05/M cached),
-this is a 20x reduction on ~95% of input tokens.
-
-**Exceptions:**
-- **Kimi K2.5** (ratio 0.99x): Minimal caching benefit. Kimi's high
-  latency (51s avg) suggests it processes each request fully.
-- **Claude Sonnet 5.5** (ratio 1.03x): Actual cost slightly *exceeded*
-  the estimate. Claude has mandatory reasoning ("thinking") tokens billed
-  as output at $10/M. The runner's estimate does not account for these
-  hidden output tokens.
-
----
-
-## Context Window Limitations
-
-| Model | Context Window | Max Viable N | N=5000 Status |
-|-------|---------------|-------------|---------------|
-| DeepSeek V4 Flash | 163,840 | ~2,000 | Context-limited (all 20 queries skipped) |
-| Kimi K2.5 | 262,144 | ~2,000 | Context-limited (all 20 queries skipped) |
-| Qwen 3.8 Flash | 1,000,000 | 5,000 | OK |
-| GPT-6 Luna | 1,050,000 | 5,000 | OK |
-| GPT-6.1 Terra | 1,050,000 | 5,000 | OK |
-| Gemini 2.5 Flash | 1,048,576 | 5,000 | OK |
-| Claude Sonnet 5.5 | 1,000,000 | 5,000 | OK (partial data) |
-
-At N=5000, the prompt contains ~305K tokens. Models with <300K context
-cannot process these queries.
-
----
-
-## Accuracy by Library Size
-
-| Library Size | DeepSeek | Gemini | Qwen | GPT-6 Luna | GPT-6.1 Terra | Kimi | Claude* |
-|-------------|----------|--------|------|------------|---------------|------|---------|
-| N=50 | 90.0% | 90.0% | 90.0% | 80.0% | 70.0% | 85.0% | 90.0% |
-| N=100 | 85.0% | 85.0% | 85.0% | 85.0% | 70.0% | 70.0% | 85.0% |
-| N=250 | 85.0% | 80.0% | 80.0% | 80.0% | 70.0% | 75.0% | 85.0% |
-| N=500 | 80.0% | 75.0% | 75.0% | 75.0% | 65.0% | 75.0% | 65.0% |
-| N=1000 | 75.0% | 70.0% | 75.0% | 65.0% | 65.0% | 60.0% | 84.6% |
-| N=2000 | 60.0% | 65.0% | 65.0% | 60.0% | 60.0% | 65.0% | 83.3% |
-| N=5000 | ctx-limit | 55.0% | 65.0% | 60.0% | 65.0% | ctx-limit | 80.0% |
-
-\* Claude N=1000 based on 13 queries, N=2000 on 6 queries, N=5000 on 5 queries.
-
----
-
-## Key Observations
-
-1. **Best accuracy**: Claude Sonnet 5.5 (81.7%) leads overall, but with
-   partial data and at 15-50x the cost of cheaper models. Among complete
-   runs, Qwen 3.8 Flash (76.4%) and DeepSeek V4 Flash (79.2%) lead.
-
-2. **Best value**: GPT-6 Luna ($0.14 actual) and DeepSeek V4 Flash ($0.22)
-   deliver 72-79% accuracy for under $0.25. Qwen 3.8 Flash ($0.22)
-   matches DeepSeek's cost with broader context coverage.
-
-3. **Best latency**: Gemini 2.5 Flash (1.31s avg) is the fastest, followed
-   by DeepSeek (1.65s) and GPT-6 Luna (1.76s). Kimi K2.5 is an outlier
-   at 51s average.
-
-4. **GPT-6.1 Terra underperforms**: Despite being 10x the price of GPT-6
-   Luna, Terra scores lower (66.4% vs 72.1%). The premium model does not
-   justify its cost for this task.
-
-5. **Caching dramatically reduces costs**: Actual spend was 41% below
-   estimates overall. Models with cheap cached-input pricing (GPT-6.1
-   Terra, GPT-6 Luna) saw the largest savings (84-89%).
+The old US$17 actual-cost and 83.9% caching assertions lack billing/cache
+records in the repository and are not used for value claims. The runner
+slices descriptions to 1,024 characters, rather than preserving arbitrary
+full text. Exact prompt/library reproduction is blocked by missing original
+inputs. No paid calls or new hosted-model inference were performed. The separate
+retrieval study uses newly measured local embeddings and explicitly
+conditional reconstructed inputs.

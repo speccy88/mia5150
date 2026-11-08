@@ -16,3 +16,7 @@
 Protocols and completion limits differ. The metadata study includes interrupted
 and unrun arms, and the full hosted expansion was not run. Follow the linked
 READMEs and catalog rather than treating every implementation as a result.
+
+## Offline OpenRouter audit (8 November 2026)
+
+[Prompt-result audit](openrouter-prompt-audit-20261108/README.md) preserves the nine-model raw evidence and reports full metrics, coverage, clustered uncertainty, latency, and cost limitations. The [conditional retrieval comparison](openrouter-matched-retrieval-20261108/README.md) is a separate reconstruction rather than a verified identical-prompt rerun. No paid API calls were made.

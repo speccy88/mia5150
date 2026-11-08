@@ -1,0 +1,250 @@
+{
+  "method": "Exact canonical query text required before candidate/order/schema matching",
+  "sources": [
+    {
+      "path": "experiments/benchmarks/skillret-reranker-study/reference_run/jev/candidates.json",
+      "sha256": "25cd1792fb1b3fe10fd24525d35c33acca5bc88c48d02b5c8020bc820414dd77",
+      "queries": 200,
+      "exact_query_text_matches": 0
+    },
+    {
+      "path": "experiments/benchmarks/skillret-local-metadata-20261005/data/queries/test.jsonl",
+      "sha256": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220",
+      "queries": 4392,
+      "exact_query_text_matches": 0
+    }
+  ],
+  "broader_string_matches": [
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/5a44ec49268d4657346ca1c7c835a2b48265a4ad4ec30bb1668558fc00b89209.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/6dfa68ff77b688ff0b76846d7fad13e3a7904a4b18f96659b2419632ae130e75.json",
+      "query_indices": [
+        10
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/76074309f3a65ef54fb73fcebd5f98bc7a9d5c9c94a2777b3011bcda48c5835c.json",
+      "query_indices": [
+        3
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/86d6a2a4395a694aff8792a2889a9dd44dec6903a28c10896f9a35e3d72fd778.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/8c8f19e5f5aa6441f950c1e9da3f8f3bd20abb79514c0a807b7d1fccb849fcd1.json",
+      "query_indices": [
+        9
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/988d78f14fd3093fc235515372e0bbff6abd8236016d89fb19c50aec30c06425.json",
+      "query_indices": [
+        1
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/hosted-execution/requests/fa44dbd9d174a02494862306721ab8dd992c6279a293776cd0756fddec837e1b.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/2ff23ec0702a5642e23bccfb1aefbaaa7ea62357c44a87ee944b16e9cfcd2f3b.json",
+      "query_indices": [
+        10
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/594a551b3c26092f420485716626677ca63a5f5ee0cd54ade5be64557be03db4.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/ba7858acca68274357149b740f85496a3de631b10bc1eb71362389df4df24988.json",
+      "query_indices": [
+        9
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot/requests/c2e6f952ec48c59cc8b7dbd0d38d5b24ee4e46f5ef7566e1cb79bbde15644c35.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/0e5570c2475b2b81f0d6dcc0987cf28a4e1a442b930ce9afc4ff8543ed1da681.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/2ff23ec0702a5642e23bccfb1aefbaaa7ea62357c44a87ee944b16e9cfcd2f3b.json",
+      "query_indices": [
+        10
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/3488564a09c3934bc9ac676e3f0b95a15ad34839113c7c241fade6d7b722d9aa.json",
+      "query_indices": [
+        1
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/594a551b3c26092f420485716626677ca63a5f5ee0cd54ade5be64557be03db4.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/76074309f3a65ef54fb73fcebd5f98bc7a9d5c9c94a2777b3011bcda48c5835c.json",
+      "query_indices": [
+        3
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/ba7858acca68274357149b740f85496a3de631b10bc1eb71362389df4df24988.json",
+      "query_indices": [
+        9
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/c2e6f952ec48c59cc8b7dbd0d38d5b24ee4e46f5ef7566e1cb79bbde15644c35.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/0dd6eab621386b630ff62d5c0c6a62fc3a7ecc68dbee497624bdcf97314b8de0.json",
+      "query_indices": [
+        3
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/5a44ec49268d4657346ca1c7c835a2b48265a4ad4ec30bb1668558fc00b89209.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/6dfa68ff77b688ff0b76846d7fad13e3a7904a4b18f96659b2419632ae130e75.json",
+      "query_indices": [
+        10
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/86d6a2a4395a694aff8792a2889a9dd44dec6903a28c10896f9a35e3d72fd778.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/8c8f19e5f5aa6441f950c1e9da3f8f3bd20abb79514c0a807b7d1fccb849fcd1.json",
+      "query_indices": [
+        9
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/988d78f14fd3093fc235515372e0bbff6abd8236016d89fb19c50aec30c06425.json",
+      "query_indices": [
+        1
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-jev113-context-v1/requests/fa44dbd9d174a02494862306721ab8dd992c6279a293776cd0756fddec837e1b.json",
+      "query_indices": [
+        5
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-smoke-context-v1/requests/76074309f3a65ef54fb73fcebd5f98bc7a9d5c9c94a2777b3011bcda48c5835c.json",
+      "query_indices": [
+        3
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/pilots/skillret-local-rubrics-20261006/round2/prepared-prompt-engineering.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    },
+    {
+      "path": "experiments/pilots/skillret-local-rubrics-20261006/round2/prepared-varied-screen.json",
+      "query_indices": [
+        13
+      ],
+      "exact_string_leaf_paths": [],
+      "interpretation": "candidate-content substring only; no exact query value"
+    }
+  ],
+  "exact_leaf_matches": [],
+  "matching_completed_jev_cells": 0,
+  "status": "unavailable_no_exact_matched_query_evidence",
+  "caveat": "Text scan is a bounded evidence search, not proof that unarchived responses never existed. No mismatched historical score is reused.",
+  "fresh_api_calls": 0,
+  "new_api_cost_usd": 0,
+  "paid_reranking": "Not attempted; requires explicit budget and verified current pricing."
+}

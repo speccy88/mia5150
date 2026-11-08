@@ -7,6 +7,17 @@ useDefault = true
 id = "generic-api-key"
 
 [[rules.allowlists]]
+description = "Independently verified SHA-256 of the public BGE-small-en-v1.5 tokenizer at pinned revision 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a; benchmark asset identity, not an access token"
+condition = "AND"
+regexTarget = "secret"
+regexes = [ '''^d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66$''' ]
+paths = [
+  '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/prepare_inputs\.py$''',
+  '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/run_offline\.py$''',
+  '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/results/embedding-manifest\.json$'''
+]
+
+[[rules.allowlists]]
 description = "Reviewed public-input tokenizer ID sequence digests in the two final profile preflights; SHA-256 values are benchmark evidence, not access tokens"
 condition = "AND"
 regexTarget = "match"

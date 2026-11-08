@@ -1,0 +1,7 @@
+{
+  "benchmark_openrouter/benchmark_models_testplan_openrouter.py": "6743c3e933d730bbe88073b102de47725114502795d5d66cbe2d46c72472d3c9",
+  "benchmark_openrouter/tests_openrouter/details.csv": "16a27b1af18d212ca1a0f89b6e5c519ac6ecb97a0d0fd7cf37cbe7c2146b7ab0",
+  "benchmark_openrouter/tests_openrouter/metrics.json": "32efe71131d457774c0152c61369801eb4058813ab7e6c83313de6f07f72343f",
+  "benchmark_openrouter/tests_openrouter/run_config.json": "2263387781d31bd6cf31817879e3cf99aea4cfdcf02c7b2fc44d74e943a37aac",
+  "benchmark_openrouter/tests_openrouter/test_queries.json": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b"
+}
