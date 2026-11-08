@@ -1,0 +1,7 @@
+{
+  "exception": "RuntimeError",
+  "message": "Ollama /api/embed HTTP 400: {\"error\":\"the input length exceeds the context length\"}",
+  "stage": "feasibility",
+  "utc": "2026-11-08T04:54:37.907340+00:00",
+  "wall_seconds": 121.56395758500003
+}

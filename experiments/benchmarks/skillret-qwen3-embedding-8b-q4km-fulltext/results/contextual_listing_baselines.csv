@@ -1,0 +1,10 @@
+model,library_size,questions,correct_top1_names,top1_name_accuracy,document_view,comparison,source_sha256
+gpt-6-luna,50,20,17,0.85,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6-luna,1000,20,13,0.65,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6-luna,2000,20,13,0.65,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-sol,50,20,18,0.9,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-sol,1000,20,13,0.65,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-sol,2000,20,14,0.7,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-terra,50,20,17,0.85,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-terra,1000,20,13,0.65,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3
+gpt-6.1-terra,2000,20,14,0.7,name + description[:300] listing,context only; generation and name scoring differ from full-text ID retrieval,798035904523d6426a45ed38ee4adf37e11fb2283270349128ba12289661bad3

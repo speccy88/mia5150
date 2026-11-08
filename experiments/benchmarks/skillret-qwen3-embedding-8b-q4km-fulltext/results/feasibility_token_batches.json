@@ -1,0 +1,74 @@
+[
+  {
+    "dimensions": 4096,
+    "elapsed_s": 2.930543669999679,
+    "gpu": "5270, 97, 58",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 0,
+    "runtime_load_s": 0.001117307,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 512,
+    "tokens": 4095
+  },
+  {
+    "dimensions": 4096,
+    "elapsed_s": 2.8918376820001868,
+    "gpu": "5270, 97, 60",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 1,
+    "runtime_load_s": 0.002125457,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 512,
+    "tokens": 4095
+  },
+  {
+    "dimensions": 4096,
+    "elapsed_s": 16.751537027999802,
+    "gpu": "5384, 98, 58",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 0,
+    "runtime_load_s": 13.749807951,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 1024,
+    "tokens": 4095
+  },
+  {
+    "dimensions": 4096,
+    "elapsed_s": 2.872603560999778,
+    "gpu": "5384, 98, 59",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 1,
+    "runtime_load_s": 0.000945946,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 1024,
+    "tokens": 4095
+  },
+  {
+    "dimensions": 4096,
+    "elapsed_s": 16.0254033300007,
+    "gpu": "5614, 100, 58",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 0,
+    "runtime_load_s": 13.006351664,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 2048,
+    "tokens": 4095
+  },
+  {
+    "dimensions": 4096,
+    "elapsed_s": 2.8582500869997602,
+    "gpu": "5614, 96, 59",
+    "http_status": 200,
+    "norm": 1.0,
+    "repeat": 1,
+    "runtime_load_s": 0.001053194,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "token_batch": 2048,
+    "tokens": 4095
+  }
+]

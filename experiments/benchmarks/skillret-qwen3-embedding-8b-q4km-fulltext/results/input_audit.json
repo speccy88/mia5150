@@ -1,0 +1,31 @@
+{
+  "chunk_tokens_including_overlap": 13360655,
+  "chunks": 6913,
+  "data_sha256": {
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81"
+  },
+  "documents_manifest_sha256": "645f99f59ede239ba013edd83950e9d5479f1626fc8d79ef0323d50185d0aa9f",
+  "duplicate_names": 205,
+  "full_queries": 4392,
+  "historical_manifest_sha256": "c45eb3668d572b2919c99eff91bca82e8d4412f9105cca60f2d1febe812ef81f",
+  "missing_documents": 0,
+  "original_tokens_max": 49011,
+  "original_tokens_mean": 2205.221278721279,
+  "original_tokens_median": 1677.0,
+  "original_tokens_total": 13244559,
+  "panel_queries": 20,
+  "panel_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b",
+  "qrel_pairs": 7187,
+  "qrel_set_size_counts": {
+    "1": 2143,
+    "2": 1703,
+    "3": 546
+  },
+  "skills": 6006,
+  "skills_requiring_chunking": 726,
+  "source_characters": 53837152,
+  "source_coverage_percent": 100.0,
+  "tokenizer_sha256": "83cdf8c3a34f68862319cb1810ee7b1e2c0a44e0864ae930194ddb76bb7feb8d"
+}

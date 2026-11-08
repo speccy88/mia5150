@@ -1,0 +1,34 @@
+[
+  {
+    "add_special": false,
+    "eos_count": 0,
+    "first_different_index": null,
+    "hf_count_without_special": 3411,
+    "native_count": 3411,
+    "parse_special": false
+  },
+  {
+    "add_special": false,
+    "eos_count": 0,
+    "first_different_index": 1679,
+    "hf_count_without_special": 3411,
+    "native_count": 3409,
+    "parse_special": true
+  },
+  {
+    "add_special": true,
+    "eos_count": 1,
+    "first_different_index": null,
+    "hf_count_without_special": 3411,
+    "native_count": 3412,
+    "parse_special": false
+  },
+  {
+    "add_special": true,
+    "eos_count": 1,
+    "first_different_index": 1679,
+    "hf_count_without_special": 3411,
+    "native_count": 3410,
+    "parse_special": true
+  }
+]

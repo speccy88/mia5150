@@ -23,3 +23,8 @@
 # November skill-discovery evidence; preserve source/export bytes.
 /experiments/benchmarks/skill-discovery-oauth-v1-20261103/** -text
 /experiments/benchmarks/skill-discovery-local-native-20261103/** -text
+
+# Lossless document/query vectors for model-free benchmark reproduction.
+/experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/** -text
+/experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/vectors/*.npz filter=lfs diff=lfs merge=lfs -text

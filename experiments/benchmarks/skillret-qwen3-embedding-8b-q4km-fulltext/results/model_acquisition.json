@@ -1,0 +1,13 @@
+{
+  "earlier_pull_attempt": "Interrupted acquisition only; no inference or benchmark outcome",
+  "manifest_sha256": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+  "model": "qwen3-embedding:8b-q4_K_M",
+  "model_blob_bytes": 4676804928,
+  "model_blob_sha256": "3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+  "official_pull_exit_code": 0,
+  "ollama_version": "0.40.15",
+  "paid_services": false,
+  "registry": "https://registry.ollama.ai/v2/library/qwen3-embedding",
+  "transport": "Official-registry range-prefetch followed by successful official ollama pull",
+  "weight_hash_verified": true
+}

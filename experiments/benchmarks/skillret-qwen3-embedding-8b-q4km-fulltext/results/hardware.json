@@ -1,0 +1,25 @@
+{
+  "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           36 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  4\nOn-line CPU(s) list:                     0-3\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) i3-3225 CPU @ 3.30GHz\nCPU family:                              6\nModel:                                   58\nThread(s) per core:                      2\nCore(s) per socket:                      2\nSocket(s):                               1\nStepping:                                9\nCPU(s) scaling MHz:                      97%\nCPU max MHz:                             3300.0000\nCPU min MHz:                             1600.0000\nBogoMIPS:                                6584.89\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer xsave avx f16c lahf_lm cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts vnmi md_clear flush_l1d\nVirtualization:                          VT-x\nL1d cache:                               64 KiB (2 instances)\nL1i cache:                               64 KiB (2 instances)\nL2 cache:                                512 KiB (2 instances)\nL3 cache:                                3 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-3\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             KVM: Mitigation: Split huge pages\nVulnerability L1tf:                      Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable\nVulnerability Mds:                       Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Meltdown:                  Mitigation; PTI\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "cuda_toolkit_compiler": "not installed; Ollama bundles CUDA inference libraries",
+  "gpu": "NVIDIA GeForce RTX 2060 SUPER, 595.99.02, 8192 MiB, 7.5",
+  "gpu_workload_preflight": "No compute processes; 9 MiB total device use at initial inspection",
+  "memory_type": "DDR3 reported by user; DMI inspection requires unavailable root access",
+  "ollama_environment": {
+    "OLLAMA_FLASH_ATTENTION": "1",
+    "OLLAMA_HOST": "127.0.0.1:11434",
+    "OLLAMA_MAX_LOADED_MODELS": "1",
+    "OLLAMA_NO_CLOUD": "1",
+    "OLLAMA_NUM_PARALLEL": "1"
+  },
+  "os": "Ubuntu 26.04.1 LTS",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "psutil": "7.2.2",
+    "requests": "2.34.2",
+    "tokenizers": "0.23.3"
+  },
+  "python": "3.12.10",
+  "swap_bytes": 4294963200,
+  "system_ram_bytes": 7722901504
+}

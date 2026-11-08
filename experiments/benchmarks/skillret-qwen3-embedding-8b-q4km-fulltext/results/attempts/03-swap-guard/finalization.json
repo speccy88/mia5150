@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {
+      "step": "validate",
+      "exit_code": 0,
+      "wall_seconds": 1.8728699540006346
+    },
+    {
+      "step": "report",
+      "exit_code": 0,
+      "wall_seconds": 8.390703642999142
+    },
+    {
+      "step": "tests",
+      "exit_code": 0,
+      "wall_seconds": 0.651725918000011
+    }
+  ],
+  "benchmark_stage_observed": "indexing",
+  "git_commits_created": 0,
+  "git_pushes": 0
+}

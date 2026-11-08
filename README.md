@@ -2,10 +2,22 @@
 
 Code, recorded results, and documentation for studying how natural-language
 requests retrieve and select agent skills. Start with the
-[19-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
+[20-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
 [published EDA report](https://speccy88.github.io/mia5150/).
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
+
+## Qwen3 Embedding 8B Q4 full-text benchmark
+
+The [completed local study](experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/REPORT.md)
+embeds all 6,006 complete skill documents with 100% source coverage and evaluates
+all eight 20-query scaling libraries plus all 4,392 official test queries.
+Full-test NDCG@10 is **0.642091**, Recall@10 **0.701389**, and MRR@10 **0.732295**.
+The historical 20-query panel is exposed and gold-conditioned; protocols differ
+from the prior full-text SkillRet 0.6B result of 0.810990 NDCG@10.
+[Lossless document and query vectors](experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/vectors/README.md)
+are included through Git LFS, with an offline command that reproduces every
+scaling and official ranking without embedding again.
 
 ## Nine-model OpenRouter audit (8 November 2026)
 

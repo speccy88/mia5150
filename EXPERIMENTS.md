@@ -2,12 +2,13 @@
 
 This index maps recorded work to its code and evidence. Studies now live under the [grouped experiments directory](experiments/README.md), with their internal source/results layouts preserved. The 7 October consolidation adds the completed full-text branch and the October 5-6 local studies without rewriting history or rerunning inference, training, or hosted requests.
 
-Browse the [19-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) for execution environments, dataset/query scope, recorded metrics, source links, and completion limits.
+Browse the [20-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) for execution environments, dataset/query scope, recorded metrics, source links, and completion limits.
 
 All recent SkillRet query panels use previously exposed public data. A full catalog or a full query count does not make an evaluation blind. Scores from different document views, token limits, pools, and panels are not directly interchangeable.
 
 | Folder | Code and results | Execution status and limits |
 |---|---|---|
+| [skillret-qwen3-embedding-8b-q4km-fulltext](experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/REPORT.md) | Local Ollama Q4_K_M, complete skill text, exact historical pools, independent validation, PNG/SVG charts and lossless Git LFS vectors with offline replay | Completed: 6,006 full-source skills / 6,913 chunks; 160 scaling cases and 4,392 official queries. Full NDCG@10 0.642091, Recall@10 0.701389, MRR@10 0.732295. Exposed gold-conditioned scaling panel; different context/chunking/quantization from earlier baselines. Metadata ablation unattempted. |
 | [openrouter-prompt-audit-20261108](experiments/benchmarks/openrouter-prompt-audit-20261108/README.md) | Offline audit of nine models, full K=1/3/5/10 metrics, preserved raw data, paired query-cluster intervals and presentation figures | 1,260 planned cases; 1,184 completed, 40 preflight exclusions, 36 absent. Raw invalid positions unavailable on 72 responses. US$35.140929 estimated; billed cost unverified. Only 20 repeated exposed single-gold questions. |
 | [openrouter-matched-retrieval-20261108](experiments/benchmarks/openrouter-matched-retrieval-20261108/README.md) | Conditional offline retrieval re-analysis and historical method inventory | Original prompt-library identity is unverified; new reconstructed-input baselines and historical settings remain explicitly separate. No paid inference. |
 | [skill-discovery-oauth-v1-20261103](experiments/benchmarks/skill-discovery-oauth-v1-20261103/REPORT.md) | OAuth variant, three models, immutable CSV exports, prompt-equivalent data with source attributions, offline arithmetic and question-cluster uncertainty | 420 planned rows: 360 completed responses, three HTTP input-string-length rejections at N=5000, 57 unattempted. Six sizes measured. Golds at positions 1-20; 20 repeated questions. OAuth parameters differ from strict API v1; original-cloud comparability unverified. |

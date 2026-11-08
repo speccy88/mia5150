@@ -1,0 +1,143 @@
+{
+  "batch_size": 1,
+  "cold_start_first_embedding_s": 119.25292746300147,
+  "cold_start_load_s": 65.854401473,
+  "cold_start_source": "first genuine unloaded-model request; retained admission-boundary attempt",
+  "context": 4096,
+  "context_increased": false,
+  "model_reconfiguration_load_s_this_attempt": 13.423295203,
+  "probes": [
+    {
+      "cache_hit": false,
+      "key": "e4a06c530a566134ea3d21aa3577796e08d8505e63a4554ab57d6f7cd884d9fe",
+      "kind": "feasibility",
+      "latency_s": 13.693681196999023,
+      "norm": 1.0,
+      "normalization_dtype": "float32",
+      "original_tokens": 117,
+      "prompt_eval_count": 118,
+      "resident_models": {
+        "models": [
+          {
+            "context_length": 4096,
+            "details": {
+              "families": [
+                "qwen3"
+              ],
+              "family": "qwen3",
+              "format": "gguf",
+              "parameter_size": "7.6B",
+              "parent_model": "",
+              "quantization_level": "Q4_K_M"
+            },
+            "digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+            "expires_at": "2026-11-08T05:30:30.440588369Z",
+            "model": "qwen3-embedding:8b-q4_K_M",
+            "name": "qwen3-embedding:8b-q4_K_M",
+            "runner": "llamacpp",
+            "size": 5388107775,
+            "size_vram": 5388107775
+          }
+        ]
+      },
+      "runtime_load_s": 13.423295203,
+      "runtime_total_s": 13.68990483,
+      "skill_id": "c8fc5073-3d91-48d1-bc0e-0c6fa4b2d75b",
+      "text_sha256": "d24f5c726f1010e95e684651eba456de14f5c6e1e18e050c4acc1b505ea75275",
+      "utc": "2026-11-08T05:00:30.442807+00:00"
+    },
+    {
+      "cache_hit": false,
+      "key": "f42eacc4af3a231847bf7e9ad713edb80f1d36dc90a2ceba962b6ffb2aee3c0a",
+      "kind": "feasibility",
+      "latency_s": 1.031459026999073,
+      "norm": 0.9999999403953552,
+      "normalization_dtype": "float32",
+      "original_tokens": 1500,
+      "prompt_eval_count": 1501,
+      "resident_models": {
+        "models": [
+          {
+            "context_length": 4096,
+            "details": {
+              "families": [
+                "qwen3"
+              ],
+              "family": "qwen3",
+              "format": "gguf",
+              "parameter_size": "7.6B",
+              "parent_model": "",
+              "quantization_level": "Q4_K_M"
+            },
+            "digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+            "expires_at": "2026-11-08T05:30:31.486409199Z",
+            "model": "qwen3-embedding:8b-q4_K_M",
+            "name": "qwen3-embedding:8b-q4_K_M",
+            "runner": "llamacpp",
+            "size": 5388107775,
+            "size_vram": 5388107775
+          }
+        ]
+      },
+      "runtime_load_s": 0.001428706,
+      "runtime_total_s": 1.026754393,
+      "skill_id": "0808a37f-2cf2-4e45-93c8-decc31d5e12d",
+      "text_sha256": "5844a934dea9aaba1439c043a93fd133e93036c6f055ecf551359a9515d56643",
+      "utc": "2026-11-08T05:00:31.497829+00:00"
+    },
+    {
+      "cache_hit": false,
+      "key": "ea51a8f83f80394b5de4e9681fb7a3034cf9581291e342cd23ea5c4da9a9fdee",
+      "kind": "feasibility",
+      "latency_s": 2.884058110999831,
+      "norm": 1.0,
+      "normalization_dtype": "float32",
+      "original_tokens": 4094,
+      "prompt_eval_count": 4095,
+      "resident_models": {
+        "models": [
+          {
+            "context_length": 4096,
+            "details": {
+              "families": [
+                "qwen3"
+              ],
+              "family": "qwen3",
+              "format": "gguf",
+              "parameter_size": "7.6B",
+              "parent_model": "",
+              "quantization_level": "Q4_K_M"
+            },
+            "digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+            "expires_at": "2026-11-08T05:30:34.401504161Z",
+            "model": "qwen3-embedding:8b-q4_K_M",
+            "name": "qwen3-embedding:8b-q4_K_M",
+            "runner": "llamacpp",
+            "size": 5388107775,
+            "size_vram": 5388107775
+          }
+        ]
+      },
+      "runtime_load_s": 0.001731876,
+      "runtime_total_s": 2.879642458,
+      "skill_id": "c83bfbab-9a97-4eac-b2c2-9bdf7501875f",
+      "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+      "utc": "2026-11-08T05:00:34.427450+00:00"
+    }
+  ],
+  "repeat": {
+    "cache_hit": false,
+    "key": "3c678479563c9908fe84914fb8096ef429a026901245d8677f4640a039bef941",
+    "kind": "feasibility_repeat",
+    "latency_s": 2.894871680999131,
+    "normalization_dtype": "float32",
+    "original_tokens": 4094,
+    "prompt_eval_count": 4095,
+    "runtime_load_s": 0.001617808,
+    "runtime_total_s": 2.889732802,
+    "text_sha256": "fd61f31af38c07abce10089b2846ce28a1a1b27bb6db93cd21f763b731cc528f",
+    "utc": "2026-11-08T05:00:37.357801+00:00"
+  },
+  "repeat_max_abs_difference": 0.0,
+  "status": "passed"
+}

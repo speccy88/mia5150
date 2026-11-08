@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {
+      "step": "validate",
+      "exit_code": 0,
+      "wall_seconds": 2.602968963001331
+    },
+    {
+      "step": "cache-replay",
+      "exit_code": 0,
+      "wall_seconds": 70.07211573099994
+    },
+    {
+      "step": "report",
+      "exit_code": 0,
+      "wall_seconds": 9.041514289998304
+    },
+    {
+      "step": "tests",
+      "exit_code": 0,
+      "wall_seconds": 0.6642238070016901
+    }
+  ],
+  "benchmark_stage_observed": "completed",
+  "scope": "Post-run validation completed before Git publication"
+}

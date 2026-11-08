@@ -1,0 +1,17 @@
+{
+  "all_recorded_metrics_and_coverage_checked": true,
+  "bootstrap_question_clusters": 20,
+  "independent_arithmetic": true,
+  "queries_per_size": 20,
+  "repeated_size_columns": 8,
+  "sizes_checked": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000,
+    6006
+  ]
+}

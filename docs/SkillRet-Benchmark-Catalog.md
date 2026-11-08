@@ -1,6 +1,6 @@
 # SkillRet benchmark catalog
 
-This catalog covers **19 studies and bounded pilots**, including the new matched proposal study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
+This catalog covers **20 studies and bounded pilots**, including the completed local Qwen3 full-text study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
 Historical table reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare that historical table. The added row 17 records new local inference on 24 October.
 
@@ -71,6 +71,22 @@ supplement adds 200 Qwen8/Mistral responses, retaining the original 32K blocks.
 Sixteen distinct local models now have measurements across the series; Llama/Gemma
 remain unexecuted at closure. See the linked comparison for the explicit real-token
 gate deviation and the separate KV profiles.
+
+## 20. Qwen3 Embedding 8B Q4_K_M full-text benchmark
+
+[Report, results and reusable vectors](../experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/REPORT.md).
+Local Ubuntu execution on RTX 2060 SUPER 8 GB, using the official Ollama
+embedding model, 4,096 dimensions, a 4,096-token context and complete original
+skill text. All 6,006 skills and 6,913 chunks retain 100% source coverage.
+All eight 20-question scaling conditions and all 4,392 official queries are
+complete. Official NDCG@10 is **0.642091**, Recall@10 **0.701389**, MRR@10
+**0.732295**. Historical candidate IDs/order and earlier evidence are preserved.
+Lossless float32 document/query vectors are included through Git LFS, with a
+validated offline replay of all 160 scaling and 4,392 official rankings.
+The exposed gold-conditioned panel, nonnested historical libraries and changed
+chunking/context/quantization limit comparison with earlier protocols. The
+metadata-only ablation remains unattempted; no model-size or full-text benefit
+is established.
 
 ## Source snapshot
 

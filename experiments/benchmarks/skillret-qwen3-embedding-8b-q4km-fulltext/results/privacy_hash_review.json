@@ -1,0 +1,10 @@
+{
+  "all_primary_document_query_identities_verified": true,
+  "allowed_values": "Deterministic benchmark hashes and exact public tokenizer revision only",
+  "cache_hashes_independently_recomputed": true,
+  "credential_exceptions_added": false,
+  "retained_archived_feasibility_receipts_in_main_journal": 2,
+  "reviewed_cache_identifier_count": 11493,
+  "scope": "Completed execution; all exported embedding cache identifiers independently recomputed",
+  "tokenizer_file_hash_independently_verified": true
+}

@@ -1,0 +1,11 @@
+{
+  "additional_skills": 680,
+  "cumulative_skills": 1680,
+  "end_utc": "2026-11-08T05:47:53.976409+00:00",
+  "library_size": 2000,
+  "measurement": "UTC bracket from prior completed scaling artifact mtime to recorded failure; includes boundary serialization overhead",
+  "stage_wall_s": 1170.728415,
+  "start_utc": "2026-11-08T05:28:23.247994+00:00",
+  "status": "interrupted",
+  "utc": "2026-11-08T05:47:53.976409+00:00"
+}

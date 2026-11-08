@@ -1,0 +1,62 @@
+{
+  "aggregation": "maximum chunk cosine per skill, deduplicate before top50",
+  "api": "/api/embed",
+  "batch_size": 1,
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 42,
+    "unit": "paired question cluster across sizes"
+  },
+  "chunking": {
+    "markdown_boundary_lookback_tokens": 256,
+    "overlap_tokens": 128,
+    "source_spans": "Unicode character offsets; exact source slices",
+    "token_budget": 4095,
+    "version": 1
+  },
+  "data_sha256": {
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81"
+  },
+  "dataset": "ThakiCloud/SKILLRET",
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "dimensions": 4096,
+  "document_format": "name + ' | ' + description + ' | ' + complete skill_md; no stripping",
+  "documents_manifest_sha256": "d15bce350d8636af92b67777f873648e6cf1ec30179c15a8f681a866e53acb44",
+  "model": "qwen3-embedding:8b-q4_K_M",
+  "model_blob_sha256": "3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+  "model_manifest_sha256": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+  "new_sample_seed": 42,
+  "normalization": "float32 L2",
+  "optional_metadata_ablation": "unattempted; primary full-text priority",
+  "options": {
+    "num_batch": 512,
+    "num_ctx": 4096,
+    "num_thread": 2,
+    "seed": 42
+  },
+  "quantization": "Q4_K_M",
+  "query_prefix": "Instruct: Given a skill search query, retrieve relevant skills that match the query\nQuery: ",
+  "ranking_depth": 50,
+  "relevance": {
+    "official": "all 7187 binary qrels; denominator 4392",
+    "scaling": "single gold skill ID; all 20 queries retained"
+  },
+  "sizes": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000,
+    6006
+  ],
+  "source_git_revision": "3fb7e66a1a219bc43d7c2057dca3d1c70a3c6c45",
+  "ties": "ascending SHA256 of exact full text; no pool-position/ID/gold features",
+  "tokenizer_revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+  "tokenizer_sha256": "83cdf8c3a34f68862319cb1810ee7b1e2c0a44e0864ae930194ddb76bb7feb8d",
+  "truncate": false,
+  "version": 1
+}

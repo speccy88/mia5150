@@ -1,0 +1,7 @@
+{
+  "exception": "RuntimeError",
+  "message": "Swap activity increased",
+  "stage": "full",
+  "utc": "2026-11-08T07:32:12.446535+00:00",
+  "wall_seconds": 5964.914977363998
+}

@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "6006 complete source documents; every source character covered by valid hashed chunk spans",
+    "Exact historical ordered candidate IDs; unique IDs and gold presence at all eight sizes",
+    "All 7187 unique binary qrels and all official query IDs; every stored per-query/aggregate metric and 20/50 macro/micro coverage total independently reconciled",
+    "Saved rankings independently rescored; JSON and CSV reconciled"
+  ],
+  "completed_full_requested_scope": true,
+  "full_queries_checked": 4392,
+  "independent_arithmetic": true,
+  "scaling_sizes_checked": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000,
+    6006
+  ],
+  "status": "passed_with_scope_recorded"
+}

@@ -1,0 +1,11 @@
+{
+  "chunks_processed": 6913,
+  "failed_or_missing_documents": 0,
+  "model_digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+  "original_tokens": 13244559,
+  "protocol_sha256": "4dc18d2cb0381593be287de1dbe7c70eb74b2228f7c68b0beff75812c43094e3",
+  "skills_processed": 6006,
+  "source_characters": 53837152,
+  "source_coverage_percent": 100.0,
+  "tokens_including_overlap": 13360655
+}

@@ -7,6 +7,23 @@ useDefault = true
 id = "generic-api-key"
 
 [[rules.allowlists]]
+description = "Verified deterministic SHA-256 embedding cache identifiers, restricted to the Qwen full-text journals and feasibility receipts; these fields never hold credentials"
+condition = "AND"
+regexTarget = "match"
+paths = [ '''^experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/(embedding_calls\.jsonl|feasibility(_progress)?\.json|attempts/01-admission-boundary/embedding_calls\.jsonl)$''' ]
+regexes = [ '''key"\s*:\s*"[a-f0-9]{64}"''' ]
+
+[[rules.allowlists]]
+description = "Exact independently verified public Qwen tokenizer revision and file SHA-256, restricted to this study's pinned source/protocol audits"
+condition = "AND"
+regexTarget = "match"
+paths = [ '''^experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/(src/prepare\.py|protocol\.json|results/(input_audit\.json|attempts/01-admission-boundary/(input_audit|protocol)\.json))$''' ]
+regexes = [
+  '''(?:TOKENIZER_REV\s*=\s*|tokenizer_revision"\s*:\s*)"1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"''',
+  '''tokenizer_sha256"\s*:\s*"83cdf8c3a34f68862319cb1810ee7b1e2c0a44e0864ae930194ddb76bb7feb8d"'''
+]
+
+[[rules.allowlists]]
 description = "Independently verified SHA-256 of the public BGE-small-en-v1.5 tokenizer at pinned revision 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a; benchmark asset identity, not an access token"
 condition = "AND"
 regexTarget = "secret"

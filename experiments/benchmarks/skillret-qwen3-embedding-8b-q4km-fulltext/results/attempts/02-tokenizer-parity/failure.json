@@ -1,0 +1,7 @@
+{
+  "exception": "ValueError",
+  "message": "Tokenizer/runtime token mismatch: local=3411, runtime=3410",
+  "stage": "full",
+  "utc": "2026-11-08T05:47:53.976409+00:00",
+  "wall_seconds": 2858.500725448999
+}

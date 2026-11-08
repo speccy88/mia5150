@@ -1,0 +1,38 @@
+{
+  "all_rankings_identical": true,
+  "chunks_loaded": 6913,
+  "index_cache_validation_and_assembly_s": 7.056204247997812,
+  "index_cached_skills_per_second": 851.1658377383554,
+  "maximum_score_tolerance": 1e-06,
+  "model_api_requests": 0,
+  "model_digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+  "protocol_sha256": "4dc18d2cb0381593be287de1dbe7c70eb74b2228f7c68b0beff75812c43094e3",
+  "queries": 4392,
+  "query_cache_read": {
+    "count": 4392,
+    "maximum_s": 0.02257605200065882,
+    "mean_s": 0.0010948294007515661,
+    "median_s": 0.001105823499528924,
+    "p50_s": 0.001105823499528924,
+    "p95_s": 0.0012127457986935042
+  },
+  "query_search": {
+    "count": 4392,
+    "maximum_s": 0.021266085997922346,
+    "mean_s": 0.012808381267130738,
+    "median_s": 0.012764411500029382,
+    "p50_s": 0.012764411500029382,
+    "p95_s": 0.01306270455243066
+  },
+  "query_total_cached": {
+    "count": 4392,
+    "maximum_s": 0.035448202997940825,
+    "mean_s": 0.014088069576044917,
+    "median_s": 0.014050585001314175,
+    "p50_s": 0.014050585001314175,
+    "p95_s": 0.014389724449938513
+  },
+  "skills": 6006,
+  "source_loading_s": 0.6694420399981027,
+  "status": "completed"
+}
