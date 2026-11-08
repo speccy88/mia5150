@@ -7,6 +7,11 @@ requests retrieve and select agent skills. Start with the
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
 
+Both BGE-M3 studies are published on `main`. Use the
+[current Git LFS download and CPU replay commands](docs/publication/BGE-REPRODUCTION.md)
+to reproduce their rankings and metrics without embedding again. The archived
+study instructions retain the original proposed experiment branch names.
+
 ## BGE-M3 LoRA: paired before/after retrieval
 
 The [completed LoRA study](experiments/benchmarks/skillret-bge-m3-lora-20261108/REPORT.md)
