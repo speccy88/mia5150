@@ -1,0 +1,12 @@
+{
+  "all_training_query_skill_id_annotations_match_qrels": true,
+  "duplicate_normalized_groups_with_different_positive_sets": 0,
+  "duplicate_normalized_query_texts_within_official_test": 0,
+  "duplicate_normalized_query_texts_within_raw_train": 435,
+  "eligible_training_unique_normalized_queries": 50859,
+  "exact_normalized_query_text_train_test": 0,
+  "exact_normalized_query_text_train_validation": 0,
+  "scope": "Independent exact-set audit supplements feature-capped lexical cosine audit",
+  "selected_validation_unique_normalized_queries": 128,
+  "shared_namespace_identities_train_test": 0
+}

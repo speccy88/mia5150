@@ -1,0 +1,10 @@
+{
+  "fraction_positive_nonfirst_chunk": 0.6243277539428365,
+  "negative_first_chunk_fraction": 1.0,
+  "official_test_used": false,
+  "positive_first_chunk": 37302,
+  "positive_nonfirst_chunk": 61992,
+  "positive_passages": 99294,
+  "potential_confound": "Lexically selected positives often omit metadata while all negative representatives include the beginning; passage style can identify the training label",
+  "validation_document_first_chunk_fraction": 1.0
+}

@@ -1,0 +1,482 @@
+{
+  "Base B_matched minus A_metadata": {
+    "bootstrap": {
+      "across_columns_95ci": [
+        -0.004694762488031901,
+        0.009955755354191355
+      ],
+      "across_columns_mean": 0.002594037657148492,
+      "mean": [
+        -0.012522768670309653,
+        0.008993624772313299,
+        0.013812993321190048,
+        0.0036756014467567186,
+        -0.0009892625842079401
+      ],
+      "per_column_95ci": [
+        [
+          -0.02481785063752277,
+          -0.00022768670309653916
+        ],
+        [
+          0.0003026335761991496,
+          0.017569823922282932
+        ],
+        [
+          0.005426533090467522,
+          0.02223835003035823
+        ],
+        [
+          -0.003263755507084139,
+          0.010634524162392247
+        ],
+        [
+          -0.010155021214618193,
+          0.008150650894844878
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "exploratory": true,
+    "metrics": [
+      {
+        "absolute_difference": -0.012522768670309653,
+        "base_mean": 0.5717213114754098,
+        "ci95_high": -0.00022768670309653916,
+        "ci95_high_percentage_points": -0.022768670309653915,
+        "ci95_low": -0.02481785063752277,
+        "ci95_low_percentage_points": -2.481785063752277,
+        "degraded_queries": 409,
+        "difference_percentage_points": -1.2522768670309654,
+        "improved_queries": 354,
+        "lora_mean": 0.5591985428051002,
+        "metric": "Top1_ID_accuracy",
+        "relative_difference_percent": -2.190362405416169,
+        "unchanged_queries": 3629
+      },
+      {
+        "absolute_difference": 0.008993624772313297,
+        "base_mean": 0.5611338797814208,
+        "ci95_high": 0.017569823922282932,
+        "ci95_high_percentage_points": 1.7569823922282932,
+        "ci95_low": 0.0003026335761991496,
+        "ci95_low_percentage_points": 0.03026335761991496,
+        "degraded_queries": 383,
+        "difference_percentage_points": 0.8993624772313297,
+        "improved_queries": 428,
+        "lora_mean": 0.5701275045537341,
+        "metric": "Recall@5",
+        "relative_difference_percent": 1.6027591803611279,
+        "unchanged_queries": 3581
+      },
+      {
+        "absolute_difference": 0.013812993321190042,
+        "base_mean": 0.6149058894960534,
+        "ci95_high": 0.02223835003035823,
+        "ci95_high_percentage_points": 2.223835003035823,
+        "ci95_low": 0.005426533090467522,
+        "ci95_low_percentage_points": 0.5426533090467522,
+        "degraded_queries": 372,
+        "difference_percentage_points": 1.3812993321190041,
+        "improved_queries": 427,
+        "lora_mean": 0.6287188828172435,
+        "metric": "Recall@10",
+        "relative_difference_percent": 2.246358923722538,
+        "unchanged_queries": 3593
+      },
+      {
+        "absolute_difference": 0.0036756014467567173,
+        "base_mean": 0.5577230355420412,
+        "ci95_high": 0.010634524162392247,
+        "ci95_high_percentage_points": 1.0634524162392247,
+        "ci95_low": -0.003263755507084139,
+        "ci95_low_percentage_points": -0.3263755507084139,
+        "degraded_queries": 969,
+        "difference_percentage_points": 0.3675601446756717,
+        "improved_queries": 932,
+        "lora_mean": 0.561398636988798,
+        "metric": "NDCG@10",
+        "relative_difference_percent": 0.6590370511026974,
+        "unchanged_queries": 2491
+      },
+      {
+        "absolute_difference": -0.0009892625842079408,
+        "base_mean": 0.6385440158151906,
+        "ci95_high": 0.008150650894844878,
+        "ci95_high_percentage_points": 0.8150650894844877,
+        "ci95_low": -0.010155021214618193,
+        "ci95_low_percentage_points": -1.0155021214618194,
+        "degraded_queries": 731,
+        "difference_percentage_points": -0.09892625842079408,
+        "improved_queries": 745,
+        "lora_mean": 0.6375547532309827,
+        "metric": "MRR@10",
+        "relative_difference_percent": -0.15492472871192897,
+        "unchanged_queries": 2916
+      }
+    ],
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "Base C_native8k minus B_matched": {
+    "bootstrap": {
+      "across_columns_95ci": [
+        0.0016836625375590698,
+        0.006480895825106852
+      ],
+      "across_columns_mean": 0.004075381764447968,
+      "mean": [
+        0.005009107468123861,
+        0.002808136004857316,
+        0.004174256223436552,
+        0.004007409443860683,
+        0.00437799968196143
+      ],
+      "per_column_95ci": [
+        [
+          -0.00022768670309653916,
+          0.010245901639344262
+        ],
+        [
+          -0.0005312689738919247,
+          0.00614848967820278
+        ],
+        [
+          0.0010625379477838496,
+          0.007285974499089252
+        ],
+        [
+          0.0018737296869353684,
+          0.006163014827930249
+        ],
+        [
+          0.0012510661520224358,
+          0.0075299945608176535
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "exploratory": true,
+    "metrics": [
+      {
+        "absolute_difference": 0.005009107468123861,
+        "base_mean": 0.5591985428051002,
+        "ci95_high": 0.010245901639344262,
+        "ci95_high_percentage_points": 1.0245901639344261,
+        "ci95_low": -0.00022768670309653916,
+        "ci95_low_percentage_points": -0.022768670309653915,
+        "degraded_queries": 60,
+        "difference_percentage_points": 0.5009107468123861,
+        "improved_queries": 82,
+        "lora_mean": 0.5642076502732241,
+        "metric": "Top1_ID_accuracy",
+        "relative_difference_percent": 0.8957654723127036,
+        "unchanged_queries": 4250
+      },
+      {
+        "absolute_difference": 0.0028081360048573165,
+        "base_mean": 0.5701275045537341,
+        "ci95_high": 0.00614848967820278,
+        "ci95_high_percentage_points": 0.6148489678202781,
+        "ci95_low": -0.0005312689738919247,
+        "ci95_low_percentage_points": -0.05312689738919247,
+        "degraded_queries": 57,
+        "difference_percentage_points": 0.2808136004857317,
+        "improved_queries": 64,
+        "lora_mean": 0.5729356405585914,
+        "metric": "Recall@5",
+        "relative_difference_percent": 0.492545260915868,
+        "unchanged_queries": 4271
+      },
+      {
+        "absolute_difference": 0.004174256223436552,
+        "base_mean": 0.6287188828172435,
+        "ci95_high": 0.007285974499089252,
+        "ci95_high_percentage_points": 0.7285974499089253,
+        "ci95_low": 0.0010625379477838496,
+        "ci95_low_percentage_points": 0.10625379477838495,
+        "degraded_queries": 41,
+        "difference_percentage_points": 0.41742562234365516,
+        "improved_queries": 73,
+        "lora_mean": 0.63289313904068,
+        "metric": "Recall@10",
+        "relative_difference_percent": 0.6639304683727668,
+        "unchanged_queries": 4278
+      },
+      {
+        "absolute_difference": 0.004007409443860684,
+        "base_mean": 0.561398636988798,
+        "ci95_high": 0.006163014827930249,
+        "ci95_high_percentage_points": 0.6163014827930249,
+        "ci95_low": 0.0018737296869353684,
+        "ci95_low_percentage_points": 0.18737296869353684,
+        "degraded_queries": 259,
+        "difference_percentage_points": 0.40074094438606844,
+        "improved_queries": 469,
+        "lora_mean": 0.5654060464326586,
+        "metric": "NDCG@10",
+        "relative_difference_percent": 0.7138260016724349,
+        "unchanged_queries": 3664
+      },
+      {
+        "absolute_difference": 0.0043779996819614305,
+        "base_mean": 0.6375547532309827,
+        "ci95_high": 0.0075299945608176535,
+        "ci95_high_percentage_points": 0.7529994560817653,
+        "ci95_low": 0.0012510661520224358,
+        "ci95_low_percentage_points": 0.1251066152022436,
+        "degraded_queries": 199,
+        "difference_percentage_points": 0.43779996819614303,
+        "improved_queries": 350,
+        "lora_mean": 0.6419327529129442,
+        "metric": "MRR@10",
+        "relative_difference_percent": 0.6866860704550821,
+        "unchanged_queries": 3843
+      }
+    ],
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "LoRA B_matched minus A_metadata": {
+    "bootstrap": {
+      "across_columns_95ci": [
+        0.041941606280303974,
+        0.06581493511110657
+      ],
+      "across_columns_mean": 0.05397881664224061,
+      "mean": [
+        0.025045537340619307,
+        0.06587735276259865,
+        0.08200516089860353,
+        0.05073551207175758,
+        0.046230520137623896
+      ],
+      "per_column_95ci": [
+        [
+          0.008879781420765027,
+          0.04121129326047359
+        ],
+        [
+          0.053013054037644246,
+          0.07874165148755306
+        ],
+        [
+          0.06929265330904674,
+          0.09490835610200364
+        ],
+        [
+          0.03945215609001961,
+          0.06203270723279009
+        ],
+        [
+          0.03216420051247576,
+          0.060267213385809655
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "exploratory": true,
+    "metrics": [
+      {
+        "absolute_difference": 0.025045537340619307,
+        "base_mean": 0.37067395264116576,
+        "ci95_high": 0.04121129326047359,
+        "ci95_high_percentage_points": 4.121129326047359,
+        "ci95_low": 0.008879781420765027,
+        "ci95_low_percentage_points": 0.8879781420765027,
+        "degraded_queries": 612,
+        "difference_percentage_points": 2.504553734061931,
+        "improved_queries": 722,
+        "lora_mean": 0.3957194899817851,
+        "metric": "Top1_ID_accuracy",
+        "relative_difference_percent": 6.756756756756756,
+        "unchanged_queries": 3058
+      },
+      {
+        "absolute_difference": 0.06587735276259866,
+        "base_mean": 0.38733302975106254,
+        "ci95_high": 0.07874165148755306,
+        "ci95_high_percentage_points": 7.874165148755306,
+        "ci95_low": 0.053013054037644246,
+        "ci95_low_percentage_points": 5.301305403764425,
+        "degraded_queries": 583,
+        "difference_percentage_points": 6.587735276259867,
+        "improved_queries": 967,
+        "lora_mean": 0.4532103825136612,
+        "metric": "Recall@5",
+        "relative_difference_percent": 17.00793573038111,
+        "unchanged_queries": 2842
+      },
+      {
+        "absolute_difference": 0.08200516089860352,
+        "base_mean": 0.4367030965391621,
+        "ci95_high": 0.09490835610200364,
+        "ci95_high_percentage_points": 9.490835610200364,
+        "ci95_low": 0.06929265330904674,
+        "ci95_low_percentage_points": 6.929265330904674,
+        "degraded_queries": 555,
+        "difference_percentage_points": 8.200516089860352,
+        "improved_queries": 1038,
+        "lora_mean": 0.5187082574377656,
+        "metric": "Recall@10",
+        "relative_difference_percent": 18.778241223496696,
+        "unchanged_queries": 2799
+      },
+      {
+        "absolute_difference": 0.05073551207175759,
+        "base_mean": 0.38264110908978277,
+        "ci95_high": 0.06203270723279009,
+        "ci95_high_percentage_points": 6.203270723279009,
+        "ci95_low": 0.03945215609001961,
+        "ci95_low_percentage_points": 3.945215609001961,
+        "degraded_queries": 1051,
+        "difference_percentage_points": 5.073551207175759,
+        "improved_queries": 1456,
+        "lora_mean": 0.43337662116154035,
+        "metric": "NDCG@10",
+        "relative_difference_percent": 13.259294640987731,
+        "unchanged_queries": 1885
+      },
+      {
+        "absolute_difference": 0.04623052013762396,
+        "base_mean": 0.4339988651805592,
+        "ci95_high": 0.060267213385809655,
+        "ci95_high_percentage_points": 6.026721338580965,
+        "ci95_low": 0.03216420051247576,
+        "ci95_low_percentage_points": 3.2164200512475762,
+        "degraded_queries": 974,
+        "difference_percentage_points": 4.623052013762396,
+        "improved_queries": 1346,
+        "lora_mean": 0.4802293853181831,
+        "metric": "MRR@10",
+        "relative_difference_percent": 10.652221433434024,
+        "unchanged_queries": 2072
+      }
+    ],
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "LoRA C_native8k minus B_matched": {
+    "bootstrap": {
+      "across_columns_95ci": [
+        -0.00919859986936676,
+        -0.0018869907880280055
+      ],
+      "across_columns_mean": -0.005516846414478595,
+      "mean": [
+        -0.006830601092896175,
+        -0.0047814207650273225,
+        -0.003946569520340012,
+        -0.0046172394161926745,
+        -0.007408401277936784
+      ],
+      "per_column_95ci": [
+        [
+          -0.012750455373406194,
+          -0.0009107468123861566
+        ],
+        [
+          -0.009411050394656952,
+          -0.00030358227079538584
+        ],
+        [
+          -0.008576199149969642,
+          0.0005692167577413476
+        ],
+        [
+          -0.008044341646218903,
+          -0.0012147760989571878
+        ],
+        [
+          -0.011848666948564486,
+          -0.0029553869589730277
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "exploratory": true,
+    "metrics": [
+      {
+        "absolute_difference": -0.006830601092896175,
+        "base_mean": 0.3957194899817851,
+        "ci95_high": -0.0009107468123861566,
+        "ci95_high_percentage_points": -0.09107468123861566,
+        "ci95_low": -0.012750455373406194,
+        "ci95_low_percentage_points": -1.2750455373406193,
+        "degraded_queries": 105,
+        "difference_percentage_points": -0.6830601092896175,
+        "improved_queries": 75,
+        "lora_mean": 0.3888888888888889,
+        "metric": "Top1_ID_accuracy",
+        "relative_difference_percent": -1.726121979286536,
+        "unchanged_queries": 4212
+      },
+      {
+        "absolute_difference": -0.0047814207650273225,
+        "base_mean": 0.4532103825136612,
+        "ci95_high": -0.00030358227079538584,
+        "ci95_high_percentage_points": -0.030358227079538586,
+        "ci95_low": -0.009411050394656952,
+        "ci95_low_percentage_points": -0.9411050394656952,
+        "degraded_queries": 124,
+        "difference_percentage_points": -0.47814207650273227,
+        "improved_queries": 101,
+        "lora_mean": 0.4484289617486339,
+        "metric": "Recall@5",
+        "relative_difference_percent": -1.0550113036925397,
+        "unchanged_queries": 4167
+      },
+      {
+        "absolute_difference": -0.003946569520340012,
+        "base_mean": 0.5187082574377656,
+        "ci95_high": 0.0005692167577413476,
+        "ci95_high_percentage_points": 0.05692167577413476,
+        "ci95_low": -0.008576199149969642,
+        "ci95_low_percentage_points": -0.8576199149969642,
+        "degraded_queries": 130,
+        "difference_percentage_points": -0.3946569520340012,
+        "improved_queries": 110,
+        "lora_mean": 0.5147616879174256,
+        "metric": "Recall@10",
+        "relative_difference_percent": -0.7608457092691492,
+        "unchanged_queries": 4152
+      },
+      {
+        "absolute_difference": -0.0046172394161926675,
+        "base_mean": 0.43337662116154035,
+        "ci95_high": -0.0012147760989571878,
+        "ci95_high_percentage_points": -0.12147760989571878,
+        "ci95_low": -0.008044341646218903,
+        "ci95_low_percentage_points": -0.8044341646218903,
+        "degraded_queries": 314,
+        "difference_percentage_points": -0.4617239416192668,
+        "improved_queries": 521,
+        "lora_mean": 0.4287593817453477,
+        "metric": "NDCG@10",
+        "relative_difference_percent": -1.0654103591969257,
+        "unchanged_queries": 3557
+      },
+      {
+        "absolute_difference": -0.007408401277936797,
+        "base_mean": 0.4802293853181831,
+        "ci95_high": -0.0029553869589730277,
+        "ci95_high_percentage_points": -0.29553869589730275,
+        "ci95_low": -0.011848666948564486,
+        "ci95_low_percentage_points": -1.1848666948564486,
+        "degraded_queries": 277,
+        "difference_percentage_points": -0.7408401277936797,
+        "improved_queries": 434,
+        "lora_mean": 0.4728209840402463,
+        "metric": "MRR@10",
+        "relative_difference_percent": -1.5426797077459662,
+        "unchanged_queries": 3681
+      }
+    ],
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  }
+}

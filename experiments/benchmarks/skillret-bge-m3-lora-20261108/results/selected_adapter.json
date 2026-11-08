@@ -1,0 +1,9 @@
+{
+  "adapter_relative_path": "checkpoints/step-00950",
+  "adapter_sha256": "871315e997ff95a358a73e75cc7942650604c628e346abf14c682916fb10d0fd",
+  "official_test_inspected": false,
+  "optimizer_step": 950,
+  "selection_metric": "training-derived validation NDCG@10",
+  "validation_candidate_manifest_sha256": "363093a9c028fe01ab722b83f7eff07196df29f386c3591a9db60253c2c581b4",
+  "validation_ndcg10": 0.8707732279365489
+}

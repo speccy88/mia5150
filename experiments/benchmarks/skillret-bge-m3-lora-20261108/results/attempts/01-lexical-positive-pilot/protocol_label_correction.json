@@ -1,0 +1,17 @@
+{
+  "changed_fields": [
+    "source_repository_base_revision",
+    "primary_contrast",
+    "secondary_contrasts",
+    "precision"
+  ],
+  "inference_inputs_and_metric_formulas_unchanged": true,
+  "main_training_started": false,
+  "new_sha256": "4d7391f93d56f9f77e3a20a5bb7381ca16a32ba221fb0135b0a77b3f91b44605",
+  "official_scores_inspected": false,
+  "old_sha256": "85ac233a7e7fa5e38b48d62f1d0dbf699afc467adf09652730bc48e631fef76c",
+  "reason": "Correct inherited baseline comparison labels to the user-requested paired base-versus-LoRA primary comparison; clarify actual mixed adapter dtype",
+  "stage": "Train-only mining after discarded smoke, before first main optimizer step",
+  "training_hyperparameters_unchanged": true,
+  "utc": "2026-11-08T16:19:26.933907+00:00"
+}

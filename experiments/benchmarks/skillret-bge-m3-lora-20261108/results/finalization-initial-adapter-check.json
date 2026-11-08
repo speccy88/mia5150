@@ -1,0 +1,10 @@
+{
+  "scope": "Completed selected-recipe training, exact adapter inference and post-run checks before publication",
+  "steps": [
+    {
+      "step": "adapter_tensor_check",
+      "exit_code": 1,
+      "wall_s": 0.17827586700150277
+    }
+  ]
+}

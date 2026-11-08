@@ -1,0 +1,24 @@
+{
+  "document_format": "stripped name | stripped description | stripped skill_md",
+  "historical_retrieval_median_s": 0.06977254699995683,
+  "historical_retrieval_p95_s": 0.1347771138499695,
+  "max_seq_length": 32768,
+  "median_query_total_s_at_new_boundary": null,
+  "model": "ThakiCloud/SKILLRET-Embedding-0.6B",
+  "model_revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+  "pooling": "lasttoken",
+  "query_prefix": "Instruct: Given a skill search query, retrieve relevant skills that match the query\nQuery: ",
+  "runtime": {
+    "accelerate": "1.15.0",
+    "numpy": "2.5.3",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1"
+  },
+  "scope": "Historical values exist, but source/instruction/pooling/ties/runtime and latency persistence boundary differ from this paired study",
+  "source": "experiments/benchmarks/skillret-embedding-jev-fusion/results/baseline_skillret_06b.json",
+  "source_sha256": "06af8037a9a606703cbd4e9dde821fc0375642b82d9032e7aea1c15512710301",
+  "tie_rule": "catalogue source order, stable descending sort",
+  "weight_dtype": "float16"
+}

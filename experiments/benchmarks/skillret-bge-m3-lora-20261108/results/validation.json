@@ -1,0 +1,54 @@
+{
+  "candidate_ids_and_order_identical_to_qwen": true,
+  "completed_requested_scope": true,
+  "configurations": {
+    "A_metadata": {
+      "official_aggregate_independently_checked": true,
+      "official_queries_independently_checked": 4392,
+      "scaling_sizes_independently_checked": [
+        50,
+        100,
+        250,
+        500,
+        1000,
+        2000,
+        5000,
+        6006
+      ]
+    },
+    "B_matched": {
+      "official_aggregate_independently_checked": true,
+      "official_queries_independently_checked": 4392,
+      "scaling_sizes_independently_checked": [
+        50,
+        100,
+        250,
+        500,
+        1000,
+        2000,
+        5000,
+        6006
+      ]
+    },
+    "C_native8k": {
+      "official_aggregate_independently_checked": true,
+      "official_queries_independently_checked": 4392,
+      "scaling_sizes_independently_checked": [
+        50,
+        100,
+        250,
+        500,
+        1000,
+        2000,
+        5000,
+        6006
+      ]
+    }
+  },
+  "coverage_and_multirelevant_denominators_checked": true,
+  "metrics_independent_from_saved_rankings": true,
+  "official_qrel_pairs": 7187,
+  "official_query_denominator": 4392,
+  "sources_hashed_and_complete": true,
+  "status": "passed_with_scope_recorded"
+}

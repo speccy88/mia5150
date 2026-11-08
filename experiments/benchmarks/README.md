@@ -4,6 +4,7 @@
 
 | Study | Start here |
 | --- | --- |
+| BGE-M3 LoRA, exact paired before/after A/B/C | [Report, adapters and reusable vectors](skillret-bge-m3-lora-20261108/REPORT.md) |
 | BGE-M3 dense metadata, matched Qwen spans and native 8K | [Report, results and reusable vectors](skillret-bge-m3-fulltext-20261108/REPORT.md) |
 | Qwen3 Embedding 8B Q4_K_M, complete full text | [Report, results and reusable vectors](skillret-qwen3-embedding-8b-q4km-fulltext/REPORT.md) |
 | Skill discovery listing, OAuth variant | [skill-discovery-oauth-v1-20261103/REPORT.md](skill-discovery-oauth-v1-20261103/REPORT.md) |

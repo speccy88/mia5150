@@ -1,0 +1,35 @@
+{
+  "absolute_tolerance": 3e-05,
+  "adapter_zero_initialization": true,
+  "fresh_reference_baseline_inference": false,
+  "minimum_cosine": 0.999998,
+  "queries": [
+    {
+      "cosine": 1.0,
+      "maximum_absolute_error": 0.0,
+      "query_id": "q-00001",
+      "query_sha256": "9607ff9ece3be4c889ad2e58476bdc59af58f77f9e8b998309360089e3b9157b"
+    },
+    {
+      "cosine": 1.0,
+      "maximum_absolute_error": 0.0,
+      "query_id": "q-00002",
+      "query_sha256": "ecc2bbd4195bd3f3f42936b6949725163cc01235955c5f35871b0ef5ba110ab7"
+    },
+    {
+      "cosine": 1.0000001192092896,
+      "maximum_absolute_error": 0.0,
+      "query_id": "q-01283",
+      "query_sha256": "cf132a76ca017c43a4faa502853e7b26aba9cfff1bfd0916f1cacae06e596e8a"
+    },
+    {
+      "cosine": 1.0000001192092896,
+      "maximum_absolute_error": 0.0,
+      "query_id": "q-02313",
+      "query_sha256": "6b0085545b28e80e1b55d139778e92db274882d57a4e4679f61c94f0bcac8130"
+    }
+  ],
+  "reference": "Previously completed baseline lossless official-query vectors",
+  "status": "passed",
+  "unmodified_peft_encoder_only": true
+}

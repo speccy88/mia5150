@@ -1,0 +1,9 @@
+{
+  "all_adapted_queries_completed": true,
+  "all_baseline_artifact_hashes_unchanged": true,
+  "all_three_document_manifest_bytes_identical": true,
+  "candidate_bytes_identical": true,
+  "official_query_ids_identical": true,
+  "scaling_queries_golds_and_order_identical": true,
+  "status": "passed"
+}

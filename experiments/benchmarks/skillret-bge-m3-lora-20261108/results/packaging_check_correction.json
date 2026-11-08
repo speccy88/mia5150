@@ -1,0 +1,8 @@
+{
+  "adapter_bytes_changed": false,
+  "cause": "PEFT serializes 48 fully qualified attention projection names as the equivalent two suffixes query/value",
+  "correction": "Validate all 96 LoRA tensors, exact shapes and the complete 24-layer query/value coverage rather than serialized list length",
+  "initial_check_status": "rejected serialized target list length",
+  "official_test_run_before_correction": false,
+  "training_repeated": false
+}

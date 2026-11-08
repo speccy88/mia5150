@@ -1,0 +1,18 @@
+{
+  "adapter_gradients_present": true,
+  "cuda_peak_allocated_bytes": 1308265472,
+  "cuda_peak_reserved_bytes": 1669332992,
+  "document_max_tokens": 384,
+  "encoded_sequences": 3,
+  "finite_gradient_norm": true,
+  "finite_loss": true,
+  "forward_backward_optimizer_step": true,
+  "frozen_backbone_gradients_none": true,
+  "gradient_norm": 0.10145647078752518,
+  "input_tokens_in_test": 819,
+  "loss": 0.007102012634277344,
+  "no_cpu_fallback": true,
+  "physical_query_groups": 1,
+  "query_max_tokens": 256,
+  "status": "passed"
+}

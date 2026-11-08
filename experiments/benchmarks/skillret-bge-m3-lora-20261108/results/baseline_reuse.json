@@ -1,0 +1,11 @@
+{
+  "all_artifact_hashes_verified": true,
+  "baseline_rerun": false,
+  "commit": "0c7a0cfe868aac8e5122680b53dc3afab2ae72f9",
+  "completed_configurations": [
+    "A_metadata",
+    "B_matched",
+    "C_native8k"
+  ],
+  "manifest_sha256": "503e6c0d1d55ab07dd001f178cb1f0657885dbc7e8782f6f35fec638c72edad3"
+}

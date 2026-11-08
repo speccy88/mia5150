@@ -32,3 +32,8 @@
 # BGE-M3 source/measurement bytes and lossless dense vector snapshot.
 /experiments/benchmarks/skillret-bge-m3-fulltext-20261108/** -text
 /experiments/benchmarks/skillret-bge-m3-fulltext-20261108/vectors/*.npz filter=lfs diff=lfs merge=lfs -text
+
+# LoRA study: preserve measured bytes and publish only compact adapters/vectors.
+/experiments/benchmarks/skillret-bge-m3-lora-20261108/** -text
+/experiments/benchmarks/skillret-bge-m3-lora-20261108/vectors/*.npz filter=lfs diff=lfs merge=lfs -text
+/experiments/benchmarks/skillret-bge-m3-lora-20261108/adapters/**/*.safetensors filter=lfs diff=lfs merge=lfs -text

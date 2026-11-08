@@ -1,6 +1,6 @@
 # SkillRet benchmark catalog
 
-This catalog covers **21 studies and bounded pilots**, including the completed local Qwen3 and BGE-M3 full-text studies below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
+This catalog covers **22 studies and bounded pilots**, including the completed local Qwen3 and BGE-M3 full-text studies below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
 Historical table reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare that historical table. The added row 17 records new local inference on 24 October.
 
@@ -109,6 +109,29 @@ wall reuses 5,280 shared chunks and is not a standalone fresh index cost.
 The small exposed scaling panel reverses the official ordering at larger
 sizes; it cannot establish blinded generalization. Sparse/hybrid/ColBERT
 arms remain unattempted. Historical measurements are unchanged.
+
+## 22. BGE-M3 LoRA: paired SkillRet before/after — 8 November 2026
+
+[Report, adapters and reusable vectors](../experiments/benchmarks/skillret-bge-m3-lora-20261108/REPORT.md).
+Local Ubuntu / RTX 2060 SUPER 8 GB, pinned BGE-M3 FP16 backbone and 786,432
+FP32 rank-8 query/value adapter parameters. Exact training split hashes and
+skill-disjoint grouping leave 51,208 eligible training queries; 128 heldout
+queries against 1,014 skills select the checkpoint. The initial 200-step
+lexical-positive pilot failed its validation gate and remains archived without
+official test evaluation. A declared balanced lead-passage / lower-LR recovery
+completed **1,100 optimizer steps** with validation early stopping,
+selecting step **950** before test evaluation.
+All three views complete the exact eight scaling pools and all 4,392 official
+queries / 7,187 judgments. LoRA official NDCG@10 A/B/C is **0.382641 / 0.433377 / 0.428759**.
+Primary B-minus-matching-base difference: **-0.128022**, paired 95% interval
+**[-0.137472, -0.118557]**. All 480 scaling and 13,176 official query/configuration cases are
+independently rescored and reproduced from lossless float32 LFS vectors.
+Twelve PNG/SVG figures, every ranked ID/score, source hashes, exact executed
+training snapshots, portable best/final adapters and recovery provenance are
+included. Baseline evidence is unchanged; no completed base official inference
+was rerun. Training/validation use bounded first passages while B/C test inputs
+retain complete original source. Public exposure, incomplete judgments,
+validation selection and gold-conditioned small scaling pools limit inference.
 
 ## Source snapshot
 

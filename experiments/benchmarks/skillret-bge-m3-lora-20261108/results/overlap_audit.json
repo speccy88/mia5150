@@ -1,0 +1,29 @@
+{
+  "additional_train_queries_near_validation_removed": 0,
+  "eligible_training_queries": 51208,
+  "excluded_queries": {
+    "cross_group_or_quarantined_positive": 9738
+  },
+  "heldout_unused_queries": 2185,
+  "near_duplicate_method": "Exhaustive sparse TF-IDF unigram/bigram cosine >=0.95, 100000 feature cap; lexical proxy, not a semantic-duplicate guarantee",
+  "positive_manifest_sha256": "927137d65c64eb92721924f0917944cd9aba69f13613da99bdc31581563f1d51",
+  "positive_selection": "Same first explicit source passage for positive and negative skills; metadata plus beginning, 382 content tokens maximum",
+  "quarantined_training_skills": 0,
+  "raw_counts": {
+    "train_qrels": 127190,
+    "train_queries": 63259,
+    "train_skills": 10123
+  },
+  "skill_identity_overlap_with_test": {},
+  "split_method": "Seed42 hash of entire ID/source URL/normalized-body duplicate component; 10% heldout components; mixed-positive queries excluded",
+  "test_qrels_read": false,
+  "test_text_use": "Overlap audit and fixed quarantine only; no test relevance or retrieval scores inspected",
+  "test_used_for_selection_or_mining": false,
+  "train_duplicate_identity_groups": 0,
+  "training_skills": 9109,
+  "training_test_query_matches": [],
+  "training_validation_query_matches": [],
+  "training_view": "382-content-token Markdown chunks, 64 overlap; queries explicitly select first <=254-token source span; complete test inputs remain unchanged",
+  "validation_queries_used": 128,
+  "validation_skills": 1014
+}

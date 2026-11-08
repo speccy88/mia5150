@@ -1,0 +1,30 @@
+[
+  {
+    "adapter_only": true,
+    "all_48_encoder_query_value_modules_verified_from_tensors": true,
+    "dtype": "float32",
+    "finite": true,
+    "kind": "best",
+    "portable_pinned_base": true,
+    "serialized_target_suffixes": [
+      "query",
+      "value"
+    ],
+    "tensor_count": 96,
+    "trainable_parameters": 786432
+  },
+  {
+    "adapter_only": true,
+    "all_48_encoder_query_value_modules_verified_from_tensors": true,
+    "dtype": "float32",
+    "finite": true,
+    "kind": "final",
+    "portable_pinned_base": true,
+    "serialized_target_suffixes": [
+      "query",
+      "value"
+    ],
+    "tensor_count": 96,
+    "trainable_parameters": 786432
+  }
+]

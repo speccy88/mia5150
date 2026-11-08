@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "reason": "Correct final source block boundary to exclude reference rows; no model inference or training scores generated",
+      "stage": "CPU lexical overlap audit",
+      "status": "interrupted_before_dataset_completion"
+    },
+    {
+      "all_frozen_input_manifests_verified": true,
+      "stage": "Corrected CPU overlap audit and source-passage preparation",
+      "status": "completed"
+    }
+  ],
+  "baseline_files_modified": false,
+  "no_extra_official_base_inference": true
+}

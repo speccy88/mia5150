@@ -1,0 +1,24 @@
+{
+  "official_test_scores_used": false,
+  "recipes": [
+    {
+      "independent_metrics_passed": true,
+      "pilot_continuation_rule_passed": true,
+      "queries_per_checkpoint": 128,
+      "recipe": "selected_recipe",
+      "selected_step": 950,
+      "selection_rule_passed": true,
+      "validation_checkpoints": 23
+    },
+    {
+      "independent_metrics_passed": true,
+      "pilot_continuation_rule_passed": true,
+      "queries_per_checkpoint": 128,
+      "recipe": "discarded_pilot",
+      "selected_step": 200,
+      "selection_rule_passed": true,
+      "validation_checkpoints": 3
+    }
+  ],
+  "status": "passed"
+}

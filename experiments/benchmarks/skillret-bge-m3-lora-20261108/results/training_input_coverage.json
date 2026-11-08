@@ -1,0 +1,11 @@
+{
+  "known_positive_pairs": 99294,
+  "maximum_selected_positive_content_tokens": 382,
+  "maximum_selected_query_content_tokens": 254,
+  "mean_selected_positive_content_tokens": 324.7649404797873,
+  "mean_selected_query_content_tokens": 111.58424464927356,
+  "positive_windows_shorter_than_complete_skill": 93628,
+  "query_windows_with_omitted_trailing_source": 31,
+  "scope": "Explicit training views only; every baseline-defined final evaluation input remains complete",
+  "training_query_ids": 51208
+}

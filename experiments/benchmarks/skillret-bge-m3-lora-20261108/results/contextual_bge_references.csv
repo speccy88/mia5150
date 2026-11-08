@@ -1,0 +1,3 @@
+model,NDCG@5,NDCG@10,Recall@10,Completeness@10,evidence,source,source_sha256,questions_reported,skills_reported
+bge-small-en-v1.5,0.5257,0.5451,0.6001,0.4397,"Published official README reference, not locally rerun here; document/protocol not matched to complete-source max chunks",experiments/benchmarks/skillret-local-metadata-20261005/official/README.md,c2d0324529b2b74c697f697ab0d3f71fe67323b6e970ed9d2271473d46f15e65,4392,6006
+bge-large-en-v1.5,0.5704,0.59,0.6437,0.4834,"Published official README reference, not locally rerun here; document/protocol not matched to complete-source max chunks",experiments/benchmarks/skillret-local-metadata-20261005/official/README.md,c2d0324529b2b74c697f697ab0d3f71fe67323b6e970ed9d2271473d46f15e65,4392,6006

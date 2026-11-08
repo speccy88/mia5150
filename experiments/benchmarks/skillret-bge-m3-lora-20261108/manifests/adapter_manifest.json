@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "best",
+    "checkpoint": "checkpoints/step-00950",
+    "weights_sha256": "871315e997ff95a358a73e75cc7942650604c628e346abf14c682916fb10d0fd",
+    "config_sha256": "657adadd6d38a52d247a5a99686abd43957c9587f5c74b7c35883a8bdc22f736",
+    "bytes": 3158808,
+    "base_weights_included": false
+  },
+  {
+    "kind": "final",
+    "checkpoint": "checkpoints/step-01100",
+    "weights_sha256": "966ab8d71ae31dc3c687c9bf6f85c776a562b76acc773bd2d281ed0748ab9898",
+    "config_sha256": "657adadd6d38a52d247a5a99686abd43957c9587f5c74b7c35883a8bdc22f736",
+    "bytes": 3158808,
+    "base_weights_included": false
+  }
+]

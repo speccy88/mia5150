@@ -1,0 +1,14 @@
+{
+  "all_examples_have_hard_and_random_negative": true,
+  "batch_size": 8,
+  "candidate_skills": 9109,
+  "frozen_base": true,
+  "known_positives_filtered": true,
+  "negative_manifest_sha256": "622f74f439d81d12ac2a384653295c00a23f7fc6073081260f499956767cc888",
+  "not_an_official_baseline_rerun": true,
+  "queries": 51208,
+  "query_max_tokens": 256,
+  "representative_document_max_tokens": 384,
+  "training_only": true,
+  "wall_s": 482.22985133699694
+}

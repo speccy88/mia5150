@@ -1,0 +1,45 @@
+{
+  "all_lora_phases": {
+    "gpu_peak_sampled_mib": 1782.0,
+    "gpu_peak_temperature_c": 67.0,
+    "gpu_utilization_mean_percent": 50.21591460456089,
+    "host_min_available_gib": 3.5332260131835938,
+    "host_peak_used_gib": 3.3486862182617188,
+    "host_swap_in_delta_bytes": 397312,
+    "host_swap_out_delta_bytes": 2519040,
+    "samples": 8244
+  },
+  "caveat": "Whole-host counters and whole-device samples; no electricity measurement; CUDA allocator peaks are separately saved",
+  "final_inference": {
+    "gpu_peak_sampled_mib": 1736.0,
+    "gpu_peak_temperature_c": 67.0,
+    "gpu_utilization_mean_percent": 40.056814921090385,
+    "host_min_available_gib": 4.241119384765625,
+    "host_peak_used_gib": 2.6407203674316406,
+    "host_swap_in_delta_bytes": 180224,
+    "host_swap_out_delta_bytes": 569344,
+    "samples": 3485
+  },
+  "main_training": {
+    "gpu_peak_sampled_mib": 1782.0,
+    "gpu_peak_temperature_c": 65.0,
+    "gpu_utilization_mean_percent": 55.61892816419612,
+    "host_min_available_gib": 3.5332260131835938,
+    "host_peak_used_gib": 3.3486862182617188,
+    "host_swap_in_delta_bytes": 0,
+    "host_swap_out_delta_bytes": 0,
+    "samples": 4385
+  },
+  "sample_interval_s": 1,
+  "smoke": {
+    "gpu_peak_sampled_mib": 1782.0,
+    "gpu_peak_temperature_c": 64.0,
+    "gpu_utilization_mean_percent": 42.083333333333336,
+    "host_min_available_gib": 3.7711868286132812,
+    "host_peak_used_gib": 3.1107406616210938,
+    "host_swap_in_delta_bytes": 0,
+    "host_swap_out_delta_bytes": 0,
+    "samples": 24
+  },
+  "training_only_mining": null
+}

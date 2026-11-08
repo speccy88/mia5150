@@ -1,0 +1,917 @@
+{
+  "adapter_updated": true,
+  "after": [
+    {
+      "negative": 0.33328524231910706,
+      "positive": 0.6686020493507385,
+      "query_id": "q-train-000001"
+    },
+    {
+      "negative": 0.3847723603248596,
+      "positive": 0.4657343924045563,
+      "query_id": "q-train-000003"
+    },
+    {
+      "negative": 0.24364174902439117,
+      "positive": 0.5664658546447754,
+      "query_id": "q-train-000004"
+    },
+    {
+      "negative": 0.26706239581108093,
+      "positive": 0.602455735206604,
+      "query_id": "q-train-000006"
+    },
+    {
+      "negative": 0.3746362328529358,
+      "positive": 0.6229339241981506,
+      "query_id": "q-train-000007"
+    },
+    {
+      "negative": 0.3200381398200989,
+      "positive": 0.6195781826972961,
+      "query_id": "q-train-000008"
+    },
+    {
+      "negative": 0.407651424407959,
+      "positive": 0.6374373435974121,
+      "query_id": "q-train-000009"
+    },
+    {
+      "negative": 0.414495587348938,
+      "positive": 0.6833342909812927,
+      "query_id": "q-train-000010"
+    },
+    {
+      "negative": 0.3142959177494049,
+      "positive": 0.5963548421859741,
+      "query_id": "q-train-000011"
+    },
+    {
+      "negative": 0.36974459886550903,
+      "positive": 0.6218435764312744,
+      "query_id": "q-train-000012"
+    },
+    {
+      "negative": 0.24740129709243774,
+      "positive": 0.5963794589042664,
+      "query_id": "q-train-000013"
+    },
+    {
+      "negative": 0.33945783972740173,
+      "positive": 0.7256165146827698,
+      "query_id": "q-train-000014"
+    },
+    {
+      "negative": 0.37181705236434937,
+      "positive": 0.4871797263622284,
+      "query_id": "q-train-000015"
+    },
+    {
+      "negative": 0.41026169061660767,
+      "positive": 0.6555804014205933,
+      "query_id": "q-train-000016"
+    },
+    {
+      "negative": 0.31020107865333557,
+      "positive": 0.5994685888290405,
+      "query_id": "q-train-000017"
+    },
+    {
+      "negative": 0.3365248441696167,
+      "positive": 0.5841825604438782,
+      "query_id": "q-train-000018"
+    },
+    {
+      "negative": 0.42562752962112427,
+      "positive": 0.6430359482765198,
+      "query_id": "q-train-000019"
+    },
+    {
+      "negative": 0.4550193250179291,
+      "positive": 0.7315263152122498,
+      "query_id": "q-train-000021"
+    },
+    {
+      "negative": 0.34368473291397095,
+      "positive": 0.5944762229919434,
+      "query_id": "q-train-000023"
+    },
+    {
+      "negative": 0.33496543765068054,
+      "positive": 0.35478901863098145,
+      "query_id": "q-train-000024"
+    },
+    {
+      "negative": 0.327687531709671,
+      "positive": 0.5478726625442505,
+      "query_id": "q-train-000025"
+    },
+    {
+      "negative": 0.3598214387893677,
+      "positive": 0.6449443101882935,
+      "query_id": "q-train-000026"
+    },
+    {
+      "negative": 0.3696341812610626,
+      "positive": 0.6626335382461548,
+      "query_id": "q-train-000027"
+    },
+    {
+      "negative": 0.26214390993118286,
+      "positive": 0.5003973841667175,
+      "query_id": "q-train-000028"
+    },
+    {
+      "negative": 0.3011285364627838,
+      "positive": 0.6392101645469666,
+      "query_id": "q-train-000029"
+    },
+    {
+      "negative": 0.3211623728275299,
+      "positive": 0.7048666477203369,
+      "query_id": "q-train-000030"
+    },
+    {
+      "negative": 0.37696611881256104,
+      "positive": 0.6299341917037964,
+      "query_id": "q-train-000031"
+    },
+    {
+      "negative": 0.3525903522968292,
+      "positive": 0.385606586933136,
+      "query_id": "q-train-000032"
+    },
+    {
+      "negative": 0.3143584728240967,
+      "positive": 0.6662814617156982,
+      "query_id": "q-train-000034"
+    },
+    {
+      "negative": 0.42229241132736206,
+      "positive": 0.466635525226593,
+      "query_id": "q-train-000035"
+    },
+    {
+      "negative": 0.28781139850616455,
+      "positive": 0.22909824550151825,
+      "query_id": "q-train-000036"
+    },
+    {
+      "negative": 0.4028749167919159,
+      "positive": 0.662610650062561,
+      "query_id": "q-train-000037"
+    }
+  ],
+  "before": [
+    {
+      "negative": 0.4060691297054291,
+      "positive": 0.6867552995681763,
+      "query_id": "q-train-000001"
+    },
+    {
+      "negative": 0.4973451495170593,
+      "positive": 0.4492012858390808,
+      "query_id": "q-train-000003"
+    },
+    {
+      "negative": 0.32768064737319946,
+      "positive": 0.5908223390579224,
+      "query_id": "q-train-000004"
+    },
+    {
+      "negative": 0.34731173515319824,
+      "positive": 0.619357705116272,
+      "query_id": "q-train-000006"
+    },
+    {
+      "negative": 0.45712774991989136,
+      "positive": 0.6539800763130188,
+      "query_id": "q-train-000007"
+    },
+    {
+      "negative": 0.4289933145046234,
+      "positive": 0.6386962532997131,
+      "query_id": "q-train-000008"
+    },
+    {
+      "negative": 0.47374409437179565,
+      "positive": 0.6381170749664307,
+      "query_id": "q-train-000009"
+    },
+    {
+      "negative": 0.5290254354476929,
+      "positive": 0.7162864208221436,
+      "query_id": "q-train-000010"
+    },
+    {
+      "negative": 0.3854212164878845,
+      "positive": 0.6156418919563293,
+      "query_id": "q-train-000011"
+    },
+    {
+      "negative": 0.4645381271839142,
+      "positive": 0.6735868453979492,
+      "query_id": "q-train-000012"
+    },
+    {
+      "negative": 0.331889808177948,
+      "positive": 0.6349171996116638,
+      "query_id": "q-train-000013"
+    },
+    {
+      "negative": 0.39116421341896057,
+      "positive": 0.720896303653717,
+      "query_id": "q-train-000014"
+    },
+    {
+      "negative": 0.4479723572731018,
+      "positive": 0.4777091443538666,
+      "query_id": "q-train-000015"
+    },
+    {
+      "negative": 0.4841535985469818,
+      "positive": 0.6690422296524048,
+      "query_id": "q-train-000016"
+    },
+    {
+      "negative": 0.394998162984848,
+      "positive": 0.6295953392982483,
+      "query_id": "q-train-000017"
+    },
+    {
+      "negative": 0.4035722017288208,
+      "positive": 0.607243001461029,
+      "query_id": "q-train-000018"
+    },
+    {
+      "negative": 0.5462624430656433,
+      "positive": 0.6826255917549133,
+      "query_id": "q-train-000019"
+    },
+    {
+      "negative": 0.504057765007019,
+      "positive": 0.739093542098999,
+      "query_id": "q-train-000021"
+    },
+    {
+      "negative": 0.4351651072502136,
+      "positive": 0.643482506275177,
+      "query_id": "q-train-000023"
+    },
+    {
+      "negative": 0.4474678337574005,
+      "positive": 0.3942885398864746,
+      "query_id": "q-train-000024"
+    },
+    {
+      "negative": 0.40959298610687256,
+      "positive": 0.5579586625099182,
+      "query_id": "q-train-000025"
+    },
+    {
+      "negative": 0.4341456890106201,
+      "positive": 0.6807825565338135,
+      "query_id": "q-train-000026"
+    },
+    {
+      "negative": 0.4487525224685669,
+      "positive": 0.6830892562866211,
+      "query_id": "q-train-000027"
+    },
+    {
+      "negative": 0.34525519609451294,
+      "positive": 0.5299995541572571,
+      "query_id": "q-train-000028"
+    },
+    {
+      "negative": 0.3718191385269165,
+      "positive": 0.6456809043884277,
+      "query_id": "q-train-000029"
+    },
+    {
+      "negative": 0.4017708897590637,
+      "positive": 0.7361537218093872,
+      "query_id": "q-train-000030"
+    },
+    {
+      "negative": 0.45972394943237305,
+      "positive": 0.6405730247497559,
+      "query_id": "q-train-000031"
+    },
+    {
+      "negative": 0.4409030079841614,
+      "positive": 0.42690449953079224,
+      "query_id": "q-train-000032"
+    },
+    {
+      "negative": 0.37822574377059937,
+      "positive": 0.6946307420730591,
+      "query_id": "q-train-000034"
+    },
+    {
+      "negative": 0.5042709112167358,
+      "positive": 0.4979144036769867,
+      "query_id": "q-train-000035"
+    },
+    {
+      "negative": 0.3935104012489319,
+      "positive": 0.2955343723297119,
+      "query_id": "q-train-000036"
+    },
+    {
+      "negative": 0.488645076751709,
+      "positive": 0.6888617873191833,
+      "query_id": "q-train-000037"
+    }
+  ],
+  "cuda_peak_allocated_bytes": 1334176256,
+  "cuda_peak_reserved_bytes": 1673527296,
+  "frozen_parameter_sha256_after": "ba32ed557c0a87cce7a87ea782a4f2c9a4ca91e6bcc0c73eb4fbd9d546e66bf2",
+  "frozen_parameter_sha256_before": "ba32ed557c0a87cce7a87ea782a4f2c9a4ca91e6bcc0c73eb4fbd9d546e66bf2",
+  "generalization_evidence": false,
+  "mean_separation_after": 0.24043781869113445,
+  "mean_separation_before": 0.18058895226567984,
+  "optimizer_steps": 64,
+  "real_training_queries": 32,
+  "reset_before_main_training": true,
+  "status": "passed",
+  "training_rows": [
+    {
+      "gradient_norm": 0.10145647078752518,
+      "gradient_scale": 128.0,
+      "loss": 0.007102012634277344,
+      "negative_cosine": 0.3923693895339966,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6395571231842041,
+      "step": 1
+    },
+    {
+      "gradient_norm": 8.876875877380371,
+      "gradient_scale": 128.0,
+      "loss": 1.2739715576171875,
+      "negative_cosine": 0.49123498797416687,
+      "optimizer_updated": true,
+      "positive_cosine": 0.44394204020500183,
+      "step": 2
+    },
+    {
+      "gradient_norm": 0.14801079034805298,
+      "gradient_scale": 128.0,
+      "loss": 0.01007843017578125,
+      "negative_cosine": 0.341161847114563,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5707769393920898,
+      "step": 3
+    },
+    {
+      "gradient_norm": 0.1288251131772995,
+      "gradient_scale": 128.0,
+      "loss": 0.00730133056640625,
+      "negative_cosine": 0.3539673984050751,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5997684001922607,
+      "step": 4
+    },
+    {
+      "gradient_norm": 0.3772220015525818,
+      "gradient_scale": 128.0,
+      "loss": 0.024221420288085938,
+      "negative_cosine": 0.42828553915023804,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6137046813964844,
+      "step": 5
+    },
+    {
+      "gradient_norm": 0.30710047483444214,
+      "gradient_scale": 128.0,
+      "loss": 0.022713661193847656,
+      "negative_cosine": 0.4192683696746826,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6079381704330444,
+      "step": 6
+    },
+    {
+      "gradient_norm": 0.597445011138916,
+      "gradient_scale": 128.0,
+      "loss": 0.05337810516357422,
+      "negative_cosine": 0.43981170654296875,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5849890112876892,
+      "step": 7
+    },
+    {
+      "gradient_norm": 1.4766653776168823,
+      "gradient_scale": 128.0,
+      "loss": 0.058043479919433594,
+      "negative_cosine": 0.5281314253807068,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6690016984939575,
+      "step": 8
+    },
+    {
+      "gradient_norm": 0.2904449999332428,
+      "gradient_scale": 128.0,
+      "loss": 0.019941329956054688,
+      "negative_cosine": 0.3976112902164459,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5928612947463989,
+      "step": 9
+    },
+    {
+      "gradient_norm": 0.18906232714653015,
+      "gradient_scale": 128.0,
+      "loss": 0.012821197509765625,
+      "negative_cosine": 0.41611963510513306,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6336300373077393,
+      "step": 10
+    },
+    {
+      "gradient_norm": 0.07272201031446457,
+      "gradient_scale": 128.0,
+      "loss": 0.0032987594604492188,
+      "negative_cosine": 0.3144298195838928,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6000611186027527,
+      "step": 11
+    },
+    {
+      "gradient_norm": 0.04691600799560547,
+      "gradient_scale": 128.0,
+      "loss": 0.0032939910888671875,
+      "negative_cosine": 0.3942490518093109,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6799502968788147,
+      "step": 12
+    },
+    {
+      "gradient_norm": 8.209423065185547,
+      "gradient_scale": 128.0,
+      "loss": 0.8265542984008789,
+      "negative_cosine": 0.4761149287223816,
+      "optimizer_updated": true,
+      "positive_cosine": 0.46356022357940674,
+      "step": 13
+    },
+    {
+      "gradient_norm": 0.42216816544532776,
+      "gradient_scale": 128.0,
+      "loss": 0.027695655822753906,
+      "negative_cosine": 0.4648933708667755,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6435239315032959,
+      "step": 14
+    },
+    {
+      "gradient_norm": 0.10608817636966705,
+      "gradient_scale": 128.0,
+      "loss": 0.008687973022460938,
+      "negative_cosine": 0.36543646454811096,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6025105714797974,
+      "step": 15
+    },
+    {
+      "gradient_norm": 0.3019096851348877,
+      "gradient_scale": 128.0,
+      "loss": 0.020093917846679688,
+      "negative_cosine": 0.3834655284881592,
+      "optimizer_updated": true,
+      "positive_cosine": 0.578328013420105,
+      "step": 16
+    },
+    {
+      "gradient_norm": 0.6358439326286316,
+      "gradient_scale": 128.0,
+      "loss": 0.051270484924316406,
+      "negative_cosine": 0.5079708099365234,
+      "optimizer_updated": true,
+      "positive_cosine": 0.655215322971344,
+      "step": 17
+    },
+    {
+      "gradient_norm": 0.18546836078166962,
+      "gradient_scale": 128.0,
+      "loss": 0.014565467834472656,
+      "negative_cosine": 0.4759295582771301,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6870205998420715,
+      "step": 18
+    },
+    {
+      "gradient_norm": 0.4038849472999573,
+      "gradient_scale": 128.0,
+      "loss": 0.013589859008789062,
+      "negative_cosine": 0.435465931892395,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6500474214553833,
+      "step": 19
+    },
+    {
+      "gradient_norm": 12.398287773132324,
+      "gradient_scale": 128.0,
+      "loss": 1.5746269226074219,
+      "negative_cosine": 0.4618300199508667,
+      "optimizer_updated": true,
+      "positive_cosine": 0.3947005867958069,
+      "step": 20
+    },
+    {
+      "gradient_norm": 0.7926767468452454,
+      "gradient_scale": 128.0,
+      "loss": 0.046154022216796875,
+      "negative_cosine": 0.3893246650695801,
+      "optimizer_updated": true,
+      "positive_cosine": 0.541954517364502,
+      "step": 21
+    },
+    {
+      "gradient_norm": 0.1293804794549942,
+      "gradient_scale": 128.0,
+      "loss": 0.008749961853027344,
+      "negative_cosine": 0.4107411801815033,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6474558115005493,
+      "step": 22
+    },
+    {
+      "gradient_norm": 0.20617814362049103,
+      "gradient_scale": 128.0,
+      "loss": 0.0155792236328125,
+      "negative_cosine": 0.4172939658164978,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6249959468841553,
+      "step": 23
+    },
+    {
+      "gradient_norm": 0.4216069281101227,
+      "gradient_scale": 128.0,
+      "loss": 0.029166221618652344,
+      "negative_cosine": 0.34311532974243164,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5191207528114319,
+      "step": 24
+    },
+    {
+      "gradient_norm": 0.17990702390670776,
+      "gradient_scale": 128.0,
+      "loss": 0.008861541748046875,
+      "negative_cosine": 0.3582463264465332,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5943281054496765,
+      "step": 25
+    },
+    {
+      "gradient_norm": 0.016992740333080292,
+      "gradient_scale": 128.0,
+      "loss": 0.0010213851928710938,
+      "negative_cosine": 0.3266981244087219,
+      "optimizer_updated": true,
+      "positive_cosine": 0.67100590467453,
+      "step": 26
+    },
+    {
+      "gradient_norm": 0.18667463958263397,
+      "gradient_scale": 128.0,
+      "loss": 0.013111114501953125,
+      "negative_cosine": 0.4025592803955078,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6189451217651367,
+      "step": 27
+    },
+    {
+      "gradient_norm": 16.099321365356445,
+      "gradient_scale": 128.0,
+      "loss": 1.1202926635742188,
+      "negative_cosine": 0.4318046569824219,
+      "optimizer_updated": true,
+      "positive_cosine": 0.3955300450325012,
+      "step": 28
+    },
+    {
+      "gradient_norm": 0.0727897435426712,
+      "gradient_scale": 128.0,
+      "loss": 0.0048503875732421875,
+      "negative_cosine": 0.3642813563346863,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6305992603302002,
+      "step": 29
+    },
+    {
+      "gradient_norm": 7.387986183166504,
+      "gradient_scale": 128.0,
+      "loss": 0.5966119766235352,
+      "negative_cosine": 0.4851624071598053,
+      "optimizer_updated": true,
+      "positive_cosine": 0.49533215165138245,
+      "step": 30
+    },
+    {
+      "gradient_norm": 14.166705131530762,
+      "gradient_scale": 128.0,
+      "loss": 1.8206510543823242,
+      "negative_cosine": 0.3596172630786896,
+      "optimizer_updated": true,
+      "positive_cosine": 0.27741679549217224,
+      "step": 31
+    },
+    {
+      "gradient_norm": 0.09918329119682312,
+      "gradient_scale": 128.0,
+      "loss": 0.007323265075683594,
+      "negative_cosine": 0.4166118800640106,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6622633337974548,
+      "step": 32
+    },
+    {
+      "gradient_norm": 0.04388923943042755,
+      "gradient_scale": 128.0,
+      "loss": 0.002777099609375,
+      "negative_cosine": 0.3793850839138031,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6736339330673218,
+      "step": 33
+    },
+    {
+      "gradient_norm": 6.587343692779541,
+      "gradient_scale": 128.0,
+      "loss": 0.5513420104980469,
+      "negative_cosine": 0.424465537071228,
+      "optimizer_updated": true,
+      "positive_cosine": 0.43982040882110596,
+      "step": 34
+    },
+    {
+      "gradient_norm": 0.0524991936981678,
+      "gradient_scale": 128.0,
+      "loss": 0.00333404541015625,
+      "negative_cosine": 0.279952734708786,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5650489926338196,
+      "step": 35
+    },
+    {
+      "gradient_norm": 0.027509324252605438,
+      "gradient_scale": 128.0,
+      "loss": 0.0014820098876953125,
+      "negative_cosine": 0.2651662528514862,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5908393859863281,
+      "step": 36
+    },
+    {
+      "gradient_norm": 0.30661526322364807,
+      "gradient_scale": 128.0,
+      "loss": 0.02122211456298828,
+      "negative_cosine": 0.40964001417160034,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6017438173294067,
+      "step": 37
+    },
+    {
+      "gradient_norm": 0.3223651349544525,
+      "gradient_scale": 128.0,
+      "loss": 0.017431259155273438,
+      "negative_cosine": 0.37547677755355835,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5775145888328552,
+      "step": 38
+    },
+    {
+      "gradient_norm": 0.35026422142982483,
+      "gradient_scale": 128.0,
+      "loss": 0.021445274353027344,
+      "negative_cosine": 0.4096072316169739,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6011823415756226,
+      "step": 39
+    },
+    {
+      "gradient_norm": 0.21406835317611694,
+      "gradient_scale": 128.0,
+      "loss": 0.013841629028320312,
+      "negative_cosine": 0.4498092532157898,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6634660363197327,
+      "step": 40
+    },
+    {
+      "gradient_norm": 0.2780698239803314,
+      "gradient_scale": 128.0,
+      "loss": 0.017381668090820312,
+      "negative_cosine": 0.37357962131500244,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5757607221603394,
+      "step": 41
+    },
+    {
+      "gradient_norm": 0.2008669078350067,
+      "gradient_scale": 128.0,
+      "loss": 0.011988639831542969,
+      "negative_cosine": 0.3896094560623169,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6104981899261475,
+      "step": 42
+    },
+    {
+      "gradient_norm": 0.0708950012922287,
+      "gradient_scale": 128.0,
+      "loss": 0.00392913818359375,
+      "negative_cosine": 0.3235863149166107,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6004502773284912,
+      "step": 43
+    },
+    {
+      "gradient_norm": 0.022787975147366524,
+      "gradient_scale": 128.0,
+      "loss": 0.0016155242919921875,
+      "negative_cosine": 0.37336745858192444,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6947394013404846,
+      "step": 44
+    },
+    {
+      "gradient_norm": 4.008581638336182,
+      "gradient_scale": 128.0,
+      "loss": 0.2633781433105469,
+      "negative_cosine": 0.42889711260795593,
+      "optimizer_updated": true,
+      "positive_cosine": 0.4888764023780823,
+      "step": 45
+    },
+    {
+      "gradient_norm": 0.3509215712547302,
+      "gradient_scale": 128.0,
+      "loss": 0.013821601867675781,
+      "negative_cosine": 0.4349016845226288,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6486333608627319,
+      "step": 46
+    },
+    {
+      "gradient_norm": 0.1516094207763672,
+      "gradient_scale": 128.0,
+      "loss": 0.010242462158203125,
+      "negative_cosine": 0.3492887616157532,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5780932903289795,
+      "step": 47
+    },
+    {
+      "gradient_norm": 0.41652989387512207,
+      "gradient_scale": 128.0,
+      "loss": 0.015936851501464844,
+      "negative_cosine": 0.35252711176872253,
+      "optimizer_updated": true,
+      "positive_cosine": 0.559084415435791,
+      "step": 48
+    },
+    {
+      "gradient_norm": 0.8317819237709045,
+      "gradient_scale": 128.0,
+      "loss": 0.04100990295410156,
+      "negative_cosine": 0.48504576086997986,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6437141299247742,
+      "step": 49
+    },
+    {
+      "gradient_norm": 0.12087159603834152,
+      "gradient_scale": 128.0,
+      "loss": 0.0077037811279296875,
+      "negative_cosine": 0.44802188873291016,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6911343336105347,
+      "step": 50
+    },
+    {
+      "gradient_norm": 0.30578872561454773,
+      "gradient_scale": 128.0,
+      "loss": 0.011743545532226562,
+      "negative_cosine": 0.3762464225292206,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5981743335723877,
+      "step": 51
+    },
+    {
+      "gradient_norm": 10.418487548828125,
+      "gradient_scale": 128.0,
+      "loss": 0.7906513214111328,
+      "negative_cosine": 0.33826109766960144,
+      "optimizer_updated": true,
+      "positive_cosine": 0.3289440870285034,
+      "step": 52
+    },
+    {
+      "gradient_norm": 0.4122464954853058,
+      "gradient_scale": 128.0,
+      "loss": 0.02291584014892578,
+      "negative_cosine": 0.36636438965797424,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5545870661735535,
+      "step": 53
+    },
+    {
+      "gradient_norm": 0.19283385574817657,
+      "gradient_scale": 128.0,
+      "loss": 0.010257720947265625,
+      "negative_cosine": 0.35955995321273804,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5882910490036011,
+      "step": 54
+    },
+    {
+      "gradient_norm": 0.05912065878510475,
+      "gradient_scale": 128.0,
+      "loss": 0.0033245086669921875,
+      "negative_cosine": 0.35881227254867554,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6440439224243164,
+      "step": 55
+    },
+    {
+      "gradient_norm": 0.4071771204471588,
+      "gradient_scale": 128.0,
+      "loss": 0.02035236358642578,
+      "negative_cosine": 0.2942046821117401,
+      "optimizer_updated": true,
+      "positive_cosine": 0.4884220361709595,
+      "step": 56
+    },
+    {
+      "gradient_norm": 0.058308668434619904,
+      "gradient_scale": 128.0,
+      "loss": 0.0024213790893554688,
+      "negative_cosine": 0.294066458940506,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5951753854751587,
+      "step": 57
+    },
+    {
+      "gradient_norm": 0.02975933812558651,
+      "gradient_scale": 128.0,
+      "loss": 0.0015478134155273438,
+      "negative_cosine": 0.33899691700935364,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6624891757965088,
+      "step": 58
+    },
+    {
+      "gradient_norm": 0.13202069699764252,
+      "gradient_scale": 128.0,
+      "loss": 0.007760047912597656,
+      "negative_cosine": 0.3572501242160797,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5999948978424072,
+      "step": 59
+    },
+    {
+      "gradient_norm": 9.01234245300293,
+      "gradient_scale": 128.0,
+      "loss": 0.6889348030090332,
+      "negative_cosine": 0.3768625855445862,
+      "optimizer_updated": true,
+      "positive_cosine": 0.3772847652435303,
+      "step": 60
+    },
+    {
+      "gradient_norm": 0.07631893455982208,
+      "gradient_scale": 128.0,
+      "loss": 0.003082275390625,
+      "negative_cosine": 0.3085115849971771,
+      "optimizer_updated": true,
+      "positive_cosine": 0.5975390672683716,
+      "step": 61
+    },
+    {
+      "gradient_norm": 10.150749206542969,
+      "gradient_scale": 128.0,
+      "loss": 0.7272329330444336,
+      "negative_cosine": 0.43715429306030273,
+      "optimizer_updated": true,
+      "positive_cosine": 0.43380194902420044,
+      "step": 62
+    },
+    {
+      "gradient_norm": 18.437664031982422,
+      "gradient_scale": 128.0,
+      "loss": 2.1851091384887695,
+      "negative_cosine": 0.3203314244747162,
+      "optimizer_updated": true,
+      "positive_cosine": 0.21704137325286865,
+      "step": 63
+    },
+    {
+      "gradient_norm": 0.12084560841321945,
+      "gradient_scale": 128.0,
+      "loss": 0.0061359405517578125,
+      "negative_cosine": 0.3892397880554199,
+      "optimizer_updated": true,
+      "positive_cosine": 0.6437658667564392,
+      "step": 64
+    }
+  ],
+  "wall_s": 18.677845218000584
+}

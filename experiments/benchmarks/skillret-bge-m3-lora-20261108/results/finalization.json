@@ -1,0 +1,51 @@
+{
+  "scope": "Completed selected-recipe training, exact adapter inference and post-run checks before publication",
+  "steps": [
+    {
+      "exit_code": 0,
+      "step": "adapter_tensor_check",
+      "wall_s": 0.178024821994768
+    },
+    {
+      "exit_code": 0,
+      "step": "inference",
+      "wall_s": 3610.7236477339975
+    },
+    {
+      "exit_code": 0,
+      "step": "validate",
+      "wall_s": 7.4153594829986105
+    },
+    {
+      "exit_code": 0,
+      "step": "analyze",
+      "wall_s": 18.01121985899954
+    },
+    {
+      "exit_code": 0,
+      "step": "export",
+      "wall_s": 25.005641755997203
+    },
+    {
+      "exit_code": 0,
+      "step": "replay",
+      "wall_s": 80.79220255200198
+    },
+    {
+      "exit_code": 0,
+      "step": "report",
+      "wall_s": 11.866907357994933
+    },
+    {
+      "exit_code": 0,
+      "step": "tests",
+      "wall_s": 4.419243103999179
+    },
+    {
+      "exit_code": 0,
+      "step": "adapter_reload_parity",
+      "wall_s": 35.693299287006084,
+      "wall_scope": "Measured internal check after validation dataset construction; separate from original inference campaign"
+    }
+  ]
+}

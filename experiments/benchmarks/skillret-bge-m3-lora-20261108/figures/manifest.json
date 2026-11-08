@@ -1,0 +1,306 @@
+[
+  {
+    "file": "01_training_loss.png",
+    "sha256": "a0e5ddf479cef6c2f62c31facd234c146866b8a9cc3e86ce0ac6ea1e29ce0448",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_curve.jsonl",
+        "sha256": "9649c57fb16fab1d6861533e4f5bb99377f422d9408b36a830d0458866df3fa3"
+      }
+    ]
+  },
+  {
+    "file": "01_training_loss.svg",
+    "sha256": "8e83dc0c9fe3b4efea781f18c86de93b1ce343964dadf1f229664f2211096744",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_curve.jsonl",
+        "sha256": "9649c57fb16fab1d6861533e4f5bb99377f422d9408b36a830d0458866df3fa3"
+      }
+    ]
+  },
+  {
+    "file": "02_validation_ndcg.png",
+    "sha256": "35db7af56a08e8666ea71aa0ec4c9dcdf8834bda405b3af65dc1e18d07aca0a2",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/validation_curve.jsonl",
+        "sha256": "52e0db4e89dffeb6d780cc0ae2a3375a4552d43c4c89c9bf46b186530e22ac63"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_summary.json",
+        "sha256": "7748b70fd8ca065f3854f616597f6c10bcbd3af602691575254d801cb6ffa80e"
+      }
+    ]
+  },
+  {
+    "file": "02_validation_ndcg.svg",
+    "sha256": "0a57cebcf17d654cfcfcffc2605d4eec049dde4bacb26d585ff32bda552d3d6a",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/validation_curve.jsonl",
+        "sha256": "52e0db4e89dffeb6d780cc0ae2a3375a4552d43c4c89c9bf46b186530e22ac63"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_summary.json",
+        "sha256": "7748b70fd8ca065f3854f616597f6c10bcbd3af602691575254d801cb6ffa80e"
+      }
+    ]
+  },
+  {
+    "file": "03_base_lora_ndcg.png",
+    "sha256": "83950bb6717db95e1b23f3bfd0869b6d879c307df49cc0d2a2f3d0e46676c4dd",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "03_base_lora_ndcg.svg",
+    "sha256": "5f0a15932e9c9aa264a9a95b84159805978fabf83b0f2dd17c4d1b0281c59977",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "04_base_lora_recall.png",
+    "sha256": "3604aa6ea4b4b2f52402b876be33d1c5cfefb6614fa76e69d9508b11d7159a8b",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "04_base_lora_recall.svg",
+    "sha256": "360c3ffd36a83ea45a223e3b5783c96ec81f49b8b7e4dd47d2ed551663c45999",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "05_scaling_accuracy.png",
+    "sha256": "e0d486465a03ada113257cf28180b4f3dd6da631628c92c7f909c17e81002e42",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/scaling_summary.csv",
+        "sha256": "373a146c3431dc826a5cc6b0428236f4b7ece13c91b02c8fd415720e0125dbaa"
+      }
+    ]
+  },
+  {
+    "file": "05_scaling_accuracy.svg",
+    "sha256": "bb86b96921c83dca326c0da80d9bc96a5c1976c13b09604bf6de579b9d6bf1b8",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/scaling_summary.csv",
+        "sha256": "373a146c3431dc826a5cc6b0428236f4b7ece13c91b02c8fd415720e0125dbaa"
+      }
+    ]
+  },
+  {
+    "file": "06_metadata_fulltext.png",
+    "sha256": "8455608676517095a8e6110f18d46c2648e42df45cd2eb5b0f4db7ebbe025715",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "06_metadata_fulltext.svg",
+    "sha256": "3f1d28a2f582de857faf565648150c8c1b1a8612ca25d5823ec5fa6797018b49",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "07_matched_native_context.png",
+    "sha256": "a2b38b021bb7fc03b809a42c23583540e2455193ad3939ba2cf2232a42c67d70",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/paired_within_model_views.json",
+        "sha256": "d7d53be020001e71c080be7a0c88c835949c6081a32d6a62516bf52cb4c0dc54"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/performance.json",
+        "sha256": "3611ad8aea4df87c7e7410c7d079537aad5738efcc668d9b59e9d5d510d2e092"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      }
+    ]
+  },
+  {
+    "file": "07_matched_native_context.svg",
+    "sha256": "352e4290193e0438550bea887dc2c0033e202cfd7f125157e9745e7a09c47021",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/paired_within_model_views.json",
+        "sha256": "d7d53be020001e71c080be7a0c88c835949c6081a32d6a62516bf52cb4c0dc54"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/performance.json",
+        "sha256": "3611ad8aea4df87c7e7410c7d079537aad5738efcc668d9b59e9d5d510d2e092"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      }
+    ]
+  },
+  {
+    "file": "08_per_query_improvement.png",
+    "sha256": "f0e1ae4ed0dd650d3d2717b291b13f6efa0dfd772597329d8368e98cd8056819",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/per_query_lora_differences.csv",
+        "sha256": "dab3646f11df2968d1f4c76e17a730eb1d5529f10938685050c7643c825aeb4c"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/paired_base_vs_lora.json",
+        "sha256": "b79cef130da1f80861b8249864b1ae0d57bef2bf7467290b54ba6781accae42b"
+      }
+    ]
+  },
+  {
+    "file": "08_per_query_improvement.svg",
+    "sha256": "8cc217c73e68e2d3016c577688f15977f63f71526210e6f501944649623160b8",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/per_query_lora_differences.csv",
+        "sha256": "dab3646f11df2968d1f4c76e17a730eb1d5529f10938685050c7643c825aeb4c"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/paired_base_vs_lora.json",
+        "sha256": "b79cef130da1f80861b8249864b1ae0d57bef2bf7467290b54ba6781accae42b"
+      }
+    ]
+  },
+  {
+    "file": "09_positive_negative_similarity.png",
+    "sha256": "fe8cacfbd152281fedffc7bdff39e4fd5cb8e455ef22abbeccfa2c8d937f1a1c",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/smoke.json",
+        "sha256": "f0bd60a9cab8d2d2ee5756b365d6de17f5645be0d424889e8886800b9da9eb67"
+      }
+    ]
+  },
+  {
+    "file": "09_positive_negative_similarity.svg",
+    "sha256": "4c5e8253be6920474cdf45f42c162dc175e85c86cba4b44c008f3ed7aef185c4",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/smoke.json",
+        "sha256": "f0bd60a9cab8d2d2ee5756b365d6de17f5645be0d424889e8886800b9da9eb67"
+      }
+    ]
+  },
+  {
+    "file": "10_training_time_memory.png",
+    "sha256": "688916bc06b225e7e8f36379ba4c17f649703e507964e3225c6162110d8742a8",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_summary.json",
+        "sha256": "7748b70fd8ca065f3854f616597f6c10bcbd3af602691575254d801cb6ffa80e"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/smoke.json",
+        "sha256": "f0bd60a9cab8d2d2ee5756b365d6de17f5645be0d424889e8886800b9da9eb67"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/mining.json",
+        "sha256": "22776c7f138ab7dd99a4bb0fbfecec944fd8f0c1b312e161d029b29bb1d831e2"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/resources.json",
+        "sha256": "fbaf090534d296aded551d94c1c491e760967716a5040850a4950f258dbab2a7"
+      }
+    ]
+  },
+  {
+    "file": "10_training_time_memory.svg",
+    "sha256": "8f5b5c82428fb8618311bd9124e5045aa9b17230bb67b998bd1c530e946a9f2b",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/training_summary.json",
+        "sha256": "7748b70fd8ca065f3854f616597f6c10bcbd3af602691575254d801cb6ffa80e"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/smoke.json",
+        "sha256": "f0bd60a9cab8d2d2ee5756b365d6de17f5645be0d424889e8886800b9da9eb67"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/mining.json",
+        "sha256": "22776c7f138ab7dd99a4bb0fbfecec944fd8f0c1b312e161d029b29bb1d831e2"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/resources.json",
+        "sha256": "fbaf090534d296aded551d94c1c491e760967716a5040850a4950f258dbab2a7"
+      }
+    ]
+  },
+  {
+    "file": "11_query_latency.png",
+    "sha256": "251d6464054576f0e61ced05ff630405047d6545ddab425d3501109133aa74d8",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/performance.json",
+        "sha256": "3611ad8aea4df87c7e7410c7d079537aad5738efcc668d9b59e9d5d510d2e092"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      }
+    ]
+  },
+  {
+    "file": "11_query_latency.svg",
+    "sha256": "e1e907361b5d32eb2f2c63e79d881ab1788c7581d4aa2ba63f7859f22d3c2e91",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/performance.json",
+        "sha256": "3611ad8aea4df87c7e7410c7d079537aad5738efcc668d9b59e9d5d510d2e092"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      }
+    ]
+  },
+  {
+    "file": "12_historical_comparison.png",
+    "sha256": "f831af46abaada28e7ea1a24bbe0db37a3909e4a47a4fa1c4d8ffa316f1fb379",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  },
+  {
+    "file": "12_historical_comparison.svg",
+    "sha256": "b40f9516a5704cfab3195134c5ba26c1fab74974faab09a9c43dddc26355c17a",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-lora-20261108/results/full_comparison.json",
+        "sha256": "4dee3b02abfa60ea55c1eb088fcf107c63b4d7389d4dcce64a5e0783d7c20d26"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "cpu": "Intel Core i3-3225, 2 cores / 4 threads",
+  "execution": "Directly on the existing Ubuntu GPU server; no cloud or Windows GPU stack",
+  "gpu": "NVIDIA GeForce RTX 2060 SUPER, 595.99.02, 8192 MiB, 7.5",
+  "gpu_preflight": "No compute process; 9 MiB display allocation",
+  "openblas_threads": 1,
+  "os": "Ubuntu 26.04.1 LTS",
+  "python": "3.12.10",
+  "swap_bytes": 4294963200,
+  "system_ram_bytes": 7722901504,
+  "telemetry_interval_s": 1,
+  "torch_cpu_threads": 2
+}

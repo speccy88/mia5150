@@ -1,0 +1,17 @@
+{
+  "best_selected_step": 950,
+  "best_validation_ndcg10": 0.8707732279365489,
+  "discarded_recipe_main_wall_s": 856.2407270190015,
+  "discarded_recipe_optimizer_steps": 200,
+  "frozen_validation_ndcg10": 0.802765636382653,
+  "functional_smoke_updates_discarded": 128,
+  "official_test_used_for_training_or_checkpoint_selection": false,
+  "selected_recipe_main_wall_s": 4827.149461979003,
+  "selected_recipe_optimizer_steps": 1100,
+  "shared_frozen_mining_queries": 51208,
+  "shared_frozen_mining_wall_s_measured_once": 482.22985133699694,
+  "sum_observed_main_recipe_wall_s": 5683.390188998004,
+  "total_main_optimizer_steps_across_recipes": 1300,
+  "total_main_query_groups_across_recipes": 20800,
+  "wall_scope": "Sum of measured recipe invocation segments; excludes CPU preprocessing and pauses between recipes. Shared mining is separate and counted once."
+}

@@ -2,10 +2,26 @@
 
 Code, recorded results, and documentation for studying how natural-language
 requests retrieve and select agent skills. Start with the
-[21-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
+[22-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
 [published EDA report](https://speccy88.github.io/mia5150/).
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
+
+## BGE-M3 LoRA: paired before/after retrieval
+
+The [completed LoRA study](experiments/benchmarks/skillret-bge-m3-lora-20261108/REPORT.md)
+selects its adapter using training-derived validation, then evaluates the exact
+same A/B/C inputs as the frozen BGE-M3 baseline. All 480 scaling and 13,176
+official query/configuration outcomes are independently rescored and replayed
+from lossless vectors. Official LoRA NDCG@10 A/B/C is **0.382641 / 0.433377 / 0.428759**.
+The primary B-minus-matching-base difference is **-0.128022**,
+95% paired interval **[-0.137472, -0.118557]**. Training completed 1,100
+optimizer steps with validation early stopping; the selected adapter is step
+950. The failed first pilot is preserved separately.
+[Portable adapters](experiments/benchmarks/skillret-bge-m3-lora-20261108/adapters/README.md) and
+[document/query vectors with model-free replay](experiments/benchmarks/skillret-bge-m3-lora-20261108/vectors/README.md)
+are included through Git LFS. Exposed public data and the short validation
+proxy limit generalization.
 
 ## BGE-M3 versus Qwen3 full-text benchmark
 

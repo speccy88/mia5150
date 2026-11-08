@@ -1,0 +1,11 @@
+{
+  "adapter_hashes_verified": true,
+  "all_completed_scope_verified": true,
+  "all_exported_vector_cache_identifiers_verified": 27553,
+  "all_figures_bound_to_unchanged_measured_sources": true,
+  "baseline_bytes_unchanged": true,
+  "credential_exceptions_added": false,
+  "dataset_files_independently_hashed": true,
+  "lossless_vector_archive_verified": true,
+  "pinned_base_checkpoint_and_tokenizer_independently_hashed": true
+}

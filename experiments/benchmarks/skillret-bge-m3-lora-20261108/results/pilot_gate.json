@@ -1,0 +1,8 @@
+{
+  "best_trained_validation_ndcg10": 0.8196811255923637,
+  "completed_optimizer_steps": 200,
+  "frozen_validation_ndcg10": 0.802765636382653,
+  "maximum_tolerated_pilot_drop": 0.01,
+  "proceed_to_full": true,
+  "test_scores_used": false
+}
