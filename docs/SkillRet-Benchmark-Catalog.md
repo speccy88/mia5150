@@ -1,6 +1,6 @@
 # SkillRet benchmark catalog
 
-This catalog covers **20 studies and bounded pilots**, including the completed local Qwen3 full-text study below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
+This catalog covers **21 studies and bounded pilots**, including the completed local Qwen3 and BGE-M3 full-text studies below. The historical table covers **16 completed studies and bounded pilots** in this repository. Rows describe recorded execution; a study can contain completed panels alongside failed, partial, superseded, or unrun arms. They are not 16 independent, fully completed evaluations of the entire dataset.
 
 Historical table reviewed **10 October 2026** against [EXPERIMENTS.md][index] and the matching study documentation/evidence at the [reviewed source snapshot][commit]. No inference, training, paid request, or benchmark rerun was performed to prepare that historical table. The added row 17 records new local inference on 24 October.
 
@@ -87,6 +87,28 @@ The exposed gold-conditioned panel, nonnested historical libraries and changed
 chunking/context/quantization limit comparison with earlier protocols. The
 metadata-only ablation remains unattempted; no model-size or full-text benefit
 is established.
+
+## 21. BGE-M3 dense versus Qwen3 full-text benchmark — 8 November 2026
+
+[Report, results and reusable vectors](../experiments/benchmarks/skillret-bge-m3-fulltext-20261108/REPORT.md).
+Local Ubuntu / RTX 2060 SUPER 8 GB, official BAAI/bge-m3 pinned weights,
+FlagEmbedding FP16, 1,024 dimensions and verified 8,192-token capacity.
+A uses metadata; B retains all 6,913 exact Qwen source slices; C uses 6,258
+native 8K chunks. B/C retain 100% original character coverage. All three
+views complete eight 20-query libraries plus 4,392 official queries each.
+Official NDCG@10 A/B/C is **0.557723 / 0.561399 / 0.565406**; the primary
+B-minus-Qwen contrast is **−0.080692**, paired 95% interval
+**[−0.089143, −0.072258]**. B-minus-A's interval includes zero; C-minus-B
+has a small positive exploratory interval. Nine PNG/SVG figures, individual
+rankings, independent rescoring and lossless float32 Git LFS vectors are
+included. Vector-only replay reproduces all 480 scaling and 13,176 official
+query/configuration cases. B query median is 83.36 ms versus Qwen 243.14 ms;
+sampled VRAM peaks are 1,734 versus 5,274 MiB. Runtime, precision, dimensions
+and query conventions remain confounds. C's 6.68-minute observed indexing
+wall reuses 5,280 shared chunks and is not a standalone fresh index cost.
+The small exposed scaling panel reverses the official ordering at larger
+sizes; it cannot establish blinded generalization. Sparse/hybrid/ColBERT
+arms remain unattempted. Historical measurements are unchanged.
 
 ## Source snapshot
 

@@ -2,10 +2,22 @@
 
 Code, recorded results, and documentation for studying how natural-language
 requests retrieve and select agent skills. Start with the
-[20-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
+[21-study benchmark catalog](docs/SkillRet-Benchmark-Catalog.md) or the
 [published EDA report](https://speccy88.github.io/mia5150/).
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
+
+## BGE-M3 versus Qwen3 full-text benchmark
+
+The [completed BGE-M3 study](experiments/benchmarks/skillret-bge-m3-fulltext-20261108/REPORT.md)
+evaluates metadata, exact Qwen chunk spans and native 8K chunks on the same
+6,006 skills, eight scaling libraries and all 4,392 official queries.
+Official NDCG@10 is **0.557723 / 0.561399 / 0.565406** for A/B/C, versus
+archived Qwen **0.642091**. The primary paired B-minus-Qwen difference is
+**−0.080692**, 95% interval **[−0.089143, −0.072258]**.
+BGE uses less VRAM and has lower measured query latency; runtime, precision
+and query conventions differ. All document and query vectors are included
+through [Git LFS with verified offline replay](experiments/benchmarks/skillret-bge-m3-fulltext-20261108/vectors/README.md).
 
 ## Qwen3 Embedding 8B Q4 full-text benchmark
 

@@ -1,0 +1,26 @@
+[
+  {
+    "Completeness@10": 0.4397,
+    "NDCG@10": 0.5451,
+    "NDCG@5": 0.5257,
+    "Recall@10": 0.6001,
+    "evidence": "Published official README reference, not locally rerun here; document/protocol not matched to complete-source max chunks",
+    "model": "bge-small-en-v1.5",
+    "questions_reported": 4392,
+    "skills_reported": 6006,
+    "source": "experiments/benchmarks/skillret-local-metadata-20261005/official/README.md",
+    "source_sha256": "c2d0324529b2b74c697f697ab0d3f71fe67323b6e970ed9d2271473d46f15e65"
+  },
+  {
+    "Completeness@10": 0.4834,
+    "NDCG@10": 0.59,
+    "NDCG@5": 0.5704,
+    "Recall@10": 0.6437,
+    "evidence": "Published official README reference, not locally rerun here; document/protocol not matched to complete-source max chunks",
+    "model": "bge-large-en-v1.5",
+    "questions_reported": 4392,
+    "skills_reported": 6006,
+    "source": "experiments/benchmarks/skillret-local-metadata-20261005/official/README.md",
+    "source_sha256": "c2d0324529b2b74c697f697ab0d3f71fe67323b6e970ed9d2271473d46f15e65"
+  }
+]

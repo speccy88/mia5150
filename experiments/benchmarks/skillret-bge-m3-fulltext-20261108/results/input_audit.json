@@ -1,0 +1,54 @@
+{
+  "content_token_budget": 8190,
+  "context_including_special_tokens": 8192,
+  "data_sha256": {
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81"
+  },
+  "matched_chunk_bge_tokens_max": 6048,
+  "matched_chunk_subdivisions": [],
+  "matched_qwen_chunks": 6913,
+  "maximum_official_query_tokens": 984,
+  "official_queries": 4392,
+  "provisional": false,
+  "qrels": 7187,
+  "qwen_files_verified": 107,
+  "skills": 6006,
+  "tokenizer_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+  "views": {
+    "A_metadata": {
+      "chunk_tokens_with_overlap": 362754,
+      "chunked_documents": 0,
+      "chunks": 6006,
+      "documents": 6006,
+      "manifest_sha256": "b39f39067bd264db1465d0c29bfd636471ab58aea2c76a25c2eedb3267e7f4c5",
+      "max_original_tokens": 678,
+      "median_original_tokens": 53.0,
+      "original_tokens": 362754,
+      "source_coverage_percent": 100
+    },
+    "B_matched": {
+      "chunk_tokens_with_overlap": 16196723,
+      "chunked_documents": 726,
+      "chunks": 6913,
+      "documents": 6006,
+      "manifest_sha256": "400e2fbfc76df8eb4817616f3d28a058ce14e26bd19a90d78010cd57fb3d4aed",
+      "max_original_tokens": 57238,
+      "median_original_tokens": 2025.0,
+      "original_tokens": 16055206,
+      "source_coverage_percent": 100
+    },
+    "C_native8k": {
+      "chunk_tokens_with_overlap": 16087489,
+      "chunked_documents": 218,
+      "chunks": 6258,
+      "documents": 6006,
+      "manifest_sha256": "0571caa6a3a0e677e0c281eca4ffe83c80bf1fdbd68349c31a2220f77e402ab2",
+      "max_original_tokens": 57238,
+      "median_original_tokens": 2025.0,
+      "original_tokens": 16055206,
+      "source_coverage_percent": 100
+    }
+  }
+}

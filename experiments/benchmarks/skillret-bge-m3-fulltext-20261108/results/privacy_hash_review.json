@@ -1,0 +1,8 @@
+{
+  "all_exported_cache_identifiers_independently_verified": true,
+  "credential_exceptions_added": false,
+  "identifiers_checked": 27565,
+  "qwen_historical_evidence_bytes_unchanged": true,
+  "scope": "Only public model/source/vector hashes are eligible scanner exceptions",
+  "tokenizer_file_independently_hashed": true
+}

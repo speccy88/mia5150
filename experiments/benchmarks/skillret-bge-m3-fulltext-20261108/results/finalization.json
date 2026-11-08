@@ -1,0 +1,35 @@
+{
+  "steps": [
+    {
+      "step": "validate",
+      "exit_code": 0,
+      "wall_s": 5.164504551001301
+    },
+    {
+      "step": "analyze",
+      "exit_code": 0,
+      "wall_s": 10.851518019997457
+    },
+    {
+      "step": "export",
+      "exit_code": 0,
+      "wall_s": 27.564499136999075
+    },
+    {
+      "step": "replay",
+      "exit_code": 0,
+      "wall_s": 78.30550088399468
+    },
+    {
+      "step": "report",
+      "exit_code": 0,
+      "wall_s": 7.945815844999743
+    },
+    {
+      "step": "tests",
+      "exit_code": 0,
+      "wall_s": 0.809275213003275
+    }
+  ],
+  "scope": "Post-run checks before Git publication"
+}

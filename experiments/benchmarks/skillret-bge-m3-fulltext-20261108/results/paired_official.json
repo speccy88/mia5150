@@ -1,0 +1,257 @@
+{
+  "A_metadata-minus-Qwen": {
+    "metrics": [
+      "Top1_ID_accuracy",
+      "Recall@5",
+      "Recall@10",
+      "NDCG@10",
+      "MRR@10"
+    ],
+    "multiplicity": "Primary B-minus-Qwen NDCG@10; other contrasts/metrics exploratory without multiplicity adjustment",
+    "paired_question_bootstrap": {
+      "across_columns_95ci": [
+        -0.09666359343008105,
+        -0.07755831475294843
+      ],
+      "across_columns_mean": -0.0869064805178864,
+      "mean": [
+        -0.08629326047358835,
+        -0.08363691560412874,
+        -0.08648299939283546,
+        -0.0843680525446174,
+        -0.09375117457426195
+      ],
+      "per_column_95ci": [
+        [
+          -0.10132058287795993,
+          -0.07126593806921676
+        ],
+        [
+          -0.09430119156041285,
+          -0.07331511839708561
+        ],
+        [
+          -0.09710932756527019,
+          -0.07646478445658775
+        ],
+        [
+          -0.09381476422166482,
+          -0.07529992957911533
+        ],
+        [
+          -0.10531663585668023,
+          -0.08210505843958718
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "primary_prespecified": false,
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "B_matched-minus-A_metadata": {
+    "metrics": [
+      "Top1_ID_accuracy",
+      "Recall@5",
+      "Recall@10",
+      "NDCG@10",
+      "MRR@10"
+    ],
+    "multiplicity": "Primary B-minus-Qwen NDCG@10; other contrasts/metrics exploratory without multiplicity adjustment",
+    "paired_question_bootstrap": {
+      "across_columns_95ci": [
+        -0.004694762488031901,
+        0.009955755354191355
+      ],
+      "across_columns_mean": 0.002594037657148492,
+      "mean": [
+        -0.012522768670309653,
+        0.008993624772313299,
+        0.013812993321190048,
+        0.0036756014467567186,
+        -0.0009892625842079401
+      ],
+      "per_column_95ci": [
+        [
+          -0.02481785063752277,
+          -0.00022768670309653916
+        ],
+        [
+          0.0003026335761991496,
+          0.017569823922282932
+        ],
+        [
+          0.005426533090467522,
+          0.02223835003035823
+        ],
+        [
+          -0.003263755507084139,
+          0.010634524162392247
+        ],
+        [
+          -0.010155021214618193,
+          0.008150650894844878
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "primary_prespecified": false,
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "B_matched-minus-Qwen": {
+    "metrics": [
+      "Top1_ID_accuracy",
+      "Recall@5",
+      "Recall@10",
+      "NDCG@10",
+      "MRR@10"
+    ],
+    "multiplicity": "Primary B-minus-Qwen NDCG@10; other contrasts/metrics exploratory without multiplicity adjustment",
+    "paired_question_bootstrap": {
+      "across_columns_95ci": [
+        -0.0933781133392633,
+        -0.07546529973851537
+      ],
+      "across_columns_mean": -0.08431244286073789,
+      "mean": [
+        -0.09881602914389799,
+        -0.07464329083181544,
+        -0.07267000607164541,
+        -0.0806924510978607,
+        -0.09474043715846997
+      ],
+      "per_column_95ci": [
+        [
+          -0.1133879781420765,
+          -0.08447176684881604
+        ],
+        [
+          -0.08473740133576196,
+          -0.0644353369763206
+        ],
+        [
+          -0.08215695203400121,
+          -0.0631451123254402
+        ],
+        [
+          -0.0891433461235652,
+          -0.07225758297520521
+        ],
+        [
+          -0.10563772154277623,
+          -0.08388139194278192
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "primary_prespecified": true,
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "C_native8k-minus-B_matched": {
+    "metrics": [
+      "Top1_ID_accuracy",
+      "Recall@5",
+      "Recall@10",
+      "NDCG@10",
+      "MRR@10"
+    ],
+    "multiplicity": "Primary B-minus-Qwen NDCG@10; other contrasts/metrics exploratory without multiplicity adjustment",
+    "paired_question_bootstrap": {
+      "across_columns_95ci": [
+        0.0016836625375590698,
+        0.006480895825106852
+      ],
+      "across_columns_mean": 0.004075381764447968,
+      "mean": [
+        0.005009107468123861,
+        0.002808136004857316,
+        0.004174256223436552,
+        0.004007409443860683,
+        0.00437799968196143
+      ],
+      "per_column_95ci": [
+        [
+          -0.00022768670309653916,
+          0.010245901639344262
+        ],
+        [
+          -0.0005312689738919247,
+          0.00614848967820278
+        ],
+        [
+          0.0010625379477838496,
+          0.007285974499089252
+        ],
+        [
+          0.0018737296869353684,
+          0.006163014827930249
+        ],
+        [
+          0.0012510661520224358,
+          0.0075299945608176535
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "primary_prespecified": false,
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  },
+  "C_native8k-minus-Qwen": {
+    "metrics": [
+      "Top1_ID_accuracy",
+      "Recall@5",
+      "Recall@10",
+      "NDCG@10",
+      "MRR@10"
+    ],
+    "multiplicity": "Primary B-minus-Qwen NDCG@10; other contrasts/metrics exploratory without multiplicity adjustment",
+    "paired_question_bootstrap": {
+      "across_columns_95ci": [
+        -0.08925494616881623,
+        -0.07138033382301796
+      ],
+      "across_columns_mean": -0.08023706109628993,
+      "mean": [
+        -0.09380692167577413,
+        -0.0718351548269581,
+        -0.06849574984820885,
+        -0.07668504165400002,
+        -0.09036243747650861
+      ],
+      "per_column_95ci": [
+        [
+          -0.1081511839708561,
+          -0.07923497267759563
+        ],
+        [
+          -0.08170157862780811,
+          -0.061892835458409276
+        ],
+        [
+          -0.0780585913782635,
+          -0.05896990740740742
+        ],
+        [
+          -0.08515640789563939,
+          -0.06827547559314912
+        ],
+        [
+          -0.10142115805794089,
+          -0.07943337634082177
+        ]
+      ],
+      "question_clusters": 4392,
+      "resamples": 10000,
+      "seed": 42
+    },
+    "primary_prespecified": false,
+    "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8"
+  }
+}

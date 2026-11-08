@@ -1,0 +1,13 @@
+{
+  "configs": [
+    "A_metadata",
+    "B_matched",
+    "C_native8k"
+  ],
+  "official_cases": 13176,
+  "scaling_cases": 480,
+  "skills_per_config": 6006,
+  "stage": "completed",
+  "utc": "2026-11-08T15:27:20.517321+00:00",
+  "wall_seconds_this_invocation": 3272.286758891998
+}

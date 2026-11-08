@@ -1,0 +1,79 @@
+{
+  "aggregation": "max float32 chunk cosine per skill, deduplicated top50",
+  "backbone_loading": {
+    "attn_implementation": "sdpa",
+    "device_map": {
+      "": "cuda:0"
+    },
+    "low_cpu_mem_usage": true,
+    "torch_dtype": "float16"
+  },
+  "batch_size": 1,
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 42,
+    "unit": "question cluster paired across encoders and repeated sizes"
+  },
+  "candidate_pools_sha256": "5827304c919c7fdcba40fa6412f2363102bdb51f9a00c14da72e758d7f7d5f46",
+  "configs": {
+    "A_metadata": "name + | + description, original whitespace",
+    "B_matched": "exact Qwen full-text source-character spans, with explicitly recorded overlength subdivisions only if required",
+    "C_native8k": "complete full text; native BGE tokenizer chunks at tested context"
+  },
+  "content_token_budget": 8190,
+  "context_including_special_tokens": 8192,
+  "data_sha256": {
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81"
+  },
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "dimensions": 1024,
+  "document_manifest_sha256": {
+    "A_metadata": "b39f39067bd264db1465d0c29bfd636471ab58aea2c76a25c2eedb3267e7f4c5",
+    "B_matched": "400e2fbfc76df8eb4817616f3d28a058ce14e26bd19a90d78010cd57fb3d4aed",
+    "C_native8k": "0571caa6a3a0e677e0c281eca4ffe83c80bf1fdbd68349c31a2220f77e402ab2"
+  },
+  "flagembedding_version": "1.3.5",
+  "markdown_lookback_tokens": 256,
+  "model": "BAAI/bge-m3",
+  "model_checkpoint_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+  "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "optional_sparse_hybrid_colbert": "unattempted; dense A/B/C required first",
+  "overlap_tokens": 128,
+  "panel_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b",
+  "pooling": "Official FlagEmbedding CLS",
+  "precision": "FP16 CUDA inference; float32 normalized stored vectors",
+  "primary_contrast": {
+    "metric": "NDCG@10",
+    "reference": "archived Qwen3",
+    "treatment": "B_matched"
+  },
+  "query_prefix": "",
+  "qwen_protocol_sha256": "4dc18d2cb0381593be287de1dbe7c70eb74b2228f7c68b0beff75812c43094e3",
+  "qwen_reference_revision": "e42e68cad43b7bff285777ac4e20c5722963b9f4",
+  "secondary_contrasts": [
+    "A-Qwen",
+    "C-Qwen",
+    "B-A",
+    "C-B; exploratory intervals without multiplicity correction"
+  ],
+  "shared_helper_sha256": {
+    "experiments/benchmarks/skillret-embedding-jev-fusion/evaluate.py": "4b03f247d440dac5866b479e98d1d30ed5b88a80cc2820d2d94017457e49768b",
+    "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/src/core.py": "79f49de03af5a4735009f50c8647a09a1b6f51031c0736526953c1fbfe1220ca",
+    "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/src/validate.py": "3e77f2ae77894d5551e667912d59dca51fc6637689f13f7876c021807cf4b002"
+  },
+  "sizes": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000,
+    6006
+  ],
+  "source_repository_base_revision": "e42e68cad43b7bff285777ac4e20c5722963b9f4",
+  "ties": "ascending SHA256 of exact full text; no pool-position/ID/gold features",
+  "tokenizer_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"
+}

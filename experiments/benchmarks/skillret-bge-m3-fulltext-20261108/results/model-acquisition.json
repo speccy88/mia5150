@@ -1,0 +1,79 @@
+{
+  "model": "BAAI/bge-m3",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "transport": "Pinned public HF files; verified ranged checkpoint acquisition",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+      "bytes": 15822,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "colbert_linear.pt",
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "bytes": 2100674,
+      "lfs_hash_verified": true
+    },
+    {
+      "file": "config.json",
+      "sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+      "bytes": 687,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "config_sentence_transformers.json",
+      "sha256": "1eef72430e7194a1e59680e635aed81ffa083f05668dbc5bb1c56c04c0999c38",
+      "bytes": 123,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "bytes": 349,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "sentence_bert_config.json",
+      "sha256": "eb9b44b13c0f52a3b3685c3b1cbdea1ba8b04bea123b98f61610048940776eb1",
+      "bytes": 54,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "bytes": 5069051,
+      "lfs_hash_verified": true
+    },
+    {
+      "file": "sparse_linear.pt",
+      "sha256": "45c93804d2142b8f6d7ec6914ae23a1eee9c6a1d27d83d908a20d2afb3595ad9",
+      "bytes": 3516,
+      "lfs_hash_verified": true
+    },
+    {
+      "file": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "bytes": 964,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "tokenizer.json",
+      "sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+      "bytes": 17098108,
+      "lfs_hash_verified": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "sha256": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4",
+      "bytes": 444,
+      "lfs_hash_verified": false
+    },
+    {
+      "file": "pytorch_model.bin",
+      "bytes": 2271145830,
+      "sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+      "lfs_hash_verified": true
+    }
+  ]
+}

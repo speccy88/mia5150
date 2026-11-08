@@ -1,0 +1,4 @@
+{
+  "exception": "RuntimeError",
+  "message": "Host swap traffic exceeded 64 MiB"
+}

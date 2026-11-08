@@ -7,6 +7,13 @@ useDefault = true
 id = "generic-api-key"
 
 [[rules.allowlists]]
+description = "Independently hashed public BAAI/bge-m3 tokenizer file at revision 5617a9f61b028005a4858fdac845db406aefb181; exact asset SHA-256 in pinned baseline receipts, not an access token"
+condition = "AND"
+regexTarget = "match"
+paths = [ '''^experiments/benchmarks/skillret-bge-m3-fulltext-20261108/(protocol\.json|vectors/manifest\.json|results/((A_metadata|B_matched|C_native8k)/scaling-n(50|100|250|500|1000|2000|5000|6006)\.json|feasibility\.json|input_audit\.json|model\.json|performance\.json))$''' ]
+regexes = [ '''tokenizer_sha256"\s*:\s*"21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"''' ]
+
+[[rules.allowlists]]
 description = "Verified deterministic SHA-256 embedding cache identifiers, restricted to the Qwen full-text journals and feasibility receipts; these fields never hold credentials"
 condition = "AND"
 regexTarget = "match"

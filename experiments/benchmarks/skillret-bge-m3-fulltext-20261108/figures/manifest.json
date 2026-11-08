@@ -1,0 +1,254 @@
+[
+  {
+    "file": "01_top1_accuracy.png",
+    "sha256": "de87e97f05772f0f0f3e36ab10cf80e406afaeb669b2d02f7b8145231f096ffd",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "01_top1_accuracy.svg",
+    "sha256": "a293b764db18b97bee4843d55747554db1aaf115e5cac28fd7874d3635b35ec4",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "03_ndcg10.png",
+    "sha256": "c511a0c31a85145690851e878eac45870d5f90b96788bd1ed722d3cde727c86b",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "03_ndcg10.svg",
+    "sha256": "c59d28361a38d302de616b07525b95c35d366f4a91986cc313c3d4bd1e21980c",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "04_mrr10.png",
+    "sha256": "8aac70a9f16ab82514a284794b633007593fb0769d485ca879128988adf2cd1c",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "04_mrr10.svg",
+    "sha256": "4874a676764b7ff6f4749827aaf5a3b80d1306562d91cba1bd8f330a1bb465da",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "02_recall5_recall10.png",
+    "sha256": "7cc75fe8e714eb69d71e87e4ddd68bd91c56c274b67d4ca6816763c40654aca7",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "02_recall5_recall10.svg",
+    "sha256": "1727e4ea2fa10ed51ae5ccd2ded9085b65ceb5c68c37da6094403c3f4b8d05a3",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/scaling_summary.csv",
+        "sha256": "18b90a469d8a8a2847c0c06de57f268a998880aed978db196841e9698ce767f1"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/scaling_summary.csv",
+        "sha256": "eaa6ac625b4c7172d4d9e4c2feaf9518fcdcb351446412985f3fd513a1541c0c"
+      }
+    ]
+  },
+  {
+    "file": "05_paired_differences.png",
+    "sha256": "13a5481620cb9e92ba1dc6aad5eeae99ba93d2138d3df1ab376427f9a5c4621d",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_official.json",
+        "sha256": "5fe2ae72e5add04bf3a5296280b663f35b5fb927aa66e66364bc0bb7b2408314"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_scaling.json",
+        "sha256": "a598da27a622585744593955b94eed2d73fc38cf4543deb441868c06cf991240"
+      }
+    ]
+  },
+  {
+    "file": "05_paired_differences.svg",
+    "sha256": "af6d050fa1b7965524c97c6009af00e7b30ed07decc7d23c8c0b2a57f8312854",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_official.json",
+        "sha256": "5fe2ae72e5add04bf3a5296280b663f35b5fb927aa66e66364bc0bb7b2408314"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_scaling.json",
+        "sha256": "a598da27a622585744593955b94eed2d73fc38cf4543deb441868c06cf991240"
+      }
+    ]
+  },
+  {
+    "file": "06_indexing_throughput_time.png",
+    "sha256": "576b596d306a8083c88f1e96fccf1ea349f52c2d28c827c95206595c3ca49175",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "06_indexing_throughput_time.svg",
+    "sha256": "91a90aa3b82541f1c3fd13fd53386ea0e4f43718189c98b8d051c3bca865df77",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "07_query_latency.png",
+    "sha256": "b6dc46f362c63566cd60bf3c296ba054b574636dd8032c8d958edf344c749b1e",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "07_query_latency.svg",
+    "sha256": "96a16620a9646c8dbccd6559b6410b986e875eb141ddae36df85d03f97b12f52",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "08_peak_gpu_memory.png",
+    "sha256": "f7da47ff65007e4aac3336c97d4369fcd29652040ea9a43f303b22158745fd01",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "08_peak_gpu_memory.svg",
+    "sha256": "457b4e2903038ab5b378c1b2d052f49f9e942a18a7792160d4abb9c15e9cccae",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/performance.json",
+        "sha256": "91d40829c0a5761150bb8f73285bfcee9781ba702af42e1986fa52da7c2c027b"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/performance.json",
+        "sha256": "06f0be9873718345dcd9f3ae1e1184024a01def8fb41df40e4f618f65e4df465"
+      }
+    ]
+  },
+  {
+    "file": "09_metadata_fulltext_ablation.png",
+    "sha256": "0c41aee05ae2c1f8051c15e0912667c1fc2cbf249697082270bdea7c821428ce",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/full_comparison.json",
+        "sha256": "24a97a29877949d0fdffbe7383ddb34fc8df10631afefa565a0e19ffc63ccdf5"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_official.json",
+        "sha256": "5fe2ae72e5add04bf3a5296280b663f35b5fb927aa66e66364bc0bb7b2408314"
+      }
+    ]
+  },
+  {
+    "file": "09_metadata_fulltext_ablation.svg",
+    "sha256": "7275d70c430fe3f2a2c3f0f67115c87ac82fe32483bf488fb30dce7755280787",
+    "sources": [
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/full_comparison.json",
+        "sha256": "24a97a29877949d0fdffbe7383ddb34fc8df10631afefa565a0e19ffc63ccdf5"
+      },
+      {
+        "path": "experiments/benchmarks/skillret-bge-m3-fulltext-20261108/results/paired_official.json",
+        "sha256": "5fe2ae72e5add04bf3a5296280b663f35b5fb927aa66e66364bc0bb7b2408314"
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "stage": "PyTorch dependency acquisition",
+    "status": "failed before inference",
+    "error": "OSError122 disk quota exceeded in temporary filesystem",
+    "recovery": "Retry with task-specific disk-backed TMPDIR; reuse completed pip downloads",
+    "model_or_quality_results_affected": false,
+    "utc": "2026-11-08T13:54:34.780890+00:00"
+  }
+]
