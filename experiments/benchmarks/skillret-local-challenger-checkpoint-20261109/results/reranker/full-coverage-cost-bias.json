@@ -1,0 +1,13 @@
+{
+  "skill_window_counts": {
+    "min": 1,
+    "median": 1.0,
+    "p95": 3.0,
+    "max": 14,
+    "total": 15946
+  },
+  "within_query_window_count_score_spearman_mean": 0.1290762008517339,
+  "queries_with_defined_correlation": 509,
+  "median_query_rerank_seconds": 5.4516719869934605,
+  "limitation": "Association, not a causal estimate of document-length bias. Skill-level max offers longer skills more scoring opportunities; no individual window is labeled positive."
+}

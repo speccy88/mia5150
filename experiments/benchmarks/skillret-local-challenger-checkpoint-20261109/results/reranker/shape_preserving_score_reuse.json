@@ -1,0 +1,111 @@
+{
+  "status": "admitted",
+  "development_only": true,
+  "query_ids": [
+    "q-train-048355",
+    "q-train-039843",
+    "q-train-051195",
+    "q-train-000371",
+    "q-train-054874",
+    "q-train-025589",
+    "q-train-059650",
+    "q-train-027658",
+    "q-train-005363",
+    "q-train-036073",
+    "q-train-027694",
+    "q-train-014292",
+    "q-train-006199",
+    "q-train-062461",
+    "q-train-004950",
+    "q-train-010923"
+  ],
+  "development_saved_shared_exact_shape_pairs": 17909,
+  "all_saved_scores_exact": true,
+  "development_saved_score_sources": {
+    "results/reranker/bce-pilot/selection-00100.jsonl": "1b606d622e2aef71366c000519b45b5ceb544d2c1294b9d2c9fcde1980b59dff",
+    "results/reranker/combined-query/selection.jsonl": "265aba21ce1853ec1a28b39f9aaccefb8f6b9d75f0d11766bd733271bf497480"
+  },
+  "model_source_sha256": "bc27343ac4f873efa7ba519cab4518f77ccaf71de64dea08f3922ab236dd107f",
+  "adapter_sha256": {
+    "released": null,
+    "seed42": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+    "seed43": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f"
+  },
+  "batch_size": 4,
+  "budget": 2048,
+  "candidates": 50,
+  "live_checkpoints": {
+    "released": {
+      "reused": 505,
+      "fresh_inputs": 295,
+      "forward_batches": 96,
+      "dummy_inputs": 59,
+      "queries": 16,
+      "score_mismatches": 0,
+      "max_absolute_score_error": 0.0,
+      "native_seconds": {
+        "min": 8.143296181995538,
+        "median": 9.09690820400283,
+        "p95": 9.565555141991354,
+        "max": 9.609755768004106,
+        "total": 145.58465876402624
+      },
+      "reuse_and_pack_seconds": {
+        "min": 1.4690568459918723,
+        "median": 3.7108879035004065,
+        "p95": 6.092042672251409,
+        "max": 6.265099869007827,
+        "total": 61.29990663897479
+      }
+    },
+    "seed42": {
+      "reused": 505,
+      "fresh_inputs": 295,
+      "forward_batches": 96,
+      "dummy_inputs": 59,
+      "queries": 16,
+      "score_mismatches": 0,
+      "max_absolute_score_error": 0.0,
+      "native_seconds": {
+        "min": 8.672694758002763,
+        "median": 9.66238747049647,
+        "p95": 10.156533616245724,
+        "max": 10.199952241993742,
+        "total": 154.7209823839803
+      },
+      "reuse_and_pack_seconds": {
+        "min": 1.5655234220030252,
+        "median": 3.9466777369962074,
+        "p95": 6.473432683502324,
+        "max": 6.6597897989995545,
+        "total": 65.1643915209861
+      }
+    },
+    "seed43": {
+      "reused": 505,
+      "fresh_inputs": 295,
+      "forward_batches": 96,
+      "dummy_inputs": 59,
+      "queries": 16,
+      "score_mismatches": 0,
+      "max_absolute_score_error": 0.0,
+      "native_seconds": {
+        "min": 8.664231310001924,
+        "median": 9.662156910999329,
+        "p95": 10.153193042748171,
+        "max": 10.19269840400375,
+        "total": 154.68570411697146
+      },
+      "reuse_and_pack_seconds": {
+        "min": 1.5651125489966944,
+        "median": 3.946299709001323,
+        "p95": 6.470606692491856,
+        "max": 6.659324870997807,
+        "total": 65.15316724198055
+      }
+    }
+  },
+  "rule": "Require bit-identical scores and at least 15% less active scoring time in each checkpoint fixture. Preserve batch size and padded length for each input; group independent rows of equal shape. No model, evidence, candidate or fusion changes.",
+  "official_exact_check_stride": 137,
+  "confirmation_exact_check_stride": 67
+}

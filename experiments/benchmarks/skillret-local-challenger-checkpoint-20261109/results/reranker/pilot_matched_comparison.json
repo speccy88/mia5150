@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "queries": 512,
+  "all_trained_policy_metrics_independently_verified": true,
+  "all_candidates_and_matched_inputs_identical": true,
+  "trained_score_records_sha256": "1b606d622e2aef71366c000519b45b5ceb544d2c1294b9d2c9fcde1980b59dff",
+  "released_score_records_sha256": "33cd5c3caf912971573c61e8d4b7b2dfab08139389d535041be6fd3479079531",
+  "trained_selected_configuration": "k50-w0.75",
+  "released_selected_configuration": "k50-w1",
+  "released_selected_ndcg10": 0.9336168325168305,
+  "trained_selected_ndcg10": 0.9332722750217961,
+  "training_effect_at_trained_policy": {
+    "delta_ndcg10": 0.00036303097251350394,
+    "descriptive_paired_ci95": [
+      -8.426564983095969e-05,
+      0.0011733585673714716
+    ],
+    "improved": 1,
+    "degraded": 1,
+    "unchanged": 510
+  },
+  "training_effect_at_released_policy": {
+    "delta_ndcg10": -0.0006761648294020578,
+    "descriptive_paired_ci95": [
+      -0.0022223757019768494,
+      0.00019388121377067588
+    ],
+    "improved": 2,
+    "degraded": 2,
+    "unchanged": 508
+  },
+  "scope": "Development selection; descriptive interval does not correct for choosing a policy on these queries."
+}

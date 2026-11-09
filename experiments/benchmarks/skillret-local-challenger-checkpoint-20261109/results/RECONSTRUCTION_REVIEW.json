@@ -1,0 +1,17 @@
+{
+  "decision": "retain_single_reconstruction_and_both_controls",
+  "review_type": "manual review of the saved numerical evidence; the automatic rounding gate did not pass",
+  "explanation": "All 4,392 reconstructed rankings and metrics replay exactly from the one saved vector cache. Input hashes, original truncation, dataset IDs and qrels match the historical contract. The archive has identical top-1 on every query, 4,242 identical top-10 orders, 99.918% mean top-10 overlap, and identical Recall@10 and Completeness@10. Only 12 queries changed NDCG@10, split 6 up and 6 down; the aggregate delta is -0.0000122383. The largest aligned score error is 0.00059627 and all recorded changed-order margins are below 0.000496. This does not establish bit-identical historical vectors or identify a unique numerical cause. Keep the exact archived rankings as the primary reference and the distinct reconstruction only as the matched starting control for locally scored conditions; every local condition uses the same reconstructed document array. Preserve the failed strict and automatic parity receipts. No official adapter output has been opened, no recipe is changed, and no reconstruction inference will be repeated.",
+  "automatic_rounding_acceptance_passed": false,
+  "archived_reference_kept_for_primary": true,
+  "reconstructed_reference_kept_for_matched_controls": true,
+  "evaluation_lock_sha256": "a7fbe2f43f67d6a9d69968e741e5815ca2edb8a06ed799de1731366c3595aa42",
+  "strict_parity_receipt_sha256": "623dfd2935a76020b834143277baefaf9f8953aef986e256fd4cfbd1be03376e",
+  "diagnostics_sha256": "58dc1fe616aa85c3145762594ee1d880d16b7b77233651abd54a98c44542d066",
+  "independent_replay_audit_sha256": "b07820eec297f1dc98c621e0acc998daf5ac14c31d3b01cb2fb6580c3323be82",
+  "reconstructed_rankings_sha256": "143d451344311a2e5a95684d075aafb1c8fafc2f96445873b6014c1f669d8226",
+  "retained_array_sha256": {
+    "test-documents": "635f4713802bcb71e0efb4a9f8ad07e723d355d12efc2af88073e4d0f3b8e36a",
+    "test-base-queries": "f345b36f4faf35ce9ce6820ba48289bac1df0d8e76ca17b3310e136e7470a510"
+  }
+}

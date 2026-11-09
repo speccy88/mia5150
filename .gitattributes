@@ -37,3 +37,9 @@
 /experiments/benchmarks/skillret-bge-m3-lora-20261108/** -text
 /experiments/benchmarks/skillret-bge-m3-lora-20261108/vectors/*.npz filter=lfs diff=lfs merge=lfs -text
 /experiments/benchmarks/skillret-bge-m3-lora-20261108/adapters/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
+
+# SkillRet 0.6B checkpoint evidence and lossless CPU replay.
+/experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/** -text
+/experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/vectors/*.npz filter=lfs diff=lfs merge=lfs -text
+/experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/**/*.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+/experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/figures/official-query-only-two-seeds.svg whitespace=-blank-at-eol

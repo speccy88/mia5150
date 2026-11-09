@@ -1,0 +1,12 @@
+{
+  "train": {
+    "skills": 10123,
+    "missing_skill_md": 0,
+    "empty_skill_md": 0
+  },
+  "test": {
+    "skills": 6006,
+    "missing_skill_md": 0,
+    "empty_skill_md": 0
+  }
+}

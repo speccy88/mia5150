@@ -1,0 +1,10 @@
+{
+  "trial": "full-selected-lr",
+  "relative_cache_path": "checkpoints/query/full-selected-lr/best",
+  "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+  "mixture_weight": 0.75,
+  "best_step": 900,
+  "selected_before_confirmation": true,
+  "baseline_selection_ndcg10": 0.8939497537519404,
+  "selection_ndcg10": 0.8953918404490058
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+  "fresh_process": true,
+  "confirmation_query_count": 512,
+  "dimension": 1024,
+  "finite": true,
+  "norm_max_error": 1.1920928955078125e-07,
+  "note": "Fresh inference validates reload operation; exact selection-vector numerical parity is checked separately before final evaluation."
+}

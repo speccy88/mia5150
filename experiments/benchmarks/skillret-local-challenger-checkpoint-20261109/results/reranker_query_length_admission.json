@@ -1,0 +1,29 @@
+{
+  "train": {
+    "query_plus_required_template_tokens": {
+      "min": 109,
+      "median": 167.0,
+      "p95": 216.0,
+      "max": 364,
+      "total": 10709617
+    },
+    "count": 63259,
+    "minimum_document_tokens_available_at1024": 660,
+    "violations_minimum64_document_tokens": 0
+  },
+  "test": {
+    "query_plus_required_template_tokens": {
+      "min": 114,
+      "median": 309.0,
+      "p95": 450.0,
+      "max": 920,
+      "total": 1378430
+    },
+    "count": 4392,
+    "minimum_document_tokens_available_at1024": 104,
+    "violations_minimum64_document_tokens": 0
+  },
+  "test_qrels_read": false,
+  "test_labels_used_for_calibration_or_selection": false,
+  "purpose": "Input admission only. Verify complete query and required suffix fit before reserving document evidence."
+}

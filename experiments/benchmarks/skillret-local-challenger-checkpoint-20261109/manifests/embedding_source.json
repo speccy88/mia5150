@@ -1,0 +1,42 @@
+{
+  "repository": "ThakiCloud/SKILLRET-Embedding-0.6B",
+  "revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+  "files": {
+    "1_Pooling/config.json": {
+      "bytes": 96,
+      "sha256": "d14d11ecbd53b0fc9e817992a5a7a76f462daf6f080e375f2dceadc8a4eff165"
+    },
+    "README.md": {
+      "bytes": 4179,
+      "sha256": "585dc7bc166f108b8b2ef0987bb93ff58ee86ad8f8f0c069f0db4b4086fc7fc2"
+    },
+    "config.json": {
+      "bytes": 1410,
+      "sha256": "b42224d1a94048f9012c52095a907ef30445deb192acf65bd1cea18e6925838c"
+    },
+    "config_sentence_transformers.json": {
+      "bytes": 374,
+      "sha256": "c30120bb09147a10415b9fc04a7d5bd92f5241de617d910e50d6bf2da80b54aa"
+    },
+    "model.safetensors": {
+      "bytes": 1191586416,
+      "sha256": "f73118cac018ffa7ebb5a1ffbdf82034490dfb7f2559558f1e79277f1e8de172"
+    },
+    "modules.json": {
+      "bytes": 429,
+      "sha256": "fa7d796a215e1b2416773062891923b191fc5a4849bc44e322997433c90f459c"
+    },
+    "sentence_bert_config.json": {
+      "bytes": 241,
+      "sha256": "3084164002c0bca01b0259c5327123803fce32e660a57feb93184ffead186fc8"
+    },
+    "tokenizer.json": {
+      "bytes": 11423968,
+      "sha256": "db74fda9dc5dbe348cb79bda440c969b3ac982a78358d8d884f64ce92098b104"
+    },
+    "tokenizer_config.json": {
+      "bytes": 346,
+      "sha256": "c12b828b810325daa0a1877bfd27c1484c5fd7e0c95a1ddbc99fe8097c7fcbc0"
+    }
+  }
+}

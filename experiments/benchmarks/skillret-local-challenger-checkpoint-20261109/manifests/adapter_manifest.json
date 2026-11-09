@@ -1,0 +1,182 @@
+{
+  "adapters": {
+    "adapters/query/best": {
+      "weight_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/query/final": {
+      "weight_sha256": "919c45f720906c8aba88a23a8473efa7d01091d8303ea8ee76232e244d88b7e7",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/reranker/best": {
+      "weight_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/reranker/final": {
+      "weight_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/query-seed43/best": {
+      "weight_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/query-seed43/final": {
+      "weight_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/reranker-seed43/best": {
+      "weight_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/reranker-seed43/final": {
+      "weight_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-3e-6/best": {
+      "weight_sha256": "e53f6f5d8a7a0942db4de4cb890355e537a616b3f3a2088816216e90261b65c7",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-3e-6/final": {
+      "weight_sha256": "e53f6f5d8a7a0942db4de4cb890355e537a616b3f3a2088816216e90261b65c7",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/full-selected-lr/best": {
+      "weight_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/full-selected-lr/final": {
+      "weight_sha256": "919c45f720906c8aba88a23a8473efa7d01091d8303ea8ee76232e244d88b7e7",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-1e-5/best": {
+      "weight_sha256": "a6db5e4e7a16fcb013977754db6a59c291ab2909743a4c10239e6b0ec40393a1",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-1e-5/final": {
+      "weight_sha256": "a6db5e4e7a16fcb013977754db6a59c291ab2909743a4c10239e6b0ec40393a1",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/secondary-seed43/best": {
+      "weight_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/secondary-seed43/final": {
+      "weight_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "config_sha256": "abc3070cba0454b05796d3bf4d8da8d18cee5d3b43828b47dec5c63e20a5268f",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-1e-6/best": {
+      "weight_sha256": "2eaf1ffe120c6b043e74d57530818cd10fc9b636e5df0012e073cb63cbd51c9a",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/query/pilot-1e-6/final": {
+      "weight_sha256": "2eaf1ffe120c6b043e74d57530818cd10fc9b636e5df0012e073cb63cbd51c9a",
+      "config_sha256": "53bfd3cd852ac4beb06201c1434c0a812fd4f8aab929750c942e97245064a410",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/reranker/bce-pilot/best": {
+      "weight_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/reranker/bce-pilot/final": {
+      "weight_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/reranker/secondary-seed43/best": {
+      "weight_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    },
+    "adapters/attempts/reranker/secondary-seed43/final": {
+      "weight_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+      "config_sha256": "1cddc99ff0534ac08e075dca8a2c3a6169851a5dc570bb237b011404dc0548f8",
+      "trainable_parameters": 1146880,
+      "tensors": 112,
+      "dtype": "float32",
+      "base_weights_included": false
+    }
+  },
+  "no_base_weights": true,
+  "discarded_smoke_and_resume_fixtures": "Not deployment candidates; optimizer states and those discarded fixture weights remain in the external run cache."
+}

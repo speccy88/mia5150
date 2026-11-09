@@ -12,6 +12,14 @@ Both BGE-M3 studies are published on `main`. Use the
 to reproduce their rankings and metrics without embedding again. The archived
 study instructions retain the original proposed experiment branch names.
 
+## SkillRet 0.6B query LoRA checkpoint
+
+The [published checkpoint](experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/README.md) contains two query-only adapters,
+all indexed document and query vectors, and CPU replay for five official
+conditions. The two pure query adapters reached **0.817349** and **0.817469**
+NDCG@10 over all 4,392 official queries, versus the archived **0.810990**.
+Official reranker, scaling, and latency measurements are in progress.
+
 ## BGE-M3 LoRA: paired before/after retrieval
 
 The [completed LoRA study](experiments/benchmarks/skillret-bge-m3-lora-20261108/REPORT.md)

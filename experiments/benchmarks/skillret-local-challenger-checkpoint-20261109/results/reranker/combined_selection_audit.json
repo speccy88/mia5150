@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "queries": 512,
+  "independent_dense_and_metric_replay": true,
+  "source_sha256": "265aba21ce1853ec1a28b39f9aaccefb8f6b9d75f0d11766bd733271bf497480",
+  "reranker_settings_match": "k50-w0.75",
+  "quality_scope": "Development selection only; descriptive intervals do not account for policy choice",
+  "query_update_in_fixed_trained_reranker": {
+    "delta_ndcg10": 0.00046977125779590345,
+    "descriptive_paired_ci95": [
+      -0.0021363221786824785,
+      0.003300747306264262
+    ],
+    "improved": 6,
+    "degraded": 6,
+    "unchanged": 500
+  },
+  "combined_vs_best_released": {
+    "delta_ndcg10": 0.00012521376276157428,
+    "descriptive_paired_ci95": [
+      -0.005610393973126978,
+      0.005916377876854044
+    ],
+    "improved": 16,
+    "degraded": 11,
+    "unchanged": 485
+  },
+  "frozen_candidate_recall": 0.9742838541666666,
+  "combined_candidate_recall": 0.9742838541666666,
+  "frozen_ideal_candidate_ndcg10": 0.9783062128965538,
+  "combined_ideal_candidate_ndcg10": 0.9783062128965538
+}

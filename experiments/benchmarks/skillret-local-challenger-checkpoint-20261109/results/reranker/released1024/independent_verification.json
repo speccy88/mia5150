@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "queries": 512,
+  "configurations": [
+    "k20-w0",
+    "k20-w0.25",
+    "k20-w0.5",
+    "k20-w0.75",
+    "k20-w1",
+    "k50-w0",
+    "k50-w0.25",
+    "k50-w0.5",
+    "k50-w0.75",
+    "k50-w1"
+  ],
+  "source_scores_sha256": "f475cff50864b565eadd9ebdc78cb4cbe3ee651678a6ea7bf0691b3980d672fd",
+  "source_summary_sha256": "133d122adfba46fe3cd35b2a017b589b5d1e828fa77d7d7b8c6c996523348f08",
+  "all_per_query_and_aggregate_metrics_match": true,
+  "median_rerank20_seconds": 1.5807946965069277,
+  "median_rerank50_seconds": 3.9026751314959256,
+  "model_loaded": false,
+  "scope": "Training-origin development selection, original released reranker only"
+}

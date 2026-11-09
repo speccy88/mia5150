@@ -1,0 +1,23 @@
+{
+  "train_test_skill_overlap": {
+    "exact_ids": 0,
+    "exact_source_urls": 0,
+    "normalized_body_hashes": 0,
+    "source_repositories": 1054
+  },
+  "normalized_training_query_positive_set_conflicts": 0,
+  "test_labels_read": false,
+  "changes_to_split_training_or_selection": false,
+  "official_query_tokens": {
+    "min": 57,
+    "median": 252.0,
+    "p95": 393.0,
+    "max": 862,
+    "total": 1128023,
+    "over_8192": 0,
+    "over_32768": 0,
+    "truncated_count": 0,
+    "effective_total": 1128023
+  },
+  "limitation": "Repository family overlap across the original official train/test may exist; our development partitions hold repositories apart only within TRAIN. Exact IDs/source URLs/normalized bodies are separately audited. Released models may have seen all public training examples."
+}

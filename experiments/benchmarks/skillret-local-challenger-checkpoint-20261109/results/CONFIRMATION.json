@@ -1,0 +1,117 @@
+{
+  "selection_lock_sha256": "8d2f4aea091321a144f78562de7c124003609e83f3d9e042520bffc8558dbbcf",
+  "query_confirmation_sha256": "73e17765bd20975b5778fe17ee275808af37c440ca2d7fb066aaa77e3fa69781",
+  "baseline_ndcg10": 0.9031973762975868,
+  "pipelines": {
+    "released-confirmation": {
+      "ndcg10": 0.929576284775289,
+      "ndcg10_delta_vs_frozen": 0.026378908477702162,
+      "paired_ci95": [
+        0.014124932706896078,
+        0.038726823968838
+      ]
+    },
+    "trained-confirmation": {
+      "ndcg10": 0.9296762069644187,
+      "ndcg10_delta_vs_frozen": 0.026478830666831793,
+      "paired_ci95": [
+        0.013946666442314383,
+        0.03908752763603696
+      ]
+    },
+    "released-combined-confirmation": {
+      "ndcg10": 0.9293503871097633,
+      "ndcg10_delta_vs_frozen": 0.02615301081217646,
+      "paired_ci95": [
+        0.013738044820017007,
+        0.03869114898115013
+      ]
+    },
+    "trained-combined-confirmation": {
+      "ndcg10": 0.9294093915311895,
+      "ndcg10_delta_vs_frozen": 0.02621201523360265,
+      "paired_ci95": [
+        0.013578408187921125,
+        0.038825690977895136
+      ]
+    }
+  },
+  "local_training_effects": {
+    "pure-query-vs-own-start": {
+      "ndcg10_delta": 0.00048395920916591566,
+      "paired_ci95": [
+        -0.0036082726761148573,
+        0.0047527933451693635
+      ],
+      "positive_interval": false
+    },
+    "selected-query-mixture-vs-own-start": {
+      "ndcg10_delta": 0.0011063201325636047,
+      "paired_ci95": [
+        -0.0018547653050735467,
+        0.004317202395923813
+      ],
+      "positive_interval": false
+    },
+    "reranker-vs-own-start": {
+      "ndcg10_delta": 9.992218912963254e-05,
+      "paired_ci95": [
+        -0.0020625987860376084,
+        0.002248114238524373
+      ],
+      "positive_interval": false
+    },
+    "combined-reranker-vs-own-start": {
+      "ndcg10_delta": 5.900442142619004e-05,
+      "paired_ci95": [
+        -0.002103516553741051,
+        0.0022071964708209302
+      ],
+      "positive_interval": false
+    },
+    "combined-query-vs-own-start": {
+      "ndcg10_delta": -0.00026681543322914613,
+      "paired_ci95": [
+        -0.00241355056931865,
+        0.001895746991674174
+      ],
+      "positive_interval": false
+    }
+  },
+  "deployment_promotion": {
+    "selection_candidate": "trained-combined",
+    "confirmation_ndcg10": 0.9294093915311895,
+    "confirmation_delta": 0.02621201523360265,
+    "paired_ci95": [
+      0.013578408187921125,
+      0.038825690977895136
+    ],
+    "required_training_effects": [
+      "combined-reranker-vs-own-start",
+      "combined-query-vs-own-start"
+    ],
+    "promoted": false,
+    "rule": "The selection candidate must beat frozen dense with a positive paired interval. Any active local training must also improve on its matched unchanged starting control with a positive paired interval. Otherwise retain frozen dense deployment. Confirmation never changes the research test challenger.",
+    "deployment_condition": "archived-base"
+  },
+  "all_settings_unchanged_after_confirmation": true,
+  "used_for_retuning": false,
+  "offline_score_reuse_verified": {
+    "released-combined-confirmation": {
+      "source": "released-confirmation",
+      "source_uncompressed_sha256": "eafa7903ceaf1584a471888c530c319290e1073ce6b1bd8c1f9f5507e601f494",
+      "query_count": 512,
+      "successful_queries": 512,
+      "reused_scores_exact": 17727,
+      "recorded_live_direct_checks": 8
+    },
+    "trained-combined-confirmation": {
+      "source": "trained-confirmation",
+      "source_uncompressed_sha256": "59c97638f6542cdef39f82164f11ee98d94490b42890263fa9e2b514baf6db7a",
+      "query_count": 512,
+      "successful_queries": 512,
+      "reused_scores_exact": 17727,
+      "recorded_live_direct_checks": 8
+    }
+  }
+}

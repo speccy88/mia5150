@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "original_guard_exit_sha256": "f424a7d4f415da7e021177016bafeba32b518db9adb8771d28286184e432c419",
+  "retry_guard_exit_sha256": "1c77dea34adc94d88783e23b275c55527f87ad831ad268abcce378a0f3a25478",
+  "reason": "The original pass completed all 512 forwards and wrote vectors, ordered IDs, five rankings and metrics, and the reload receipt before JSON serialization rejected a NumPy boolean in the summary.",
+  "recovery": "Fixed the summary type, independently replayed all 2,560 rankings and metrics on CPU, and rebuilt the summary solely from the saved evidence.",
+  "inference_executed_once": true,
+  "any_model_import_in_cpu_recovery": false,
+  "all_saved_evidence_bytes_unchanged": true,
+  "original_panel_sha256": "e19ca0e6d6a369a2f980e972da53e7a039324463d15f5ce271f98c1ff9459693",
+  "original_vector_npy_sha256": "9701d94e3eb3954bead8e70840a528f00e992bb7f3e5d7da9858efeaba31450f",
+  "summary_sha256": "73e17765bd20975b5778fe17ee275808af37c440ca2d7fb066aaa77e3fa69781"
+}

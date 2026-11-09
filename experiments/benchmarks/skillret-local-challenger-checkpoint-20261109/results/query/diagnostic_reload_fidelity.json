@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checked_tensors": 112,
+  "different_tensors": 0,
+  "maximum_error": 0.0,
+  "tensor_errors": {},
+  "training_updates": 0
+}

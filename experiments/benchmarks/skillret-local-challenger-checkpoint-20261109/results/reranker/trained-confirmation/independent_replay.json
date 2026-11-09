@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "queries": 512,
+  "policies": 10,
+  "identical_candidates_dense_scores_and_reranker_inputs": true,
+  "same_policy_ndcg10": {
+    "released": 0.929576284775289,
+    "trained": 0.9296762069644187
+  },
+  "matched_training_effect": {
+    "ndcg10_delta": 9.992218912963254e-05,
+    "ci95": [
+      -0.0020625987860376084,
+      0.0022198366782572444
+    ],
+    "improved": 3,
+    "degraded": 1,
+    "unchanged": 508,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "same_candidate_unfused_effect": {
+    "ndcg10_delta": 4.4675495653689196e-05,
+    "ci95": [
+      -0.002117845479513552,
+      0.0022071964708209302
+    ],
+    "improved": 2,
+    "degraded": 1,
+    "unchanged": 509,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "render_score_seconds": {
+    "min": 7.182412212001509,
+    "median": 9.934843251481652,
+    "p95": 10.447946027492435,
+    "max": 10.626340293994872,
+    "total": 5036.3854627267865
+  },
+  "run": {
+    "exit_code": 0,
+    "guard_reason": null,
+    "wall_seconds": 5069.379059336003
+  },
+  "panel_sha256": "59c97638f6542cdef39f82164f11ee98d94490b42890263fa9e2b514baf6db7a",
+  "release_panel_sha256": "eafa7903ceaf1584a471888c530c319290e1073ce6b1bd8c1f9f5507e601f494"
+}

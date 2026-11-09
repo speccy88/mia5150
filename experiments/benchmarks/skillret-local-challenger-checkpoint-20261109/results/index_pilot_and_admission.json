@@ -1,0 +1,16 @@
+{
+  "phase": "training-origin index and frozen query anchors",
+  "pilot_completed_documents": 100,
+  "pilot_tokens": 1323535,
+  "pilot_active_seconds": 206.53780464894953,
+  "pilot_tokens_per_second": 6408.197289835634,
+  "pilot_longest_effective_tokens": 32768,
+  "pilot_gpu_peak_mib": 2562,
+  "pilot_min_host_available": 4746891264,
+  "admitted_full_documents": 10123,
+  "admitted_full_queries": 47455,
+  "hard_wall_seconds": 14400,
+  "disk_growth_budget_bytes": 10737418240,
+  "stop_available_disk_bytes": 3221225472,
+  "note": "Pilot deliberately uses longest100 documents; extrapolation is uncertain and query fixed overhead differs. Runtime guard enforces a bounded stage; no completion-time promise."
+}

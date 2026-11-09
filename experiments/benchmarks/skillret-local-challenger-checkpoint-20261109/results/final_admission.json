@@ -1,0 +1,9 @@
+{
+  "selected_development_window_and_score_median_seconds": 10.007099289563484,
+  "base_reconstruction_seconds_limit": 7200,
+  "query_encoding_phase_seconds_limit": 3600,
+  "reranking_phase_seconds_limit": 133653,
+  "scaling_phase_seconds_limit": 33413,
+  "latency_sample_seconds_limit": 3600,
+  "reasons": "Bounded by measured development throughput with reserve for final query/pool differences; no schedule guarantee"
+}

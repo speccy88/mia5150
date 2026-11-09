@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "real_optimizer_steps_per_branch": 4,
+  "interruption_checkpoint_step": 2,
+  "all_adapter_tensors_byte_identical": true,
+  "loss_gradients_lr_scaler_and_query_coverage_identical": true,
+  "discarded_fixture_updates_total": 8,
+  "not_used_for_model_selection": true
+}

@@ -1,0 +1,112 @@
+{
+  "document_encoder": {
+    "repository": "ThakiCloud/SKILLRET-Embedding-0.6B",
+    "revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+    "adapter": null,
+    "max_length": 32768,
+    "pooling": "last nonpadding token",
+    "normalize": "float32 L2"
+  },
+  "query_encoder": {
+    "same_base_as_document": true,
+    "adapter": "adapters/query/best",
+    "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+    "apply_adapter_only_to_queries": true,
+    "merge_into_document_encoder": false,
+    "mixture_adapted_weight": 0.75,
+    "query_encodings": 2,
+    "instruction": "Instruct: Given a skill search query, retrieve relevant skills that match the query\nQuery: ",
+    "complete_query": true
+  },
+  "reranker": {
+    "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+    "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+    "adapter": "adapters/reranker/best",
+    "adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+    "candidates": 50,
+    "total_input_budget": 2048,
+    "full_coverage": false,
+    "fusion_weight": 0.75,
+    "score": "yes logit minus no logit, final hidden state and frozen two output rows",
+    "inference_batch": 4
+  },
+  "one_resident_model": true,
+  "resource_note": "Switch encoder and reranker sequentially; actual latency sample includes this loading cost",
+  "primary_condition": "trained-combined",
+  "recommended_deployment_condition": "archived-base",
+  "training_success_claim": "Only final paired results and own starting-checkpoint controls establish whether local training helped",
+  "conditions": {
+    "archived-base": {
+      "query_adapted_weight": 0,
+      "reranker": null
+    },
+    "adapted-query": {
+      "query_adapted_weight": 1,
+      "reranker": null
+    },
+    "mixture-query": {
+      "query_adapted_weight": 0.75,
+      "reranker": null
+    },
+    "released-best-pipeline": {
+      "query_adapted_weight": 0,
+      "reranker": {
+        "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+        "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+        "adapter": null,
+        "adapter_sha256": null,
+        "candidates": 50,
+        "total_input_budget": 2048,
+        "full_coverage": false,
+        "fusion_weight": 1.0,
+        "score": "yes logit minus no logit, final hidden state and frozen two output rows",
+        "inference_batch": 4
+      }
+    },
+    "released-reranker": {
+      "query_adapted_weight": 0,
+      "reranker": {
+        "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+        "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+        "adapter": null,
+        "adapter_sha256": null,
+        "candidates": 50,
+        "total_input_budget": 2048,
+        "full_coverage": false,
+        "fusion_weight": 0.75,
+        "score": "yes logit minus no logit, final hidden state and frozen two output rows",
+        "inference_batch": 4
+      }
+    },
+    "trained-reranker": {
+      "query_adapted_weight": 0,
+      "reranker": {
+        "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+        "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+        "adapter": "adapters/reranker/best",
+        "adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+        "candidates": 50,
+        "total_input_budget": 2048,
+        "full_coverage": false,
+        "fusion_weight": 0.75,
+        "score": "yes logit minus no logit, final hidden state and frozen two output rows",
+        "inference_batch": 4
+      }
+    },
+    "trained-combined": {
+      "query_adapted_weight": 0.75,
+      "reranker": {
+        "repository": "ThakiCloud/SKILLRET-Reranker-0.6B",
+        "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+        "adapter": "adapters/reranker/best",
+        "adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+        "candidates": 50,
+        "total_input_budget": 2048,
+        "full_coverage": false,
+        "fusion_weight": 0.75,
+        "score": "yes logit minus no logit, final hidden state and frozen two output rows",
+        "inference_batch": 4
+      }
+    }
+  }
+}

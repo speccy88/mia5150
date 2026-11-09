@@ -1,0 +1,10 @@
+{
+  "measured_single_pair_update_seconds": 0.7131580809946172,
+  "pilot_max_steps": 100,
+  "pilot_wall_seconds_limit": 13923,
+  "full_max_steps": 600,
+  "full_wall_seconds_limit": 83538,
+  "microbatch_pairs": 1,
+  "accumulation": 16,
+  "full_coverage_recomputation_cost": "additional all-window forward work when full coverage is selected; guarded by wall limit"
+}

@@ -1,0 +1,45 @@
+{
+  "dataset": "ThakiCloud/SKILLRET",
+  "files": [
+    {
+      "bytes": 187920814,
+      "component": "skills",
+      "path": "data/skills/train.jsonl",
+      "sha256": "b4978863f6c36c1d42af4a779f86b8e5809b4709c353aa698ec494e3ed663a2b",
+      "split": "train",
+      "upstream_git_blob_oid": "84053dc0d8e096ab64d17023eb1dc0fe80f59785",
+      "upstream_lfs": {
+        "oid": "b4978863f6c36c1d42af4a779f86b8e5809b4709c353aa698ec494e3ed663a2b",
+        "pointerSize": 134,
+        "size": 187920814
+      }
+    },
+    {
+      "bytes": 54348716,
+      "component": "queries",
+      "path": "data/queries/train.jsonl",
+      "sha256": "e1189e402c74d11ba57af3bbc60308cc4a9b51f29f2de265e541d0599067624c",
+      "split": "train",
+      "upstream_git_blob_oid": "19097be56ac9e5e71b8f073286bb1ea29a949521",
+      "upstream_lfs": {
+        "oid": "e1189e402c74d11ba57af3bbc60308cc4a9b51f29f2de265e541d0599067624c",
+        "pointerSize": 133,
+        "size": 54348716
+      }
+    },
+    {
+      "bytes": 12591810,
+      "component": "qrels",
+      "path": "data/qrels/train.jsonl",
+      "sha256": "7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1",
+      "split": "train",
+      "upstream_git_blob_oid": "bfb1674bed3659a47792ff077ee1f6d6355d34ea",
+      "upstream_lfs": {
+        "oid": "7480dbf936eeee9905c752a681b029bae8e13f67dcacdf4b716684ca21da83e1",
+        "pointerSize": 133,
+        "size": 12591810
+      }
+    }
+  ],
+  "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12"
+}

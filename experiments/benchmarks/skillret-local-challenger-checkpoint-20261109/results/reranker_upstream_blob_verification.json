@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "revision": "0c9a1acc32d3c8ceb506ef008c011566762bff6a",
+  "files": {
+    "README.md": {
+      "storage": "Git",
+      "blob_oid": "f515eee244d3c4cce5c691a7715f2ce1a7f86dff",
+      "payload_sha256": "dd6411ac1cedd84d11295e4ce55a2f4c3c1dc3e3ab860b459c0db1de649652a5"
+    },
+    "config.json": {
+      "storage": "Git",
+      "blob_oid": "e9676c96d8e9498cf9bb6be598d5fe6d426659e0",
+      "payload_sha256": "ff68f3887259ce4b6edcb6d61eb2d4e6ed3497e99a58accd425702582f7a227e"
+    },
+    "generation_config.json": {
+      "storage": "Git",
+      "blob_oid": "9bda08a097a1e406f5849ccc4264c46af0be1405",
+      "payload_sha256": "6143e9b1f072b8717e747386b789b91dd746ad064c09b6b28ffc17f0d7ad185d"
+    },
+    "model.safetensors": {
+      "storage": "LFS",
+      "payload_sha256": "ace7f2068c57ab9ecc66419e8675c0625b9c0ac939bd6d153d202eedf2bd09f3",
+      "pointer_git_oid": "21de83630a348ff3a7807b77a16cea19dbf0f6af"
+    },
+    "tokenizer.json": {
+      "storage": "LFS",
+      "payload_sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "pointer_git_oid": "c7afbed2efcdf019f88ab0572ec29d3bf595dfe2"
+    },
+    "tokenizer_config.json": {
+      "storage": "Git",
+      "blob_oid": "cec1b0b44c6c449d09cc5dccd1bc5f92140a9b1a",
+      "payload_sha256": "f79b420da8a87eafa544fe53c8ec9aa7f5ffb0f863eaf7502c575943f4b671c6"
+    }
+  },
+  "correction": "Tokenizer JSON is also stored through Git LFS; pointer Git OID and actual payload hash have different meanings."
+}

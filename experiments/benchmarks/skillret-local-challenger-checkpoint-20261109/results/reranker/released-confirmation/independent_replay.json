@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "queries": 512,
+  "policies": 10,
+  "all_dense_candidates_scores_and_metrics_exact": true,
+  "matched_fixed_fusion_ndcg10": 0.929576284775289,
+  "unchanged_best_policy_ndcg10": 0.932898709916834,
+  "render_score_seconds": {
+    "min": 6.737356145051308,
+    "median": 9.356672300003993,
+    "p95": 9.885770761058666,
+    "max": 10.049154185006046,
+    "total": 4746.327765844733
+  },
+  "run": {
+    "exit_code": 0,
+    "guard_reason": null,
+    "wall_seconds": 4779.310777727995
+  },
+  "panel_sha256": "eafa7903ceaf1584a471888c530c319290e1073ce6b1bd8c1f9f5507e601f494"
+}

@@ -1,0 +1,10 @@
+{
+  "measured_optimizer_step_median_seconds": 7.877717532501265,
+  "pilot_steps_each": 100,
+  "pilot_time_limit_seconds": 1875,
+  "full_maximum_steps": 1200,
+  "full_time_limit_seconds": 20706,
+  "checkpoint_storage_limit_bytes": 1073741824,
+  "maximum_passes": 2,
+  "smoke_discarded": true
+}

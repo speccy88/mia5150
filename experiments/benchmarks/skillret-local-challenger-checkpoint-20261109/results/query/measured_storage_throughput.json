@@ -1,0 +1,42 @@
+{
+  "status": "verified",
+  "checkpoint_limit_per_trial_bytes": 1073741824,
+  "trials": {
+    "pilot-3e-6": {
+      "checkpoint_storage_bytes": 23129218,
+      "validation_and_training_record_bytes": 7578930,
+      "optimizer_step_median_seconds": 7.989546324504772,
+      "optimizer_step_sum_seconds": 800.0037440639135,
+      "unique_train_queries": 1600,
+      "optimizer_updates": 100,
+      "queries_per_active_optimizer_second": 1.9999906398840224
+    },
+    "pilot-1e-6": {
+      "checkpoint_storage_bytes": 23129218,
+      "validation_and_training_record_bytes": 7579013,
+      "optimizer_step_median_seconds": 7.9992976045032265,
+      "optimizer_step_sum_seconds": 795.1039439540764,
+      "unique_train_queries": 1600,
+      "optimizer_updates": 100,
+      "queries_per_active_optimizer_second": 2.012315511910494
+    },
+    "pilot-1e-5": {
+      "checkpoint_storage_bytes": 23129218,
+      "validation_and_training_record_bytes": 7579352,
+      "optimizer_step_median_seconds": 7.972356956503063,
+      "optimizer_step_sum_seconds": 792.5350339000142,
+      "unique_train_queries": 1600,
+      "optimizer_updates": 100,
+      "queries_per_active_optimizer_second": 2.018838198390426
+    },
+    "full-selected-lr": {
+      "checkpoint_storage_bytes": 178829994,
+      "validation_and_training_record_bytes": 90941282,
+      "optimizer_step_median_seconds": 8.00901264049753,
+      "optimizer_step_sum_seconds": 9554.081396216803,
+      "unique_train_queries": 19200,
+      "optimizer_updates": 1200,
+      "queries_per_active_optimizer_second": 2.00961235348097
+    }
+  }
+}

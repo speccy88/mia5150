@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "scope": "training-origin selection only; descriptive fixed-seed effects; not the official test",
+  "replay": {
+    "secondary_selection": {
+      "queries": 512,
+      "skills": 10123,
+      "mixtures": 5,
+      "rankings_identical": 2560,
+      "metrics_identical": true
+    }
+  },
+  "fixed_primary_mixture_weight": 0.75,
+  "frozen_ndcg10": 0.8939497537519404,
+  "seed43_fixed_mixture_ndcg10": 0.8941802788905607,
+  "seed43_fixed_mixture_vs_frozen": {
+    "ndcg10_delta": 0.00023052513862023398,
+    "ci95": [
+      -0.0030833706621617896,
+      0.0036273475797247196
+    ],
+    "improved": 12,
+    "degraded": 11,
+    "unchanged": 489,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "seed43_pure_vs_frozen": {
+    "ndcg10_delta": 0.0010838153690309587,
+    "ci95": [
+      -0.002556430590616522,
+      0.004894594725519185
+    ],
+    "improved": 16,
+    "degraded": 13,
+    "unchanged": 483,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "seed43_vs_seed42_at_fixed_mixture": {
+    "ndcg10_delta": -0.0012115615584450635,
+    "ci95": [
+      -0.0029899549697907733,
+      -9.260975229653356e-05
+    ],
+    "improved": 0,
+    "degraded": 6,
+    "unchanged": 506,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "selection_source_sha256": "1e3dda2adc63d9b45e16246d74b4713b0ace693f9a6548f93c059b52d06b30ef"
+}

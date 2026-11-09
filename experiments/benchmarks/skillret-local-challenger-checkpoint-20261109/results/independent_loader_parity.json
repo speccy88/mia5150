@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "fixture": "Two synthetic non-test queries, one Unicode; original archived load_model+encode_one versus new zero-LoRA loader",
+  "archive_loader_sha256": "ab865763d6b0207d305f660cbcb0363b649de4109c38c1aa17fdfa6d51b54045",
+  "new_engine_sha256": "a74a0b464eaa6c158642f82186925759f16a32fcfd4bf6a1b6d00d2c8e2e0084",
+  "model_revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+  "max_absolute_error": 0.0,
+  "exact_numeric_vectors_equal": true,
+  "training_updates": 0
+}

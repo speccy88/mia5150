@@ -1,0 +1,288 @@
+{
+  "locked": true,
+  "created_utc": "2026-11-09T15:46:23Z",
+  "primary_seed": 42,
+  "secondary_seed": 43,
+  "primary_condition": "trained-combined",
+  "selection_recommendation": {
+    "condition": "trained-combined",
+    "ndcg10": 0.933742046279592,
+    "active_local_component": "query and reranker adapters plus fixed fusion"
+  },
+  "development_promotion": {
+    "selection_candidate": "trained-combined",
+    "confirmation_ndcg10": 0.9294093915311895,
+    "confirmation_delta": 0.02621201523360265,
+    "paired_ci95": [
+      0.013578408187921125,
+      0.038825690977895136
+    ],
+    "required_training_effects": [
+      "combined-reranker-vs-own-start",
+      "combined-query-vs-own-start"
+    ],
+    "promoted": false,
+    "rule": "The selection candidate must beat frozen dense with a positive paired interval. Any active local training must also improve on its matched unchanged starting control with a positive paired interval. Otherwise retain frozen dense deployment. Confirmation never changes the research test challenger.",
+    "deployment_condition": "archived-base"
+  },
+  "primary_chosen_from_selection_only": true,
+  "test_query_count": 4392,
+  "test_skill_count": 6006,
+  "test_positive_qrel_count": 7187,
+  "test_scope": "all official exact-ID qrels, fixed denominator; failed inference scores zero",
+  "query": {
+    "trial": "full-selected-lr",
+    "relative_cache_path": "checkpoints/query/full-selected-lr/best",
+    "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+    "mixture_weight": 0.75,
+    "best_step": 900,
+    "selected_before_confirmation": true,
+    "baseline_selection_ndcg10": 0.8939497537519404,
+    "selection_ndcg10": 0.8953918404490058
+  },
+  "reranker": {
+    "budget": 2048,
+    "full_coverage": false,
+    "candidates": 50,
+    "fusion_weight": 0.75,
+    "ndcg10": 0.9336168325168305,
+    "configuration": "k50-w1",
+    "summary": "results/reranker/released2048/selection.summary.json",
+    "trial": "bce-pilot",
+    "relative_cache_path": "checkpoints/reranker/bce-pilot/best",
+    "adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+    "best_step": 100,
+    "trained_selection_ndcg10": 0.9332722750217961,
+    "released_selected_ndcg10": 0.9336168325168305,
+    "trained_configuration": "k50-w0.75",
+    "released_configuration": "k50-w1"
+  },
+  "secondary_query": {
+    "trial": "secondary-seed43",
+    "relative_cache_path": "checkpoints/query/secondary-seed43/best",
+    "adapter_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+    "mixture_weight": 0.75,
+    "best_step": 900,
+    "selected_before_confirmation": true,
+    "baseline_selection_ndcg10": 0.8939497537519404,
+    "selection_ndcg10": 0.8953918404490058,
+    "selection_checkpoint_rule": "fixed primary optimizer step and learning-rate schedule; deployment mixture fixed to primary"
+  },
+  "secondary_reranker": {
+    "budget": 2048,
+    "full_coverage": false,
+    "candidates": 50,
+    "fusion_weight": 0.75,
+    "ndcg10": 0.9336168325168305,
+    "configuration": "k50-w1",
+    "summary": "results/reranker/released2048/selection.summary.json",
+    "trial": "secondary-seed43",
+    "relative_cache_path": "checkpoints/reranker/secondary-seed43/best",
+    "adapter_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+    "best_step": 100,
+    "trained_selection_ndcg10": 0.9332722750217961,
+    "released_selected_ndcg10": 0.9336168325168305,
+    "selection_checkpoint_rule": "fixed primary optimizer step and learning-rate schedule; deployment pool/window/fusion fixed to primary"
+  },
+  "released_best_pipeline": {
+    "budget": 2048,
+    "full_coverage": false,
+    "candidates": 50,
+    "fusion_weight": 1.0,
+    "ndcg10": 0.9336168325168305,
+    "configuration": "k50-w1",
+    "summary": "results/reranker/released2048/selection.summary.json"
+  },
+  "adapters": {
+    "query": {
+      "relative_cache_path": "checkpoints/query/full-selected-lr/best",
+      "sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+      "best_step": 900
+    },
+    "reranker": {
+      "relative_cache_path": "checkpoints/reranker/bce-pilot/best",
+      "sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+      "best_step": 100
+    },
+    "secondary_query": {
+      "relative_cache_path": "checkpoints/query/secondary-seed43/best",
+      "sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "best_step": 900
+    },
+    "secondary_reranker": {
+      "relative_cache_path": "checkpoints/reranker/secondary-seed43/best",
+      "sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+      "best_step": 100
+    }
+  },
+  "embedding_source_sha256": "ea594d4476471bfcd19e95158ac56a2d2f47ac2f451ab4a2bae49ef3b6a559c6",
+  "reranker_source_sha256": "bc27343ac4f873efa7ba519cab4518f77ccaf71de64dea08f3922ab236dd107f",
+  "dataset_source_sha256": "c85ea814b798b0026bb3963c7d415e9583675671e16a78291e6ed7d6be1459a1",
+  "split_membership_sha256": "dbc09455a443b18982d28835cbbc63aa34df761978e003912b84697ef873c04d",
+  "protocol_sha256": "5ccf04a8c53028b6f5072cc6190874d2529278d8f3d035564e00623ef38c47bd",
+  "pipeline_selection_sha256": "8d2f4aea091321a144f78562de7c124003609e83f3d9e042520bffc8558dbbcf",
+  "confirmation_sha256": "7663e2f59fd963f820dcf0b5af3f4888130b609e51a89906a5558a581311f66f",
+  "secondary_selection_sha256": "3763ce23e4a987198161b9747a66785458d962f49e421f8ad8653726d6c2291f",
+  "source_sha256": {
+    "analyze.py": "36ecf6281b37f38ad99d21fc917a6028451163ed5031e9ae5e29ccd1562cf4ae",
+    "audit_combined_selection.py": "15f001b69112d72fe6dec36b5e14745b620ab0a7453406f1551e8b304d0d7f54",
+    "audit_reranker_pilot.py": "34675b6888bf976d25e6a00c46574ab8620ac00b535c9d022a7dcf005c9f18cf",
+    "campaign_query.py": "f2882e1789ca0a82f7c161f6fd709dca17ee7c45e5027c51ab49398838f0cc78",
+    "campaign_reranker.py": "7b0ade6c78b25551187cea930926f9ca876d7366bd49ab582e337fc670ea403f",
+    "cli.py": "6c838020de907cb5330add60cb93aa121663261f064768f58c149f7e2749c7da",
+    "common.py": "30c54760fde8a13f10f751c85990391251f0867dfc65bf869cc94f31cb1f3187",
+    "confirm_campaign.py": "252e05390ccd45716b8f8f4d2982ba8deca03c2960b940a2cf46f5a8e5a09668",
+    "confirm_query.py": "6c5006aeba697f97f506c49c2b9f471482bd9bf0909b2aa8ad54f6ee3016ff19",
+    "copy_run_receipts.py": "1906bbd4c80a233848279be6935bcb5fdf53547e71f050421c9a59562f2a1640",
+    "development_reranker.py": "642eed89cd626b5e952e03e8b887286b1a7abaf53eb7233f3bd09332adf49732",
+    "engine.py": "a74a0b464eaa6c158642f82186925759f16a32fcfd4bf6a1b6d00d2c8e2e0084",
+    "evaluate_final.py": "83e96235e4afc7391e4063fb9ec37b6323b04c9a0544748c580abb817615ea34",
+    "freeze_final.py": "1984ba7edbd196382deaeb593d88b4b073814e491a2629643ba1aad55c40d21a",
+    "freeze_pipeline.py": "b933dfa869b181cc0c6ad13411066a8f0e515747395367f0059fb9d786654086",
+    "guard.py": "2b21e1d25436e40e3566adf33e5c5f3822673d968fb1d1bf2def4ad8476707fd",
+    "index.py": "7bb1d87f077dadf957723a826447a2869d956ba0e734493bbddc0375e644e087",
+    "latency.py": "cf4c24dcaf80979f80bc62c47af3f3539a8ad5250e5a2083dd63e691821f7b28",
+    "loader_reference.py": "972cbaabffc3d7a2d5c76e6f797adc9ffb6408e80310bd1f7ee52101be48983d",
+    "mine_reranker.py": "41eff4fed4d028ba5619077e43c48cd32e50217222a3aff14c8158b258b39bbe",
+    "package_adapters.py": "f182c5b57bff4a2274c04d5b1e5bf039ad9b58dc3cf4d9d06ff8c85bc62071c7",
+    "package_records.py": "0e6ab125f781789c7a2333f496c6a9373547eb4c68fbe23866f884cd8b6f71a6",
+    "parity.py": "d3b9e100689cf300614a9be3d073e2da30caa661032562039c6e963eb54569de",
+    "pipeline_panel.py": "01c63aac26bae5ad98515ece019918ed19e83a51a0305538fdbd7499610646ad",
+    "plots.py": "cec92f1b07ca64332c4bfe35b9f2d08114478c89760523fb1d718a4f57b349a2",
+    "prepare.py": "98928434fc04b34255b079f24bd096e48f60506cdca5052df44fb3605d2fd247",
+    "prepare_publication.py": "6215cfabaf643bdc7a9f8b5ed7006cf0c69893f0b23c8e8e5430dfb36a5ecb74",
+    "probe_reload.py": "352c5e0318a5a338157c4f9fc9b5b10a1a24f5bcd281f97e1afc2ec1ea7d1c5f",
+    "publication_readiness.py": "0f5c614e9a0ef639e764057436f7a599a007c2edd0901d06bd248425a0d41f03",
+    "reconstruction_diagnostics.py": "5f505b210d34044bf3ae786c9cbefa21dd53b36d7499ab1d8e6801efb2aabbac",
+    "recovery.py": "7b61fa080ed109b4a220a8f7a7b1011a7160f823deb56c085bc6d669a9c3e16d",
+    "reload_query.py": "c6f0bcbe9eb2322069a1c85ee50b4be5a05497ff40f71b3551810a5dfcb85d35",
+    "reload_reranker.py": "fd1910fe1516061fa6aa077a4a99da782c02adf017c106cd0ba1ba6273da6b6a",
+    "remote_replay.py": "2134449bfa70229912fd5c71f6a6c0b0ef16078dda94730434a7eccf0139a26f",
+    "render.py": "bae689e79a62577f692aeddc9f2f97db31aab5d8159474be8b3def56b99b2eaf",
+    "replay_development_reranker.py": "3b3433e94c0887f75991e180452899b3ddd1dbb71afd9a8fd1a2c646f07d1d07",
+    "report.py": "9a3c0459443410e4d806e894524d91ba9031b12a0b7f2bee8c55bba127fb8d94",
+    "reranker.py": "01ea23c3bcd0a0c1ac04a7db09417eaa8f75afd9c0a493213e3b3f3bf635f477",
+    "resume_parity.py": "4c4529ad8657486c3c34598c7f6e19c7ef5b339b7884e1fc28c3ccf6ff1b2b62",
+    "review_development.py": "8766caccb39337d6ce186cc823441871aea123568b95eb8987323a9fa5544302",
+    "review_reference_rounding.py": "49ecf81fda35d47e0c596aaa742ba2efeb774039a436386c68c9bc6a7231fb43",
+    "run_final.py": "373bc659b97e2bf0c9a315c1eccb17efcf69981cfccf029b4be86bb8c3331b6a",
+    "scaling.py": "c58a626c59d86ed2726381236c279418fc30d83b6c849f0adb19ddd9d2b4f7c5",
+    "score_controls.py": "306d6076caf4805edf311bed50ccbe3b0141726593d428efe6084b9e89cab6d9",
+    "score_reuse.py": "efe53d9ae21e1bf4bf4b7595bd6828e181306dcca4205de8d2cb9ea907d8b74f",
+    "secondary.py": "418d79723fb94b5fa871acb87548a030b9c77cc0123e2c3a39e3d7154b078695",
+    "snapshot.py": "440057f8d712485b7b759c7218c3bfc02dcda114369e8ff480b3508e8f479109",
+    "train_query.py": "084fd2728b5336344c00dd4d26a28adecf140a897fd1a14ab07a74937334ecec",
+    "train_reranker.py": "f42544ed0d92422d45cb23be875776ce069cb9de36c4713525b07158c72bbbef",
+    "verify.py": "e63d72c956bbf4bf588076682032f7ea2fad150ef3864dc9e81d19ea35c8a75f",
+    "verify_mining.py": "4a03068e2950afa36fb5880011ddbd8ab80d09d9fdaedb03f2bbafb300eafae3"
+  },
+  "primary_reference": "archived full-text SkillRet-Embedding-0.6B NDCG@10 .8109902409310652; own starting-checkpoint controls also retained",
+  "candidate_rules": "full original ordered6006 skill IDs, stable source-order dense ties, top50; rerank only locked topK; no gold injection or test-derived features",
+  "document_encoder": "original checkpoint only; no query adapter and no index rebuild with adaptation",
+  "query_encoder": "same original instruction, last nonpadding pooling, F32L2; query-only unmerged adapter; exact selected mixture,0/1useunchanged vectors,fractionalweightednorm",
+  "document_limit": 32768,
+  "historical_truncation": "preserve both original overlength test documents",
+  "renderer": {
+    "rule": "BM25-like frozen lexical evidence over ALL original body windows; rank spans by sum IDF(qword)*tf/(tf+1.2), choose greedily within residual token budget, restore original source order; query/suffix retained, metadata capped 192 tokens; overlap32; source spans exact offsets",
+    "idf_corpus": "all 10123 training-origin skills, no relevance labels",
+    "idf_sha256": "c10a12f9fc21095b98f14860b03d4f7da5a1ce977ee76daf27a2fdbf7a632e6d",
+    "window_tokens": 256,
+    "overlap_tokens": 32,
+    "metadata_cap": 192,
+    "budgets": [
+      1024,
+      2048
+    ],
+    "full_coverage": "all dynamic-budget body windows, sequential max aggregation per skill; no individual window positive labels",
+    "determinism": "IDF keys and unique query terms are lexicographically sorted; lexical sums and source-order ties are independent of Python hash randomization.",
+    "short_window_policy": "Keep an entire short source window when it fits; only truncated fragments need at least 32 tokens."
+  },
+  "fusion": "within-pool stable rank percentiles, fixed selected convex coefficient; original dense rank breaks ties",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "question",
+    "interval": "percentile95"
+  },
+  "fixed_controls": [
+    "reconstructed-base",
+    "adapted-query",
+    "mixture-query when distinct",
+    "released-reranker at identical trained settings",
+    "trained-reranker",
+    "released-best-pipeline",
+    "released-reranker-unfused",
+    "trained-reranker-unfused",
+    "secondary seed43 components",
+    "released/trained combined if primary selected combined"
+  ],
+  "post_test_policy": "No hyperparameter, checkpoint, evidence-window, candidate or fusion selection after official results are opened. Any further tuning requires a new identified development campaign.",
+  "development_review_sha256": "9b590261d3c48a4ba62d504ca54b2380bd3453cbee5f8005ba25fc6801a6e01e",
+  "pilot_matched_audit_sha256": "46a2eba331022ef1e7991c8fcb19e22b2a078521527b2090db37062a2a1a06a1",
+  "combined_selection_audit_sha256": "401909c840a688a29607b38b8df9186899ca977ae1dd04ed69cdd55735f6b608",
+  "shape_preserving_score_reuse": {
+    "enabled": true,
+    "audit_path": "results/reranker/shape_preserving_score_reuse.json",
+    "audit_sha256": "652b5d3c5bf9442c37e6208acec6e50d1042d5352188d9369f6c645efafc0c6f",
+    "batch_size": 4,
+    "audit_stride": 137,
+    "sources": {
+      "released-combined": "released-reranker",
+      "trained-combined": "trained-reranker",
+      "trained-combined-seed43": "trained-reranker-seed43"
+    },
+    "boundary": "Offline evaluation only. Same model/adapter, exact token IDs, original tensor shape; independent uncached latency run is unchanged."
+  },
+  "adapter_reload_receipts": {
+    "results/query/selection_reload_parity.json": "07d70af50bdd0b78f27a3949aad1549fd1a98b77b0684edb4c776dd05d826fc2",
+    "results/reranker/adapter_reload_parity.json": "545d309c02e1356c9cfa3f5846afbc97fc0af8d0b27709c22bbc237d7f9211c3"
+  },
+  "archived_protocol_sha256": "23b421c4cdca9596c10a3459904e8720b1e933255605e773bbff8bd1a0657746",
+  "archived_reference_rankings_sha256": "06af8037a9a606703cbd4e9dde821fc0375642b82d9032e7aea1c15512710301",
+  "official_test_inputs": {
+    "skills.jsonl": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "queries.jsonl": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "qrels.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "scaling": {
+    "panel_source": "experiments/benchmarks/skill-discovery-oauth-v1-20261103/data/test_queries.json",
+    "panel_sha256": "7ef69814dd8f93f4a8dadc290567f158e78986898aa76a33bc95cf883716c28b",
+    "pool_source": "experiments/benchmarks/skillret-qwen3-embedding-8b-q4km-fulltext/results/candidate_pools.json",
+    "pool_sha256": "5827304c919c7fdcba40fa6412f2363102bdb51f9a00c14da72e758d7f7d5f46",
+    "library_sizes": [
+      50,
+      100,
+      250,
+      500,
+      1000,
+      2000,
+      5000,
+      6006
+    ],
+    "query_count": 20,
+    "dense_conditions": [
+      "base",
+      "adapted-query",
+      "mixture-query"
+    ],
+    "reranker_conditions": {
+      "released-reranker": [
+        "base",
+        false
+      ],
+      "trained-reranker": [
+        "base",
+        true
+      ],
+      "released-combined": [
+        "mixture-query",
+        false
+      ],
+      "trained-combined": [
+        "mixture-query",
+        true
+      ]
+    }
+  },
+  "inference_config_sha256": "73001e7e1d3bc2f34fa0c4b5e21f709db46dc721d4a777c1e2c30c71a7d34ab5"
+}

@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "seed": 43,
+  "scope": "All 4392 official queries, all6006 shared document vectors, exact rankings and scores reproduced from saved arrays; no model inference",
+  "conditions": {
+    "adapted-query-seed43": {
+      "metrics": {
+        "NDCG@10": 0.8174694296751356,
+        "Recall@10": 0.8830449301760778,
+        "MRR@10": 0.8619940295486743,
+        "Completeness@10": 0.7953096539162113
+      },
+      "vs_archived_primary_reference": {
+        "ndcg10_delta": 0.00647918874407039,
+        "ci95": [
+          0.0049442784212713545,
+          0.00801183970180226
+        ],
+        "improved": 447,
+        "degraded": 208,
+        "unchanged": 3737,
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 42,
+        "unit": "question",
+        "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+      },
+      "vs_identical_document_reconstructed_start": {
+        "ndcg10_delta": 0.006491427043864747,
+        "ci95": [
+          0.004956555516460094,
+          0.008022265188845438
+        ],
+        "improved": 448,
+        "degraded": 206,
+        "unchanged": 3738,
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 42,
+        "unit": "question",
+        "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+      },
+      "rankings_sha256": "cd451365f7d29898e1a99f773352de174d7a7d2651031e6e7d02593444cedb9a"
+    },
+    "mixture-query-seed43": {
+      "metrics": {
+        "NDCG@10": 0.8159249220561228,
+        "Recall@10": 0.881640862173649,
+        "MRR@10": 0.8603629976580797,
+        "Completeness@10": 0.793943533697632
+      },
+      "vs_archived_primary_reference": {
+        "ndcg10_delta": 0.004934681125057576,
+        "ci95": [
+          0.0036084153388833686,
+          0.00625792528695476
+        ],
+        "improved": 371,
+        "degraded": 167,
+        "unchanged": 3854,
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 42,
+        "unit": "question",
+        "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+      },
+      "vs_identical_document_reconstructed_start": {
+        "ndcg10_delta": 0.004946919424851933,
+        "ci95": [
+          0.0036250812435201173,
+          0.006269711016402054
+        ],
+        "improved": 372,
+        "degraded": 165,
+        "unchanged": 3855,
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 42,
+        "unit": "question",
+        "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+      },
+      "rankings_sha256": "40203d487f22e76f326cb60618c6f9c4a988ce46606dc78e76298a5e79a4ea91"
+    }
+  },
+  "guard": {
+    "exit_code": 0,
+    "guard_reason": null,
+    "wall_seconds": 530.3958827739989
+  },
+  "adapted_cache_array_sha256": "53ddae958e832ac734440078f585b79b9939cacf69d7bbc251f63813098cde26",
+  "adapted_cache_active_seconds": 400.3849834452267
+}

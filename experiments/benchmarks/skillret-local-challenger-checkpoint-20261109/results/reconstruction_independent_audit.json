@@ -1,0 +1,105 @@
+{
+  "status": "passed",
+  "scope": "Saved official reconstruction only; independently recomputed from all cached rows, no model imports or inference",
+  "evaluation_lock_sha256": "a7fbe2f43f67d6a9d69968e741e5815ca2edb8a06ed799de1731366c3595aa42",
+  "input_audit_sha256": "ed674016ccc828787487d3f59d127f9397be7cf0538267b58f40055180ed134a",
+  "cached_arrays": {
+    "test-documents": {
+      "array_sha256": "635f4713802bcb71e0efb4a9f8ad07e723d355d12efc2af88073e4d0f3b8e36a",
+      "contract_sha256": "ff0285478df4b1c8e265190eafd1094014df531ea3417b9ef285e12bb45c339b",
+      "journal_sha256": "b3cb5909fd54ba450a2ce69fb794701cdd34362cfd26983b51e3434e1b287d0e",
+      "shape": [
+        6006,
+        1024
+      ],
+      "active_seconds": 1269.1726028844132,
+      "norm_max_error": 1.1920928955078125e-07
+    },
+    "test-base-queries": {
+      "array_sha256": "f345b36f4faf35ce9ce6820ba48289bac1df0d8e76ca17b3310e136e7470a510",
+      "contract_sha256": "9254a90a6da162d0ebcc88a3d8e9137a2b2f3d8564ca14dbc6c5cd45b7e9042d",
+      "journal_sha256": "93d08ece5841caadc239398673af6ac815b00f1c05653dcba2c91053b4385df9",
+      "shape": [
+        4392,
+        1024
+      ],
+      "active_seconds": 300.6057876381674,
+      "norm_max_error": 1.1920928955078125e-07
+    }
+  },
+  "reference_query_count": 4392,
+  "positive_qrels": 7187,
+  "rank_cutoffs": {
+    "1": {
+      "exact_order": 4392,
+      "exact_membership": 4392,
+      "mean_overlap_fraction": 1.0
+    },
+    "5": {
+      "exact_order": 4357,
+      "exact_membership": 4383,
+      "mean_overlap_fraction": 0.9995901639344262
+    },
+    "10": {
+      "exact_order": 4242,
+      "exact_membership": 4356,
+      "mean_overlap_fraction": 0.9991803278688524
+    },
+    "15": {
+      "exact_order": 4031,
+      "exact_membership": 4331,
+      "mean_overlap_fraction": 0.9990740740740741
+    },
+    "20": {
+      "exact_order": 3782,
+      "exact_membership": 4337,
+      "mean_overlap_fraction": 0.9993738615664846
+    },
+    "50": {
+      "exact_order": 1713,
+      "exact_membership": 4243,
+      "mean_overlap_fraction": 0.9993214936247724
+    }
+  },
+  "score_errors_aligned_by_query_and_skill": {
+    "pairs": 219600,
+    "signed_mean": 9.247364445787961e-07,
+    "absolute_median": 1.0639429092407227e-05,
+    "absolute_p95": 0.00014775991439819336,
+    "absolute_max": 0.000596269965171814,
+    "pearson_r": 0.9999994473482815,
+    "changed_rank_max_margins": {
+      "max_old_score_margin_for_reordered_common_pair": 0.0004952400922775269,
+      "max_rebuilt_score_margin_for_reordered_common_pair": 0.0004209578037261963,
+      "max_archived_score_margin_of_lost_id_above_cutoff": 0.00022214651107788086,
+      "max_rebuilt_score_margin_of_gained_id_above_lost_id": 0.00034259259700775146
+    }
+  },
+  "archived_metrics": {
+    "NDCG@10": 0.8109902409310652,
+    "Recall@10": 0.8764420157862781,
+    "MRR@10": 0.8563485738861423,
+    "Completeness@10": 0.788023679417122
+  },
+  "reconstructed_metrics": {
+    "NDCG@10": 0.8109780026312708,
+    "Recall@10": 0.8764420157862781,
+    "MRR@10": 0.856359958221297,
+    "Completeness@10": 0.788023679417122
+  },
+  "paired_reconstruction_vs_archive": {
+    "ndcg10_delta": -1.2238299794357107e-05,
+    "ci95": [
+      -4.925015958204286e-05,
+      2.403029149062381e-05
+    ],
+    "improved": 6,
+    "degraded": 6,
+    "unchanged": 4380,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 42,
+    "unit": "question",
+    "uncertainty_scope": "conditional on locked selection and observed dataset, not complete seed/pretraining/selection uncertainty"
+  },
+  "limits": "The original vector arrays were unavailable. Archive and reconstructed numbers are distinct evidence; the cached reconstruction cannot establish byte-identical vectors or uniquely attribute differences to one software component."
+}

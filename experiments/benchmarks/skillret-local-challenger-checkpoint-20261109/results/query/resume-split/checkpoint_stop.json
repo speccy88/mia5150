@@ -1,0 +1,5 @@
+{
+  "status": "checkpointed_stop",
+  "step": 2,
+  "reason": "resume_parity_fixture"
+}

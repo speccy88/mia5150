@@ -1,0 +1,14 @@
+{
+  "scope": "All archived query rankings, score errors aligned on the same skill IDs, no model inference",
+  "query_count": 4392,
+  "identical_top50_count": 1713,
+  "identical_top10_count": 4242,
+  "changed_top50_membership_count": 149,
+  "max_aligned_archived_score_error": 0.000596269965171814,
+  "p95_query_max_aligned_score_error": 0.0003021925687789917,
+  "archive_ndcg10": 0.8109902409310652,
+  "reconstructed_ndcg10": 0.8109780026312708,
+  "reconstructed_minus_archived_ndcg10": -1.2238299794353757e-05,
+  "reconstructed_minus_archived_recall10": 0.0,
+  "ranking_differences_require_review": true
+}

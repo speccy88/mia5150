@@ -1,0 +1,15 @@
+{
+  "rule": "BM25-like frozen lexical evidence over ALL original body windows; rank spans by sum IDF(qword)*tf/(tf+1.2), choose greedily within residual token budget, restore original source order; query/suffix retained, metadata capped 192 tokens; overlap32; source spans exact offsets",
+  "idf_corpus": "all 10123 training-origin skills, no relevance labels",
+  "idf_sha256": "c10a12f9fc21095b98f14860b03d4f7da5a1ce977ee76daf27a2fdbf7a632e6d",
+  "window_tokens": 256,
+  "overlap_tokens": 32,
+  "metadata_cap": 192,
+  "budgets": [
+    1024,
+    2048
+  ],
+  "full_coverage": "all dynamic-budget body windows, sequential max aggregation per skill; no individual window positive labels",
+  "determinism": "IDF keys and unique query terms are lexicographically sorted; lexical sums and source-order ties are independent of Python hash randomization.",
+  "short_window_policy": "Keep an entire short source window when it fits; only truncated fragments need at least 32 tokens."
+}

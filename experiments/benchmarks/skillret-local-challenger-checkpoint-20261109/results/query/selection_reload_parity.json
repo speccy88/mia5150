@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+  "query_count": 512,
+  "all_five_preregistered_mixture_rankings_identical": true,
+  "adapted_vectors_byte_identical": true,
+  "all_metrics_identical": true
+}

@@ -1,0 +1,20 @@
+{
+  "status": "selected",
+  "selected": {
+    "budget": 2048,
+    "full_coverage": false,
+    "candidates": 50,
+    "fusion_weight": 0.75,
+    "ndcg10": 0.9336168325168305,
+    "configuration": "k50-w1",
+    "summary": "results/reranker/released2048/selection.summary.json",
+    "trial": "bce-pilot",
+    "relative_cache_path": "checkpoints/reranker/bce-pilot/best",
+    "adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+    "best_step": 100,
+    "trained_selection_ndcg10": 0.9332722750217961,
+    "released_selected_ndcg10": 0.9336168325168305
+  },
+  "official_test_inference_run": false,
+  "confirmation_opened": false
+}

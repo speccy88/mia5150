@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "confirmation_receipt_sha256": "7663e2f59fd963f820dcf0b5af3f4888130b609e51a89906a5558a581311f66f",
+  "query_count": 512,
+  "no_official_test_inference": true,
+  "reranker_candidates_and_exact_inputs_equal": true,
+  "matched_score_records_sha256": {
+    "released": "eafa7903ceaf1584a471888c530c319290e1073ce6b1bd8c1f9f5507e601f494",
+    "trained": "59c97638f6542cdef39f82164f11ee98d94490b42890263fa9e2b514baf6db7a"
+  },
+  "candidate_pool": {
+    "k": 50,
+    "recall": 0.9690755208333334,
+    "ideal_ndcg10": 0.9733796966924586
+  },
+  "pure_query_effect_by_positive_count": {
+    "1": {
+      "queries": 473,
+      "mean_ndcg10_change": 0.0006928371062268796,
+      "improved": 9,
+      "degraded": 7,
+      "unchanged": 457
+    },
+    "2": {
+      "queries": 33,
+      "mean_ndcg10_change": 0.0037207480200591135,
+      "improved": 2,
+      "degraded": 0,
+      "unchanged": 31
+    },
+    "3": {
+      "queries": 6,
+      "mean_ndcg10_change": -0.03378492013571934,
+      "improved": 0,
+      "degraded": 1,
+      "unchanged": 5
+    }
+  },
+  "mixture_effect_by_positive_count": {
+    "1": {
+      "queries": 473,
+      "mean_ndcg10_change": 0.0012366135223476616,
+      "improved": 8,
+      "degraded": 6,
+      "unchanged": 459
+    },
+    "2": {
+      "queries": 33,
+      "mean_ndcg10_change": 0.0037207480200591135,
+      "improved": 2,
+      "degraded": 0,
+      "unchanged": 31
+    },
+    "3": {
+      "queries": 6,
+      "mean_ndcg10_change": -0.023544495476638172,
+      "improved": 0,
+      "degraded": 1,
+      "unchanged": 5
+    }
+  },
+  "reranker_effect_by_positive_count": {
+    "1": {
+      "queries": 473,
+      "mean_ndcg10_change": 9.265063602294171e-05,
+      "improved": 2,
+      "degraded": 1,
+      "unchanged": 470
+    },
+    "2": {
+      "queries": 33,
+      "mean_ndcg10_change": 0.00022231545440971006,
+      "improved": 1,
+      "degraded": 0,
+      "unchanged": 32
+    },
+    "3": {
+      "queries": 6,
+      "mean_ndcg10_change": 0.0,
+      "improved": 0,
+      "degraded": 0,
+      "unchanged": 6
+    }
+  },
+  "reranker_score_change_median_absolute": 0.1796875,
+  "reranker_score_change_max_absolute": 0.40625,
+  "positive_own_start_effects": [],
+  "unchanged_research_evaluation_ready": true,
+  "repair_decision": "No automatic recipe change. With matched inputs and no method failure, retain the locked research comparison even if neither local effect is confirmed.",
+  "scope": "Descriptive error audit on the frozen confirmation panel; no parameter changes or test-derived features. Small positive-count strata are not precise.",
+  "combined_released_and_trained_exact_inputs_equal": true,
+  "combined_score_records_sha256": {
+    "released": "9587cfe7ab99b741c3e9370112e1f750919ff5b096b60439e326442eff108770",
+    "trained": "d5ca82e21226ead042f67234f4b297b4c8e00b66716818c416cf3eb7a73c3208"
+  },
+  "combined_reranker_effect_by_positive_count": {
+    "1": {
+      "queries": 473,
+      "mean_ndcg10_change": 4.835909888940564e-05,
+      "improved": 2,
+      "degraded": 1,
+      "unchanged": 470
+    },
+    "2": {
+      "queries": 33,
+      "mean_ndcg10_change": 0.00022231545440971006,
+      "improved": 1,
+      "degraded": 0,
+      "unchanged": 32
+    },
+    "3": {
+      "queries": 6,
+      "mean_ndcg10_change": 0.0,
+      "improved": 0,
+      "degraded": 0,
+      "unchanged": 6
+    }
+  },
+  "combined_query_effect_by_positive_count": {
+    "1": {
+      "queries": 473,
+      "mean_ndcg10_change": -0.0002780444853271273,
+      "improved": 1,
+      "degraded": 4,
+      "unchanged": 468
+    },
+    "2": {
+      "queries": 33,
+      "mean_ndcg10_change": 0.0004250011887781217,
+      "improved": 1,
+      "degraded": 0,
+      "unchanged": 32
+    },
+    "3": {
+      "queries": 6,
+      "mean_ndcg10_change": -0.003186583247211605,
+      "improved": 0,
+      "degraded": 1,
+      "unchanged": 5
+    }
+  }
+}

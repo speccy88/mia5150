@@ -1,0 +1,9 @@
+{
+  "identical_top50_count": 1713,
+  "query_count": 4392,
+  "max_score_absolute_difference": 0.0005661994218826294,
+  "archived_ndcg10": 0.8109902409310652,
+  "reconstructed_ndcg10": 0.8109780026312708,
+  "status": "runtime_difference_investigate",
+  "runtime_change": "archived cu128 vs local cu126; exact same Transformers4.57.1 and tokenizer.22.2"
+}

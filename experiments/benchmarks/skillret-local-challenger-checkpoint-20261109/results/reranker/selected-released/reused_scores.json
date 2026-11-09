@@ -1,0 +1,9 @@
+{
+  "source_records": "results/reranker/released2048/selection.jsonl",
+  "source_records_sha256": "33cd5c3caf912971573c61e8d4b7b2dfab08139389d535041be6fd3479079531",
+  "source_summary_sha256": "3112663dc4a95d72bbf79c95c67f25d0c2f9fccacc4854f1c19232f55812a8ba",
+  "same_candidates_and_input_hashes": true,
+  "queries": 512,
+  "matched_scored_skills": 25600,
+  "inference_repeated": false
+}

@@ -1,0 +1,25 @@
+{
+  "selected_before_confirmation": {
+    "trial": "full-selected-lr",
+    "relative_cache_path": "checkpoints/query/full-selected-lr/best",
+    "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+    "mixture_weight": 0.75,
+    "best_step": 900,
+    "selected_before_confirmation": true,
+    "baseline_selection_ndcg10": 0.8939497537519404,
+    "selection_ndcg10": 0.8953918404490058
+  },
+  "frozen_ndcg10": 0.9031973762975868,
+  "chosen_ndcg10": 0.9043036964301504,
+  "delta": 0.0011063201325636047,
+  "paired_ci95": [
+    -0.0018547653050735467,
+    0.004317202395923813
+  ],
+  "confirmed_point_improvement": true,
+  "confirmed_interval_excludes_zero": false,
+  "checkpoint_or_mix_changed_after_confirmation": false,
+  "adapted_vector_npy_sha256": "9701d94e3eb3954bead8e70840a528f00e992bb7f3e5d7da9858efeaba31450f",
+  "panel_sha256": "e19ca0e6d6a369a2f980e972da53e7a039324463d15f5ce271f98c1ff9459693",
+  "completed_from_saved_inference": true
+}

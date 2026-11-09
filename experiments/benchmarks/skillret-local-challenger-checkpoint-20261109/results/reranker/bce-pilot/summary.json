@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "seed": 42,
+  "steps": 100,
+  "schedule_max_steps": 100,
+  "fixed_checkpoint_step": null,
+  "pairs": 1600,
+  "unique_query_count": 410,
+  "positive_policy": "All available positives per query in sorted order, each with one matched negative; BCE mean over pairs",
+  "pair_plan_count": 177068,
+  "training_wall_seconds": 6072.035522688006,
+  "resumed_from_step": 0,
+  "checkpoint_storage_bytes": 23097009,
+  "training_record_bytes": 15756007,
+  "best_step": 100,
+  "best_selection_ndcg10": 0.9332722750217961,
+  "frozen_before": "19a512f9516c6938f5db3872f76f95c7722b6f877c8cc24453da30353fe928f8",
+  "frozen_after": "19a512f9516c6938f5db3872f76f95c7722b6f877c8cc24453da30353fe928f8",
+  "final_adapter_sha256": "688116b8f55294793fb156a92e7bc39b921d9694841dc66fe8e49f520fc33166",
+  "peak_cuda_allocated": 1566570496,
+  "peak_cuda_reserved": 2009071616,
+  "overflows": 0
+}

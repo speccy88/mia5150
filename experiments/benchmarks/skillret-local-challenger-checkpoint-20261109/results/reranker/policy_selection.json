@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "budget": 2048,
+    "full_coverage": false,
+    "candidates": 50,
+    "fusion_weight": 1.0,
+    "ndcg10": 0.9336168325168305,
+    "configuration": "k50-w1",
+    "summary": "results/reranker/released2048/selection.summary.json"
+  },
+  "selected_evidence_candidates": [
+    {
+      "budget": 1024,
+      "full_coverage": false,
+      "candidates": 20,
+      "fusion_weight": 1.0,
+      "ndcg10": 0.931789607037904,
+      "configuration": "k20-w1",
+      "summary": "results/reranker/released1024/selection.summary.json"
+    },
+    {
+      "budget": 2048,
+      "full_coverage": false,
+      "candidates": 50,
+      "fusion_weight": 1.0,
+      "ndcg10": 0.9336168325168305,
+      "configuration": "k50-w1",
+      "summary": "results/reranker/released2048/selection.summary.json"
+    }
+  ],
+  "full_coverage_candidate": {
+    "budget": 2048,
+    "full_coverage": true,
+    "candidates": 20,
+    "fusion_weight": 1.0,
+    "ndcg10": 0.9322228610507006,
+    "configuration": "k20-w1",
+    "summary": "results/reranker/released-fullcoverage/selection.summary.json"
+  },
+  "full_vs_selected_median_rerank_time_ratio": 0.5883775945475386,
+  "full_coverage_promoted": false,
+  "rule": "full coverage requires >=.005 selectionNDCG gain and <=2x median measured rendering+scoring time at the selected candidate count"
+}

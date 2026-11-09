@@ -1,0 +1,6 @@
+{
+  "restored_checkpoint_step": 2,
+  "restored_best_step": 0,
+  "kind": "query",
+  "reason": "Explicit resume; later journal/validation output retained here, not silently mixed into continuation"
+}

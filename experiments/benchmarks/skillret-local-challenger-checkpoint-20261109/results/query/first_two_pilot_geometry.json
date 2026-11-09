@@ -1,0 +1,22 @@
+{
+  "pilot-3e-6": {
+    "scope": "512 training-derived selection queries; not independent confirmation",
+    "pure_adapter_ndcg10_delta": 0.0004836325777918739,
+    "changed_top1": 2,
+    "changed_ordered_top50": 512,
+    "mean_shared_top50_fraction": 0.9865625,
+    "ndcg10_improved": 4,
+    "ndcg10_degraded": 2,
+    "ndcg10_unchanged": 506
+  },
+  "pilot-1e-6": {
+    "scope": "512 training-derived selection queries; not independent confirmation",
+    "pure_adapter_ndcg10_delta": 0.0,
+    "changed_top1": 0,
+    "changed_ordered_top50": 504,
+    "mean_shared_top50_fraction": 0.9965234374999999,
+    "ndcg10_improved": 0,
+    "ndcg10_degraded": 0,
+    "ndcg10_unchanged": 512
+  }
+}

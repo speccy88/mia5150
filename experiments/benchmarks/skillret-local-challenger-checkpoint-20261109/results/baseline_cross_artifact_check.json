@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "queries": 4392,
+  "independent_saved_dense_top50_identical_to_baseline_rankings_and_scores": true,
+  "dense_top50_sha256": "2941fb3aea15ce1d22bf8559ebfcd07476b55e9e948ab3cc889f812f892752b8",
+  "baseline_json_sha256": "06af8037a9a606703cbd4e9dde821fc0375642b82d9032e7aea1c15512710301",
+  "historical_files_modified": false
+}

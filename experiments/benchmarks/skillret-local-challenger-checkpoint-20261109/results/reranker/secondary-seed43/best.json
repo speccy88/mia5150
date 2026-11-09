@@ -1,0 +1,7 @@
+{
+  "step": 100,
+  "ndcg10": null,
+  "configuration": "fixed_primary_policy",
+  "adapter_sha256": "67df69101ad43d636588fad9cc9209e9c4cae1576c9e08d68984ff1e2ab76b2f",
+  "selection_inference_performed": false
+}

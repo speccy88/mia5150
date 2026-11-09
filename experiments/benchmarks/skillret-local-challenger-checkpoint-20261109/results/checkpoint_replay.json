@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "official_query_conditions": {
+    "reconstructed-base": {
+      "rankings_identical": 4392,
+      "metrics_identical": true,
+      "max_score_error": 0.0
+    },
+    "adapted-query": {
+      "rankings_identical": 4392,
+      "metrics_identical": true,
+      "max_score_error": 0.0
+    },
+    "mixture-query": {
+      "rankings_identical": 4392,
+      "metrics_identical": true,
+      "max_score_error": 0.0
+    },
+    "adapted-query-seed43": {
+      "rankings_identical": 4392,
+      "metrics_identical": true,
+      "max_score_error": 0.0
+    },
+    "mixture-query-seed43": {
+      "rankings_identical": 4392,
+      "metrics_identical": true,
+      "max_score_error": 0.0
+    }
+  },
+  "development_query_panels": {
+    "selection": {
+      "queries": 512,
+      "skills": 10123,
+      "mixtures": 5,
+      "rankings_identical": 2560,
+      "metrics_identical": true
+    },
+    "confirmation": {
+      "queries": 512,
+      "skills": 10123,
+      "mixtures": 5,
+      "rankings_identical": 2560,
+      "metrics_identical": true
+    },
+    "secondary_selection": {
+      "queries": 512,
+      "skills": 10123,
+      "mixtures": 5,
+      "rankings_identical": 2560,
+      "metrics_identical": true
+    }
+  },
+  "development_reranker_panels": {
+    "bce-pilot/selection-00100.summary.json": {
+      "part": "selection",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "combined-query/selection.summary.json": {
+      "part": "selection",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "combined",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "released-combined-confirmation/panel.summary.json": {
+      "part": "confirmation",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "combined",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "released-confirmation/panel.summary.json": {
+      "part": "confirmation",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "released-fullcoverage/selection.summary.json": {
+      "part": "selection",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 5,
+      "all_candidates_and_metrics_match": true
+    },
+    "released1024/selection.summary.json": {
+      "part": "selection",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "released2048/selection.summary.json": {
+      "part": "selection",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "reload-selection/panel.summary.json": {
+      "part": "selection",
+      "queries": 64,
+      "reload_fixture": true,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "trained-combined-confirmation/panel.summary.json": {
+      "part": "confirmation",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "combined",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    },
+    "trained-confirmation/panel.summary.json": {
+      "part": "confirmation",
+      "queries": 512,
+      "reload_fixture": false,
+      "dense_query_vectors": "frozen",
+      "configurations": 10,
+      "all_candidates_and_metrics_match": true
+    }
+  },
+  "confirmation_score_reuse": {
+    "released-combined-confirmation": {
+      "source": "released-confirmation",
+      "source_uncompressed_sha256": "eafa7903ceaf1584a471888c530c319290e1073ce6b1bd8c1f9f5507e601f494",
+      "query_count": 512,
+      "successful_queries": 512,
+      "reused_scores_exact": 17727,
+      "recorded_live_direct_checks": 8
+    },
+    "trained-combined-confirmation": {
+      "source": "trained-confirmation",
+      "source_uncompressed_sha256": "59c97638f6542cdef39f82164f11ee98d94490b42890263fa9e2b514baf6db7a",
+      "query_count": 512,
+      "successful_queries": 512,
+      "reused_scores_exact": 17727,
+      "recorded_live_direct_checks": 8
+    }
+  }
+}

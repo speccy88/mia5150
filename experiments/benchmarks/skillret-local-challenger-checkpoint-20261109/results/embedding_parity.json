@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "fixture": "synthetic non-test text; archived encode_one versus new loader/pooling and zero LoRA",
+  "max_abs_error": 0.0,
+  "rope_theta": 1000000.0,
+  "backward_checks": [
+    {
+      "tokens": 99,
+      "finite_nonzero_gradient": 0.6786160469055176,
+      "successful_update": true
+    },
+    {
+      "tokens": 995,
+      "finite_nonzero_gradient": 0.795046865940094,
+      "successful_update": true
+    }
+  ],
+  "frozen_sha256": "b13e09576031f34e2c92a91ef1fb98e3c9cae4aea22c69ec3a75fcf9c2b9534d",
+  "peak_allocated": 1418800640,
+  "peak_reserved": 1457520640,
+  "smoke_updates_discarded": true
+}

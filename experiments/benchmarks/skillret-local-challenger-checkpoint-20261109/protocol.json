@@ -1,0 +1,112 @@
+{
+  "campaign": "skillret-local-challenger-20261108",
+  "source_commit": "9d534137eb1e5c03408f2f8946f45e0825ede114",
+  "primary_seed": 42,
+  "secondary_seed": 43,
+  "device": "local RTX 2060 SUPER only",
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "embedding_revision": "67f1594c46c40e13a5eb2f4092cc85c98c9ed32d",
+  "documents": "name.strip() | description.strip() | skill_md.strip(); original baseline 32768-token right limit, including two historical truncated test documents",
+  "queries": "original instruction and complete query; left padding, last nonpadding token, FP32 normalization",
+  "development": "seed5150 source-repository/identity/normalized-body components, 80/10/10 hash partition; 512 selection and 512 confirmation queries, all 10123 train-origin skills as evaluation candidates; updates and negative mining exclude both development skill partitions",
+  "query_objective": "float32 softmax over ALL eligible frozen train-document vectors; target probability uniform across ALL known positives; temperature .05; mean cross entropy plus 1*(1-cos(adapted,base))",
+  "query_lora": {
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "base_dtype": "float16",
+    "adapter_dtype": "float32",
+    "physical_queries": 1,
+    "accumulation": 16,
+    "clip": 1,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "warmup_fraction": 0.1
+  },
+  "query_lr_comparison": [
+    3e-06,
+    1e-06,
+    1e-05
+  ],
+  "query_pilot_steps_each": 100,
+  "query_full_maximum_steps": 1200,
+  "query_maximum_eligible_passes": 2,
+  "query_validation_interval": 100,
+  "query_early_stop_stale_evaluations": 3,
+  "query_mixture_adapted_weights": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "mixture_deployment": "weight in (0,1) requires separate base and adapted query encodings, normalized after weighted sum; document index remains frozen",
+  "query_promote": "pilot positive selection NDCG; choose checkpoint and mixture on selection only; confirmation evaluated once after recipe/checkpoint lock; confirmation point gain and paired interval reported, no confirmation-driven retuning",
+  "reranker_candidates": [
+    20,
+    50
+  ],
+  "reranker_renderer": "deterministic label-blind lexical selection from complete original SKILL.md with original source offsets, metadata and full query/suffix reserved; same rule for positives, negatives and all partitions",
+  "reranker_initial_budget": 1024,
+  "reranker_target_budget": 2048,
+  "reranker_full_coverage_development_ablation": "sequential bounded body windows, max skill score, report length bias and throughput; promote only if development gain justifies cost",
+  "reranker_objective": "skill-level binary cross entropy on logit(yes)-logit(no); balanced alternating positive/negative pairs; negatives mixture high 60%, moderate 30%, random 10%; all known and content-equivalent positives excluded",
+  "reranker_lora": {
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "base_dtype": "float16",
+    "adapter_dtype": "float32",
+    "learning_rate": 3e-06,
+    "accumulation": 16,
+    "clip": 1,
+    "optimizer": "AdamW",
+    "warmup_fraction": 0.1
+  },
+  "reranker_pilot_steps": 100,
+  "reranker_full_maximum_steps": 600,
+  "reranker_validation_interval": 100,
+  "reranker_early_stop_stale_evaluations": 3,
+  "fusion": "development-only rank-percentile normalized dense and reranker scores; convex weights [0,.25,.5,.75,1], deterministic original dense rank tie break; dense-only included",
+  "confirmation": "one use after freezing selection choices, not checkpoint/hyperparameter selection; pretrained models may already have seen this public training partition",
+  "primary_test_comparison": "one trained challenger selected on development, versus archived frozen SkillRet-0.6B; retain unchanged released-reranker and embedding controls; freeze FINAL_EVAL_LOCK before any new official scores",
+  "bootstrap": {
+    "unit": "question",
+    "replicates": 10000,
+    "seed": 42,
+    "interval": "percentile95",
+    "limitations": "conditional on selected recipes and fixed dataset; excludes full seed/selection/pretraining/exposed-test uncertainty"
+  },
+  "test_policy": "4392 queries, 6006 original ordered skills, 7187 exact-ID positives, no candidate gold injection, no tuning after final results, fixed denominator failures count zero",
+  "scaling": "secondary original 20-question eight saved pools with exact historical membership/source labels",
+  "resource_policy": "one resident model; low-memory CUDA loading; no BF16/FlashAttention2/math fallback; >=1GiB host RAM and ~0.5GiB GPU reserves; guard owns only experiment children; no services changed",
+  "publication": "direct main as explicitly authorized, preserve all old study bytes, staged-only gitleaks scan, compact adapters/vectors via Git LFS",
+  "reranker_inference_batch": {
+    "candidates": [
+      4,
+      10
+    ],
+    "selection": "Non-test synthetic throughput/memory and score parity only. 10 admitted if both1024/2048 are at least5% faster for20pairs, max logit difference error<.02 and CUDA reserved<7GiB. Otherwise4. Same selected batch for all released/trained/dev/final reranker inference."
+  },
+  "reranker_inference_validation": "tiny padded-batch scores and gradients compared to official full-vocabulary reference before any development scoring",
+  "reranker_policy_selection_rule": "Compare all512 selection queries for1024/2048 selected evidence and20/50 dense candidates. Choose highest end-to-end selection NDCG, ties fewer candidates, smaller budget, lower rerank fusion weight. Full-coverage2048/top20 replaces selected evidence only with >=.005 NDCG gain and <=2x median measured rendering+reranking time at the selected candidate count. All choices precede confirmation and official scoring.",
+  "reranker_training_promotion_rule": "Run100-step BCE pilot against own released checkpoint on identical inputs/pools. Promote a fresh <=600-step run only if selection NDCG improves over the released starting checkpoint under the selected policy; otherwise preserve the pilot as a negative training result.",
+  "reranker_full_coverage_gradient": "For a skill-level max, no-grad scores for all windows retain per-window CPU/CUDA RNG state; replay only first-argmax window with gradient, restore post-scoring RNG; independently validate scores, scaled gradients and dropout RNG against naive retained-graph max on tiny fixtures.",
+  "latency_sample": "20 lowest SHA256(latency_seed42,query_id) official query IDs after final lock; actual application-uncached query inference + model switching + selected-evidence reranking, one resident model; report this sample separately from component-summed full-test times",
+  "reranker_positive_policy": "For each training query, iterate ALL known positive skill IDs in sorted order, each followed by one sampled negative. Bounded runs may stop between query groups; report actual coverage. BCE reduction is mean over pairs, with equal positive/negative counts, not one arbitrarily retained target per multi-positive query.",
+  "deterministic_training": "Strict torch.use_deterministic_algorithms(True) with CUBLAS_WORKSPACE_CONFIG=:4096:8, same efficient CUDA SDPA and no fallback. An initial non-deterministic backward fixture was discarded. The corrected real 4-step vs 2+reload+2 fixture passed byte-exactly before quality pilots.",
+  "reranker_short_window_policy": "Keep an entire short source window when it fits; only truncated fragments need at least 32 tokens.",
+  "reranker_budget_admission": "1024 must pass real forward/backward/update and batch-4 inference. If the optional 2048 probe cannot fit, retain its resource failure and use 1024 for all policies, including the complete-window alternative. Batch-10 OOM never promotes batch 10.",
+  "deployment_confirmation_gate": "The selection-only recommendation must beat frozen dense with a positive paired interval on the independent panel. Each active local training component must also beat its matched unchanged starting checkpoint with a positive interval. Otherwise retain frozen dense deployment. This never changes the locked primary research contrast or selects another checkpoint.",
+  "secondary_seed_rule": "Repeat each selected seed42 recipe with seed43 through its exact selected optimizer step, preserving the full original schedule length and fixed candidate/renderer/fusion/mixture choices. Record the fixed query checkpoint development vectors for replay. The fixed reranker repeat needs no new development selection scoring. No reselection of stopping point or seed.",
+  "reranker_reload_fixture": "A fresh process checks exact candidate/input/logit/ranking parity on the first 64 frozen selection query IDs, fixed before any trained reranker validation result. The actual trained checkpoint quality still uses the complete 512-query panel.",
+  "reference_rounding_acceptance": "Compare all 4,392 archived ranks and all 219,600 archived top-50 scores aligned by skill ID after one reconstruction. Automatic continuation requires identical top 10 on every query, identical shared metrics at 5 and 10, every aligned score within 1e-5, and every changed tail-order margin within 2e-5. Otherwise stop for review using the same cached bytes. Never re-embed or change the archived primary reference."
+}

@@ -1,0 +1,109 @@
+{
+  "archive_sha256": "f7cf61ecad5870e379451c5d784b0252a06eb9e11464e0a0d2690381e50069de",
+  "bytes": 285435269,
+  "schema": 1,
+  "arrays": {
+    "train-documents": {
+      "shape": [
+        10123,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "d5bfe99a06d036d9d8b1748d378d4db4de4b4f18a102e193df9a67ec5c3b5d02",
+      "contract_sha256": "14614a0a8ce043d75699f8194f25c5c725d78c2b62519e5248ed115d5d9a888d",
+      "effective_budget": 32768,
+      "adapter_tensor_sha256": null
+    },
+    "train-queries": {
+      "shape": [
+        47455,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "a8674d0eb898ffadbed2426cfcfb6432d0e8ec9e181dd520bf2bf876a459183e",
+      "contract_sha256": "6e04ca480e84c9b40d4885a83e4de90e587c49b7afddcb8a6c421e1d8c58773c",
+      "effective_budget": 1024,
+      "adapter_tensor_sha256": null
+    },
+    "test-documents": {
+      "shape": [
+        6006,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "635f4713802bcb71e0efb4a9f8ad07e723d355d12efc2af88073e4d0f3b8e36a",
+      "contract_sha256": "ff0285478df4b1c8e265190eafd1094014df531ea3417b9ef285e12bb45c339b",
+      "effective_budget": 32768,
+      "adapter_tensor_sha256": null
+    },
+    "test-base-queries": {
+      "shape": [
+        4392,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "f345b36f4faf35ce9ce6820ba48289bac1df0d8e76ca17b3310e136e7470a510",
+      "contract_sha256": "9254a90a6da162d0ebcc88a3d8e9137a2b2f3d8564ca14dbc6c5cd45b7e9042d",
+      "effective_budget": 32768,
+      "adapter_tensor_sha256": null
+    },
+    "test-adapted-queries": {
+      "shape": [
+        4392,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "222a19647e9778c3f100118b3beb4d8f3c6ace15db2de8b2f5a711757d4f692c",
+      "contract_sha256": "0f87385c28965c2c77d88ff218de1452d28efadc007ecb5d03749aa7f8b0903e",
+      "effective_budget": 32768,
+      "adapter_tensor_sha256": "c9c60f97420ce906486f2a41c5fc56b51efc407cc89d95a6fb5fd14189e9f095"
+    },
+    "test-adapted-queries-seed43": {
+      "shape": [
+        4392,
+        1024
+      ],
+      "dtype": "float32",
+      "array_sha256": "53ddae958e832ac734440078f585b79b9939cacf69d7bbc251f63813098cde26",
+      "contract_sha256": "36944b42d49b4fa5211753d1e2369c120deb249413d84510ee2cd4d2fbb2ae7c",
+      "effective_budget": 32768,
+      "adapter_tensor_sha256": "6fc8386058d85dcdb8952a15c177710ad6d394258a0f626cd36b09e0f69e5dcc"
+    }
+  },
+  "development_query_panels": {
+    "selection": {
+      "part": "selection",
+      "array_key": "dev_selection_adapted_queries",
+      "npy_sha256": "3693b6723d62c9f322da1eb87ba0817e0a7c89519757e2f4fcf3f9f58a76af27",
+      "vector_receipt_digest": "6f39fe6774aa408f8c30b14b57c6776922afe2c18b27f75b9d383a6ac90de00e",
+      "ids": 512,
+      "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+      "receipt": "results/query/reload-selection.json",
+      "receipt_sha256": "c287cdd4b1e885a683cd4893ac6d549ffa3e9202fa13ab227e4549e4c03271b2"
+    },
+    "confirmation": {
+      "part": "confirmation",
+      "array_key": "dev_confirmation_adapted_queries",
+      "npy_sha256": "9701d94e3eb3954bead8e70840a528f00e992bb7f3e5d7da9858efeaba31450f",
+      "vector_receipt_digest": "737a64c2f0879031b6f2d16fd7066191e0199791ae780935adc95b556686cd00",
+      "ids": 512,
+      "adapter_sha256": "41a3cbe4a4a5ee148279bf04104cbf56e42549daa44ace5e79b442403e9b9c3a",
+      "receipt": "results/query/confirmation-all-preregistered-mixtures.json",
+      "receipt_sha256": "e19ca0e6d6a369a2f980e972da53e7a039324463d15f5ce271f98c1ff9459693"
+    },
+    "secondary_selection": {
+      "part": "selection",
+      "array_key": "dev_secondary_selection_adapted_queries",
+      "npy_sha256": "3d9f15af7a27d7a2f3b80d3d93688294374102b99ccfddd8118b3a1ea1dd966d",
+      "vector_receipt_digest": "bc96eca12d62e4650708b80d591559d091a37e23fe2f194002b0212563be6847",
+      "ids": 512,
+      "adapter_sha256": "efcd36634f53f94bf6dbeb35e7bb7347cce3bae41d6f06849056e3888d33de94",
+      "receipt": "results/query/secondary-seed43/selection-00900.json",
+      "receipt_sha256": "1e3dda2adc63d9b45e16246d74b4713b0ace693f9a6548f93c059b52d06b30ef"
+    }
+  },
+  "dimension": 1024,
+  "normalization": "float32 L2",
+  "compression": "lossless ZIP, no quantization",
+  "lock_sha256": "a7fbe2f43f67d6a9d69968e741e5815ca2edb8a06ed799de1731366c3595aa42"
+}

@@ -1,0 +1,68 @@
+{
+  "locked": true,
+  "primary_condition": "trained-combined",
+  "primary": {
+    "condition": "trained-combined",
+    "ndcg10": 0.933742046279592,
+    "active_local_component": "query and reranker adapters plus fixed fusion"
+  },
+  "active_trained_candidates": [
+    {
+      "condition": "adapted-query",
+      "ndcg10": 0.8949862196274591,
+      "active_local_component": "query adapter"
+    },
+    {
+      "condition": "mixture-query",
+      "ndcg10": 0.8953918404490058,
+      "active_local_component": "query adapter plus selection-fitted mixture"
+    },
+    {
+      "condition": "trained-reranker",
+      "ndcg10": 0.9332722750217961,
+      "active_local_component": "reranker adapter plus selection-fitted fusion"
+    },
+    {
+      "condition": "trained-combined",
+      "ndcg10": 0.933742046279592,
+      "active_local_component": "query and reranker adapters plus fixed fusion"
+    }
+  ],
+  "controls": [
+    {
+      "condition": "released-best-pipeline",
+      "ndcg10": 0.9336168325168305,
+      "active_local_component": "selection-fitted fusion; released reranker unadapted",
+      "configuration": {
+        "budget": 2048,
+        "full_coverage": false,
+        "candidates": 50,
+        "fusion_weight": 1.0,
+        "ndcg10": 0.9336168325168305,
+        "configuration": "k50-w1",
+        "summary": "results/reranker/released2048/selection.summary.json"
+      }
+    },
+    {
+      "condition": "archived-base",
+      "ndcg10": 0.8939497537519404,
+      "active_local_component": null
+    },
+    {
+      "condition": "released-reranker",
+      "ndcg10": 0.9329092440492827,
+      "active_local_component": "selection-fitted fusion only; released reranker unadapted"
+    }
+  ],
+  "selection_recommendation": {
+    "condition": "trained-combined",
+    "ndcg10": 0.933742046279592,
+    "active_local_component": "query and reranker adapters plus fixed fusion"
+  },
+  "selection_only": true,
+  "confirmation_opened": false,
+  "official_test_opened": false,
+  "query_selection_lock_sha256": "1395bcedc2e7943ae5f379f8009f11a7f7fcab101f423bc3555bfc99412455c3",
+  "reranker_selection_lock_sha256": "977ac4f2928a41e03840a7c0b7bc2fa1563a88060f326e7a088586c93a501402",
+  "rule": "Highest selection NDCG among declared active locally-trained challengers, earliest tie; frozen and released controls remain real deployment candidates. Confirmation does not change any model, mixture, candidate count or evidence policy."
+}

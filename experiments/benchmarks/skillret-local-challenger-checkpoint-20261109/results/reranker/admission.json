@@ -1,0 +1,70 @@
+{
+  "measured_admission": [
+    {
+      "tokens": 1024,
+      "forward_backward_update_seconds": 0.6016241859906586,
+      "batch4_inference_seconds": 0.29580861001159064,
+      "gradient_norm": 11.487974166870117,
+      "inference_batch_profile": {
+        "4": {
+          "status": "passed",
+          "median_seconds_20_pairs": 1.7101712139992742,
+          "peak_reserved_bytes": 1744830464,
+          "samples": [
+            1.7099889969977085,
+            1.7108629979920806,
+            1.7101712139992742
+          ]
+        },
+        "10": {
+          "status": "passed",
+          "median_seconds_20_pairs": 1.6560947580001084,
+          "peak_reserved_bytes": 2059403264,
+          "samples": [
+            1.6565512119996129,
+            1.6560947580001084,
+            1.655913677008357
+          ]
+        }
+      },
+      "batch4_vs10_max_score_error": 0.0078125
+    },
+    {
+      "tokens": 2048,
+      "forward_backward_update_seconds": 0.7131580809946172,
+      "batch4_inference_seconds": 0.6410180200036848,
+      "gradient_norm": 11.688819885253906,
+      "inference_batch_profile": {
+        "4": {
+          "status": "passed",
+          "median_seconds_20_pairs": 4.078627499999129,
+          "peak_reserved_bytes": 2059403264,
+          "samples": [
+            4.078471209999407,
+            4.07903077499941,
+            4.078627499999129
+          ]
+        },
+        "10": {
+          "status": "passed",
+          "median_seconds_20_pairs": 4.003903015007381,
+          "peak_reserved_bytes": 2688548864,
+          "samples": [
+            4.004114641007618,
+            4.00357517899829,
+            4.003903015007381
+          ]
+        }
+      },
+      "batch4_vs10_max_score_error": 0.0078125
+    }
+  ],
+  "development_queries_per_panel": 512,
+  "maximum_candidate_count": 50,
+  "inference_batch": 4,
+  "per_development_policy_time_limit_seconds": 11041,
+  "pilot_training_steps": 100,
+  "full_training_maximum_steps": 600,
+  "checkpoint_storage_limit_bytes": 1073741824,
+  "all_execution_local": true
+}

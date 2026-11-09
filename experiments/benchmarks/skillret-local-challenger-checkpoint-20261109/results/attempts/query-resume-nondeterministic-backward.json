@@ -1,0 +1,19 @@
+{
+  "status": "failed_fixture_before_quality_pilots",
+  "attempt": "query-resume-parity-01",
+  "discarded_real_updates": 8,
+  "reference_and_interrupted_branches_already_differed_before_reload": true,
+  "step1_gradient_norms": [
+    2.642223596572876,
+    2.6421899795532227
+  ],
+  "final_parameter_max_absolute_difference": 8.287453965749592e-06,
+  "differing_adapter_values": 1127630,
+  "direct_checkpoint_reload_checked_tensors": 112,
+  "direct_checkpoint_reload_max_absolute_error": 0.0,
+  "diagnosis": "Evidence points to default efficient CUDA SDPA backward nondeterminism rather than checkpoint serialization; strict deterministic mode resolved the mismatch.",
+  "correction": "torch.use_deterministic_algorithms(True); no model, data, LR, or objective change",
+  "corrected_attempt": "query-resume-parity-01-retry-2",
+  "corrected_actual_outcome": "byte-identical adapter tensors and exact step losses, gradients, LR/scaler and coverage",
+  "used_for_model_selection": false
+}
