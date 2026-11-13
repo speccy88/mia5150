@@ -1,0 +1,22 @@
+{
+  "full_6656_top50.jsonl": {
+    "sha256": "cb1e196cbebf6bd96003cddc01a48169aece32e68d221d356c293062f603c6ce",
+    "bytes": 18458483,
+    "parts": [
+      "full_6656_top50.part00.jsonl",
+      "full_6656_top50.part01.jsonl",
+      "full_6656_top50.part02.jsonl"
+    ]
+  },
+  "full_6656_top100.jsonl": {
+    "sha256": "39c90f13ce6e9594e464313feb114e4be08bd7f50d379d4e0dfba286f40690b2",
+    "bytes": 36769850,
+    "parts": [
+      "full_6656_top100.part00.jsonl",
+      "full_6656_top100.part01.jsonl",
+      "full_6656_top100.part02.jsonl",
+      "full_6656_top100.part03.jsonl",
+      "full_6656_top100.part04.jsonl"
+    ]
+  }
+}

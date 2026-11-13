@@ -32,7 +32,7 @@ MetaEncoder's measured primary retrieval scores are lower than the supplied hist
 | full_6656 | 4392 | 6656 | 0.720593 | 0.791249 | 0.656421 | 0.792056 | 1.339122 |
 | truncated_6656 | 4392 | 6656 | 0.720690 | 0.791325 | 0.656421 | 0.792056 | 1.476223 |
 
-Sources: [aggregate measurements](results/retrieval_summary.json), [full-dimension per-query metrics](results/full_6656_metrics.json), [top-100 rankings](results/full_6656_top100.jsonl). All configurations use the same completed primary inference; dimensions below 6,656 do not incur additional inference. Times measure a single cached CPU NumPy matrix multiplication for all 4,392 queries against 6,006 skills, excluding ranking sort, model loading, query inference and network transfer. They are not warm request-latency estimates.
+Sources: [aggregate measurements](results/retrieval_summary.json), [full-dimension per-query metrics](results/full_6656_metrics.json), [top-100 rankings](results/rankings/README.md). All configurations use the same completed primary inference; dimensions below 6,656 do not incur additional inference. Times measure a single cached CPU NumPy matrix multiplication for all 4,392 queries against 6,006 skills, excluding ranking sort, model loading, query inference and network transfer. They are not warm request-latency estimates.
 
 ## Native retrieve
 
