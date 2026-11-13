@@ -11,7 +11,7 @@
   "container_storage_status": "Not running",
   "retained_volume_gb": 150,
   "retained_volume_rate_usd_per_hour": 0.042,
-  "termination": "pending final Drive verification",
+  "termination": "Blocked pending explicit owner approval to delete the pod and associated workspace volume. GPU remains stopped; 150 GB retained storage costs USD 0.042/hour.",
   "evidence_bytes": 142628820,
   "evidence_sha256": "63ff20c22029d97b21fffd24812e1d9d73559f0db93ca2a75ba1a16216fff6c2",
   "evidence_hash_verification": "Downloaded archive matches RunPod export/SHA256_MANIFEST.json read in Jupyter JSON viewer",
