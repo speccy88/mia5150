@@ -1,0 +1,55 @@
+{
+  "document_chunks.npz": {
+    "bytes": 165240352,
+    "sha256": "d92cd46a220cd8b508262ff479e013ddc19ceccb839d90e30d52cd1eda0f252a",
+    "parts": [
+      {
+        "file": "document_chunks.npz.part00",
+        "bytes": 94371840,
+        "sha256": "5bf833528b42680d37aadb6329f1811fdb091c71b18d8a922ffb2353ece6b037"
+      },
+      {
+        "file": "document_chunks.npz.part01",
+        "bytes": 70868512,
+        "sha256": "2225034d4b1494af8de3684dee11f59e3b83551fe25b551719475ccc2a585251"
+      }
+    ]
+  },
+  "full_embeddings.npz": {
+    "bytes": 143019917,
+    "sha256": "2c9c53d776644d2ca92ffa10c1cb1e6bd1709145f81cac3a319f1a9885ab1df5",
+    "parts": [
+      {
+        "file": "full_embeddings.npz.part00",
+        "bytes": 94371840,
+        "sha256": "6c7845329716468875dc8986b00e471ce53b7dc89b5d776d074d2da6f21548ef"
+      },
+      {
+        "file": "full_embeddings.npz.part01",
+        "bytes": 48648077,
+        "sha256": "af2a4d5875d48aa8a9d9a60f64f9bb439ab4a26cb682102d72078c1165b654c2"
+      }
+    ]
+  },
+  "exploratory_dimensions.npz": {
+    "bytes": 190157629,
+    "sha256": "3fe0371de127daaffb572f3dfedc5526343f34a165a136120ceb0783beb64e0a",
+    "parts": [
+      {
+        "file": "exploratory_dimensions.npz.part00",
+        "bytes": 94371840,
+        "sha256": "d646d113370369c123ef5d6e572e1ee1143c26d83ee20cb42ff9b825cdf7b506"
+      },
+      {
+        "file": "exploratory_dimensions.npz.part01",
+        "bytes": 94371840,
+        "sha256": "22db4fd9dceef71e13e80c9dce0e7f716100a97407d52dfbfe143c4df1e6e496"
+      },
+      {
+        "file": "exploratory_dimensions.npz.part02",
+        "bytes": 1413949,
+        "sha256": "a53803620f859fcf318dd03cbbd8873e6c3aa431d2fadf9655e7b83b8ccf79ee"
+      }
+    ]
+  }
+}

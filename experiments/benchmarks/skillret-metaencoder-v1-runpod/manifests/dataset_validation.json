@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "skills": 6006,
+    "queries": 4392,
+    "qrels": 7187
+  },
+  "sha256": {
+    "skills": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81",
+    "queries": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d",
+    "qrels": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  },
+  "unique_ids_and_pairs": true
+}

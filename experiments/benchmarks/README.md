@@ -24,3 +24,7 @@ READMEs and catalog rather than treating every implementation as a result.
 ## Offline OpenRouter audit (8 November 2026)
 
 [Prompt-result audit](openrouter-prompt-audit-20261108/README.md) preserves the nine-model raw evidence and reports full metrics, coverage, clustered uncertainty, latency, and cost limitations. The [conditional retrieval comparison](openrouter-matched-retrieval-20261108/README.md) is a separate reconstruction rather than a verified identical-prompt rerun. No paid API calls were made.
+
+## MetaEncoder v1 RunPod study
+
+[Measured primary retrieval and execution scope](skillret-metaencoder-v1-runpod/REPORT.md): 6,006 skills / 4,392 queries, NDCG@10 0.720593, Recall@10 0.791249, MRR@10 0.792056. Secondary experiments and final reconciliation remain in progress. No training or baseline model rerun.

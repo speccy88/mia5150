@@ -12,6 +12,15 @@ Both BGE-M3 studies are published on `main`. Use the
 to reproduce their rankings and metrics without embedding again. The archived
 study instructions retain the original proposed experiment branch names.
 
+## MetaEncoder v1 on RunPod
+
+The [MetaEncoder v1 study](experiments/benchmarks/skillret-metaencoder-v1-runpod/REPORT.md)
+completed full-catalog retrieval for all 6,006 skills and 4,392 test queries:
+**0.720593 NDCG@10**, **0.791249 Recall@10**, **0.792056 MRR@10**.
+Content-preserving chunking and exploratory dimension reductions are documented.
+Secondary decision experiments and final delivery reconciliation are in progress;
+this is not yet a completed study across every requested arm.
+
 ## SkillRet 0.6B query LoRA checkpoint
 
 The [published checkpoint](experiments/benchmarks/skillret-local-challenger-checkpoint-20261109/README.md) contains two query-only adapters,

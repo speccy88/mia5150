@@ -39,3 +39,7 @@ The full-text hosted study's [expansion decision](experiments/benchmarks/skillre
 [Publication audit](docs/publication/artifact-publication-audit/README.md) records source ownership, canonical ZIP hashes, export hashes, large-file omissions, offline validation, and export-only redactions of public benchmark credential-shaped examples. Original request payload filenames/hashes describe historical bytes; redacted exports must never be treated as exact-payload retry inputs.
 
 Downloaded multi-gigabyte base weights, environments, dependency caches, large upstream skill-body corpora, and duplicate ZIP deliveries stay local. Small trained adapters and checkpoint evidence are included. Saved runtime scripts may contain original absolute paths; use each experiment README and pinned manifests when rebuilding assets.
+
+## MetaEncoder v1 RunPod study
+
+[Measured primary retrieval and execution scope](experiments/benchmarks/skillret-metaencoder-v1-runpod/REPORT.md): 6,006 skills / 4,392 queries, NDCG@10 0.720593, Recall@10 0.791249, MRR@10 0.792056. Secondary experiments and final reconciliation remain in progress. No training or baseline model rerun.

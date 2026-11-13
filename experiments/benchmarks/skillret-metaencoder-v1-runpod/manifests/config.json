@@ -1,0 +1,11 @@
+{
+  "model": "facebook/meta-encoder-v1",
+  "model_revision": "ed04ebd4defb8e837b5eaea164143177272696ac",
+  "dataset": "ThakiCloud/SKILLRET",
+  "dataset_revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+  "document_instruction": "Represent the document for retrieval.",
+  "query_instruction": "Represent the query for retrieving relevant documents.",
+  "seed": 42,
+  "chunk_protocol": "Nonoverlapping character substrings bounded by exact formatted token count <=16384. L2 normalize mean of chunk vectors. All characters preserved. Separate truncated-first-chunk arm.",
+  "tie_break": "descending cosine; stable original catalog row order"
+}

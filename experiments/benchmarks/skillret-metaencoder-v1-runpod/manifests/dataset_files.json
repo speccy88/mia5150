@@ -1,0 +1,14 @@
+{
+  "skills": {
+    "path": "/workspace/.cache/huggingface/hub/datasets--ThakiCloud--SKILLRET/snapshots/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/skills/test.jsonl",
+    "sha256": "1960453e422e4ba01977197580934ca3c02b2ac302dfa9c0d074707d961b7c81"
+  },
+  "queries": {
+    "path": "/workspace/.cache/huggingface/hub/datasets--ThakiCloud--SKILLRET/snapshots/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/queries/test.jsonl",
+    "sha256": "4d07a35f40e597f8468c6dab480c95a1f9b40ecbde80274081ba2e7c643d0f6d"
+  },
+  "qrels": {
+    "path": "/workspace/.cache/huggingface/hub/datasets--ThakiCloud--SKILLRET/snapshots/6583d7d2ed07644d0fb8938ed8178f3a7dc42a12/data/qrels/test.jsonl",
+    "sha256": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  }
+}

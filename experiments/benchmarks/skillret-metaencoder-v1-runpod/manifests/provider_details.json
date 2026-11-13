@@ -1,0 +1,11 @@
+{
+  "gpu": "H100 PCIe",
+  "allocated_vcpu": 16,
+  "cpu": "Intel Xeon Platinum8352Y2.20GHz",
+  "allocated_ram_gb": 251,
+  "location": "US-KS-2 Secure Cloud",
+  "image": "runpod/pytorch:2.1.0-cu1281-torch280-ubuntu2404",
+  "container_disk_gb": 50,
+  "volume_disk_gb": 150,
+  "observed_uptime": "30m48s"
+}

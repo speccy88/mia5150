@@ -1,0 +1,28 @@
+[
+  {
+    "row": 0,
+    "id": "b04ae5e5-f1b6-4288-b4f6-fb0ca4c6ff2f",
+    "input_sha256": "0f06afccbcaaf866a5a9340001cf802672562cd4699e28f5d80dfe322b99cd69",
+    "tokens": 2472,
+    "chunk_tokens": [
+      2472
+    ],
+    "chunk_count": 1,
+    "seconds": 1.0585911273956299,
+    "peak_gpu_bytes": 57421652480,
+    "status": "ok"
+  },
+  {
+    "row": 1,
+    "id": "1728be01-26c0-4847-ba1e-68b2959e4d0c",
+    "input_sha256": "1a94fa05c858e77f769d57ff567b31ee3975b8e787727513d1023f514aa430dc",
+    "tokens": 1524,
+    "chunk_tokens": [
+      1524
+    ],
+    "chunk_count": 1,
+    "seconds": 0.41915059089660645,
+    "peak_gpu_bytes": 57250993664,
+    "status": "ok"
+  }
+]
