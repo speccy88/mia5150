@@ -1,0 +1,19 @@
+{
+  "pod_id": "ow351xuosak18w",
+  "gpu": "H100 PCIe 80GB",
+  "deployment_utc_approx": "2026-11-13T01:25:00Z",
+  "gpu_stop_verified_utc": "2026-11-13T04:31:19Z",
+  "running_rate_usd_per_hour": 2.918,
+  "balance_delta_cost_usd_approx": 9.03,
+  "cost_note": "Credit-balance delta, not final itemized invoice; RunPod billing page says detailed billing data is one hour behind.",
+  "auto_pay": "Disabled, verified on billing page",
+  "compute_status": "Not running",
+  "container_storage_status": "Not running",
+  "retained_volume_gb": 150,
+  "retained_volume_rate_usd_per_hour": 0.042,
+  "termination": "pending final Drive verification",
+  "evidence_bytes": 142628820,
+  "evidence_sha256": "63ff20c22029d97b21fffd24812e1d9d73559f0db93ca2a75ba1a16216fff6c2",
+  "evidence_hash_verification": "Downloaded archive matches RunPod export/SHA256_MANIFEST.json read in Jupyter JSON viewer",
+  "publication_redaction": "Account credit balances and funding amounts omitted; measured or estimated experiment cost retained."
+}

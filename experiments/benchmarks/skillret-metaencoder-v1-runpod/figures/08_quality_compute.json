@@ -1,0 +1,32 @@
+[
+  {
+    "configuration": "full native dimensions",
+    "measured_search_seconds": 1.3391215100418776,
+    "NDCG@10": 0.7205930720724963
+  },
+  {
+    "configuration": "256 dims",
+    "measured_search_seconds": 0.019396831979975104,
+    "NDCG@10": 0.5485896740054694
+  },
+  {
+    "configuration": "512 dims",
+    "measured_search_seconds": 0.02825941308401525,
+    "NDCG@10": 0.6350982903538318
+  },
+  {
+    "configuration": "1024 dims",
+    "measured_search_seconds": 0.2848120699636638,
+    "NDCG@10": 0.6880105684418242
+  },
+  {
+    "configuration": "2048 dims",
+    "measured_search_seconds": 0.5239448701031506,
+    "NDCG@10": 0.7077046532885313
+  },
+  {
+    "configuration": "4096 dims",
+    "measured_search_seconds": 0.8206365860532969,
+    "NDCG@10": 0.7174914488254263
+  }
+]

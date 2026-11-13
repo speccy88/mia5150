@@ -1,0 +1,9 @@
+{
+  "completed_docs": 898,
+  "measured_doc_inference_seconds": 482.91702034673654,
+  "elapsed_billed_seconds_approx": 1438.7526950836182,
+  "accrued_usd_estimate": 1.166188990070555,
+  "primary_total_usd_linear_estimate": 4.155844765085406,
+  "estimate_caveat": "Catalog-prefix extrapolation, query smoke unbatched,300seconds export/eval allowance; not guaranteed",
+  "decision_cost": "not yet measured"
+}

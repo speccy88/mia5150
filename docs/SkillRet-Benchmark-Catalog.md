@@ -201,7 +201,7 @@ Folder links below open the current source tree. Documentation/evidence links us
 
 Hosted terminal follow-up: Qwen/SiliconFlow completed 120 matched cases on the balanced exposed 24-query/N=100 panel. The later Mistral/Parasail BF16 arm failed its first upstream rate-limited canary and attempted no benchmark case. All generation is stopped. See the current hosted report, per-call ledger and terminal receipt under experiments/benchmarks/skillret-gap-closure-20261024/hosted/. The original 360-case plan and added 120-case exploratory arm remain separate; only Qwen provides successful hosted quality evidence.
 
-## MetaEncoder v1 RunPod primary checkpoint
+## MetaEncoder v1 RunPod benchmark and bounded decision pilot
 
 [Study report](../experiments/benchmarks/skillret-metaencoder-v1-runpod/REPORT.md).
 Cloud execution on H100 PCIe 80 GB. The complete 6,006-skill / 4,392-query
@@ -211,5 +211,6 @@ Completeness@10 **0.656421**, MRR@10 **0.792056**. The BF16 model exports
 content-preserving chunks; first-chunk truncation is a separate comparison.
 Dimension reductions are exploratory prefix truncation, not native model support.
 The native-retrieve check uses 20 queries and is not an independent improvement.
-Secondary decision experiments and final delivery reconciliation remain in progress.
+A 200-query matched top-10 decision pilot and 100/100 calibration split are reported.
+Larger decision pools remain incomplete; full evidence and vectors are verified on Drive.
 This checkpoint is additional to the 22-study historical catalog above.

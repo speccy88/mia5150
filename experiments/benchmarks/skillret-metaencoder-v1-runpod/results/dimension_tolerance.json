@@ -1,0 +1,12 @@
+{
+  "criterion": "absolute NDCG@10 AND Recall@10 difference from full6656 each <=0.01",
+  "tolerance": 0.01,
+  "smallest_qualifying_dimension": 4096,
+  "qualifying_dimensions": [
+    4096,
+    6656
+  ],
+  "native_support": false,
+  "mechanism": "Exploratory prefix truncation and L2 renormalization; full6656 retained.",
+  "criterion_frozen_before_result_review": true
+}

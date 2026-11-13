@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "documents",
+    "latency_basis": "single_input",
+    "input_count": 2960,
+    "warm_input_count": 2952,
+    "warm_exclusion": "first8 completed inputs per kind",
+    "p50_seconds": 0.5896481510717422,
+    "p95_seconds": 1.7586986268986946,
+    "measured_encoding_seconds": 2215.1446930558886,
+    "formatted_tokens_processed": 9887632,
+    "tokens_per_second": 4463.650627878209,
+    "peak_gpu_allocated_bytes": 60099139584,
+    "note": "Batch-amortized seconds are throughput allocations, not single-request latency. Tokenization/checkpoint I/O excluded from encoding timer; original-run timings may include small bookkeeping."
+  },
+  {
+    "kind": "documents",
+    "latency_basis": "batch_elapsed_divided_by_input_count",
+    "input_count": 3046,
+    "warm_input_count": 3046,
+    "warm_exclusion": "first8 completed inputs per kind",
+    "p50_seconds": 0.3001499067468103,
+    "p95_seconds": 0.39176647225394845,
+    "measured_encoding_seconds": 855.9369101780467,
+    "formatted_tokens_processed": 3262348,
+    "tokens_per_second": 3811.435120050363,
+    "peak_gpu_allocated_bytes": 58435376128,
+    "note": "Batch-amortized seconds are throughput allocations, not single-request latency. Tokenization/checkpoint I/O excluded from encoding timer; original-run timings may include small bookkeeping."
+  },
+  {
+    "kind": "queries",
+    "latency_basis": "single_input",
+    "input_count": 0,
+    "warm_input_count": 0,
+    "warm_exclusion": "first8 completed inputs per kind",
+    "p50_seconds": null,
+    "p95_seconds": null,
+    "measured_encoding_seconds": 0,
+    "formatted_tokens_processed": 0,
+    "tokens_per_second": null,
+    "peak_gpu_allocated_bytes": null,
+    "note": "Batch-amortized seconds are throughput allocations, not single-request latency. Tokenization/checkpoint I/O excluded from encoding timer; original-run timings may include small bookkeeping."
+  },
+  {
+    "kind": "queries",
+    "latency_basis": "batch_elapsed_divided_by_input_count",
+    "input_count": 4392,
+    "warm_input_count": 4384,
+    "warm_exclusion": "first8 completed inputs per kind",
+    "p50_seconds": 0.06802518563927151,
+    "p95_seconds": 0.10446055466309159,
+    "measured_encoding_seconds": 311.8461307401303,
+    "formatted_tokens_processed": 1283245,
+    "tokens_per_second": 4114.994138148734,
+    "peak_gpu_allocated_bytes": 57587376640,
+    "note": "Batch-amortized seconds are throughput allocations, not single-request latency. Tokenization/checkpoint I/O excluded from encoding timer; original-run timings may include small bookkeeping."
+  }
+]

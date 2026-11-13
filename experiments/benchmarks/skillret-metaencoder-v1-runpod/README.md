@@ -2,7 +2,7 @@
 
 This study evaluates `facebook/meta-encoder-v1` using only its released BF16 model for new neural inference. It does not train model weights or rerun historical baseline models.
 
-**Execution status:** primary retrieval completed on all 6,006 skills / 4,392 queries; secondary experiments and final delivery reconciliation remain in progress. Read [REPORT.md](REPORT.md) for the measured scope and limitations; the existence of an implementation does not establish that an experiment completed. All model inference, vector operations, evaluation, statistical calculations and figure generation must execute on RunPod. Authoring and artifact transfers may occur elsewhere.
+**Execution status:** primary retrieval completed on all 6,006 skills / 4,392 queries; binary/ordinal top-10 decisions completed on 200 frozen pilot queries; top-20/50 and choice arms are partial. Native retrieve, exploratory dimensions, calibration and eight figures have measured artifacts. Final delivery reconciliation is tracked separately. Read [REPORT.md](REPORT.md) for the measured scope and limitations; the existence of an implementation does not establish that an experiment completed. All model inference, vector operations, evaluation, statistical calculations and figure generation must execute on RunPod. Authoring and artifact transfers may occur elsewhere.
 
 ## Study
 
@@ -24,7 +24,7 @@ This study evaluates `facebook/meta-encoder-v1` using only its released BF16 mod
 
 ## Reproduce
 
-See [PROTOCOL.md](PROTOCOL.md) and [MODEL_API_AUDIT.md](MODEL_API_AUDIT.md). Provision an authorized 80-GB-or-larger RunPod GPU, clone the repository there, install the exact runtime versions in `manifests/pip-freeze.txt`, and use the commands in `runpod/README.md`. Installation configuration must be reconciled against the actual execution evidence before publication.
+See [PROTOCOL.md](PROTOCOL.md) and [MODEL_API_AUDIT.md](MODEL_API_AUDIT.md). Provision an authorized 80-GB-or-larger RunPod GPU, clone the repository there, install the exact runtime versions in `manifests/pip-freeze.txt`, and use the commands in `runpod/README.md`. Use the pinned execution manifests as the source of truth; preserve partial-arm scope when replaying saved outputs.
 
 Keep checkpoints on durable storage and export them before terminating resources. The controller must enforce a spending cap and reserve time for validation/export. Never continue a dependent full evaluation when primary embeddings are incomplete.
 

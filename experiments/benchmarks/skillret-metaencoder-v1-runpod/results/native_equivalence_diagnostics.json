@@ -1,0 +1,29 @@
+{
+  "observed_query_count": 20,
+  "exact_top100_order_rate": 0.0,
+  "same_top100_set_rate": 0.35,
+  "differing_query_ids": [
+    "q-00001",
+    "q-00002",
+    "q-00003",
+    "q-00004",
+    "q-00005",
+    "q-00006",
+    "q-00007",
+    "q-00008",
+    "q-00009",
+    "q-00010",
+    "q-00011",
+    "q-00012",
+    "q-00013",
+    "q-00014",
+    "q-00015",
+    "q-00016",
+    "q-00017",
+    "q-00018",
+    "q-00019",
+    "q-00020"
+  ],
+  "explanation": "Native retrieve re-encodes each query individually, while saved query vectors may use batches of four. BF16 kernels and padded batch shapes can change last-bit results; native torch.argsort tie behavior also differs from stable catalog-order NumPy sorting. These are possible causes, not proven explanations of every observed difference. Query truncation/chunk aggregation is another protocol difference if any query exceeded16384 tokens. Matching output is not an independent model improvement.",
+  "latency": "Native includes query embedding plus search, whereas cached cosine does not."
+}

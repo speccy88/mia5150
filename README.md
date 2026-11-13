@@ -18,8 +18,8 @@ The [MetaEncoder v1 study](experiments/benchmarks/skillret-metaencoder-v1-runpod
 completed full-catalog retrieval for all 6,006 skills and 4,392 test queries:
 **0.720593 NDCG@10**, **0.791249 Recall@10**, **0.792056 MRR@10**.
 Content-preserving chunking and exploratory dimension reductions are documented.
-Secondary decision experiments and final delivery reconciliation are in progress;
-this is not yet a completed study across every requested arm.
+A deterministic 200-query top-10 decision pilot, exploratory dimensions, calibration,
+and verified Drive exports are reported. Several secondary arms remain partial.
 
 ## SkillRet 0.6B query LoRA checkpoint
 

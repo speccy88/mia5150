@@ -1,0 +1,86 @@
+[
+  {
+    "state": "uncalibrated",
+    "count": 428,
+    "confidence": 0.030165838029855216,
+    "frequency": 0.0
+  },
+  {
+    "state": "uncalibrated",
+    "count": 133,
+    "confidence": 0.14780851424694855,
+    "frequency": 0.015037593984962405
+  },
+  {
+    "state": "uncalibrated",
+    "count": 102,
+    "confidence": 0.24797149662143766,
+    "frequency": 0.00980392156862745
+  },
+  {
+    "state": "uncalibrated",
+    "count": 91,
+    "confidence": 0.3495893989508564,
+    "frequency": 0.0
+  },
+  {
+    "state": "uncalibrated",
+    "count": 81,
+    "confidence": 0.4552661278745161,
+    "frequency": 0.024691358024691357
+  },
+  {
+    "state": "uncalibrated",
+    "count": 91,
+    "confidence": 0.551404194590036,
+    "frequency": 0.01098901098901099
+  },
+  {
+    "state": "uncalibrated",
+    "count": 108,
+    "confidence": 0.6513512417183828,
+    "frequency": 0.009259259259259259
+  },
+  {
+    "state": "uncalibrated",
+    "count": 133,
+    "confidence": 0.7527651619234773,
+    "frequency": 0.03007518796992481
+  },
+  {
+    "state": "uncalibrated",
+    "count": 193,
+    "confidence": 0.8567978253195119,
+    "frequency": 0.07253886010362694
+  },
+  {
+    "state": "uncalibrated",
+    "count": 521,
+    "confidence": 0.9635423951183425,
+    "frequency": 0.19193857965451055
+  },
+  {
+    "state": "calibrated",
+    "count": 226,
+    "confidence": 0.36393790655774977,
+    "frequency": 0.0
+  },
+  {
+    "state": "calibrated",
+    "count": 609,
+    "confidence": 0.456631814364102,
+    "frequency": 0.008210180623973728
+  },
+  {
+    "state": "calibrated",
+    "count": 833,
+    "confidence": 0.5464407866718138,
+    "frequency": 0.08403361344537816
+  },
+  {
+    "state": "calibrated",
+    "count": 213,
+    "confidence": 0.631318765910093,
+    "frequency": 0.2347417840375587
+  }
+]

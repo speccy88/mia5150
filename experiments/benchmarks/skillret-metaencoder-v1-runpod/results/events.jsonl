@@ -3735,3 +3735,9 @@
 {"time": 1794538830.4627953, "event": "embedding_complete", "kind": "documents", "count": 6006, "shape": [6006, 6656], "seconds": 3071.0816032339353}
 {"time": 1794538849.6990788, "event": "resume_validation", "kind": "queries", "validated": 4392, "seconds": 19.215481281280518, "workers": 16}
 {"time": 1794538851.3252382, "event": "embedding_complete", "kind": "queries", "count": 4392, "shape": [4392, 6656], "seconds": 311.8461307401303}
+{"time": 1794539814.9338555, "event": "secondary_complete", "wall_seconds": 912.3124883174896, "attempted_pairs": 747, "attempted_choices": 12}
+{"time": 1794539837.5469956, "event": "continuation_finished", "remaining_seconds": 2562.460871219635}
+{"time": 1794540062.2481892, "event": "bounded_decision_continuation_start", "budget_seconds": 3600, "query_limit": 200, "schedule": "complete_top10_first_then_remaining_breadth_first"}
+{"time": 1794540224.6734478, "event": "model_load", "seconds": 155.6661651134491, "dimension": 6656, "peak_memory": 56952197120}
+{"time": 1794543882.0539405, "event": "secondary_complete", "wall_seconds": 3656.1949932575226, "attempted_pairs": 3763, "attempted_choices": 12}
+{"time": 1794543882.1388142, "event": "bounded_decision_continuation_end"}

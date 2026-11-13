@@ -42,4 +42,4 @@ Downloaded multi-gigabyte base weights, environments, dependency caches, large u
 
 ## MetaEncoder v1 RunPod study
 
-[Measured primary retrieval and execution scope](experiments/benchmarks/skillret-metaencoder-v1-runpod/REPORT.md): 6,006 skills / 4,392 queries, NDCG@10 0.720593, Recall@10 0.791249, MRR@10 0.792056. Secondary experiments and final reconciliation remain in progress. No training or baseline model rerun.
+[Measured primary retrieval and execution scope](experiments/benchmarks/skillret-metaencoder-v1-runpod/REPORT.md): 6,006 skills / 4,392 queries, NDCG@10 0.720593, Recall@10 0.791249, MRR@10 0.792056. A 200-query top-10 decision pilot, calibration, figures and verified Drive evidence are available; larger decision pools remain incomplete. No training or baseline model rerun.

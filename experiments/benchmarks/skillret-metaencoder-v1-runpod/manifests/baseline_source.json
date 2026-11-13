@@ -1,0 +1,5 @@
+{
+  "path": "/workspace/mia5150/experiments/benchmarks/skillret-embedding-jev-fusion/results/dense_top50.jsonl",
+  "sha256": "2941fb3aea15ce1d22bf8559ebfcd07476b55e9e948ab3cc889f812f892752b8",
+  "scope": "Existing saved rankings, no baseline inference rerun; historical latency incomparable"
+}

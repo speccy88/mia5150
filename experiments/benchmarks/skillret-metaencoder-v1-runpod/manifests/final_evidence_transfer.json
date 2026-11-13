@@ -1,0 +1,25 @@
+{
+  "original": {
+    "name": "evidence.tar.gz",
+    "bytes": 142628820,
+    "sha256": "63ff20c22029d97b21fffd24812e1d9d73559f0db93ca2a75ba1a16216fff6c2"
+  },
+  "parts": [
+    {
+      "name": "evidence.tar.gz.part00a",
+      "bytes": 47185920,
+      "sha256": "dc9c21a42ca1412d444ec7086e70eabe729fb49a5e8f6196b0e6a1c57cbea647"
+    },
+    {
+      "name": "evidence.tar.gz.part00b",
+      "bytes": 47185920,
+      "sha256": "b2d3c589ac8d75374947583e5c4cca613d534ef494e5cdde9eb1af580b774dda"
+    },
+    {
+      "name": "evidence.tar.gz.part01",
+      "bytes": 48256980,
+      "sha256": "7d389ffa38e5af8321240cdbd11f9f0febfa1c6ceeec1cb4f31233331407bd2b"
+    }
+  ],
+  "reassembly": "Concatenate part00a, part00b, part01 in that exact order. Verify original SHA-256 before extracting."
+}

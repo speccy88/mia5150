@@ -11,7 +11,7 @@ def decisions(root,data,m,limit=200,max_seconds=1000):
     ranks={x['query_id']:[h['skill_id'] for h in x['hits']] for x in r.lines(root/'results/full_6656_top100.jsonl')}
     chosen=deterministic_subset(qid,limit);pilot_labels={q:labels[q] for q in chosen};start=time.time();ck=root/'checkpoints/decisions_v2';ck.mkdir(parents=True,exist_ok=True)
     questions={'binary':{'type':'noul','instructions':'Given the user request and this candidate skill, determine whether the skill would help an agent fulfill the request.'},'ordinal':{'type':'score','instructions':'Rate how useful the candidate skill is for fulfilling the user request.','criteria':['Not relevant','Weakly related','Partially useful','Relevant and useful','Strongly relevant to fulfilling the request']}}
-    r.dump(root/'manifests/decision_v2_protocol.json',{'questions':questions,'query_ids':chosen,'schedule':'choice k5/10/20 on first4 fixed queries, then candidate-rank breadth-first across all pilot queries to10,20,50; binary and ordinal combined API call','fit_query_ids':chosen[::2],'heldout_query_ids':chosen[1::2],'budget_seconds':max_seconds})
+    r.dump(root/'manifests/decision_v2_protocol.json',{'questions':questions,'query_ids':chosen,'schedule':'choice k5/10/20 on first4 fixed queries, then completed-top10-first per deterministic query; remaining ranks10..49 breadth-first across pilot; binary and ordinal combined API call','fit_query_ids':chosen[::2],'heldout_query_ids':chosen[1::2],'budget_seconds':max_seconds})
     def alive():return time.time()-start<max_seconds
     def file(q,s):return ck/(hashlib.sha256((q+'|'+s).encode()).hexdigest()+'.json')
     # Initial bounded sample exercises every legitimate interface without pretending full pilot coverage.
@@ -23,17 +23,15 @@ def decisions(root,data,m,limit=200,max_seconds=1000):
             try:row={'query_id':q,'mode':'choice','candidate_count':k,'output':m.decide(queries[q],spec),'status':'ok'}
             except Exception as e:row={'query_id':q,'mode':'choice','candidate_count':k,'status':'failed','error':str(e)}
             row['seconds']=time.perf_counter()-t;r.dump(p,row)
-    # All queries receive rank1 before rank2, preventing a partial pilot from being one long query.
-    for rank in range(50):
-        for q in chosen:
-            if not alive():break
-            s=ranks[q][rank];p=file(q,s)
-            if p.exists():continue
-            t=time.perf_counter()
-            try:row={'query_id':q,'skill_id':s,'dense_rank':rank+1,'mode':'pair','output':m.decide({'request':queries[q],'candidate_skill':docs[s]},questions),'status':'ok'}
-            except Exception as e:row={'query_id':q,'skill_id':s,'dense_rank':rank+1,'mode':'pair','status':'failed','error':str(e)}
-            row['seconds']=time.perf_counter()-t;r.dump(p,row)
+    # Resource-bounded continuation: complete top10 per deterministic query first.
+    for q,rank in [(q,j) for q in chosen for j in range(10)]+[(q,j) for j in range(10,50) for q in chosen]:
         if not alive():break
+        s=ranks[q][rank];p=file(q,s)
+        if p.exists():continue
+        t=time.perf_counter()
+        try:row={'query_id':q,'skill_id':s,'dense_rank':rank+1,'mode':'pair','output':m.decide({'request':queries[q],'candidate_skill':docs[s]},questions),'status':'ok'}
+        except Exception as e:row={'query_id':q,'skill_id':s,'dense_rank':rank+1,'mode':'pair','status':'failed','error':str(e)}
+        row['seconds']=time.perf_counter()-t;r.dump(p,row)
     allrows=[json.loads(p.read_text()) for p in ck.glob('*.json')];pairs=[x for x in allrows if x['mode']=='pair'];choice=[x for x in allrows if x['mode']=='choice'];summary=[]
     for k in (10,20,50):
         pool={q:ranks[q][:k] for q in chosen};coverage=r.evaluate_rankings(root,f'v2_candidate_pool_{k}',pilot_labels,pool)

@@ -17,6 +17,12 @@ Follow `DOWNLOAD_AND_REASSEMBLE.txt` and `reassemble.py`; do not pass a part fil
 
 A representative part was downloaded again through Drive: `exploratory_dimensions.npz.part02`, **1,413,949 bytes**, SHA-256 `a53803620f859fcf318dd03cbbd8873e6c3aa431d2fadf9655e7b83b8ccf79ee`. It matched the source exactly.
 
-## Still pending
+## Final evidence delivery verified
 
-The final `evidence.tar.gz` and final source manifest will be uploaded after decision experiments and diagnostics finish. The stable embeddings are delivered, but the complete requested Drive evidence package is not yet marked complete. Do not mistake an early evidence archive for the final report. Final file count/storage will be revised after those additions.
+The final folder contains **20 files totaling 642,211,029 bytes**. All sizes were checked against a fresh Drive folder listing. The final evidence archive contains source, results, full rankings, figures, manifests, logs and resumable decision checkpoints. It is split into three lossless byte parts: `evidence.tar.gz.part00a`, `evidence.tar.gz.part00b`, `evidence.tar.gz.part01`. Concatenate these in that exact order; the embedding-only `reassemble.py` does not reconstruct this archive.
+
+Reassembled `evidence.tar.gz` is 142,628,820 bytes, SHA-256 `63ff20c22029d97b21fffd24812e1d9d73559f0db93ca2a75ba1a16216fff6c2`, matching the RunPod-generated export manifest. `FINAL_EVIDENCE_MANIFEST.json` records part sizes and SHA-256 values. Its updated contents were read back. Representative `part00a` was downloaded from Drive and its 47,185,920 bytes matched SHA-256 `dc9c21a42ca1412d444ec7086e70eabe729fb49a5e8f6196b0e6a1c57cbea647`.
+
+A 90 MiB upload timed out twice and was confirmed absent before smaller parts were used. No duplicate successful upload was retained. Provider checksum fields were not exposed; verification consists of source hashing, listing/size checks, and representative full-byte readback. The connected account can access the private folder; sharing permissions were not expanded.
+
+The extracted final archive passed a credential scan over 427.94 MB. Public GitHub metadata omits account credit balances and funding amounts; the original private archive preserves evidence bytes. The archive manifest retains original source meanings; publication hashes cover sanitized files separately.

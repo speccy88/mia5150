@@ -1,0 +1,16 @@
+{
+  "pilot_documents": 172,
+  "pilot_seconds": 109.0584511756897,
+  "pilot_tokens": 455196,
+  "unbatched_corpus_projection_hours": 1.05782470568668,
+  "projection_caveat": "First172 catalog rows, not representative guarantee; batching and later token lengths change throughput",
+  "pod_id": "ow351xuosak18w",
+  "gpu": "H100 PCIe80GB",
+  "gpu_hourly_usd": 2.89,
+  "container_hourly_usd": 0.007,
+  "volume_hourly_usd": 0.021,
+  "stopped_volume_hourly_usd": 0.042,
+  "authorized_cap_usd": 20,
+  "start_utc_approx": "2026-11-13T01:25:00Z",
+  "publication_redaction": "Account credit balances and funding amounts omitted; measured or estimated experiment cost retained."
+}

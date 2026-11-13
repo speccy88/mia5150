@@ -218,7 +218,7 @@
     "q-00463",
     "q-02074"
   ],
-  "schedule": "choice k5/10/20 on first4 fixed queries, then candidate-rank breadth-first across all pilot queries to10,20,50; binary and ordinal combined API call",
+  "schedule": "choice k5/10/20 on first4 fixed queries, then completed-top10-first per deterministic query; remaining ranks10..49 breadth-first across pilot; binary and ordinal combined API call",
   "fit_query_ids": [
     "q-02554",
     "q-00211",
@@ -423,5 +423,5 @@
     "q-04462",
     "q-02074"
   ],
-  "budget_seconds": 900.0
+  "budget_seconds": 3600
 }

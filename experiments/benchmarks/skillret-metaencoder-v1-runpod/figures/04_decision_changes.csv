@@ -1,0 +1,7 @@
+mode,candidate_count,complete_query_count,status,delta_NDCG10
+binary,10,200,available,-0.04507240939027357
+ordinal,10,200,available,-0.07964229906614684
+binary,20,0,unavailable,
+ordinal,20,0,unavailable,
+binary,50,0,unavailable,
+ordinal,50,0,unavailable,

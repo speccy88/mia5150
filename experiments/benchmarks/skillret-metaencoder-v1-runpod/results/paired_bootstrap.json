@@ -1,0 +1,52 @@
+{
+  "direction": "treatment_minus_baseline",
+  "query_count": 4392,
+  "resamples": 1000,
+  "seed": 42,
+  "confidence": 0.95,
+  "method": "paired query bootstrap; percentile CI; linear percentile interpolation",
+  "rng": "python.random.Random; randrange; lexicographically sorted string query IDs",
+  "query_ids_sha256": "9c5a11ab51b3ee3c0bbccf11bd5995209ad89cf977b0a0aaabbf12eae7bd97a8",
+  "metrics": {
+    "NDCG@10": {
+      "baseline_mean": 0.8109902409310652,
+      "treatment_mean": 0.7205930720724963,
+      "delta": -0.09039716885856888,
+      "ci_low": -0.09777583497560396,
+      "ci_high": -0.08300404574507299,
+      "bootstrap_fraction_delta_le_zero": 1.0
+    },
+    "Recall@5": {
+      "baseline_mean": 0.8243776563448695,
+      "treatment_mean": 0.7241196114146934,
+      "delta": -0.10025804493017608,
+      "ci_low": -0.10902588038858531,
+      "ci_high": -0.09201578627808137,
+      "bootstrap_fraction_delta_le_zero": 1.0
+    },
+    "Recall@10": {
+      "baseline_mean": 0.8764420157862781,
+      "treatment_mean": 0.7912492410443229,
+      "delta": -0.08519277474195508,
+      "ci_low": -0.09399666059502125,
+      "ci_high": -0.07718484365513055,
+      "bootstrap_fraction_delta_le_zero": 1.0
+    },
+    "Completeness@5": {
+      "baseline_mean": 0.7096994535519126,
+      "treatment_mean": 0.5703551912568307,
+      "delta": -0.13934426229508196,
+      "ci_low": -0.15141165755919855,
+      "ci_high": -0.12749886156648454,
+      "bootstrap_fraction_delta_le_zero": 1.0
+    },
+    "MRR@5": {
+      "baseline_mean": 0.8533204310868245,
+      "treatment_mean": 0.7864336672738312,
+      "delta": -0.06688676381299331,
+      "ci_low": -0.07626404068002429,
+      "ci_high": -0.05767522389192471,
+      "bootstrap_fraction_delta_le_zero": 1.0
+    }
+  }
+}
