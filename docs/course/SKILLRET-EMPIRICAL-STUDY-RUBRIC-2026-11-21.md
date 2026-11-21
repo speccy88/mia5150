@@ -26,7 +26,7 @@ Our **internal matched BM25 control** scores **47.73% Recall@5**. This is *not* 
 | Returned candidates | Exactly five skill IDs per query |
 | Varied factor | **Retrieval strategy only:** BM25 lexical; BGE-small cosine vector; RRF60 fusion of the two |
 | Encoder | Same BGE-small-en-v1.5 vectors, pinned revision, FP32 normalized CLS embeddings |
-| Other conditions | Same query text, preprocessing, pooling, label definitions, and evaluated query IDs |
+| Other conditions | Same original query/document text, qrels, catalog identities and query IDs; algorithm-specific tokenization and scoring are part of the varied retrieval-strategy factor. BGE pooling and encoder settings are fixed between Vector and Hybrid |
 | Secondary scaling | Gold-conditioned catalog sizes N=10,100,1,000 with seeded distractor sets (not an independent open-world test) |
 
 **The ablation is BM25 only / Vector only / Hybrid**, where removing each Hybrid component shows how much the combined retriever benefits from complementary rankings. Catalog size is analyzed separately, not silently changed inside the primary method contrast.
