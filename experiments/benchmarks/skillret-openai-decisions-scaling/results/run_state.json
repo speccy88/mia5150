@@ -1,0 +1,33 @@
+{
+  "state": "planned",
+  "reason": null,
+  "logical_experiment_cases": 12600,
+  "unique_benchmark_requests": 12598,
+  "unique_benchmark_requests_reserved": 0,
+  "unique_benchmark_requests_completed_successfully": 0,
+  "ledger_reservations": 0,
+  "completed_http_attempt_records": 0,
+  "http_attempts_with_response": 0,
+  "unknown_dispatches": 0,
+  "failed_attempt_records": 0,
+  "provider_prompt_cache_hits": 0,
+  "local_cache_hits": 0,
+  "successful_logical_cases": 0,
+  "failed_logical_cases": 0,
+  "unattempted_logical_cases": 12600,
+  "known_estimated_api_cost_usd": 0.0,
+  "budgeted_api_cost_usd": 0.0,
+  "held_api_reservations_usd": 0.0,
+  "budget_usd": 15.0,
+  "regional_processing_price_enabled": false,
+  "token_totals": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 0
+  },
+  "transport": "httpx REST",
+  "httpx_version": "0.28.1",
+  "openai_sdk_installed_version": null,
+  "manifest_sha256": "140cca4d6d2566e49ad0853dbe38652cfe1dfec579a701709dc0ecd0a29f3ffe"
+}

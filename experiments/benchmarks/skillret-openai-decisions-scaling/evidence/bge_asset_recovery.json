@@ -1,0 +1,33 @@
+{
+  "purpose": "Obtain the exact frozen October BGE assets through public sources available in the execution environment.",
+  "upstream": {
+    "repository": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+  },
+  "assets": {
+    "model.onnx": {
+      "upstream_path": "onnx/model.onnx",
+      "bytes": 133093490,
+      "sha256": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+      "released_file": "https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/download/v5.0.0/hyatlas-go-v5.0.0-linux-amd64",
+      "release_tag_commit": "0428086c382456d9afaf55ba166c107f6f30759d",
+      "released_file_bytes": 173513544,
+      "released_file_sha256": "13ff13fdf090851af879a9b97f3f035216f1570123767294be58904d541c76fb",
+      "build_recipe": "https://github.com/tuancookiez-hub/HyAtlas-Memory/blob/0428086c382456d9afaf55ba166c107f6f30759d/.github/workflows/release.yml",
+      "published_onnx_alias": "https://huggingface.co/Xenova/bge-small-en-v1.5/blob/ea104dacec62c0de699686887e3f920caeb4f3e3/onnx/model.onnx",
+      "extraction": {
+        "method": "Static ELF inspection. Read the Go slice header at symbol main.embeddedModel, map its data address through the ELF LOAD records, and copy exactly the declared byte count.",
+        "offset_bytes": 36679456,
+        "length_bytes": 133093490,
+        "released_binary_executed": false
+      }
+    },
+    "tokenizer.json": {
+      "upstream_path": "tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "public_copy": "https://raw.githubusercontent.com/lukaszraczylo/claude-mnemonic/97551d0813e21f7d10815dbe4b20178d93e441f0/internal/embedding/assets/tokenizer.json"
+    }
+  },
+  "verification": "Both recovered files match the complete SHA-256 values frozen in config.json before retrieval."
+}

@@ -7,6 +7,10 @@ requests retrieve and select agent skills. Start with the
 
 Authored documentation and presentation text are English. See the [language audit and immutable-data exceptions](docs/publication/ENGLISH_LANGUAGE_AUDIT.md).
 
+The [Decisions API scaling benchmark](experiments/benchmarks/skillret-openai-decisions-scaling/REPORT.md)
+measured BM25, vector and hybrid retrieval on 200 fixed queries at seven catalog sizes.
+The OpenAI Decisions reranking phase is pending.
+
 Both BGE-M3 studies are published on `main`. Use the
 [current Git LFS download and CPU replay commands](docs/publication/BGE-REPRODUCTION.md)
 to reproduce their rankings and metrics without embedding again. The archived

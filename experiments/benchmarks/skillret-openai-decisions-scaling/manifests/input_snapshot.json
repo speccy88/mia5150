@@ -1,0 +1,25 @@
+{
+  "dataset": {
+    "repository": "ThakiCloud/SKILLRET",
+    "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+    "split": "test",
+    "skill_count": 6006,
+    "query_count": 4392,
+    "positive_pair_count": 7187
+  },
+  "query_count": 200,
+  "catalogs": 4200,
+  "sha256": {
+    "config.json": "8dec817631b833e37eb05d5890a87508604242d2ff05ad6360f2a2916e020822",
+    "manifests/query_ids.json": "b9e1c3fc94bcdb5b112d74ffe58900c8e45c76c694e20c6bffefcca91bcd56a7",
+    "manifests/historical_jev.json": "b1e21209e0b26d62eeac050443af0834350f9022e170c2d4c153d4551de238cb",
+    "manifests/catalog_document_ids.json": "b1ba3303c2929c1538b1669df107b1fc85fc3e65655f76a912d25d772288ac84",
+    "results/qrels.json": "1d38af0ad5e38124e5b3b4d3e7b7a55556bf4b6a34cea54ac2235527cf252e2e",
+    "results/catalog_memberships.jsonl.gz": "d3e07f5c35fa3527a9299c22aef7888ba29d8734e0e36eb8315caf2a63427667"
+  },
+  "source_sha256": {
+    "experiments/scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs/skills-metadata.jsonl": "74819f4f683cb4dfcfc34085f6caa610202e78c49e8e32a2f5045a825addeb2f",
+    "experiments/scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs/queries-test.jsonl": "06b4042d97fa9bf55de4c605f32d6f7388f0520e9de49f12d7551d14662ac220",
+    "experiments/scaling/skillret-seed5150-scaling/scaling5150/provenance-audit/public-inputs/qrels-test.jsonl": "edbfae0b8109de460d54e27e6235b1b47316f34956744db0571ad1b4ddb860af"
+  }
+}

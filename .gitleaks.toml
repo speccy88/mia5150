@@ -45,8 +45,16 @@ regexes = [ '''^d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66
 paths = [
   '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/prepare_inputs\.py$''',
   '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/run_offline\.py$''',
-  '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/results/embedding-manifest\.json$'''
+  '''^experiments/benchmarks/openrouter-matched-retrieval-20261108/results/embedding-manifest\.json$''',
+  '''^experiments/benchmarks/skillret-openai-decisions-scaling/(config\.json|results/experiment_manifest\.json)$'''
 ]
+
+[[rules.allowlists]]
+description = "Verified SHA-256 fields for the generated cost-and-token-usage figures"
+condition = "AND"
+regexTarget = "line"
+paths = [ '''^experiments/benchmarks/skillret-openai-decisions-scaling/results/figure_exports\.json$''' ]
+regexes = [ '''^\s*"cost-and-token-usage\.(png|svg|pdf)": "[a-f0-9]{64}",?\s*$''' ]
 
 [[rules.allowlists]]
 description = "Reviewed public-input tokenizer ID sequence digests in the two final profile preflights; SHA-256 values are benchmark evidence, not access tokens"

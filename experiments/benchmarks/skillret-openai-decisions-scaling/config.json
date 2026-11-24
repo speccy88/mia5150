@@ -1,0 +1,39 @@
+{
+  "version": "skillret-openai-decisions-scaling-v1",
+  "dataset": {
+    "repository": "ThakiCloud/SKILLRET",
+    "revision": "6583d7d2ed07644d0fb8938ed8178f3a7dc42a12",
+    "split": "test",
+    "skill_count": 6006,
+    "query_count": 4392,
+    "positive_pair_count": 7187
+  },
+  "query_count": 200,
+  "catalog_sizes": [50, 100, 250, 500, 1000, 2000, 5000],
+  "seeds": [42, 43, 44],
+  "methods": ["bm25", "vector", "hybrid"],
+  "candidate_count": 20,
+  "result_count": 5,
+  "fusion": {"source_depth": 100, "rrf_constant": 60},
+  "embedding": {
+    "repository": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "backend": "official FP32 ONNX CPU",
+    "pooling": "L2-normalized CLS",
+    "max_tokens": 512,
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "batch_size": 8,
+    "assets": {
+      "onnx/model.onnx": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    }
+  },
+  "decisions": {
+    "endpoint": "https://api.openai.com/v1/decisions",
+    "model": "gpt-6-luna",
+    "question_type": "predicate",
+    "budget_usd": 15,
+    "smoke_cases": 10
+  },
+  "bootstrap": {"seed": 42, "resamples": 10000}
+}

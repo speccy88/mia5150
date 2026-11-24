@@ -1,0 +1,2 @@
+{"budget_usd":15.0,"concurrency":12,"event":"invocation","event_id":1,"manifest_sha256":"140cca4d6d2566e49ad0853dbe38652cfe1dfec579a701709dc0ecd0a29f3ffe","max_http_attempts":15000,"mode":"plan","rate_limit_retries":3,"regional_processing":false,"requests_per_minute":300,"timeout_seconds":45,"timestamp_utc":"2026-11-24T01:44:04.221127+00:00"}
+{"event":"invocation_finished","event_id":2,"reason":null,"state":"planned","timestamp_utc":"2026-11-24T01:44:04.221554+00:00"}

@@ -1,0 +1,28 @@
+{
+  "catalog_size": 6006,
+  "query_count": 200,
+  "positive_count_distribution": {
+    "1": 99,
+    "2": 79,
+    "3": 22
+  },
+  "same_query_order_text_and_labels": true,
+  "reranked_top5_reproduced": 200,
+  "reference_bm25_top5_ids_and_scores_reproduced": 200,
+  "recall_recomputed": {
+    "bm25_recall_at_5": 0.6058333333333334,
+    "bm25_recall_at_20": 0.7275000000000001,
+    "jev_recall_at_5": 0.7091666666666667
+  },
+  "source_sha256": {
+    "experiments/benchmarks/skillret-reranker-study/manifests/pilot_query_ids.json": "b9e1c3fc94bcdb5b112d74ffe58900c8e45c76c694e20c6bffefcca91bcd56a7",
+    "experiments/benchmarks/skillret-reranker-study/prompts/jev_relevance.json": "e1431d1314489e60ecf346612ee612dc359e13acb6139e91e5e4d026df6953f2",
+    "experiments/benchmarks/skillret-reranker-study/reference_run/jev/manifest-results-200.json": "e76d2a33e5ec43a6d5990f4cad7e602bb36035e0afb43baae1a50d22b661928e",
+    "experiments/benchmarks/skillret-reranker-study/reference_run/jev/candidates.json": "25cd1792fb1b3fe10fd24525d35c33acca5bc88c48d02b5c8020bc820414dd77",
+    "experiments/benchmarks/skillret-reranker-study/reference_run/jev/rows.jsonl": "350a5a3801b669b71fc83f26ea91413f8367c74b1037d4f6c3df688fa63f0d68",
+    "experiments/benchmarks/skillret-reranker-study/reference_run/jev/summary-200.json": "ba6a8f107689926372d92c670bab22f1780d1ee1ecbbd9fc30db1ac47598b1fd",
+    "experiments/benchmarks/skillret-reranker-study/reference_run/baselines/metadata_bm25_rows.jsonl": "df51178e2614b78d3e4c0c69116187f1ffb732772995b5ca1642fd74bcbbf44c"
+  },
+  "upstream_run_recorded_rows_sha256": "e33aae22478c1c8e987619c14dbfc646fb99eb463356df3cbbe0ccf077c77bd1",
+  "public_rows_sha256": "350a5a3801b669b71fc83f26ea91413f8367c74b1037d4f6c3df688fa63f0d68"
+}

@@ -1,0 +1,25 @@
+{
+  "catalog_sizes": [
+    100,
+    1000
+  ],
+  "archive_sha256": "a55bfecfa99508cebcc0d6c0238575c60bfbd919d46c2e69654f66dcd0b53a35",
+  "results_by_method": {
+    "bm25": {
+      "cases": 1200,
+      "catalog_membership_exact": 1200,
+      "top5_ids_exact_in_order": 1200
+    },
+    "vector": {
+      "cases": 1200,
+      "catalog_membership_exact": 1200,
+      "top5_ids_exact_in_order": 1200
+    },
+    "hybrid": {
+      "cases": 1200,
+      "catalog_membership_exact": 1200,
+      "top5_ids_exact_in_order": 1200
+    }
+  },
+  "scope": "Overlap with the archived 4,392-query retrieval results. The archive exposes only top-five IDs, so it cannot verify the full top 20."
+}

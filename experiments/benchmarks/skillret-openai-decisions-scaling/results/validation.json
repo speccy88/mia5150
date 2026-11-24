@@ -1,0 +1,31 @@
+{
+  "status": "incomplete",
+  "phase": "results",
+  "counts": {
+    "expected_cases": 12600,
+    "independently_scored_historical_jev_cases": 200,
+    "catalog_memberships": 4200,
+    "logical_cases": 12600,
+    "unique_requests": 12598,
+    "finished_api_attempts": 0,
+    "successful_api_attempts": 0,
+    "ledger_reservations": 0,
+    "ledger_settlements": 0,
+    "estimated_api_cost_usd": 0.0,
+    "budgeted_api_cost_usd": 0.0,
+    "unresolved_cost_reservations_usd": 0.0,
+    "api_responses": 0,
+    "success_cases": 0,
+    "failed_cases": 0,
+    "unattempted_cases": 12600,
+    "candidate_scores_checked": 252000,
+    "figure_points_checked": 201,
+    "figure_files_checked": 18,
+    "credential_checked_files": 75
+  },
+  "issues": {},
+  "examples": {},
+  "pending": [
+    "Decisions outcomes for all logical cases"
+  ]
+}

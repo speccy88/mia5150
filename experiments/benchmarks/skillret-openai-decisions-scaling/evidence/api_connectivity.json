@@ -1,0 +1,11 @@
+{
+  "host": "api.openai.com",
+  "path": "/v1/decisions",
+  "probe_method": "GET",
+  "authentication_supplied": false,
+  "cloud_proxy_connect_status": 403,
+  "provider_http_status": null,
+  "provider_reached": false,
+  "egress_grant_applied": false,
+  "benchmark_state": "pending_live_compatibility_check"
+}
