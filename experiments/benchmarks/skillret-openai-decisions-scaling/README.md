@@ -2,7 +2,7 @@
 
 The frozen experiment compares BM25, BGE-small vector retrieval and hybrid rank fusion on the same 200 queries, seven catalog sizes and three seeds. Each retrieval method contributes a top-20 pool for a separate OpenAI Decisions reranking condition.
 
-The local retrieval matrix is measured and independently reproducible. The live API phase is pending. See the [results report](REPORT.md) and [experimental protocol](PROTOCOL.md).
+Both local retrieval and the live Decisions phase are measured. The saved probabilities and rankings can be evaluated and independently checked without further API calls. See the [results report](REPORT.md) and [experimental protocol](PROTOCOL.md).
 
 ## Reproduce the saved results
 
@@ -13,7 +13,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 python evaluate.py
 python plot.py
-python validate.py --allow-incomplete
+python validate.py
 ```
 
 These commands evaluate the frozen rankings without API calls. The repository checkout and delivery ZIP contain the historical source files at their original paths. The validator reports each incomplete phase. Without `--allow-incomplete`, an incomplete result exits with status 2 and an inconsistency exits with status 1.

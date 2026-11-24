@@ -9,7 +9,7 @@ Authored documentation and presentation text are English. See the [language audi
 
 The [Decisions API scaling benchmark](experiments/benchmarks/skillret-openai-decisions-scaling/REPORT.md)
 measured BM25, vector and hybrid retrieval on 200 fixed queries at seven catalog sizes.
-The OpenAI Decisions reranking phase is pending.
+The completed OpenAI Decisions reranking phase adds three matched curves, with raw evidence and a reproducible independent audit.
 
 Both BGE-M3 studies are published on `main`. Use the
 [current Git LFS download and CPU replay commands](docs/publication/BGE-REPRODUCTION.md)

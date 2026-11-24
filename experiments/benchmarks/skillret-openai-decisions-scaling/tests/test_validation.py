@@ -61,3 +61,15 @@ def test_scan_flags_credentials_crossing_chunk_boundary():
     assert not contains_credential(io.BytesIO(safe))
     synthetic_secret = b"sk-" + b"proj-" + b"z" * 85
     assert contains_credential(io.BytesIO(b" " * (1024 * 1024 - 3) + synthetic_secret))
+
+
+def test_csv_reference_preserves_exact_integer_id_and_missing_value():
+    from validate import csv_reference_matches
+
+    assert csv_reference_matches("12", 12)
+    assert not csv_reference_matches("13", 12)
+    assert not csv_reference_matches("012", 12)
+    assert not csv_reference_matches("", 12)
+    assert csv_reference_matches("", None)
+    assert not csv_reference_matches("None", None)
+    assert csv_reference_matches("fresh", "fresh")

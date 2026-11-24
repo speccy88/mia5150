@@ -1,53 +1,53 @@
 {
-  "figure_points_csv_sha256": "6096dd36450dd817e0182963cc53641cada2b4d8b9ad14859c548613a520ffee",
-  "presentation_plot_data_csv_sha256": "de79198a1e3668e64b0db9076cb48495cbd30c54bf31cf11f57cfd049995cf8a",
+  "figure_points_csv_sha256": "6f4c9e4d62c784b7549f55c51989f675d23962d0654684e9ab7f4edf1631c957",
+  "presentation_plot_data_csv_sha256": "69bb6ee4db8226093733da7d9fddc5871371c3aa0657cbfc9e485f53d5548683",
   "figures": {
     "recall-at-5": {
-      "figure_points_sha256": "072d252079a378a43b0413c80dfb462e09a1227744282e7d61716ddbec3205ae",
+      "figure_points_sha256": "d90971dca1a265de53df04e8c4bce60128b91eb7a947a7031c0e9aa172e95ab0",
       "files": {
-        "recall-at-5.png": "55bb01ea49a68857835954361ec411b8a3adc199102e24f2315d030dca521d8d",
-        "recall-at-5.svg": "c698bc79589eaa55935c42b5f506580e34e35d5146ef516357f8b4ec1aa53aa5",
-        "recall-at-5.pdf": "4bda7d60e2da862b9c874ed8962bbc7433788aec064db7da8a9bd2c4c45a06d7"
+        "recall-at-5.png": "071fa3e63d10ae0f97afcf7be91783548dc43b2956bc5efdc278dbf4d7548fe5",
+        "recall-at-5.svg": "41f4c9abb338477a485b36456008bf3093f43e9cdfe39d7a02cd467f41a01534",
+        "recall-at-5.pdf": "460e2fd7f1507276096b055f7c7245f5c675ab6f5501bb739a4e898efbb1ce5b"
       }
     },
     "recall-at-20-ceiling": {
-      "figure_points_sha256": "a6e8d7632e4f0fc85d5dee047bf5a25e10e716b414cbfb0619386ac7f74f3375",
+      "figure_points_sha256": "c2c13f7243a308b32f8148cbbb5a0224f6ddbffea95846e96f56f1a1ab7cef12",
       "files": {
-        "recall-at-20-ceiling.png": "1279993ef31f5046ee7dab0625ecdd2135f92bd769b2164ce539254b37f78de1",
-        "recall-at-20-ceiling.svg": "c47a65bd834ac5253879ba0f2f02aaa5ba94c6cb5afeb3deaaf9144894c29bb6",
-        "recall-at-20-ceiling.pdf": "187c5037e3827e5c0b54bbb1050f70060af85c65e30dd392bd7f490a9c0e2189"
+        "recall-at-20-ceiling.png": "13ed69e6416314e24fbc54e1954222241ffb159edb498a248c872a6b43c35316",
+        "recall-at-20-ceiling.svg": "acffb357b3c2537750691c4636553adcfc083ec64134e5c88172854196f891e9",
+        "recall-at-20-ceiling.pdf": "e69d965b0956443445d0e1c003ba80151a4d0ddcf2dfa815b820e966ebf96860"
       }
     },
     "reranking-improvement": {
-      "figure_points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "figure_points_sha256": "0dec39f40f9d796153d1783a05be2dc6902a76049ddba861ad8849749edf581c",
       "files": {
-        "reranking-improvement.png": "8400aa5d50597c5c777219767edba46234f6aa803798a02f50b9da37a35c4da6",
-        "reranking-improvement.svg": "3979c1304192afe904c35d50d95d14c0ee8e90354f148ea01bc5e90e41f755ff",
-        "reranking-improvement.pdf": "a7cfefc78b764d80ccf4597dc5106e39646f3573c109aa685b0c8e3a1d83a0b3"
+        "reranking-improvement.png": "789642411fd7b23448436af6a8f00c8095a65139f2ccd83f23596bfd46812160",
+        "reranking-improvement.svg": "26b936d95deef452cbbc168a7eec22b950d9590e460aa731d721a873ac64348f",
+        "reranking-improvement.pdf": "7c6037841c3fbd0796921163f628f18d6ea8a4a6f0117ac9e0e3699a3329e245"
       }
     },
     "latency": {
-      "figure_points_sha256": "e6ae6ede1ec7ccb9f66211a6eebea8ac105a61082e88aeb2e75941911ad5e73f",
+      "figure_points_sha256": "01fb3466e225f6848df71d60944ee9b215631321438bddd4be1749cc7a597e7b",
       "files": {
-        "latency.png": "8930d0953f1e63fcd09c5b2a26c8850a2f83b188f636655bee67eb22261f3639",
-        "latency.svg": "54cd73f9f636fd888651bea83867c5fb1c336b098ef199a62aa71c5bcb2a8114",
-        "latency.pdf": "950d16bfcf3a806641e1ade985bf1fb835e5690265ca44447f70cb1b75077bac"
+        "latency.png": "b5a89d0cd1b0ebe3bb74760213c91b06166917d63bf2806814195da51ef997ab",
+        "latency.svg": "86da459054202d72e2233e172c5cccada046bf7abad1ccccb3257ac4e8db00c9",
+        "latency.pdf": "49771359bf8542657abd6f12923166fdd930581eb1268eaac10d307d3439bd43"
       }
     },
     "cost-and-token-usage": {
-      "figure_points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "figure_points_sha256": "f9e42da01ae626541574c71964fb6641844887ae1211c37344d258143386d32e",
       "files": {
-        "cost-and-token-usage.png": "5ce6839fe41804569978f402563f6d3562645eede9594d2286e7783cead46197",
-        "cost-and-token-usage.svg": "e0f00b3df50d45b22613ba854d868109509d7fb99903041450cdea418ba6e6b8",
-        "cost-and-token-usage.pdf": "e22a492839f8abdac5f6b9dda8caf05e31e337687088981ee2cdf2f84a5a681f"
+        "cost-and-token-usage.png": "ccb6ca599825e7f6d774187a6c6609e9188b22e1c582a12dd4564e96af1406c3",
+        "cost-and-token-usage.svg": "1bc58e686fa557c4762200a61579e404e6d0f1f7a6381157956773530a43ec5f",
+        "cost-and-token-usage.pdf": "ca30c6ea1cf51d64296485a4109ce0b73b0b41fea8bdeaaf3af872d33e80a5d0"
       }
     },
     "presentation-comparison": {
-      "figure_points_sha256": "0f7c2caa581ade815ffe231303bd0d801f323c7be1016b33d26849ccd6e672e4",
+      "figure_points_sha256": "33367a03e311925d623d399c9c0becf8a24293f20636c4844a277490dc771ec1",
       "files": {
-        "presentation-comparison.png": "8355ef73cfe255e1dc1e9baaac3a124feb003e2003524f9590e38f646ae33c02",
-        "presentation-comparison.svg": "44748ba3d10b14f4b242752ad1be90c77784cee87d5bab19af6f681bc8851079",
-        "presentation-comparison.pdf": "6ef16b6921e9b4b05157f574fd214e7b4174f80b2722f1eb903573361f8d44e1"
+        "presentation-comparison.png": "5d19677b535012b764f767268f8a19b60d96bc2e1c29ca81228d9b8058508346",
+        "presentation-comparison.svg": "143979891e5b71cd3fcf0a7e80dfd8ea58302d3222cf92f08769b26295af99b9",
+        "presentation-comparison.pdf": "b5ddbc207acc2c9c36227521d3d84f3c7b1f024faa0f23a55f943f87b981575c"
       }
     }
   }

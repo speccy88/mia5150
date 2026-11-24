@@ -549,6 +549,10 @@ def validate_rankings(audit, root, pools, qrels, outcomes, responses, raw_scores
     return recomputed
 
 
+def csv_reference_matches(serialized, expected):
+    return serialized == ("" if expected is None else str(expected))
+
+
 def validate_case_exports(audit, root, cases, pools):
     directory = root / "results"
     for filename in ("per_query_metrics.csv", "paired_comparisons.csv", "latency.csv"):
@@ -580,7 +584,10 @@ def validate_case_exports(audit, root, cases, pools):
             audit.check(required <= columns, "case export omits expected measurements", f"{filename}/{cid}")
             for field in ("cache_status", "request_hash", "response_reference"):
                 if field in row:
-                    audit.check(row[field] == (case[field] or ""), "case export request reference mismatch", cid)
+                    # DictReader returns text even for integer foreign keys.
+                    # Require their exact CSV spelling; preserve missing as empty.
+                    audit.check(csv_reference_matches(row[field], case[field]),
+                                "case export request reference mismatch", f"{filename}/{cid}/{field}")
         audit.check(seen == cases.keys(), "case export coverage mismatch", filename)
 
     path = directory / "candidate_scores.parquet"

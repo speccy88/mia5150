@@ -1,5 +1,5 @@
 {
-  "status": "incomplete",
+  "status": "passed",
   "phase": "results",
   "counts": {
     "expected_cases": 12600,
@@ -7,25 +7,23 @@
     "catalog_memberships": 4200,
     "logical_cases": 12600,
     "unique_requests": 12598,
-    "finished_api_attempts": 0,
-    "successful_api_attempts": 0,
-    "ledger_reservations": 0,
-    "ledger_settlements": 0,
-    "estimated_api_cost_usd": 0.0,
-    "budgeted_api_cost_usd": 0.0,
-    "unresolved_cost_reservations_usd": 0.0,
-    "api_responses": 0,
-    "success_cases": 0,
-    "failed_cases": 0,
-    "unattempted_cases": 12600,
+    "finished_api_attempts": 12597,
+    "successful_api_attempts": 12593,
+    "ledger_reservations": 12599,
+    "ledger_settlements": 12597,
+    "estimated_api_cost_usd": 9.2315509,
+    "budgeted_api_cost_usd": 10.154709156,
+    "unresolved_cost_reservations_usd": 0.5775,
+    "api_responses": 12597,
+    "success_cases": 12594,
+    "failed_cases": 6,
+    "unattempted_cases": 0,
     "candidate_scores_checked": 252000,
-    "figure_points_checked": 201,
+    "figure_points_checked": 481,
     "figure_files_checked": 18,
-    "credential_checked_files": 75
+    "credential_checked_files": 78
   },
   "issues": {},
   "examples": {},
-  "pending": [
-    "Decisions outcomes for all logical cases"
-  ]
+  "pending": []
 }

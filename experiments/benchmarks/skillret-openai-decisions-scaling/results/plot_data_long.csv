@@ -1,316 +1,988 @@
 series,catalog_size,method,metric,value,ci_lower,ci_upper,seed_std,population,complete,n_queries,n_seeds,n_logical_cases
 BM25,50,bm25,Recall@1,0.48138888888888887,,,0.01908193832843953,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@1,0.6775,,,0.016072751268321604,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Recall@1,0.6775,,,0.016072751268321604,valid_only,True,200,3,600
 BM25,50,bm25,Recall@3,0.7088888888888889,,,0.0157306612608531,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@3,0.9486111111111111,,,0.00756147643823127,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Recall@3,0.9486111111111111,,,0.00756147643823127,valid_only,True,200,3,600
 BM25,50,bm25,Recall@5,0.7969444444444445,,,0.006364688465216422,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@5,0.965,,,0.006614378277661503,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Recall@5,0.965,,,0.006614378277661503,valid_only,True,200,3,600
 BM25,50,bm25,Recall@10,0.9013888888888889,,,0.00502309481111809,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@10,0.9708333333333333,,,0.003818813079129846,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Recall@10,0.9708333333333333,,,0.003818813079129846,valid_only,True,200,3,600
 BM25,50,bm25,Recall@20,0.9719444444444444,,,0.004589642122738414,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@20,0.9719444444444444,,,0.004589642122738414,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Recall@20,0.9719444444444444,,,0.004589642122738414,valid_only,True,200,3,600
 BM25,50,bm25,Precision@1,0.6933333333333334,,,0.020207259421636856,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Precision@1,0.945,,,0.017320508075688724,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Precision@1,0.945,,,0.017320508075688724,valid_only,True,200,3,600
 BM25,50,bm25,Precision@3,0.3683333333333333,,,0.00763762615825974,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Precision@3,0.5061111111111111,,,0.005853140973807043,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Precision@3,0.5061111111111111,,,0.005853140973807043,valid_only,True,200,3,600
 BM25,50,bm25,Precision@5,0.2516666666666667,,,0.0025166114784235857,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Precision@5,0.31033333333333335,,,0.0025166114784235857,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Precision@5,0.31033333333333335,,,0.0025166114784235857,valid_only,True,200,3,600
 BM25,50,bm25,NDCG@5,0.7292906455456168,,,0.009950829509506353,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,NDCG@5,0.9477407817478587,,,0.009683234465115806,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,NDCG@5,0.9477407817478587,,,0.009683234465115806,valid_only,True,200,3,600
 BM25,50,bm25,NDCG@10,0.7682678715347729,,,0.010103284426727524,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,NDCG@10,0.9500930242115162,,,0.008288904035598007,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,NDCG@10,0.9500930242115162,,,0.008288904035598007,valid_only,True,200,3,600
 BM25,50,bm25,MRR@5,0.7720555555555556,,,0.012100371129906794,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,MRR@5,0.9633055555555555,,,0.010819328554506989,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,MRR@5,0.9633055555555555,,,0.010819328554506989,valid_only,True,200,3,600
 BM25,50,bm25,MRR@10,0.7806369047619047,,,0.012385072733435865,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,MRR@10,0.9635436507936508,,,0.010407651427620462,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,MRR@10,0.9635436507936508,,,0.010407651427620462,valid_only,True,200,3,600
 BM25,50,bm25,MAP@5,0.6715601851851852,,,0.013020656171634276,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,MAP@5,0.9306481481481481,,,0.011575448066592766,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,MAP@5,0.9306481481481481,,,0.011575448066592766,valid_only,True,200,3,600
 BM25,50,bm25,MAP@10,0.6935033068783069,,,0.013111101552788048,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,MAP@10,0.9322354497354497,,,0.010803526304315898,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,MAP@10,0.9322354497354497,,,0.010803526304315898,valid_only,True,200,3,600
 BM25,50,bm25,Completeness@5,0.6883333333333334,,,0.011547005383792462,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Completeness@5,0.9383333333333334,,,0.010408329997330611,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),50,bm25,Completeness@5,0.9383333333333334,,,0.010408329997330611,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@5 absolute improvement,0.16805555555555554,0.12805555555555556,0.20916666666666667,0.0033678765702728148,operational,True,200,3,600
+BM25 + OpenAI Decisions,50,bm25,Recall@5 absolute improvement,0.16805555555555554,0.12805555555555556,0.20916666666666667,0.0033678765702728148,valid_only,True,200,3,600
 Hybrid,50,hybrid,Recall@1,0.5944444444444444,,,0.01919080605490651,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@1,0.6769444444444445,,,0.01548595540529595,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Recall@1,0.6769444444444445,,,0.01548595540529595,valid_only,True,200,3,600
 Hybrid,50,hybrid,Recall@3,0.8116666666666666,,,0.007406828681096327,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@3,0.9511111111111111,,,0.011375330683024073,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Recall@3,0.9511111111111111,,,0.011375330683024073,valid_only,True,200,3,600
 Hybrid,50,hybrid,Recall@5,0.865,,,0.0008333333333333526,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@5,0.9608333333333333,,,0.006821127309893696,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Recall@5,0.9608333333333333,,,0.006821127309893696,valid_only,True,200,3,600
 Hybrid,50,hybrid,Recall@10,0.9130555555555555,,,0.003154949081000122,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@10,0.9691666666666666,,,0.007949493345141228,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Recall@10,0.9691666666666666,,,0.007949493345141228,valid_only,True,200,3,600
 Hybrid,50,hybrid,Recall@20,0.9708333333333333,,,0.005464532103585017,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@20,0.9708333333333333,,,0.005464532103585017,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Recall@20,0.9708333333333333,,,0.005464532103585017,valid_only,True,200,3,600
 Hybrid,50,hybrid,Precision@1,0.8483333333333334,,,0.025658007197234444,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Precision@1,0.9416666666666667,,,0.018929694486000865,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Precision@1,0.9416666666666667,,,0.018929694486000865,valid_only,True,200,3,600
 Hybrid,50,hybrid,Precision@3,0.42166666666666663,,,0.005773502691896263,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Precision@3,0.5061111111111111,,,0.00769800358919506,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Precision@3,0.5061111111111111,,,0.00769800358919506,valid_only,True,200,3,600
 Hybrid,50,hybrid,Precision@5,0.273,,,0.0010000000000000009,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Precision@5,0.30833333333333335,,,0.0025166114784235857,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Precision@5,0.30833333333333335,,,0.0025166114784235857,valid_only,True,200,3,600
 Hybrid,50,hybrid,NDCG@5,0.834436160245389,,,0.00841234665435197,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,NDCG@5,0.9446027084365097,,,0.014011148815710677,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,NDCG@5,0.9446027084365097,,,0.014011148815710677,valid_only,True,200,3,600
 Hybrid,50,hybrid,NDCG@10,0.8535504638695247,,,0.007693708590810299,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,NDCG@10,0.9478435757267051,,,0.014316934823940055,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,NDCG@10,0.9478435757267051,,,0.014316934823940055,valid_only,True,200,3,600
 Hybrid,50,hybrid,MRR@5,0.8909166666666667,,,0.012140096558283388,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,MRR@5,0.9647222222222223,,,0.010617508252009097,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,MRR@5,0.9647222222222223,,,0.010617508252009097,valid_only,True,200,3,600
 Hybrid,50,hybrid,MRR@10,0.8927400793650794,,,0.012170510548166162,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,MRR@10,0.9648888888888889,,,0.010744938515585084,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,MRR@10,0.9648888888888889,,,0.010744938515585084,valid_only,True,200,3,600
 Hybrid,50,hybrid,MAP@5,0.7908888888888889,,,0.011962397683296351,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,MAP@5,0.9256666666666666,,,0.01919689645055504,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,MAP@5,0.9256666666666666,,,0.01919689645055504,valid_only,True,200,3,600
 Hybrid,50,hybrid,MAP@10,0.8036952160493827,,,0.011470288196600884,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,MAP@10,0.9278796296296297,,,0.019380899805307696,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,MAP@10,0.9278796296296297,,,0.019380899805307696,valid_only,True,200,3,600
 Hybrid,50,hybrid,Completeness@5,0.765,,,0.0050000000000000044,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Completeness@5,0.9266666666666666,,,0.01258305739211787,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),50,hybrid,Completeness@5,0.9266666666666666,,,0.01258305739211787,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@5 absolute improvement,0.09583333333333333,0.06638888888888889,0.1269513888888888,0.00712000312109794,operational,True,200,3,600
+Hybrid + OpenAI Decisions,50,hybrid,Recall@5 absolute improvement,0.09583333333333333,0.06638888888888889,0.1269513888888888,0.00712000312109794,valid_only,True,200,3,600
 Vector,50,vector,Recall@1,0.5816666666666667,,,0.004639803635691682,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@1,0.6708333333333333,,,0.00763762615825974,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Recall@1,0.6708333333333333,,,0.00763762615825974,valid_only,True,200,3,600
 Vector,50,vector,Recall@3,0.7488888888888889,,,0.005422005915539774,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@3,0.8977777777777778,,,0.004589642122738414,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Recall@3,0.8977777777777778,,,0.004589642122738414,valid_only,True,200,3,600
 Vector,50,vector,Recall@5,0.8108333333333333,,,0.007949493345141228,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@5,0.91,,,0.0065085413965888655,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Recall@5,0.91,,,0.0065085413965888655,valid_only,True,200,3,600
 Vector,50,vector,Recall@10,0.8683333333333333,,,0.005068968775248506,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@10,0.9133333333333333,,,0.005833333333333341,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Recall@10,0.9133333333333333,,,0.005833333333333341,valid_only,True,200,3,600
 Vector,50,vector,Recall@20,0.9133333333333333,,,0.005833333333333341,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@20,0.9133333333333333,,,0.005833333333333341,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Recall@20,0.9133333333333333,,,0.005833333333333341,valid_only,True,200,3,600
 Vector,50,vector,Precision@1,0.8216666666666667,,,0.0028867513459481316,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Precision@1,0.9383333333333334,,,0.010408329997330611,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Precision@1,0.9383333333333334,,,0.010408329997330611,valid_only,True,200,3,600
 Vector,50,vector,Precision@3,0.38111111111111107,,,0.002545875386086582,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Precision@3,0.4766666666666666,,,0.003333333333333327,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Precision@3,0.4766666666666666,,,0.003333333333333327,valid_only,True,200,3,600
 Vector,50,vector,Precision@5,0.2516666666666667,,,0.0032145502536643053,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Precision@5,0.29100000000000004,,,0.002645751311064593,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Precision@5,0.29100000000000004,,,0.002645751311064593,valid_only,True,200,3,600
 Vector,50,vector,NDCG@5,0.7840270947897767,,,0.00251194225575174,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,NDCG@5,0.9076008344753628,,,0.0026018187811489555,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,NDCG@5,0.9076008344753628,,,0.0026018187811489555,valid_only,True,200,3,600
 Vector,50,vector,NDCG@10,0.8065626860882905,,,0.0024228123665644935,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,NDCG@10,0.9088122892712117,,,0.002140612512616765,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,NDCG@10,0.9088122892712117,,,0.002140612512616765,valid_only,True,200,3,600
 Vector,50,vector,MRR@5,0.8628888888888889,,,0.00017347216662215862,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,MRR@5,0.9518611111111112,,,0.0061724822427478235,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,MRR@5,0.9518611111111112,,,0.0061724822427478235,valid_only,True,200,3,600
 Vector,50,vector,MRR@10,0.8662301587301587,,,0.00016369949470105178,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,MRR@10,0.9521388888888889,,,0.006064659313810852,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,MRR@10,0.9521388888888889,,,0.006064659313810852,valid_only,True,200,3,600
 Vector,50,vector,MAP@5,0.7315231481481481,,,0.0025598670353522432,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,MAP@5,0.8847037037037037,,,0.002986380263494493,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,MAP@5,0.8847037037037037,,,0.002986380263494493,valid_only,True,200,3,600
 Vector,50,vector,MAP@10,0.745619708994709,,,0.0030046860600354,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,MAP@10,0.8853564814814815,,,0.002883419412830556,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,MAP@10,0.8853564814814815,,,0.002883419412830556,valid_only,True,200,3,600
 Vector,50,vector,Completeness@5,0.6733333333333333,,,0.011547005383792526,retrieval,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Completeness@5,0.84,,,0.013228756555322964,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),50,vector,Completeness@5,0.84,,,0.013228756555322964,valid_only,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@5 absolute improvement,0.09916666666666667,0.07194444444444444,0.1297222222222222,0.010137937550497038,operational,True,200,3,600
+Vector + OpenAI Decisions,50,vector,Recall@5 absolute improvement,0.09916666666666667,0.07194444444444444,0.1297222222222222,0.010137937550497038,valid_only,True,200,3,600
 BM25,100,bm25,Recall@1,0.46694444444444444,,,0.004194352464039288,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@1,0.6458333333333334,,,0.0014433756729740337,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Recall@1,0.6469115191986644,,,0.0028829227837467862,valid_only,False,200,3,599
 BM25,100,bm25,Recall@3,0.6711111111111111,,,0.009658521472618696,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@3,0.8972222222222223,,,0.004811252243246864,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Recall@3,0.8987200890372844,,,0.006521424067235684,valid_only,False,200,3,599
 BM25,100,bm25,Recall@5,0.7483333333333333,,,0.005068968775248506,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@5,0.9152777777777777,,,0.004276334532872441,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Recall@5,0.9151363383416806,,,0.004054938586179197,valid_only,False,200,3,599
 BM25,100,bm25,Recall@10,0.8358333333333333,,,0.012275766552213492,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@10,0.9230555555555555,,,0.006254627916220962,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Recall@10,0.922927100723428,,,0.006151008779408135,valid_only,False,200,3,599
 BM25,100,bm25,Recall@20,0.9247222222222222,,,0.005672382737961711,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@20,0.9247222222222222,,,0.005672382737961711,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Recall@20,0.924596549805231,,,0.005612900015244209,valid_only,False,200,3,599
 BM25,100,bm25,Precision@1,0.6783333333333333,,,0.0028867513459481316,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Precision@1,0.9083333333333333,,,0.0028867513459481316,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Precision@1,0.9098497495826378,,,0.004788020109672162,valid_only,False,200,3,599
 BM25,100,bm25,Precision@3,0.3511111111111111,,,0.002545875386086576,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Precision@3,0.475,,,0.004409585518440992,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Precision@3,0.4757929883138564,,,0.005034792024220231,valid_only,False,200,3,599
 BM25,100,bm25,Precision@5,0.23700000000000002,,,0.0,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Precision@5,0.29233333333333333,,,0.0005773502691896262,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Precision@5,0.2924874791318865,,,0.0008471672291626676,valid_only,False,200,3,599
 BM25,100,bm25,NDCG@5,0.6936516862623322,,,0.0030057484804230485,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,NDCG@5,0.8998701137698587,,,0.003609215155486678,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,NDCG@5,0.900653408520604,,,0.004882385795410271,valid_only,False,200,3,599
 BM25,100,bm25,NDCG@10,0.7260181090943303,,,0.003728926677656668,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,NDCG@10,0.9027731645297176,,,0.0033500594088580284,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,NDCG@10,0.9035613057758884,,,0.004714348604740556,valid_only,False,200,3,599
 BM25,100,bm25,MRR@5,0.7491388888888889,,,0.004860079255564746,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,MRR@5,0.9313611111111111,,,0.0015282827448310104,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,MRR@5,0.9324986087924318,,,0.003489247355687644,valid_only,False,200,3,599
 BM25,100,bm25,MRR@10,0.7559265873015873,,,0.0031897845090475664,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,MRR@10,0.9318075396825397,,,0.0014922125579876957,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,MRR@10,0.932945782653629,,,0.0032455347306647904,valid_only,False,200,3,599
 BM25,100,bm25,MAP@5,0.6373472222222222,,,0.0011627745925528316,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,MAP@5,0.8756944444444444,,,0.004585605497399197,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,MAP@5,0.8767390094602114,,,0.006214603221514803,valid_only,False,200,3,599
 BM25,100,bm25,MAP@10,0.6553581349206349,,,0.0025081902012157693,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,MAP@10,0.8774715608465609,,,0.0046666836790623355,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,MAP@10,0.8785190926676736,,,0.006431955862283233,valid_only,False,200,3,599
 BM25,100,bm25,Completeness@5,0.625,,,0.008660254037844393,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Completeness@5,0.86,,,0.0050000000000000044,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),100,bm25,Completeness@5,0.8597662771285476,,,0.0046649164427720385,valid_only,False,200,3,599
+BM25 + OpenAI Decisions,100,bm25,Recall@5 absolute improvement,0.16694444444444445,0.12694444444444442,0.20888888888888887,0.0075614764382312145,operational,True,200,3,600
+BM25 + OpenAI Decisions,100,bm25,Recall@5 absolute improvement,0.16722314969393434,0.1272222222222222,0.20923761825264328,0.008032293376058455,valid_only,False,200,3,599
 Hybrid,100,hybrid,Recall@1,0.5586111111111111,,,0.003849001794597466,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@1,0.6561111111111111,,,0.003367876570272835,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Recall@1,0.6561111111111111,,,0.003367876570272835,valid_only,True,200,3,600
 Hybrid,100,hybrid,Recall@3,0.7805555555555556,,,0.0009622504486493344,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@3,0.9125,,,0.010929064207170025,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Recall@3,0.9125,,,0.010929064207170025,valid_only,True,200,3,600
 Hybrid,100,hybrid,Recall@5,0.8338888888888889,,,0.003367876570272835,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@5,0.9252777777777778,,,0.0037577081273524413,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Recall@5,0.9252777777777778,,,0.0037577081273524413,valid_only,True,200,3,600
 Hybrid,100,hybrid,Recall@10,0.8894444444444445,,,0.003757708127352388,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@10,0.9363888888888889,,,0.003849001794597466,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Recall@10,0.9363888888888889,,,0.003849001794597466,valid_only,True,200,3,600
 Hybrid,100,hybrid,Recall@20,0.9363888888888889,,,0.003849001794597466,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@20,0.9363888888888889,,,0.003849001794597466,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Recall@20,0.9363888888888889,,,0.003849001794597466,valid_only,True,200,3,600
 Hybrid,100,hybrid,Precision@1,0.8016666666666666,,,0.010408329997330672,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Precision@1,0.9166666666666666,,,0.010408329997330672,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Precision@1,0.9166666666666666,,,0.010408329997330672,valid_only,True,200,3,600
 Hybrid,100,hybrid,Precision@3,0.40444444444444444,,,0.001924500897298733,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Precision@3,0.4805555555555555,,,0.00673575314054562,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Precision@3,0.4805555555555555,,,0.00673575314054562,valid_only,True,200,3,600
 Hybrid,100,hybrid,Precision@5,0.26133333333333336,,,0.0015275252316519481,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Precision@5,0.295,,,0.0009999999999999731,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Precision@5,0.295,,,0.0009999999999999731,valid_only,True,200,3,600
 Hybrid,100,hybrid,NDCG@5,0.7960874157247053,,,0.0031049099456455175,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,NDCG@5,0.9102488277374567,,,0.006313171873123583,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,NDCG@5,0.9102488277374567,,,0.006313171873123583,valid_only,True,200,3,600
 Hybrid,100,hybrid,NDCG@10,0.8177608826819582,,,0.0016495037353416535,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,NDCG@10,0.9145929112005066,,,0.006013570390216555,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,NDCG@10,0.9145929112005066,,,0.006013570390216555,valid_only,True,200,3,600
 Hybrid,100,hybrid,MRR@5,0.8556388888888888,,,0.006975320250181554,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,MRR@5,0.9455555555555556,,,0.006472877887628338,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,MRR@5,0.9455555555555556,,,0.006472877887628338,valid_only,True,200,3,600
 Hybrid,100,hybrid,MRR@10,0.8587969576719576,,,0.006891013363957848,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,MRR@10,0.9457638888888888,,,0.0065759892228667,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,MRR@10,0.9457638888888888,,,0.0065759892228667,valid_only,True,200,3,600
 Hybrid,100,hybrid,MAP@5,0.7467870370370371,,,0.0013311855772777156,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,MAP@5,0.8844074074074074,,,0.008294182725150765,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,MAP@5,0.8844074074074074,,,0.008294182725150765,valid_only,True,200,3,600
 Hybrid,100,hybrid,MAP@10,0.7607460317460317,,,0.0003023629853429639,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,MAP@10,0.8873048941798942,,,0.00805661262840504,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,MAP@10,0.8873048941798942,,,0.00805661262840504,valid_only,True,200,3,600
 Hybrid,100,hybrid,Completeness@5,0.7133333333333334,,,0.0028867513459481316,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Completeness@5,0.8633333333333333,,,0.0028867513459481316,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),100,hybrid,Completeness@5,0.8633333333333333,,,0.0028867513459481316,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@5 absolute improvement,0.0913888888888889,0.06222222222222223,0.12222222222222223,0.00048112522432468323,operational,True,200,3,600
+Hybrid + OpenAI Decisions,100,hybrid,Recall@5 absolute improvement,0.0913888888888889,0.06222222222222223,0.12222222222222223,0.00048112522432468323,valid_only,True,200,3,600
 Vector,100,vector,Recall@1,0.5644444444444444,,,0.005548606765399495,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@1,0.6436111111111111,,,0.010747523401196123,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Recall@1,0.6440914158305463,,,0.00885764647796309,valid_only,False,200,3,598
 Vector,100,vector,Recall@3,0.6955555555555556,,,0.005023094811118096,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@3,0.8544444444444445,,,0.010485881160098227,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Recall@3,0.8556298773690078,,,0.007958406192003685,valid_only,False,200,3,598
 Vector,100,vector,Recall@5,0.7536111111111111,,,0.0069388866648871,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@5,0.8680555555555556,,,0.004738533919231092,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Recall@5,0.8692865105908584,,,0.003090138269574895,valid_only,False,200,3,598
 Vector,100,vector,Recall@10,0.8172222222222222,,,0.002678791878053597,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@10,0.8711111111111111,,,0.006309898162000283,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Recall@10,0.8723522853957637,,,0.004835044958279581,valid_only,False,200,3,598
 Vector,100,vector,Recall@20,0.8711111111111111,,,0.006309898162000283,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@20,0.8711111111111111,,,0.006309898162000283,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Recall@20,0.8723522853957637,,,0.004835044958279581,valid_only,False,200,3,598
 Vector,100,vector,Precision@1,0.7966666666666666,,,0.005773502691896263,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Precision@1,0.9066666666666666,,,0.010408329997330672,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Precision@1,0.9080267558528428,,,0.007864080783635903,valid_only,False,200,3,598
 Vector,100,vector,Precision@3,0.3505555555555555,,,0.0034694433324435722,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Precision@3,0.4477777777777778,,,0.004811252243246896,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Precision@3,0.4487179487179487,,,0.004650288028781695,valid_only,False,200,3,598
 Vector,100,vector,Precision@5,0.2306666666666667,,,0.0032145502536643214,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Precision@5,0.274,,,0.0020000000000000018,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Precision@5,0.2745819397993311,,,0.002295450398360503,valid_only,False,200,3,598
 Vector,100,vector,NDCG@5,0.7372695687985308,,,0.0025934360680058533,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,NDCG@5,0.8654546457346918,,,0.005878951386713107,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,NDCG@5,0.8666769020749415,,,0.0031787480428562584,valid_only,False,200,3,598
 Vector,100,vector,NDCG@10,0.7623681306122533,,,0.0023440233915289536,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,NDCG@10,0.866690139224776,,,0.00617615202878542,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,NDCG@10,0.8679165276502768,,,0.0035055729797111327,valid_only,False,200,3,598
 Vector,100,vector,MRR@5,0.8315,,,0.0010441636738451347,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,MRR@5,0.9281944444444444,,,0.00860326703663812,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,MRR@5,0.9296265328874025,,,0.005902958736549699,valid_only,False,200,3,598
 Vector,100,vector,MRR@10,0.8357308201058201,,,0.0022668920696991258,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,MRR@10,0.9281944444444444,,,0.00860326703663812,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,MRR@10,0.9296265328874025,,,0.005902958736549699,valid_only,False,200,3,598
 Vector,100,vector,MAP@5,0.684162037037037,,,0.002046636681929377,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,MAP@5,0.8340231481481482,,,0.005884142697799386,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,MAP@5,0.8351402824228911,,,0.0032309891283041786,valid_only,False,200,3,598
 Vector,100,vector,MAP@10,0.6994595458553792,,,0.002560319907103274,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,MAP@10,0.8348908730158731,,,0.006059109623478304,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,MAP@10,0.8360109093804746,,,0.0033932076388493394,valid_only,False,200,3,598
 Vector,100,vector,Completeness@5,0.5983333333333334,,,0.0028867513459481316,retrieval,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Completeness@5,0.7683333333333333,,,0.005773502691896263,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),100,vector,Completeness@5,0.7692307692307693,,,0.004447756643687807,valid_only,False,200,3,598
+Vector + OpenAI Decisions,100,vector,Recall@5 absolute improvement,0.11444444444444445,0.08444444444444445,0.14666666666666667,0.008347210667398179,operational,True,200,3,600
+Vector + OpenAI Decisions,100,vector,Recall@5 absolute improvement,0.11482720178372352,0.08473142671694613,0.14712532842585277,0.008161004816942393,valid_only,False,200,3,598
 BM25,250,bm25,Recall@1,0.43333333333333335,,,0.009824855102126327,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@1,0.5811111111111111,,,0.014199308799035614,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Recall@1,0.5811111111111111,,,0.014199308799035614,valid_only,True,200,3,600
 BM25,250,bm25,Recall@3,0.6208333333333333,,,0.018929694486000865,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@3,0.7991666666666667,,,0.014018836534383902,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Recall@3,0.7991666666666667,,,0.014018836534383902,valid_only,True,200,3,600
 BM25,250,bm25,Recall@5,0.6747222222222222,,,0.0041943524640393436,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@5,0.8144444444444444,,,0.007698003589194996,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Recall@5,0.8144444444444444,,,0.007698003589194996,valid_only,True,200,3,600
 BM25,250,bm25,Recall@10,0.7572222222222222,,,0.00048112522432463515,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@10,0.8186111111111111,,,0.0055486067653995,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Recall@10,0.8186111111111111,,,0.0055486067653995,valid_only,True,200,3,600
 BM25,250,bm25,Recall@20,0.8186111111111111,,,0.0055486067653995,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@20,0.8186111111111111,,,0.0055486067653995,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Recall@20,0.8186111111111111,,,0.0055486067653995,valid_only,True,200,3,600
 BM25,250,bm25,Precision@1,0.63,,,0.015000000000000013,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Precision@1,0.83,,,0.018027756377319962,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Precision@1,0.83,,,0.018027756377319962,valid_only,True,200,3,600
 BM25,250,bm25,Precision@3,0.3261111111111111,,,0.007876359377087663,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Precision@3,0.4244444444444444,,,0.005091750772173158,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Precision@3,0.4244444444444444,,,0.005091750772173158,valid_only,True,200,3,600
 BM25,250,bm25,Precision@5,0.21266666666666667,,,0.0011547005383792525,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Precision@5,0.26,,,0.0020000000000000018,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Precision@5,0.26,,,0.0020000000000000018,valid_only,True,200,3,600
 BM25,250,bm25,NDCG@5,0.6307816344758713,,,0.007622256687588012,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,NDCG@5,0.8051136102451933,,,0.012896317389152754,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,NDCG@5,0.8051136102451933,,,0.012896317389152754,valid_only,True,200,3,600
 BM25,250,bm25,NDCG@10,0.6622612903064897,,,0.005669447909387626,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,NDCG@10,0.8068000485145702,,,0.011996234248899486,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,NDCG@10,0.8068000485145702,,,0.011996234248899486,valid_only,True,200,3,600
 BM25,250,bm25,MRR@5,0.6952222222222222,,,0.009845096542234946,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,MRR@5,0.8614166666666667,,,0.013763629608500827,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,MRR@5,0.8614166666666667,,,0.013763629608500827,valid_only,True,200,3,600
 BM25,250,bm25,MRR@10,0.7032407407407407,,,0.009089221684349244,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,MRR@10,0.8616944444444444,,,0.01365811046526869,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,MRR@10,0.8616944444444444,,,0.01365811046526869,valid_only,True,200,3,600
 BM25,250,bm25,MAP@5,0.5765138888888889,,,0.008548879068821466,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,MAP@5,0.7724537037037037,,,0.015593637248369744,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,MAP@5,0.7724537037037037,,,0.015593637248369744,valid_only,True,200,3,600
 BM25,250,bm25,MAP@10,0.5937518738977072,,,0.00730884687596744,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,MAP@10,0.7734834656084656,,,0.015038876870059403,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,MAP@10,0.7734834656084656,,,0.015038876870059403,valid_only,True,200,3,600
 BM25,250,bm25,Completeness@5,0.54,,,0.0,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Completeness@5,0.7183333333333334,,,0.010408329997330672,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),250,bm25,Completeness@5,0.7183333333333334,,,0.010408329997330672,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@5 absolute improvement,0.13972222222222222,0.105,0.17666666666666667,0.01134476547592341,operational,True,200,3,600
+BM25 + OpenAI Decisions,250,bm25,Recall@5 absolute improvement,0.13972222222222222,0.105,0.17666666666666667,0.01134476547592341,valid_only,True,200,3,600
 Hybrid,250,hybrid,Recall@1,0.5213888888888889,,,0.019263042719539783,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@1,0.6122222222222222,,,0.009292071490932056,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Recall@1,0.6122222222222222,,,0.009292071490932056,valid_only,True,200,3,600
 Hybrid,250,hybrid,Recall@3,0.7208333333333333,,,0.0028867513459481316,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@3,0.8572222222222222,,,0.00384900179459753,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Recall@3,0.8572222222222222,,,0.00384900179459753,valid_only,True,200,3,600
 Hybrid,250,hybrid,Recall@5,0.7794444444444445,,,0.0058531409738071015,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@5,0.8763888888888889,,,0.005548606765399452,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Recall@5,0.8763888888888889,,,0.005548606765399452,valid_only,True,200,3,600
 Hybrid,250,hybrid,Recall@10,0.8416666666666667,,,0.00666666666666671,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@10,0.885,,,0.005464532103585017,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Recall@10,0.885,,,0.005464532103585017,valid_only,True,200,3,600
 Hybrid,250,hybrid,Recall@20,0.8858333333333334,,,0.005833333333333341,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@20,0.8858333333333334,,,0.005833333333333341,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Recall@20,0.8858333333333334,,,0.005833333333333341,valid_only,True,200,3,600
 Hybrid,250,hybrid,Precision@1,0.7533333333333333,,,0.02466441431158126,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Precision@1,0.8583333333333333,,,0.012583057392117927,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Precision@1,0.8583333333333333,,,0.012583057392117927,valid_only,True,200,3,600
 Hybrid,250,hybrid,Precision@3,0.375,,,0.0016666666666666774,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Precision@3,0.4494444444444444,,,0.00346944333244355,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Precision@3,0.4494444444444444,,,0.00346944333244355,valid_only,True,200,3,600
 Hybrid,250,hybrid,Precision@5,0.24433333333333335,,,0.0020816659994661348,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Precision@5,0.2776666666666667,,,0.0020816659994661348,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Precision@5,0.2776666666666667,,,0.0020816659994661348,valid_only,True,200,3,600
 Hybrid,250,hybrid,NDCG@5,0.7411564195465675,,,0.007164632040261388,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,NDCG@5,0.8547899308932358,,,0.006246691698384764,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,NDCG@5,0.8547899308932358,,,0.006246691698384764,valid_only,True,200,3,600
 Hybrid,250,hybrid,NDCG@10,0.7641662547828163,,,0.005385091958328914,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,NDCG@10,0.8581703109269346,,,0.00539020305551514,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,NDCG@10,0.8581703109269346,,,0.00539020305551514,valid_only,True,200,3,600
 Hybrid,250,hybrid,MRR@5,0.8091666666666667,,,0.014098118471783569,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,MRR@5,0.9029166666666667,,,0.007716774657271706,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,MRR@5,0.9029166666666667,,,0.007716774657271706,valid_only,True,200,3,600
 Hybrid,250,hybrid,MRR@10,0.8143776455026455,,,0.01338198711337853,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,MRR@10,0.9031547619047618,,,0.007747018664359912,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,MRR@10,0.9031547619047618,,,0.007747018664359912,valid_only,True,200,3,600
 Hybrid,250,hybrid,MAP@5,0.6878472222222222,,,0.008029399586273557,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,MAP@5,0.8189953703703704,,,0.007833657564868491,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,MAP@5,0.8189953703703704,,,0.007833657564868491,valid_only,True,200,3,600
 Hybrid,250,hybrid,MAP@10,0.7008032407407407,,,0.007423697505731888,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,MAP@10,0.8212374338624339,,,0.006816492534526159,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,MAP@10,0.8212374338624339,,,0.006816492534526159,valid_only,True,200,3,600
 Hybrid,250,hybrid,Completeness@5,0.6416666666666667,,,0.005773502691896263,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Completeness@5,0.785,,,0.010000000000000009,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),250,hybrid,Completeness@5,0.785,,,0.010000000000000009,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@5 absolute improvement,0.09694444444444444,0.06527777777777777,0.13083333333333333,0.001734721666221775,operational,True,200,3,600
+Hybrid + OpenAI Decisions,250,hybrid,Recall@5 absolute improvement,0.09694444444444444,0.06527777777777777,0.13083333333333333,0.001734721666221775,valid_only,True,200,3,600
 Vector,250,vector,Recall@1,0.5147222222222222,,,0.015030832509409663,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@1,0.5791666666666667,,,0.017638342073763923,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Recall@1,0.5791666666666667,,,0.017638342073763923,valid_only,True,200,3,600
 Vector,250,vector,Recall@3,0.6413888888888889,,,0.00851197413669139,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@3,0.7813888888888889,,,0.0017347216662217551,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Recall@3,0.7813888888888889,,,0.0017347216662217551,valid_only,True,200,3,600
 Vector,250,vector,Recall@5,0.6713888888888889,,,0.006142595663193345,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@5,0.8005555555555556,,,0.009658521472618722,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Recall@5,0.8005555555555556,,,0.009658521472618722,valid_only,True,200,3,600
 Vector,250,vector,Recall@10,0.7352777777777778,,,0.006254627916220979,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@10,0.8080555555555555,,,0.006028481781725143,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Recall@10,0.8080555555555555,,,0.006028481781725143,valid_only,True,200,3,600
 Vector,250,vector,Recall@20,0.8080555555555555,,,0.006028481781725143,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@20,0.8080555555555555,,,0.006028481781725143,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Recall@20,0.8080555555555555,,,0.006028481781725143,valid_only,True,200,3,600
 Vector,250,vector,Precision@1,0.7316666666666667,,,0.010408329997330672,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Precision@1,0.82,,,0.021794494717703325,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Precision@1,0.82,,,0.021794494717703325,valid_only,True,200,3,600
 Vector,250,vector,Precision@3,0.3194444444444444,,,0.0058531409738070755,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Precision@3,0.40555555555555556,,,0.0009622504486493665,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Precision@3,0.40555555555555556,,,0.0009622504486493665,valid_only,True,200,3,600
 Vector,250,vector,Precision@5,0.20333333333333334,,,0.0015275252316519481,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Precision@5,0.25,,,0.002999999999999989,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Precision@5,0.25,,,0.002999999999999989,valid_only,True,200,3,600
 Vector,250,vector,NDCG@5,0.6657156601709348,,,0.007278313086760631,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,NDCG@5,0.7898105587120542,,,0.0022421240960288458,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,NDCG@5,0.7898105587120542,,,0.0022421240960288458,valid_only,True,200,3,600
 Vector,250,vector,NDCG@10,0.6895554633591644,,,0.002808941371544963,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,NDCG@10,0.7926017988314918,,,0.0037712785906427533,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,NDCG@10,0.7926017988314918,,,0.0037712785906427533,valid_only,True,200,3,600
 Vector,250,vector,MRR@5,0.7729444444444444,,,0.008791699578664016,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,MRR@5,0.8634722222222222,,,0.009522755398012176,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,MRR@5,0.8634722222222222,,,0.009522755398012176,valid_only,True,200,3,600
 Vector,250,vector,MRR@10,0.780433201058201,,,0.005715751690445551,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,MRR@10,0.8641732804232805,,,0.010155054466881483,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,MRR@10,0.8641732804232805,,,0.010155054466881483,valid_only,True,200,3,600
 Vector,250,vector,MAP@5,0.612462962962963,,,0.007352055925892327,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,MAP@5,0.7478425925925926,,,0.005586309553172682,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,MAP@5,0.7478425925925926,,,0.005586309553172682,valid_only,True,200,3,600
 Vector,250,vector,MAP@10,0.6245318562610229,,,0.005733430898662953,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,MAP@10,0.7495456349206349,,,0.006426439056984566,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,MAP@10,0.7495456349206349,,,0.006426439056984566,valid_only,True,200,3,600
 Vector,250,vector,Completeness@5,0.5016666666666667,,,0.0028867513459481316,retrieval,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Completeness@5,0.6683333333333333,,,0.01527525231651948,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),250,vector,Completeness@5,0.6683333333333333,,,0.01527525231651948,valid_only,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@5 absolute improvement,0.12916666666666665,0.09138888888888888,0.16916666666666666,0.00381881307912987,operational,True,200,3,600
+Vector + OpenAI Decisions,250,vector,Recall@5 absolute improvement,0.12916666666666665,0.09138888888888888,0.16916666666666666,0.00381881307912987,valid_only,True,200,3,600
 BM25,500,bm25,Recall@1,0.4052777777777778,,,0.01988392240908142,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@1,0.5475,,,0.015833333333333366,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Recall@1,0.5475,,,0.015833333333333366,valid_only,True,200,3,600
 BM25,500,bm25,Recall@3,0.5838888888888889,,,0.01988392240908142,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@3,0.7525,,,0.007264831572567829,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Recall@3,0.7525,,,0.007264831572567829,valid_only,True,200,3,600
 BM25,500,bm25,Recall@5,0.635,,,0.009610468828892365,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@5,0.7683333333333333,,,0.0036324157862838513,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Recall@5,0.7683333333333333,,,0.0036324157862838513,valid_only,True,200,3,600
 BM25,500,bm25,Recall@10,0.7113888888888888,,,0.014199308799035627,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@10,0.7775,,,0.0025000000000000022,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Recall@10,0.7775,,,0.0025000000000000022,valid_only,True,200,3,600
 BM25,500,bm25,Recall@20,0.78,,,0.0025000000000000022,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@20,0.78,,,0.0025000000000000022,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Recall@20,0.78,,,0.0025000000000000022,valid_only,True,200,3,600
 BM25,500,bm25,Precision@1,0.5916666666666667,,,0.027537852736430536,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Precision@1,0.7783333333333333,,,0.022546248764114492,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Precision@1,0.7783333333333333,,,0.022546248764114492,valid_only,True,200,3,600
 BM25,500,bm25,Precision@3,0.30333333333333334,,,0.010408329997330672,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Precision@3,0.39777777777777773,,,0.005853140973807073,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Precision@3,0.39777777777777773,,,0.005853140973807073,valid_only,True,200,3,600
 BM25,500,bm25,Precision@5,0.2006666666666667,,,0.0030550504633038962,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Precision@5,0.24466666666666667,,,0.0011547005383792525,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Precision@5,0.24466666666666667,,,0.0011547005383792525,valid_only,True,200,3,600
 BM25,500,bm25,NDCG@5,0.5957220767912401,,,0.010163421525682316,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,NDCG@5,0.7574327529004081,,,0.009334074861376001,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,NDCG@5,0.7574327529004081,,,0.009334074861376001,valid_only,True,200,3,600
 BM25,500,bm25,NDCG@10,0.6236283863428284,,,0.012753345958479139,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,NDCG@10,0.7609247700235934,,,0.00815784606474735,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,NDCG@10,0.7609247700235934,,,0.00815784606474735,valid_only,True,200,3,600
 BM25,500,bm25,MRR@5,0.6633611111111111,,,0.014397466340889153,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,MRR@5,0.8185,,,0.01134802968703283,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,MRR@5,0.8185,,,0.01134802968703283,valid_only,True,200,3,600
 BM25,500,bm25,MRR@10,0.6709775132275132,,,0.016372370554174436,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,MRR@10,0.8191481481481482,,,0.01119445593235327,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,MRR@10,0.8191481481481482,,,0.01119445593235327,valid_only,True,200,3,600
 BM25,500,bm25,MAP@5,0.5415231481481482,,,0.01367936637057474,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,MAP@5,0.7210787037037037,,,0.012378906769942561,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,MAP@5,0.7210787037037037,,,0.012378906769942561,valid_only,True,200,3,600
 BM25,500,bm25,MAP@10,0.5558830467372134,,,0.014349933278292986,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,MAP@10,0.7231236772486772,,,0.011751088561406262,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,MAP@10,0.7231236772486772,,,0.011751088561406262,valid_only,True,200,3,600
 BM25,500,bm25,Completeness@5,0.49166666666666664,,,0.00763762615825974,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Completeness@5,0.6566666666666666,,,0.00763762615825974,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),500,bm25,Completeness@5,0.6566666666666666,,,0.00763762615825974,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@5 absolute improvement,0.13333333333333333,0.09638888888888889,0.17333333333333334,0.0060092521257733116,operational,True,200,3,600
+BM25 + OpenAI Decisions,500,bm25,Recall@5 absolute improvement,0.13333333333333333,0.09638888888888889,0.17333333333333334,0.0060092521257733116,valid_only,True,200,3,600
 Hybrid,500,hybrid,Recall@1,0.5069444444444444,,,0.01318493809589535,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@1,0.5705555555555556,,,0.016379469986450654,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Recall@1,0.5705555555555556,,,0.016379469986450654,valid_only,True,200,3,600
 Hybrid,500,hybrid,Recall@3,0.6758333333333333,,,0.0038188130791298944,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@3,0.795,,,0.005464532103585008,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Recall@3,0.795,,,0.005464532103585008,valid_only,True,200,3,600
 Hybrid,500,hybrid,Recall@5,0.7358333333333333,,,0.007949493345141206,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@5,0.8272222222222222,,,0.00965852147261876,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Recall@5,0.8272222222222222,,,0.00965852147261876,valid_only,True,200,3,600
 Hybrid,500,hybrid,Recall@10,0.7866666666666666,,,0.0038188130791298944,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@10,0.8397222222222223,,,0.005548606765399495,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Recall@10,0.8397222222222223,,,0.005548606765399495,valid_only,True,200,3,600
 Hybrid,500,hybrid,Recall@20,0.8397222222222223,,,0.005548606765399495,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@20,0.8397222222222223,,,0.005548606765399495,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Recall@20,0.8397222222222223,,,0.005548606765399495,valid_only,True,200,3,600
 Hybrid,500,hybrid,Precision@1,0.73,,,0.017320508075688787,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Precision@1,0.8116666666666666,,,0.018929694486000865,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Precision@1,0.8116666666666666,,,0.018929694486000865,valid_only,True,200,3,600
 Hybrid,500,hybrid,Precision@3,0.3516666666666666,,,0.0016666666666666774,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Precision@3,0.41888888888888887,,,0.00384900179459753,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Precision@3,0.41888888888888887,,,0.00384900179459753,valid_only,True,200,3,600
 Hybrid,500,hybrid,Precision@5,0.23,,,0.0020000000000000018,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Precision@5,0.26266666666666666,,,0.0028867513459481316,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Precision@5,0.26266666666666666,,,0.0028867513459481316,valid_only,True,200,3,600
 Hybrid,500,hybrid,NDCG@5,0.7044928904255516,,,0.005487536493243193,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,NDCG@5,0.8012758709500506,,,0.009486264351867932,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,NDCG@5,0.8012758709500506,,,0.009486264351867932,valid_only,True,200,3,600
 Hybrid,500,hybrid,NDCG@10,0.724584581076005,,,0.003944074710203543,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,NDCG@10,0.8061756191744199,,,0.006393514734756704,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,NDCG@10,0.8061756191744199,,,0.006393514734756704,valid_only,True,200,3,600
 Hybrid,500,hybrid,MRR@5,0.7834444444444445,,,0.007739838021082357,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,MRR@5,0.8584444444444445,,,0.008451796872285188,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,MRR@5,0.8584444444444445,,,0.008451796872285188,valid_only,True,200,3,600
 Hybrid,500,hybrid,MRR@10,0.7871580687830688,,,0.008169099302311038,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,MRR@10,0.859406746031746,,,0.0077952021275507575,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,MRR@10,0.859406746031746,,,0.0077952021275507575,valid_only,True,200,3,600
 Hybrid,500,hybrid,MAP@5,0.6500833333333333,,,0.0077554117902943875,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,MAP@5,0.7587685185185186,,,0.010945443176840684,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,MAP@5,0.7587685185185186,,,0.010945443176840684,valid_only,True,200,3,600
 Hybrid,500,hybrid,MAP@10,0.6624708994708994,,,0.006847454590921939,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,MAP@10,0.761800925925926,,,0.00914222423553879,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,MAP@10,0.761800925925926,,,0.00914222423553879,valid_only,True,200,3,600
 Hybrid,500,hybrid,Completeness@5,0.5883333333333334,,,0.0028867513459481316,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Completeness@5,0.7216666666666667,,,0.011547005383792526,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),500,hybrid,Completeness@5,0.7216666666666667,,,0.011547005383792526,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@5 absolute improvement,0.0913888888888889,0.062222222222222213,0.1225,0.017566013059735975,operational,True,200,3,600
+Hybrid + OpenAI Decisions,500,hybrid,Recall@5 absolute improvement,0.0913888888888889,0.062222222222222213,0.1225,0.017566013059735975,valid_only,True,200,3,600
 Vector,500,vector,Recall@1,0.4777777777777778,,,0.009658521472618756,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@1,0.5455555555555556,,,0.019263042719539783,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Recall@1,0.5455555555555556,,,0.019263042719539783,valid_only,True,200,3,600
 Vector,500,vector,Recall@3,0.6061111111111112,,,0.005091750772173164,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@3,0.7138888888888889,,,0.01908193832843953,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Recall@3,0.7138888888888889,,,0.01908193832843953,valid_only,True,200,3,600
 Vector,500,vector,Recall@5,0.6366666666666667,,,0.008700255424092097,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@5,0.7330555555555556,,,0.01873301700009706,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Recall@5,0.7330555555555556,,,0.01873301700009706,valid_only,True,200,3,600
 Vector,500,vector,Recall@10,0.6816666666666666,,,0.003818813079129846,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@10,0.7394444444444445,,,0.011002945733521285,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Recall@10,0.7394444444444445,,,0.011002945733521285,valid_only,True,200,3,600
 Vector,500,vector,Recall@20,0.7433333333333333,,,0.008036375634160814,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@20,0.7433333333333333,,,0.008036375634160814,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Recall@20,0.7433333333333333,,,0.008036375634160814,valid_only,True,200,3,600
 Vector,500,vector,Precision@1,0.6866666666666666,,,0.005773502691896199,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Precision@1,0.7766666666666666,,,0.023629078131263064,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Precision@1,0.7766666666666666,,,0.023629078131263064,valid_only,True,200,3,600
 Vector,500,vector,Precision@3,0.3011111111111111,,,0.00346944333244355,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Precision@3,0.3622222222222222,,,0.00673575314054562,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Precision@3,0.3622222222222222,,,0.00673575314054562,valid_only,True,200,3,600
 Vector,500,vector,Precision@5,0.19166666666666668,,,0.0025166114784235857,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Precision@5,0.22433333333333336,,,0.0035118845842842493,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Precision@5,0.22433333333333336,,,0.0035118845842842493,valid_only,True,200,3,600
 Vector,500,vector,NDCG@5,0.625631857323558,,,0.001509409150002231,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,NDCG@5,0.7256887647626751,,,0.02014930830474649,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,NDCG@5,0.7256887647626751,,,0.02014930830474649,valid_only,True,200,3,600
 Vector,500,vector,NDCG@10,0.6420501684827228,,,0.0035023615289971424,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,NDCG@10,0.7280742907615646,,,0.01753031408458779,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,NDCG@10,0.7280742907615646,,,0.01753031408458779,valid_only,True,200,3,600
 Vector,500,vector,MRR@5,0.7356111111111111,,,0.002285724619685639,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,MRR@5,0.8237222222222222,,,0.02304529557519598,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,MRR@5,0.8237222222222222,,,0.02304529557519598,valid_only,True,200,3,600
 Vector,500,vector,MRR@10,0.7398948412698413,,,0.0032049399946193304,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,MRR@10,0.824515873015873,,,0.02171482198759954,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,MRR@10,0.824515873015873,,,0.02171482198759954,valid_only,True,200,3,600
 Vector,500,vector,MAP@5,0.5692592592592592,,,0.0022114466756349917,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,MAP@5,0.6753611111111111,,,0.01992952475073407,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,MAP@5,0.6753611111111111,,,0.01992952475073407,valid_only,True,200,3,600
 Vector,500,vector,MAP@10,0.5775101410934744,,,0.004024124889660054,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,MAP@10,0.6767103174603174,,,0.01889528911510111,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,MAP@10,0.6767103174603174,,,0.01889528911510111,valid_only,True,200,3,600
 Vector,500,vector,Completeness@5,0.4633333333333333,,,0.010408329997330643,retrieval,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Completeness@5,0.575,,,0.014999999999999958,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),500,vector,Completeness@5,0.575,,,0.014999999999999958,valid_only,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@5 absolute improvement,0.09638888888888889,0.0661111111111111,0.12972222222222224,0.01434527925963928,operational,True,200,3,600
+Vector + OpenAI Decisions,500,vector,Recall@5 absolute improvement,0.09638888888888889,0.0661111111111111,0.12972222222222224,0.01434527925963928,valid_only,True,200,3,600
 BM25,1000,bm25,Recall@1,0.38805555555555554,,,0.01109721353079897,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@1,0.5116666666666667,,,0.005833333333333341,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Recall@1,0.5116666666666667,,,0.005833333333333341,valid_only,True,200,3,600
 BM25,1000,bm25,Recall@3,0.5480555555555555,,,0.010875984416917749,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@3,0.6913888888888889,,,0.009366508500048523,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Recall@3,0.6913888888888889,,,0.009366508500048523,valid_only,True,200,3,600
 BM25,1000,bm25,Recall@5,0.5925,,,0.003333333333333355,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@5,0.7127777777777777,,,0.009141379262169094,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Recall@5,0.7127777777777777,,,0.009141379262169094,valid_only,True,200,3,600
 BM25,1000,bm25,Recall@10,0.6547222222222222,,,0.00673575314054568,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@10,0.7205555555555555,,,0.00994196120454071,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Recall@10,0.7205555555555555,,,0.00994196120454071,valid_only,True,200,3,600
 BM25,1000,bm25,Recall@20,0.7222222222222222,,,0.008179128813519695,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@20,0.7222222222222222,,,0.008179128813519695,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Recall@20,0.7222222222222222,,,0.008179128813519695,valid_only,True,200,3,600
 BM25,1000,bm25,Precision@1,0.565,,,0.017320508075688724,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Precision@1,0.74,,,0.0050000000000000044,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Precision@1,0.74,,,0.0050000000000000044,valid_only,True,200,3,600
 BM25,1000,bm25,Precision@3,0.28277777777777774,,,0.004194352464039292,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Precision@3,0.3683333333333333,,,0.00440958551844097,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Precision@3,0.3683333333333333,,,0.00440958551844097,valid_only,True,200,3,600
 BM25,1000,bm25,Precision@5,0.185,,,0.0017320508075688629,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Precision@5,0.22833333333333333,,,0.002309401076758505,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Precision@5,0.22833333333333333,,,0.002309401076758505,valid_only,True,200,3,600
 BM25,1000,bm25,NDCG@5,0.5586018753059349,,,0.007382312343560824,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,NDCG@5,0.7041760393801803,,,0.0045356345691803515,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,NDCG@5,0.7041760393801803,,,0.0045356345691803515,valid_only,True,200,3,600
 BM25,1000,bm25,NDCG@10,0.5822282458703962,,,0.004738110138636739,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,NDCG@10,0.7070809283370312,,,0.00549676470427161,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,NDCG@10,0.7070809283370312,,,0.00549676470427161,valid_only,True,200,3,600
 BM25,1000,bm25,MRR@5,0.6301666666666667,,,0.009751068317540046,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,MRR@5,0.7763055555555556,,,0.002494902209914675,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,MRR@5,0.7763055555555556,,,0.002494902209914675,valid_only,True,200,3,600
 BM25,1000,bm25,MRR@10,0.6369530423280423,,,0.007864452000884007,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,MRR@10,0.7769583333333333,,,0.002648046974239289,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,MRR@10,0.7769583333333333,,,0.002648046974239289,valid_only,True,200,3,600
 BM25,1000,bm25,MAP@5,0.5061574074074074,,,0.00882831283486761,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,MAP@5,0.6645601851851852,,,0.005848283311833762,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,MAP@5,0.6645601851851852,,,0.005848283311833762,valid_only,True,200,3,600
 BM25,1000,bm25,MAP@10,0.518431216931217,,,0.007857166802746614,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,MAP@10,0.6662612433862434,,,0.0061350625552555795,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,MAP@10,0.6662612433862434,,,0.0061350625552555795,valid_only,True,200,3,600
 BM25,1000,bm25,Completeness@5,0.45,,,0.0,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Completeness@5,0.5916666666666667,,,0.012583057392117927,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),1000,bm25,Completeness@5,0.5916666666666667,,,0.012583057392117927,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@5 absolute improvement,0.12027777777777778,0.08444444444444445,0.15944444444444442,0.012143051663552435,operational,True,200,3,600
+BM25 + OpenAI Decisions,1000,bm25,Recall@5 absolute improvement,0.12027777777777778,0.08444444444444445,0.15944444444444442,0.012143051663552435,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Recall@1,0.48,,,0.01121135337256143,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@1,0.5461111111111111,,,0.006787106512705888,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Recall@1,0.5461111111111111,,,0.006787106512705888,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Recall@3,0.6283333333333333,,,0.006821127309893744,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@3,0.7458333333333333,,,0.005204164998665346,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Recall@3,0.7458333333333333,,,0.005204164998665346,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Recall@5,0.6822222222222222,,,0.002678791878053597,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@5,0.7791666666666667,,,0.006009252125773346,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Recall@5,0.7791666666666667,,,0.006009252125773346,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Recall@10,0.7536111111111111,,,0.003154949081000161,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@10,0.7941666666666667,,,0.0038188130791298944,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Recall@10,0.7941666666666667,,,0.0038188130791298944,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Recall@20,0.7991666666666667,,,0.0028867513459481316,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@20,0.7991666666666667,,,0.0028867513459481316,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Recall@20,0.7991666666666667,,,0.0028867513459481316,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Precision@1,0.6916666666666667,,,0.010408329997330611,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Precision@1,0.7683333333333333,,,0.00763762615825974,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Precision@1,0.7683333333333333,,,0.00763762615825974,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Precision@3,0.32555555555555554,,,0.001924500897298765,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Precision@3,0.38666666666666666,,,0.0050000000000000044,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Precision@3,0.38666666666666666,,,0.0050000000000000044,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Precision@5,0.21400000000000002,,,0.0010000000000000009,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Precision@5,0.24433333333333335,,,0.002309401076758505,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Precision@5,0.24433333333333335,,,0.002309401076758505,valid_only,True,200,3,600
 Hybrid,1000,hybrid,NDCG@5,0.6583636085543149,,,0.003867870790467665,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,NDCG@5,0.7552308554612197,,,0.0042877549518747,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,NDCG@5,0.7552308554612197,,,0.0042877549518747,valid_only,True,200,3,600
 Hybrid,1000,hybrid,NDCG@10,0.6846472053439838,,,0.0032155434705409616,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,NDCG@10,0.7611833282103503,,,0.0010693481931329596,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,NDCG@10,0.7611833282103503,,,0.0010693481931329596,valid_only,True,200,3,600
 Hybrid,1000,hybrid,MRR@5,0.7470277777777777,,,0.004717971943458248,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,MRR@5,0.8196944444444444,,,0.0018565449790563149,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,MRR@5,0.8196944444444444,,,0.0018565449790563149,valid_only,True,200,3,600
 Hybrid,1000,hybrid,MRR@10,0.7526448412698413,,,0.004282678230900394,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,MRR@10,0.8207407407407408,,,0.0014568334438526047,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,MRR@10,0.8207407407407408,,,0.0014568334438526047,valid_only,True,200,3,600
 Hybrid,1000,hybrid,MAP@5,0.6028657407407407,,,0.005348977585856167,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,MAP@5,0.7104722222222222,,,0.005132635083583712,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,MAP@5,0.7104722222222222,,,0.005132635083583712,valid_only,True,200,3,600
 Hybrid,1000,hybrid,MAP@10,0.6175103615520282,,,0.0049318251062202365,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,MAP@10,0.714036044973545,,,0.003336033005011714,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,MAP@10,0.714036044973545,,,0.003336033005011714,valid_only,True,200,3,600
 Hybrid,1000,hybrid,Completeness@5,0.52,,,0.0,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Completeness@5,0.66,,,0.008660254037844393,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),1000,hybrid,Completeness@5,0.66,,,0.008660254037844393,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@5 absolute improvement,0.09694444444444444,0.06527777777777777,0.13055555555555554,0.008673608331108884,operational,True,200,3,600
+Hybrid + OpenAI Decisions,1000,hybrid,Recall@5 absolute improvement,0.09694444444444444,0.06527777777777777,0.13055555555555554,0.008673608331108884,valid_only,True,200,3,600
 Vector,1000,vector,Recall@1,0.4547222222222222,,,0.010551899951790311,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@1,0.5019444444444444,,,0.01908193832843953,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Recall@1,0.5027824151363384,,,0.01813149802161695,valid_only,False,200,3,599
 Vector,1000,vector,Recall@3,0.56,,,0.0025000000000000022,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@3,0.65,,,0.00961046882889233,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Recall@3,0.6510851419031719,,,0.008142401144299215,valid_only,False,200,3,599
 Vector,1000,vector,Recall@5,0.6,,,0.006614378277661461,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@5,0.6702777777777778,,,0.006364688465216422,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Recall@5,0.6713967723984419,,,0.007951185481704783,valid_only,False,200,3,599
 Vector,1000,vector,Recall@10,0.6425,,,0.004330127018922165,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@10,0.6813888888888889,,,0.0058531409738071015,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Recall@10,0.6825264329437952,,,0.007703911586636247,valid_only,False,200,3,599
 Vector,1000,vector,Recall@20,0.6855555555555556,,,0.006472877887628338,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@20,0.6855555555555556,,,0.006472877887628338,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Recall@20,0.6867000556483027,,,0.0072521894281188095,valid_only,False,200,3,599
 Vector,1000,vector,Precision@1,0.6566666666666666,,,0.010408329997330672,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Precision@1,0.715,,,0.031224989991992018,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Precision@1,0.7161936560934892,,,0.02987179367686675,valid_only,False,200,3,599
 Vector,1000,vector,Precision@3,0.27555555555555555,,,0.0009622504486493984,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Precision@3,0.3283333333333333,,,0.003333333333333355,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Precision@3,0.32888146911519195,,,0.0025605276583395543,valid_only,False,200,3,599
 Vector,1000,vector,Precision@5,0.18000000000000002,,,0.003464101615137758,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Precision@5,0.20333333333333334,,,0.0025166114784235857,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Precision@5,0.20367278797996663,,,0.003074247666040214,valid_only,False,200,3,599
 Vector,1000,vector,NDCG@5,0.5899618072164611,,,0.002221122526134915,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,NDCG@5,0.6634391342667985,,,0.010129843903286143,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,NDCG@5,0.6645467121203323,,,0.009402144187343227,valid_only,False,200,3,599
 Vector,1000,vector,NDCG@10,0.6060613862817997,,,0.0047955243549159055,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,NDCG@10,0.6677003931221634,,,0.009502872325274726,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,NDCG@10,0.6688150849303808,,,0.00880790173118018,valid_only,False,200,3,599
 Vector,1000,vector,MRR@5,0.7038611111111112,,,0.00552791736283839,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,MRR@5,0.7612222222222222,,,0.018982143168232078,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,MRR@5,0.7624930439621591,,,0.01772278869465154,valid_only,False,200,3,599
 Vector,1000,vector,MRR@10,0.7087949735449736,,,0.006680855299130872,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,MRR@10,0.7628472222222222,,,0.01898484105318806,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,MRR@10,0.764120756816917,,,0.017640172847481317,valid_only,False,200,3,599
 Vector,1000,vector,MAP@5,0.5328981481481482,,,0.003792107558141032,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,MAP@5,0.6138981481481481,,,0.011506383538710894,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,MAP@5,0.6149230198478947,,,0.010568239947678902,valid_only,False,200,3,599
 Vector,1000,vector,MAP@10,0.5409864417989418,,,0.005242792750693047,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,MAP@10,0.6159523809523809,,,0.011081727951422088,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,MAP@10,0.6169806820891963,,,0.010232808024524429,valid_only,False,200,3,599
 Vector,1000,vector,Completeness@5,0.4266666666666667,,,0.005773502691896263,retrieval,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Completeness@5,0.51,,,0.0050000000000000044,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),1000,vector,Completeness@5,0.5108514190317195,,,0.006338152395359931,valid_only,False,200,3,599
+Vector + OpenAI Decisions,1000,vector,Recall@5 absolute improvement,0.07027777777777777,0.042777777777777776,0.10055555555555555,0.010747523401196167,operational,True,200,3,600
+Vector + OpenAI Decisions,1000,vector,Recall@5 absolute improvement,0.07039510294936005,0.042777777777777776,0.10067244811449355,0.010801876039749444,valid_only,False,200,3,599
 BM25,2000,bm25,Recall@1,0.3638888888888889,,,0.008347210667398191,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@1,0.4716666666666667,,,0.010639287779003078,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Recall@1,0.4716666666666667,,,0.010639287779003078,valid_only,True,200,3,600
 BM25,2000,bm25,Recall@3,0.48916666666666664,,,0.003333333333333327,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@3,0.6325,,,0.011814539065631563,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Recall@3,0.6325,,,0.011814539065631563,valid_only,True,200,3,600
 BM25,2000,bm25,Recall@5,0.5513888888888889,,,0.009730155493409448,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@5,0.6516666666666666,,,0.014457792977414554,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Recall@5,0.6516666666666666,,,0.014457792977414554,valid_only,True,200,3,600
 BM25,2000,bm25,Recall@10,0.6019444444444444,,,0.008388704928078635,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@10,0.6613888888888889,,,0.005292377467571564,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Recall@10,0.6613888888888889,,,0.005292377467571564,valid_only,True,200,3,600
 BM25,2000,bm25,Recall@20,0.6613888888888889,,,0.005292377467571564,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@20,0.6613888888888889,,,0.005292377467571564,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Recall@20,0.6613888888888889,,,0.005292377467571564,valid_only,True,200,3,600
 BM25,2000,bm25,Precision@1,0.5283333333333333,,,0.018929694486000927,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Precision@1,0.6833333333333333,,,0.016072751268321542,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Precision@1,0.6833333333333333,,,0.016072751268321542,valid_only,True,200,3,600
 BM25,2000,bm25,Precision@3,0.255,,,0.0016666666666666774,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Precision@3,0.33555555555555555,,,0.008221471437193744,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Precision@3,0.33555555555555555,,,0.008221471437193744,valid_only,True,200,3,600
 BM25,2000,bm25,Precision@5,0.1706666666666667,,,0.0025166114784235857,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Precision@5,0.20800000000000002,,,0.004582575694955844,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Precision@5,0.20800000000000002,,,0.004582575694955844,valid_only,True,200,3,600
 BM25,2000,bm25,NDCG@5,0.5166979748301475,,,0.006459490780171515,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,NDCG@5,0.644148505253341,,,0.009091933005392659,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,NDCG@5,0.644148505253341,,,0.009091933005392659,valid_only,True,200,3,600
 BM25,2000,bm25,NDCG@10,0.5364002145791177,,,0.00840720093044174,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,NDCG@10,0.6476853647260054,,,0.007168944728897347,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,NDCG@10,0.6476853647260054,,,0.007168944728897347,valid_only,True,200,3,600
 BM25,2000,bm25,MRR@5,0.587,,,0.008692669325356828,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,MRR@5,0.7235277777777778,,,0.0105860670135237,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,MRR@5,0.7235277777777778,,,0.0105860670135237,valid_only,True,200,3,600
 BM25,2000,bm25,MRR@10,0.5944437830687831,,,0.010533376854373186,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,MRR@10,0.7246666666666667,,,0.010822991858898262,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,MRR@10,0.7246666666666667,,,0.010822991858898262,valid_only,True,200,3,600
 BM25,2000,bm25,MAP@5,0.4655138888888889,,,0.007950961293694414,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,MAP@5,0.6016111111111111,,,0.008522177404633742,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,MAP@5,0.6016111111111111,,,0.008522177404633742,valid_only,True,200,3,600
 BM25,2000,bm25,MAP@10,0.47531613756613755,,,0.00866133048711852,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,MAP@10,0.6033700396825397,,,0.007584729867649771,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,MAP@10,0.6033700396825397,,,0.007584729867649771,valid_only,True,200,3,600
 BM25,2000,bm25,Completeness@5,0.41333333333333333,,,0.011547005383792493,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Completeness@5,0.5116666666666667,,,0.017559422921421246,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),2000,bm25,Completeness@5,0.5116666666666667,,,0.017559422921421246,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@5 absolute improvement,0.10027777777777777,0.06972222222222221,0.1325,0.022887607839016135,operational,True,200,3,600
+BM25 + OpenAI Decisions,2000,bm25,Recall@5 absolute improvement,0.10027777777777777,0.06972222222222221,0.1325,0.022887607839016135,valid_only,True,200,3,600
 Hybrid,2000,hybrid,Recall@1,0.43916666666666665,,,0.003333333333333327,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@1,0.5038888888888889,,,0.005357583756107194,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Recall@1,0.5047380156075808,,,0.004583813636053908,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Recall@3,0.5891666666666666,,,0.005204164998665327,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@3,0.7,,,0.016072751268321604,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Recall@3,0.7015050167224081,,,0.01639119914299302,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Recall@5,0.6327777777777778,,,0.009179284245476881,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@5,0.7347222222222222,,,0.0075614764382312275,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Recall@5,0.7355072463768116,,,0.008901032626177809,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Recall@10,0.6966666666666667,,,0.01816207893141947,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@10,0.7533333333333333,,,0.008819171036882005,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Recall@10,0.754180602006689,,,0.011099302384362188,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Recall@20,0.7597222222222222,,,0.0064728778876284,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@20,0.7597222222222222,,,0.0064728778876284,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Recall@20,0.7589186176142698,,,0.006718548558597565,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Precision@1,0.635,,,0.0,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Precision@1,0.7216666666666667,,,0.0028867513459481316,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Precision@1,0.7224080267558528,,,0.0054420045711280245,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Precision@3,0.30166666666666664,,,0.003333333333333327,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Precision@3,0.3655555555555555,,,0.006309898162000291,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Precision@3,0.36622073578595316,,,0.006717043236632688,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Precision@5,0.19666666666666668,,,0.0035118845842842493,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Precision@5,0.231,,,0.002645751311064593,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Precision@5,0.2311036789297659,,,0.0034346393634383035,valid_only,False,200,3,598
 Hybrid,2000,hybrid,NDCG@5,0.6076637525118204,,,0.0058653247111323786,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,NDCG@5,0.7081104788769124,,,0.009374827777090441,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,NDCG@5,0.7090567599006902,,,0.010565896925473127,valid_only,False,200,3,598
 Hybrid,2000,hybrid,NDCG@10,0.6318160164909289,,,0.0052071836554364506,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,NDCG@10,0.7155915746106116,,,0.009518362084565609,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,NDCG@10,0.7165628760214585,,,0.010975054391899308,valid_only,False,200,3,598
 Hybrid,2000,hybrid,MRR@5,0.6980277777777778,,,0.005343956434175958,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,MRR@5,0.7806666666666666,,,0.004543768626738553,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,MRR@5,0.7816053511705685,,,0.006244657732882239,valid_only,False,200,3,598
 Hybrid,2000,hybrid,MRR@10,0.7039742063492064,,,0.0033082537483454712,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,MRR@10,0.7819993386243386,,,0.004939017894249943,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,MRR@10,0.7829424802250889,,,0.006978648347264371,valid_only,False,200,3,598
 Hybrid,2000,hybrid,MAP@5,0.5510879629629629,,,0.004735486545111317,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,MAP@5,0.6591712962962963,,,0.01191875737077378,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,MAP@5,0.6602053140096619,,,0.012925314642458626,valid_only,False,200,3,598
 Hybrid,2000,hybrid,MAP@10,0.563966049382716,,,0.0028126948158853807,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,MAP@10,0.6635294312169312,,,0.01168768236669842,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,MAP@10,0.6645780246323725,,,0.012717318684644301,valid_only,False,200,3,598
 Hybrid,2000,hybrid,Completeness@5,0.4683333333333333,,,0.016072751268321573,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Completeness@5,0.6066666666666667,,,0.01527525231651948,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),2000,hybrid,Completeness@5,0.6070234113712375,,,0.017776472172175872,valid_only,False,200,3,598
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@5 absolute improvement,0.10194444444444445,0.07,0.1363888888888889,0.014199308799035618,operational,True,200,3,600
+Hybrid + OpenAI Decisions,2000,hybrid,Recall@5 absolute improvement,0.10228539576365664,0.07011686143572621,0.13689682383804938,0.013927498109195812,valid_only,False,200,3,598
 Vector,2000,vector,Recall@1,0.4136111111111111,,,0.019460310986818878,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@1,0.47055555555555556,,,0.01134476547592341,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Recall@1,0.47055555555555556,,,0.01134476547592341,valid_only,True,200,3,600
 Vector,2000,vector,Recall@3,0.5322222222222223,,,0.005912165737164623,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@3,0.605,,,0.004409585518440981,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Recall@3,0.605,,,0.004409585518440981,valid_only,True,200,3,600
 Vector,2000,vector,Recall@5,0.5586111111111111,,,0.0034694433324435722,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@5,0.6247222222222222,,,0.010875984416917676,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Recall@5,0.6247222222222222,,,0.010875984416917676,valid_only,True,200,3,600
 Vector,2000,vector,Recall@10,0.6144444444444445,,,0.003367876570272835,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@10,0.6361111111111111,,,0.005357583756107194,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Recall@10,0.6361111111111111,,,0.005357583756107194,valid_only,True,200,3,600
 Vector,2000,vector,Recall@20,0.6411111111111111,,,0.005357583756107194,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@20,0.6411111111111111,,,0.005357583756107194,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Recall@20,0.6411111111111111,,,0.005357583756107194,valid_only,True,200,3,600
 Vector,2000,vector,Precision@1,0.5983333333333334,,,0.025166114784235853,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Precision@1,0.6733333333333333,,,0.012583057392117927,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Precision@1,0.6733333333333333,,,0.012583057392117927,valid_only,True,200,3,600
 Vector,2000,vector,Precision@3,0.26111111111111107,,,0.004194352464039292,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Precision@3,0.3061111111111111,,,0.001924500897298733,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Precision@3,0.3061111111111111,,,0.001924500897298733,valid_only,True,200,3,600
 Vector,2000,vector,Precision@5,0.165,,,0.001732050807568879,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Precision@5,0.18966666666666668,,,0.0020816659994661348,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Precision@5,0.18966666666666668,,,0.0020816659994661348,valid_only,True,200,3,600
 Vector,2000,vector,NDCG@5,0.545625312298657,,,0.006745632075738616,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,NDCG@5,0.6186848987166989,,,0.008359662762480704,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,NDCG@5,0.6186848987166989,,,0.008359662762480704,valid_only,True,200,3,600
 Vector,2000,vector,NDCG@10,0.5664943180053492,,,0.0070315314727873385,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,NDCG@10,0.6228132489862873,,,0.00713456487662543,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,NDCG@10,0.6228132489862873,,,0.00713456487662543,valid_only,True,200,3,600
 Vector,2000,vector,MRR@5,0.6573888888888889,,,0.012117862542238738,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,MRR@5,0.7241111111111111,,,0.006864427898257082,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,MRR@5,0.7241111111111111,,,0.006864427898257082,valid_only,True,200,3,600
 Vector,2000,vector,MRR@10,0.6637883597883598,,,0.01232397737314788,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,MRR@10,0.7253511904761905,,,0.006515144031974262,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,MRR@10,0.7253511904761905,,,0.006515144031974262,valid_only,True,200,3,600
 Vector,2000,vector,MAP@5,0.4885601851851852,,,0.009715596287104136,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,MAP@5,0.5659675925925925,,,0.009559676248672,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,MAP@5,0.5659675925925925,,,0.009559676248672,valid_only,True,200,3,600
 Vector,2000,vector,MAP@10,0.4987822971781305,,,0.009784988159917228,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,MAP@10,0.5681247795414462,,,0.009318535280400865,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,MAP@10,0.5681247795414462,,,0.009318535280400865,valid_only,True,200,3,600
 Vector,2000,vector,Completeness@5,0.39,,,0.0050000000000000044,retrieval,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Completeness@5,0.45,,,0.013228756555322964,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),2000,vector,Completeness@5,0.45,,,0.013228756555322964,valid_only,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@5 absolute improvement,0.0661111111111111,0.03805555555555556,0.09638888888888889,0.014051822077713045,operational,True,200,3,600
+Vector + OpenAI Decisions,2000,vector,Recall@5 absolute improvement,0.0661111111111111,0.03805555555555556,0.09638888888888889,0.014051822077713045,valid_only,True,200,3,600
 BM25,5000,bm25,Recall@1,0.3269444444444444,,,0.004276334532872418,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@1,0.42583333333333334,,,0.016223268611609817,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Recall@1,0.42583333333333334,,,0.016223268611609817,valid_only,True,200,3,600
 BM25,5000,bm25,Recall@3,0.4444444444444444,,,0.005023094811118096,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@3,0.5677777777777778,,,0.00891056385130301,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Recall@3,0.5677777777777778,,,0.00891056385130301,valid_only,True,200,3,600
 BM25,5000,bm25,Recall@5,0.4855555555555556,,,0.0009622504486493984,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@5,0.5991666666666666,,,0.004330127018922165,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Recall@5,0.5991666666666666,,,0.004330127018922165,valid_only,True,200,3,600
 BM25,5000,bm25,Recall@10,0.5416666666666666,,,0.008036375634160814,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@10,0.6038888888888889,,,0.004811252243246864,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Recall@10,0.6038888888888889,,,0.004811252243246864,valid_only,True,200,3,600
 BM25,5000,bm25,Recall@20,0.6047222222222223,,,0.003367876570272831,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@20,0.6047222222222223,,,0.003367876570272831,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Recall@20,0.6047222222222223,,,0.003367876570272831,valid_only,True,200,3,600
 BM25,5000,bm25,Precision@1,0.4666666666666667,,,0.00763762615825971,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Precision@1,0.605,,,0.02645751311064593,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Precision@1,0.605,,,0.02645751311064593,valid_only,True,200,3,600
 BM25,5000,bm25,Precision@3,0.23277777777777778,,,0.001924500897298749,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Precision@3,0.29666666666666663,,,0.0050000000000000044,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Precision@3,0.29666666666666663,,,0.0050000000000000044,valid_only,True,200,3,600
 BM25,5000,bm25,Precision@5,0.15233333333333335,,,0.0005773502691896262,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Precision@5,0.189,,,0.001732050807568879,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Precision@5,0.189,,,0.001732050807568879,valid_only,True,200,3,600
 BM25,5000,bm25,NDCG@5,0.46051355922689247,,,0.0008061089628504143,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,NDCG@5,0.5847137710283137,,,0.006740497958056793,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,NDCG@5,0.5847137710283137,,,0.006740497958056793,valid_only,True,200,3,600
 BM25,5000,bm25,NDCG@10,0.480554731284467,,,0.001628143436534749,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,NDCG@10,0.5867147821063639,,,0.004918796149940474,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,NDCG@10,0.5867147821063639,,,0.004918796149940474,valid_only,True,200,3,600
 BM25,5000,bm25,MRR@5,0.5284722222222222,,,0.00196202370960115,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,MRR@5,0.6575555555555556,,,0.010125028577920341,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,MRR@5,0.6575555555555556,,,0.010125028577920341,valid_only,True,200,3,600
 BM25,5000,bm25,MRR@10,0.5367671957671958,,,0.0015317888663583655,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,MRR@10,0.6577936507936508,,,0.00976955517098145,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,MRR@10,0.6577936507936508,,,0.00976955517098145,valid_only,True,200,3,600
 BM25,5000,bm25,MAP@5,0.41405555555555557,,,0.001628083494234112,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,MAP@5,0.5413611111111111,,,0.008492587090741393,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,MAP@5,0.5413611111111111,,,0.008492587090741393,valid_only,True,200,3,600
 BM25,5000,bm25,MAP@10,0.4228510802469136,,,0.0004527604718047905,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,MAP@10,0.5426574074074074,,,0.007396737136000669,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,MAP@10,0.5426574074074074,,,0.007396737136000669,valid_only,True,200,3,600
 BM25,5000,bm25,Completeness@5,0.35333333333333333,,,0.0028867513459481316,retrieval,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Completeness@5,0.46166666666666667,,,0.005773502691896263,operational,True,200,3,600
+BM25 + OpenAI Decisions (valid only),5000,bm25,Completeness@5,0.46166666666666667,,,0.005773502691896263,valid_only,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@5 absolute improvement,0.11361111111111111,0.0786111111111111,0.15139583333333326,0.004882887730901932,operational,True,200,3,600
+BM25 + OpenAI Decisions,5000,bm25,Recall@5 absolute improvement,0.11361111111111111,0.0786111111111111,0.15139583333333326,0.004882887730901932,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Recall@1,0.39666666666666667,,,0.0016666666666666496,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@1,0.4247222222222222,,,0.011794929858645652,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Recall@1,0.4247222222222222,,,0.011794929858645652,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Recall@3,0.5227777777777778,,,0.0009622504486493984,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@3,0.6083333333333333,,,0.00220479275922048,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Recall@3,0.6083333333333333,,,0.00220479275922048,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Recall@5,0.5725,,,0.005204164998665346,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@5,0.6525,,,0.007216878364870361,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Recall@5,0.6525,,,0.007216878364870361,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Recall@10,0.6411111111111111,,,0.007087417123429481,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@10,0.68,,,0.005068968775248506,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Recall@10,0.68,,,0.005068968775248506,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Recall@20,0.6841666666666667,,,0.0016666666666666496,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@20,0.6841666666666667,,,0.0016666666666666496,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Recall@20,0.6841666666666667,,,0.0016666666666666496,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Precision@1,0.5683333333333334,,,0.0028867513459481316,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Precision@1,0.6066666666666667,,,0.00763762615825974,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Precision@1,0.6066666666666667,,,0.00763762615825974,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Precision@3,0.2633333333333333,,,0.0016666666666666496,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Precision@3,0.3138888888888889,,,0.003849001794597498,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Precision@3,0.3138888888888889,,,0.003849001794597498,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Precision@5,0.17633333333333334,,,0.0011547005383792525,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Precision@5,0.2036666666666667,,,0.0028867513459481316,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Precision@5,0.2036666666666667,,,0.0028867513459481316,valid_only,True,200,3,600
 Hybrid,5000,hybrid,NDCG@5,0.5455047715514124,,,0.0010549697444544289,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,NDCG@5,0.6148681454852192,,,0.007968478884407172,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,NDCG@5,0.6148681454852192,,,0.007968478884407172,valid_only,True,200,3,600
 Hybrid,5000,hybrid,NDCG@10,0.5711192976964238,,,0.002098127216923641,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,NDCG@10,0.625800947267927,,,0.005900558553993142,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,NDCG@10,0.625800947267927,,,0.005900558553993142,valid_only,True,200,3,600
 Hybrid,5000,hybrid,MRR@5,0.6337222222222222,,,0.00050917507721732,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,MRR@5,0.6841666666666667,,,0.007914912086266893,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,MRR@5,0.6841666666666667,,,0.007914912086266893,valid_only,True,200,3,600
 Hybrid,5000,hybrid,MRR@10,0.6409285714285714,,,0.0015118696096401063,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,MRR@10,0.687691798941799,,,0.007113840238302193,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,MRR@10,0.687691798941799,,,0.007113840238302193,valid_only,True,200,3,600
 Hybrid,5000,hybrid,MAP@5,0.4887916666666667,,,0.0003505397073367682,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,MAP@5,0.5602361111111112,,,0.008210530350834577,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,MAP@5,0.5602361111111112,,,0.008210530350834577,valid_only,True,200,3,600
 Hybrid,5000,hybrid,MAP@10,0.5018176807760141,,,0.0008327400711508606,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,MAP@10,0.5660939153439153,,,0.0069340524095891955,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,MAP@10,0.5660939153439153,,,0.0069340524095891955,valid_only,True,200,3,600
 Hybrid,5000,hybrid,Completeness@5,0.405,,,0.004999999999999977,retrieval,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Completeness@5,0.5,,,0.010000000000000009,operational,True,200,3,600
+Hybrid + OpenAI Decisions (valid only),5000,hybrid,Completeness@5,0.5,,,0.010000000000000009,valid_only,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@5 absolute improvement,0.08,0.04611111111111111,0.11611111111111112,0.012332207155790613,operational,True,200,3,600
+Hybrid + OpenAI Decisions,5000,hybrid,Recall@5 absolute improvement,0.08,0.04611111111111111,0.11611111111111112,0.012332207155790613,valid_only,True,200,3,600
 Vector,5000,vector,Recall@1,0.375,,,0.008036375634160802,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@1,0.4022222222222222,,,0.008910563851303004,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Recall@1,0.4022222222222222,,,0.008910563851303004,valid_only,True,200,3,600
 Vector,5000,vector,Recall@3,0.4736111111111111,,,0.007876359377087685,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@3,0.5483333333333333,,,0.006291528696058993,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Recall@3,0.5483333333333333,,,0.006291528696058993,valid_only,True,200,3,600
 Vector,5000,vector,Recall@5,0.5158333333333334,,,0.004330127018922165,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@5,0.5816666666666667,,,0.006508541396588837,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Recall@5,0.5816666666666667,,,0.006508541396588837,valid_only,True,200,3,600
 Vector,5000,vector,Recall@10,0.5558333333333333,,,0.0028867513459481316,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@10,0.605,,,0.003818813079129846,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Recall@10,0.605,,,0.003818813079129846,valid_only,True,200,3,600
 Vector,5000,vector,Recall@20,0.6058333333333333,,,0.0025000000000000022,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@20,0.6058333333333333,,,0.0025000000000000022,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Recall@20,0.6058333333333333,,,0.0025000000000000022,valid_only,True,200,3,600
 Vector,5000,vector,Precision@1,0.5416666666666666,,,0.010408329997330672,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Precision@1,0.5766666666666667,,,0.010408329997330672,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Precision@1,0.5766666666666667,,,0.010408329997330672,valid_only,True,200,3,600
 Vector,5000,vector,Precision@3,0.22999999999999998,,,0.004409585518440981,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Precision@3,0.2688888888888889,,,0.004194352464039292,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Precision@3,0.2688888888888889,,,0.004194352464039292,valid_only,True,200,3,600
 Vector,5000,vector,Precision@5,0.15233333333333335,,,0.0011547005383792525,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Precision@5,0.17266666666666666,,,0.0025166114784235857,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Precision@5,0.17266666666666666,,,0.0025166114784235857,valid_only,True,200,3,600
 Vector,5000,vector,NDCG@5,0.4948039530613207,,,0.004570517189950178,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,NDCG@5,0.5545388402821239,,,0.007055787716123522,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,NDCG@5,0.5545388402821239,,,0.007055787716123522,valid_only,True,200,3,600
 Vector,5000,vector,NDCG@10,0.5088820265474856,,,0.002592039428660171,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,NDCG@10,0.5636099257381407,,,0.006013065183150222,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,NDCG@10,0.5636099257381407,,,0.006013065183150222,valid_only,True,200,3,600
 Vector,5000,vector,MRR@5,0.5997222222222223,,,0.005027931243821143,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,MRR@5,0.6521666666666667,,,0.008288211172770872,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,MRR@5,0.6521666666666667,,,0.008288211172770872,valid_only,True,200,3,600
 Vector,5000,vector,MRR@10,0.6045787037037037,,,0.004575982446678961,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,MRR@10,0.6550271164021164,,,0.00753498739915335,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,MRR@10,0.6550271164021164,,,0.00753498739915335,valid_only,True,200,3,600
 Vector,5000,vector,MAP@5,0.4367824074074074,,,0.004707295307841495,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,MAP@5,0.49525462962962963,,,0.006923319721569864,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,MAP@5,0.49525462962962963,,,0.006923319721569864,valid_only,True,200,3,600
 Vector,5000,vector,MAP@10,0.443274360670194,,,0.003572914770338987,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,MAP@10,0.5000016534391535,,,0.006695374794609741,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,MAP@10,0.5000016534391535,,,0.006695374794609741,valid_only,True,200,3,600
 Vector,5000,vector,Completeness@5,0.3516666666666667,,,0.005773502691896263,retrieval,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Completeness@5,0.41,,,0.009999999999999981,operational,True,200,3,600
+Vector + OpenAI Decisions (valid only),5000,vector,Completeness@5,0.41,,,0.009999999999999981,valid_only,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@5 absolute improvement,0.06583333333333333,0.03305555555555556,0.10083333333333333,0.009610468828892329,operational,True,200,3,600
+Vector + OpenAI Decisions,5000,vector,Recall@5 absolute improvement,0.06583333333333333,0.03305555555555556,0.10083333333333333,0.009610468828892329,valid_only,True,200,3,600

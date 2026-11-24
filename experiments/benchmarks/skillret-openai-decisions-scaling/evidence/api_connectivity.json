@@ -7,5 +7,13 @@
   "provider_http_status": null,
   "provider_reached": false,
   "egress_grant_applied": false,
-  "benchmark_state": "pending_live_compatibility_check"
+  "benchmark_state": "pending_live_compatibility_check",
+  "follow_up": {
+    "date_utc": "2026-11-24",
+    "unauthenticated_post_http_status": 401,
+    "provider_reached": true,
+    "authenticated_synthetic_http_status": 200,
+    "smoke_compatible": true,
+    "transport_environment_note": "Installed socksio 1.0.0 in the Python 3.12 virtual environment to support the existing configured SOCKS transport. Frozen inputs and API runner unchanged. The independent validator now compares integer response references in their exact CSV string representation; regression test added. The initial client initialization error made no API requests."
+  }
 }
